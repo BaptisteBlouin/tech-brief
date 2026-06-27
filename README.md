@@ -102,4 +102,4 @@ _One file per day (kept 14 days)._
 - [2026-06-24](news/en/2026-06-24.md)
 
 ---
-<sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html) · pipeline: Cloudflare Worker → GitHub Actions</sub>
+<sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>

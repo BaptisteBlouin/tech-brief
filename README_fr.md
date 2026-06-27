@@ -102,4 +102,4 @@ _Un fichier par jour (conservé 14 jours)._
 - [2026-06-24](news/fr/2026-06-24.md)
 
 ---
-<sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html) · pipeline : Cloudflare Worker → GitHub Actions</sub>
+<sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
