@@ -100,6 +100,7 @@ _One file per day (kept 14 days)._
 - [2026-06-26](news/en/2026-06-26.md)
 - [2026-06-25](news/en/2026-06-25.md)
 - [2026-06-24](news/en/2026-06-24.md)
+- [2026-06-23](news/en/2026-06-23.md)
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
