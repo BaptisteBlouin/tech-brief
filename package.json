@@ -1,0 +1,11 @@
+{
+  "name": "tech-brief",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Briefing techno quotidien (IA, dev, devops, data, cloud) généré automatiquement à partir de la veille du Worker.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:archive": "WRITE_ARCHIVE=true node scripts/build.mjs"
+  }
+}

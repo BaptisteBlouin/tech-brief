@@ -1,0 +1,51 @@
+name: Briefing techno
+
+# Le Worker calcule la veille à 11:00 et 23:00 UTC. On déclenche 10 min après pour
+# le laisser finir. Matin = README seul ; soir = README + archive du jour.
+on:
+  schedule:
+    - cron: '10 11 * * *'   # matin : régénère README.md / README_fr.md
+    - cron: '10 23 * * *'   # soir  : README + news/<lang>/<date>.md (journée complète)
+  workflow_dispatch:
+    inputs:
+      write_archive:
+        description: 'Écrire aussi l’archive du jour (news/<lang>/<date>.md)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Générer le briefing
+        env:
+          # Soir (cron 23h) ou déclenchement manuel avec write_archive=true → on archive.
+          WRITE_ARCHIVE: ${{ (github.event.schedule == '10 23 * * *' || (github.event_name == 'workflow_dispatch' && inputs.write_archive)) && 'true' || 'false' }}
+        run: node scripts/build.mjs
+
+      - name: Commit & push si changement
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Rien à committer."
+          else
+            git commit -m "veille: $(date -u +%Y-%m-%d) ${WRITE_ARCHIVE_LABEL}"
+            git push
+          fi
+        env:
+          WRITE_ARCHIVE_LABEL: ${{ github.event.schedule == '10 23 * * *' && '(soir + archive)' || '(matin)' }}
