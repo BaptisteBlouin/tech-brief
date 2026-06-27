@@ -101,6 +101,8 @@ _Un fichier par jour (conservé 14 jours)._
 - [2026-06-25](news/fr/2026-06-25.md)
 - [2026-06-24](news/fr/2026-06-24.md)
 - [2026-06-23](news/fr/2026-06-23.md)
+- [2026-06-22](news/fr/2026-06-22.md)
+- [2026-06-21](news/fr/2026-06-21.md)
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>

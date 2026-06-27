@@ -37,6 +37,7 @@ const LANGS = {
     cadence: `Updated twice a day · archives kept ${KEEP_DAYS} days.`,
     other: '🇫🇷 [Version française](README_fr.md)',
     latest: 'Latest digest',
+    recap: (from, to) => `Weekly recap (${from} → ${to})`,
     updated: 'updated',
     sources: 'Sources',
     empty: 'No news for this day.',
@@ -55,6 +56,7 @@ const LANGS = {
     cadence: `Mis à jour 2×/jour · archives conservées ${KEEP_DAYS} jours.`,
     other: '🇬🇧 [English version](README.md)',
     latest: 'Dernier digest',
+    recap: (from, to) => `Récap de la semaine (du ${from} au ${to})`,
     updated: 'mis à jour le',
     sources: 'Sources',
     empty: 'Aucune actualité pour ce jour.',
@@ -66,6 +68,14 @@ const LANGS = {
     backToReadme: '← Retour au dernier digest',
   },
 };
+
+const PARIS_WD = { Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7 };
+// Jour de semaine Paris (1=lundi … 7=dimanche) d'un dayKey 'YYYY-MM-DD'.
+function parisWeekday(dayKey) {
+  const wd = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Paris', weekday: 'short' })
+    .format(new Date(`${dayKey}T12:00:00Z`));
+  return PARIS_WD[wd] || 1;
+}
 
 async function fetchJson(path) {
   const res = await fetch(`${WORKER_URL}${path}`, { headers: { accept: 'application/json' } });
@@ -177,7 +187,7 @@ function buildReadme(lang, d) {
     `> _${L.cadence}_`,
     `> ${L.other}`,
     '',
-    `### ${L.latest} — ${d.dayKey || ''}`,
+    d.weekly ? `### 🗓️ ${L.recap(d.from || '', d.to || d.dayKey || '')}` : `### ${L.latest} — ${d.dayKey || ''}`,
     `<sub>${L.updated} ${fmtDateTime(d.generatedAt, lang)}</sub>`,
     '',
     text,
@@ -193,8 +203,9 @@ function buildReadme(lang, d) {
 function buildArchive(lang, d) {
   const L = LANGS[lang];
   const { text, sources } = digestBody(d, lang);
+  const heading = d.weekly ? `${L.title} — 🗓️ ${L.recap(d.from || '', d.to || d.dayKey || '')}` : L.archiveHeader(d.dayKey || '');
   return [
-    `# ${L.archiveHeader(d.dayKey || '')}`,
+    `# ${heading}`,
     `<sub>${L.updated} ${fmtDateTime(d.generatedAt, lang)} · ${L.autopub(L.veille)}</sub>`,
     '',
     text,
@@ -228,38 +239,55 @@ function prune(dayKey) {
   }
 }
 
+// Digest à présenter pour une date. Le dimanche (ou entrée d'index marquée weekly),
+// la « news du jour » est le récap hebdo (Lun→Dim) plutôt que le seul digest du dimanche.
+async function digestForDay(dayKey, weekly) {
+  if (weekly || parisWeekday(dayKey) === 7) {
+    const w = await fetchJson(`/weekly?kind=news&date=${dayKey}`);
+    if (hasContent(w)) return w;
+  }
+  return fetchJson(`/news?date=${dayKey}`);
+}
+
 async function main() {
   const d = await fetchJson('/news');
   const dayKey = d.dayKey && DATE_RE.test(d.dayKey) ? d.dayKey : new Date().toISOString().slice(0, 10);
+  // Dimanche : on présente le récap hebdo (Lun→Dim) à la place du digest quotidien,
+  // dès qu'il existe pour cette date (généré le dimanche soir).
+  let latest = d;
+  if (parisWeekday(dayKey) === 7) {
+    const w = await fetchJson(`/weekly?kind=news&date=${dayKey}`);
+    if (hasContent(w)) latest = w;
+  }
 
-  // Backfill one-shot : pré-remplit les N dernières journées (hors récap hebdo).
+  // Backfill one-shot : pré-remplit les N dernières entrées de l'index (jours + récaps
+  // du dimanche). Une entrée { weekly: true } → récupérée via /weekly.
   if (BACKFILL_DAYS > 0) {
     const idx = await fetchJson('/archive?kind=news');
-    const dates = (idx.dates || [])
-      .filter((x) => !x.weekly && (x.count || 0) > 0)
-      .map((x) => x.date)
-      .filter((dt) => DATE_RE.test(dt))
-      .sort().reverse().slice(0, BACKFILL_DAYS);
-    for (const date of dates) {
-      const dd = await fetchJson(`/news?date=${date}`);
+    const entries = (idx.dates || [])
+      .filter((x) => x.date && DATE_RE.test(x.date) && (x.count || 0) > 0)
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, BACKFILL_DAYS);
+    for (const e of entries) {
+      const dd = await digestForDay(e.date, e.weekly);
       if (!hasContent(dd)) continue;
-      writeArchiveFiles(dd, dd.dayKey && DATE_RE.test(dd.dayKey) ? dd.dayKey : date);
+      writeArchiveFiles(dd, dd.dayKey && DATE_RE.test(dd.dayKey) ? dd.dayKey : e.date);
     }
     prune(dayKey);
-    console.log(`Backfill : ${dates.join(', ')}.`);
+    console.log(`Backfill : ${entries.map((e) => e.date + (e.weekly ? '*' : '')).join(', ')}.`);
   }
 
   // Archive du jour (run du soir) avant de régénérer le README (pour lister la date).
-  if (WRITE_ARCHIVE && hasContent(d)) {
-    writeArchiveFiles(d, dayKey);
+  if (WRITE_ARCHIVE && hasContent(latest)) {
+    writeArchiveFiles(latest, dayKey);
     prune(dayKey);
-    console.log(`Archive écrite pour ${dayKey} (en + fr), prune > ${KEEP_DAYS} j.`);
+    console.log(`Archive écrite pour ${dayKey}${latest.weekly ? ' (récap hebdo)' : ''} (en + fr), prune > ${KEEP_DAYS} j.`);
   }
 
   for (const lang of Object.keys(LANGS)) {
-    writeFileSync(join(ROOT, LANGS[lang].file), buildReadme(lang, d));
+    writeFileSync(join(ROOT, LANGS[lang].file), buildReadme(lang, latest));
   }
-  console.log(`README.md + README_fr.md régénérés (digest ${dayKey}, ${d.count || 0} sources).`);
+  console.log(`README régénéré (${latest.weekly ? 'récap hebdo' : 'digest'} ${dayKey}, ${latest.count || 0} sources).`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
