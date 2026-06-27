@@ -25,6 +25,8 @@ const WRITE_ARCHIVE = process.env.WRITE_ARCHIVE === 'true';
 const BACKFILL_DAYS = Math.max(0, parseInt(process.env.BACKFILL_DAYS || '0', 10) || 0);
 const KEEP_DAYS = 14;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const REPO = 'BaptisteBlouin/tech-brief';
+const BADGE = `[![Tech Brief](https://github.com/${REPO}/actions/workflows/veille.yml/badge.svg)](https://github.com/${REPO}/actions/workflows/veille.yml)`;
 
 const LANGS = {
   en: {
@@ -32,6 +34,7 @@ const LANGS = {
     title: 'Tech Brief',
     tagline: 'Daily tech‑watch digest — AI/ML, LLM tooling, RAG & agents, MLOps, DevOps, cloud, infra and developer tools.',
     autopub: (url) => `📰 News automatically published from my tech‑watch on **[baptisteblouin.fr](${url})** — generated twice a day, no human in the loop.`,
+    cadence: `Updated twice a day · archives kept ${KEEP_DAYS} days.`,
     other: '🇫🇷 [Version française](README_fr.md)',
     latest: 'Latest digest',
     updated: 'updated',
@@ -49,6 +52,7 @@ const LANGS = {
     title: 'Tech Brief',
     tagline: 'Veille techno quotidienne — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.',
     autopub: (url) => `📰 Actualités publiées automatiquement depuis ma veille sur **[baptisteblouin.fr](${url})** — générées deux fois par jour, sans intervention humaine.`,
+    cadence: `Mis à jour 2×/jour · archives conservées ${KEEP_DAYS} jours.`,
     other: '🇬🇧 [English version](README.md)',
     latest: 'Dernier digest',
     updated: 'mis à jour le',
@@ -165,9 +169,12 @@ function buildReadme(lang, d) {
   return [
     `# ${L.title}`,
     '',
+    BADGE,
+    '',
     `> ${L.autopub(L.veille)}`,
     `>`,
     `> ${L.tagline}`,
+    `> _${L.cadence}_`,
     `> ${L.other}`,
     '',
     `### ${L.latest} — ${d.dayKey || ''}`,

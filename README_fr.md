@@ -1,8 +1,11 @@
 # Tech Brief
 
+[![Tech Brief](https://github.com/BaptisteBlouin/tech-brief/actions/workflows/veille.yml/badge.svg)](https://github.com/BaptisteBlouin/tech-brief/actions/workflows/veille.yml)
+
 > 📰 Actualités publiées automatiquement depuis ma veille sur **[baptisteblouin.fr](https://baptisteblouin.fr/veille.html)** — générées deux fois par jour, sans intervention humaine.
 >
 > Veille techno quotidienne — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.
+> _Mis à jour 2×/jour · archives conservées 14 jours._
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-06-26
