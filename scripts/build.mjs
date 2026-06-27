@@ -9,16 +9,20 @@
 //
 // Le contenu (résumé + traduction FR) vient déjà tout fait du Worker : ce script ne fait
 // que la mise en forme Markdown et l'archivage. Aucune clé secrète requise (route publique).
+//
+// Variables d'env :
+//   WRITE_ARCHIVE=true   écrit aussi news/<lang>/<date>.md (run du soir).
+//   BACKFILL_DAYS=N      pré-remplit les N dernières journées archivées (one-shot, contenu initial).
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { writeFileSync, readdirSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const WORKER_URL = process.env.WORKER_URL || 'https://baptiste-agent.blouin-baptiste94.workers.dev';
 const SITE_URL = 'https://baptisteblouin.fr';
-// Au 2e cron (soir) on archive la journée complète ; le matin on ne touche qu'au README.
 const WRITE_ARCHIVE = process.env.WRITE_ARCHIVE === 'true';
+const BACKFILL_DAYS = Math.max(0, parseInt(process.env.BACKFILL_DAYS || '0', 10) || 0);
 const KEEP_DAYS = 14;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -26,7 +30,8 @@ const LANGS = {
   en: {
     file: 'README.md',
     title: 'Tech Brief',
-    tagline: 'Automated daily tech‑watch digest — AI/ML, LLM tooling, RAG & agents, MLOps, DevOps, cloud, infra and developer tools.',
+    tagline: 'Daily tech‑watch digest — AI/ML, LLM tooling, RAG & agents, MLOps, DevOps, cloud, infra and developer tools.',
+    autopub: (url) => `📰 News automatically published from my tech‑watch on **[baptisteblouin.fr](${url})** — generated twice a day, no human in the loop.`,
     other: '🇫🇷 [Version française](README_fr.md)',
     latest: 'Latest digest',
     updated: 'updated',
@@ -42,7 +47,8 @@ const LANGS = {
   fr: {
     file: 'README_fr.md',
     title: 'Tech Brief',
-    tagline: 'Veille techno quotidienne et automatisée — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.',
+    tagline: 'Veille techno quotidienne — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.',
+    autopub: (url) => `📰 Actualités publiées automatiquement depuis ma veille sur **[baptisteblouin.fr](${url})** — générées deux fois par jour, sans intervention humaine.`,
     other: '🇬🇧 [English version](README.md)',
     latest: 'Dernier digest',
     updated: 'mis à jour le',
@@ -57,14 +63,19 @@ const LANGS = {
   },
 };
 
-async function fetchDigest() {
-  const res = await fetch(`${WORKER_URL}/news`, { headers: { accept: 'application/json' } });
-  if (!res.ok) throw new Error(`GET /news → ${res.status}`);
+async function fetchJson(path) {
+  const res = await fetch(`${WORKER_URL}${path}`, { headers: { accept: 'application/json' } });
+  if (!res.ok) throw new Error(`GET ${path} → ${res.status}`);
   return res.json();
 }
 
+// Échappe le texte de lien Markdown (crochets → littéraux, ex. titre « [AINews] … »).
+const esc = (t) => String(t || '').replace(/([\\[\]])/g, '\\$1').replace(/\s+/g, ' ').trim();
+// Destination de lien sûre : <…> tolère #, parenthèses et espaces dans l'URL.
+const mdLink = (text, url) => (url ? `[${esc(text)}](<${url}>)` : esc(text));
+
 // Table label → ordinal d'affichage, dans l'ordre d'apparition des citations [label]
-// dans le résumé (les sources non citées suivent). Réplique la logique du site.
+// dans le résumé (sources non citées en fin). Réplique la logique du site.
 function citationOrder(summary, sources) {
   const byLabel = new Map((sources || []).map((s) => [s.label, s]));
   const ordered = [];
@@ -76,18 +87,23 @@ function citationOrder(summary, sources) {
     for (const part of m[1].split(',')) push(part.trim());
   }
   for (const s of sources || []) push(s.label);
-  return new Map(ordered.map((s, i) => [s.label, i + 1]));
+  return { ord: new Map(ordered.map((s, i) => [s.label, i + 1])), byLabel };
 }
 
-// Résumé prêt pour Markdown : on retire un éventuel bloc « Sources » de fin (rendu à part)
-// et on remplace les citations [label] / [a, b] par des renvois numériques [n].
-function renderSummary(summary, ord) {
+// Résumé prêt pour Markdown : retire un éventuel bloc « Sources » de fin (rendu à part)
+// et transforme les citations [label] / [a, b] en renvois cliquables en exposant.
+function renderSummary(summary, ord, byLabel) {
   const clean = String(summary || '')
     .replace(/\n+(?:#{1,3}\s*Sources?\b|Sources?\s*:)[\s\S]*$/i, '')
     .trim();
   return clean.replace(/\[([^\]]+)\]/g, (m, grp) => {
-    const nums = grp.split(',').map((p) => ord.get(p.trim())).filter(Boolean);
-    return nums.length ? `[${nums.join(', ')}]` : m;
+    const links = grp.split(',').map((p) => {
+      const label = p.trim();
+      const n = ord.get(label);
+      const s = byLabel.get(label);
+      return n && s && s.link ? `[${n}](<${s.link}>)` : null;
+    }).filter(Boolean);
+    return links.length ? `<sup>${links.join(', ')}</sup>` : m;
   });
 }
 
@@ -98,24 +114,27 @@ function renderSources(sources, ord, L) {
     .map((s) => {
       const n = ord.get(s.label) || '•';
       const title = (s.title || s.source || s.link || '').trim();
-      const link = s.link ? `[${esc(title)}](${s.link})` : esc(title);
       const from = s.source ? ` — _${esc(s.source)}_` : '';
-      return `${n}. ${link}${from}`;
+      return `${n}. ${mdLink(title, s.link)}${from}`;
     });
   return `## ${L.sources}\n\n${rows.join('\n')}\n`;
 }
 
-const esc = (t) => String(t || '').replace(/([\[\]])/g, '\\$1');
-
-function digestBody(d, L) {
-  const ord = citationOrder((d.summary && d.summary.en) || '', d.sources);
-  const md = d.summary && typeof d.summary === 'object' ? d.summary[L === LANGS.en ? 'en' : 'fr'] : '';
+function digestBody(d, lang) {
+  const L = LANGS[lang];
+  const { ord, byLabel } = citationOrder((d.summary && d.summary.en) || '', d.sources);
+  const md = d.summary && typeof d.summary === 'object' ? d.summary[lang] : '';
   const body = (md || '').trim();
   if (!body || /^No new items|^Aucun élément nouveau/i.test(body)) {
     return { text: `_${L.empty}_`, sources: '' };
   }
-  return { text: renderSummary(body, ord), sources: renderSources(d.sources, ord, L) };
+  return { text: renderSummary(body, ord, byLabel), sources: renderSources(d.sources, ord, L) };
 }
+
+const hasContent = (d) => {
+  const en = d && d.summary && d.summary.en ? d.summary.en.trim() : '';
+  return !!en && !/^No new items/i.test(en) && (d.count || 0) > 0;
+};
 
 function fmtDateTime(iso, lang) {
   if (!iso) return '';
@@ -138,7 +157,7 @@ function archiveDates(lang) {
 
 function buildReadme(lang, d) {
   const L = LANGS[lang];
-  const { text, sources } = digestBody(d, L);
+  const { text, sources } = digestBody(d, lang);
   const dates = archiveDates(lang);
   const archive = dates.length
     ? `\n## ${L.archiveTitle}\n\n_${L.archiveHint}_\n\n${dates.map((dt) => `- [${dt}](news/${lang}/${dt}.md)`).join('\n')}\n`
@@ -146,6 +165,8 @@ function buildReadme(lang, d) {
   return [
     `# ${L.title}`,
     '',
+    `> ${L.autopub(L.veille)}`,
+    `>`,
     `> ${L.tagline}`,
     `> ${L.other}`,
     '',
@@ -164,18 +185,26 @@ function buildReadme(lang, d) {
 
 function buildArchive(lang, d) {
   const L = LANGS[lang];
-  const { text, sources } = digestBody(d, L);
+  const { text, sources } = digestBody(d, lang);
   return [
     `# ${L.archiveHeader(d.dayKey || '')}`,
-    `<sub>${L.updated} ${fmtDateTime(d.generatedAt, lang)} · [${L.title}](../../${L.file})</sub>`,
+    `<sub>${L.updated} ${fmtDateTime(d.generatedAt, lang)} · ${L.autopub(L.veille)}</sub>`,
     '',
     text,
     '',
     sources,
     '---',
-    `<sub>${L.backToReadme}: [../../${L.file}](../../${L.file})</sub>`,
+    `<sub>[${L.backToReadme}](../../${L.file})</sub>`,
     '',
   ].join('\n');
+}
+
+function writeArchiveFiles(d, dayKey) {
+  for (const lang of Object.keys(LANGS)) {
+    const dir = join(ROOT, 'news', lang);
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, `${dayKey}.md`), buildArchive(lang, d));
+  }
 }
 
 // Supprime les archives plus vieilles que KEEP_DAYS jours (par rapport au dayKey courant).
@@ -193,16 +222,29 @@ function prune(dayKey) {
 }
 
 async function main() {
-  const d = await fetchDigest();
+  const d = await fetchJson('/news');
   const dayKey = d.dayKey && DATE_RE.test(d.dayKey) ? d.dayKey : new Date().toISOString().slice(0, 10);
 
-  // Archive d'abord (au run du soir) → le README liste ensuite la date du jour.
-  if (WRITE_ARCHIVE) {
-    for (const lang of Object.keys(LANGS)) {
-      const dir = join(ROOT, 'news', lang);
-      mkdirSync(dir, { recursive: true });
-      writeFileSync(join(dir, `${dayKey}.md`), buildArchive(lang, d));
+  // Backfill one-shot : pré-remplit les N dernières journées (hors récap hebdo).
+  if (BACKFILL_DAYS > 0) {
+    const idx = await fetchJson('/archive?kind=news');
+    const dates = (idx.dates || [])
+      .filter((x) => !x.weekly && (x.count || 0) > 0)
+      .map((x) => x.date)
+      .filter((dt) => DATE_RE.test(dt))
+      .sort().reverse().slice(0, BACKFILL_DAYS);
+    for (const date of dates) {
+      const dd = await fetchJson(`/news?date=${date}`);
+      if (!hasContent(dd)) continue;
+      writeArchiveFiles(dd, dd.dayKey && DATE_RE.test(dd.dayKey) ? dd.dayKey : date);
     }
+    prune(dayKey);
+    console.log(`Backfill : ${dates.join(', ')}.`);
+  }
+
+  // Archive du jour (run du soir) avant de régénérer le README (pour lister la date).
+  if (WRITE_ARCHIVE && hasContent(d)) {
+    writeArchiveFiles(d, dayKey);
     prune(dayKey);
     console.log(`Archive écrite pour ${dayKey} (en + fr), prune > ${KEEP_DAYS} j.`);
   }
