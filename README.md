@@ -8,39 +8,19 @@
 > _Updated twice a day · archives kept 14 days._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-06-27
-<sub>updated 28 June 2026 at 01:00</sub>
+### Latest digest — 2026-06-28
+<sub>updated 28 June 2026 at 13:00</sub>
 
-## AI Models & Capabilities
-- OpenAI announces GPT-5.6 Sol/Terra/Luna with restricted access to trusted partners; it surpasses Mythos on certain coding agent tasks but remains below the Cyber Critical threshold, identifying bugs and primitives without autonomously producing full-chain exploits in Chromium/Firefox tests <sup>[1](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>)</sup>.
-- Chinese cybersecurity firm 360 unveiled Tulongfeng, positioned as competitive with Anthropic’s Mythos, while Tokyo-based Sakana AI launched Fugu, claiming frontier performance comparable to Mythos and Fable 5, with agentic orchestration of other models via APIs and marketing itself as free from export-control risk <sup>[2](<https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/>)</sup>.
-- The U.S. government lifted its block on Anthropic’s Mythos 5, allowing release to over 100 trusted U.S. institutions, citing safeguards; Fable 5 remains under review but may follow <sup>[3](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>)</sup>.
+## AI/ML and Engineering Lessons
+- Ford reverses aggressive AI-driven automation in manufacturing after costly quality issues, rehiring 350+ veteran engineers to lead quality reviews and improve AI systems, acknowledging over-reliance on automated inspection and underestimating human expertise <sup>[1](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>)</sup>.
 
-## AI Economics & Policy
-- Industry analysis notes frontier model providers depend on a narrow post-release window to recoup training costs, and the U.S. AI infrastructure buildout assumes a global market—restricting access to a small set of companies would undermine this model <sup>[4](<https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything>)</sup>.
-- The EU AI Act is in force with phased enforcement through 2027, imposing lifecycle compliance (training data documentation, incident reporting) for any system used in the EU regardless of provider location, with penalties and risk-tier requirements detailed <sup>[5](<https://www.docker.com/blog/eu-ai-act-compliance/>)</sup>.
-
-## LLM Tooling & Engineering
-- A tutorial demonstrates setting up a production-ready local coding agent using open-source tools and open-weight LLMs, with a local inference engine and harness enabling file reading, editing, command execution, and change verification <sup>[6](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>)</sup>.
-- DeepSeek released DSpark, a speculative decoding method to accelerate LLM inference, as documented in their paper <sup>[7](<https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf>)</sup>.
-
-## RAG & Agents
-- A system design refresher contrasts RAG, Graph RAG, and Agentic RAG approaches for QA and knowledge-intensive tasks <sup>[8](<https://blog.bytebytego.com/p/ep220-rag-vs-graph-rag-vs-agentic>)</sup>.
-
-## AI in Research & Mathematics
-- Researchers debate AI’s role in mathematics, with Terence Tao envisioning “Big Mathematics” where humans and machines collaborate on complex problems, while others question motivation and purpose as AI reshapes the field <sup>[9](<https://spectrum.ieee.org/ai-in-mathematics>)</sup>.
+## Infrastructure and DevOps
+- ClickHouse Cloud open-sources **WAL-RUS**, a Rust rewrite of the PostgreSQL backup tool WAL-G, targeting predictable memory usage (both resident and virtual) in resource-constrained environments where Go's garbage collection made WAL-G's footprint hard to reason about; WAL-RUS maintains compatibility with WAL-G <sup>[2](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI GPT-5.6 Sol / Terra / Luna — restricted to trusted partners](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>) — _latent.space_
-2. [Asian AI startups launch Mythos-like models](<https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/>) — _hnrss.org_
-3. [U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>) — _hnrss.org_
-4. [Quoting Dean W. Ball](<https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything>) — _simonwillison.net_
-5. [What Does EU AI Act Compliance Require?](<https://www.docker.com/blog/eu-ai-act-compliance/>) — _docker.com_
-6. [Using Local Coding Agents](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>) — _magazine.sebastianraschka.com_
-7. [DSpark: Speculative decoding accelerates LLM inference \[pdf\]](<https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf>) — _hnrss.org_
-8. [EP220: RAG vs Graph RAG vs Agentic RAG](<https://blog.bytebytego.com/p/ep220-rag-vs-graph-rag-vs-agentic>) — _blog.bytebytego.com_
-9. [AI in mathematics is forcing big questions](<https://spectrum.ieee.org/ai-in-mathematics>) — _hnrss.org_
+1. [Ford hired AI and sacked humans. It backfired badly](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>) — _hnrss.org_
+2. [WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>) — _hnrss.org_
 
 
 ## Recent archive

@@ -8,39 +8,19 @@
 > _Mis à jour 2×/jour · archives conservées 14 jours._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-06-27
-<sub>mis à jour le 28 juin 2026 à 01:00</sub>
+### Dernier digest — 2026-06-28
+<sub>mis à jour le 28 juin 2026 à 13:00</sub>
 
-## Modèles d'IA et capacités
-- OpenAI annonce GPT-5.6 Sol/Terra/Luna avec un accès restreint aux partenaires de confiance ; il surpasse Mythos sur certaines tâches d'agent de codage, mais reste en dessous du seuil Cyber Critical, identifiant des bugs et des primitives sans produire de manière autonome des exploits complets dans les tests Chromium/Firefox <sup>[1](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>)</sup>.
-- L'entreprise chinoise de cybersécurité 360 a dévoilé Tulongfeng, positionné comme concurrentiel avec Mythos d'Anthropic, tandis que Sakana AI, basée à Tokyo, a lancé Fugu, revendiquant des performances de pointe comparables à Mythos et Fable 5, avec une orchestration agentique d'autres modèles via des API et se présentant comme exempt de risque lié au contrôle des exportations <sup>[2](<https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/>)</sup>.
-- Le gouvernement américain a levé son blocage sur Mythos 5 d'Anthropic, permettant sa diffusion à plus de 100 institutions américaines de confiance, invoquant des mesures de sécurité ; Fable 5 reste en cours d'examen mais pourrait suivre <sup>[3](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>)</sup>.
+## Leçons en IA/ML et ingénierie
+- Ford renverse son automatisation agressive basée sur l'IA dans la fabrication après des problèmes de qualité coûteux, réembauchant plus de 350 ingénieurs expérimentés pour diriger les revues de qualité et améliorer les systèmes d'IA, reconnaissant une dépendance excessive à l'inspection automatisée et une sous-estimation de l'expertise humaine <sup>[1](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>)</sup>.
 
-## Économie et politique de l'IA
-- Une analyse du secteur souligne que les fournisseurs de modèles de pointe dépendent d'une fenêtre étroite après la sortie pour amortir les coûts de formation, et que le développement de l'infrastructure IA aux États-Unis suppose un marché mondial—restreindre l'accès à un petit nombre d'entreprises compromettrait ce modèle <sup>[4](<https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything>)</sup>.
-- Le règlement européen sur l'IA est en vigueur avec une application progressive jusqu'en 2027, imposant une conformité sur l'ensemble du cycle de vie (documentation des données d'entraînement, signalement des incidents) pour tout système utilisé dans l'UE, indépendamment de l'emplacement du fournisseur, avec des pénalités et des exigences détaillées par niveau de risque <sup>[5](<https://www.docker.com/blog/eu-ai-act-compliance/>)</sup>.
-
-## Outils et ingénierie pour LLM
-- Un tutoriel montre comment configurer un agent de codage local prêt pour la production en utilisant des outils open-source et des LLM à poids ouverts, avec un moteur d'inférence local et un harnais permettant la lecture de fichiers, l'édition, l'exécution de commandes et la vérification des modifications <sup>[6](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>)</sup>.
-- DeepSeek a publié DSpark, une méthode de décodage spéculatif pour accélérer l'inférence des LLM, comme documenté dans leur article <sup>[7](<https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf>)</sup>.
-
-## RAG et agents
-- Un rappel sur la conception de systèmes compare les approches RAG, Graph RAG et Agentic RAG pour les tâches de QA et les tâches intensives en connaissances <sup>[8](<https://blog.bytebytego.com/p/ep220-rag-vs-graph-rag-vs-agentic>)</sup>.
-
-## IA dans la recherche et les mathématiques
-- Les chercheurs débattent du rôle de l'IA en mathématiques, Terence Tao imaginant une « Grande Mathématique » où humains et machines collaborent sur des problèmes complexes, tandis que d'autres remettent en question la motivation et le but alors que l'IA redéfinit le domaine <sup>[9](<https://spectrum.ieee.org/ai-in-mathematics>)</sup>.
+## Infrastructure et DevOps
+- ClickHouse Cloud open-source **WAL-RUS**, une réécriture en Rust de l'outil de sauvegarde PostgreSQL WAL-G, visant une utilisation mémoire prévisible (résidente et virtuelle) dans des environnements contraints en ressources où le ramasse-miettes de Go rendait l'empreinte de WAL-G difficile à évaluer ; WAL-RUS maintient la compatibilité avec WAL-G <sup>[2](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI GPT-5.6 Sol / Terra / Luna — restricted to trusted partners](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>) — _latent.space_
-2. [Asian AI startups launch Mythos-like models](<https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/>) — _hnrss.org_
-3. [U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>) — _hnrss.org_
-4. [Quoting Dean W. Ball](<https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything>) — _simonwillison.net_
-5. [What Does EU AI Act Compliance Require?](<https://www.docker.com/blog/eu-ai-act-compliance/>) — _docker.com_
-6. [Using Local Coding Agents](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>) — _magazine.sebastianraschka.com_
-7. [DSpark: Speculative decoding accelerates LLM inference \[pdf\]](<https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf>) — _hnrss.org_
-8. [EP220: RAG vs Graph RAG vs Agentic RAG](<https://blog.bytebytego.com/p/ep220-rag-vs-graph-rag-vs-agentic>) — _blog.bytebytego.com_
-9. [AI in mathematics is forcing big questions](<https://spectrum.ieee.org/ai-in-mathematics>) — _hnrss.org_
+1. [Ford hired AI and sacked humans. It backfired badly](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>) — _hnrss.org_
+2. [WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>) — _hnrss.org_
 
 
 ## Archive récente
