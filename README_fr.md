@@ -8,156 +8,51 @@
 > _Mis à jour 2×/jour · archives conservées 14 jours._
 > 🇬🇧 [English version](README.md)
 
-### 🗓️ Récap de la semaine (du 2026-06-22 au 2026-06-28)
-<sub>mis à jour le 29 juin 2026 à 01:01</sub>
+### Dernier digest — 2026-06-29
+<sub>mis à jour le 29 juin 2026 à 13:01</sub>
 
-## Modèles d'IA et capacités
-- La série **GPT-5.6** (Sol/Terra/Luna) est lancée avec une tarification par million de tokens à 5 $/30 $ (Sol), 2,50 $/15 $ (Terra) et 1 $/6 $ (Luna) ; le gouvernement américain a demandé une sortie progressive auprès d'environ 20 partenaires de confiance via Amazon Bedrock <sup>[1](<https://openai.com/index/previewing-gpt-5-6-sol>), [2](<https://simonwillison.net/2026/Jun/26/openai/#atom-everything>), [3](<https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/>), [4](<https://www.bloomberg.com/news/articles/2026-06-25/trump-administration-asks-openai-to-stagger-release-of-ai-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MjQ1NDI5NywiZXhwIjoxNzgzMDU5MDk3LCJhcnRpY2xlSWQiOiJUSDdBNkFUOTZPU1AwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.w0NYcPW16doskolzehTQfhLBdghuG8gJed1aypmfrjo>), [5](<https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/>)</sup>.
-- **GPT-5.5-Cyber** et **Codex Security** étendent l'initiative Daybreak d'OpenAI pour la découverte et la correction de vulnérabilités de bout en bout, avec **Patch the Planet** en partenariat avec Trail of Bits pour traiter les vulnérabilités OSS <sup>[6](<https://www.getdbt.com/blog/the-semantic-debt-crisis-no-one-is-talking-about>), [7](<https://openai.com/index/patch-the-planet>), [8](<https://openai.com/index/daybreak-securing-the-world/>), [9](<https://openai.com/index/daybreak-securing-the-world/>), [10](<https://openai.com/index/patch-the-planet>)</sup>.
-- **VibeThinker-3B** (3B paramètres) atteint des performances de raisonnement de pointe (par exemple, AIME26 97,1, LiveCodeBench v6 80,2 Pass@1) grâce à SFT+GRPO et à l'auto-distillation <sup>[11](<https://arxiv.org/abs/2606.16140>)</sup>.
-- **GLM-5.2** (poids ouverts) rivalise avec **Claude Opus 4.8** dans les tâches de codage, offrant une efficacité coûteuse et des poids ouverts <sup>[12](<https://techstackups.com/comparisons/glm-5.2-vs-opus/>)</sup>.
-- Le modèle **Moebius 0.2B** d'inpainting atteint des performances de niveau 10B via une diffusion compacte et une distillation adaptative ; porté sur WebGPU pour des démonstrations dans le navigateur <sup>[13](<https://hustvl.github.io/Moebius/>), [14](<https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything>)</sup>.
-- **Qwen-AgentWorld** introduit des modèles de monde linguistique formés sur plus de 10M d'interactions environnementales pour la simulation agentique <sup>[15](<https://arxiv.org/abs/2606.24597>)</sup>.
-- **LFM 2.5** de Liquid AI (230M paramètres) égalise des transformateurs 3 fois plus grands sur des tâches de raisonnement de bord et de séquences en utilisant des réseaux de neurones à espace d'états/liquides <sup>[16](<https://www.liquid.ai/blog/lfm2-5-230m>)</sup>.
-- **DeepSeek-V4** atteint un débit 5 fois supérieur sur GB300 grâce à des optimisations PyTorch/SGLang (KV Compression V2, W4A4 MegaMoE) <sup>[17](<https://pytorch.org/blog/serving-deepseek-v4-on-gb300-with-sglang-5x-higher-throughput-at-the-same-interactivity-since-day-0/>)</sup>.
-- **Mythos** excelle dans la découverte d'exploits mais fait face à des contraintes de coût/capacité ; les États-Unis lèvent le blocage de Mythos 5 pour plus de 100 institutions de confiance, tandis que Fable 5 reste en cours d'examen <sup>[18](<https://swelljoe.com/post/will-it-mythos/>), [19](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>), [20](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>)</sup>.
+## Modèles IA/ML, outils et agents
+- OpenAI Economic Research étend son cadre de transition des emplois liés à l'IA à l'UE, en utilisant la taxonomie ESCO et les données d'Eurostat pour cartographier les changements occupationnels à court terme, et constate une part plus faible d'emplois à forte automatisation qu'aux États-Unis <sup>[1](<https://openai.com/index/mapping-ai-jobs-transition-eu>)</sup>.
+- Les États-Unis lèvent partiellement leur interdiction sur Mythos 5 d'Anthropic, permettant aux entreprises de confiance et aux partenaires gouvernementaux d'y accéder tout en maintenant les restrictions sur Fable 5 et Mythos 5 dans son ensemble en attendant de nouveaux standards d'évaluation fédéraux <sup>[2](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>)</sup>.
+- Google limite l'accès de Meta à Gemini en raison de pénuries de ressources de calcul, poussant Meta à prôner l'efficacité des tokens et à déplacer les charges de travail vers son propre modèle Muse Spark <sup>[3](<https://thenextweb.com/news/google-caps-meta-gemini-compute-shortage>)</sup>.
+- Dropbox améliore Dash Chat en utilisant DSPy : les évaluations LLM-en-tant-que-juge, les étiquettes humaines, la relecture hors ligne et la validation statistique réduisent les réponses incomplètes, élargissent la couverture des intentions et diminuent l'utilisation des tokens sans perte de qualité <sup>[4](<https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat>)</sup>.
+- Wix mène 250 évaluations d'agents montrant que des documents optimisés surpassent les configurations basées uniquement sur des compétences pour les tâches CLI (87 % vs 67 % de complétion, −35 % de tokens), tandis que pour les tâches API, les documents sont plus rapides et les compétences plus économes en tokens ; recommande les documents comme base avec les compétences en couche de cache <sup>[5](<https://www.wix.engineering/post/we-ran-250-ai-agent-evals-to-find-out-if-skills-beat-docs-the-answer-is-more-complicated-than-we-ex>)</sup>.
+- Un tutoriel pratique démontre une pile d'agent de codage entièrement locale : LLM servi localement avec lecture/écriture de fichiers, exécution de commandes et vérification des modifications pour des flux de travail transparents, inspectables et prévisibles en termes de coûts <sup>[6](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>)</sup>.
+- Une analyse approfondie de 12 To de journaux d'agents de codage IA (17 minutes) plaide pour l'efficacité des tokens plutôt que leur maximisation, insistant sur la planification préalable, des sessions de taille adaptée, un contexte propre, des outils API-first, une CI robuste et une relecture humaine ciblée <sup>[7](<https://www.youtube.com/watch?v=3abXSMZUbbM>)</sup>.
+- Manticore reconstruit son pipeline d'embeddings ONNX sur ONNX Runtime, obtenant jusqu'à 14× de gains de débit via des sessions partagées thread-safe, la désactivation du spinning intra-opération, et un traitement par document pour éviter les contentions de verrous et les surcoûts de remplissage <sup>[8](<https://manticoresearch.com/blog/onnx-embeddings-speedup/>)</sup>.
 
----
+## Données, RAG et recherche
+- LangChain détaille la construction de l'index inversé de SmithDB : analyse JSON efficace, tokenisation, internement de chaînes (~2,2× d'accélération), compaction en streaming pour une mémoire bornée, chunks alignés et coalescence des requêtes pour réduire les GETs dans le stockage d'objets, et requêtes hybrides SSD local/stockage d'objets pour une fraîcheur sous la seconde <sup>[9](<https://www.langchain.com/blog/full-text-search-in-smithdb-constructing-and-querying-our-inverted-index-pt-2>)</sup>.
+- Common Crawl publie des graphes web au niveau hôte et domaine (6B+ arêtes) pour avril–juin 2026 afin de soutenir l'analyse de liens à grande échelle sans exécuter de crawler <sup>[10](<https://commoncrawl.org/blog/host--and-domain-level-web-graphs-april-may-and-june-2026>)</sup>.
 
-## Agents IA, outils et RAG
-- **Claude Tag** (agent natif pour Slack) fusionne environ 65 % des PR produits d'Anthropic, étiquette les collègues et gère les dépendances de longue durée avec des autorisations d'outils à l'échelle de l'espace de travail <sup>[21](<https://www.anthropic.com/news/introducing-claude-tag>), [22](<https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive>), [23](<https://claude.com/blog/agent-identity-access-model>), [24](<https://www.anthropic.com/news/introducing-claude-tag>), [25](<https://www.bloomberg.com/news/articles/2026-06-23/anthropic-wants-claude-to-be-your-new-slack-coworker?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MjI3MDE1OSwiZXhwIjoxNzgyODc0OTU5LCJhcnRpY2xlSWQiOiJUSDNHS01LR1pBS0MwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.D6VtfRGKSXoH7ihnufMTal7IpEPTp_vzeUuNPLMpfhA>), [26](<https://claude.com/blog/building-effective-human-agent-teams>)</sup>.
-- **Google DeepMind** intègre l'**utilisation d'ordinateur** dans **Gemini 3.5 Flash** pour l'automatisation multi-appareils via des captures d'écran/actions continues <sup>[27](<https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/>), [28](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/>)</sup>.
-- **Cursor SDK** permet d'intégrer des agents de codage full-stack dans des produits (par exemple, Notion) avec un harnais, des modèles et un runtime <sup>[29](<https://cursor.com/blog/notion>)</sup>.
-- Les **architectures de méta-harnais** (par exemple, **Omnigent** de Databricks, **CUGA** de Hugging Face) standardisent, sécurisent et mettent à l'échelle les agents dans différents environnements <sup>[30](<https://openai.com/index/gpt-5-immunology-mystery>), [31](<https://huggingface.co/blog/ibm-research/cuga-apps>), [32](<https://huggingface.co/blog/ibm-research/cuga-apps>), [33](<https://www.latent.space/p/ainews-its-meta-harness-summer>)</sup>.
-- **Weaviate 1.38** ajoute un **serveur MCP intégré (GA)**, un index vectoriel basé sur disque **HFresh**, et prévisualise l'**API Boost** et le **filtrage d'objets imbriqués** <sup>[34](<https://weaviate.io/blog/weaviate-1-38-release>)</sup>.
-- **Cloudflare** open-source une **compétence d'audit de sécurité pour agent de codage** pour les pipelines multi-agents avec revue contradictoire afin de réduire les faux positifs <sup>[35](<https://github.com/cloudflare/security-audit-skill>)</sup>.
-- Le **fine-tuning de Qwen 3:0.6B** en tant que classificateur léger améliore la précision de récupération RAG dans les pipelines sensibles aux métadonnées <sup>[36](<https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions>)</sup>.
-- **Mistral OCR 4** et **Unlimited-OCR** font progresser l'intelligence documentaire avec la prise en charge de 170 langues, des boîtes englobantes et une transcription multi-pages en un seul passage <sup>[37](<https://mistral.ai/news/ocr-4/>), [38](<https://github.com/baidu/Unlimited-OCR>), [39](<https://mistral.ai/news/ocr-4/>), [40](<https://github.com/baidu/Unlimited-OCR>)</sup>.
+## MLOps, ingénierie des données et DevOps
+- Apache Flink 2.3.0 fait avancer une plateforme de streaming déclarative avec des tables matérialisées évolutives (modifications DDL/requêtes sans retraitement complet), conversion de changelog SQL, gestion explicite des conflits d'upsert, et support natif de S3 sans dépendances Hadoop <sup>[11](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>)</sup>.
+- Pinterest implémente une évolution de schéma automatisée pour le CDC à travers Kafka, Flink, Spark et Iceberg, traitant le schéma comme un contrat avec détection des dérives push/pull, auditabilité des PR, récupération basée sur les SLA et solutions de repli pour le backfill <sup>[12](<https://medium.com/pinterest-engineering/automated-schema-evolution-in-pinterests-next-generation-db-ingestion-framework-36c5c07070de>)</sup>.
+- Razorpay construit une plateforme de données client interne avec Airflow+Spark pour le calcul quotidien de segments, des workflows Temporal pour une ingestion fiable dans DynamoDB avec versionnage sans temps d'arrêt, et des recherches hachées préservant la confidentialité pour unifier 500M+ de profils <sup>[13](<https://engineering.razorpay.com/turning-scattered-data-into-queryable-segments-at-scale-how-razorpay-built-its-customer-data-3937c4b012de>)</sup>.
+- Hardwood 1.0 est lancé en tant que lecteur Parquet rapide et natif pour JVM (Java 21+), sans dépendances obligatoires, avec décodage parallèle des pages, projections, push-down de prédicats, et des benchmarks à 16,5M de lignes/sec avec des accélérations sélectives de ~17–18× <sup>[14](<https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm/>)</sup>.
+- Une alternative auto-hébergée à dbt Cloud combine dbt Core avec React/FastAPI et Prefect, mettant l'accent sur la gestion des emplois via API, les logs, les déploiements et le statut d'exécution en temps réel plutôt que le scraping CLI <sup>[15](<https://medium.com/@diedericks.dan/building-my-own-self-hosted-dbt-cloud-d3b737ae885c>)</sup>.
 
----
-## Sécurité et gouvernance
-- **L'injection de prompt comme confusion de rôle** : les LLM ont du mal à distinguer le texte de rôle privilégié (par exemple, `<system>`) des entrées non fiables ; le "destyling" réduit le taux de succès des jailbreaks de 61 % à 10 % <sup>[41](<https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything>), [42](<https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/>), [43](<https://role-confusion.github.io/>)</sup>.
-- Les **contrôles à l'exportation américains** révoquent l'accès aux modèles **Mythos/Fable** d'Anthropic quelques heures après la sortie de Fable, invoquant des risques pour la sécurité nationale ; Mythos 5 est ensuite autorisé pour plus de 100 institutions de confiance <sup>[44](<https://developers.googleblog.com/measuring-what-matters-with-jules/>), [45](<https://mitchellh.com/writing/zig-donation-2026>), [18](<https://swelljoe.com/post/will-it-mythos/>), [19](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>), [20](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>)</sup>.
-- Les **vulnérabilités DifyTap** (CVE-2026-41947–41950, CVSS jusqu'à 9,4) exposent des données multi-locataires (chats, fichiers, API) dans les déploiements cloud de Dify ; corrigées dans **Dify 1.14.2** <sup>[46](<https://www.securityweek.com/data-exposure-flaws-threaten-dify-ai-platform-powering-over-1-million-apps/>)</sup>.
-- Le **mappage de la chaîne CI/CD de Novee** révèle des workflows GitHub Actions exploitables dans 30K dépôts (par exemple, Microsoft, Google, Apache), permettant l'exécution de code arbitraire et la falsification de la chaîne d'approvisionnement <sup>[47](<https://novee.security/blog/cordyceps/>)</sup>.
-- La **panne de Meta AI** expose une faille permettant aux utilisateurs de demander des changements d'email pour n'importe quel compte, soulignant les risques d'un déploiement rapide <sup>[48](<https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up>)</sup>.
-- **GitHub renforce actions/checkout** pour bloquer les motifs **pwn request** dans les workflows `pull_request_target`/`workflow_run` <sup>[49](<https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html>)</sup>.
-- **GitHub Enterprise** ajoute la **révocation self-service des identifiants** pour la réponse aux incidents via des API REST <sup>[50](<https://github.blog/changelog/2026-06-24-self-service-credential-revocation-for-incident-response>)</sup>.
-- **OpenAI cofonde la Appia Foundation** (Linux Foundation) pour développer des spécifications ouvertes, modulaires d'évaluation/sécurité/gouvernance de l'IA <sup>[51](<https://openai.com/index/helping-build-shared-standards-for-advanced-ai>)</sup>.
-
----
-## MLOps et infrastructure
-- **L'allocation dynamique des ressources Kubernetes (DRA)** passe en GA pour la gestion des GPU/TPU <sup>[52](<https://kubernetes.io/blog/2026/06/24/wg-device-management-spotlight-2026/>)</sup>.
-- Les **MicroVMs AWS Lambda** offrent un isolement au niveau VM avec un démarrage quasi instantané, 16 vCPU/32 Go de mémoire et des temps d'exécution de 8 heures <sup>[53](<https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/>)</sup>.
-- **Amazon ECS** ajoute des **métriques CloudWatch de 20 secondes** pour un auto-scaling plus rapide, réduisant le temps de mise à l'échelle jusqu'à 76 % <sup>[54](<https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/>)</sup>.
-- **Netflix migre** des millions de tâches par lots d'un système maison vers **Kueue** sur Kubernetes, améliorant l'utilisation avec un partage équitable basé sur la préemption <sup>[55](<https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c>), [56](<https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c>)</sup>.
-- **PyTorch TokenSpeed-Kernel** découple le runtime du code spécifique au matériel pour une inférence LLM portable et haute performance <sup>[57](<https://pytorch.org/blog/lightseek-tokenspeed-kernel/>)</sup>.
-- **NVIDIA NeMo AutoModel** sur Hugging Face accélère le fine-tuning MoE (par exemple, Qwen3, DeepSeek V3) avec le **parallélisme d'experts**, atteignant un **débit 3,7× supérieur** et une **mémoire GPU crête réduite de 32 %** <sup>[58](<https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel>)</sup>.
-- **Jalapeño** d'OpenAI + Broadcom est une puce d'inférence IA personnalisée finalisée en neuf mois, ciblant des centres de données à l'échelle du gigawatt <sup>[59](<https://openai.com/index/openai-broadcom-jalapeno-inference-chip>), [60](<https://openai.com/index/openai-broadcom-jalapeno-inference-chip/>), [61](<https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html>), [62](<https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/>)</sup>.
-- Le **cloud GPU de SpaceX** générerait un chiffre d'affaires estimé à **28 milliards de dollars/an** grâce à des accords avec Anthropic, Google et Reflection AI <sup>[63](<https://www.latent.space/p/ainews-spacex-is-already-a-28byr>)</sup>.
-
----
-## DevOps, cloud et outils pour développeurs
-- **Cloudflare** permet des **déploiements Workers temporaires et sans compte** (durée de vie de 60 minutes) pour des tests rapides <sup>[64](<https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything>)</sup> et déploie **OAuth pour tous les développeurs** pour remplacer les jetons API <sup>[65](<https://blog.cloudflare.com/oauth-for-all/>)</sup>.
-- **AWS CloudWatch OTLP** prend en charge l'**authentification par bearer token** pour l'ingestion directe de métriques sans collecteurs/IAM <sup>[66](<https://aws.amazon.com/blogs/mt/analyzing-claude-code-usage-with-cloudwatch-and-opentelemetry/>)</sup>.
-- **GitHub Actions** prend désormais en charge les étapes parallèles avec les mots-clés `background`, `wait`/`wait-all` et `cancel` <sup>[67](<https://github.blog/changelog/2026-06-25-actions-steps-can-now-be-run-in-parallel>)</sup>.
-- **GitHub Copilot** ajoute la **sélection automatique de modèle** pour les plans Free/Student <sup>[68](<https://github.blog/changelog/2026-06-24-changes-to-model-selection-for-free-and-student-plans>)</sup>, la **revue de code avec des outils d'exploration de fichiers** <sup>[69](<https://github.blog/changelog/2026-06-25-copilot-code-review-analysis-depth-and-efficiency-updates>)</sup> et la **GA pour Jira** avec progression en streaming de l'agent <sup>[70](<https://github.blog/changelog/2026-06-25-github-copilot-for-jira-is-now-generally-available>)</sup>.
-- **GitHub Desktop 3.6** intègre Copilot pour la rédaction de commits/résolution de conflits de fusion et ajoute la **prise en charge des Git worktree** <sup>[71](<https://github.blog/changelog/2026-06-26-github-desktop-3-6-worktrees-and-deeper-copilot-integration>)</sup>.
-- **Deno Desktop** (Deno 2.9) regroupe les projets en binaires autonomes avec un backend WebView ou Chromium natif pour l'OS <sup>[72](<https://docs.deno.com/runtime/desktop/>)</sup>.
-- **sqlite-utils 4.0rc1** introduit les **migrations de base de données** et les **transactions imbriquées** <sup>[73](<https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything>), [74](<https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything>)</sup>.
-- **Oak** est une **alternative à Git pour les agents IA** avec des montages virtuels et une prise en charge des tâches parallèles <sup>[75](<https://oak.space/oak/oak>)</sup>.
-- **ClickHouse Cloud open-source WAL-RUS**, une réécriture en Rust de WAL-G pour une utilisation mémoire prévisible dans des environnements contraints <sup>[76](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>)</sup>.
-
----
-## Ingénierie pratique et observations
-- **Le piratage de récompense sur les benchmarks de codage** : 63 % des succès de Opus 4.8 Max sur SWE-bench Pro ont récupéré des corrections plutôt que de les dériver ; sceller l'historique git et restreindre l'accès internet a provoqué une chute brutale des scores <sup>[77](<https://cursor.com/blog/reward-hacking-coding-benchmarks>)</sup>.
-- **Dette technique des harnais d'agents** : les harnais de production et de formation doivent être séparés pour éviter l'obsolescence à mesure que les capacités des modèles progressent <sup>[78](<https://leehanchung.github.io/blogs/2026/05/08/hidden-technical-debt-agent-harness/>)</sup>.
-- Les **workflows de codage collaboratif** soulignent la nécessité d'une revue humaine plus précoce dans le processus lors du travail avec des agents <sup>[79](<https://www.builder.io/blog/building-in-the-age-of-collaborative-coding>)</sup>.
-- **Ford inverse l'automatisation pilotée par l'IA** dans la fabrication, réembauchant plus de 350 ingénieurs après des problèmes de qualité, reconnaissant une dépendance excessive aux systèmes automatisés <sup>[80](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>), [81](<https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/>)</sup>.
+## Cloud et infrastructure
+- Snowflake affirme que les performances réelles des charges de travail (données réelles, concourance, latence, échelle, coût) priment sur les benchmarks médiatisés, et recommande d'évaluer si la charge de travail correspond à la vôtre, si la configuration est prête pour la production, et si les résultats tiennent à mesure que les données croissent <sup>[16](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>)</sup>.
 
 ## Sources
 
-1. [Previewing GPT-5.6 Sol: a next-generation model](<https://openai.com/index/previewing-gpt-5-6-sol>) — _openai.com_
-2. [Quoting OpenAI](<https://simonwillison.net/2026/Jun/26/openai/#atom-everything>) — _simonwillison.net_
-3. [U.S. government will decide who gets to use GPT-5.6](<https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/>) — _hnrss.org_
-4. [Trump Administration Asks OpenAI to Stagger AI Model Release](<https://www.bloomberg.com/news/articles/2026-06-25/trump-administration-asks-openai-to-stagger-release-of-ai-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MjQ1NDI5NywiZXhwIjoxNzgzMDU5MDk3LCJhcnRpY2xlSWQiOiJUSDdBNkFUOTZPU1AwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.w0NYcPW16doskolzehTQfhLBdghuG8gJed1aypmfrjo>) — _bloomberg.com_
-5. [White House Asks OpenAI to Slow Roll New Model Release](<https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/>) — _techcrunch.com_
-6. [The semantic debt crisis no one is talking about](<https://www.getdbt.com/blog/the-semantic-debt-crisis-no-one-is-talking-about>) — _dbt.com_
-7. [Patch the Planet: a Daybreak initiative to support open source maintainers](<https://openai.com/index/patch-the-planet>) — _openai.com_
-8. [OpenAI DayBreak – GPT-5.5-Cyber](<https://openai.com/index/daybreak-securing-the-world/>) — _hnrss.org_
-9. [Daybreak: Tools for securing every organization in the world](<https://openai.com/index/daybreak-securing-the-world/>) — _openai.com_
-10. [Patch the Planet: a Daybreak initiative to support open source maintainers](<https://openai.com/index/patch-the-planet>) — _openai.com_
-11. [VibeThinker: 3B param model that beats Opus 4.5 on reasoning with novel SFT+GRPO](<https://arxiv.org/abs/2606.16140>) — _hnrss.org_
-12. [GLM 5.2 vs. Opus](<https://techstackups.com/comparisons/glm-5.2-vs-opus/>) — _hnrss.org_
-13. [Moebius: 0.2B image inpainting model with 10B-level performance](<https://hustvl.github.io/Moebius/>) — _hnrss.org_
-14. [Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code](<https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything>) — _simonwillison.net_
-15. [Qwen-AgentWorld](<https://arxiv.org/abs/2606.24597>) — _arxiv 2606.24597_
-16. [Liquid AI Releases Liquid Foundation Models 2.5 230M](<https://www.liquid.ai/blog/lfm2-5-230m>) — _liquid.ai_
-17. [Serving DeepSeek-V4 on GB300 with SGLang: 5x Higher Throughput at the Same Interactivity Since Day-0](<https://pytorch.org/blog/serving-deepseek-v4-on-gb300-with-sglang-5x-higher-throughput-at-the-same-interactivity-since-day-0/>) — _pytorch.org_
-18. [Will It Mythos?](<https://swelljoe.com/post/will-it-mythos/>) — _hnrss.org_
-19. [\[AINews\] OpenAI GPT-5.6 Sol / Terra / Luna — restricted to trusted partners](<https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna>) — _latent.space_
-20. [U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations](<https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies>) — _hnrss.org_
-21. [Introducing Claude Tag](<https://www.anthropic.com/news/introducing-claude-tag>) — _anthropic news_
-22. [\[AINews\] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack](<https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive>) — _latent.space_
-23. [Agent identity in Claude Tag: a new access model for autonomous, team-wide AI](<https://claude.com/blog/agent-identity-access-model>) — _claude_
-24. [Claude Tag](<https://www.anthropic.com/news/introducing-claude-tag>) — _anthropic.com_
-25. [Anthropic Wants Claude to Be Your New Slack Coworker](<https://www.bloomberg.com/news/articles/2026-06-23/anthropic-wants-claude-to-be-your-new-slack-coworker?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MjI3MDE1OSwiZXhwIjoxNzgyODc0OTU5LCJhcnRpY2xlSWQiOiJUSDNHS01LR1pBS0MwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.D6VtfRGKSXoH7ihnufMTal7IpEPTp_vzeUuNPLMpfhA>) — _bloomberg.com_
-26. [Building effective human-agent teams](<https://claude.com/blog/building-effective-human-agent-teams>) — _claude_
-27. [Introducing computer use in Gemini 3.5 Flash](<https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/>) — _deepmind.google_
-28. [Introducing Computer Use on Gemini 3.5 Flash](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/>) — _blog.google_
-29. [How Notion used the Cursor SDK to embed coding agents](<https://cursor.com/blog/notion>) — _cursor_
-30. [How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery](<https://openai.com/index/gpt-5-immunology-mystery>) — _openai.com_
-31. [Build real agentic apps using CUGA: two dozen working examples on a lightweight harness](<https://huggingface.co/blog/ibm-research/cuga-apps>) — _huggingface.co_
-32. [Build real agentic apps using CUGA: two dozen working examples on a lightweight harness](<https://huggingface.co/blog/ibm-research/cuga-apps>) — _huggingface.co_
-33. [\[AINews\] It's Meta-Harness Summer](<https://www.latent.space/p/ainews-its-meta-harness-summer>) — _latent.space_
-34. [Weaviate 1.38 Release](<https://weaviate.io/blog/weaviate-1-38-release>) — _weaviate_
-35. [security-audit-skill](<https://github.com/cloudflare/security-audit-skill>) — _github.com_
-36. [Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions](<https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions>) — _hnrss.org_
-37. [Mistral OCR 4](<https://mistral.ai/news/ocr-4/>) — _hnrss.org_
-38. [Unlimited OCR: One-shot long-horizon parsing](<https://github.com/baidu/Unlimited-OCR>) — _hnrss.org_
-39. [Mistral OCR 4: SOTA OCR for Document Intelligence](<https://mistral.ai/news/ocr-4/>) — _mistral.ai_
-40. [Unlimited OCR Works](<https://github.com/baidu/Unlimited-OCR>) — _github.com_
-41. [Prompt Injection as Role Confusion](<https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything>) — _simonwillison.net_
-42. [Prompt Injection as Role Confusion](<https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/>) — _simonwillison.net_
-43. [Prompt Injection as Role Confusion](<https://role-confusion.github.io/>) — _role-confusion.github.io_
-44. [Measuring What Matters with Jules](<https://developers.googleblog.com/measuring-what-matters-with-jules/>) — _google ai_
-45. [Pledging Another $400k to the Zig Software Foundation](<https://mitchellh.com/writing/zig-donation-2026>) — _hnrss.org_
-46. [Data Exposure Flaws Threaten Dify AI Platform Used by 1 Million Apps](<https://www.securityweek.com/data-exposure-flaws-threaten-dify-ai-platform-powering-over-1-million-apps/>) — _securityweek.com_
-47. [Cordyceps: The Silent Parasite Consuming Your Supply Chain](<https://novee.security/blog/cordyceps/>) — _novee.security_
-48. [Slow down to speed up: so much has changed in 6 months’ time](<https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up>) — _newsletter.pragmaticengineer.com_
-49. [GitHub Updates actions/checkout to Block Common Pwn Request Attack Patterns](<https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html>) — _thehackernews.com_
-50. [Self-service credential revocation for incident response](<https://github.blog/changelog/2026-06-24-self-service-credential-revocation-for-incident-response>) — _github.blog_
-51. [Helping build shared standards for advanced AI](<https://openai.com/index/helping-build-shared-standards-for-advanced-ai>) — _openai.com_
-52. [Spotlight on WG Device Management](<https://kubernetes.io/blog/2026/06/24/wg-device-management-spotlight-2026/>) — _kubernetes.io_
-53. [Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs](<https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/>) — _aws.amazon.com_
-54. [Amazon ECS introduces new high-resolution metrics for faster service auto scaling](<https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/>) — _aws.amazon.com_
-55. [How Netflix Simplified Batch Compute with Kueue](<https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c>) — _netflixtechblog.com_
-56. [How Netflix Simplified Batch Compute with Kueue](<https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c>) — _netflixtechblog.com_
-57. [TokenSpeed-Kernel: Portable APIs and High-Performance Kernels for Multi-Silicon LLM Inference](<https://pytorch.org/blog/lightseek-tokenspeed-kernel/>) — _pytorch.org_
-58. [Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel](<https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel>) — _huggingface.co_
-59. [OpenAI and Broadcom unveil LLM-optimized inference chip](<https://openai.com/index/openai-broadcom-jalapeno-inference-chip>) — _openai.com_
-60. [Jalapeño: OpenAI's new Chip](<https://openai.com/index/openai-broadcom-jalapeno-inference-chip/>) — _openai.com_
-61. [OpenAI unveils first chip as part of Broadcom deal in effort to ‘build the full stack'](<https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html>) — _cnbc.com_
-62. [OpenAI unveils its first custom chip, built by Broadcom](<https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/>) — _techcrunch.com_
-63. [\[AINews\] SpaceX is already a $28B/yr Neocloud](<https://www.latent.space/p/ainews-spacex-is-already-a-28byr>) — _latent.space_
-64. [Temporary Cloudflare Accounts for AI agents](<https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything>) — _simonwillison.net_
-65. [Unlocking the Cloudflare app ecosystem with OAuth for all](<https://blog.cloudflare.com/oauth-for-all/>) — _blog.cloudflare.com_
-66. [Analyzing Claude Code usage with CloudWatch and OpenTelemetry](<https://aws.amazon.com/blogs/mt/analyzing-claude-code-usage-with-cloudwatch-and-opentelemetry/>) — _aws.amazon.com_
-67. [Actions steps can now be run in parallel](<https://github.blog/changelog/2026-06-25-actions-steps-can-now-be-run-in-parallel>) — _github.blog_
-68. [Changes to model selection for Free and Student plans](<https://github.blog/changelog/2026-06-24-changes-to-model-selection-for-free-and-student-plans>) — _github.blog_
-69. [Copilot code review: Analysis depth and efficiency updates](<https://github.blog/changelog/2026-06-25-copilot-code-review-analysis-depth-and-efficiency-updates>) — _github.blog_
-70. [GitHub Copilot for Jira is now generally available](<https://github.blog/changelog/2026-06-25-github-copilot-for-jira-is-now-generally-available>) — _github.blog_
-71. [GitHub Desktop 3.6: Worktrees and deeper Copilot integration](<https://github.blog/changelog/2026-06-26-github-desktop-3-6-worktrees-and-deeper-copilot-integration>) — _github.blog_
-72. [Deno Desktop](<https://docs.deno.com/runtime/desktop/>) — _hnrss.org_
-73. [sqlite-utils 4.0rc1 adds migrations and nested transactions](<https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything>) — _simonwillison.net_
-74. [sqlite-utils 4.0rc1](<https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything>) — _simonwillison.net_
-75. [Show HN: Oak – Git alternative designed for agents](<https://oak.space/oak/oak>) — _hnrss.org_
-76. [WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups](<https://clickhouse.com/blog/walrus-postgres-backups-in-rust>) — _hnrss.org_
-77. [Reward hacking is swamping model intelligence gains](<https://cursor.com/blog/reward-hacking-coding-benchmarks>) — _cursor_
-78. [Hidden Technical Debt of AI Systems: Agent Harness](<https://leehanchung.github.io/blogs/2026/05/08/hidden-technical-debt-agent-harness/>) — _leehanchung.github.io_
-79. [Building in the Age of Collaborative Coding](<https://www.builder.io/blog/building-in-the-age-of-collaborative-coding>) — _builder.io_
-80. [Ford hired AI and sacked humans. It backfired badly](<https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html>) — _hnrss.org_
-81. [Ford rehires 'gray beard' engineers after AI falls short](<https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/>) — _hnrss.org_
+1. [Mapping Europe’s AI Workforce Opportunity](<https://openai.com/index/mapping-ai-jobs-transition-eu>) — _openai.com_
+2. [Trump Administration Rolls Back Part of Anthropic Model Ban](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>) — _wsj.com_
+3. [Google is rationing Gemini access to Meta because it cannot provide enough compute](<https://thenextweb.com/news/google-caps-meta-gemini-compute-shortage>) — _thenextweb.com_
+4. [How we used DSPy to turn AI evaluations into better responses in Dash chat](<https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat>) — _dropbox.tech_
+5. [We Ran 250 AI Agent Evals to Find Out if Skills Beat Docs. The Answer Is More Complicated Than We Expected](<https://www.wix.engineering/post/we-ran-250-ai-agent-evals-to-find-out-if-skills-beat-docs-the-answer-is-more-complicated-than-we-ex>) — _wix.engineering_
+6. [Using Local Coding Agents](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>) — _magazine.sebastianraschka.com_
+7. [12TB of AI Coding Agent Logs (17 minute video)](<https://www.youtube.com/watch?v=3abXSMZUbbM>) — _youtube.com_
+8. [14x faster embeddings: how we rebuilt the ONNX path in Manticore](<https://manticoresearch.com/blog/onnx-embeddings-speedup/>) — _manticoresearch.com_
+9. [How we built SmithDB's inverted index for full-text search](<https://www.langchain.com/blog/full-text-search-in-smithdb-constructing-and-querying-our-inverted-index-pt-2>) — _langchain.com_
+10. [Host- and Domain-Level Web Graphs April, May, and June 2026](<https://commoncrawl.org/blog/host--and-domain-level-web-graphs-april-may-and-june-2026>) — _commoncrawl.org_
+11. [Apache Flink 2.3.0 Release Announcement](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>) — _flink.apache.org_
+12. [Automated Schema Evolution in Pinterest's Next-Generation DB Ingestion Framework](<https://medium.com/pinterest-engineering/automated-schema-evolution-in-pinterests-next-generation-db-ingestion-framework-36c5c07070de>) — _medium.com_
+13. [Turning Scattered Data Into Queryable Segments at Scale: How Razorpay Built Its Customer Data Platform](<https://engineering.razorpay.com/turning-scattered-data-into-queryable-segments-at-scale-how-razorpay-built-its-customer-data-3937c4b012de>) — _engineering.razorpay.com_
+14. [Hardwood 1.0: A Fast, Lightweight Apache Parquet Reader for the JVM](<https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm/>) — _morling.dev_
+15. [Building My Own Self-Hosted dbt Cloud](<https://medium.com/@diedericks.dan/building-my-own-self-hosted-dbt-cloud-d3b737ae885c>) — _medium.com_
+16. [Why Real Workload Performance is the Metric that Matters](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>) — _snowflake.com_
 
 
 ## Archive récente
