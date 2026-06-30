@@ -8,107 +8,19 @@
 > _Updated twice a day · archives kept 14 days._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-06-29
-<sub>updated 30 June 2026 at 01:01</sub>
+### Latest digest — 2026-06-30
+<sub>updated 30 June 2026 at 13:00</sub>
 
-## AI/ML Models, Tooling, and Agents
-- OpenAI introduces GPT-5.6 Preview family (Sol, Terra, Luna) with stronger cyber/bio safety testing and limited preview availability <sup>[1](<https://deploymentsafety.openai.com/gpt-5-6-preview>)</sup>.
-- US partially lifts Anthropic Mythos 5 ban for trusted partners while keeping broader restrictions pending federal evaluation standards <sup>[2](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>)</sup>.
-- Grok 4.5 enters private beta at SpaceX/Tesla, built on a 1.5T V9 foundation model with Cursor data, showing near/above-Opus early evaluations <sup>[3](<https://x.com/elonmusk/status/2071184354756477041>)</sup>.
-- Claude Opus 4.8 (fast mode) rolls out in preview for GitHub Copilot across IDEs and mobile, offering faster token speeds at reduced cost <sup>[4](<https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot>)</sup>.
-- Claude models are now generally available in Microsoft Foundry on Azure with data residency options and enterprise controls <sup>[5](<https://claude.com/blog/claude-in-microsoft-foundry>)</sup>.
-- Claude Code gateway for Amazon Bedrock and Google Cloud launches, enabling corporate SSO, policy enforcement, and per-user cost attribution <sup>[6](<https://claude.com/blog/introducing-the-claude-apps-gateway>)</sup>.
-- Ornith-1.0 open-weight models (9B–397B, MIT-licensed) built on Gemma 4/Qwen 3.5 achieve SOTA coding performance for their size <sup>[7](<https://simonwillison.net/2026/Jun/29/ornith/#atom-everything>)</sup>.
-- Meta releases Brain2Qwerty v2 for real-time, non-invasive brain-to-text decoding with open training code and datasets <sup>[8](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>)</sup>.
-- NVIDIA’s ENPIRE framework enables self-improving robotics via autonomous experimentation loops in physical environments <sup>[9](<https://jack-clark.net/2026/06/29/import-ai-463-self-improving-robots-a-10k-chinese-gpu-cluster-and-an-elegiac-essay-for-the-human-era/>)</sup>.
-- Google accelerates on-device Gemini Nano v3 with frozen Multi-Token Prediction for mobile efficiency <sup>[10](<https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/>)</sup>.
-- Semgrep finds GLM 5.2 outperforms Claude Code on IDOR vulnerability detection at lower cost, highlighting harness design importance <sup>[11](<https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/>)</sup>.
-- Qwen-Image-Agent improves text-to-image generation via planning, reasoning, search, memory, and feedback, introducing IA-Bench for evaluation <sup>[12](<https://arxiv.org/abs/2606.26907>)</sup>.
-- Dropbox improves Dash Chat using DSPy with LLM-as-judge, human labels, and statistical validation to cut incomplete answers and token use <sup>[13](<https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat>)</sup>.
-- Wix evaluations show optimized docs outperform skills-only setups for CLI tasks (87% vs 67% completion, −35% tokens), recommending docs as foundation with skills as cache <sup>[14](<https://www.wix.engineering/post/we-ran-250-ai-agent-evals-to-find-out-if-skills-beat-docs-the-answer-is-more-complicated-than-we-ex>)</sup>.
-- A local coding agent tutorial demonstrates transparent, inspectable workflows with local LLM, file I/O, command execution, and change verification <sup>[15](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>)</sup>.
-- A 12TB coding agent log analysis advocates token efficiency via planning, clean context, API-first tooling, CI, and focused review <sup>[16](<https://www.youtube.com/watch?v=3abXSMZUbbM>)</sup>.
-- Manticore achieves up to 14× embedding throughput on ONNX Runtime via thread-safe sessions and optimized execution <sup>[17](<https://manticoresearch.com/blog/onnx-embeddings-speedup/>)</sup>.
-- Strix, an open-source autonomous security testing tool, uses AI agents for dynamic vulnerability scanning and PoC generation in CI <sup>[18](<https://github.com/usestrix/strix>)</sup>.
-- OpenPencil is an open-source AI-native vector design tool using concurrent agent teams and multi-framework code export <sup>[19](<https://github.com/ZSeven-W/openpencil>)</sup>.
-- 12 Factor Agents framework proposes principles for production-grade LLM-powered software <sup>[20](<https://github.com/humanlayer/12-factor-agents>)</sup>.
+- ## AI/ML Research
+ - Meta releases Brain2Qwerty v2, a real-time sentence decoder from raw brain signals, and open-sources training code for v1 and v2 <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-07e>)</sup>.
 
-## Data, RAG, and Search
-- LangChain’s SmithDB inverted index uses string interning, streaming compaction, and hybrid local/object storage for sub-second freshness <sup>[21](<https://www.langchain.com/blog/full-text-search-in-smithdb-constructing-and-querying-our-inverted-index-pt-2>)</sup>.
-- Common Crawl releases April–June 2026 host/domain web graphs (6B+ edges) for large-scale link analysis <sup>[22](<https://commoncrawl.org/blog/host--and-domain-level-web-graphs-april-may-and-june-2026>)</sup>.
-- Pinecone details a test data generation pipeline for vector search, evolving from direct upserts to Parquet-based bulk imports <sup>[23](<https://www.pinecone.io/blog/generating-test-data-for-pinecone/>)</sup>.
-- DiScoFormer unifies density and score estimation in a single transformer, addressing trade-offs in diffusion and scientific modeling <sup>[24](<https://huggingface.co/blog/allenai/discoformer>)</sup>.
-- VictoriaLogs stores logs in a columnar layout with immutable parts, daily partitions, and metadata pruning for cost-efficient retention and fast queries <sup>[25](<https://victoriametrics.com/blog/victorialogs-internals-columnar-storage-on-disk/>)</sup>.
-
-## MLOps, Data Engineering, and DevOps
-- PyTorch introduces Cross-Repository CI Relay to auto-trigger and track downstream CI for out-of-tree backends from a single dashboard <sup>[26](<https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/>)</sup>.
-- Apache Flink 2.3.0 adds evolving materialized tables, SQL changelog conversion, and native S3 support without Hadoop dependencies <sup>[27](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>)</sup>.
-- Flink’s new native S3 filesystem (flink-s3-fs-native) removes Hadoop deps, supports exactly-once sinks, and shows ~2× faster checkpoints in benchmarks <sup>[28](<https://flink.apache.org/2026/06/26/announcing-native-s3-fs/>)</sup>.
-- Pinterest implements automated schema evolution for CDC across Kafka/Flink/Spark/Iceberg with drift detection, PR auditability, and backfill fallbacks <sup>[29](<https://medium.com/pinterest-engineering/automated-schema-evolution-in-pinterests-next-generation-db-ingestion-framework-36c5c07070de>)</sup>.
-- Razorpay’s in-house Customer Data Platform uses Airflow+Spark for daily segments, Temporal for DynamoDB ingestion, and hashed lookups to unify 500M+ profiles <sup>[30](<https://engineering.razorpay.com/turning-scattered-data-into-queryable-segments-at-scale-how-razorpay-built-its-customer-data-3937c4b012de>)</sup>.
-- Hardwood 1.0 launches as a JVM-native Parquet reader for Java 21+ with parallel decoding, projections, and 16.5M rows/sec benchmarks <sup>[31](<https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm/>)</sup>.
-- A self-hosted dbt Cloud alternative combines dbt Core with React/FastAPI and Prefect for API-driven job management and real-time run status <sup>[32](<https://medium.com/@diedericks.dan/building-my-own-self-hosted-dbt-cloud-d3b737ae885c>)</sup>.
-
-## Cloud and Infrastructure
-- Snowflake emphasizes real-world workload performance (data, concurrency, latency, scale, cost) over headline benchmarks for production evaluations <sup>[33](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>)</sup>.
-- Google Cloud launches SQL-based alerting in Observability Analytics (preview) for complex alerts over logs/traces via BigQuery <sup>[34](<https://cloud.google.com/blog/products/management-tools/alert-with-sql-in-cloud-monitoring-observability-analytics/>)</sup>.
-- Grafana Cloud’s Kubernetes Monitoring app now uses Grafana-managed alerting, requiring migration of notifications and custom rules <sup>[35](<https://grafana.com/blog/the-inside-scoop-on-alerting-changes-in-kubernetes-monitoring/>)</sup>.
-- Amazon EKS adds control plane egress through customer VPCs for API server outbound traffic with existing routing/security controls <sup>[36](<https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-control-plane-egress-through-your-vpc/>)</sup>.
-- Security Profiles Operator v1.0.0 stabilizes Kubernetes security APIs and passes third-party audit with zero critical vulnerabilities <sup>[37](<https://www.cncf.io/blog/2026/06/26/security-profiles-operator-v1-stable-apis-security-hardened-and-shaping-upstream-kubernetes/>)</sup>.
-
-## Developer Tools and Engineering Practices
-- Cursor for iOS (public beta) enables launching/cloud-controlling agents from mobile, with voice input and cross-device handoff <sup>[38](<https://cursor.com/blog/ios-mobile-app>)</sup>.
-- GitHub allows restricting issue creation to collaborators with write access for reduced noise and consistency with PR permissions <sup>[39](<https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only>)</sup>.
-- Octopus Deploy makes ephemeral environments optional for PRs via GitHub labels, cutting costs for low-risk changes <sup>[40](<https://octopus.com/blog/optional-ephemeral-environments-gh-label>)</sup>.
-- A startup refactored half its business to fix a janky billing script, automating invoicing and reducing processing time from a week to two days <sup>[41](<https://swizec.com/blog/code-is-the-easy-part-or-how-we-refactored-half-the-business-to-fix-a-janky-script/>)</sup>.
-- Thinkst’s Package Proxy provides inline supply-chain safety checks (cooldown, regression, allow/block lists) deployable on Cloudflare Workers <sup>[42](<https://blog.thinkst.com/2026/06/introducing-package-proxy-supply-chain-safety-checks-without-client-side-software.html>)</sup>.
-- New Relic NOW 2026 introduces Autopilot for autonomous incident investigation and Ground Truth for AI-optimized observability access <sup>[43](<https://newrelic.com/blog/news/new-relic-now-june-2026-round-up>)</sup>.
+- ## Developer Tools
+ - Simon Willison publishes an HTML table extractor tool that converts pasted rich text (with embedded HTML tables) into HTML, Markdown, CSV, TSV, or JSON <sup>[2](<https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [GPT-5.6 Sol, Terra, and Luna](<https://deploymentsafety.openai.com/gpt-5-6-preview>) — _deploymentsafety.openai.com_
-2. [Trump Administration Rolls Back Part of Anthropic Model Ban](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>) — _wsj.com_
-3. [Musk Says Grok 4.5 Entered Private Beta](<https://x.com/elonmusk/status/2071184354756477041>) — _x.com_
-4. [Claude Opus 4.8 (fast mode) is now in preview for GitHub Copilot](<https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot>) — _github.blog_
-5. [Claude in Microsoft Foundry is now generally available](<https://claude.com/blog/claude-in-microsoft-foundry>) — _claude_
-6. [Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud](<https://claude.com/blog/introducing-the-claude-apps-gateway>) — _claude_
-7. [Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding](<https://simonwillison.net/2026/Jun/29/ornith/#atom-everything>) — _simonwillison.net_
-8. [From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>) — _meta ai_
-9. [Import AI 463: Self-improving robots; a 10k Chinese GPU cluster; and an elegiac essay for the human era](<https://jack-clark.net/2026/06/29/import-ai-463-self-improving-robots-a-10k-chinese-gpu-cluster-and-an-elegiac-essay-for-the-human-era/>) — _jack-clark.net_
-10. [Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction](<https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/>) — _research.google_
-11. [We have Mythos at Home: GLM 5.2 beats Claude in our Cyber Benchmarks](<https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/>) — _semgrep.dev_
-12. [Qwen Image Agent](<https://arxiv.org/abs/2606.26907>) — _arxiv 2606.26907_
-13. [How we used DSPy to turn AI evaluations into better responses in Dash chat](<https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat>) — _dropbox.tech_
-14. [We Ran 250 AI Agent Evals to Find Out if Skills Beat Docs. The Answer Is More Complicated Than We Expected](<https://www.wix.engineering/post/we-ran-250-ai-agent-evals-to-find-out-if-skills-beat-docs-the-answer-is-more-complicated-than-we-ex>) — _wix.engineering_
-15. [Using Local Coding Agents](<https://magazine.sebastianraschka.com/p/using-local-coding-agents>) — _magazine.sebastianraschka.com_
-16. [12TB of AI Coding Agent Logs (17 minute video)](<https://www.youtube.com/watch?v=3abXSMZUbbM>) — _youtube.com_
-17. [14x faster embeddings: how we rebuilt the ONNX path in Manticore](<https://manticoresearch.com/blog/onnx-embeddings-speedup/>) — _manticoresearch.com_
-18. [Strix](<https://github.com/usestrix/strix>) — _github.com_
-19. [OpenPencil](<https://github.com/ZSeven-W/openpencil>) — _github.com_
-20. [12 Factor Agents](<https://github.com/humanlayer/12-factor-agents>) — _github.com_
-21. [How we built SmithDB's inverted index for full-text search](<https://www.langchain.com/blog/full-text-search-in-smithdb-constructing-and-querying-our-inverted-index-pt-2>) — _langchain.com_
-22. [Host- and Domain-Level Web Graphs April, May, and June 2026](<https://commoncrawl.org/blog/host--and-domain-level-web-graphs-april-may-and-june-2026>) — _commoncrawl.org_
-23. [Generating Test Data for Pinecone](<https://www.pinecone.io/blog/generating-test-data-for-pinecone/>) — _pinecone_
-24. [DiScoFormer: One transformer for density and score, across distributions](<https://huggingface.co/blog/allenai/discoformer>) — _huggingface.co_
-25. [How VictoriaLogs Stores Your Logs in a Columnar Layout](<https://victoriametrics.com/blog/victorialogs-internals-columnar-storage-on-disk/>) — _victoriametrics.com_
-26. [Introducing Cross-Repository CI Relay: Scalable CI for PyTorch&#8217;s Out-of-Tree Backends](<https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/>) — _pytorch.org_
-27. [Apache Flink 2.3.0 Release Announcement](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>) — _flink.apache.org_
-28. [Introducing Flink's Native S3 FileSystem: Built for Performance, Designed for Production](<https://flink.apache.org/2026/06/26/announcing-native-s3-fs/>) — _flink.apache.org_
-29. [Automated Schema Evolution in Pinterest's Next-Generation DB Ingestion Framework](<https://medium.com/pinterest-engineering/automated-schema-evolution-in-pinterests-next-generation-db-ingestion-framework-36c5c07070de>) — _medium.com_
-30. [Turning Scattered Data Into Queryable Segments at Scale: How Razorpay Built Its Customer Data Platform](<https://engineering.razorpay.com/turning-scattered-data-into-queryable-segments-at-scale-how-razorpay-built-its-customer-data-3937c4b012de>) — _engineering.razorpay.com_
-31. [Hardwood 1.0: A Fast, Lightweight Apache Parquet Reader for the JVM](<https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm/>) — _morling.dev_
-32. [Building My Own Self-Hosted dbt Cloud](<https://medium.com/@diedericks.dan/building-my-own-self-hosted-dbt-cloud-d3b737ae885c>) — _medium.com_
-33. [Why Real Workload Performance is the Metric that Matters](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>) — _snowflake.com_
-34. [Alert with SQL in Cloud Monitoring Observability Analytics](<https://cloud.google.com/blog/products/management-tools/alert-with-sql-in-cloud-monitoring-observability-analytics/>) — _cloud.google.com_
-35. [The inside scoop on alerting changes in Kubernetes Monitoring](<https://grafana.com/blog/the-inside-scoop-on-alerting-changes-in-kubernetes-monitoring/>) — _grafana.com_
-36. [Amazon EKS now supports control plane egress through your VPC](<https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-control-plane-egress-through-your-vpc/>) — _aws.amazon.com_
-37. [Security Profiles Operator v1: Stable APIs, Security Hardened, and Shaping Upstream Kubernetes](<https://www.cncf.io/blog/2026/06/26/security-profiles-operator-v1-stable-apis-security-hardened-and-shaping-upstream-kubernetes/>) — _cncf.io_
-38. [Build from anywhere with Cursor for iOS](<https://cursor.com/blog/ios-mobile-app>) — _cursor_
-39. [Restrict issue creation to collaborators only](<https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only>) — _github.blog_
-40. [Optional ephemeral environments using GitHub PR labels](<https://octopus.com/blog/optional-ephemeral-environments-gh-label>) — _octopus.com_
-41. [Code is the easy part, or how we refactored half the business to fix a janky script](<https://swizec.com/blog/code-is-the-easy-part-or-how-we-refactored-half-the-business-to-fix-a-janky-script/>) — _swizec.com_
-42. [Introducing Package Proxy: Supply-Chain Safety Checks Without Client-Side Software](<https://blog.thinkst.com/2026/06/introducing-package-proxy-supply-chain-safety-checks-without-client-side-software.html>) — _blog.thinkst.com_
-43. [New Relic Now June 2026 Round-Up](<https://newrelic.com/blog/news/new-relic-now-june-2026-round-up>) — _newrelic.com_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-07e>) — _latent.space_
+2. [HTML table extractor](<https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive
