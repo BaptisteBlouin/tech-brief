@@ -8,83 +8,35 @@
 > _Mis à jour 2×/jour · archives conservées 14 jours._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-06-30
-<sub>mis à jour le 1 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-01
+<sub>mis à jour le 1 juillet 2026 à 13:00</sub>
 
-## Modèles et benchmarks d'IA/ML
-- Meta open-source Brain2Qwerty v2, un décodeur de phrases en temps réel à partir de signaux cérébraux non invasifs, avec le code d'entraînement des versions v1 et v2 publié <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-07e>), [2](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>)</sup>.
-- OpenAI présente GeneBench-Pro, un benchmark de niveau recherche testant le jugement des agents IA dans des tâches de biologie computationnelle comme la génomique et la génétique clinique <sup>[3](<https://openai.com/index/introducing-genebench-pro>), [4](<https://openai.com/index/genebench-pro/case-studies>)</sup>.
-- Google publie Nano Banana 2 Lite (modèle d'image rapide et économique) et Gemini Omni Flash (génération vidéo et édition conversationnelle) dans AI Studio, l'API et les interfaces grand public <sup>[5](<https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/>), [6](<https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/>)</sup>.
-- Anthropic lance Claude Sonnet 5, un modèle de classe Sonnet très agentique avec des performances proches d'Opus 4.8 à moindre coût, désormais par défaut pour les formules Free/Pro et disponible dans GitHub Copilot <sup>[7](<https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot>), [8](<https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything>), [9](<https://www.anthropic.com/news/claude-sonnet-5>)</sup>.
-- Claude Science, l'environnement de travail IA d'Anthropic pour les scientifiques, unifie l'analyse de littérature, la recherche multi-étapes et les artefacts auditables en un seul outil <sup>[10](<https://www.anthropic.com/news/claude-science-ai-workbench>), [11](<https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/>)</sup>.
+## Modèles IA & Sorties
+- Anthropic sort **Claude Sonnet 5** comme nouveau modèle intermédiaire par défaut, mettant l'accent sur les capacités d'agent comme la planification et l'utilisation d'outils (navigateur/terminal), avec une disponibilité immédiate sur Claude, Claude Code, l'API et les partenaires <sup>[1](<https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5>)</sup>.
+- Anthropic confirme que le **Département du Commerce américain lève les contrôles à l'exportation sur Claude Fable 5 et Mythos 5**, avec une restauration de l'accès débutant le lendemain <sup>[2](<https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything>)</sup>.
+- Google lance **Gemini 3.1 Flash Lite Image** (aka Nano Banana 2 Lite), présenté comme le modèle d'image Gemini le plus rapide et le moins cher pour une génération à grande échelle et à haut débit <sup>[3](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything>)</sup>.
 
-## Outils LLM, agents et RAG
-- GitHub Copilot intègre Claude Sonnet 5 pour les tâches de codage et CLI, avec une utilisation optimisée du cache de prompts et une latence compétitive <sup>[7](<https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot>)</sup>.
-- ADK Go 2.0 de Google ajoute un moteur de workflow basé sur des graphes, une orchestration humaine dans la boucle et une exécution dynamique pour les applications multi-agents <sup>[12](<https://developers.googleblog.com/announcing-adk-go-20/>)</sup>.
-- Google introduit une compétence d'agent de codage pour automatiser un cycle d'évaluation en cinq étapes (préparation des données, inférence, notation, analyse des échecs, optimisation) pour la qualité des agents <sup>[13](<https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/>)</sup>.
-- Cursor pour iOS (bêta publique) permet aux développeurs de lancer/contrôler des agents cloud ou locaux, de recevoir des mises à jour Live Activities et de fusionner des PR en déplacement <sup>[14](<https://cursor.com/blog/ios-mobile-app>)</sup>.
-- JetBrains AI Assistant prend désormais en charge GitHub Copilot comme agent de première classe avec sélection de modèle et réglage de la profondeur de raisonnement <sup>[15](<https://github.blog/changelog/2026-06-30-copilot-agent-is-now-available-in-jetbrains-ai-assistant>)</sup>.
-- Mistral Workflows offre une orchestration durable et tolérante aux pannes pour les pipelines IA multi-agents <sup>[16](<https://x.com/MistralDevs/status/2071625939444744521>)</sup>.
+## Agents, RAG & Outils
+- Lors de l'AI Engineer World’s Fair, les **boucles d'agents et l'automatisation** dominent les discussions ; swyx cadre l'évolution comme suit : chat → outils → objectifs → automatisations/tâches cron, avec "Loopcraft" (empilement de boucles) comme thème central de l'ingénierie IA <sup>[4](<https://www.latent.space/p/aiewf-daily-dispatch-loops>)</sup>.
+- Les **Software Factories** et les agents travailleurs persistants (par exemple, les "Ralph loops") sont mis en avant comme un modèle pour transformer les agents de codage IA en travailleurs fiables et redémarrables selon des spécifications fixes <sup>[4](<https://www.latent.space/p/aiewf-daily-dispatch-loops>)</sup>.
+- Le responsable de l'ingénierie des agents chez Sierra décrit les **Forward Deployed Engineers (FDEs)** comme un rôle combinant intégration système, développement d'agents et responsabilité client approfondie, reflétant une évolution dans les structures organisationnelles de l'ingénierie IA <sup>[5](<https://www.latent.space/p/forward-deployed-engineers-aiewf>)</sup>.
 
-## MLOps et DevOps
-- GitHub ajoute une protection de fusion basée sur la couverture de code pour les PR, bloquant les fusions si la couverture descend en dessous de seuils configurables <sup>[17](<https://github.blog/changelog/2026-06-30-github-code-coverage-merge-protection-for-pull-requests>)</sup>.
-- GitHub publie des budgets de crédits IA par utilisateur pour les centres de coûts, permettant un contrôle granulaire des dépenses entre les équipes <sup>[18](<https://github.blog/changelog/2026-06-30-per-user-ai-credit-budgets-available-for-cost-centers>)</sup>.
-- GitHub open-source les vérifications de conformité des licences en préversion publique, appliquant des politiques centralisées pour les dépendances <sup>[19](<https://github.blog/changelog/2026-06-30-open-source-license-compliance-is-in-public-preview>)</sup>.
-- Dependabot n'infère plus `.npmrc` ; les utilisateurs doivent définir explicitement `scope` dans `dependabot.yml` pour les registres privés <sup>[20](<https://github.blog/changelog/2026-06-30-dependabot-no-longer-infers-npmrc>)</sup>.
-- GitHub ajoute une navigation latérale et des compteurs de téléchargements par actif pour les Releases, améliorant la découvrabilité et le suivi de l'adoption <sup>[21](<https://github.blog/changelog/2026-06-30-releases-sidebar-navigation-and-per-asset-download-counts>)</sup>.
-- GitHub annonce une politique de conservation des données pour les alertes de sécurité Dependabot fermées (2 ans dans l'UI/API, puis archivage) <sup>[22](<https://github.blog/changelog/2026-06-30-cloud-data-retention-policy-for-closed-security-alerts>)</sup>.
+## Open Source & IA Locale
+- Le **moteur Godot interdit les contributions de code rédigées par IA**, invoquant des préoccupations selon lesquelles les utilisateurs intensifs d'IA pourraient ne pas comprendre ou maintenir suffisamment leur code <sup>[6](<https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/>)</sup>.
+- Les défenseurs soutiennent que **les LLMs open source réduisent l'écart** avec les modèles fermés de pointe, renforçant l'argument en faveur des déploiements d'IA locale sur du matériel personnel ou dédié <sup>[7](<https://www.latent.space/p/ahmad-osman-local-ai>)</sup>.
 
-## Outils de développement et ingénierie
-- Simon Willison publie un outil d'extraction de tableaux HTML pour convertir du texte riche collé en HTML/Markdown/CSV/JSON <sup>[23](<https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything>)</sup>.
-- `shot-scraper 1.10` ajoute `shot-scraper video` pour enregistrer des démonstrations pilotées par Playwright de workflows d'agents <sup>[24](<https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything>), [25](<https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything>)</sup>.
-- Rust 1.96.1 corrige les nouvelles tentatives/timeout du client HTTP de Cargo et d'autres bugs <sup>[26](<https://blog.rust-lang.org/2026/06/30/Rust-1.96.1/>)</sup>.
-- Miles, une pile native PyTorch pour le post-entraînement RL de LLM à grande échelle, combine SGLang, Megatron-LM et Ray avec un alignement conscient des MoE et une tolérance aux pannes <sup>[27](<https://pytorch.org/blog/miles-a-pytorch-native-stack-for-large-scale-llm-rl-post-training/>)</sup>.
-- DeepSeek open-source DSpark, un framework accélérant l'inférence des LLM jusqu'à 85 % via le décodage spéculatif <sup>[28](<https://venturebeat.com/orchestration/deepseek-open-sources-dspark-a-new-framework-to-speed-up-llm-inference-by-up-to-85>)</sup>.
-- Astryx, le système de design open-source de Meta, alimente 13 000+ applications avec 150+ composants accessibles et des API adaptées à l'IA <sup>[29](<https://github.com/facebook/astryx>)</sup>.
-
-## Sécurité et infrastructure
-- DirtyClone (CVE-2026-43503) est la quatrième faille du noyau Linux en six semaines, permettant à des utilisateurs non privilégiés d'obtenir des droits root via la manipulation de tunnels IPsec ; les mesures d'atténuation incluent le correctif ou la désactivation de `unprivileged_userns_clone` <sup>[30](<https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html>)</sup>.
-- Des chercheurs démontrent une attaque sur la chaîne d'approvisionnement où des agents de codage IA sont trompés pour exécuter des logiciels malveillants via un dépôt GitHub propre avec exécution indirecte de commandes basée sur le DNS <sup>[31](<https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/>)</sup>.
-- OpenAI débogue un bug de 18 ans dans `libunwind` présent dans l'infrastructure de données C++ en utilisant une analyse de vidages mémoire à l'échelle de la population <sup>[32](<https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug>)</sup>.
-- FokosDB, une base de données de stockage illimité fortement cohérente, fonctionne sur Cloudflare Durable Objects avec des transactions distribuées et une mise en cache <sup>[33](<https://www.lambrospetrou.com/articles/fokosdb/>)</sup>.
-- Kubernetes a été porté pour fonctionner entièrement dans le navigateur, démontrant l'expérimentation d'infrastructure basée sur WebAssembly <sup>[34](<https://ngrok.com/blog/i-ported-kubernetes-to-the-browser>)</sup>.
+## Pratiques d'Ingénierie & Dev
+- L'AI Engineer World’s Fair souligne **la crédibilité croissante de l'IA locale**, avec des outils et des flux de travail qui mûrissent pour déployer et exploiter des modèles sur site ou sur appareil <sup>[7](<https://www.latent.space/p/ahmad-osman-local-ai>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-07e>) — _latent.space_
-2. [From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>) — _ai.meta.com_
-3. [Introducing GeneBench-Pro](<https://openai.com/index/introducing-genebench-pro>) — _openai.com_
-4. [Inside Genebench-Pro](<https://openai.com/index/genebench-pro/case-studies>) — _openai.com_
-5. [Start building with Nano Banana 2 Lite and Gemini Omni Flash](<https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/>) — _deepmind.google_
-6. [Gemini's personalized AI image generation is now free for US users](<https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/>) — _techcrunch.com_
-7. [Claude Sonnet 5 is generally available for GitHub Copilot](<https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot>) — _github.blog_
-8. [What's new in Claude Sonnet 5](<https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything>) — _simonwillison.net_
-9. [Introducing Claude Sonnet 5](<https://www.anthropic.com/news/claude-sonnet-5>) — _anthropic news_
-10. [Claude Science, an AI workbench for scientists, is now available](<https://www.anthropic.com/news/claude-science-ai-workbench>) — _anthropic news_
-11. [Claude Science is Anthropic’s newest flagship product](<https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/>) — _technologyreview.com_
-12. [Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration](<https://developers.googleblog.com/announcing-adk-go-20/>) — _google ai_
-13. [Driving the Agent Quality Flywheel from Your Coding Agent](<https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/>) — _google ai_
-14. [Build from anywhere with Cursor for iOS](<https://cursor.com/blog/ios-mobile-app>) — _cursor.com_
-15. [Copilot Agent is now available in JetBrains AI Assistant](<https://github.blog/changelog/2026-06-30-copilot-agent-is-now-available-in-jetbrains-ai-assistant>) — _github.blog_
-16. [Build a document processing workflow in 30 minutes](<https://x.com/MistralDevs/status/2071625939444744521>) — _x.com_
-17. [GitHub code coverage merge protection for pull requests](<https://github.blog/changelog/2026-06-30-github-code-coverage-merge-protection-for-pull-requests>) — _github.blog_
-18. [Per-user AI credit budgets available for cost centers](<https://github.blog/changelog/2026-06-30-per-user-ai-credit-budgets-available-for-cost-centers>) — _github.blog_
-19. [Open source license compliance is in public preview](<https://github.blog/changelog/2026-06-30-open-source-license-compliance-is-in-public-preview>) — _github.blog_
-20. [Dependabot no longer infers .npmrc](<https://github.blog/changelog/2026-06-30-dependabot-no-longer-infers-npmrc>) — _github.blog_
-21. [Releases: Sidebar navigation and per-asset download counts](<https://github.blog/changelog/2026-06-30-releases-sidebar-navigation-and-per-asset-download-counts>) — _github.blog_
-22. [Upcoming cloud data retention policy for closed security alerts](<https://github.blog/changelog/2026-06-30-cloud-data-retention-policy-for-closed-security-alerts>) — _github.blog_
-23. [HTML table extractor](<https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything>) — _simonwillison.net_
-24. [Have your agent record video demos of its work with shot-scraper video](<https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything>) — _simonwillison.net_
-25. [shot-scraper 1.10](<https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything>) — _simonwillison.net_
-26. [Announcing Rust 1.96.1](<https://blog.rust-lang.org/2026/06/30/Rust-1.96.1/>) — _blog.rust-lang.org_
-27. [Miles: A PyTorch-Native Stack for Large-Scale LLM RL Post-Training](<https://pytorch.org/blog/miles-a-pytorch-native-stack-for-large-scale-llm-rl-post-training/>) — _pytorch.org_
-28. [DeepSeek open sources DSpark, a new framework to speed up LLM inference by up to 85%](<https://venturebeat.com/orchestration/deepseek-open-sources-dspark-a-new-framework-to-speed-up-llm-inference-by-up-to-85>) — _venturebeat.com_
-29. [Astryx](<https://github.com/facebook/astryx>) — _github.com_
-30. [DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root](<https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html>) — _securityaffairs.com_
-31. [Clean GitHub repo tricks AI coding agents into running malware](<https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/>) — _bleepingcomputer.com_
-32. [Core dump epidemiology: fixing an 18-year-old bug](<https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug>) — _openai.com_
-33. [FokosDB: A strongly consistent bottomless storage database ontop of Cloudflare Durable Objects](<https://www.lambrospetrou.com/articles/fokosdb/>) — _lambrospetrou.com_
-34. [I ported Kubernetes to the browser](<https://ngrok.com/blog/i-ported-kubernetes-to-the-browser>) — _hnrss.org_
+1. [\[AINews\] Sonnet 5 today, and Fable 5 tomorrow](<https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5>) — _latent.space_
+2. [Quoting Anthropic](<https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything>) — _simonwillison.net_
+3. [Nano Banana 2 Lite](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything>) — _simonwillison.net_
+4. [AIEWF Daily Dispatch: Loops, Software Factories & Forward Deployed Engineers](<https://www.latent.space/p/aiewf-daily-dispatch-loops>) — _latent.space_
+5. [Forward Deployed Engineers and the future of software engineering](<https://www.latent.space/p/forward-deployed-engineers-aiewf>) — _latent.space_
+6. [Godot will no longer accept AI-authored code contributions](<https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/>) — _hnrss.org_
+7. [Ahmad Osman on why local AI is catching up](<https://www.latent.space/p/ahmad-osman-local-ai>) — _latent.space_
 
 
 ## Archive récente
