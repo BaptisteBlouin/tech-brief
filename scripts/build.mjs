@@ -5,7 +5,9 @@
 //
 //   • README.md / README_fr.md  : dernier digest « Actualités », régénéré à CHAQUE run.
 //   • news/{en,fr}/<date>.md     : archive du jour, écrite UNIQUEMENT au 2e run (soir),
-//                                  quand la journée écoulée est complète. Conservé KEEP_DAYS jours.
+//                                  quand la journée écoulée est complète. Conservée KEEP_DAYS jours
+//                                  (rétention longue, pour le référencement) ; seules les LIST_DAYS
+//                                  dernières sont listées dans le README.
 //
 // Le contenu (résumé + traduction FR) vient déjà tout fait du Worker : ce script ne fait
 // que la mise en forme Markdown et l'archivage. Aucune clé secrète requise (route publique).
@@ -23,7 +25,10 @@ const WORKER_URL = process.env.WORKER_URL || 'https://baptiste-agent.blouin-bapt
 const SITE_URL = 'https://baptisteblouin.fr';
 const WRITE_ARCHIVE = process.env.WRITE_ARCHIVE === 'true';
 const BACKFILL_DAYS = Math.max(0, parseInt(process.env.BACKFILL_DAYS || '0', 10) || 0);
-const KEEP_DAYS = 14;
+// Rétention des fichiers d'archive sur le disque (référencement : chaque jour = une page
+// unique indexable). Affichage dans le README borné à LIST_DAYS pour rester lisible.
+const KEEP_DAYS = Math.max(1, parseInt(process.env.KEEP_DAYS || '365', 10) || 365);
+const LIST_DAYS = Math.max(1, parseInt(process.env.LIST_DAYS || '14', 10) || 14);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const REPO = 'BaptisteBlouin/tech-brief';
 const BADGE = `[![Tech Brief](https://github.com/${REPO}/actions/workflows/veille.yml/badge.svg)](https://github.com/${REPO}/actions/workflows/veille.yml)`;
@@ -34,7 +39,7 @@ const LANGS = {
     title: 'Tech Brief',
     tagline: 'Daily tech‑watch digest — AI/ML, LLM tooling, RAG & agents, MLOps, DevOps, cloud, infra and developer tools.',
     autopub: (url) => `📰 News automatically published from my tech‑watch on **[baptisteblouin.fr](${url})** — generated twice a day, no human in the loop.`,
-    cadence: `Updated twice a day · archives kept ${KEEP_DAYS} days.`,
+    cadence: `Updated twice a day · full archive kept in the repo.`,
     other: '🇫🇷 [Version française](README_fr.md)',
     latest: 'Latest digest',
     recap: (from, to) => `Weekly recap (${from} → ${to})`,
@@ -42,7 +47,7 @@ const LANGS = {
     sources: 'Sources',
     empty: 'No news for this day.',
     archiveTitle: 'Recent archive',
-    archiveHint: `One file per day (kept ${KEEP_DAYS} days).`,
+    archiveHint: `One file per day — latest ${LIST_DAYS} shown; full history in the repo.`,
     veille: `${SITE_URL}/veille.en.html`,
     footer: (url) => `Auto‑generated twice a day · source: [live tech‑watch](${url})`,
     archiveHeader: (date) => `Tech Brief — ${date}`,
@@ -53,7 +58,7 @@ const LANGS = {
     title: 'Tech Brief',
     tagline: 'Veille techno quotidienne — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.',
     autopub: (url) => `📰 Actualités publiées automatiquement depuis ma veille sur **[baptisteblouin.fr](${url})** — générées deux fois par jour, sans intervention humaine.`,
-    cadence: `Mis à jour 2×/jour · archives conservées ${KEEP_DAYS} jours.`,
+    cadence: `Mis à jour 2×/jour · archive complète conservée dans le dépôt.`,
     other: '🇬🇧 [English version](README.md)',
     latest: 'Dernier digest',
     recap: (from, to) => `Récap de la semaine (du ${from} au ${to})`,
@@ -61,7 +66,7 @@ const LANGS = {
     sources: 'Sources',
     empty: 'Aucune actualité pour ce jour.',
     archiveTitle: 'Archive récente',
-    archiveHint: `Un fichier par jour (conservé ${KEEP_DAYS} jours).`,
+    archiveHint: `Un fichier par jour — les ${LIST_DAYS} derniers affichés ; historique complet dans le dépôt.`,
     veille: `${SITE_URL}/veille.html`,
     footer: (url) => `Généré automatiquement 2×/jour · source : [veille en direct](${url})`,
     archiveHeader: (date) => `Tech Brief — ${date}`,
@@ -159,14 +164,15 @@ function fmtDateTime(iso, lang) {
   } catch { return iso; }
 }
 
-// Dates d'archive présentes pour une langue (récent → ancien), bornées à KEEP_DAYS.
+// Dates d'archive listées dans le README pour une langue (récent → ancien),
+// bornées à LIST_DAYS (les fichiers plus anciens restent sur le disque, cf. prune).
 function archiveDates(lang) {
   const dir = join(ROOT, 'news', lang);
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => f.endsWith('.md') && DATE_RE.test(f.slice(0, 10)))
     .map((f) => f.slice(0, 10))
-    .sort().reverse().slice(0, KEEP_DAYS);
+    .sort().reverse().slice(0, LIST_DAYS);
 }
 
 function buildReadme(lang, d) {

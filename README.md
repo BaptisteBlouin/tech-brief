@@ -5,7 +5,7 @@
 > 📰 News automatically published from my tech‑watch on **[baptisteblouin.fr](https://baptisteblouin.fr/veille.en.html)** — generated twice a day, no human in the loop.
 >
 > Daily tech‑watch digest — AI/ML, LLM tooling, RAG & agents, MLOps, DevOps, cloud, infra and developer tools.
-> _Updated twice a day · archives kept 14 days._
+> _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-07-01
@@ -41,7 +41,7 @@
 
 ## Recent archive
 
-_One file per day (kept 14 days)._
+_One file per day — latest 14 shown; full history in the repo._
 
 - [2026-06-30](news/en/2026-06-30.md)
 - [2026-06-29](news/en/2026-06-29.md)

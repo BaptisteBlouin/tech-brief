@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a371f7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1050" cy="140" r="360" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1280" height="8" fill="url(#accent)"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(96,150)">
+    <text font-size="26" letter-spacing="6" fill="#8b949e" font-weight="600">📰  DAILY TECH-WATCH DIGEST</text>
+  </g>
+
+  <!-- title -->
+  <text x="96" y="288" font-size="128" font-weight="800" fill="#f0f6fc" letter-spacing="-2">Tech Brief</text>
+
+  <!-- tagline -->
+  <text x="98" y="352" font-size="34" fill="#c9d1d9" font-weight="400">AI/ML · LLM tooling · RAG &amp; agents · MLOps · DevOps · Cloud</text>
+
+  <!-- chips -->
+  <g transform="translate(96,410)" font-size="24" font-weight="600">
+    <g fill="#58a6ff">
+      <rect x="0"   y="0" width="120" height="52" rx="26" fill="#1f2733"/>
+      <text x="60"  y="34" text-anchor="middle">AI</text>
+      <rect x="136" y="0" width="140" height="52" rx="26" fill="#1f2733"/>
+      <text x="206" y="34" text-anchor="middle">LLM</text>
+      <rect x="292" y="0" width="180" height="52" rx="26" fill="#1f2733"/>
+      <text x="382" y="34" text-anchor="middle">MLOps</text>
+      <rect x="488" y="0" width="190" height="52" rx="26" fill="#1f2733"/>
+      <text x="583" y="34" text-anchor="middle">DevOps</text>
+      <rect x="694" y="0" width="170" height="52" rx="26" fill="#1f2733"/>
+      <text x="779" y="34" text-anchor="middle">Cloud</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(96,556)">
+    <circle cx="9" cy="-8" r="9" fill="#3fb950"/>
+    <text x="30" y="0" font-size="26" fill="#8b949e">Updated twice a day · no human in the loop</text>
+  </g>
+  <text x="1184" y="556" text-anchor="end" font-size="26" fill="#58a6ff" font-weight="600">baptisteblouin.fr</text>
+</svg>

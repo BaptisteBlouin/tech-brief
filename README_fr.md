@@ -5,7 +5,7 @@
 > 📰 Actualités publiées automatiquement depuis ma veille sur **[baptisteblouin.fr](https://baptisteblouin.fr/veille.html)** — générées deux fois par jour, sans intervention humaine.
 >
 > Veille techno quotidienne — IA/ML, outillage LLM, RAG & agents, MLOps, DevOps, cloud, infra et outils de dev.
-> _Mis à jour 2×/jour · archives conservées 14 jours._
+> _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-07-01
@@ -41,7 +41,7 @@
 
 ## Archive récente
 
-_Un fichier par jour (conservé 14 jours)._
+_Un fichier par jour — les 14 derniers affichés ; historique complet dans le dépôt._
 
 - [2026-06-30](news/fr/2026-06-30.md)
 - [2026-06-29](news/fr/2026-06-29.md)
