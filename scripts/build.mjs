@@ -16,7 +16,7 @@
 //   WRITE_ARCHIVE=true   écrit aussi news/<lang>/<date>.md (run du soir).
 //   BACKFILL_DAYS=N      pré-remplit les N dernières journées archivées (one-shot, contenu initial).
 
-import { writeFileSync, readdirSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, readdirSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -47,11 +47,18 @@ const LANGS = {
     sources: 'Sources',
     empty: 'No news for this day.',
     archiveTitle: 'Recent archive',
-    archiveHint: `One file per day — latest ${LIST_DAYS} shown; full history in the repo.`,
+    archiveHint: `One file per day — the latest ${LIST_DAYS} are shown below.`,
     veille: `${SITE_URL}/veille.en.html`,
     footer: (url) => `Auto‑generated twice a day · source: [live tech‑watch](${url})`,
     archiveHeader: (date) => `Tech Brief — ${date}`,
     backToReadme: '← Back to the latest digest',
+    thDay: 'Day',
+    read: 'Read',
+    weeklyTag: '🗓️ Weekly recap',
+    fullHistory: 'Browse the full archive',
+    indexTitle: 'Archive',
+    indexHint: (n) => `${n} daily digest${n > 1 ? 's' : ''} archived · newest first.`,
+    navAll: '🗂 All archives',
   },
   fr: {
     file: 'README_fr.md',
@@ -66,11 +73,18 @@ const LANGS = {
     sources: 'Sources',
     empty: 'Aucune actualité pour ce jour.',
     archiveTitle: 'Archive récente',
-    archiveHint: `Un fichier par jour — les ${LIST_DAYS} derniers affichés ; historique complet dans le dépôt.`,
+    archiveHint: `Un fichier par jour — les ${LIST_DAYS} derniers sont affichés ci‑dessous.`,
     veille: `${SITE_URL}/veille.html`,
     footer: (url) => `Généré automatiquement 2×/jour · source : [veille en direct](${url})`,
     archiveHeader: (date) => `Tech Brief — ${date}`,
     backToReadme: '← Retour au dernier digest',
+    thDay: 'Jour',
+    read: 'Lire',
+    weeklyTag: '🗓️ Récap hebdo',
+    fullHistory: 'Parcourir toute l’archive',
+    indexTitle: 'Archive',
+    indexHint: (n) => `${n} digest${n > 1 ? 's' : ''} quotidien${n > 1 ? 's' : ''} archivé${n > 1 ? 's' : ''} · du plus récent au plus ancien.`,
+    navAll: '🗂 Toutes les archives',
   },
 };
 
@@ -81,6 +95,18 @@ function parisWeekday(dayKey) {
     .format(new Date(`${dayKey}T12:00:00Z`));
   return PARIS_WD[wd] || 1;
 }
+
+// Le dimanche, la « news du jour » est le récap hebdo (Lun→Dim) : on le signale dans l'archive.
+const isWeekly = (dayKey) => parisWeekday(dayKey) === 7;
+const cap = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+const locale = (lang) => (lang === 'fr' ? 'fr-FR' : 'en-GB');
+// Libellé localisé (Europe/Paris) d'un dayKey 'YYYY-MM-DD'.
+const intlDate = (dayKey, lang, opts) =>
+  new Intl.DateTimeFormat(locale(lang), { timeZone: 'Europe/Paris', ...opts }).format(new Date(`${dayKey}T12:00:00Z`));
+const weekdayLabel = (dayKey, lang) => cap(intlDate(dayKey, lang, { weekday: 'long' }));
+const monthLabel = (dayKey, lang) => cap(intlDate(dayKey, lang, { month: 'long', year: 'numeric' }));
+// Cellule « jour » d'une ligne de tableau : récap hebdo signalé, sinon le nom du jour.
+const dayCell = (dayKey, lang) => (isWeekly(dayKey) ? LANGS[lang].weeklyTag : weekdayLabel(dayKey, lang));
 
 async function fetchJson(path) {
   const res = await fetch(`${WORKER_URL}${path}`, { headers: { accept: 'application/json' } });
@@ -164,23 +190,36 @@ function fmtDateTime(iso, lang) {
   } catch { return iso; }
 }
 
-// Dates d'archive listées dans le README pour une langue (récent → ancien),
-// bornées à LIST_DAYS (les fichiers plus anciens restent sur le disque, cf. prune).
-function archiveDates(lang) {
+// Toutes les dates d'archive présentes pour une langue (récent → ancien).
+function allArchiveDates(lang) {
   const dir = join(ROOT, 'news', lang);
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => f.endsWith('.md') && DATE_RE.test(f.slice(0, 10)))
     .map((f) => f.slice(0, 10))
-    .sort().reverse().slice(0, LIST_DAYS);
+    .sort().reverse();
+}
+
+// Dates listées dans le README (bornées à LIST_DAYS ; l'index d'archive, lui, liste tout).
+const archiveDates = (lang) => allArchiveDates(lang).slice(0, LIST_DAYS);
+
+// Tableau Markdown « date · jour · lien » pour une liste de dates (base = préfixe de lien).
+function archiveTable(lang, dates, base) {
+  const L = LANGS[lang];
+  const rows = dates.map((dt) => `| \`${dt}\` | ${dayCell(dt, lang)} | [${L.read} →](${base}${dt}.md) |`);
+  return [`| Date | ${L.thDay} | |`, '|:--|:--|--:|', ...rows].join('\n');
 }
 
 function buildReadme(lang, d) {
   const L = LANGS[lang];
   const { text, sources } = digestBody(d, lang);
   const dates = archiveDates(lang);
+  const all = allArchiveDates(lang);
+  const more = all.length > dates.length
+    ? `\n\n<sub>[${L.fullHistory} (${all.length}) →](news/${lang}/)</sub>`
+    : '';
   const archive = dates.length
-    ? `\n## ${L.archiveTitle}\n\n_${L.archiveHint}_\n\n${dates.map((dt) => `- [${dt}](news/${lang}/${dt}.md)`).join('\n')}\n`
+    ? `\n## ${L.archiveTitle}\n\n_${L.archiveHint}_\n\n${archiveTable(lang, dates, `news/${lang}/`)}${more}\n`
     : '';
   return [
     `# ${L.title}`,
@@ -218,9 +257,72 @@ function buildArchive(lang, d) {
     '',
     sources,
     '---',
+    // Navigation préc./suiv. remplie par refreshArchiveNav() une fois les voisins connus.
+    NAV_START,
+    NAV_END,
+    '',
     `<sub>[${L.backToReadme}](../../${L.file})</sub>`,
     '',
   ].join('\n');
+}
+
+const NAV_START = '<!-- NAV:START -->';
+const NAV_END = '<!-- NAV:END -->';
+
+// Ligne de navigation d'un fichier d'archive : ⟵ jour plus ancien · toutes les archives · jour plus récent ⟶.
+function navLine(lang, older, newer) {
+  const L = LANGS[lang];
+  const parts = [];
+  if (older) parts.push(`[⟵ ${older}](${older}.md)`);
+  parts.push(`[${L.navAll}](./)`);
+  if (newer) parts.push(`[${newer} ⟶](${newer}.md)`);
+  return `<sub>${parts.join(' · ')}</sub>`;
+}
+
+// (Re)calcule les liens préc./suiv. de chaque fichier d'archive à partir des dates présentes
+// sur le disque (pur local, sans réseau) et ne réécrit que les fichiers dont la nav change.
+function refreshArchiveNav(lang) {
+  const dir = join(ROOT, 'news', lang);
+  const dates = allArchiveDates(lang); // récent → ancien
+  for (let i = 0; i < dates.length; i++) {
+    const file = join(dir, `${dates[i]}.md`);
+    const cur = readFileSync(file, 'utf8');
+    if (!cur.includes(NAV_START)) continue; // ancien format sans marqueurs : ignoré
+    const block = `${NAV_START}\n${navLine(lang, dates[i + 1], dates[i - 1])}\n${NAV_END}`;
+    const next = cur.replace(new RegExp(`${NAV_START}[\\s\\S]*?${NAV_END}`), block);
+    if (next !== cur) writeFileSync(file, next);
+  }
+}
+
+// Page d'index de l'archive (news/<lang>/README.md) : toutes les dates, groupées par mois.
+// GitHub l'affiche à l'ouverture du dossier → une page unique qui lie tout l'historique.
+function writeArchiveIndex(lang) {
+  const L = LANGS[lang];
+  const dates = allArchiveDates(lang);
+  const dir = join(ROOT, 'news', lang);
+  if (!existsSync(dir)) return;
+  if (!dates.length) return;
+  const groups = [];
+  for (const dt of dates) {
+    const m = monthLabel(dt, lang);
+    if (!groups.length || groups[groups.length - 1].month !== m) groups.push({ month: m, rows: [] });
+    groups[groups.length - 1].rows.push(dt);
+  }
+  const sections = groups
+    .map((g) => `### ${g.month}\n\n${archiveTable(lang, g.rows, '')}`)
+    .join('\n\n');
+  const content = [
+    `# ${L.title} — ${L.indexTitle}`,
+    '',
+    `<sub>${L.indexHint(dates.length)}</sub>`,
+    '',
+    sections,
+    '',
+    '---',
+    `<sub>[${L.backToReadme}](../../${L.file})</sub>`,
+    '',
+  ].join('\n');
+  writeFileSync(join(dir, 'README.md'), content);
 }
 
 function writeArchiveFiles(d, dayKey) {
@@ -290,7 +392,11 @@ async function main() {
     console.log(`Archive écrite pour ${dayKey}${latest.weekly ? ' (récap hebdo)' : ''} (en + fr), prune > ${KEEP_DAYS} j.`);
   }
 
+  // Nav préc./suiv. + page d'index de l'archive : recalculées à chaque run (local, idempotent)
+  // pour que tout fichier reste crawlable même une fois sorti des LIST_DAYS listées au README.
   for (const lang of Object.keys(LANGS)) {
+    refreshArchiveNav(lang);
+    writeArchiveIndex(lang);
     writeFileSync(join(ROOT, LANGS[lang].file), buildReadme(lang, latest));
   }
   console.log(`README régénéré (${latest.weekly ? 'récap hebdo' : 'digest'} ${dayKey}, ${latest.count || 0} sources).`);
