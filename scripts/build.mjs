@@ -149,7 +149,10 @@ function renderSummary(summary, ord, byLabel) {
       return n && s && s.link ? `[${n}](<${s.link}>)` : null;
     }).filter(Boolean);
     return links.length ? `<sup>${links.join(', ')}</sup>` : m;
-  });
+  })
+  // Fusionne les renvois collés (`[1][2][3]` → un seul exposant `1, 2, 3`) : sinon
+  // les `<sup>` adjacents se rendent « ¹²³ » sans séparateur lisible.
+  .replace(/<\/sup><sup>/g, ', ');
 }
 
 function renderSources(sources, ord, L) {
