@@ -8,78 +8,49 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-02
-<sub>updated 3 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-03
+<sub>updated 3 July 2026 at 13:01</sub>
 
-## AI/ML Models and Tooling
-- Anthropic redeployed Claude Fable 5 and Mythos 5, with Fable 5 included for up to 50% of weekly usage until July 7, then via credits; Mythos 5 restored for some US orgs in the Glasswing program <sup>[1](<https://www.anthropic.com/news/redeploying-fable-5>)</sup>.
-- Google is testing a new Gemini Flash upgrade on LM Arena, with potential labels like "Gemini 3.6 Flash" or "Gemini 4 Flash" <sup>[2](<https://www.testingcatalog.com/google-might-be-testing-gemini-flash-upgrade-on-lm-arena/>)</sup>.
-- Adobe demonstrated an "agentic site" that dynamically assembles personalized web pages in real time by interpreting visitor intent and retrieving relevant content <sup>[3](<https://www.latent.space/p/the-website-of-the-future>)</sup>.
-- ZCode 3.0 introduces an optimized platform for AI agent collaboration, enabling plan/code/review/deploy workflows <sup>[4](<https://zcode.z.ai/en>)</sup>.
+## AI/ML: Models, Agents, and Engineering Practice
+- A live debate at AI Engineer World’s Fair centers on whether autonomous "loops" (self-improving agentic workflows) are production-ready today or if engineering rigor still lags the ambition; proponents argue loops are inevitable and already usable, while skeptics emphasize the need for verifiability and human oversight in generated code <sup>[1](<https://www.latent.space/p/aiewf-daily-dispatch-locomotives>)</sup>.
+- Vercel’s Chief of Software argues agents are a fundamentally new kind of software, detailing lessons from building agent frameworks (e.g., eve) and MCP libraries, and framing agents as a shift from traditional web apps <sup>[2](<https://www.latent.space/p/vercel-agents-new-software>)</sup>.
+- Meta’s internal progress on AI agents is slower than expected, with Zuckerberg noting improvements from current investments may take 3–6 months to materialize <sup>[3](<https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/>)</sup>.
+- Industry commentary highlights "understanding" as the new bottleneck: verifying agent output and maintaining human participation in the creative process remain critical for correctness and trust <sup>[4](<https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html>)</sup>.
+- A practical case study shows how a Slack-based AI "intern" agent was built over four months, with human review and steering baked into the workflow; full source is shared <sup>[5](<https://cra.mr/building-an-intern/>)</sup>.
+- Skill engineering is advocated over one-shot AI design: agents require domain knowledge, contextual grounding, and explicit human steering mechanisms to be effective <sup>[6](<https://www.latent.space/p/skill-engineering-design>)</sup>.
 
-## Agents, RAG, and Autoresearch
-- AIEWF highlights **autoresearch** as an outer loop where agents use feedback, evals, and human input to maintain and improve primary systems <sup>[5](<https://www.latent.space/p/aiewf-daily-dispatch-agency>), [6](<https://www.latent.space/p/autoresearch-introspection>)</sup>.
-- Simon Willison released `llm-coding-agent 0.1a0`, a Python library for a Claude Code–style coding agent built on his `llm` framework <sup>[7](<https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything>)</sup>.
-- DSPy was used to evaluate and improve Datasette Agent’s SQL system prompts, identifying promising directions with GPT-4.1 mini/nano <sup>[8](<https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything>)</sup>.
-- Skill engineering (e.g., Impeccable) provides domain-specific vocabularies to steer AI agents incrementally rather than one-shot redesigns <sup>[9](<https://www.latent.space/p/skill-engineering-design>)</sup>.
-- PorTAL proposes portable task adapters to decouple task fine-tuning from base model weights, amortizing adaptation costs across future models <sup>[10](<https://x.com/RampLabs/status/2072381992285647280>)</sup>.
+## LLM Tooling and Ecosystem
+- GitHub Copilot usage metrics gain accuracy: CLI now reports suggested lines of code, IDE identification extends to server-side users, and AI credit consumption is more completely attributed <sup>[7](<https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports>)</sup>.
+- GitHub Copilot will deprecate Gemini 2.5 Pro and Gemini 3 Flash on July 31, 2026, recommending migration to Gemini 3.1 Pro and 3.5 Flash; admins must enable the new models via policy settings <sup>[8](<https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash>)</sup>.
+- Smart model routing is emerging as a best practice for cost and performance optimization across LLM workloads <sup>[9](<https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/>)</sup>.
+- Anthropic is in early discussions with Samsung to develop a custom AI chip, with use cases and specs still undefined <sup>[10](<https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/>)</sup>.
 
-## MLOps, Data Engineering, and Security
-- Arcesium migrated from Athena/Trino to DuckDB, cutting query costs/runtime by ~50% and memory by ~40% for small-to-medium workloads <sup>[11](<https://medium.com/arcesium-engineering-blog/query-faster-query-smarter-our-move-to-duckdb-and-what-we-learned-c935128e80bc>)</sup>.
-- Apache Hudi detailed indexing strategies for continuously updating datasets, balancing freshness, query performance, and write overhead <sup>[12](<https://hudi.apache.org/blog/2026/06/25/building-indexes-on-a-moving-target/>)</sup>.
-- Meta’s AI storage blueprint uses tiered caching, prefetching, and on-demand hydration to speed up research and maximize GPU utilization <sup>[13](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>)</sup>.
-- Databricks AI uses proactive stress testing and continuous monitoring to detect GPU failures (crashed jobs, silent slowdowns, numerical corruption) <sup>[14](<https://www.databricks.com/blog/how-we-keep-gpus-reliable-across-databricks-ai>)</sup>.
-- Attackers are abusing exposed Ollama/LiteLLM inference endpoints (often unauthenticated or with placeholder keys) for offensive ops; defenders should enforce auth and monitor abused ports <sup>[15](<https://www.darkreading.com/cloud-security/attackers-hijack-exposed-ai-endpoints-power-offensive-ops>)</sup>.
-- GLM-5.2’s open weights and trivial fine-tunability to remove safeguards make it a notable security risk for threat actors <sup>[16](<https://joshuasaxe181906.substack.com/p/glm-52-not-mythos-is-the-real-security>)</sup>.
+## MLOps, DevOps, and Infrastructure
+- Microsoft launches a $2.5B "Frontier Company" initiative to embed AI engineers directly within customer organizations to build and operate AI systems end-to-end <sup>[11](<https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/>)</sup>.
+- Cloudflare sets a September deadline for AI crawlers to separate search-indexing bots from training-data scrapers, or face blocking on ad-supported pages <sup>[12](<https://www.nbcnews.com/tech/tech-news/cloudflare-sets-ai-crawler-deadline-separate-search-blocked-rcna352446>)</sup>.
+- Cost controls tighten: Tesla caps employee AI spending at $200/week, exempting Grok, signaling broader industry pressure to manage AI compute costs <sup>[13](<https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/>)</sup>.
 
-## DevOps, Cloud, and Infrastructure
-- GitHub Copilot CLI in GitHub Actions no longer needs a PAT—it can use the built-in `GITHUB_TOKEN` with org billing and `copilot-requests: write` permission <sup>[17](<https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions>)</sup>.
-- GitHub added **public monitoring for secret scanning** in preview for enterprises, alerting on leaked secrets across github.com <sup>[18](<https://github.blog/changelog/2026-07-01-secret-scanning-public-monitoring-for-enterprises>)</sup>.
-- GitHub enables enterprises to default Copilot conversations to **auto model selection** via `managed-settings.json` <sup>[19](<https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection>)</sup>.
-- GitHub now supports **Copilot agent session streaming** in public preview for Enterprise Cloud, providing visibility into prompts, responses, and tool calls <sup>[20](<https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview>)</sup>.
-- GitHub **cost centers** now support AI credit pools via REST API to cap included usage per group <sup>[21](<https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps>)</sup>.
-- Meta is planning a cloud business to sell excess AI compute and hosted models, competing with AWS/Azure/GCP <sup>[22](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3NDg0MSwiZXhwIjoxNzgzNTc5NjQxLCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiI0NUZGMzc2RThENDg0NzYxQTkwQ0JEMzc4OTMzQjg2RiJ9.kpiVb0aBaxaGvO7WPEUSvdMTw10YAUjtWL4lBYHetpI>), [23](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3MTY0NiwiZXhwIjoxNzgzNTc2NDQ2LCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.JdV2iInClRiKWZeNwiRnBwLP9ejcOSYmI1fPZwd0AuA>), [24](<https://www.nextplatform.com/cloud/2026/07/01/of-course-meta-platforms-is-going-to-be-a-cloud/5265392>)</sup>.
-- Slack AI adopted a multi-cloud strategy (SageMaker → Bedrock + Vertex AI) with an intelligent router abstracting provider details <sup>[25](<https://slack.engineering/slack-ai-the-path-to-multi-cloud/>)</sup>.
-- Zalando built a client-side load balancer handling >1M RPS with occupancy-based bounded load and AZ-aware routing <sup>[26](<https://engineering.zalando.com/posts/2026/06/client-side-load-balancing.html?v=2%5D%28https%3A%2F%2Fengineering.zalando.com%2Fposts%2F2026%2F06%2Fclient-side-load-balancing.html>)</sup>.
-
-## Developer Tools and Practices
-- Chrome introduced the `<usermedia>` HTML element to simplify media access, improve security, and aid user recovery after permission denial <sup>[27](<https://developer.chrome.com/blog/usermedia-html-element#validation_of_the_concept?utm_source=tldrnewsletter>)</sup>.
-- PostgreSQL performance degrades with excessive tables due to catalog bloat; consolidation/partitioning are recommended <sup>[28](<https://www.cybertec-postgresql.com/en/too-many-tables-are-bad/>)</sup>.
-- `uv` added `uv audit` for vulnerability scanning and a malware check via OSV advisories during `uv add/sync` <sup>[29](<https://astral.sh/blog/uv-audit>)</sup>.
-- OpenWiki is a CLI to generate and maintain agent-friendly documentation for codebases <sup>[30](<https://github.com/langchain-ai/openwiki>)</sup>.
+## Cloud and Business Context
+- Meta is doubling down on AI to diversify beyond ads, with a new cloud service positioned as a strategic expansion <sup>[14](<https://spyglass.org/meta-cloud/>)</sup>.
+- In China, AI-driven quant funds surpass 2.6 trillion yuan in AUM, as AI outperforms human traders at scale across thousands of stocks <sup>[15](<https://www.bloomberg.com/news/articles/2026-07-02/china-quant-funds-draw-billions-as-ai-trounces-human-traders?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzA0OTY2OSwiZXhwIjoxNzgzNjU0NDY5LCJhcnRpY2xlSWQiOiJURlkxUkZLSkg2VjQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.RyjaD3xJUXnuIyF9b5x590kKewCjSLyfSlMN-UfATyI>)</sup>.
 
 ## Sources
 
-1. [Redeploying Fable 5](<https://www.anthropic.com/news/redeploying-fable-5>) — _anthropic.com_
-2. [Google might be testing Gemini Flash upgrade on LM Arena](<https://www.testingcatalog.com/google-might-be-testing-gemini-flash-upgrade-on-lm-arena/>) — _testingcatalog.com_
-3. [The website of the future may assemble itself for every visitor](<https://www.latent.space/p/the-website-of-the-future>) — _latent.space_
-4. [ZCode 3.0 (Website)](<https://zcode.z.ai/en>) — _zcode.z.ai_
-5. [AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency](<https://www.latent.space/p/aiewf-daily-dispatch-agency>) — _latent.space_
-6. [Autoresearch: The feedback loop behind self-improving agents](<https://www.latent.space/p/autoresearch-introspection>) — _latent.space_
-7. [llm-coding-agent 0.1a0](<https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything>) — _simonwillison.net_
-8. [Using DSPy to evaluate and improve Datasette Agent's SQL system prompts](<https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything>) — _simonwillison.net_
-9. [Skill engineering and the case against one-shot AI design](<https://www.latent.space/p/skill-engineering-design>) — _latent.space_
-10. [PorTAL: Portable Task Adapters for LLMs](<https://x.com/RampLabs/status/2072381992285647280>) — _x.com_
-11. [Query Faster, Query Smarter: Our Move to DuckDB and What We Learned](<https://medium.com/arcesium-engineering-blog/query-faster-query-smarter-our-move-to-duckdb-and-what-we-learned-c935128e80bc>) — _medium.com_
-12. [Building Indexes on a Moving Target](<https://hudi.apache.org/blog/2026/06/25/building-indexes-on-a-moving-target/>) — _hudi.apache.org_
-13. [Meta's AI Storage Blueprint at Scale](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>) — _engineering.fb.com_
-14. [How we keep GPUs reliable across Databricks AI](<https://www.databricks.com/blog/how-we-keep-gpus-reliable-across-databricks-ai>) — _databricks.com_
-15. [Attackers Seize Exposed AI Endpoints to Power Offensive Ops](<https://www.darkreading.com/cloud-security/attackers-hijack-exposed-ai-endpoints-power-offensive-ops>) — _darkreading.com_
-16. [GLM-5.2, Not Mythos, is the Real Security Emergency](<https://joshuasaxe181906.substack.com/p/glm-52-not-mythos-is-the-real-security>) — _joshuasaxe181906.substack.com_
-17. [Copilot CLI no longer needs a personal access token in GitHub Actions](<https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions>) — _github.blog_
-18. [Secret scanning public monitoring for enterprises](<https://github.blog/changelog/2026-07-01-secret-scanning-public-monitoring-for-enterprises>) — _github.blog_
-19. [Enterprises can default to auto model selection](<https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection>) — _github.blog_
-20. [Copilot agent session streaming is now in public preview](<https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview>) — _github.blog_
-21. [Cost centers now support AI credit pools](<https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps>) — _github.blog_
-22. [Meta Is Planning a Cloud Business to Sell AI Computing Power](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3NDg0MSwiZXhwIjoxNzgzNTc5NjQxLCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiI0NUZGMzc2RThENDg0NzYxQTkwQ0JEMzc4OTMzQjg2RiJ9.kpiVb0aBaxaGvO7WPEUSvdMTw10YAUjtWL4lBYHetpI>) — _bloomberg.com_
-23. [Meta Is Planning a Cloud Business to Sell AI Computing Power](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3MTY0NiwiZXhwIjoxNzgzNTc2NDQ2LCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.JdV2iInClRiKWZeNwiRnBwLP9ejcOSYmI1fPZwd0AuA>) — _bloomberg.com_
-24. [Of Course Meta Platforms Is Going To Be A Cloud](<https://www.nextplatform.com/cloud/2026/07/01/of-course-meta-platforms-is-going-to-be-a-cloud/5265392>) — _nextplatform.com_
-25. [Slack AI: The Path to Multi-Cloud](<https://slack.engineering/slack-ai-the-path-to-multi-cloud/>) — _slack.engineering_
-26. [Client-Side Load Balancing at a Million Requests Per Second](<https://engineering.zalando.com/posts/2026/06/client-side-load-balancing.html?v=2%5D%28https%3A%2F%2Fengineering.zalando.com%2Fposts%2F2026%2F06%2Fclient-side-load-balancing.html>) — _engineering.zalando.com_
-27. [Introducing the 'usermedia' HTML element](<https://developer.chrome.com/blog/usermedia-html-element#validation_of_the_concept?utm_source=tldrnewsletter>) — _developer.chrome.com_
-28. [Too many tables are bad for you](<https://www.cybertec-postgresql.com/en/too-many-tables-are-bad/>) — _cybertec-postgresql.com_
-29. [Vulnerability and Malware Checks in uv](<https://astral.sh/blog/uv-audit>) — _astral.sh_
-30. [OpenWiki](<https://github.com/langchain-ai/openwiki>) — _github.com_
+1. [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<https://www.latent.space/p/aiewf-daily-dispatch-locomotives>) — _latent.space_
+2. [Vercel's Andrew Qu on why agents are a new kind of software](<https://www.latent.space/p/vercel-agents-new-software>) — _latent.space_
+3. [Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped](<https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/>) — _techcrunch.com_
+4. [Understanding is the new bottleneck](<https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html>) — _geoffreylitt.com_
+5. [Building an Intern](<https://cra.mr/building-an-intern/>) — _cra.mr_
+6. [Skill engineering and the case against one-shot AI design](<https://www.latent.space/p/skill-engineering-design>) — _latent.space_
+7. [Improved accuracy and coverage in Copilot usage metrics reports](<https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports>) — _github.blog_
+8. [Upcoming deprecation of Gemini 2.5 Pro and Gemini 3 Flash](<https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash>) — _github.blog_
+9. [A new trend, smart model routing](<https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/>) — _blog.pragmaticengineer.com_
+10. [Anthropic is discussing a new custom chip with Samsung](<https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/>) — _techcrunch.com_
+11. [Microsoft unveils $2.5B ‘Frontier Company' to embed AI engineers inside customers](<https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/>) — _geekwire.com_
+12. [Cloudflare sets deadline to block AI crawlers that bundle search with AI training](<https://www.nbcnews.com/tech/tech-news/cloudflare-sets-ai-crawler-deadline-separate-search-blocked-rcna352446>) — _nbcnews.com_
+13. [Tesla caps employee AI spending at $200/week except for Grok](<https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/>) — _electrek.co_
+14. [Meta's Inevitable Cloud](<https://spyglass.org/meta-cloud/>) — _spyglass.org_
+15. [China Quant Funds Draw Billions as AI Trounces Human Traders](<https://www.bloomberg.com/news/articles/2026-07-02/china-quant-funds-draw-billions-as-ai-trounces-human-traders?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzA0OTY2OSwiZXhwIjoxNzgzNjU0NDY5LCJhcnRpY2xlSWQiOiJURlkxUkZLSkg2VjQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.RyjaD3xJUXnuIyF9b5x590kKewCjSLyfSlMN-UfATyI>) — _bloomberg.com_
 
 
 ## Recent archive
