@@ -8,120 +8,15 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-03
-<sub>updated 4 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-04
+<sub>updated 4 July 2026 at 13:01</sub>
 
-## AI/ML: Models, Benchmarks, and Research
-- Meta’s Watermelon model is reported to match GPT‑5.5 on key benchmarks while still in training, using an order of magnitude more compute than Meta’s prior Muse Spark <sup>[1](<https://letsdatascience.com/news/metas-watermelon-matches-gpt-55-benchmarks-76a9460e>)</sup>.
-- Google DeepMind and A24 announced a first-of-its-kind research partnership to co-develop AI tools anchored in creative workflows, with Google also making an investment in A24 <sup>[2](<https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/>)</sup>.
-- Apple Research proposes Residual Context Diffusion for diffusion LLMs, recycling discarded token representations to improve accuracy with minimal overhead <sup>[3](<https://machinelearning.apple.com/research/residual-context-diffusion>)</sup>.
-- Seed2.0 model card emphasizes long-tail knowledge, complex instruction following, reasoning, visual understanding, and search-driven evaluation for real-world tasks <sup>[4](<https://arxiv.org/abs/2607.00248>)</sup>.
-
-## Agents, Tooling, and Engineering Practice
-- Debate continues on whether autonomous agent “loops” are production-ready; proponents see inevitability, skeptics stress verifiability and human oversight in generated code <sup>[5](<https://www.latent.space/p/aiewf-daily-dispatch-locomotives>)</sup>.
-- Vercel’s Chief of Software frames agents as a new software paradigm, drawing on lessons from agent frameworks and MCP libraries <sup>[6](<https://www.latent.space/p/vercel-agents-new-software>)</sup>.
-- Industry commentary highlights “understanding” as the new bottleneck: verifying agent output and preserving human participation are critical for correctness and trust <sup>[7](<https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html>)</sup>.
-- A Slack-based AI “intern” agent case study shows a four-month build with baked-in human review and steering; full source is shared <sup>[8](<https://cra.mr/building-an-intern/>)</sup>.
-- Skill engineering is advocated over one-shot AI design: agents need domain knowledge, contextual grounding, and explicit human steering to be effective <sup>[9](<https://www.latent.space/p/skill-engineering-design>)</sup>.
-- Practical tips emerge for Fable/Opus: letting the model use its own judgement for testing and model selection reduces token burn and improves outcomes <sup>[10](<https://simonwillison.net/2026/Jul/3/judgement/#atom-everything>)</sup>.
-- Autoresearch/loop-style work is most effective for problems with robust, measurable, well-constrained metrics to optimize <sup>[11](<https://www.elliotcsmith.com/autoresearch-claude-and-constrained-optimization/>)</sup>.
-- SGLang team turns agent workflows into reusable SKILL.md files, benchmark contracts, review loops, and debugging playbooks, framing agent value around executable engineering knowledge <sup>[12](<https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development>)</sup>.
-- Devin Security Swarm uses Agentic MapReduce to find and verify vulnerabilities at codebase scale <sup>[13](<https://threadreaderapp.com/thread/2072368168182432109.html>)</sup>.
-- Expensify uses agent-device to give AI agents “hands and eyes” on real mobile devices for bug reproduction, profiling, and evidence capture <sup>[14](<https://www.callstack.com/blog/how-expensify-uses-agent-device-for-mobile-bug-evidence-and-profiling>)</sup>.
-- Valmis is a cloud platform for building and deploying AI agents across 100+ integrations with isolated containers for security <sup>[15](<https://github.com/valmishq/valmis>)</sup>.
-- ContextForge is an open-source registry/proxy for federating MCP servers, A2A agents, and APIs with centralized discovery, auth, and observability <sup>[16](<https://github.com/IBM/mcp-context-forge>)</sup>.
-- Repo-forensics is an offline security scanner for AI-agent repos, skills, plugins, and MCP servers <sup>[17](<https://github.com/alexgreensh/repo-forensics>)</sup>.
-
-## LLM Tooling and Ecosystem
-- GitHub Copilot improves usage metrics accuracy (CLI line counts, IDE/server-side user identification, AI credit attribution) <sup>[18](<https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports>)</sup>.
-- GitHub Copilot will deprecate Gemini 2.5 Pro and 3 Flash on July 31, 2026, recommending migration to 3.1 Pro and 3.5 Flash; admins must enable new models via policy <sup>[19](<https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash>)</sup>.
-- Smart model routing is emerging as a best practice for cost/performance optimization <sup>[20](<https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/>)</sup>.
-- VS Code Copilot team reduced agentic coding costs and latency via prompt caching, deferred tool definitions, and WebSocket sessions <sup>[21](<https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot>)</sup>.
-- OmniRoute is an open-source AI routing gateway connecting coding tools to 237+ providers with failover, cost optimization, and quota management <sup>[22](<https://github.com/diegosouzapw/OmniRoute>)</sup>.
-- Laguna XS 2.1 is a 33B MoE model for agentic coding, +5.4 points on SWE-bench Multilingual to 63.1%, with quantized checkpoints and OpenMDW-1.1 license <sup>[23](<https://poolside.ai/blog/introducing-laguna-xs-2-1>)</sup>.
-- CursorBench 3.1 evaluates agents on ambiguous, multi-file tasks from real Cursor sessions <sup>[24](<https://cursor.com/evals>)</sup>.
-- Anthropic details Fable 5’s stricter cyber safeguards and a jailbreak severity framework for dual-use cyber requests <sup>[25](<https://www.anthropic.com/news/fable-safeguards-jailbreak-framework>)</sup>.
-- Claude Enterprise adds admin analytics, model-level entitlements, and spend alerts for cost control <sup>[26](<https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend>)</sup>.
-
-## MLOps, DevOps, and Infrastructure
-- Microsoft’s $2.5B “Frontier Company” initiative embeds AI engineers in customer orgs to build and operate AI end-to-end <sup>[27](<https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/>)</sup>.
-- Cloudflare sets a September deadline for AI crawlers to separate search-indexing bots from training-data scrapers or face blocking on ad-supported pages <sup>[28](<https://www.nbcnews.com/tech/tech-news/cloudflare-sets-ai-crawler-deadline-separate-search-blocked-rcna352446>)</sup>.
-- Tesla caps employee AI spending at $200/week (Grok exempt), signaling broader cost-control pressure <sup>[29](<https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/>)</sup>.
-- Argo CD 3.5 tightens supply-chain security with internal mTLS, Git commit signature verification, native ApplicationSet UI, Helm 4 support, and multi-namespace management <sup>[30](<https://www.infoq.com/news/2026/06/argocd-supply-chain-security/>)</sup>.
-- Boundary 1.0 adds RDP session recording, Kubernetes Helm charts, scoped aliases, and simplified admin UI for privileged access management <sup>[31](<https://www.hashicorp.com/en/blog/boundary-1-releases-with-rdp-session-recording-and-improved-management>)</sup>.
-- Hybrid cloud misconfigurations accelerate across IAM, networks, storage, secrets, and drift; prevention requires unified policy-as-code, CI/CD scanning, drift detection, and least privilege <sup>[32](<https://www.devopsdigest.com/the-hidden-cost-of-misconfigurations-in-hybrid-cloud>)</sup>.
-- kpt (CNCF sandbox) packages, validates, transforms, and deploys Kubernetes Resource Model configs for GitOps-style infrastructure automation <sup>[33](<https://www.cncf.io/blog/2026/07/02/reintroducing-kpt-your-toolchain-for-infrastructure-automation/>)</sup>.
-- ScyllaDB 2026.2 makes its trie-based SSTable index default, delivering 20–230% higher throughput and 31–63% lower latency in read-heavy workloads <sup>[34](<https://www.scylladb.com/2026/06/30/trie-index-3x-more-throughput/>)</sup>.
-- ZeroFS is an open-source filesystem that makes S3-compatible object storage behave like a high-performance, encrypted POSIX filesystem or block device <sup>[35](<https://www.zerofs.net/>)</sup>.
-- Floci is an open-source local AWS emulator for development/testing/CI, supporting Lambda, RDS, ECS, EC2, EKS, OpenSearch, and CodeBuild via Docker-backed execution <sup>[36](<https://github.com/floci-io/floci>)</sup>.
-
-## Security and Threat Landscape
-- Cursor IDE had two critical RCE flaws (CVE-2026-50548/50549) via zero-click prompt injection through untrusted MCP servers or poisoned web results, escaping the terminal sandbox; fixes shipped in Cursor 3.0 <sup>[37](<https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/>)</sup>.
-- CISA added SharePoint RCE CVE-2026-45659 to KEV after active exploitation; any authenticated Site Member can trigger RCE, patching is urgent <sup>[38](<https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html>)</sup>.
-- Medtronic warns patients that intruders accessed corporate systems for six days, exposing patient identifiers, contact details, SSNs, and health data; devices remain safe <sup>[39](<https://www.theregister.com/security/2026/07/02/pacemaker-manufacturer-medtronic-warns-patients-cybercrooks-may-have-swiped-health-data/5265768>)</sup>.
-- Phantom squatting: LLM-hallucinated domains can become malicious infrastructure; Unit 42 mapped 2.1M URLs, found 13,229 malicious and ~250K unregistered “phantom domains,” with 18–51 day windows for proactive watchlisting <sup>[40](<https://unit42.paloaltonetworks.com/phantom-squatting-hallucinated-web-domains/>)</sup>.
-- Adobe ColdFusion 2023/2025 patched multiple RCE flaws in RDS FILEIO and CKEditor file manager; weak path handling allowed arbitrary filesystem access and unauthenticated file uploads <sup>[41](<https://labs.watchtowr.com/its-37oc-and-all-we-can-think-about-is-coldfusion-adobe-coldfusion-security-bulletin-apsb26-68-cve-bonanza/>)</sup>.
-- Google and partners disrupted NetNut, a 2M-device residential proxy network tied to password-spray and home network intrusion, with overlap to Mirai and Badbox 2.0 <sup>[42](<https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html>)</sup>.
-- New CitrixBleed (CVE-2026-8451) exploited within a day of disclosure via SAML IDP XML parser out-of-bounds read, leaking memory via NSC_TASS cookie <sup>[43](<https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/>)</sup>.
-- US DHS investigates a breach of its Homeland Security Information Network used for sharing sensitive intelligence and event coordination <sup>[44](<https://techcrunch.com/2026/07/02/us-government-says-it-got-hacked-again/>)</sup>.
-- Signal and Cloudflare completed migration to post-quantum cryptography to preempt future quantum attacks; Microsoft accelerates its shift to post-quantum crypto by 2029 <sup>[45](<https://www.reddit.com/r/cryptography/comments/1ukw963/we_just_saw_this_one_massive_exposure_how_signal/>), [46](<https://thehackernews.com/2026/07/microsoft-accelerates-post-quantum.html>)</sup>.
-
-## Cloud, Hardware, and Performance
-- OpenAI serves WebRTC voice AI to 900M weekly users by splitting the stack into a stateless edge relay and a stateful transceiver, encoding routing metadata into ICE ufrag to avoid DB lookups <sup>[47](<https://blog.bytebytego.com/p/how-openai-delivers-low-latency-voice>)</sup>.
-- NVIDIA’s Confidential Computing for Blackwell GPUs protects model weights/data during inference with hardware-rooted keys and remote attestation, achieving up to 98% of non-CC throughput <sup>[48](<https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down/>)</sup>.
-- AI hardware advances accelerate as custom chips transition from concepts to products, led by OpenAI, Etched, Amazon, and SambaNova <sup>[49](<https://x.com/ai/status/2072658811823763479>)</sup>.
+## AI/ML Ecosystem & Tooling
+- Current AI, a non-profit building a public option for AI, launches the **Open Source AI Gap Map v0.1**, indexing 421 open-source AI products: 266 tools/libraries, 85 models, 50 datasets, and 20 hardware projects across 14 categories and 3 stack layers (model components, product/UX, infrastructure), with 24,400 additional uncategorized artifacts pending review <sup>[1](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [Meta's Watermelon Matches GPT-5.5 Benchmarks](<https://letsdatascience.com/news/metas-watermelon-matches-gpt-55-benchmarks-76a9460e>) — _letsdatascience.com_
-2. [Google DeepMind and A24 announce first-of-its-kind research partnership](<https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/>) — _deepmind.google_
-3. [Residual Context Diffusion Language Models](<https://machinelearning.apple.com/research/residual-context-diffusion>) — _machinelearning.apple.com_
-4. [Seed2.0 Model Card](<https://arxiv.org/abs/2607.00248>) — _arxiv 2607.00248_
-5. [AIEWF Daily Dispatch: The great loops debate and the state of AI engineering](<https://www.latent.space/p/aiewf-daily-dispatch-locomotives>) — _latent.space_
-6. [Vercel's Andrew Qu on why agents are a new kind of software](<https://www.latent.space/p/vercel-agents-new-software>) — _latent.space_
-7. [Understanding is the new bottleneck](<https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html>) — _geoffreylitt.com_
-8. [Building an Intern](<https://cra.mr/building-an-intern/>) — _cra.mr_
-9. [Skill engineering and the case against one-shot AI design](<https://www.latent.space/p/skill-engineering-design>) — _latent.space_
-10. [Fable's judgement](<https://simonwillison.net/2026/Jul/3/judgement/#atom-everything>) — _simonwillison.net_
-11. [Autoresearch, Claude, and Constrained Optimization](<https://www.elliotcsmith.com/autoresearch-claude-and-constrained-optimization/>) — _elliotcsmith.com_
-12. [Agent-Assisted SGLang Development](<https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development>) — _lmsys.org_
-13. [Introducing Devin Security Swarm](<https://threadreaderapp.com/thread/2072368168182432109.html>) — _threadreaderapp.com_
-14. [How Expensify Uses Agent-Device for Mobile Bug Evidence and Profiling](<https://www.callstack.com/blog/how-expensify-uses-agent-device-for-mobile-bug-evidence-and-profiling>) — _callstack.com_
-15. [Valmis](<https://github.com/valmishq/valmis>) — _github.com_
-16. [ContextForge](<https://github.com/IBM/mcp-context-forge>) — _github.com_
-17. [Repo-forensics](<https://github.com/alexgreensh/repo-forensics>) — _github.com_
-18. [Improved accuracy and coverage in Copilot usage metrics reports](<https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports>) — _github.blog_
-19. [Upcoming deprecation of Gemini 2.5 Pro and Gemini 3 Flash](<https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash>) — _github.blog_
-20. [A new trend, smart model routing](<https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/>) — _blog.pragmaticengineer.com_
-21. [Improving token efficiency for GitHub Copilot in VS Code](<https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot>) — _code.visualstudio.com_
-22. [OmniRoute](<https://github.com/diegosouzapw/OmniRoute>) — _github.com_
-23. [Introducing Laguna XS 2.1](<https://poolside.ai/blog/introducing-laguna-xs-2-1>) — _poolside.ai_
-24. [CursorBench 3.1](<https://cursor.com/evals>) — _cursor.com_
-25. [More details on Fable 5's cyber safeguards and our jailbreak framework](<https://www.anthropic.com/news/fable-safeguards-jailbreak-framework>) — _anthropic.com_
-26. [New analytics and cost controls are available for Claude Enterprise](<https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend>) — _claude.com_
-27. [Microsoft unveils $2.5B ‘Frontier Company' to embed AI engineers inside customers](<https://www.geekwire.com/2026/microsoft-announces-2-5b-frontier-company-to-embed-ai-engineers-inside-customers/>) — _geekwire.com_
-28. [Cloudflare sets deadline to block AI crawlers that bundle search with AI training](<https://www.nbcnews.com/tech/tech-news/cloudflare-sets-ai-crawler-deadline-separate-search-blocked-rcna352446>) — _nbcnews.com_
-29. [Tesla caps employee AI spending at $200/week except for Grok](<https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/>) — _electrek.co_
-30. [Argo CD 3.5 Tightens Supply Chain Security with Internal mTLS and Source Integrity](<https://www.infoq.com/news/2026/06/argocd-supply-chain-security/>) — _infoq.com_
-31. [Boundary 1.0 releases RDP session recording and improved management](<https://www.hashicorp.com/en/blog/boundary-1-releases-with-rdp-session-recording-and-improved-management>) — _hashicorp.com_
-32. [The Hidden Cost of Misconfigurations in Hybrid Cloud](<https://www.devopsdigest.com/the-hidden-cost-of-misconfigurations-in-hybrid-cloud>) — _devopsdigest.com_
-33. [(re)introducing kpt: Your toolchain for infrastructure automation](<https://www.cncf.io/blog/2026/07/02/reintroducing-kpt-your-toolchain-for-infrastructure-automation/>) — _cncf.io_
-34. [How ScyllaDB's Trie-Based Index Delivers Up to 3X More Throughput](<https://www.scylladb.com/2026/06/30/trie-index-3x-more-throughput/>) — _scylladb.com_
-35. [ZeroFS (Website)](<https://www.zerofs.net/>) — _zerofs.net_
-36. [Floci](<https://github.com/floci-io/floci>) — _github.com_
-37. [DuneSlide: Two Critical RCE vulnerabilities via Zero-Click Prompt Injection in Cursor IDE](<https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/>) — _catonetworks.com_
-38. [SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation](<https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html>) — _thehackernews.com_
-39. [Pacemaker manufacturer Medtronic warns patients cybercrooks may have swiped health data](<https://www.theregister.com/security/2026/07/02/pacemaker-manufacturer-medtronic-warns-patients-cybercrooks-may-have-swiped-health-data/5265768>) — _theregister.com_
-40. [Phantom Squatting: AI-Hallucinated Domains as a Software Supply Chain Vector](<https://unit42.paloaltonetworks.com/phantom-squatting-hallucinated-web-domains/>) — _unit42.paloaltonetworks.com_
-41. [It's 37oC, And All We Can Think About Is ColdFusion](<https://labs.watchtowr.com/its-37oc-and-all-we-can-think-about-is-coldfusion-adobe-coldfusion-security-bulletin-apsb26-68-cve-bonanza/>) — _labs.watchtowr.com_
-42. [Google Disrupts NetNut Residential Proxy Network Spanning 2 Million Home Devices](<https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html>) — _thehackernews.com_
-43. [New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure](<https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/>) — _securityweek.com_
-44. [US government says it got hacked — again](<https://techcrunch.com/2026/07/02/us-government-says-it-got-hacked-again/>) — _techcrunch.com_
-45. [Signal and Cloudflare Deploy Post-Quantum Cryptography to Preempt Quantum Threats](<https://www.reddit.com/r/cryptography/comments/1ukw963/we_just_saw_this_one_massive_exposure_how_signal/>) — _reddit.com_
-46. [Microsoft Accelerates Post-Quantum Cryptography Shift to 2029](<https://thehackernews.com/2026/07/microsoft-accelerates-post-quantum.html>) — _thehackernews.com_
-47. [How OpenAI delivers Low Latency Voice AI for 900M Users](<https://blog.bytebytego.com/p/how-openai-delivers-low-latency-voice>) — _blog.bytebytego.com_
-48. [Hardware-Rooted AI Security That Won't Slow You Down](<https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down/>) — _developer.nvidia.com_
-49. [The Hardware Coup: Why AI Hardware Just Changed Forever](<https://x.com/ai/status/2072658811823763479>) — _x.com_
+1. [Open Source AI Gap Map](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive
