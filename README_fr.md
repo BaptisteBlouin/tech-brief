@@ -8,19 +8,23 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-04
-<sub>mis à jour le 5 juillet 2026 à 01:00</sub>
+### Dernier digest — 2026-07-05
+<sub>mis à jour le 5 juillet 2026 à 13:00</sub>
 
-## Écosystème et outils IA/ML
-- Current AI publie la **Open Source AI Gap Map v0.1**, qui répertorie 421 produits IA open source : 266 outils/bibliothèques, 85 modèles, 50 jeux de données et 20 projets matériels répartis en 14 catégories et 3 couches de stack (composants de modèle, produit/UX, infrastructure), avec 24 400 artefacts non classés en attente d'examen <sup>[1](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>)</sup>.
+## Outils IA/LLM et expérience développeur
+- Claude Fable contribue de manière significative à sqlite-utils 4.0rc2, en identifiant des problèmes majeurs avant la sortie et en accélérant la voie vers une version 4.0 stable ; le travail a coûté environ 149,25 $ en appels API <sup>[1](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>), [2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>)</sup>.
+- Les modèles plus récents d'Anthropic (Opus 4.8, Sonnet 5) sont observés comme émettant des appels d'outils mal formés — ajoutant des champs inventés aux schémas d'outils — là où les anciens modèles ne le faisaient pas, suggérant une régression dans le respect strict des schémas pour l'utilisation des outils <sup>[3](<https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything>)</sup>.
 
-## Sécurité et anti-bot
-- Les défenses anti-bot traditionnelles (limites de taux par IP, CAPTCHA, vérification téléphonique, empreinte numérique de l'appareil) échouent de plus en plus, car les adversaires exploitent leur dépendance aux proxys (IP, téléphone, appareil) plutôt qu'à une vérification humaine directe <sup>[2](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>)</sup>.
+## Outils de développement et ingénierie logicielle
+- sqlite-utils 4.0rc2 est publié en tant qu'utilitaire CLI Python et bibliothèque pour manipuler des bases de données SQLite, avec l'étape RC2 impulsée par une revue assistée par agent <sup>[1](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>), [2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>)</sup>.
+- Une démo de carte du monde ASCII de 445 octets montre une combinaison astucieuse de compression deflate et de l'utilisation de `fetch` en JavaScript avec des URI `data:` et `DecompressionStream` pour afficher la carte dans le navigateur <sup>[4](<https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [Open Source AI Gap Map](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>) — _simonwillison.net_
-2. [Proof of Human: How to Verify a Person Is Real and Unique](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>) — _blog.bytebytego.com_
+1. [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>) — _simonwillison.net_
+2. [sqlite-utils 4.0rc2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>) — _simonwillison.net_
+3. [Better Models: Worse Tools](<https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything>) — _simonwillison.net_
+4. [Building a World Map with only 500 bytes](<https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything>) — _simonwillison.net_
 
 
 ## Archive récente

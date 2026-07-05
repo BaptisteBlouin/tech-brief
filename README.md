@@ -8,19 +8,23 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-04
-<sub>updated 5 July 2026 at 01:00</sub>
+### Latest digest — 2026-07-05
+<sub>updated 5 July 2026 at 13:00</sub>
 
-## AI/ML Ecosystem & Tooling
-- Current AI releases the **Open Source AI Gap Map v0.1**, indexing 421 open-source AI products: 266 tools/libraries, 85 models, 50 datasets, and 20 hardware projects across 14 categories and 3 stack layers (model components, product/UX, infrastructure), with 24,400 additional uncategorized artifacts pending review <sup>[1](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>)</sup>.
+## AI/LLM tooling and developer experience
+- Claude Fable contributes significantly to sqlite-utils 4.0rc2, identifying major pre-release issues and accelerating the path to a stable 4.0; the work cost about $149.25 in API calls <sup>[1](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>), [2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>)</sup>.
+- Newer Anthropic models (Opus 4.8, Sonnet 5) are observed to emit malformed tool calls—adding invented fields to tool schemas—where older models did not, suggesting a regression in strict schema adherence for tool use <sup>[3](<https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything>)</sup>.
 
-## Security & Anti-Bot
-- Traditional anti-bot defenses (rate limits by IP, CAPTCHA, phone verification, device fingerprinting) increasingly fail as adversaries exploit their reliance on proxies (IP, phone, device) rather than direct human verification <sup>[2](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>)</sup>.
+## Developer tools and software engineering
+- sqlite-utils 4.0rc2 is released as a Python CLI utility and library for manipulating SQLite databases, with the RC2 milestone driven by agent-assisted review <sup>[1](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>), [2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>)</sup>.
+- A 445-byte ASCII world map demo showcases a clever combination of deflate compression and JavaScript’s `fetch` with `data:` URIs plus `DecompressionStream` to render the map in the browser <sup>[4](<https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [Open Source AI Gap Map](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>) — _simonwillison.net_
-2. [Proof of Human: How to Verify a Person Is Real and Unique](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>) — _blog.bytebytego.com_
+1. [sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](<https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything>) — _simonwillison.net_
+2. [sqlite-utils 4.0rc2](<https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything>) — _simonwillison.net_
+3. [Better Models: Worse Tools](<https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything>) — _simonwillison.net_
+4. [Building a World Map with only 500 bytes](<https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive
