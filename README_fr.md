@@ -9,14 +9,18 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-07-04
-<sub>mis à jour le 4 juillet 2026 à 13:01</sub>
+<sub>mis à jour le 5 juillet 2026 à 01:00</sub>
 
 ## Écosystème et outils IA/ML
-- Current AI, une organisation à but non lucratif construisant une option publique pour l'IA, lance la **Open Source AI Gap Map v0.1**, qui répertorie 421 produits IA open source : 266 outils/bibliothèques, 85 modèles, 50 jeux de données et 20 projets matériels répartis dans 14 catégories et 3 couches de stack (composants de modèle, produit/UX, infrastructure), avec 24 400 artefacts non classés en attente de révision <sup>[1](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>)</sup>.
+- Current AI publie la **Open Source AI Gap Map v0.1**, qui répertorie 421 produits IA open source : 266 outils/bibliothèques, 85 modèles, 50 jeux de données et 20 projets matériels répartis en 14 catégories et 3 couches de stack (composants de modèle, produit/UX, infrastructure), avec 24 400 artefacts non classés en attente d'examen <sup>[1](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>)</sup>.
+
+## Sécurité et anti-bot
+- Les défenses anti-bot traditionnelles (limites de taux par IP, CAPTCHA, vérification téléphonique, empreinte numérique de l'appareil) échouent de plus en plus, car les adversaires exploitent leur dépendance aux proxys (IP, téléphone, appareil) plutôt qu'à une vérification humaine directe <sup>[2](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>)</sup>.
 
 ## Sources
 
 1. [Open Source AI Gap Map](<https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything>) — _simonwillison.net_
+2. [Proof of Human: How to Verify a Person Is Real and Unique](<https://blog.bytebytego.com/p/proof-of-human-how-to-verify-a-person>) — _blog.bytebytego.com_
 
 
 ## Archive récente
@@ -25,6 +29,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-07-04` | Samedi | [Lire →](news/fr/2026-07-04.md) |
 | `2026-07-03` | Vendredi | [Lire →](news/fr/2026-07-03.md) |
 | `2026-07-02` | Jeudi | [Lire →](news/fr/2026-07-02.md) |
 | `2026-07-01` | Mercredi | [Lire →](news/fr/2026-07-01.md) |
@@ -38,9 +43,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-06-23` | Mardi | [Lire →](news/fr/2026-06-23.md) |
 | `2026-06-22` | Lundi | [Lire →](news/fr/2026-06-22.md) |
 | `2026-06-21` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-06-21.md) |
-| `2026-06-20` | Samedi | [Lire →](news/fr/2026-06-20.md) |
 
-<sub>[Parcourir toute l’archive (19) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (20) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
