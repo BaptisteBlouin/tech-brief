@@ -8,118 +8,51 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### 🗓️ Weekly recap (2026-06-29 → 2026-07-05)
-<sub>updated 6 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-06
+<sub>updated 6 July 2026 at 13:01</sub>
 
-## AI/ML Models and Benchmarks
-- OpenAI introduces GPT-5.6 Preview family (Sol, Terra, Luna) with stronger cyber/bio safety testing and limited preview availability <sup>[1](<https://deploymentsafety.openai.com/gpt-5-6-preview>)</sup>.
-- US partially lifts Anthropic Mythos 5 ban for trusted partners while keeping broader restrictions pending federal evaluation standards <sup>[2](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>)</sup>.
-- Grok 4.5 enters private beta at SpaceX/Tesla, built on a 1.5T V9 foundation model with Cursor data, showing near/above-Opus early evaluations <sup>[3](<https://x.com/elonmusk/status/2071184354756477041>)</sup>.
-- Claude Opus 4.8 (fast mode) rolls out in preview for GitHub Copilot across IDEs and mobile, offering faster token speeds at reduced cost <sup>[4](<https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot>)</sup>.
-- Claude models are now generally available in Microsoft Foundry on Azure with data residency options and enterprise controls <sup>[5](<https://claude.com/blog/claude-in-microsoft-foundry>)</sup>.
-- Ornith-1.0 open-weight models (9B–397B, MIT-licensed) built on Gemma 4/Qwen 3.5 achieve SOTA coding performance for their size <sup>[6](<https://simonwillison.net/2026/Jun/29/ornith/#atom-everything>)</sup>.
-- Meta releases Brain2Qwerty v2 for real-time, non-invasive brain-to-text decoding with open training code and datasets <sup>[7](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>), [8](<https://www.latent.space/p/ainews-not-much-happened-today-07e>), [9](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>)</sup>.
-- Anthropic releases Claude Sonnet 5, a highly agentic Sonnet-class model with performance close to Opus 4.8 at lower cost, now default for Free/Pro and available in GitHub Copilot <sup>[10](<https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot>), [11](<https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything>), [12](<https://www.anthropic.com/news/claude-sonnet-5>), [13](<https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5>), [14](<https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-at-a-steep-discount-to-its-top-model-as-the-company-races-toward-a-blockbuster-ipo>), [15](<https://www.anthropic.com/news/claude-sonnet-5>)</sup>.
-- US Department of Commerce lifts export controls on Claude Fable 5 and Mythos 5, with access restoration beginning the next day <sup>[16](<https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything>), [17](<https://x.com/AnthropicAI/status/2072106151890809341>), [18](<https://www.wsj.com/tech/ai/anthropic-nears-deal-with-trump-administration-to-restore-access-to-fable-ai-model-6f4177f3?st=uiTjeV&reflink=desktopwebshare_permalink>), [19](<https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-to-restore-claude-fable-access-on-wednesday/>)</sup>.
-- Google launches Gemini 3.1 Flash Lite Image (aka Nano Banana 2 Lite), billed as the fastest and cheapest Gemini image model for high-velocity, large-scale generation <sup>[20](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything>), [21](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/>), [22](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/>)</sup>.
-- Meta’s Watermelon model is reported to match GPT‑5.5 on key benchmarks while still in training <sup>[23](<https://letsdatascience.com/news/metas-watermelon-matches-gpt-55-benchmarks-76a9460e>)</sup>.
+## AI/ML Models and Tooling
+- Hugging Face introduces a dedicated "kernel" repository type for Kernels, with improved security (trusted publishers, kernel signing), revamped CLIs, broader framework/backend coverage, and foundations for agentic kernel development <sup>[1](<https://huggingface.co/blog/revamped-kernels>)</sup>.
+- GPT-5.6 Sol Ultra is confirmed to be integrated into GitHub Codex <sup>[2](<https://twitter.com/thsottiaux/status/2073933490513752151>)</sup>.
+- t0-alpha, a 102M-parameter open-weights time-series LLM, demonstrates strong zero-shot forecasting with causal transformer architecture and probabilistic outputs, outperforming classical baselines on 96/97 configurations <sup>[3](<https://towardsdatascience.com/time-series-llms-explained-with-t0-alpha/>)</sup>.
+- Newer Anthropic models may solve tasks correctly but fail stricter tool schemas by adding invalid fields, indicating overfitting to forgiving tool formats and a need for stricter schema validation in agent harnesses <sup>[4](<https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/>)</sup>.
+- Claude Science, an AI workbench for scientists, launches to support literature review, hypothesis generation, data analysis, experiment design, and code writing <sup>[5](<https://www.anthropic.com/news/claude-science-ai-workbench>)</sup>.
 
-## LLM Tooling, Agents, and RAG
-- Claude Code gateway for Amazon Bedrock and Google Cloud launches, enabling corporate SSO, policy enforcement, and per-user cost attribution <sup>[24](<https://claude.com/blog/introducing-the-claude-apps-gateway>)</sup>.
-- Google’s ADK Go 2.0 adds a graph-based workflow engine, human-in-the-loop orchestration, and dynamic execution for multi-agent applications <sup>[25](<https://developers.googleblog.com/announcing-adk-go-20/>)</sup>.
-- Cursor for iOS (public beta) enables launching/cloud-controlling agents from mobile, with voice input and cross-device handoff <sup>[26](<https://cursor.com/blog/ios-mobile-app>), [27](<https://cursor.com/blog/ios-mobile-app>)</sup>.
-- Google’s Genkit introduces the Agents API, a full-stack tool simplifying conversational AI plumbing with message history, tool loops, and streaming <sup>[28](<https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/>), [29](<https://developers.googleblog.com/why-we-built-adk-20/>)</sup>.
-- Pinecone Nexus enters public preview, compiling distributed enterprise knowledge into a reliable source for agents <sup>[30](<https://www.pinecone.io/blog/pinecone-nexus-public-preview/>)</sup>.
-- GitHub Copilot adds browser tools, vision, auto model selection, AI credit session limits, and a C++ language server plugin <sup>[31](<https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available>), [32](<https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available>), [33](<https://github.blog/changelog/2026-07-01-copilot-cli-auto-model-selection-routes-based-on-task>), [34](<https://github.blog/changelog/2026-07-01-set-ai-credit-session-limits-in-copilot-cli-and-sdk>), [35](<https://github.blog/changelog/2026-07-01-new-c-language-server-config-skill-for-copilot-cli>)</sup>.
-- OmniRoute launches as an open-source AI gateway aggregating 236+ providers into one endpoint with automatic fallback and token compression <sup>[36](<https://github.com/diegosouzapw/OmniRoute>), [37](<https://github.com/diegosouzapw/OmniRoute>)</sup>.
+## RAG, Agents, and Context Engineering
+- Context engineering emerges as a discipline to structure company knowledge for reliable agentic Q&A, with clean data models and documentation driving accuracy from 40% to 90%, while query logs add limited value; best practices include starting with 10–20 high-value tables, CI/CD testing, and Git-backed governance <sup>[6](<https://roundup.getdbt.com/p/the-context-engineering-playbook>)</sup>.
+- Agentic workflows can automate compliance and risk audits by combining unstructured policy documents with structured data, using ontology mappings, LLM-Wiki, and Text2SQL to reach ≥80/100 confidence <sup>[7](<https://blog.gopenai.com/bridging-the-gap-blending-structured-data-auditing-with-unstructured-policy-intelligence-17710e04c8de>)</sup>.
 
-## MLOps, Data Engineering, and DevOps
-- PyTorch introduces Cross-Repository CI Relay to auto-trigger and track downstream CI for out-of-tree backends <sup>[38](<https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/>)</sup>.
-- Apache Flink 2.3.0 adds evolving materialized tables, SQL changelog conversion, and native S3 support without Hadoop dependencies <sup>[39](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>)</sup>.
-- GitHub adds code coverage merge protection for PRs, blocking merges if coverage drops below configurable thresholds <sup>[40](<https://github.blog/changelog/2026-06-30-github-code-coverage-merge-protection-for-pull-requests>)</sup>.
-- GitHub releases per-user AI credit budgets for cost centers, enabling granular spend control across teams <sup>[41](<https://github.blog/changelog/2026-06-30-per-user-ai-credit-budgets-available-for-cost-centers>)</sup>.
-- GitHub Copilot CLI in GitHub Actions no longer needs a PAT—it can use the built-in `GITHUB_TOKEN` with org billing <sup>[42](<https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions>)</sup>.
-- GitHub enables enterprises to default Copilot conversations to auto model selection via `managed-settings.json` <sup>[43](<https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection>)</sup>.
-- Argo CD 3.5 introduces a first-class ApplicationSet UI and tightens supply-chain security with internal mTLS and Git commit signature verification <sup>[44](<https://www.infoq.com/news/2026/06/argocd-supply-chain-security/>)</sup>.
+## MLOps, DevOps, and Infrastructure
+- Meta shares its AI Storage Blueprint, detailing a multi-tier hierarchy, intelligent data placement, caching, erasure coding, and networking optimizations for large-scale AI storage <sup>[8](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>)</sup>.
+- Inference now dominates AI costs, accounting for ~two-thirds of compute and 80–90% of lifetime model cost; key levers include KV cache management, batching, quantization, and speculative decoding, with physical bottlenecks (HBM, NVLink, optics, power) as durable advantages <sup>[9](<https://www.datagravity.dev/p/how-an-ai-token-travels-through-a>)</sup>.
+- Grab migrates its high-QPS fraud Counter Service from a wide-column DB to Aerospike, achieving zero downtime via storage facades, shadow reads/writes, and deterministic traffic splitting, while cutting record cardinality, disk usage, p99 latency, and per-node costs by ~50% <sup>[10](<https://engineering.grab.com/counter-service-storage-migration>)</sup>.
 
-## Cloud and Infrastructure
-- Snowflake emphasizes real-world workload performance (data, concurrency, latency, scale, cost) over headline benchmarks for production evaluations <sup>[45](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>)</sup>.
-- Google Cloud launches SQL-based alerting in Observability Analytics (preview) for complex alerts over logs/traces via BigQuery <sup>[46](<https://cloud.google.com/blog/products/management-tools/alert-with-sql-in-cloud-monitoring-observability-analytics/>)</sup>.
-- Amazon EKS adds control plane egress through customer VPCs for API server outbound traffic <sup>[47](<https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-control-plane-egress-through-your-vpc/>)</sup>.
-- Meta is planning a cloud business to sell excess AI compute and hosted models, competing with AWS/Azure/GCP <sup>[48](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3NDg0MSwiZXhwIjoxNzgzNTc5NjQxLCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiI0NUZGMzc2RThENDg0NzYxQTkwQ0JEMzc4OTMzQjg2RiJ9.kpiVb0aBaxaGvO7WPEUSvdMTw10YAUjtWL4lBYHetpI>), [49](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3MTY0NiwiZXhwIjoxNzgzNTc2NDQ2LCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.JdV2iInClRiKWZeNwiRnBwLP9ejcOSYmI1fPZwd0AuA>), [50](<https://www.nextplatform.com/cloud/2026/07/01/of-course-meta-platforms-is-going-to-be-a-cloud/5265392>)</sup>.
-
-## Developer Tools and Engineering Practices
-- GitHub allows restricting issue creation to collaborators with write access for reduced noise and consistency with PR permissions <sup>[51](<https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only>)</sup>.
-- Octopus Deploy makes ephemeral environments optional for PRs via GitHub labels, cutting costs for low-risk changes <sup>[52](<https://octopus.com/blog/optional-ephemeral-environments-gh-label>)</sup>.
-- Vercel now supports deploying any Dockerfile, enabling backends and services that don’t fit its framework detection model <sup>[53](<https://vercel.com/blog/dockerfile-on-vercel>)</sup>.
-- Chrome introduced the `<usermedia>` HTML element to simplify media access, improve security, and aid user recovery after permission denial <sup>[54](<https://developer.chrome.com/blog/usermedia-html-element#validation_of_the_concept?utm_source=tldrnewsletter>)</sup>.
-
-## Security and Threat Landscape
-- DirtyClone (CVE-2026-43503) is the fourth Linux kernel flaw in six weeks, enabling unprivileged users to gain root via IPsec tunnel manipulation <sup>[55](<https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html>)</sup>.
-- Cursor IDE had two critical RCE flaws (CVE-2026-50548/50549) via zero-click prompt injection through untrusted MCP servers or poisoned web results <sup>[56](<https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/>)</sup>.
-- CISA added SharePoint RCE CVE-2026-45659 to KEV after active exploitation <sup>[57](<https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html>)</sup>.
-- New CitrixBleed (CVE-2026-8451) exploited within a day of disclosure via SAML IDP XML parser out-of-bounds read <sup>[58](<https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/>)</sup>.
+## Developer Tools and Data Engineering
+- sqlite-utils 4.0rc3 adds support for compound foreign keys (with a breaking change to `table.foreign_keys`) and aligns with SQLite’s case-insensitive column name convention, among other fixes <sup>[11](<https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything>)</sup>.
+- StreamFusion is an open-source Flink SQL accelerator that transparently replaces supported streaming operators with native Rust/Apache Arrow/DataFusion execution over JNI, maintaining byte-identical parity <sup>[12](<https://github.com/datafusion-contrib/StreamFusion>)</sup>.
+- Redis publishes a benchmark-driven comparison of open-source vector databases, highlighting Redis for ultra-low latency/high QPS hybrid search, Qdrant/Weaviate for rich metadata filtering, and Milvus for massive scale <sup>[13](<https://redis.io/blog/best-open-source-vector-databases-comparison/>)</sup>.
+- Instacart details variance reduction techniques for A/B testing and causal inference below the randomization grain, using CUPED and stratification to enable more precise measurements <sup>[14](<https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2>)</sup>.
+- GitBiased offers a customizable dashboard for GitHub activity, consolidating PRs, CI checks, issues, DORA metrics, deployments, and weekly summaries <sup>[15](<https://gitbiased.com/>)</sup>.
+- Allemannsdata provides 23 no-key MCP servers for Norway’s open public data across domains like transport, weather, energy, and health <sup>[16](<https://allemannsdata.com/>)</sup>.
 
 ## Sources
 
-1. [GPT-5.6 Sol, Terra, and Luna](<https://deploymentsafety.openai.com/gpt-5-6-preview>) — _deploymentsafety.openai.com_
-2. [Trump Administration Rolls Back Part of Anthropic Model Ban](<https://www.wsj.com/tech/ai/trump-administration-rolls-back-part-of-anthropic-model-ban-e8284434?st=mEYCim&reflink=desktopwebshare_permalink>) — _wsj.com_
-3. [Musk Says Grok 4.5 Entered Private Beta](<https://x.com/elonmusk/status/2071184354756477041>) — _x.com_
-4. [Claude Opus 4.8 (fast mode) is now in preview for GitHub Copilot](<https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot>) — _github.blog_
-5. [Claude in Microsoft Foundry is now generally available](<https://claude.com/blog/claude-in-microsoft-foundry>) — _claude_
-6. [Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding](<https://simonwillison.net/2026/Jun/29/ornith/#atom-everything>) — _simonwillison.net_
-7. [From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>) — _meta ai_
-8. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-07e>) — _latent.space_
-9. [From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery](<https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/>) — _ai.meta.com_
-10. [Claude Sonnet 5 is generally available for GitHub Copilot](<https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot>) — _github.blog_
-11. [What's new in Claude Sonnet 5](<https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything>) — _simonwillison.net_
-12. [Introducing Claude Sonnet 5](<https://www.anthropic.com/news/claude-sonnet-5>) — _anthropic news_
-13. [\[AINews\] Sonnet 5 today, and Fable 5 tomorrow](<https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5>) — _latent.space_
-14. [Anthropic launches Claude Sonnet 5 at a steep discount to its top model as the company races toward a blockbuster IPO](<https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-at-a-steep-discount-to-its-top-model-as-the-company-races-toward-a-blockbuster-ipo>) — _venturebeat.com_
-15. [Claude Sonnet 5](<https://www.anthropic.com/news/claude-sonnet-5>) — _anthropic.com_
-16. [Quoting Anthropic](<https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything>) — _simonwillison.net_
-17. [The Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5](<https://x.com/AnthropicAI/status/2072106151890809341>) — _x.com_
-18. [Anthropic Reaches Deal With Trump Administration to Restore Access to Fable AI Model](<https://www.wsj.com/tech/ai/anthropic-nears-deal-with-trump-administration-to-restore-access-to-fable-ai-model-6f4177f3?st=uiTjeV&reflink=desktopwebshare_permalink>) — _wsj.com_
-19. [Anthropic to restore Claude Fable access on Wednesday](<https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-to-restore-claude-fable-access-on-wednesday/>) — _bleepingcomputer.com_
-20. [Nano Banana 2 Lite](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything>) — _simonwillison.net_
-21. [Nano Banana 2 Lite](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/>) — _blog.google_
-22. [Nano Banana 2 Lite](<https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/>) — _simonwillison.net_
-23. [Meta's Watermelon Matches GPT-5.5 Benchmarks](<https://letsdatascience.com/news/metas-watermelon-matches-gpt-55-benchmarks-76a9460e>) — _letsdatascience.com_
-24. [Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud](<https://claude.com/blog/introducing-the-claude-apps-gateway>) — _claude_
-25. [Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration](<https://developers.googleblog.com/announcing-adk-go-20/>) — _google ai_
-26. [Build from anywhere with Cursor for iOS](<https://cursor.com/blog/ios-mobile-app>) — _cursor_
-27. [Build from anywhere with Cursor for iOS](<https://cursor.com/blog/ios-mobile-app>) — _cursor.com_
-28. [Build agentic full-stack apps with Genkit](<https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/>) — _google ai_
-29. [Why we built ADK 2.0](<https://developers.googleblog.com/why-we-built-adk-20/>) — _google ai_
-30. [Pinecone Nexus Is Now in Public Preview](<https://www.pinecone.io/blog/pinecone-nexus-public-preview/>) — _pinecone_
-31. [Browser tools for GitHub Copilot in VS Code are generally available](<https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available>) — _github.blog_
-32. [Copilot vision is generally available](<https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available>) — _github.blog_
-33. [Copilot CLI auto model selection routes based on task](<https://github.blog/changelog/2026-07-01-copilot-cli-auto-model-selection-routes-based-on-task>) — _github.blog_
-34. [Set AI credit session limits in Copilot CLI and SDK](<https://github.blog/changelog/2026-07-01-set-ai-credit-session-limits-in-copilot-cli-and-sdk>) — _github.blog_
-35. [New C++ language server config skill for Copilot CLI](<https://github.blog/changelog/2026-07-01-new-c-language-server-config-skill-for-copilot-cli>) — _github.blog_
-36. [Omniroute](<https://github.com/diegosouzapw/OmniRoute>) — _github.com_
-37. [OmniRoute](<https://github.com/diegosouzapw/OmniRoute>) — _github.com_
-38. [Introducing Cross-Repository CI Relay: Scalable CI for PyTorch&#8217;s Out-of-Tree Backends](<https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/>) — _pytorch.org_
-39. [Apache Flink 2.3.0 Release Announcement](<https://flink.apache.org/2026/06/25/apache-flink-2.3.0-release-announcement/>) — _flink.apache.org_
-40. [GitHub code coverage merge protection for pull requests](<https://github.blog/changelog/2026-06-30-github-code-coverage-merge-protection-for-pull-requests>) — _github.blog_
-41. [Per-user AI credit budgets available for cost centers](<https://github.blog/changelog/2026-06-30-per-user-ai-credit-budgets-available-for-cost-centers>) — _github.blog_
-42. [Copilot CLI no longer needs a personal access token in GitHub Actions](<https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions>) — _github.blog_
-43. [Enterprises can default to auto model selection](<https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection>) — _github.blog_
-44. [Argo CD 3.5 Tightens Supply Chain Security with Internal mTLS and Source Integrity](<https://www.infoq.com/news/2026/06/argocd-supply-chain-security/>) — _infoq.com_
-45. [Why Real Workload Performance is the Metric that Matters](<https://www.snowflake.com/en/blog/engineering/measuring-real-workload-performance/>) — _snowflake.com_
-46. [Alert with SQL in Cloud Monitoring Observability Analytics](<https://cloud.google.com/blog/products/management-tools/alert-with-sql-in-cloud-monitoring-observability-analytics/>) — _cloud.google.com_
-47. [Amazon EKS now supports control plane egress through your VPC](<https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-control-plane-egress-through-your-vpc/>) — _aws.amazon.com_
-48. [Meta Is Planning a Cloud Business to Sell AI Computing Power](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3NDg0MSwiZXhwIjoxNzgzNTc5NjQxLCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiI0NUZGMzc2RThENDg0NzYxQTkwQ0JEMzc4OTMzQjg2RiJ9.kpiVb0aBaxaGvO7WPEUSvdMTw10YAUjtWL4lBYHetpI>) — _bloomberg.com_
-49. [Meta Is Planning a Cloud Business to Sell AI Computing Power](<https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mjk3MTY0NiwiZXhwIjoxNzgzNTc2NDQ2LCJhcnRpY2xlSWQiOiJUSEVOTzNUOU5KTFQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.JdV2iInClRiKWZeNwiRnBwLP9ejcOSYmI1fPZwd0AuA>) — _bloomberg.com_
-50. [Of Course Meta Platforms Is Going To Be A Cloud](<https://www.nextplatform.com/cloud/2026/07/01/of-course-meta-platforms-is-going-to-be-a-cloud/5265392>) — _nextplatform.com_
-51. [Restrict issue creation to collaborators only](<https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only>) — _github.blog_
-52. [Optional ephemeral environments using GitHub PR labels](<https://octopus.com/blog/optional-ephemeral-environments-gh-label>) — _octopus.com_
-53. [Run any Dockerfile on Vercel](<https://vercel.com/blog/dockerfile-on-vercel>) — _vercel.com_
-54. [Introducing the 'usermedia' HTML element](<https://developer.chrome.com/blog/usermedia-html-element#validation_of_the_concept?utm_source=tldrnewsletter>) — _developer.chrome.com_
-55. [DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root](<https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html>) — _securityaffairs.com_
-56. [DuneSlide: Two Critical RCE vulnerabilities via Zero-Click Prompt Injection in Cursor IDE](<https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/>) — _catonetworks.com_
-57. [SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation](<https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html>) — _thehackernews.com_
-58. [New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure](<https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/>) — _securityweek.com_
+1. [🤗 Kernels: Major Updates](<https://huggingface.co/blog/revamped-kernels>) — _huggingface.co_
+2. [GPT-5.6 Sol Ultra will be in Codex](<https://twitter.com/thsottiaux/status/2073933490513752151>) — _hnrss.org_
+3. [Time-Series LLMs, Explained with t0-alpha](<https://towardsdatascience.com/time-series-llms-explained-with-t0-alpha/>) — _towardsdatascience.com_
+4. [Better Models: Worse Tools](<https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/>) — _lucumr.pocoo.org_
+5. [Claude Science, an AI Workbench for Scientists, Is Now Available](<https://www.anthropic.com/news/claude-science-ai-workbench>) — _anthropic.com_
+6. [The context engineering playbook](<https://roundup.getdbt.com/p/the-context-engineering-playbook>) — _roundup.getdbt.com_
+7. [Bridging the Gap: Blending Structured Data Auditing with Unstructured Policy Intelligence](<https://blog.gopenai.com/bridging-the-gap-blending-structured-data-auditing-with-unstructured-policy-intelligence-17710e04c8de>) — _blog.gopenai.com_
+8. [Meta's AI Storage Blueprint at Scale](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>) — _engineering.fb.com_
+9. [How an AI Token Travels Through a Data Center](<https://www.datagravity.dev/p/how-an-ai-token-travels-through-a>) — _datagravity.dev_
+10. [Migrating Counter Service storage: Design choices and learnings](<https://engineering.grab.com/counter-service-storage-migration>) — _engineering.grab.com_
+11. [sqlite-utils 4.0rc3](<https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything>) — _simonwillison.net_
+12. [StreamFusion](<https://github.com/datafusion-contrib/StreamFusion>) — _github.com_
+13. [Comparing the Best Open Source Vector databases](<https://redis.io/blog/best-open-source-vector-databases-comparison/>) — _redis.io_
+14. [Variance Reduction Below the Randomization Grain](<https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2>) — _tech.instacart.com_
+15. [GitBiased (Tool)](<https://gitbiased.com/>) — _gitbiased.com_
+16. [Norwegian public-data MCP servers (Tool)](<https://allemannsdata.com/>) — _allemannsdata.com_
 
 
 ## Recent archive
