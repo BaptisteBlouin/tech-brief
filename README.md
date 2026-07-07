@@ -8,98 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-06
-<sub>updated 7 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-07
+<sub>updated 7 July 2026 at 13:01</sub>
 
-## AI/ML Models and Tooling
-- Hugging Face introduces a dedicated "kernel" repository type for Kernels, with improved security (trusted publishers, kernel signing), revamped CLIs, broader framework/backend coverage, and foundations for agentic kernel development <sup>[1](<https://huggingface.co/blog/revamped-kernels>)</sup>.
-- GPT-5.6 Sol Ultra is confirmed to be integrated into GitHub Codex <sup>[2](<https://twitter.com/thsottiaux/status/2073933490513752151>)</sup>.
-- OpenAI is preparing GPT-5.6 for release next week, split into Sol, Terra, and Luna tiers, with a new reasoning-effort control slider and an "ultra" mode for complex tasks <sup>[3](<https://www.testingcatalog.com/openai-might-be-preparing-gpt-5-6-for-next-weeks-release/>)</sup>.
-- t0-alpha, a 102M-parameter open-weights time-series LLM, demonstrates strong zero-shot forecasting with causal transformer architecture and probabilistic outputs, outperforming classical baselines on 96/97 configurations <sup>[4](<https://towardsdatascience.com/time-series-llms-explained-with-t0-alpha/>)</sup>.
-- Fable (Claude) wrote the first genuine megakernel submitted to KernelBench-Mega, achieving an 18.71X speedup on an RTX PRO 6000 Blackwell vs. an optimized PyTorch baseline, surpassing other models like Claude Opus 4.8 (14.4X, Triton) and GPT-5.5 (4.34X, Triton) <sup>[5](<https://jack-clark.net/2026/07/06/import-ai-464-fables-writes-gpu-kernels-ai-automation-and-analog-computation/>)</sup>.
-- Newer Anthropic models may solve tasks correctly but fail stricter tool schemas by adding invalid fields, indicating overfitting to forgiving tool formats and a need for stricter schema validation in agent harnesses <sup>[6](<https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/>)</sup>.
-- Claude Science, an AI workbench for scientists, launches to support literature review, hypothesis generation, data analysis, experiment design, and code writing <sup>[7](<https://www.anthropic.com/news/claude-science-ai-workbench>)</sup>.
-- Claude Fable requires iterative discovery of "unknowns" (gaps between the map and the territory) before, during, and after implementation to ensure high-quality long-horizon work <sup>[8](<https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns>), [9](<https://x.com/trq212/status/2073100352921215386?s=12>), [10](<https://x.com/trq212/status/2073100352921215386>), [11](<https://simonwillison.net/2026/Jul/3/judgement/>)</sup>.
-- ByteDance is rumored to launch Seedance 2.5 on July 9, enabling 3-minute AI video output across Dreamina, CapCut, and partner platforms, though stability of character identity and motion remains unclear <sup>[12](<https://www.testingcatalog.com/bytedance-set-to-launch-seedance-2-5-with-3-minute-ai-video-output/>)</sup>.
-- GLM-5.2 achieves 2626 tok/s/node on AMD MI355X with >2x cost-efficiency vs. comparable NVIDIA setups, narrowing the performance gap despite historical AMD software challenges <sup>[13](<https://www.wafer.ai/blog/glm52-amd>)</sup>.
-- Leanstral is an open-source 119B-parameter theorem-proving and code-verification agent built on Mistral’s coding framework <sup>[14](<https://github.com/mistralai/LeanstralSafeVerify/blob/main/LeanstralReport.pdf>)</sup>.
+## AI Models & Capabilities
+- Tencent releases **Hy3**, a 295B-parameter MoE model (21B active) under Apache 2.0, with a 256K context window; the FP8-quantized version is 300GB and available for free on OpenRouter until July 21, outperforming similar-size models and rivaling larger open-source alternatives <sup>[1](<https://simonwillison.net/2026/Jul/6/hy3/#atom-everything>)</sup>.
+- **LeRobot v0.6.0** introduces new robotics evaluation and improvement workflows, including the **Robometer-4B** benchmark for assessing robotic task performance <sup>[2](<https://huggingface.co/blog/lerobot-release-v060>)</sup>.
+- Community focus shifts to stress-testing **Fable 5** before its free-tier subsidy ends, with guidance on rethinking prompts and constraints to unlock new model behaviors <sup>[3](<https://www.latent.space/p/ainews-the-field-guide-to-fable>)</sup>.
 
-## RAG, Agents, and Context Engineering
-- Context engineering emerges as a discipline to structure company knowledge for reliable agentic Q&A, with clean data models and documentation driving accuracy from 40% to 90%, while query logs add limited value; best practices include starting with 10–20 high-value tables, CI/CD testing, and Git-backed governance <sup>[15](<https://roundup.getdbt.com/p/the-context-engineering-playbook>)</sup>.
-- Agentic workflows can automate compliance and risk audits by combining unstructured policy documents with structured data, using ontology mappings, LLM-Wiki, and Text2SQL to reach ≥80/100 confidence <sup>[16](<https://blog.gopenai.com/bridging-the-gap-blending-structured-data-auditing-with-unstructured-policy-intelligence-17710e04c8de>)</sup>.
-- JadePuffer ransomware became the first known fully automated LLM-driven attack, exploiting CVE-2025-3248 in Langflow with no human intervention, conducting reconnaissance, lateral movement, and encrypting 1,342 Nacos configuration items <sup>[17](<https://tldr.tech/infosec/2026-07-06>)</sup>.
-- Anthropic’s Claude Mythos identified >10,000 high/critical vulnerabilities across major SaaS systems via Project Glasswing, compressing the gap between discovery and exploitation from weeks to minutes; Anthropic restricted general access to vetted partners <sup>[17](<https://tldr.tech/infosec/2026-07-06>)</sup>.
-- Agentic loops and harnesses are becoming critical differentiators as coding models commoditize; portable, model-agnostic control loops for orchestration, tooling, and verification are seen as a durable advantage <sup>[18](<https://x.com/aparnadhinak/status/2073079029624943040>), [19](<https://danluu.com/ai-coding/#appendix-agentic-loops-and-writing-this-post?utm_source=tldrnewsletter>)</sup>.
-- Planning-with-files brings persistent, crash-proof planning to coding agents by storing plans and progress in markdown files, supporting autonomous/gated modes and 60+ platforms via SKILL.md <sup>[20](<https://github.com/OthmanAdi/planning-with-files>)</sup>.
-- Gastown is an open-source multi-agent orchestration system coordinating multiple coding assistants (Claude Code, Copilot, Gemini) with git-backed state, a three-tier watchdog, a Bors-style merge queue (Refinery), and a federated work-sharing network (Wasteland) <sup>[21](<https://github.com/gastownhall/gastown>)</sup>.
+## LLM Training & Infrastructure
+- PyTorch **Monarch** (single-controller distributed training) is now ported to **AMD GPUs via ROCm**, addressing reliability at scale for multi-GPU LLM training and expanding beyond CUDA ecosystems <sup>[4](<https://pytorch.org/blog/bringing-pytorch-monarch-to-amd-gpus-single-controller-distributed-training-on-rocm/>)</sup>.
+- Nvidia delays its next-gen **Kyber rack-scale AI system** (144 Rubin Ultra chips) to **2028** due to manufacturing challenges with a key circuit board, signaling constraints in its annual release cadence <sup>[5](<https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html>)</sup>.
 
-## MLOps, DevOps, and Infrastructure
-- Meta shares its AI Storage Blueprint, detailing multi-tier hierarchy, intelligent data placement, caching, erasure coding, and networking optimizations for large-scale AI storage <sup>[22](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>)</sup>.
-- Inference now dominates AI costs (~two-thirds of compute, 80–90% of lifetime model cost); key levers include KV cache management, batching, quantization, and speculative decoding, with physical bottlenecks (HBM, NVLink, optics, power) as durable advantages <sup>[23](<https://www.datagravity.dev/p/how-an-ai-token-travels-through-a>)</sup>.
-- Google’s MaxText introduces elastic training via Pathways/JAX, converting hardware failures into catchable exceptions; a terminated TPU mid-training can be replaced and resume from the last checkpoint in under two minutes without restarting the controller <sup>[24](<https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/>)</sup>.
-- Grab migrates its high-QPS fraud Counter Service from a wide-column DB to Aerospike, achieving zero downtime via storage facades, shadow reads/writes, and deterministic traffic splitting, while cutting record cardinality, disk usage, p99 latency, and per-node costs by ~50% <sup>[25](<https://engineering.grab.com/counter-service-storage-migration>)</sup>.
-- Amazon EKS now supports Kubernetes version rollbacks, allowing teams to reverse failed cluster upgrades within seven days without rebuilding the cluster <sup>[26](<https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/>)</sup>.
-- AWS CloudFormation Express mode accelerates infrastructure deployments by up to 4x, providing confirmation in seconds for faster iteration in agent-assisted and human-driven workflows <sup>[27](<https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/>)</sup>.
-- Cloudflare launches Workers Cache, a tiered cache in front of Workers configurable via Wrangler; cacheable requests hit Cloudflare’s edge first, avoiding Worker CPU time on cache hits and controlled via standard Cache-Control headers <sup>[28](<https://blog.cloudflare.com/workers-cache/>), [29](<https://blog.cloudflare.com/monetization-gateway/>)</sup>.
-- Cloudflare opens the waitlist for Monetization Gateway, enabling charging for access to web pages, datasets, APIs, or MCP tools behind Cloudflare via the x402 protocol <sup>[29](<https://blog.cloudflare.com/monetization-gateway/>)</sup>.
-- Amazon’s Project Kuiper (Leo) now has >390 satellites in orbit, sufficient to begin serving customers later this year, with initial commercial service limited to select regions <sup>[30](<https://www.cnbc.com/2026/07/02/amazon-has-deployed-enough-satellites-to-launch-leo-service-this-year.html>)</sup>.
-- Ubicloud explains strict memory overcommit for PostgreSQL to prevent OOM kills, allowing graceful handling of allocation failures without impacting all connections <sup>[31](<https://www.ubicloud.com/blog/postgresql-and-the-oom-killer-why-we-use-strict-memory-overcommit>)</sup>.
-- CNCF notes EU’s CADA proposal introduces a four-tier sovereignty framework, pushing enterprises toward sovereign cloud platforms using Kubernetes, OpenStack, and GitOps for jurisdictional control and operational independence <sup>[32](<https://www.cncf.io/blog/2026/07/03/how-data-sovereignty-is-changing-cloud-native-infrastructure-design/>)</sup>.
+## Robotics & Hardware
+- Analysis highlights robots as a **general-purpose technology**, emphasizing hardware and supply chain realities over pure AI solutions; China’s Unitree and broader robotics capacity are underscored as critical <sup>[6](<https://www.chinatalk.media/p/the-robots-are-here>)</sup>.
 
-## Developer Tools and Data Engineering
-- sqlite-utils 4.0rc3 adds compound foreign keys (breaking change to `table.foreign_keys`) and aligns with SQLite’s case-insensitive column name convention <sup>[33](<https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything>)</sup>.
-- StreamFusion is an open-source Flink SQL accelerator that transparently replaces supported streaming operators with native Rust/Apache Arrow/DataFusion execution over JNI, maintaining byte-identical parity <sup>[34](<https://github.com/datafusion-contrib/StreamFusion>)</sup>.
-- Redis publishes a benchmark-driven comparison of open-source vector databases: Redis for ultra-low latency/high QPS hybrid search, Qdrant/Weaviate for rich metadata filtering, Milvus for massive scale <sup>[35](<https://redis.io/blog/best-open-source-vector-databases-comparison/>)</sup>.
-- Apache Airflow 3.3.0 introduces a first-class state store for tasks/assets, a Language Task SDK for Java/Go, expanded asset partitioning, and pluggable retry policies <sup>[36](<https://airflow.apache.org/blog/airflow-3.3.0/>)</sup>.
-- Instacart details variance reduction techniques (CUPED, stratification) for A/B testing and causal inference below the randomization grain <sup>[37](<https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2>)</sup>.
-- GitBiased offers a customizable dashboard for GitHub activity, consolidating PRs, CI checks, issues, DORA metrics, deployments, and weekly summaries <sup>[38](<https://gitbiased.com/>)</sup>.
-- Allemannsdata provides 23 no-key MCP servers for Norway’s open public data across transport, weather, energy, and health <sup>[39](<https://allemannsdata.com/>)</sup>.
-- dbt’s 2026 report shows 72% of teams prioritize AI-assisted agentic coding for data work, while only 24% prioritize AI-assisted data pipeline management, highlighting a gap between individual tooling and team-level integration <sup>[40](<https://www.getdbt.com/blog/a-guide-to-implementing-ai-data-pipelines>)</sup>.
-- Kubernetes Headlamp plugin for Knative streamlines serverless operations with unified management of Knative resources <sup>[41](<https://kubernetes.io/blog/2026/06/25/headlamp-knative-plugin/>)</sup>.
+## Developer Tools & Practices
+- **env.style** launches a tool to visually style and customize environment tabs/icons, enabling live previews for DevOps and development workflows <sup>[7](<https://www.env.style/>)</sup>.
+- Critique of **token-based pricing**: cost-per-task, not per-1M-tokens, is the meaningful metric for evaluating LLM economics and performance <sup>[8](<https://janilowski.pl/en/blog/2026/price-per-m-tokens/>)</sup>.
+
+## Cloud & MLOps
+- Alibaba’s open-source AI models (e.g., Qwen) gain global traction but struggle to monetize, as their low-cost, permissive usage contrasts with proprietary U.S. alternatives <sup>[9](<https://www.nytimes.com/2026/07/06/business/alibaba-ai-qwen.html>)</sup>.
+
+## Engineering & Industry Trends
+- Tech leaders revise earlier predictions of AI-driven job displacement, now emphasizing **AI as a productivity amplifier** rather than a replacement, reflecting evolving workplace integration <sup>[10](<https://www.wsj.com/tech/ai/ai-workers-tech-ceos-job-losses-afc71e15?st=3WgzvB&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
+- Discussion on **agentic engineering** as a high-skill discipline, where top performers leverage AI agents to achieve order-of-magnitude productivity gains <sup>[11](<https://x.com/systematicls/status/2074142558595207435>)</sup>.
 
 ## Sources
 
-1. [🤗 Kernels: Major Updates](<https://huggingface.co/blog/revamped-kernels>) — _huggingface.co_
-2. [GPT-5.6 Sol Ultra will be in Codex](<https://twitter.com/thsottiaux/status/2073933490513752151>) — _hnrss.org_
-3. [OpenAI might be preparing GPT-5.6 for next week's release](<https://www.testingcatalog.com/openai-might-be-preparing-gpt-5-6-for-next-weeks-release/>) — _testingcatalog.com_
-4. [Time-Series LLMs, Explained with t0-alpha](<https://towardsdatascience.com/time-series-llms-explained-with-t0-alpha/>) — _towardsdatascience.com_
-5. [Import AI 464: Fables writes GPU kernels; AI automation; and analog computation](<https://jack-clark.net/2026/07/06/import-ai-464-fables-writes-gpu-kernels-ai-automation-and-analog-computation/>) — _jack-clark.net_
-6. [Better Models: Worse Tools](<https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/>) — _lucumr.pocoo.org_
-7. [Claude Science, an AI Workbench for Scientists, Is Now Available](<https://www.anthropic.com/news/claude-science-ai-workbench>) — _anthropic.com_
-8. [A Field Guide to Claude Fable: Finding Your Unknowns](<https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns>) — _claude_
-9. [A Field Guide to Fable: Finding Your Unknowns](<https://x.com/trq212/status/2073100352921215386?s=12>) — _x.com_
-10. [A Field Guide to Fable: Finding Your Unknowns](<https://x.com/trq212/status/2073100352921215386>) — _x.com_
-11. [Let Fable use its own judgement rather than dictating how it should work](<https://simonwillison.net/2026/Jul/3/judgement/>) — _simonwillison.net_
-12. [ByteDance set to launch Seedance 2.5 with 3-minute AI video output](<https://www.testingcatalog.com/bytedance-set-to-launch-seedance-2-5-with-3-minute-ai-video-output/>) — _testingcatalog.com_
-13. [Performance per dollar is getting faster and cheaper](<https://www.wafer.ai/blog/glm52-amd>) — _wafer.ai_
-14. [Leanstral](<https://github.com/mistralai/LeanstralSafeVerify/blob/main/LeanstralReport.pdf>) — _github.com_
-15. [The context engineering playbook](<https://roundup.getdbt.com/p/the-context-engineering-playbook>) — _roundup.getdbt.com_
-16. [Bridging the Gap: Blending Structured Data Auditing with Unstructured Policy Intelligence](<https://blog.gopenai.com/bridging-the-gap-blending-structured-data-auditing-with-unstructured-policy-intelligence-17710e04c8de>) — _blog.gopenai.com_
-17. [JadePuffer AI Attack 🤖,Anthropic v. Alibaba ⚖️ , PamStealer macOS Bug 🍏](<https://tldr.tech/infosec/2026-07-06>) — _tldr.tech_
-18. [Own the Loop: A Field Guide to Agent Harnesses](<https://x.com/aparnadhinak/status/2073079029624943040>) — _x.com_
-19. [Agentic loops](<https://danluu.com/ai-coding/#appendix-agentic-loops-and-writing-this-post?utm_source=tldrnewsletter>) — _danluu.com_
-20. [Planning-with-files](<https://github.com/OthmanAdi/planning-with-files>) — _github.com_
-21. [Gastown](<https://github.com/gastownhall/gastown>) — _github.com_
-22. [Meta's AI Storage Blueprint at Scale](<https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/>) — _engineering.fb.com_
-23. [How an AI Token Travels Through a Data Center](<https://www.datagravity.dev/p/how-an-ai-token-travels-through-a>) — _datagravity.dev_
-24. [We terminated a TPU mid-training and it recovered in seconds: Introduction to elastic training with MaxText](<https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/>) — _google ai_
-25. [Migrating Counter Service storage: Design choices and learnings](<https://engineering.grab.com/counter-service-storage-migration>) — _engineering.grab.com_
-26. [Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks](<https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/>) — _aws.amazon.com_
-27. [Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode](<https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/>) — _aws.amazon.com_
-28. [Your Worker can now have its own cache in front of it](<https://blog.cloudflare.com/workers-cache/>) — _blog.cloudflare.com_
-29. [Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402](<https://blog.cloudflare.com/monetization-gateway/>) — _blog.cloudflare.com_
-30. [Amazon has deployed enough satellites to launch Leo service later this year](<https://www.cnbc.com/2026/07/02/amazon-has-deployed-enough-satellites-to-launch-leo-service-this-year.html>) — _cnbc.com_
-31. [PostgreSQL and the OOM Killer: Why We Use Strict Memory Overcommit](<https://www.ubicloud.com/blog/postgresql-and-the-oom-killer-why-we-use-strict-memory-overcommit>) — _ubicloud.com_
-32. [How data sovereignty is changing cloud native infrastructure design](<https://www.cncf.io/blog/2026/07/03/how-data-sovereignty-is-changing-cloud-native-infrastructure-design/>) — _cncf.io_
-33. [sqlite-utils 4.0rc3](<https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything>) — _simonwillison.net_
-34. [StreamFusion](<https://github.com/datafusion-contrib/StreamFusion>) — _github.com_
-35. [Comparing the Best Open Source Vector databases](<https://redis.io/blog/best-open-source-vector-databases-comparison/>) — _redis.io_
-36. [Apache Airflow 3.3.0: Stateful Tasks and Multi-Language Support](<https://airflow.apache.org/blog/airflow-3.3.0/>) — _airflow.apache.org_
-37. [Variance Reduction Below the Randomization Grain](<https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2>) — _tech.instacart.com_
-38. [GitBiased (Tool)](<https://gitbiased.com/>) — _gitbiased.com_
-39. [Norwegian public-data MCP servers (Tool)](<https://allemannsdata.com/>) — _allemannsdata.com_
-40. [A guide to implementing AI data pipelines](<https://www.getdbt.com/blog/a-guide-to-implementing-ai-data-pipelines>) — _dbt.com_
-41. [See your serverless: introducing the Headlamp plugin for Knative](<https://kubernetes.io/blog/2026/06/25/headlamp-knative-plugin/>) — _kubernetes.io_
+1. [tencent/Hy3](<https://simonwillison.net/2026/Jul/6/hy3/#atom-everything>) — _simonwillison.net_
+2. [LeRobot v0.6.0: Imagine, Evaluate, Improve](<https://huggingface.co/blog/lerobot-release-v060>) — _huggingface.co_
+3. [\[AINews\] The Field Guide to Fable](<https://www.latent.space/p/ainews-the-field-guide-to-fable>) — _latent.space_
+4. [Bringing PyTorch Monarch to AMD GPUs: Single-Controller Distributed Training on ROCm](<https://pytorch.org/blog/bringing-pytorch-monarch-to-amd-gpus-single-controller-distributed-training-on-rocm/>) — _pytorch.org_
+5. [Nvidia's next-gen AI rack system delayed to 2028 on manufacturing snags](<https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html>) — _cnbc.com_
+6. [The Robots Are Here](<https://www.chinatalk.media/p/the-robots-are-here>) — _chinatalk.media_
+7. [Your environments at a glance (Website)](<https://www.env.style/>) — _env.style_
+8. [Price per 1M tokens is meaningless](<https://janilowski.pl/en/blog/2026/price-per-m-tokens/>) — _janilowski.pl_
+9. [Alibaba's AI Is a Hit, but Hard to Turn Into a Moneymaker](<https://www.nytimes.com/2026/07/06/business/alibaba-ai-qwen.html>) — _nytimes.com_
+10. [Big Tech Has Suddenly Flipped on the AI Jobs Wipeout Scenario](<https://www.wsj.com/tech/ai/ai-workers-tech-ceos-job-losses-afc71e15?st=3WgzvB&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+11. [What The New 100x Agentic Engineer Looks Like In The Era Of Fable & GPT 5.6](<https://x.com/systematicls/status/2074142558595207435>) — _x.com_
 
 
 ## Recent archive
