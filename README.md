@@ -8,109 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-07
-<sub>updated 8 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-08
+<sub>updated 8 July 2026 at 13:00</sub>
 
-## AI Models & Capabilities
-- Tencent releases **Hy3**, a 295B-parameter MoE model (21B active) under Apache 2.0, with a 256K context window; the FP8-quantized version is 300GB and available for free on OpenRouter until July 21, outperforming similar-size models and rivaling larger open-source alternatives <sup>[1](<https://simonwillison.net/2026/Jul/6/hy3/#atom-everything>)</sup> <sup>[2](<https://simonwillison.net/2026/Jul/6/hy3/>)</sup>.
-- Meta launches **Muse Image** and previews **Muse Video**, agentic media generation models that use tool invocation (search, coding), self-refinement, and joint planning with Muse Spark; Muse Image is live across Meta AI, Instagram, and WhatsApp (limited regions) <sup>[3](<https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/>)</sup>.
-- Anthropic research reveals **J-space** in Claude models—internal neural patterns enabling deliberate reasoning, thought monitoring, and multi-step problem-solving, emerging without explicit design <sup>[4](<https://www.anthropic.com/research/global-workspace>)</sup>.
-- **LeRobot v0.6.0** adds **Robometer-4B** benchmark for robotic task performance evaluation <sup>[5](<https://huggingface.co/blog/lerobot-release-v060>)</sup>.
-- Community stress-tests **Fable 5** before its free-tier subsidy ends, refining prompts and constraints to surface new behaviors <sup>[6](<https://www.latent.space/p/ainews-the-field-guide-to-fable>)</sup>.
+## AI/ML Models and Capabilities
+- Meta releases Muse Image, a new consumer-facing image-generation model available via Meta AI, WhatsApp, and Instagram Stories, with free tier and subscription options; it will also power advertiser tools in Advantage Plus <sup>[1](<https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html>)</sup>.
+- Microsoft replaces OpenAI and Anthropic models with its own MAI models in some apps like Excel and Outlook <sup>[2](<https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps>)</sup>.
+- Chinese AI models gain traction among US companies as costs from OpenAI and Anthropic rise <sup>[3](<https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html>)</sup>.
+- China considers restricting foreign access to its most advanced AI models, potentially limiting them to domestic use <sup>[4](<https://time.com/article/2026/07/07/china-ai-models-alibaba-bytedance/>)</sup>.
+- Tesla’s Cybercab features upgraded FSD hardware with more memory to run larger autonomous driving models, enabling SAE Level 4 autonomy <sup>[5](<https://www.notateslaapp.com/news/4409/exclusive-tesla-cybercab-includes-more-powerful-fsd-hardware>)</sup>.
 
-## LLM Tooling, Agents & RAG
-- **Claude Cowork** usage shows ~50% of tasks are "work around the work" (e.g., memos, decks, research synthesis), with mobile/web rollout beginning for Max users <sup>[7](<https://claude.com/blog/how-people-are-using-claude-cowork>)</sup> <sup>[8](<https://claude.com/blog/cowork-web-mobile>)</sup>.
-- **Claude Code** guidance clarifies model vs. effort: model sets capability ceiling; effort controls files read, tools used, and steps taken before user check-in <sup>[9](<https://claude.com/blog/claude-model-and-effort-level-in-claude-code>)</sup>.
-- **MCP** (Model Context Protocol) used by Integral Ad Science to connect agents to dbt/Databricks, solving "BI why" problems by supplying missing context for dashboard errors <sup>[10](<https://www.getdbt.com/blog/mcp-dbt-databricks>)</sup>.
-- **PACE** framework predicts agentic benchmark performance at <1% cost using small non-agentic subsets, achieving <4% mean absolute error <sup>[11](<https://huggingface.co/papers/2607.02032>)</sup>.
-- **Kapa.ai** prunes 68% of RAG context with a small LLM while retaining 96% recall, cutting costs without sacrificing accuracy <sup>[12](<https://www.kapa.ai/blog/how-we-prune-rag-context>)</sup>.
-- **SkillCloak** technique lets malicious AI agent skills evade static scanners in >90% of tests; sandboxed runtime monitor **SKILLDETONATE** catches most cloaked skills <sup>[13](<https://thehackernews.com/2026/07/new-skillcloak-technique-lets-malicious.html>)</sup>.
-- **OfficeCLI** open-source tool enables AI agents to create/edit Office docs via CLI without local Office <sup>[14](<https://github.com/iOfficeAI/OfficeCLI>)</sup>.
-- **Otari** open-source LLM gateway unifies 40+ providers under one OpenAI-compatible endpoint with budget enforcement <sup>[15](<https://github.com/mozilla-ai/otari>)</sup>.
+## RSI, Agents and LLM Tooling
+- Lilian Weng publishes a recap of 35 papers on harness engineering for RSI, exploring how harnesses may evolve toward self-improvement and auto-research <sup>[6](<https://www.latent.space/p/ainews-lilian-weng-summarizes-35>)</sup>.
+- GitHub adds Kimi K2.7 (including the open-weight Kimi K2.7 Code) to Copilot Business and Enterprise, offering a lower-cost, selectable model hosted on Azure; admins must enable it <sup>[7](<https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise>)</sup>.
+- herdr, a terminal-based agent multiplexer, enables persistent agent sessions, socket-based communication, and plugin support <sup>[8](<https://github.com/ogulcancelik/herdr>)</sup>.
+- A guide argues that effective AI agents require memory systems tailored to how they read, write, and coordinate <sup>[9](<https://newsletter.systemdesign.one/p/graph-based-agent-memory>)</sup>.
 
-## MLOps, DevOps & Cloud
-- **Hugging Face ↔ SageMaker Studio** deep-link integration allows one-click model discovery to pre-configured SageMaker environments with GPU quota visibility <sup>[16](<https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio>)</sup>.
-- **Hugging Face models on Microsoft Foundry Managed Compute** offer curated open-weight models with enterprise security, governance, and one-click deployment <sup>[17](<https://huggingface.co/blog/microsoft/foundry-managed-compute>)</sup>.
-- **GitHub** adds per-user AI credit budgets in cost centers via billing UI (previously API-only), auto-syncing as team membership changes <sup>[18](<https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui>)</sup> <sup>[19](<https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3>)</sup>.
-- **GitHub Copilot app** now available on all plans (incl. Free/Education) for desktop agent-driven development; BYOK supported <sup>[20](<https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all>)</sup>.
-- **GitHub** extends secret scanning with enriched metadata (owner, expiry, project context) and multipart validation for faster triage <sup>[21](<https://github.blog/changelog/2026-07-07-secret-scanning-extended-metadata-and-multipart-validation>)</sup> <sup>[19](<https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3>)</sup>.
-- **GitHub** adds ruleset option to restrict who can dismiss PR reviews, tightening merge governance <sup>[22](<https://github.blog/changelog/2026-07-07-restrict-who-can-dismiss-reviews-in-rulesets>)</sup>.
-- **Cloudflare** joins UK government’s **Cyber Resilience Pledge**, aligning with its long-standing security principles <sup>[23](<https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/>)</sup>.
-- **Broadcom-Apple** extend partnership to 2031, co-developing custom ASICs for AI tasks; Apple to deploy AI servers as early as 2027 <sup>[24](<https://www.bloomberg.com/news/articles/2026-07-06/broadcom-expands-work-for-apple-supplying-products-through-2031?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzM5NTM0NywiZXhwIjoxNzg0MDAwMTQ3LCJhcnRpY2xlSWQiOiJUSFI1UVBUOTZPU00wMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.ebpJwMkftUwRe24BKeLvUdXxuQuyf5n3mqDml4NLxXk>)</sup>.
-- **Anthropic** secures $19B AI infrastructure lease with TeraWulf, initial capacity expected H2 2027, full buildout by 2028 <sup>[25](<https://finance.yahoo.com/technology/ai/articles/terawulf-shares-surge-19b-anthropic-161300778.html>)</sup>.
+## MLOps, DevOps and Developer Tools
+- GitHub’s Copilot usage API now includes review-cycle metrics (median time to first review and median review cycles per PR) for AI adoption phase cohorts <sup>[10](<https://github.blog/changelog/2026-07-07-add-review-cycles-and-time-to-adoption-phases-in-the-usage-api>)</sup>.
 
-## Engineering & Developer Tools
-- **sqlite-utils 4.0** introduces schema migrations, nested transactions (`db.atomic()`), and compound foreign keys; `sqlite-migrate` now shims to this release <sup>[26](<https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything>)</sup> <sup>[27](<https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything>)</sup> <sup>[28](<https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything>)</sup> <sup>[29](<https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything>)</sup>.
-- **React Compiler** automates memoization, but migration requires lint rules first; DevTools badge doesn’t guarantee success <sup>[30](<https://blog.logrocket.com/react-compiler-memoization-what-actually-broke/>)</sup>.
-- **Anchor Positioning API** simplifies UI positioning (tooltips/dropdowns) relative to anchors with viewport-aware fallbacks <sup>[31](<https://www.joshwcomeau.com/css/anchor-positioning/>)</sup>.
-- **env.style** launches visual styling for environment tabs/icons with live previews <sup>[32](<https://www.env.style/>)</sup>.
-- **GitHub Copilot for Government** (FedRAMP High) brings Code/Cowork to public sector with local conversation history and tamper-evident audit logs <sup>[33](<https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government>)</sup>.
+## Cloud and Infrastructure
+- Big Tech’s excess compute rentals signal potential overbuilding in AI infrastructure, raising questions about a slowdown in the AI spending war <sup>[11](<https://www.wsj.com/tech/ai/will-someone-finally-blink-in-the-ai-spending-war-0f59aa60?st=k88LRK&reflink=desktopwebshare_permalink>)</sup>.
 
-## Security & Incident Notes
-- **FFmpeg** patches **PixelSmash** (CVE-2026-8461, CVSS 8.8) heap out-of-bounds write in MagicYUV decoder; DoS/RCE possible in Kodi, OBS, Jellyfin, etc. <sup>[34](<https://www.bleepingcomputer.com/news/security/ffmpeg-fixes-pixelsmash-flaw-in-widely-used-video-decoder/>)</sup>.
-- Linux **Bad Epoll** (CVE-2026-46242) race-condition use-after-free PoC exploit grants root access <sup>[35](<https://www.securityweek.com/proof-of-concept-exploit-released-for-linux-bad-epoll-root-access-vulnerability/>)</sup>.
-- **Opera browsers** address bar spoofing vulnerabilities fixed across desktop/Android; techniques included intent/data URL abuse and fullscreen hiding <sup>[36](<https://medium.com/@renwa/you-are-not-where-you-think-you-are-opera-browsers-address-bar-spoofing-vulnerabilities-aa36ad8321d8>)</sup>.
-- **Moody Bible Institute** breach exposes 2.3M records (emails, DOBs, addresses) via ShinyHunters <sup>[37](<https://cyberpress.org/moody-bible-institute-data-breach/>)</sup>.
-- **Russian hackers** sell UK government logins (exploiting FortiBleed) on dark web for $60k <sup>[38](<https://www.telegraph.co.uk/news/2026/07/05/russian-hackers-steal-government-logins/>)</sup>.
-- **Vulnerability reports** lose special status as LLMs democratize discovery; triage bottlenecks shift to impact assessment <sup>[39](<https://words.filippo.io/vuln-reports/>)</sup>.
-
-## Industry & Economics
-- **AI as productivity amplifier** reframes earlier displacement fears; top performers leverage agents for order-of-magnitude gains <sup>[40](<https://www.wsj.com/tech/ai/ai-workers-tech-ceos-job-losses-afc71e15?st=3WgzvB&reflink=desktopwebshare_permalink&mod=tldr>)</sup> <sup>[41](<https://x.com/systematicls/status/2074142558595207435>)</sup>.
-- **Token-based pricing criticized**: cost-per-task, not per-1M-tokens, is the meaningful metric for LLM economics <sup>[42](<https://janilowski.pl/en/blog/2026/price-per-m-tokens/>)</sup>.
-- **Small/cheap models gain traction**: GLM 5.2’s cost-effectiveness signals potential AI margin collapse; small fine-tuned models excel in latency-sensitive tasks <sup>[43](<https://x.com/thejessezhang/status/2074154325933424861>)</sup> <sup>[44](<https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/>)</sup>.
-- **Alibaba’s open models** (e.g., Qwen) gain global traction but struggle to monetize vs. proprietary U.S. alternatives <sup>[45](<https://www.nytimes.com/2026/07/06/business/alibaba-ai-qwen.html>)</sup>.
-- **Nvidia delays Kyber rack-scale AI system** (144 Rubin Ultra chips) to 2028 due to manufacturing constraints <sup>[46](<https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html>)</sup>.
-- **xAI rebrands to SpaceXAI**, tying AI to SpaceX’s long-term infrastructure narrative <sup>[47](<https://gizmodo.com/xai-is-dead-long-live-spacexai-2000782034>)</sup>.
+## Broader Tech and Industry
+- Xbox lays off 3,200 employees and shuts five studios, pivoting to a more streamlined focus on successful franchises like Minecraft after a failed streaming strategy <sup>[12](<https://www.bloomberg.com/news/articles/2026-07-07/behind-xbox-s-big-layoffs-a-streaming-strategy-that-failed?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzQ4MDcxMiwiZXhwIjoxNzg0MDg1NTEyLCJhcnRpY2xlSWQiOiJUSFJPNVNUOTZPU0wwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.HFOgPffMAizg_CbhPnQWEOZ34y7wl__HZ_QjnqBdklU>)</sup>.
 
 ## Sources
 
-1. [tencent/Hy3](<https://simonwillison.net/2026/Jul/6/hy3/#atom-everything>) — _simonwillison.net_
-2. [Hy3](<https://simonwillison.net/2026/Jul/6/hy3/>) — _simonwillison.net_
-3. [Introducing Muse Image and Muse Video](<https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/>) — _meta ai_
-4. [A global workspace in language models](<https://www.anthropic.com/research/global-workspace>) — _anthropic.com_
-5. [LeRobot v0.6.0: Imagine, Evaluate, Improve](<https://huggingface.co/blog/lerobot-release-v060>) — _huggingface.co_
-6. [\[AINews\] The Field Guide to Fable](<https://www.latent.space/p/ainews-the-field-guide-to-fable>) — _latent.space_
-7. [How people are using Claude Cowork](<https://claude.com/blog/how-people-are-using-claude-cowork>) — _claude_
-8. [Claude Cowork is coming to mobile and web](<https://claude.com/blog/cowork-web-mobile>) — _claude_
-9. [Choosing a Claude model and effort level in Claude Code](<https://claude.com/blog/claude-model-and-effort-level-in-claude-code>) — _claude_
-10. [Solving dashboard errors in minutes: How Integral Ad Science used MCP to connect agents to dbt and Databricks](<https://www.getdbt.com/blog/mcp-dbt-databricks>) — _dbt.com_
-11. [PACE: A Proxy for Agentic Capability Evaluation](<https://huggingface.co/papers/2607.02032>) — _huggingface.co_
-12. [How we taught a small LLM to throw away 68% of our RAG context](<https://www.kapa.ai/blog/how-we-prune-rag-context>) — _kapa.ai_
-13. [SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extracting Packing](<https://thehackernews.com/2026/07/new-skillcloak-technique-lets-malicious.html>) — _thehackernews.com_
-14. [OfficeCLI](<https://github.com/iOfficeAI/OfficeCLI>) — _github.com_
-15. [Otari](<https://github.com/mozilla-ai/otari>) — _github.com_
-16. [From Hugging Face to Amazon SageMaker Studio in one click](<https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio>) — _huggingface.co_
-17. [Hugging Face Models on Foundry Managed Compute](<https://huggingface.co/blog/microsoft/foundry-managed-compute>) — _huggingface.co_
-18. [Per-user budgets for cost centers in the billing UI](<https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui>) — _github.blog_
-19. [Copilot Billing Preview app will be retired on August 3](<https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3>) — _github.blog_
-20. [GitHub Copilot app available to all](<https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all>) — _github.blog_
-21. [Secret scanning extended metadata and multipart validation](<https://github.blog/changelog/2026-07-07-secret-scanning-extended-metadata-and-multipart-validation>) — _github.blog_
-22. [Restrict who can dismiss reviews in rulesets](<https://github.blog/changelog/2026-07-07-restrict-who-can-dismiss-reviews-in-rulesets>) — _github.blog_
-23. [Cloudflare proudly joins the UK government's Cyber Resilience Pledge](<https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/>) — _blog.cloudflare.com_
-24. [Broadcom, Apple Extend Tie-Up to 2031 With New Custom Chips](<https://www.bloomberg.com/news/articles/2026-07-06/broadcom-expands-work-for-apple-supplying-products-through-2031?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzM5NTM0NywiZXhwIjoxNzg0MDAwMTQ3LCJhcnRpY2xlSWQiOiJUSFI1UVBUOTZPU00wMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.ebpJwMkftUwRe24BKeLvUdXxuQuyf5n3mqDml4NLxXk>) — _bloomberg.com_
-25. [TeraWulf shares surge on $19B Anthropic AI infrastructure lease deal](<https://finance.yahoo.com/technology/ai/articles/terawulf-shares-surge-19b-anthropic-161300778.html>) — _finance.yahoo.com_
-26. [sqlite-utils 4.0, now with database schema migrations](<https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything>) — _simonwillison.net_
-27. [sqlite-migrate 0.2](<https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything>) — _simonwillison.net_
-28. [sqlite-utils 4.0](<https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything>) — _simonwillison.net_
-29. [sqlite-utils 4.0rc4](<https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything>) — _simonwillison.net_
-30. [I let React Compiler handle memoization: Here's what actually broke](<https://blog.logrocket.com/react-compiler-memoization-what-actually-broke/>) — _blog.logrocket.com_
-31. [Getting Started with Anchor Positioning](<https://www.joshwcomeau.com/css/anchor-positioning/>) — _joshwcomeau.com_
-32. [Your environments at a glance (Website)](<https://www.env.style/>) — _env.style_
-33. [Bringing Claude Code and Claude Cowork to government](<https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government>) — _claude_
-34. [FFmpeg fixes PixelSmash flaw in widely used video decoder](<https://www.bleepingcomputer.com/news/security/ffmpeg-fixes-pixelsmash-flaw-in-widely-used-video-decoder/>) — _bleepingcomputer.com_
-35. [Proof-of-Concept Exploit Released for Linux ‘Bad Epoll' Root Access Vulnerability](<https://www.securityweek.com/proof-of-concept-exploit-released-for-linux-bad-epoll-root-access-vulnerability/>) — _securityweek.com_
-36. [You Are Not Where You Think You Are, Opera Browsers Address Bar Spoofing Vulnerabilities](<https://medium.com/@renwa/you-are-not-where-you-think-you-are-opera-browsers-address-bar-spoofing-vulnerabilities-aa36ad8321d8>) — _medium.com_
-37. [Moody Bible Institute Data Breach Exposes 2.3M Email Addresses](<https://cyberpress.org/moody-bible-institute-data-breach/>) — _cyberpress.org_
-38. [Russian Hackers Steal Government Logins](<https://www.telegraph.co.uk/news/2026/07/05/russian-hackers-steal-government-logins/>) — _telegraph.co.uk_
-39. [Vulnerability Reports Are Not Special Anymore](<https://words.filippo.io/vuln-reports/>) — _words.filippo.io_
-40. [Big Tech Has Suddenly Flipped on the AI Jobs Wipeout Scenario](<https://www.wsj.com/tech/ai/ai-workers-tech-ceos-job-losses-afc71e15?st=3WgzvB&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-41. [What The New 100x Agentic Engineer Looks Like In The Era Of Fable & GPT 5.6](<https://x.com/systematicls/status/2074142558595207435>) — _x.com_
-42. [Price per 1M tokens is meaningless](<https://janilowski.pl/en/blog/2026/price-per-m-tokens/>) — _janilowski.pl_
-43. [Everyone Is Wrong About Open Source AI in the Enterprise](<https://x.com/thejessezhang/status/2074154325933424861>) — _x.com_
-44. [GLM 5.2 and the coming AI margin collapse (part 1)](<https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/>) — _martinalderson.com_
-45. [Alibaba's AI Is a Hit, but Hard to Turn Into a Moneymaker](<https://www.nytimes.com/2026/07/06/business/alibaba-ai-qwen.html>) — _nytimes.com_
-46. [Nvidia's next-gen AI rack system delayed to 2028 on manufacturing snags](<https://www.cnbc.com/2026/07/06/nvidia-kyber-rack-system-delays-manufacturing-taiwan-rubin-chips-.html>) — _cnbc.com_
-47. [xAI Is Dead. Long Live SpaceXAI](<https://gizmodo.com/xai-is-dead-long-live-spacexai-2000782034>) — _gizmodo.com_
+1. [Meta enters AI image model race in bid to court advertisers and subscribers](<https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html>) — _cnbc.com_
+2. [Microsoft Replaces OpenAI, Anthropic With Own AI in Some Apps](<https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps>) — _bloomberg.com_
+3. [Chinese AI models are gaining ground with US companies as OpenAI, Anthropic costs surge](<https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html>) — _cnbc.com_
+4. [China May Restrict Access to Its Most Powerful AI Models](<https://time.com/article/2026/07/07/china-ai-models-alibaba-bytedance/>) — _time.com_
+5. [Tesla Cybercab Includes More Powerful FSD Hardware](<https://www.notateslaapp.com/news/4409/exclusive-tesla-cybercab-includes-more-powerful-fsd-hardware>) — _notateslaapp.com_
+6. [\[AINews\] Lilian Weng summarizes 35 papers on Harness Engineering for RSI](<https://www.latent.space/p/ainews-lilian-weng-summarizes-35>) — _latent.space_
+7. [Kimi K2.7 now available for Copilot Business and Enterprise](<https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise>) — _github.blog_
+8. [herdr](<https://github.com/ogulcancelik/herdr>) — _github.com_
+9. [How to use AI agents better than 99% of people](<https://newsletter.systemdesign.one/p/graph-based-agent-memory>) — _newsletter.systemdesign.one_
+10. [Add review cycles and time to adoption phases in the usage API](<https://github.blog/changelog/2026-07-07-add-review-cycles-and-time-to-adoption-phases-in-the-usage-api>) — _github.blog_
+11. [Will Someone Finally Blink in the AI Spending War?](<https://www.wsj.com/tech/ai/will-someone-finally-blink-in-the-ai-spending-war-0f59aa60?st=k88LRK&reflink=desktopwebshare_permalink>) — _wsj.com_
+12. [Behind Xbox's Big Layoffs, a Streaming Strategy That Failed](<https://www.bloomberg.com/news/articles/2026-07-07/behind-xbox-s-big-layoffs-a-streaming-strategy-that-failed?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzQ4MDcxMiwiZXhwIjoxNzg0MDg1NTEyLCJhcnRpY2xlSWQiOiJUSFJPNVNUOTZPU0wwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.HFOgPffMAizg_CbhPnQWEOZ34y7wl__HZ_QjnqBdklU>) — _bloomberg.com_
 
 
 ## Recent archive
