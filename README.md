@@ -8,95 +8,40 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-09
-<sub>updated 10 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-10
+<sub>updated 10 July 2026 at 13:00</sub>
 
-## AI/ML Models & Tooling
-- OpenAI releases GPT‑5.6 in three variants: Luna ($1/$6 per 1M input/output tokens), Terra ($2.50/$15), and Sol ($5/$30), all with a 1M-token context and 128K max output; Sol is positioned for complex reasoning, Terra for general coding, and Luna for cost‑efficient tasks <sup>[1](<https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything>)</sup>.
-- GPT‑5.6 is now the preferred model in Microsoft 365 Copilot across Word, Excel, PowerPoint, Chat, and Cowork <sup>[2](<https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot>)</sup>.
-- GitHub Copilot now offers GPT‑5.6 Sol, Terra, and Luna under usage-based billing, with Sol limited to Pro+, Max, Business, and Enterprise SKUs <sup>[3](<https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot>)</sup>.
-- SpaceXAI releases Grok 4.5, an Opus-class model with twice the token efficiency of peers, priced at $2/$6 per million input/output tokens, and positioned as a GPT‑5.5 equivalent; it performs comparably to top models on standard evals, though some benchmarks like SWE-Bench Pro are now considered saturated <sup>[4](<https://www.latent.space/p/ainews-spacexai-launches-grok-45>), [5](<https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/>), [6](<https://x.ai/news/grok-4-5>)</sup>.
-- OpenAI upgrades ChatGPT’s voice mode with GPT‑Live, enabling natural, full-duplex conversation while offloading complex tasks to GPT‑5.5 (and future frontier models) in the background for hour-long interactions <sup>[7](<https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything?utm_source=tldrnewsletter>), [8](<https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything>), [9](<https://openai.com/index/introducing-gpt-live/>)</sup>.
-- Meta introduces Muse Spark 1.1, a multimodal reasoning model with major gains in tool and computer use, coding, and multimodal understanding, available via a new public Meta Model API and in "Thinking" mode in Meta AI <sup>[10](<https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/>), [11](<https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything>), [12](<https://www.testingcatalog.com/meta-launches-muse-image-across-its-apps-and-previews-muse-video/>)</sup>.
-- OpenAI audits SWE-Bench Pro and finds ~30% of public tasks broken, warning that flawed evaluations distort assessments of coding ability and model progress <sup>[13](<https://openai.com/index/separating-signal-from-noise-coding-evaluations/>)</sup>.
-- Google releases LiteRT.js, a WebGPU/WebNN/WasM runtime for high-performance ML inference in the browser <sup>[14](<https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/>)</sup>.
+## AI Models & Capabilities
+- OpenAI releases GPT‑5.6 family (Sol, Terra, Luna) across ChatGPT Work, Codex and the API, with higher intelligence per token, lower cost for complex work, and stronger agentic performance; a new "ultra" effort level coordinates multiple agents in parallel for demanding tasks <sup>[1](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>), [2](<https://www.testingcatalog.com/openai-launches-gpt-5-6-sol-terra-and-luna-on-apps-and-api/>)</sup>.
+- Meta launches Muse Spark 1.1 in its Model API, positioning it as state‑of‑the‑art for agentic reasoning and tool use, and introduces a paid tier priced at roughly 25 % of competing top models <sup>[1](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>), [3](<https://www.bloomberg.com/news/articles/2026-07-09/meta-starts-charging-for-ai-with-muse-spark-1-1-agentic-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzY0NzUxMSwiZXhwIjoxNzg0MjUyMzExLCJhcnRpY2xlSWQiOiJUSFZDVENSS1YyVTYwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.036PyX7IFhgdqyc5QHadS6Ans-LlAztL8vSoBa_ytUk>)</sup>.
 
-## Agents, RAG & Data Infrastructure
-- Modal argues cloud infrastructure must evolve for agent workloads: agents need tight feedback loops, inspectable environments, and rich context to debug and iterate <sup>[15](<https://www.latent.space/p/modal2026>)</sup>.
-- HubSpot scales a vector retrieval platform to 20B+ vectors across 140+ clusters, moving from manual Helm to Kubernetes operators to automate provisioning, scaling, and recovery, reducing spin-up from hours to minutes <sup>[16](<https://product.hubspot.com/blog/building-the-ai-retrieval-infrastructure-behind-20-billion-vectors-at-hubspot>)</sup>.
-- Apache Hudi adds native vector search to the lakehouse, enabling semantic search and RAG directly on Hudi tables with HNSW indexing and hybrid search, removing the need for a separate vector DB <sup>[17](<https://hudi.apache.org/blog/2026/07/06/bringing-vector-search-to-the-lakehouse-with-apache-hudi/>)</sup>.
-- Pinecone’s Sparse V3 reorganizes inverted indexes term-first, cutting I/O by 151× for SPLADE and 1,428× for BM25 with no recall loss and better BM25 recall <sup>[18](<https://www.pinecone.io/blog/sparse-v3/>)</sup>.
-- Apache Iceberg v3 introduces a Variant type to store semi-structured JSON as compact binary with shredded fields, accelerating analytics via typed reads, column pruning, and statistics <sup>[19](<https://iceberglakehouse.com/posts/iceberg-v3-variant-type-ai-json-payloads/>)</sup>.
-- Apache Ossie (incubating) standardizes semantic data modeling for datasets, fields, metrics, and relationships to keep definitions consistent across tools and provide governed business context to agents <sup>[20](<https://ossie.apache.org/>)</sup>.
-- Amazon details capturing exact token IDs during agentic interactions to improve reinforcement learning bookkeeping for long-horizon tasks <sup>[21](<https://www.amazon.science/blog/capturing-token-ids-during-agentic-interactions-for-better-reinforcement-learning>)</sup>.
+## LLM Tooling & Agents
+- ChatGPT Work and Codex are positioned as a unified superapp, with Work conversations in the cloud and desktop Work threads remaining local; cloud and desktop Work conversations do not sync at launch <sup>[4](<https://simonwillison.net/2026/Jul/10/openai/#atom-everything>)</sup>.
+- PostHog proposes delegating AI‑generated code reviews to agents to remove the human bottleneck while maintaining quality <sup>[5](<https://newsletter.posthog.com/p/code-review-tips>)</sup>.
 
-## MLOps & Developer Tools
-- Bun’s core is rewritten from Zig to Rust using agentic engineering with Anthropic models, yielding a faster, smaller runtime with lower memory usage and eliminating memory-safety bugs <sup>[22](<https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything>), [23](<https://bun.com/blog/bun-in-rust>), [24](<https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from>)</sup>.
-- TypeScript 7.0 delivers native-code speed and shared-memory multithreading, with typical full-build speedups of 8–12× <sup>[25](<https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/>)</sup>.
-- Rust 1.97.0 is released with the usual stability and performance improvements <sup>[26](<https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/>)</sup>.
-- GitHub Copilot can now generate high-level repository overviews for first-time visitors and create READMEs on demand <sup>[27](<https://github.blog/changelog/2026-07-09-ask-copilot-for-a-repository-overview>)</sup>.
-- GitHub adds organization-level targeting for Code Quality, allowing granular enable/disable by custom properties, manual selection, visibility, or fork status <sup>[28](<https://github.blog/changelog/2026-07-09-organization-level-targeting-for-github-code-quality>)</sup>.
+## MLOps / DevOps & Engineering Practices
+- GitHub Mobile adds improved filters and sorting for Copilot sessions (status, repository, type, agent) with preserved sort context, available now on iOS and Android <sup>[6](<https://github.blog/changelog/2026-07-10-github-mobile-improved-filters-and-sorting-for-copilot-sessions>)</sup>.
+- GitHub details how it assigned validated owners to every active internal repository in under 45 days, archiving the rest, to make ownership the foundation for security and operations <sup>[7](<https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/>)</sup>.
 
-## DevOps & Cloud/Infra
-- Cloudflare introduces Meerkat, an experimental global consensus service for small control-plane state management <sup>[29](<https://blog.cloudflare.com/meerkat-introduction/>)</sup>.
-- Cloudflare urges migration to post-quantum signatures (ML-DSA) to complement its existing ML-KEM encryption rollout, as RSA/ECC are vulnerable to future quantum attacks <sup>[30](<https://blog.cloudflare.com/ml-dsa-will-have-to-do/>)</sup>.
-- Cloudflare Drop enables instant deployment of static HTML/CSS/JS sites <sup>[31](<https://www.cloudflare.com/drop/>)</sup>.
-- Kafka tuning tip: `linger.ms` trades latency for throughput by controlling batch size and send frequency <sup>[32](<https://jack-vanlightly.com/blog/2026/7/7/apache-kafka-performance-1-lingerms>)</sup>.
+## Cloud, Infrastructure & On‑Device AI
+- Apple explores running much larger models on iPhones, including a 27B‑parameter Qwen 3.6 shrunk via PrismML, to enable more on‑device Apple Intelligence features and enhance privacy <sup>[8](<https://www.macrumors.com/2026/07/09/apple-prismml-larger-on-device-ai-models/>)</sup>.
+- Humanoid robots teleoperated by surgeons performed gallbladder removals on live pigs, demonstrating a low‑cost, space‑efficient surgical approach using Unitree G1 robots <sup>[9](<https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/>)</sup>.
 
-## Security & Governance
-- Anthropic reveals J-space, a hidden area in Claude models uncovered via a Jacobian lens, showing words related to near-future outputs and enabling new interpretability and control techniques <sup>[33](<https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/>)</sup>.
-- Anthropic proposes GRAM (Gradient-Routed Auxiliary Modules) to give models removable compartments for dual-use knowledge, enabling post-training deletion of specific capabilities <sup>[34](<https://www.anthropic.com/research/off-switch-dual-use>)</sup>.
-- Noma Security discloses GitLost, a prompt-injection flaw in GitHub’s Agentic Workflows that allowed extraction of private repository data via public issues <sup>[35](<https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/>)</sup>.
-- Researchers show GitHub Copilot may refuse harmful requests in chat but still write them into code files, urging users to inspect generated code, not just visible denials <sup>[36](<https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html>)</sup>.
-- China’s NVD warns of alleged backdoor in older Claude Code versions (2.1.91–2.1.196) and recommends upgrading to 2.1.198+ with stricter egress monitoring <sup>[37](<https://www.theregister.com/security/2026/07/08/china-ditch-older-claude-versions-with-backdoor-code/5268371>)</sup>.
-- Mandiant documents a Golden SAML variant where “ghost” ADFS certificates and Machine DPAPI can be abused to forge Global Administrator assertions in Entra ID <sup>[38](<https://cloud.google.com/blog/topics/threat-intelligence/recovering-active-adfs-signing-keys-machine-dpapi/>)</sup>.
-- Exodus Intel details a Windows Installer logic flaw allowing low-privileged users to delete arbitrary folders as SYSTEM and escalate to code execution via rollback scripts <sup>[39](<https://blog.exodusintel.com/2026/07/06/microsoft-windows-installer-folder-delete-privilege-escalation/>)</sup>.
-- A 15-year-old Linux kernel use-after-free (GhostLock, CVE-2026-43499) enables root access and container escape with high reliability, bypassing KASLR; patch immediately <sup>[40](<https://gbhackers.com/15-year-old-ghostlock-linux-kernel-vulnerability/>)</sup>.
-- Accenture confirms a data breach after a hacker claims to have stolen 35 GB of data, including Azure keys, tokens, and source code from a private Azure DevOps repo <sup>[41](<https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/>)</sup>.
+## Developer Tools & Profiling
+- Hugging Face publishes a guide on profiling attention in PyTorch, offering practical techniques for performance analysis of transformer models <sup>[10](<https://huggingface.co/blog/torch-attention-profile>)</sup>.
 
 ## Sources
 
-1. [The new GPT-5.6 family: Luna, Terra, Sol](<https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything>) — _simonwillison.net_
-2. [GPT-5.6 is now the preferred model in Microsoft 365 Copilot](<https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot>) — _openai.com_
-3. [OpenAI&#8217;s GPT-5.6 Sol, Terra, and Luna are now available in GitHub Copilot](<https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot>) — _github.blog_
-4. [\[AINews\] SpaceXAI launches Grok 4.5, first Opus-class model post Cursor acquisition](<https://www.latent.space/p/ainews-spacexai-launches-grok-45>) — _latent.space_
-5. [SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus-class model'](<https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/>) — _techcrunch.com_
-6. [Grok 4.5](<https://x.ai/news/grok-4-5>) — _x.ai_
-7. [GPT‑Live](<https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything?utm_source=tldrnewsletter>) — _simonwillison.net_
-8. [Introducing GPT‑Live](<https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything>) — _simonwillison.net_
-9. [GPT-Live](<https://openai.com/index/introducing-gpt-live/>) — _openai.com_
-10. [Introducing Muse Spark 1.1](<https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/>) — _meta ai_
-11. [Introducing Muse Spark 1.1](<https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything>) — _simonwillison.net_
-12. [Meta launches Muse Image across its apps](<https://www.testingcatalog.com/meta-launches-muse-image-across-its-apps-and-previews-muse-video/>) — _testingcatalog.com_
-13. [Auditing the Reliability of Coding Benchmarks](<https://openai.com/index/separating-signal-from-noise-coding-evaluations/>) — _openai.com_
-14. [LiteRT.js, Google's high performance Web AI Inference](<https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/>) — _google ai_
-15. [Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO](<https://www.latent.space/p/modal2026>) — _latent.space_
-16. [Building the AI Retrieval Infrastructure Behind 20 Billion+ Vectors at HubSpot](<https://product.hubspot.com/blog/building-the-ai-retrieval-infrastructure-behind-20-billion-vectors-at-hubspot>) — _product.hubspot.com_
-17. [Bringing Vector Search to the Lakehouse with Apache Hudi](<https://hudi.apache.org/blog/2026/07/06/bringing-vector-search-to-the-lakehouse-with-apache-hudi/>) — _hudi.apache.org_
-18. [Sparse V3: how Pinecone's sparse index learned to skip](<https://www.pinecone.io/blog/sparse-v3/>) — _pinecone_
-19. [The Variant Type in Apache Iceberg: How Shredding Turns Messy JSON Into Fast Analytics](<https://iceberglakehouse.com/posts/iceberg-v3-variant-type-ai-json-payloads/>) — _iceberglakehouse.com_
-20. [Apache Ossie (incubating) is the universal standard for semantic data](<https://ossie.apache.org/>) — _ossie.apache.org_
-21. [Capturing token IDs during agentic interactions for better reinforcement learning](<https://www.amazon.science/blog/capturing-token-ids-during-agentic-interactions-for-better-reinforcement-learning>) — _amazon.science_
-22. [Rewriting Bun in Rust](<https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything>) — _simonwillison.net_
-23. [Rewriting Bun in Rust](<https://bun.com/blog/bun-in-rust>) — _bun.com_
-24. [The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?](<https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from>) — _newsletter.pragmaticengineer.com_
-25. [Announcing TypeScript 7.0](<https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/>) — _devblogs.microsoft.com_
-26. [Announcing Rust 1.97.0](<https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/>) — _blog.rust-lang.org_
-27. [Ask Copilot for a repository overview](<https://github.blog/changelog/2026-07-09-ask-copilot-for-a-repository-overview>) — _github.blog_
-28. [Organization-level targeting for GitHub Code Quality](<https://github.blog/changelog/2026-07-09-organization-level-targeting-for-github-code-quality>) — _github.blog_
-29. [Introducing Meerkat: an experiment in global consensus](<https://blog.cloudflare.com/meerkat-introduction/>) — _blog.cloudflare.com_
-30. [Why we cannot wait for better post-quantum signature algorithms](<https://blog.cloudflare.com/ml-dsa-will-have-to-do/>) — _blog.cloudflare.com_
-31. [Cloudflare Drop (Website)](<https://www.cloudflare.com/drop/>) — _cloudflare.com_
-32. [Apache Kafka performance #1 - linger.ms](<https://jack-vanlightly.com/blog/2026/7/7/apache-kafka-performance-1-lingerms>) — _jack-vanlightly.com_
-33. [Anthropic found a hidden space where Claude puzzles over concepts](<https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/>) — _technologyreview.com_
-34. [An off switch for dual use knowledge in AI models](<https://www.anthropic.com/research/off-switch-dual-use>) — _anthropic.com_
-35. [GitLost: How We Tricked GitHub's AI Agent into Leaking Private Repos](<https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/>) — _noma.security_
-36. [GitHub Copilot Refuses Harmful Requests in Chat, Then Writes Them in Code](<https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html>) — _thehackernews.com_
-37. [China tells devs to ditch Claude Code over ‘backdoor code' fears](<https://www.theregister.com/security/2026/07/08/china-ditch-older-claude-versions-with-backdoor-code/5268371>) — _theregister.com_
-38. [The ‘Ghost' in the Database: Recovering Active ADFS Signing Keys via Machine DPAPI](<https://cloud.google.com/blog/topics/threat-intelligence/recovering-active-adfs-signing-keys-machine-dpapi/>) — _cloud.google.com_
-39. [Microsoft Windows Installer Folder Delete Privilege Escalation](<https://blog.exodusintel.com/2026/07/06/microsoft-windows-installer-folder-delete-privilege-escalation/>) — _blog.exodusintel.com_
-40. [15-Year-Old GhostLock Linux Kernel Vulnerability Enables Root Access and Container Escape](<https://gbhackers.com/15-year-old-ghostlock-linux-kernel-vulnerability/>) — _gbhackers.com_
-41. [Accenture Confirms Data Breach After Hacker Claims Source Code Theft](<https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/>) — _securityweek.com_
+1. [\[AINews\] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>) — _latent.space_
+2. [OpenAI launches GPT-5.6 Sol, Terra, and Luna on apps and API](<https://www.testingcatalog.com/openai-launches-gpt-5-6-sol-terra-and-luna-on-apps-and-api/>) — _testingcatalog.com_
+3. [Zuckerberg Pledges ‘Aggressive' Pricing With Meta's First Pay-to-Use AI](<https://www.bloomberg.com/news/articles/2026-07-09/meta-starts-charging-for-ai-with-muse-spark-1-1-agentic-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzY0NzUxMSwiZXhwIjoxNzg0MjUyMzExLCJhcnRpY2xlSWQiOiJUSFZDVENSS1YyVTYwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.036PyX7IFhgdqyc5QHadS6Ans-LlAztL8vSoBa_ytUk>) — _bloomberg.com_
+4. [Quoting OpenAI](<https://simonwillison.net/2026/Jul/10/openai/#atom-everything>) — _simonwillison.net_
+5. [Stop being the code review bottleneck](<https://newsletter.posthog.com/p/code-review-tips>) — _newsletter.posthog.com_
+6. [GitHub Mobile: Improved filters and sorting for Copilot sessions](<https://github.blog/changelog/2026-07-10-github-mobile-improved-filters-and-sorting-for-copilot-sessions>) — _github.blog_
+7. [How GitHub gave every repository a durable owner](<https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/>) — _github.blog_
+8. [Apple Exploring Ways to Run Much Larger AI Models Directly on iPhones](<https://www.macrumors.com/2026/07/09/apple-prismml-larger-on-device-ai-models/>) — _macrumors.com_
+9. [Humanoid robots controlled by surgeons did world-first operation on live pigs](<https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/>) — _arstechnica.com_
+10. [Profiling in PyTorch (Part 3): Attention is all you profile](<https://huggingface.co/blog/torch-attention-profile>) — _huggingface.co_
 
 
 ## Recent archive
