@@ -8,115 +8,18 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-10
-<sub>updated 11 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-11
+<sub>updated 11 July 2026 at 13:00</sub>
 
-## AI Models & Capabilities
-- OpenAI releases the GPT‑5.6 family (Sol, Terra, Luna) across ChatGPT Work, Codex and the API, with higher intelligence per token, lower cost for complex work, and stronger agentic performance; a new "ultra" effort level coordinates multiple agents in parallel for demanding tasks <sup>[1](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>), [2](<https://www.testingcatalog.com/openai-launches-gpt-5-6-sol-terra-and-luna-on-apps-and-api/>), [3](<https://openai.com/index/gpt-5-6/>), [4](<https://arcprize.org/results/openai-gpt-5-6>), [5](<https://signals.forwardfuture.com/gpt-5-6-review/>), [6](<https://openai.com/chatgpt-work/>)</sup>.
-- Meta launches Muse Spark 1.1 in its Model API, positioning it as state‑of‑the‑art for agentic reasoning and tool use, and introduces a paid tier priced at roughly 25 % of competing top models <sup>[1](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>), [7](<https://www.bloomberg.com/news/articles/2026-07-09/meta-starts-charging-for-ai-with-muse-spark-1-1-agentic-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzY0NzUxMSwiZXhwIjoxNzg0MjUyMzExLCJhcnRpY2xlSWQiOiJUSFZDVENSS1YyVTYwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.036PyX7IFhgdqyc5QHadS6Ans-LlAztL8vSoBa_ytUk>), [8](<https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/>)</sup>.
-- GPT‑5.6 Sol wins an ARC‑AGI‑3 public game by correctly orienting itself in a new environment, marking a first for public models <sup>[4](<https://arcprize.org/results/openai-gpt-5-6>)</sup>.
-- Cognition reports that Claude Fable 5 is the first model it would trust to run overnight inside its Devin autonomous coding agent, citing reliability and multi‑step task execution <sup>[9](<https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night>)</sup>.
+- ## Models & LLM Tooling
+ - OpenAI's GPT-5.6 rollout introduces 36 API variants, causing confusion among users, while most end-users see a simplified single-slider interface; community guides are emerging to help users navigate the options <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
 
-## LLM Tooling, Agents & Evaluations
-- ChatGPT Work and Codex are positioned as a unified superapp; Work conversations in the cloud and desktop Work threads remain local and do not sync at launch <sup>[10](<https://simonwillison.net/2026/Jul/10/openai/#atom-everything>), [11](<https://openai.com/index/chatgpt-for-your-most-ambitious-work/>), [6](<https://openai.com/chatgpt-work/>)</sup>.
-- OpenAI retires Atlas browser and folds its agentic browsing features into ChatGPT's desktop app and a Chrome extension <sup>[12](<https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/>)</sup>.
-- PostHog proposes delegating AI‑generated code reviews to agents to remove the human bottleneck while maintaining quality <sup>[13](<https://newsletter.posthog.com/p/code-review-tips>)</sup>.
-- GitHub improved Copilot code review by rewriting instructions for PR workflows, achieving ~20 % lower average review cost while maintaining quality <sup>[14](<https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/>)</sup>.
-- Researchers demonstrate a proof‑of‑concept attack ("Friendly Fire") that hijacks defensive cyber AI agents (Claude Code, OpenAI Codex) into remote code execution via prompt injection in tampered open‑source libraries <sup>[15](<https://ainowinstitute.org/publications/friendly-fire-exploit-brief>)</sup>.
-- Cursor reports large disparities in coding productivity: top 1 % power users generate up to 40,000 lines/week vs. a median of 700; input tokens account for ~90 % of AI token usage during coding <sup>[16](<https://newsletter.pragmaticengineer.com/p/the-pulse-interesting-ai-coding-stats>)</sup>.
-- Ruflo (formerly Claude Flow) is an open‑source agent meta‑harness wrapping Claude Code and Codex with 100+ specialized agents, coordinated swarms, self‑learning memory, and federated cross‑machine collaboration <sup>[17](<https://github.com/ruvnet/ruflo>)</sup>.
-- Traycer is an open‑source AI orchestration app enabling parallel agent operations with shared memory, model switching, and team collaboration <sup>[18](<https://github.com/traycerai/traycer>)</sup>.
-- socbench is a new benchmark for evaluating frontier reasoning models as SOC agents <sup>[19](<https://github.com/DeepTempo/socbench>)</sup>.
-
-## MLOps / DevOps & Engineering Practices
-- GitHub assigned validated owners to every active internal repository in under 45 days, archiving the rest, to make ownership the foundation for security and operations <sup>[20](<https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/>)</sup>.
-- GitHub Mobile adds improved filters and sorting for Copilot sessions (status, repository, type, agent) with preserved sort context on iOS and Android <sup>[21](<https://github.blog/changelog/2026-07-10-github-mobile-improved-filters-and-sorting-for-copilot-sessions>)</sup>.
-- GitHub CodeQL 2.26.0 adds Kotlin 2.4.0 support and AI prompt injection detection for JavaScript/TypeScript, plus improved analysis accuracy across multiple languages <sup>[22](<https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection>)</sup>.
-- GitHub clarifies secret scanning detector types with new names (e.g., "AI‑detected secrets" → "Copilot secret scanning") without changing detection behavior <sup>[23](<https://github.blog/changelog/2026-07-10-clearer-names-for-secret-scanning-detector-types>)</sup>.
-- GitHub adds a REST API endpoint to retrieve per‑user states for multi‑user budgets, enabling faster spend tracking across large enterprises <sup>[24](<https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api>)</sup>.
-- npm 12 disables install scripts, git dependencies, and remote URL installs by default, requiring explicit allowlists; pnpm 11.10 tightens registry auth binding <sup>[25](<https://thehackernews.com/2026/07/npm-12-disables-install-scripts-by.html>)</sup>.
-- AWS Secrets Manager adds managed external secret rotation for Paddle and GitLab tokens <sup>[26](<https://aws.amazon.com/about-aws/whats-new/2026/07/secrets-manager-managed-external-secrets-paddle-gitlab/>)</sup>.
-
-## Cloud, Infrastructure & On‑Device AI
-- Cloudflare improves Smart Tiered Cache for public cloud regions by accepting a cloud region hint, enabling better primary and fallback upper-tier selection for anycast/regional origins <sup>[27](<https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/>)</sup>.
-- Cloudflare announces Meerkat, an experimental global consensus service using the QuePaxa algorithm for leaderless, timeout‑free writes across 330+ data centers, targeting control‑plane state like database leadership <sup>[28](<https://blog.cloudflare.com/meerkat-introduction/>)</sup>.
-- Cloudflare evolves AI search with content freshness signals to reduce unnecessary crawling and shifts Pay Per Crawl toward Pay Per Use, with experimental creator compensation and analytics <sup>[29](<https://blog.cloudflare.com/making-ai-search-smarter/>)</sup>.
-- Apple explores running larger models (e.g., a 27B‑parameter Qwen 3.6 shrunk via PrismML) on iPhones to enable more on‑device Apple Intelligence features and enhance privacy <sup>[30](<https://www.macrumors.com/2026/07/09/apple-prismml-larger-on-device-ai-models/>)</sup>.
-- DigitalOcean launches Managed Weaviate in public preview, offering the open‑source vector database as a fully managed service with flat pricing starting at $20/month <sup>[31](<https://www.digitalocean.com/blog/public-preview-managed-weaviate>)</sup>.
-- etcd v3.7.0 introduces RangeStream for chunked large result sets, reduces CPU usage for Kubernetes control planes, and completes a protobuf overhaul <sup>[32](<https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/>)</sup>.
-- Calico v3.32.0 enables live migration of KubeVirt VMs without network disruption, preserving IP and identity during node‑to‑node moves <sup>[33](<https://www.tigera.io/blog/save-the-address-save-the-cloud-a-hands-on-kubevirt-live-migration-workshop/>)</sup>.
-- Bun is rewriting large parts of its runtime from Zig to Rust while keeping Zig for JavaScriptCore bindings, citing stronger ecosystem support and safer concurrency <sup>[34](<https://bun.com/blog/bun-in-rust>)</sup>.
-
-## Developer Tools, Profiling & Performance
-- Hugging Face publishes a guide on profiling attention in PyTorch for performance analysis of transformer models <sup>[35](<https://huggingface.co/blog/torch-attention-profile>)</sup>.
-- PyTorch presents kernel fusion techniques (Lazy Pre‑Norm, Multi‑CTA Norm Fusion) that hide up to 90 % of normalization latency by fusing LayerNorm/RMSNorm into GEMM and attention kernels, and introduces FlashNormAttention for multiple normalizations around GDPA <sup>[36](<https://pytorch.org/blog/towards-free-normalization-fusing-normalization-into-gemm-and-attention-kernels/>)</sup>.
-- Fal.ai details optimizations (FP4 computation, epilogue fusion, quantization‑aware distillation) that cut Ideogram v4 image generation from 2.75 s to 0.44 s without quality loss <sup>[37](<https://blog.fal.ai/serving-sub-second-ideogram-v4-without-quality-loss/>)</sup>.
-- NVIDIA Research introduces Flexible Video Diffusion (Flex‑Forcing) to switch between bidirectional and autoregressive generation, improving inference speed, video quality, and long‑range stability <sup>[38](<https://research.nvidia.com/labs/genair/flex-forcing/>)</sup>.
-- PostgreSQL can prune partitions on non‑partition‑key filters by encoding guaranteed relationships via check constraints, enabling efficient queries by non‑partitioned columns <sup>[39](<https://hakibenita.com/postgresql-partition-pruning>)</sup>.
-
-## Security & Incident Notes
-- Discord's AI moderation glitch wrongfully banned ~8,000 users in 24 hours after a model update misclassified grids/geometric shapes; appeals surged ~40× <sup>[40](<https://www.programming-helper.com/tech/discord-ai-moderation-glitch-wrongful-bans-8000-users-2026>)</sup>.
-- Transsion phones (TECNO et al.) in Africa exfiltrate telemetry (GPS, cell towers, app usage) to Alibaba Cloud endpoints; defenders must DNS‑block shalltry.com and transsion‑os.com <sup>[41](<https://www.nowsecure.com/blog/2026/07/08/what-the-transsion-telemetry-research-means-for-mobile-security/>)</sup>.
-- Exploitarium disclosed 130+ unvetted PoCs, including a pre‑auth RCE in libssh2 (affecting curl, Git, PHP) and a Gitea admin‑impersonation flaw; patch libssh2 beyond 1.11.1 and validate X‑WEBAUTH‑USER headers <sup>[42](<https://detections.ai/share/inspiration/VNJMKFVM>)</sup>.
-- Microsoft patched the RoguePlanet zero‑day in Defender after public clashes with researcher Nightmare Eclipse; the bug abused a race condition for SYSTEM access <sup>[43](<https://www.theregister.com/security/2026/07/09/microsoft-closes-book-on-nightmare-eclipses-rogueplanet-zero-day/5269280>)</sup>.
-- OpenAI faces sanctions risk after revelations it misled courts for years about the ability to search ChatGPT logs in copyright litigation <sup>[44](<https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/>)</sup>.
-- A Puerto Rico tax agency exposed ~1 M Social Security numbers via an unprotected interactive property map endpoint <sup>[45](<https://www.propublica.org/article/puerto-rico-crim-data-breach>)</sup>.
-- Amazon and University of Michigan propose HydroShear to model tactile shear for robot manipulation in simulation <sup>[46](<https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch>)</sup>.
-
-## Robotics & Hardware
-- Humanoid robots (Unitree G1) teleoperated by surgeons performed gallbladder removals on live pigs, demonstrating a low‑cost, space‑efficient surgical approach <sup>[47](<https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/>)</sup>.
-- Meta's custom AI chips (designed with Netta and Broadcom, manufactured by TSMC) will enter production in September <sup>[48](<https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/>)</sup>.
+- ## Developer Tools & Engineering
+ - A public debate between Bun and Zig communities is ongoing, drawing attention in the developer ecosystem <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex becomes ChatGPT superapp](<https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna>) — _latent.space_
-2. [OpenAI launches GPT-5.6 Sol, Terra, and Luna on apps and API](<https://www.testingcatalog.com/openai-launches-gpt-5-6-sol-terra-and-luna-on-apps-and-api/>) — _testingcatalog.com_
-3. [GPT-5.6: Frontier intelligence that scales with your ambition](<https://openai.com/index/gpt-5-6/>) — _openai.com_
-4. [GPT-5.6 Series](<https://arcprize.org/results/openai-gpt-5-6>) — _arcprize.org_
-5. [GPT-5.6 Review](<https://signals.forwardfuture.com/gpt-5-6-review/>) — _signals.forwardfuture.com_
-6. [ChatGPT Work](<https://openai.com/chatgpt-work/>) — _openai.com_
-7. [Zuckerberg Pledges ‘Aggressive' Pricing With Meta's First Pay-to-Use AI](<https://www.bloomberg.com/news/articles/2026-07-09/meta-starts-charging-for-ai-with-muse-spark-1-1-agentic-model?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzY0NzUxMSwiZXhwIjoxNzg0MjUyMzExLCJhcnRpY2xlSWQiOiJUSFZDVENSS1YyVTYwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.036PyX7IFhgdqyc5QHadS6Ans-LlAztL8vSoBa_ytUk>) — _bloomberg.com_
-8. [Muse Spark 1.1](<https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/>) — _ai.meta.com_
-9. [Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night](<https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night>) — _claude_
-10. [Quoting OpenAI](<https://simonwillison.net/2026/Jul/10/openai/#atom-everything>) — _simonwillison.net_
-11. [ChatGPT is now a partner for your most ambitious work](<https://openai.com/index/chatgpt-for-your-most-ambitious-work/>) — _openai.com_
-12. [OpenAI Retired Atlas](<https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/>) — _techcrunch.com_
-13. [Stop being the code review bottleneck](<https://newsletter.posthog.com/p/code-review-tips>) — _newsletter.posthog.com_
-14. [Better tools made Copilot code review worse. Here&#8217;s how we actually improved it.](<https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/>) — _github.blog_
-15. [Friendly Fire: Hijacking Defensive Cyber AI Agents for Remote Code Execution](<https://ainowinstitute.org/publications/friendly-fire-exploit-brief>) — _ainowinstitute.org_
-16. [The Pulse: Interesting AI coding stats from Cursor](<https://newsletter.pragmaticengineer.com/p/the-pulse-interesting-ai-coding-stats>) — _newsletter.pragmaticengineer.com_
-17. [Ruflo](<https://github.com/ruvnet/ruflo>) — _github.com_
-18. [Traycer](<https://github.com/traycerai/traycer>) — _github.com_
-19. [socbench](<https://github.com/DeepTempo/socbench>) — _github.com_
-20. [How GitHub gave every repository a durable owner](<https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/>) — _github.blog_
-21. [GitHub Mobile: Improved filters and sorting for Copilot sessions](<https://github.blog/changelog/2026-07-10-github-mobile-improved-filters-and-sorting-for-copilot-sessions>) — _github.blog_
-22. [CodeQL 2.26.0 adds Kotlin 2.4.0 support and AI prompt injection detection](<https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection>) — _github.blog_
-23. [Clearer names for secret scanning detector types](<https://github.blog/changelog/2026-07-10-clearer-names-for-secret-scanning-detector-types>) — _github.blog_
-24. [Per-user states for multi-user budgets in the REST API](<https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api>) — _github.blog_
-25. [npm 12 Disables Install Scripts by Default to Reduce Supply Chain Risk](<https://thehackernews.com/2026/07/npm-12-disables-install-scripts-by.html>) — _thehackernews.com_
-26. [AWS Secrets Manager adds managed external secrets support for Paddle and GitLab](<https://aws.amazon.com/about-aws/whats-new/2026/07/secrets-manager-managed-external-secrets-paddle-gitlab/>) — _aws.amazon.com_
-27. [Improving Smart Tiered Cache for Public Cloud Regions](<https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/>) — _blog.cloudflare.com_
-28. [Introducing Meerkat- an experiment in global consensus](<https://blog.cloudflare.com/meerkat-introduction/>) — _blog.cloudflare.com_
-29. [Making AI search smarter](<https://blog.cloudflare.com/making-ai-search-smarter/>) — _blog.cloudflare.com_
-30. [Apple Exploring Ways to Run Much Larger AI Models Directly on iPhones](<https://www.macrumors.com/2026/07/09/apple-prismml-larger-on-device-ai-models/>) — _macrumors.com_
-31. [Scale Faster with Managed Weaviate: Now in Public Preview on DigitalOcean](<https://www.digitalocean.com/blog/public-preview-managed-weaviate>) — _digitalocean.com_
-32. [Announcing etcd v3.7.0](<https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/>) — _kubernetes.io_
-33. [Save the Address, Save the Cloud: A Hands-on KubeVirt Live Migration Workshop](<https://www.tigera.io/blog/save-the-address-save-the-cloud-a-hands-on-kubevirt-live-migration-workshop/>) — _tigera.io_
-34. [Bun is being rewritten in Rust](<https://bun.com/blog/bun-in-rust>) — _bun.com_
-35. [Profiling in PyTorch (Part 3): Attention is all you profile](<https://huggingface.co/blog/torch-attention-profile>) — _huggingface.co_
-36. [Towards Free Normalization: Fusing Normalization into GEMM and Attention Kernels](<https://pytorch.org/blog/towards-free-normalization-fusing-normalization-into-gemm-and-attention-kernels/>) — _pytorch.org_
-37. [Serving sub-second Ideogram v4 without quality loss](<https://blog.fal.ai/serving-sub-second-ideogram-v4-without-quality-loss/>) — _blog.fal.ai_
-38. [Flexible Video Diffusion](<https://research.nvidia.com/labs/genair/flex-forcing/>) — _research.nvidia.com_
-39. [How to achieve pruning when querying by non-partitioned columns in PostgreSQL](<https://hakibenita.com/postgresql-partition-pruning>) — _hakibenita.com_
-40. [Discord AI Moderation Glitch Wrongfully Bans 8k Users in 24-Hour Period](<https://www.programming-helper.com/tech/discord-ai-moderation-glitch-wrongful-bans-8000-users-2026>) — _programming-helper.com_
-41. [1-in-2 Phones Sold in Africa Exfiltrate Telemetry to China](<https://www.nowsecure.com/blog/2026/07/08/what-the-transsion-telemetry-research-means-for-mobile-security/>) — _nowsecure.com_
-42. [Exploitarium: Mass Disclosure of Zero-Day Proof-of-Concepts](<https://detections.ai/share/inspiration/VNJMKFVM>) — _detections.ai_
-43. [Microsoft Closes Book on Nightmare Eclipse's RoguePlanet Zero-Day](<https://www.theregister.com/security/2026/07/09/microsoft-closes-book-on-nightmare-eclipses-rogueplanet-zero-day/5269280>) — _theregister.com_
-44. [OpenAI may have made a fatal misstep in copyright fight with news orgs](<https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/>) — _arstechnica.com_
-45. [A Puerto Rico Government Agency Exposed 1M Social Security Numbers](<https://www.propublica.org/article/puerto-rico-crim-data-breach>) — _propublica.org_
-46. [Amazon and University of Michigan give robots a sense of touch](<https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch>) — _amazon.science_
-47. [Humanoid robots controlled by surgeons did world-first operation on live pigs](<https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/>) — _arstechnica.com_
-48. [Meta's new AI chips will begin production in September](<https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/>) — _techcrunch.com_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>) — _latent.space_
 
 
 ## Recent archive
