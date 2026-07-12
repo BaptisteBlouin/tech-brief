@@ -8,20 +8,15 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-11
-<sub>updated 12 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-12
+<sub>updated 12 July 2026 at 13:01</sub>
 
-## Models & LLM Tooling
-- OpenAI's GPT-5.6 rollout introduces 36 API variants, causing confusion among users, while most end-users see a simplified single-slider interface; community guides are emerging to help users navigate the options <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
-
-## Developer Tools & Engineering
-- A public debate between Bun and Zig communities is ongoing, drawing attention in the developer ecosystem <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
-- Docker CLI sends commands as API calls to the Docker daemon (dockerd), which checks for the image locally or pulls it from a registry (e.g., Docker Hub or ECR), then prepares the container configuration <sup>[2](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>)</sup>.
+- ## Developer Tools
+ - sqlite-utils 4.1 adds a `--code` option to `insert` and `upsert` commands, allowing direct Python code or file paths to define a `rows()` function or iterable for data insertion <sup>[1](<https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>) — _latent.space_
-2. [EP221: How Docker Works Under the Hood](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>) — _blog.bytebytego.com_
+1. [sqlite-utils 4.1](<https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive

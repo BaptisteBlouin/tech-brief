@@ -8,20 +8,15 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-11
-<sub>mis à jour le 12 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-12
+<sub>mis à jour le 12 juillet 2026 à 13:01</sub>
 
-## Modèles & Outils LLM
-- Le déploiement de GPT-5.6 par OpenAI introduit 36 variantes d'API, semant la confusion parmi les utilisateurs, tandis que la plupart des utilisateurs finaux voient une interface simplifiée à un seul curseur ; des guides communautaires émergent pour aider les utilisateurs à naviguer parmi les options <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
-
-## Outils Développeurs & Ingénierie
-- Un débat public entre les communautés Bun et Zig est en cours, attirant l'attention dans l'écosystème des développeurs <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
-- L'interface en ligne de commande Docker envoie des commandes sous forme d'appels API au démon Docker (dockerd), qui vérifie la présence de l'image localement ou la télécharge depuis un registre (par exemple, Docker Hub ou ECR), puis prépare la configuration du conteneur <sup>[2](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>)</sup>.
+- ## Outils pour développeurs
+ - sqlite-utils 4.1 ajoute une option `--code` aux commandes `insert` et `upsert`, permettant d'utiliser du code Python directement ou des chemins de fichiers pour définir une fonction `rows()` ou un itérable pour l'insertion de données <sup>[1](<https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>) — _latent.space_
-2. [EP221: How Docker Works Under the Hood](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>) — _blog.bytebytego.com_
+1. [sqlite-utils 4.1](<https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything>) — _simonwillison.net_
 
 
 ## Archive récente
