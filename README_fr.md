@@ -9,17 +9,19 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-07-11
-<sub>mis à jour le 11 juillet 2026 à 13:00</sub>
+<sub>mis à jour le 12 juillet 2026 à 01:01</sub>
 
-- ## Modèles & Outils LLM
- - Le déploiement de GPT-5.6 par OpenAI introduit 36 variantes d'API, semant la confusion parmi les utilisateurs, tandis que la plupart des utilisateurs finaux voient une interface simplifiée à un seul curseur ; des guides communautaires émergent pour aider les utilisateurs à naviguer parmi les options <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
+## Modèles & Outils LLM
+- Le déploiement de GPT-5.6 par OpenAI introduit 36 variantes d'API, semant la confusion parmi les utilisateurs, tandis que la plupart des utilisateurs finaux voient une interface simplifiée à un seul curseur ; des guides communautaires émergent pour aider les utilisateurs à naviguer parmi les options <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
 
-- ## Outils de Développement & Ingénierie
- - Un débat public entre les communautés Bun et Zig est en cours, attirant l'attention dans l'écosystème des développeurs <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
+## Outils Développeurs & Ingénierie
+- Un débat public entre les communautés Bun et Zig est en cours, attirant l'attention dans l'écosystème des développeurs <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>)</sup>.
+- L'interface en ligne de commande Docker envoie des commandes sous forme d'appels API au démon Docker (dockerd), qui vérifie la présence de l'image localement ou la télécharge depuis un registre (par exemple, Docker Hub ou ECR), puis prépare la configuration du conteneur <sup>[2](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>)</sup>.
 
 ## Sources
 
 1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-f5c>) — _latent.space_
+2. [EP221: How Docker Works Under the Hood](<https://blog.bytebytego.com/p/ep221-how-docker-works-under-the>) — _blog.bytebytego.com_
 
 
 ## Archive récente
@@ -28,6 +30,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-07-11` | Samedi | [Lire →](news/fr/2026-07-11.md) |
 | `2026-07-10` | Vendredi | [Lire →](news/fr/2026-07-10.md) |
 | `2026-07-09` | Jeudi | [Lire →](news/fr/2026-07-09.md) |
 | `2026-07-08` | Mercredi | [Lire →](news/fr/2026-07-08.md) |
@@ -41,9 +44,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-06-30` | Mardi | [Lire →](news/fr/2026-06-30.md) |
 | `2026-06-29` | Lundi | [Lire →](news/fr/2026-06-29.md) |
 | `2026-06-28` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-06-28.md) |
-| `2026-06-27` | Samedi | [Lire →](news/fr/2026-06-27.md) |
 
-<sub>[Parcourir toute l’archive (26) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (27) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
