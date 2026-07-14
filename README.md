@@ -8,105 +8,29 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-13
-<sub>updated 14 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-14
+<sub>updated 14 July 2026 at 13:00</sub>
 
-## AI/ML Models, Evaluation and Agents
-- Apple sues OpenAI, alleging it solicited Apple trade secrets from job candidates and used them to approach Apple manufacturing partners, seeking injunctions and return of IP <sup>[1](<https://www.nytimes.com/2026/07/10/technology/apple-openai-lawsuit.html?unlocked_article_code=1.xVA.ioDl._RZeRJKFIYdf&smid=url-share>), [2](<https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/>)</sup>.
-- Text-to-SQL benchmarks (e.g., BIRD, Spider) contain incorrect "gold" queries; sqlsure argues evaluations must validate SQL against declared data semantics like join cardinality and grain <sup>[3](<https://sqlsure.ai/blog/bird-benchmark-wrong-gold/>)</sup>.
-- Databricks reports open-source GLM 5.2 and others now perform well on real internal coding tasks, signaling maturing agentic coding capabilities <sup>[4](<https://threadreaderapp.com/thread/2074943612631273730.html>)</sup>.
-- GitHub improved Copilot code review by starting from diffs and narrowing with grep/glob, cutting average review cost by 20% without quality loss after generic tools had worsened results <sup>[5](<https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/>)</sup>.
-- Zhipu’s co-founder outlines a two-year plan to return to foundation-model research, emphasizing AGI, safety, open source, autonomous agents, and self-training <sup>[6](<https://www.geopolitechs.org/p/tang-jies-letter-to-zhipu-employee>)</sup>.
-- Cloudflare introduced Precursor to detect agentic behavior using continuous client-side signals, extending Turnstile’s risk-based challenges beyond login/signup to full application interaction <sup>[7](<https://blog.cloudflare.com/introducing-precursor/>)</sup>.
-- Hebbia reports Claude Fable 5 delivered the largest accuracy gain its research team has recorded on finance-specific evals, tracking complex queries prior models dropped <sup>[8](<https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail>)</sup>.
-- Anthropic extended Claude Fable 5 access and elevated Claude Code limits through July 19, while OpenAI temporarily removed usage caps for GPT-5.6 Sol <sup>[9](<https://simonwillison.net/2026/Jul/12/bump/#atom-everything?utm_source=tldrai>), [10](<https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/>)</sup>.
-- Basecamp Bench shows Fable 5 as top performer for frontend/backend tasks, with Grok 4.5 fastest/cheapest but less polished <sup>[11](<https://smw.ai/blog/basecamp-bench>)</sup>.
-- Proactive memory for long-horizon agents uses a separate memory agent to track state and remind the action agent, improving pass rates on Terminal-Bench 2.0 and τ2-Bench <sup>[12](<https://arxiv.org/abs/2607.08716>), [13](<https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents>)</sup>.
-- LangChain’s OpenWiki Brains introduces general-purpose proactive memory for agents, autonomously gathering context from connected sources like Gmail, Notion, and Twitter <sup>[13](<https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents>)</sup>.
-- Pinecone’s text match filters help agents retrieve scoped, accurate context without pre-labeling entire datasets, addressing semantic search ambiguity <sup>[14](<https://www.pinecone.io/blog/text-match-filters/>)</sup>.
-- Microsoft Foundry scales AI agents for 20M+ users, with first-party agent usage growing 6x year-to-date; WorkOS MCP enables agents to manage auth platforms <sup>[15](<https://blog.bytebytego.com/p/how-microsoft-ships-ai-agents-at>)</sup>.
+## AI/LLM Adoption and Tooling
+- OpenAI showcases how data science teams use ChatGPT Work to generate root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real inputs <sup>[1](<https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex>)</sup>.
+- OpenAI also highlights ChatGPT Work for sales teams to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses <sup>[2](<https://openai.com/academy/codex-for-work/how-sales-teams-use-codex>)</sup>.
+- Codex usage surges over 10x in six months to 7M users, with 1M added in the past ~24 hours, sparking speculation about competition with Claude Code <sup>[3](<https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months>)</sup>.
 
-## MLOps, Data Engineering and Tooling
-- Apache Airflow adds AI-driven controls: semantic schema validation, persistent state for reconnecting failed jobs, and LLM-based retry decisions to reduce pipeline firefighting <sup>[16](<https://blog.dataengineerthings.org/how-airflow-is-using-ai-to-make-data-engineering-more-resilient-not-more-complex-36ff44fd8df7>)</sup>.
-- Arcesium migrated a 170TB, 15-trillion-record warehouse from RDBMS to Apache Iceberg on S3 with DuckDB, cutting ingestion runtime by 80% and infra spend by ~40% using Swiftlake and KEDA autoscaling <sup>[17](<https://medium.com/arcesium-engineering-blog/modern-data-warehousing-at-scale-arcesiums-migration-to-duckdb-and-iceberg-d316af0def46>)</sup>.
-- Lakekeeper’s Generic Table API enables governance of non-Iceberg assets (e.g., Lance) as catalog objects without conversion, reusing Iceberg controls <sup>[18](<https://medium.com/fresha-data-engineering/lakekeeper-generic-table-api-design-1aaaeca3749c>)</sup>.
-- Databricks launched Feature Views (public preview), a managed framework to define features once and auto-handle training/real-time serving pipelines with Unity Catalog governance <sup>[19](<https://www.databricks.com/blog/introducing-feature-views>)</sup>.
-- OSI semantic layer spec is now Apache Ossie (Incubating), with a new name and mascot to avoid confusion with Open Source Initiative <sup>[20](<https://www.getdbt.com/blog/osi-is-now-apache-ossie>)</sup>.
-- Prefect is acquiring Dagster Labs to combine Prefect’s dynamic workflows and elegant Python API with Dagster’s partitioning, lineage, cataloging, and scheduling strengths <sup>[21](<https://dagster.io/blog/prefect-is-acquiring-dagster>)</sup>.
+## Developer Tools and Practices
+- GitHub introduces a public preview for Code Quality license cost estimation, showing per-committer usage and projected billing ahead of its paid launch on July 20, 2026 <sup>[4](<https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview>)</sup>.
+- A cache-friendly method for using `uvx` in GitHub Actions is shared, leveraging `UV_EXCLUDE_NEWER` with a fixed date (e.g., `2026-07-12`) to stabilize tool versions and cache keys <sup>[5](<https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything>)</sup>.
 
-## DevOps, Infrastructure and Cloud
-- ClickHouse offers hardened Docker images with zero medium-severity CVEs, built on a minimal base, with a debug variant; migration is a one-line change <sup>[22](<https://clickhouse.com/blog/docker-hardened-images>)</sup>.
-- Affirm rebuilt its pre-checkout messaging from a Python monolith to a Kotlin microservice with a rule engine, cutting P99 latency by 50% and reducing experiment setup time from 2 months to 4 days <sup>[23](<https://medium.com/affirmengineering/re-architecting-affirms-upfunnel-platform-how-we-cut-experiment-cycle-time-from-months-to-days-20a047eb6599>)</sup>.
-- Cloudflare improved Smart Tiered Cache for public cloud regions by using region hints to avoid cross-continent routing behind anycast IPs from AWS/GCP/Azure/Oracle <sup>[24](<https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/>)</sup>.
-- Azure DevOps will retire its workload identity federation issuer on July 1, 2027, requiring migration of older pipeline service connections to Microsoft Entra issuer <sup>[25](<https://sysadmin-central.com/2026/07/01/migrate-azure-devops-service-connections-entra-issuer/>)</sup>.
-- Jenkins Smart Retry adds policy-based retries that classify failures before rerunning steps, recovering from transient issues while avoiding retries for deterministic failures <sup>[26](<https://www.jenkins.io/blog/2026/07/06/smart-retry/>)</sup>.
-- Wireshark 4.6.7 patches 12 dissector/parser flaws (crashes/infinite loops) in pcapng, SSH, TLS ECH, IEEE 802.11, and BLF <sup>[27](<https://gbhackers.com/wireshark-4-6-7-released-to-patch-12-vulnerabilitie/>)</sup>.
-
-## Developer Tools and Software Engineering
-- crates.io adds a "Code" tab to browse exact published crate files, including normalized Cargo.toml, easing dependency audits <sup>[28](<https://blog.rust-lang.org/2026/07/13/crates-io-development-update/>)</sup>.
-- PostgreSQL can prune partitions on non-partition keys if column ranges correlate with the partition key; CHECK constraints enable the optimizer to skip irrelevant partitions <sup>[29](<https://hakibenita.com/postgresql-partition-pruning>)</sup>.
-- The Shift Left Manifesto v2 emphasizes code-level, release-linked lineage starting in producer code to expose ownership, sensitive-data flows, and impact analysis directly in PRs <sup>[30](<https://dataproducts.substack.com/p/the-shift-left-manifesto-v2>)</sup>.
-- Git 2.55 introduces incremental multi-pack index repacking improvements and new history fixup capabilities <sup>[31](<https://github.blog/open-source/git/highlights-from-git-2-55/>)</sup>.
-- GitHub separated SSO and Organizations pages in user settings for clearer management <sup>[32](<https://github.blog/changelog/2026-07-13-separate-sso-and-organizations-pages-in-settings>)</sup>.
-- Claude Code on desktop now includes an in-app browser to interact with docs, designs, and websites within a sandboxed, configurable environment <sup>[33](<https://threadreaderapp.com/thread/2075635283211772279.html>)</sup>.
-- Code review is shifting from a quality gate to theater as AI-generated PR volume outpaces humans; QA moves toward automated deployment pipelines with policy-based checks <sup>[34](<https://octopus.com/blog/code-review-is-theater-now>)</sup>.
-- A GitHub code-frequency chart shows a 37k-addition spike in 2026 for the Datasette project, illustrating the impact of coding agents on output <sup>[35](<https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything>)</sup>.
-
-## Security and Privacy
-- Samsung Health app warns users that opting out of AI training may result in data deletion <sup>[36](<https://neow.in/cWsyMTV3>)</sup>.
-- Progress ordered ShareFile customers to shut down on-prem Storage Zone Controllers due to a credible external threat; cloud-only accounts remain unaffected <sup>[37](<https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html>)</sup>.
-- A compromised Injective SDK npm package (@injectivelabs/sdk-ts@1.20.21) exfiltrates wallet keys and mnemonics; 17 related packages are affected <sup>[38](<https://socket.dev/blog/compromised-injective-sdk-npm-package>)</sup>.
-- Miinto breach exposed customer order records (names, contact details, addresses, payment method types) via an internal order management system; attackers were removed and access controls tightened <sup>[39](<https://www.theregister.com/security/2026/07/10/miinto-fesses-up-to-breach-says-customers-open-to-phishing/5269891>)</sup>.
-- Datadog released GuardDog 3.0 with YARA rules, a new risk engine, and transparent sandboxing for scanning malicious PyPI/npm packages <sup>[40](<https://securitylabs.datadoghq.com/articles/guarddog-3-0-release/>)</sup>.
-- Device Code Phishing attacks abuse Microsoft’s OAuth device_code flow via legitimate redirects and CAPTCHA gates, harvesting tokens for long-term persistence; defenders should disable unused flows and monitor DeviceCodeSignIn events <sup>[41](<https://securelist.com/microsoft-device-code-phishing-attack/120350/>)</sup>.
-- Cavern Manticore, an Iran-linked modular C2 framework, uses RMM/SysAid abuse, uxtheme.dll sideloading, and per-module AppDomain isolation for anti-analysis; defenders should audit for sideloading and unsigned binaries under C:\ProgramData <sup>[42](<https://research.checkpoint.com/2026/cavern-manticore-exposing-iran-linked-modular-c2-framework/>)</sup>.
-- GigaWiper combines wiper/ransomware components into a Go-based backdoor with disk wiping, BSOD triggering, file encryption, and remote control via RabbitMQ/Redis <sup>[43](<https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/>)</sup>.
+## Creative and Experimental AI
+- DOOMQL, a Doom-like game where SQLite powers movement, collision, enemies, combat, and rendering, is built using GPT-5.6 Sol and runs as a Python terminal script <sup>[6](<https://simonwillison.net/2026/Jul/13/doomql/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [Apple Sues OpenAI, Accusing It of Stealing Company Secrets](<https://www.nytimes.com/2026/07/10/technology/apple-openai-lawsuit.html?unlocked_article_code=1.xVA.ioDl._RZeRJKFIYdf&smid=url-share>) — _nytimes.com_
-2. [Apple Sued OpenAI](<https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/>) — _techcrunch.com_
-3. [The benchmark grading every text-to-SQL model has wrong answers in its key](<https://sqlsure.ai/blog/bird-benchmark-wrong-gold/>) — _sqlsure.ai_
-4. [We benchmarked coding agents on our own internal tasks at Databricks and learned a lot!](<https://threadreaderapp.com/thread/2074943612631273730.html>) — _threadreaderapp.com_
-5. [Better tools made Copilot code review worse. Here's how we actually improved it](<https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/>) — _github.blog_
-6. [The Wave Has Arrived”: Zhipu Co-Founder Tang Jie's Letter to Staff](<https://www.geopolitechs.org/p/tang-jies-letter-to-zhipu-employee>) — _geopolitechs.org_
-7. [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<https://blog.cloudflare.com/introducing-precursor/>) — _blog.cloudflare.com_
-8. [Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail](<https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail>) — _claude_
-9. [Anthropic Extended Claude Fable 5 Access Again](<https://simonwillison.net/2026/Jul/12/bump/#atom-everything?utm_source=tldrai>) — _simonwillison.net_
-10. [OpenAI temporarily relaxes GPT-5.6 Sol usage limits](<https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/>) — _bleepingcomputer.com_
-11. [Basecamp Bench](<https://smw.ai/blog/basecamp-bench>) — _smw.ai_
-12. [Proactive Memory for Long-Horizon Agents](<https://arxiv.org/abs/2607.08716>) — _arxiv 2607.08716_
-13. [OpenWiki Brains: Proactive Memory for AI Agents](<https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents>) — _langchain.com_
-14. [Text match filters for agents](<https://www.pinecone.io/blog/text-match-filters/>) — _pinecone_
-15. [How Microsoft Ships AI Agents at Enterprise Scale](<https://blog.bytebytego.com/p/how-microsoft-ships-ai-agents-at>) — _blog.bytebytego.com_
-16. [How Airflow is using AI to make data engineering more resilient, not more complex](<https://blog.dataengineerthings.org/how-airflow-is-using-ai-to-make-data-engineering-more-resilient-not-more-complex-36ff44fd8df7>) — _blog.dataengineerthings.org_
-17. [Modern Data Warehousing at Scale: Arcesium's Migration to DuckDB and Iceberg](<https://medium.com/arcesium-engineering-blog/modern-data-warehousing-at-scale-arcesiums-migration-to-duckdb-and-iceberg-d316af0def46>) — _medium.com_
-18. [Lakekeeper Generic Table API Design](<https://medium.com/fresha-data-engineering/lakekeeper-generic-table-api-design-1aaaeca3749c>) — _medium.com_
-19. [Introducing Feature Views](<https://www.databricks.com/blog/introducing-feature-views>) — _databricks.com_
-20. [OSI is now Apache Ossie (Incubating)](<https://www.getdbt.com/blog/osi-is-now-apache-ossie>) — _dbt.com_
-21. [Prefect is Acquiring Dagster](<https://dagster.io/blog/prefect-is-acquiring-dagster>) — _dagster_
-22. [ClickHouse on Docker Hardened Images](<https://clickhouse.com/blog/docker-hardened-images>) — _clickhouse.com_
-23. [Re-architecting Affirm's Upfunnel Platform: How We Cut Experiment Cycle Time from Months to Days](<https://medium.com/affirmengineering/re-architecting-affirms-upfunnel-platform-how-we-cut-experiment-cycle-time-from-months-to-days-20a047eb6599>) — _medium.com_
-24. [Improving Smart Tiered Cache for public cloud regions](<https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/>) — _blog.cloudflare.com_
-25. [Your Azure DevOps pipelines have a 2027 deadline, and the clock has just started](<https://sysadmin-central.com/2026/07/01/migrate-azure-devops-service-connections-entra-issuer/>) — _sysadmin-central.com_
-26. [Introducing Smart Retry: Safer retries for transient Jenkins failures.](<https://www.jenkins.io/blog/2026/07/06/smart-retry/>) — _jenkins.io_
-27. [Wireshark 4.6.7 Released to Patch 12 Vulnerabilities in SSH, TLS, Wi-Fi, and pcapng](<https://gbhackers.com/wireshark-4-6-7-released-to-patch-12-vulnerabilitie/>) — _gbhackers.com_
-28. [crates.io: development update](<https://blog.rust-lang.org/2026/07/13/crates-io-development-update/>) — _blog.rust-lang.org_
-29. [How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL](<https://hakibenita.com/postgresql-partition-pruning>) — _hakibenita.com_
-30. [The Shift Left Manifesto - v2](<https://dataproducts.substack.com/p/the-shift-left-manifesto-v2>) — _dataproducts.substack.com_
-31. [Highlights from Git 2.55](<https://github.blog/open-source/git/highlights-from-git-2-55/>) — _github.blog_
-32. [Separate SSO and Organizations pages in Settings](<https://github.blog/changelog/2026-07-13-separate-sso-and-organizations-pages-in-settings>) — _github.blog_
-33. [Claude Code on desktop now has an in-app browser](<https://threadreaderapp.com/thread/2075635283211772279.html>) — _threadreaderapp.com_
-34. [Code review is theater now](<https://octopus.com/blog/code-review-is-theater-now>) — _octopus.com_
-35. [datasette code-frequency chart on GitHub](<https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything>) — _simonwillison.net_
-36. [Samsung Health app threatens data deletion if users opt out AI training](<https://neow.in/cWsyMTV3>) — _hnrss.org_
-37. [URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat](<https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html>) — _thehackernews.com_
-38. [Compromised Injective SDK npm Package Exfiltrates Wallet Keys and Mnemonics](<https://socket.dev/blog/compromised-injective-sdk-npm-package>) — _socket.dev_
-39. [Fashion mart Miinto unzips breach details, warns shoppers to watch for phisherfolk](<https://www.theregister.com/security/2026/07/10/miinto-fesses-up-to-breach-says-customers-open-to-phishing/5269891>) — _theregister.com_
-40. [Introducing GuardDog 3.0: A new rules engine, transparent sandboxing, and more](<https://securitylabs.datadoghq.com/articles/guarddog-3-0-release/>) — _securitylabs.datadoghq.com_
-41. [When checking the URL isn't enough: a Device Code Phishing attack via a Microsoft website](<https://securelist.com/microsoft-device-code-phishing-attack/120350/>) — _securelist.com_
-42. [Cavern Manticore: Exposing Iran-Linked Modular C2 Framework](<https://research.checkpoint.com/2026/cavern-manticore-exposing-iran-linked-modular-c2-framework/>) — _research.checkpoint.com_
-43. [GigaWiper Combines Multiple Malware for System-Level Sabotage](<https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/>) — _securityweek.com_
+1. [How data science teams use ChatGPT Work](<https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex>) — _openai.com_
+2. [How sales teams use ChatGPT Work](<https://openai.com/academy/codex-for-work/how-sales-teams-use-codex>) — _openai.com_
+3. [\[AINews\] Codex usage up >10x in 6 months to 7M users, +1M in the past ~day; did Codex overtake Claude Code??](<https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months>) — _latent.space_
+4. [GitHub Code Quality license estimate in public preview](<https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview>) — _github.blog_
+5. [Using uvx in GitHub Actions in a cache-friendly way](<https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything>) — _simonwillison.net_
+6. [DOOMQL](<https://simonwillison.net/2026/Jul/13/doomql/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive
