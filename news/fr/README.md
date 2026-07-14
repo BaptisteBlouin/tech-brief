@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>28 digests quotidiens archivés · du plus récent au plus ancien.</sub>
+<sub>29 digests quotidiens archivés · du plus récent au plus ancien.</sub>
 
 ### Juillet 2026
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-07-13` | Lundi | [Lire →](2026-07-13.md) |
 | `2026-07-12` | 🗓️ Récap hebdo | [Lire →](2026-07-12.md) |
 | `2026-07-11` | Samedi | [Lire →](2026-07-11.md) |
 | `2026-07-10` | Vendredi | [Lire →](2026-07-10.md) |
