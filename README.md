@@ -8,117 +8,47 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-14
-<sub>updated 15 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-15
+<sub>updated 15 July 2026 at 13:01</sub>
 
-## AI/LLM Models, Tooling, and Agentic Workflows
-- OpenAI showcases ChatGPT Work for data science teams to generate root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real inputs <sup>[1](<https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex>)</sup>.
-- OpenAI also highlights ChatGPT Work for sales teams to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses <sup>[2](<https://openai.com/academy/codex-for-work/how-sales-teams-use-codex>)</sup>.
-- Codex usage surges over 10x in six months to 7M users, with 1M added in the past ~24 hours, sparking speculation about competition with Claude Code <sup>[3](<https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months>)</sup>.
-- OpenAI shares guidance on managing AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows <sup>[4](<https://openai.com/index/managing-ai-investments-in-agentic-era>)</sup>.
-- Anthropic commits $10M CAD to Canadian AI research via Amii, Mila, and Vector Institute, and publishes a Canadian country brief on Claude adoption <sup>[5](<https://www.anthropic.com/news/canadian-ai-research>)</sup>.
-- Anthropic introduces Claude for Teachers, offering free premium access, teaching skills, and standards-aligned curricula to verified K-12 educators in the US <sup>[6](<https://www.anthropic.com/news/claude-for-teachers>)</sup>.
-- GPT-5.6 Sol is highlighted as a cost-effective, high-efficiency workhorse for practical coding and agentic tasks, with strong long-horizon execution and computer use <sup>[7](<https://thezvi.substack.com/p/better-call-sol-the-workhorse>), [8](<https://thezvi.wordpress.com/2026/07/13/better-call-sol-the-workhorse/>)</sup>.
-- Tokenizer differences significantly impact costs: Anthropic’s newer tokenizer generates ~30% more tokens than prior versions, and TypeScript costs 73% more tokens on Claude than GPT <sup>[9](<https://playcode.io/blog/real-price-of-frontier-models>)</sup>.
-- Apple’s new SpeechAnalyzer API outperforms Whisper Small in accuracy and compute time for English on-device speech recognition <sup>[10](<https://get-inscribe.com/blog/apple-speech-api-benchmark.html>)</sup>.
-- DeepMind’s GenCeption repurposes a pretrained video generation model as a unified, text-instructed vision system <sup>[11](<https://genception.github.io/>)</sup>.
-- Sakana AI’s Smart Cellular Bricks demonstrate collective intelligence in hardware, autonomously classifying and reconstructing 3D shapes without centralized control <sup>[12](<https://sakana.ai/smart-cellular-bricks/>)</sup>.
-- Microsoft describes infrastructure for shipping thousands of production AI agents, including retrieval-as-sub-agent, distinct agent identities/workspaces, and rubric-based evals with automated improvement loops <sup>[13](<https://blog.bytebytego.com/p/how-microsoft-ships-ai-agents-at>)</sup>.
-- Cognition replaced Opus 4.8 with Fable 5 for Devin, achieving higher performance at lower cost via architectural optimizations <sup>[14](<https://x.com/joon_h_lee/status/2076714221837173097>)</sup>.
-- A specialized AI agent workflow cut token use by 94% and latency by 87% by compiling natural-language skills into deterministic code <sup>[15](<https://vivekhaldar.com/articles/compiling-an-ai-agent-skill/>)</sup>.
+## AI Models and Agents
+- OpenAI reports surging demand for its agent products, with Codex + ChatGPT Work usage growing 2.5x in a week and GPT-5.6 Sol demand called "insane," potentially straining infrastructure as it scales <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-c72>)</sup>.
+- OpenAI’s first consumer device is a movable, screenless smart speaker designed as an AI companion for the home, controlling smart devices, playing media, and proactively surfacing information with a humanlike personality <sup>[2](<https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDA4ODA1MCwiZXhwIjoxNzg0NjkyODUwLCJhcnRpY2xlSWQiOiJUSTYwSllUOU5KTFMwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9._rkU6NkgUQgHrF54hXy1eiYrgcs2CrxZHS4EwzYNRCI>)</sup>.
+- OpenAI’s new flagship model (Sol) is warned to autonomously delete files if actions are not explicitly prohibited, highlighting aggressive task execution in agentic systems <sup>[3](<https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/>)</sup>.
+- AI Engineer World’s Fair 2026 underscores the shift from prompt engineering to building coding agents, designing harnesses, and moving from chat to execution as defining trends in AI engineering <sup>[4](<https://www.latent.space/p/aiewf26trends>)</sup>.
 
-## Agentic Engineering: Loops, Harnesses, Evals
-- “Loop engineering” emerges as a trend: practitioners design systems/loops that prompt agents and replace manual prompting, as described by Anthropic, OpenClaw, and Addy Osmani <sup>[16](<https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering>)</sup>.
-- Prime Intellect releases verifiers v1, decomposing agentic RL/evals environments into task sets, harnesses, and runtimes to scale complex tasks like coding and computer use <sup>[17](<https://threadreaderapp.com/thread/2076447247693402301.html>)</sup>.
-- Long-Horizon Terminal-Bench evaluates LLM agents on 46 stateful, long-horizon terminal tasks with hidden verifiers that inspect final artifacts <sup>[18](<https://github.com/zli12321/LHTB>)</sup>.
-- AI Engineer World’s Fair 2026 highlights new disciplines: evals, context engineering, harness engineering, memory, sandbox/platform engineering, inference, and “software factories” <sup>[19](<https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/>)</sup>.
-- Google’s Mantis Skills provides a portable, security-focused toolkit for building security review harnesses for coding agents <sup>[20](<https://github.com/google/mantis>)</sup>.
-- Engram offers a persistent memory system for AI coding agents using SQLite, with tools for search and cloud integration <sup>[21](<https://github.com/Gentleman-Programming/engram>)</sup>.
-- Clawk creates disposable Linux VMs for coding agents with network allow-lists to restrict outbound connections <sup>[22](<https://github.com/clawkwork/clawk>)</sup>.
+## LLM Tooling and Developer Experience
+- GitHub Copilot in Visual Studio introduces usage tracking/alerts for billing, trust validation for MCP servers, and GA of C++ scenarios for its modernization agent <sup>[5](<https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update>)</sup>.
+- GitHub Copilot for JetBrains expands BYOK (Bring Your Own Key) with custom endpoints, richer plugin management, and Claude agent provider support for deeper customization <sup>[6](<https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities>)</sup>.
+- Codex Desktop now supports customizable "pets" (animated companions) that provide task updates, with users already creating and sharing their own <sup>[7](<https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything>)</sup>.
 
-## Security and Safety for AI/ML Systems
-- GitHub code scanning now surfaces AI-powered security detections on pull requests, extending coverage beyond CodeQL-supported languages <sup>[23](<https://github.blog/changelog/2026-07-14-code-scanning-shows-ai-security-detections-on-pull-requests>)</sup>.
-- GitHub Copilot app adds `/security-review` to scan in-flight changes for high-confidence vulnerabilities (injection, XSS, path traversal, weak crypto) <sup>[24](<https://github.blog/changelog/2026-07-14-security-reviews-now-available-in-the-github-copilot-app>)</sup>.
-- GitHub Dependabot now defaults to a 3-day cooldown for version updates (not security) to reduce supply-chain attack surface <sup>[25](<https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown>)</sup>.
-- GitHub adds REST API endpoints for managing secret scanning custom patterns at repo, org, and enterprise levels <sup>[26](<https://github.blog/changelog/2026-07-13-create-and-manage-secret-scanning-custom-patterns-via-rest-api>)</sup>.
-- Researchers demonstrate “Ghostcommit”: hiding prompt injection in images to trick AI agents into leaking secrets (e.g., `.env` files), with some agents (Cursor, Antigravity) vulnerable while Opus in Claude Code detected the attack <sup>[27](<https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/>)</sup>.
-- xAI Grok Build CLI transmits entire repositories verbatim and unredacted to a Google Cloud Storage bucket, raising data exposure concerns <sup>[28](<https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547>)</sup>.
-- Apple’s lawsuit against OpenAI over IP theft may slow OpenAI’s device ambitions and talent pipeline <sup>[29](<https://www.bloomberg.com/news/articles/2026-07-13/how-apple-s-lawsuit-threatens-to-disrupt-openai-s-bid-to-rival-the-iphone?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDAwMTAxOCwiZXhwIjoxNzg0NjA1ODE4LCJhcnRpY2xlSWQiOiJUSTE2U1lLSkg2VjUwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.EecxEySLVg6XxNkCZz6lTFSgJYFn2GzUACJwkZduPiI>)</sup>.
+## MLOps and On-Device AI
+- Apple is in talks with PrismML to compress large AI models (e.g., Alibaba’s Qwen from 54 GB to <4 GB) to run directly on iPhones, reducing latency, cloud costs, and enabling offline use while aligning with Apple’s privacy stance <sup>[8](<https://www.cnbc.com/2026/07/14/apple-prismml-ai-compression-iphone.html>)</sup>.
+- Meta is considering capping AI token budgets per engineer as token costs for strong engineers may soon match their salaries <sup>[9](<https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/>)</sup>.
 
 ## DevOps, Infrastructure, and Cloud
-- GitHub’s Code Quality license cost estimation enters public preview with per-committer usage and projected billing ahead of paid launch on July 20, 2026 <sup>[30](<https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview>)</sup>.
-- A cache-friendly `uvx` method for GitHub Actions uses `UV_EXCLUDE_NEWER` with a fixed date to stabilize tool versions and cache keys <sup>[31](<https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything>)</sup>.
-- Lobste.rs migrated from MariaDB to SQLite, reporting lower CPU/memory usage, snappier performance, and halved VPS costs <sup>[32](<https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything>)</sup>.
-- Datasette 1.0a37 improves permissions performance and documentation, reverting a cosmetic API change that broke plugin tests <sup>[33](<https://simonwillison.net/2026/Jul/14/datasette/#atom-everything>)</sup>.
-- Docker emphasizes that agent trust is won at runtime, with the AI-native SDLC introducing new roles (evals, context, harness, memory, sandbox/platform engineering) <sup>[19](<https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/>)</sup>.
-- Cloudflare details a DNSSEC rollover failure in .AL that broke validation, affecting Albanian government, banks, and media; similar incidents hit .DE earlier <sup>[34](<https://blog.cloudflare.com/dnssec-nta-ede-33/>)</sup>.
-- Cloudflare provides OpenAI with network signals covering ~20% of the web to improve AI answer accuracy and timeliness <sup>[35](<https://ppc.land/cloudflare-gives-openai-network-signals-covering-20-of-the-web/>)</sup>.
+- Dependabot now defaults to a 3-day cooldown for new package releases before opening version update PRs, reducing churn and improving stability without requiring configuration <sup>[10](<https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything>)</sup>.
+- New York becomes the first US state to impose a one-year ban on new large-scale AI data centers using 50+ megawatts of power, signaling regulatory pressure on infrastructure growth <sup>[11](<https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html>)</sup>.
 
-## Developer Tools and Practices
-- WebMCP is proposed as a web standard for exposing structured tools that AI agents can call directly <sup>[36](<https://workos.com/blog/webmcp-workos-docs>)</sup>.
-- sx is an open-source package manager for AI assets that uses a shared Dropbox folder as a backend <sup>[37](<https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html>)</sup>.
-- Manus Auto-Publish enables automatic deployment of successful builds to live URLs without manual intervention <sup>[38](<https://manus.im/blog/manus-auto-publish>)</sup>.
-- A performance issue was traced to excessive `scrollHeight` recalculations; replacing it with a large constant resolved slowdowns <sup>[39](<https://shub.club/writings/2026/july/check-your-scrollheight/>)</sup>.
-- Building and shipping Mac/iOS apps without Xcode is feasible via command-line tools and automation scripts <sup>[40](<https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/>)</sup>.
-
-## Security and Vulnerabilities
-- Six new U-Boot flaws (BRLY-2026-037–042) allow arbitrary code execution or DoS via malicious FIT images, affecting 50+ releases and vendor firmware <sup>[41](<https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html>)</sup>.
-- Miggo discloses critical RabbitMQ vulnerabilities enabling full broker takeover or queue mapping without login; operators should upgrade and rotate OAuth secrets <sup>[42](<https://www.miggo.io/post/full-broker-takeover-no-login-required-miggo-discovers-critical-rabbitmq-vulnerabilities-putting-application-data-at-risk>)</sup>.
-- Attested TLS mechanisms in Meta WhatsApp, Edgeless Contrast, and Cocos AI are vulnerable to relay attacks (CVE-2026-33697), per formal analysis; vendors should verify binding to application traffic keys <sup>[43](<https://hackernoon.com/attested-tls-was-supposed-to-be-the-last-trust-boundary-it-isnt-formal-methods-show-how>)</sup>.
-- ModHeader browser extension (1.6M installs) removed by Google/Microsoft after dormant collector code for fingerprinting and domain exfiltration was discovered <sup>[44](<https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html>)</sup>.
-- CrashStealer macOS infostealer impersonates CrashReporter, steals keychain credentials via fake password prompts, and uses notarized droppers with AES-256-GCM encryption <sup>[45](<https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/>)</sup>.
-- CISA’s GitHub leak exposed AWS GovCloud admin keys and plaintext passwords for months; GitGuardian alerts went unanswered, and key rotation took >48 hours <sup>[46](<https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/>)</sup>.
-- Binarly researchers detail how EDR evasion techniques can be accelerated using LLMs (e.g., GPT-5.5-Cyber) for reverse engineering and emulation <sup>[47](<https://specterops.io/blog/2026/06/29/llm-powered-edr-analysis/>)</sup>.
+## Engineering Practices and Trends
+- The "Great Flattening" argues that AI shifts constraints from "can we build it?" to "can we identify what to build and sell it?", enabling faster shipping with fewer engineers and higher token spend <sup>[12](<https://x.com/myprasanna/status/2077065557204222238?s=12>)</sup>.
+- AI reduces friction in understanding project context, enabling code that works but may look unfamiliar, as it bypasses traditional human comprehension barriers <sup>[13](<https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/>)</sup>.
 
 ## Sources
 
-1. [How data science teams use ChatGPT Work](<https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex>) — _openai.com_
-2. [How sales teams use ChatGPT Work](<https://openai.com/academy/codex-for-work/how-sales-teams-use-codex>) — _openai.com_
-3. [\[AINews\] Codex usage up >10x in 6 months to 7M users, +1M in the past ~day; did Codex overtake Claude Code??](<https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months>) — _latent.space_
-4. [How to manage AI investments in the agentic era](<https://openai.com/index/managing-ai-investments-in-agentic-era>) — _openai.com_
-5. [Anthropic commits $10 million to Canadian AI research](<https://www.anthropic.com/news/canadian-ai-research>) — _anthropic news_
-6. [Introducing Claude for Teachers](<https://www.anthropic.com/news/claude-for-teachers>) — _anthropic news_
-7. [Better Call Sol The Workhorse](<https://thezvi.substack.com/p/better-call-sol-the-workhorse>) — _thezvi.substack.com_
-8. [Better Call Sol: The Workhorse](<https://thezvi.wordpress.com/2026/07/13/better-call-sol-the-workhorse/>) — _thezvi.wordpress.com_
-9. [The Same TypeScript Costs 73% More Tokens on Claude Than GPT](<https://playcode.io/blog/real-price-of-frontier-models>) — _playcode.io_
-10. [Apple's New Speech API vs Whisper: The First Real Benchmark](<https://get-inscribe.com/blog/apple-speech-api-benchmark.html>) — _get-inscribe.com_
-11. [Video Generators as General-Purpose Vision Models](<https://genception.github.io/>) — _genception.github.io_
-12. [Smart Cellular Bricks: Towards Collective Intelligence for the Physical World](<https://sakana.ai/smart-cellular-bricks/>) — _sakana.ai_
-13. [How Microsoft Ships Thousands of Production AI Agents](<https://blog.bytebytego.com/p/how-microsoft-ships-ai-agents-at>) — _blog.bytebytego.com_
-14. [Making Fable Cheaper Than Opus](<https://x.com/joon_h_lee/status/2076714221837173097>) — _x.com_
-15. [How I Cut an AI Agent's Token Use by 94%](<https://vivekhaldar.com/articles/compiling-an-ai-agent-skill/>) — _vivekhaldar.com_
-16. [What is “loop engineering?”](<https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering>) — _newsletter.pragmaticengineer.com_
-17. [Today, we are releasing verifiers v1](<https://threadreaderapp.com/thread/2076447247693402301.html>) — _threadreaderapp.com_
-18. [Testing Agents on Long-Horizon Terminal Work](<https://github.com/zli12321/LHTB>) — _github.com_
-19. [AI Engineer World&#8217;s Fair 2026: The Runtime Is Where Agent Trust Is Won](<https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/>) — _docker.com_
-20. [Mantis Skills: Portable Toolkit for Building Security Review Harnesses](<https://github.com/google/mantis>) — _github.com_
-21. [Engram](<https://github.com/Gentleman-Programming/engram>) — _github.com_
-22. [Clawk](<https://github.com/clawkwork/clawk>) — _github.com_
-23. [Code scanning shows AI security detections on pull requests](<https://github.blog/changelog/2026-07-14-code-scanning-shows-ai-security-detections-on-pull-requests>) — _github.blog_
-24. [Security reviews now available in the GitHub Copilot app](<https://github.blog/changelog/2026-07-14-security-reviews-now-available-in-the-github-copilot-app>) — _github.blog_
-25. [Dependabot version updates introduce default package cooldown](<https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown>) — _github.blog_
-26. [Manage secret scanning custom patterns via REST API](<https://github.blog/changelog/2026-07-13-create-and-manage-secret-scanning-custom-patterns-via-rest-api>) — _github.blog_
-27. [‘Ghostcommit' Hides Prompt Injection in Images to Fool AI Agents and Steal Secrets](<https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/>) — _bleepingcomputer.com_
-28. [What xAI Grok Build CLI actually sends to xAI](<https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547>) — _gist.github.com_
-29. [Apple's Lawsuit Threatens to Disrupt OpenAI's Bid to Rival the iPhone](<https://www.bloomberg.com/news/articles/2026-07-13/how-apple-s-lawsuit-threatens-to-disrupt-openai-s-bid-to-rival-the-iphone?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDAwMTAxOCwiZXhwIjoxNzg0NjA1ODE4LCJhcnRpY2xlSWQiOiJUSTE2U1lLSkg2VjUwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.EecxEySLVg6XxNkCZz6lTFSgJYFn2GzUACJwkZduPiI>) — _bloomberg.com_
-30. [GitHub Code Quality license estimate in public preview](<https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview>) — _github.blog_
-31. [Using uvx in GitHub Actions in a cache-friendly way](<https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything>) — _simonwillison.net_
-32. [lobste.rs is now running on SQLite](<https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything>) — _simonwillison.net_
-33. [datasette 1.0a37](<https://simonwillison.net/2026/Jul/14/datasette/#atom-everything>) — _simonwillison.net_
-34. [A broken DNSSEC rollover took down .AL. Now 1.1.1.1 tells you when validation is bypassed](<https://blog.cloudflare.com/dnssec-nta-ede-33/>) — _blog.cloudflare.com_
-35. [Cloudflare gives OpenAI network signals covering 20% of the web](<https://ppc.land/cloudflare-gives-openai-network-signals-covering-20-of-the-web/>) — _ppc.land_
-36. [WebMCP for Documentation](<https://workos.com/blog/webmcp-workos-docs>) — _workos.com_
-37. [Your Dropbox is now a skill server](<https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html>) — _sleuth-io.github.io_
-38. [Introducing Auto-Publish: Build Once, Ship Continuously](<https://manus.im/blog/manus-auto-publish>) — _manus.im_
-39. [Are you telling me a readonly property is wrecking my performance?](<https://shub.club/writings/2026/july/check-your-scrollheight/>) — _shub.club_
-40. [Building and Shipping Mac and iOS Apps Without Ever Opening Xcode](<https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/>) — _scottwillsey.com_
-41. [Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot](<https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html>) — _thehackernews.com_
-42. [Full Broker Takeover, No Login Required: Miggo Discovers Critical RabbitMQ Vulnerabilities Putting Application Data at Risk](<https://www.miggo.io/post/full-broker-takeover-no-login-required-miggo-discovers-critical-rabbitmq-vulnerabilities-putting-application-data-at-risk>) — _miggo.io_
-43. [Attested TLS Was Supposed to Be the Last Trust Boundary. It Isn't. Formal Methods Show How](<https://hackernoon.com/attested-tls-was-supposed-to-be-the-last-trust-boundary-it-isnt-formal-methods-show-how>) — _hackernoon.com_
-44. [Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found](<https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html>) — _thehackernews.com_
-45. [New CrashStealer Malware Poses as Apple Crash Reporting Tool](<https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/>) — _bleepingcomputer.com_
-46. [Lessons Learned from CISA's Recent GitHub Leak](<https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/>) — _krebsonsecurity.com_
-47. [Accelerating EDR Evasion with LLM-Driven Analysis](<https://specterops.io/blog/2026/06/29/llm-powered-edr-analysis/>) — _specterops.io_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-c72>) — _latent.space_
+2. [OpenAI's First Device Will Be Movable, Screenless Speaker Built as AI Companion](<https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDA4ODA1MCwiZXhwIjoxNzg0NjkyODUwLCJhcnRpY2xlSWQiOiJUSTYwSllUOU5KTFMwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9._rkU6NkgUQgHrF54hXy1eiYrgcs2CrxZHS4EwzYNRCI>) — _bloomberg.com_
+3. [OpenAI's new flagship model deletes files on its own, people keep warning](<https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/>) — _techcrunch.com_
+4. [5 Trends That Defined AI Engineering at World’s Fair 2026](<https://www.latent.space/p/aiewf26trends>) — _latent.space_
+5. [GitHub Copilot in Visual Studio — June update](<https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update>) — _github.blog_
+6. [GitHub Copilot for JetBrains expands BYOK capabilities](<https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities>) — _github.blog_
+7. [simonw/pedalican](<https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything>) — _simonwillison.net_
+8. [Apple in talks with startup that shrinks AI models to run on an iPhone](<https://www.cnbc.com/2026/07/14/apple-prismml-ai-compression-iphone.html>) — _cnbc.com_
+9. [Meta's Adam Mosseri says AI token budgets could soon be capped per engineer](<https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/>) — _techcrunch.com_
+10. [Quoting GitHub Changelog](<https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything>) — _simonwillison.net_
+11. [New York becomes first US state to impose AI data center ban](<https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html>) — _cnbc.com_
+12. [The Great Flattening](<https://x.com/myprasanna/status/2077065557204222238?s=12>) — _x.com_
+13. [The Tower Keeps Rising](<https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/>) — _lucumr.pocoo.org_
 
 
 ## Recent archive
