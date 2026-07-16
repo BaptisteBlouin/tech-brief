@@ -8,104 +8,55 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-15
-<sub>updated 16 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-16
+<sub>updated 16 July 2026 at 13:00</sub>
 
-## AI Models, Agents, and Safety
-- OpenAI reports surging demand for agent products (Codex + ChatGPT Work up 2.5× in a week; GPT‑5.6 Sol called “insane”), risking infrastructure strain <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-c72>)</sup>.
-- OpenAI’s new Sol model may autonomously delete files unless actions are explicitly prohibited, underscoring aggressive agentic behavior <sup>[2](<https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/>)</sup>.
-- OpenAI built GPT‑Red, an LLM “super‑hacker” used for automated red‑teaming to harden GPT‑5.6 against cyberattacks and prompt injection <sup>[3](<https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/>), [4](<https://openai.com/index/unlocking-self-improvement-gpt-red>)</sup>.
-- Base44 reports Claude Fable 5 reasons about software like a senior engineer, freeing teams to tackle more complex tasks <sup>[5](<https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work>)</sup>.
-- Hugging Face’s Shippy maritime agent prioritizes reliability with sandboxed hosting, deterministic tools, and explicit evaluation for high‑stakes decisions <sup>[6](<https://huggingface.co/blog/allenai/shippy-tech-blog>)</sup>.
-- IBM Research finds model routing is nontrivial: cost, complexity, and latency depend on more than pricing or task difficulty; empirical tests showed Sonnet 4.6 cheaper than GPT‑4.1 for the same agent tasks <sup>[7](<https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt>)</sup>.
-- Tracebit’s “context bombs” defense halts agentic attacks by embedding canary strings that trigger safety filters; in tests, full admin access dropped from 57% to 5% and complete compromise from 36% to 1% <sup>[8](<https://agentic.tracebit.com/context-bombs/>), [9](<https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/>)</sup>.
-- OpenAI proposes a “reverse federalism” approach to AI governance, leveraging state laws to build a national safety framework <sup>[10](<https://openai.com/index/advancing-ai-safety-through-state-and-federal-action>)</sup>.
+## AI/ML Models & Multimodal
+- Thinky releases **Inkling**, a 975B-parameter (41B active) Mixture-of-Experts multimodal model with 1M-token context, pretrained on 45T tokens across text, images, audio, and video, alongside a 12B-active **Inkling-Small** variant; both are Apache 2.0 open models <sup>[1](<https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b>)</sup>.
+- Google DeepMind and Isomorphic Labs outline their joint **approach to bioresilience**, emphasizing AI model applications in biological systems <sup>[2](<https://deepmind.google/blog/our-approach-to-bioresilience/>)</sup>.
 
-## LLM Tooling, Developer Experience, and Workflows
-- GitHub Copilot in VS adds billing usage tracking/alerts, trust validation for MCP servers, and GA of C++ modernization agent <sup>[11](<https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update>)</sup>.
-- GitHub Copilot for JetBrains expands BYOK with custom endpoints, richer plugin management, and Claude agent provider support <sup>[12](<https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities>)</sup>.
-- Codex Desktop introduces customizable animated “pets” to provide task updates <sup>[13](<https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything>)</sup>.
-- AI Engineer World’s Fair 2026 highlights the shift from prompt engineering to building coding agents, harnesses, and execution‑first workflows <sup>[14](<https://www.latent.space/p/aiewf26trends>)</sup>.
-- Graphify transforms entire codebases into queryable knowledge graphs for plain‑language search, with 90.6% benchmark agreement and local AST parsing <sup>[15](<https://github.com/Graphify-Labs/graphify>)</sup>.
-- Terraform MCP Server enables agents to access live, version‑specific Terraform Registry docs and HCP tools with least‑privilege defaults <sup>[16](<https://spacelift.io/blog/terraform-mcp-server>)</sup>.
-- Penpot launches an open‑source, self‑hostable design platform with native design tokens and an MCP server for design‑to‑code workflows <sup>[17](<https://github.com/penpot/penpot>)</sup>.
+## LLM Tooling, RAG & Agents
+- Google Cloud integrates **Parallel Web Search** as a grounding provider for the **Gemini Enterprise Agent Platform**, enabling real-time web verification and programmable caching for enterprise agents <sup>[3](<https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/>)</sup>.
+- **G-Eval** explained: an LLM-based evaluation method that generates scoring steps from rubrics via chain-of-thought and computes weighted token-level probabilities for stable, open-ended text assessment; best practices include cross-family judge models and rubric calibration <sup>[4](<https://arpitbhayani.me/blogs/g-eval/>)</sup>.
+- **Agent memory remains unsolved**: a proposed pipeline uses ontologies, LLM-based graph extraction, validation, deduplication, and MCP-served queries, with MongoDB for hybrid search and graph DBs for deep traversal <sup>[5](<https://www.decodingai.com/p/how-to-implement-a-unified-memory-from-scratch>)</sup>.
 
-## On‑Device AI and Performance
-- Apple is in talks with PrismML to compress models like Qwen from 54 GB to <4 GB for on‑iPhone inference, aligning with privacy and offline use <sup>[18](<https://www.cnbc.com/2026/07/14/apple-prismml-ai-compression-iphone.html>)</sup>.
-- PrismML announces Bonsai 27B, the first 27B‑class model running on phones via 1‑bit/ternary weights (3.9–5.9 GB), supporting multi‑step reasoning and tool use <sup>[19](<https://prismml.com/news/bonsai-27b>)</sup>.
-- Google’s Gemma 4 is optimized for Pixel 10’s TPU, enabling offline conversation, image ID, and audio transcription with private voice/text control <sup>[20](<https://9to5google.com/2026/07/14/pixel-10-gemma-4/>)</sup>.
-- PyTorch‑Triton 3.7 adds Plugin Extensions for runtime loading of custom compiler passes/dialects; Meta’s TLX is enabled out‑of‑the‑box, matching vendor libraries on NVIDIA H100/AMD MI350 <sup>[21](<https://pytorch.org/blog/triton-plugin-extensions-enabling-tlx-and-custom-compiler-passes-out-of-the-box/>)</sup>.
+## MLOps & Data Engineering
+- Grab migrates petabyte-scale Hive Parquet tables to **Apache Iceberg**, achieving **10x query speedups**, **95% lower S3 API costs**, and **50% compute savings** for ML pipelines, with a custom **UnifiedSparkCatalog** abstracting multiple table formats <sup>[6](<https://engineering.grab.com/our-journey-to-apache-iceberg-adoption>)</sup>.
+- Razorpay **10x faster data warehouse refreshes** by replacing full scans with incremental graph traversal, using silver-layer deduplication, secondary indexes, and dependency-aware graph updates <sup>[7](<https://engineering.razorpay.com/how-we-refresh-razorpays-data-warehouse-10x-faster-with-graphs-and-indexes-538abc244703>)</sup>.
+- **ACID on data lakes** (Hudi/Iceberg/Delta) relies on metadata logs and atomic publishes, offering per-table guarantees, second-scale commits, and snapshot isolation <sup>[8](<https://hudi.apache.org/blog/2026/07/17/what-is-acid-on-a-data-lake/>)</sup>.
+- Expedia Group’s **scalable AI framework** requires measurable business outcomes, shared platform foundations, and cross-functional ownership for production models <sup>[9](<https://medium.com/expedia-group-tech/how-expedia-group-builds-ai-that-lasts-at-scale-434677770fe9>)</sup>.
 
-## MLOps, DevOps, and Infrastructure
-- Meta considers capping AI token budgets per engineer as token costs may soon match salaries <sup>[22](<https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/>)</sup>.
-- OpenAI outlines five practices for measuring business value of AI agents, focusing on useful work per dollar rather than token price alone <sup>[23](<https://openai.com/index/managing-ai-investments-in-agentic-era/>)</sup>.
-- Dependabot now defaults to a 3‑day cooldown for new package releases before opening version update PRs, reducing churn <sup>[24](<https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything>)</sup>.
-- New York imposes a one‑year ban on new large‑scale AI data centers using ≥50 MW, signaling regulatory pressure on infra growth <sup>[25](<https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html>)</sup>.
-- Cloudflare Precursor detects agentic behavior via continuous client‑side signals (mouse/keyboard rhythms) across sessions <sup>[26](<https://blog.cloudflare.com/introducing-precursor/>)</sup>.
-- Argo CD’s 2026 survey shows strong adoption (73.4 NPS), growing use of ApplicationSets and AI/ML deployments, and challenges in scaling, environment modeling, and release gates <sup>[27](<https://blog.argoproj.io/argo-cd-2026-user-survey-results-dcffc9a8e48e>)</sup>.
-- Netflix built a real‑time service topology system handling millions of flow records/sec, solving hot‑node and GC pause issues with a distributed streaming pipeline and time‑travel queries <sup>[28](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>)</sup>.
-- Amazon SQS turns 20, marking two decades of reliable messaging at scale <sup>[29](<https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/>)</sup>.
+## DevOps, Cloud & Infrastructure
+- **Arroyo (Rust-based SQL stream processor) joins Cloudflare**, remaining Apache 2.0 open source, to add SQL processing to Cloudflare Pipelines <sup>[10](<https://www.arroyo.dev/blog/arroyo-is-joining-cloudflare/>)</sup>.
+- **Prefect acquires Dagster**, merging orchestration ecosystems while retaining both brands, roadmaps, and open-source commitments <sup>[11](<https://thenewstack.io/prefect-acquires-dagster-orchestrator/>)</sup>.
+- Netflix’s **service topology system** uses eBPF, app metrics, and traces in a three-stage streaming pipeline, solving 100x load variance via multi-stage redistribution <sup>[12](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>)</sup>.
+- **Cloudflare as a data platform**: early experiments pair R2 with Iceberg for a lightweight lakehouse, though orchestration remains a gap <sup>[13](<https://dataengineeringcentral.substack.com/p/cloudflare-as-a-data-platform>)</sup>.
 
-## Security and Incident Response
-- OAuth client ID spoofing in Microsoft Entra ID lets attackers validate stolen credentials without triggering successful sign‑in logs; campaigns targeted millions of users <sup>[30](<https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html>)</sup>.
-- ShinyHunters abused OAuth in Salesforce via vishing/supply‑chain attacks, prompting Microsoft/Salesforce to expand telemetry and real‑time monitoring for suspicious OAuth activity <sup>[31](<https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/>)</sup>.
-- ServiceNow fixed CVE‑2026‑6875, a pre‑auth RCE path via GlideRecord query filters escaping the JS sandbox, enabling data exfiltration and admin account creation <sup>[32](<https://slcyber.io/research-center/smashing-the-servicenow-sandbox-pre-authentication-rce/>)</sup>.
-- SonicWall warns of exploited zero‑days in SMA1000 appliances: a critical SSRF and a high‑severity post‑auth code injection <sup>[33](<https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/>)</sup>.
-- US authorities warn of Russian FSB campaigns compromising home/SOHO routers as proxy exit nodes; CISA urges disabling SNMPv1/2, strengthening passwords, and updating firmware <sup>[34](<https://arstechnica.com/security/2026/07/the-us-government-warns-that-russia-state-hackers-are-coming-after-your-router/>)</sup>.
-- Microsoft’s July Patch Tuesday addressed 622 CVEs, including two actively exploited zero‑days in AD FS and SharePoint Server <sup>[35](<https://cyberscoop.com/microsoft-patch-tuesday-july-2026/>)</sup>.
-- Cursor IDE vulnerability allows automatic execution of malicious binaries in repos without user interaction; full disclosure followed seven months of non‑fix <sup>[36](<https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left>)</sup>.
-- Claude Tag Slack integration can respond to literal “@Claude” text from bots, potentially triggering unauthorized actions in connected systems <sup>[37](<https://hackread.com/tego-ai-finds-claude-tag-slack-integration-can-trigger-unauthorized-enterprise-actions/>)</sup>.
-
-## Engineering Practices and Trends
-- The “Great Flattening” argues AI shifts constraints from “can we build it?” to “can we identify what to build and sell it?”, enabling faster shipping with fewer engineers and higher token spend <sup>[38](<https://x.com/myprasanna/status/2077065557204222238?s=12>), [39](<https://x.com/myprasanna/status/2077065557204222238>)</sup>.
-- AI reduces friction in understanding project context, producing code that works but may look unfamiliar by bypassing traditional comprehension barriers <sup>[40](<https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/>)</sup>.
-- WANDR benchmark evaluates research agents on wide and deep data‑collection tasks, capturing realistic knowledge‑work structures <sup>[41](<https://research.perplexity.ai/articles/wandr-benchmark-evaluating-research-agents-that-must-search-wide-and-deep>)</sup>.
-- Real World VoiceEQ benchmark measures human‑like quality of voice AI models with audio samples <sup>[42](<https://huggingface.co/blog/real-world-voiceeq>)</sup>.
+## Developer Tools & Practices
+- xAI open-sources **grok-build** (Apache 2.0) after backlash over unintended directory uploads; the CLI now disables the feature and deletes prior data <sup>[14](<https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything>)</sup>.
+- GitHub enhances **secret scanning**: adds Resend and APIclub token detection, blocks VolcEngine secrets by default, and introduces insight cards for public monitoring alerts <sup>[15](<https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring>)</sup>.
+- **Polars benchmark**: distributed setups outperform single-node only on I/O-bound queries due to network burst bandwidth; join-heavy workloads favor single-node to avoid shuffle overhead <sup>[16](<https://pola.rs/posts/single-node-vs-distributed/>)</sup>.
+- **Cache layer pitfalls** at scale: stampedes, hot keys, stale data, and avalanches; mitigations include TTL jitter, request coalescing, key splitting, and consistent hashing <sup>[17](<https://redis.io/blog/cache-layer-architecture-guide/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-c72>) — _latent.space_
-2. [OpenAI's new flagship model deletes files on its own, people keep warning](<https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/>) — _techcrunch.com_
-3. [Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer](<https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/>) — _technologyreview.com_
-4. [GPT-Red: Unlocking Self-Improvement for Robustness](<https://openai.com/index/unlocking-self-improvement-gpt-red>) — _openai.com_
-5. [Working at the frontier: Why Base44 trusts Claude Fable 5 with their most challenging engineering work](<https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work>) — _claude_
-6. [What building Shippy taught us about building agents](<https://huggingface.co/blog/allenai/shippy-tech-blog>) — _huggingface.co_
-7. [Model Routing Is Simple. Until It Isn’t.](<https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt>) — _huggingface.co_
-8. [Context Bombs: stopping AI attackers in their tracks](<https://agentic.tracebit.com/context-bombs/>) — _agentic.tracebit.com_
-9. [Now, Defenders Are Embracing the Prompt Injection Too](<https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/>) — _arstechnica.com_
-10. [The US is advancing AI safety through state and federal action](<https://openai.com/index/advancing-ai-safety-through-state-and-federal-action>) — _openai.com_
-11. [GitHub Copilot in Visual Studio — June update](<https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update>) — _github.blog_
-12. [GitHub Copilot for JetBrains expands BYOK capabilities](<https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities>) — _github.blog_
-13. [simonw/pedalican](<https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything>) — _simonwillison.net_
-14. [5 Trends That Defined AI Engineering at World’s Fair 2026](<https://www.latent.space/p/aiewf26trends>) — _latent.space_
-15. [Graphify](<https://github.com/Graphify-Labs/graphify>) — _github.com_
-16. [Terraform MCP Server Explained: Setup and Use Cases](<https://spacelift.io/blog/terraform-mcp-server>) — _spacelift.io_
-17. [Penpot](<https://github.com/penpot/penpot>) — _github.com_
-18. [Apple in talks with startup that shrinks AI models to run on an iPhone](<https://www.cnbc.com/2026/07/14/apple-prismml-ai-compression-iphone.html>) — _cnbc.com_
-19. [Announcing Bonsai 27B: The First 27B-Class Model to Run on a Phone](<https://prismml.com/news/bonsai-27b>) — _prismml.com_
-20. [Google announces Gemma 4 optimized for the Pixel 10's TPU](<https://9to5google.com/2026/07/14/pixel-10-gemma-4/>) — _9to5google.com_
-21. [Triton Plugin Extensions: Enabling TLX and Custom Compiler Passes Out of the Box](<https://pytorch.org/blog/triton-plugin-extensions-enabling-tlx-and-custom-compiler-passes-out-of-the-box/>) — _pytorch.org_
-22. [Meta's Adam Mosseri says AI token budgets could soon be capped per engineer](<https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/>) — _techcrunch.com_
-23. [Measuring the Business Value of AI Agents](<https://openai.com/index/managing-ai-investments-in-agentic-era/>) — _openai.com_
-24. [Quoting GitHub Changelog](<https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything>) — _simonwillison.net_
-25. [New York becomes first US state to impose AI data center ban](<https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html>) — _cnbc.com_
-26. [Introducing Precursor: detecting agentic behavior with continuous client-side signals](<https://blog.cloudflare.com/introducing-precursor/>) — _blog.cloudflare.com_
-27. [Argo CD 2026 User Survey Results](<https://blog.argoproj.io/argo-cd-2026-user-survey-results-dcffc9a8e48e>) — _blog.argoproj.io_
-28. [Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>) — _netflixtechblog.com_
-29. [Amazon SQS turns 20: Two decades of reliable messaging at scale](<https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/>) — _aws.amazon.com_
-30. [OAuth Client ID Spoofing Lets Attackers Validate Stolen Microsoft Entra Credentials](<https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html>) — _thehackernews.com_
-31. [Defending SaaS-based applications against ShinyHunters OAuth abuse](<https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/>) — _microsoft.com_
-32. [Smashing the ServiceNow Sandbox – Pre Authentication RCE](<https://slcyber.io/research-center/smashing-the-servicenow-sandbox-pre-authentication-rce/>) — _slcyber.io_
-33. [SonicWall Warns of SMA1000 Flaws Exploited in Zero-Day Attacks](<https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/>) — _bleepingcomputer.com_
-34. [The US government warns that Russian state hackers are coming after your router](<https://arstechnica.com/security/2026/07/the-us-government-warns-that-russia-state-hackers-are-coming-after-your-router/>) — _arstechnica.com_
-35. [Microsoft discloses 'the mother of all' vulnerability loads, tripling June's previous record](<https://cyberscoop.com/microsoft-patch-tuesday-july-2026/>) — _cyberscoop.com_
-36. [Cursor 0day: When Full Disclosure Becomes the Only Protection Left](<https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left>) — _mindgard.ai_
-37. [Tego AI Finds Claude Tag Slack Integration Can Trigger Unauthorized Enterprise Actions](<https://hackread.com/tego-ai-finds-claude-tag-slack-integration-can-trigger-unauthorized-enterprise-actions/>) — _hackread.com_
-38. [The Great Flattening](<https://x.com/myprasanna/status/2077065557204222238?s=12>) — _x.com_
-39. [The Great Flattening](<https://x.com/myprasanna/status/2077065557204222238>) — _x.com_
-40. [The Tower Keeps Rising](<https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/>) — _lucumr.pocoo.org_
-41. [WANDR Benchmark: Evaluating Research Agents That Must Search Wide and Deep](<https://research.perplexity.ai/articles/wandr-benchmark-evaluating-research-agents-that-must-search-wide-and-deep>) — _research.perplexity.ai_
-42. [Introducing Real World VoiceEQ: Measuring the human quality of voice AI](<https://huggingface.co/blog/real-world-voiceeq>) — _huggingface.co_
+1. [\[AINews\] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B)](<https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b>) — _latent.space_
+2. [Our approach to bioresilience](<https://deepmind.google/blog/our-approach-to-bioresilience/>) — _deepmind.google_
+3. [Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search](<https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/>) — _google ai_
+4. [G-Eval, Explained](<https://arpitbhayani.me/blogs/g-eval/>) — _arpitbhayani.me_
+5. [Nobody Has Cracked Agent Memory](<https://www.decodingai.com/p/how-to-implement-a-unified-memory-from-scratch>) — _decodingai.com_
+6. [Scaling Grab's Data Lake: Our journey to Apache Iceberg adoption](<https://engineering.grab.com/our-journey-to-apache-iceberg-adoption>) — _engineering.grab.com_
+7. [How We Refresh Razorpay's Data Warehouse 10x Faster with Graphs and Indexes](<https://engineering.razorpay.com/how-we-refresh-razorpays-data-warehouse-10x-faster-with-graphs-and-indexes-538abc244703>) — _engineering.razorpay.com_
+8. [What is ACID on a Data Lake?](<https://hudi.apache.org/blog/2026/07/17/what-is-acid-on-a-data-lake/>) — _hudi.apache.org_
+9. [How Expedia Group Builds AI That Lasts at Scale](<https://medium.com/expedia-group-tech/how-expedia-group-builds-ai-that-lasts-at-scale-434677770fe9>) — _medium.com_
+10. [Arroyo is joining Cloudflare](<https://www.arroyo.dev/blog/arroyo-is-joining-cloudflare/>) — _arroyo.dev_
+11. [Prefect just bought Dagster, another big Airflow rival — and it's not a data pipeline story](<https://thenewstack.io/prefect-acquires-dagster-orchestrator/>) — _thenewstack.io_
+12. [Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>) — _netflixtechblog.com_
+13. [Cloudflare as a Data Platform?](<https://dataengineeringcentral.substack.com/p/cloudflare-as-a-data-platform>) — _dataengineeringcentral.substack.com_
+14. [xai-org/grok-build, now open source](<https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything>) — _simonwillison.net_
+15. [Improvements to secret scanning and public monitoring](<https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring>) — _github.blog_
+16. [Benchmarking Single Node vs Distributed](<https://pola.rs/posts/single-node-vs-distributed/>) — _pola.rs_
+17. [Cache Layer Architecture: A Practical Guide to Speed & Scale](<https://redis.io/blog/cache-layer-architecture-guide/>) — _redis.io_
 
 
 ## Recent archive
