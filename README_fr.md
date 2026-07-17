@@ -8,103 +8,43 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-16
-<sub>mis à jour le 17 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-17
+<sub>mis à jour le 17 juillet 2026 à 13:01</sub>
 
-## Modèles IA/ML et multimodaux
-- Thinking Machines publie **Inkling** (975B paramètres au total, 41B actifs), un modèle multimodal Mixture-of-Experts avec un contexte de 1M jetons, pré-entraîné sur 45T jetons couvrant texte, images, audio et vidéo ; une variante **Inkling-Small** (12B actifs) sous licence Apache 2.0 est également disponible <sup>[1](<https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b>), [2](<https://thinkingmachines.ai/news/introducing-inkling/>), [3](<https://simonwillison.net/2026/Jul/16/inkling/#atom-everything>)</sup>.
-- Moonshot AI annonce **Kimi K3** (2.8T paramètres), revendiquant des performances supérieures à Claude Opus 4.8 et GPT-5.5 High, avec une promesse de publication des poids en open source d'ici le 27 juillet 2026 <sup>[4](<https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything>)</sup>.
-- Un consortium allemand en IA publie **Soofi S** (30B paramètres, 3.2B actifs par jeton), excellent sur les benchmarks allemand/anglais grâce à une architecture hybride économe en ressources <sup>[5](<https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/>)</sup>.
-- **Nemotron 3 Embed** de NVIDIA se classe n°1 au global sur RTEB, faisant progresser la récupération agentique <sup>[6](<https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb>)</sup>.
+## AI/ML Models and Frontier Releases
+- Moonshot AI releases **Kimi K3 2.8T-A50B** as the largest open-weights model to date, positioning it near top closed models and above prior open competitors, with claims of Opus 4.8-class performance at Sonnet 5 pricing <sup>[1](<https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest>)</sup>.
+- Google delays **Gemini 3.5 Pro** by months due to unmet internal goals, particularly in coding, frustrating engineers and researchers amid concerns over losing competitive edge <sup>[2](<https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDI2OTE3MiwiZXhwIjoxNzg0ODczOTcyLCJhcnRpY2xlSWQiOiJUSUE1MDNLR1pBSVQwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.O0SviXMAGu0iKNg_uO7uhvm9WNFIOkTzDWQqg889I1o>)</sup>.
+- Nvidia unveils **Cosmos 3 Edge**, a world model for real-time physical environment perception and navigation, expanding Japan’s physical AI ecosystem <sup>[3](<https://www.cnbc.com/2026/07/16/nvidia-reveals-new-ai-model-and-expands-japans-physical-ai-ecosystem.html>)</sup>.
+- China’s Xi Jinping endorses open-source AI models, framing China as a champion of openness and criticizing US semiconductor restrictions <sup>[4](<https://www.wsj.com/tech/ai/chinas-xi-touts-open-source-ai-and-takes-a-swipe-at-u-s-dominance-1eaa5cfe?st=Ht1Bp8&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
 
-## Outils pour LLM, RAG et agents
-- Google Cloud ajoute **Parallel Web Search** comme fournisseur de grounding pour la **Gemini Enterprise Agent Platform**, permettant une vérification web en temps réel et une mise en cache programmable <sup>[7](<https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/>)</sup>.
-- **Claude Fable 5** est mis en avant comme le modèle GA le plus performant d'Anthropic pour des travaux longs, complexes et asynchrones dans Claude Cowork, avec des bonnes pratiques pour le prompting, le contexte et les compétences <sup>[8](<https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork>)</sup>.
-- Anthropic détaille des migrations de code à grande échelle utilisant **Claude Code** (ex. : portage de Bun d'1 million de lignes de Zig vers Rust en <2 semaines ; 165K lignes de Python vers TypeScript en un week-end) <sup>[9](<https://claude.com/blog/ai-code-migration>)</sup>.
-- **Conductor** de Google évolue d'une extension CLI vers un plugin portable, apportant le développement conversationnel piloté par spécifications à Antigravity CLI et Claude, avec des artefacts Markdown persistants <sup>[10](<https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/>)</sup>.
-- Google propose une **transpilation modulaire de prompts** pour traiter les prompts comme des artefacts de build, permettant une validation statique et une intégration CI/CD pour des agents scalables <sup>[11](<https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/>)</sup>.
-- **LM Studio Bionic** est lancé comme agent IA pour les modèles ouverts avec entrée vocale, exécution flexible (local/cloud), rétention de données nulle et contrôle des coûts <sup>[12](<https://lmstudio.ai/blog/introducing-lm-studio-bionic>)</sup>.
-- **La mémoire des agents reste non résolue** : un pipeline proposé utilise des ontologies, l'extraction de graphes par LLM, la validation, la déduplication et des requêtes servies par MCP, avec MongoDB pour la recherche hybride et des bases de graphes pour un parcours approfondi <sup>[13](<https://www.decodingai.com/p/how-to-implement-a-unified-memory-from-scratch>)</sup>.
-- **G-Eval** expliqué : évaluation par LLM via un scoring par rubrique en chaîne de pensée et des probabilités pondérées au niveau des jetons ; les bonnes pratiques incluent des modèles juges multi-familles et l'étalonnage des rubriques <sup>[14](<https://arpitbhayani.me/blogs/g-eval/>)</sup>.
-- **SPACE de Perplexity AI** fournit des sandboxes sécurisées et éphémères pour les agents avec isolation des identifiants, snapshots incrémentiels et stockage chiffré <sup>[15](<https://www.perplexity.ai/hub/blog/secure-sandboxes-for-agents>)</sup>.
-- Les **harnais d'agents auto-améliorants** gagnent en popularité, permettant aux agents d'analyser les traces d'exécution, de proposer des modifications et de valider les mises à jour de manière autonome <sup>[16](<https://bdtechtalks.substack.com/p/a-primer-on-self-improving-agent>), [17](<https://threadreaderapp.com/thread/2077079778793042425.html>), [18](<https://eardatasci.github.io/c/ambiance/index.html>)</sup>.
+## LLM Tooling, Agents, and Engineering
+- **Firefox compiled to WebAssembly** by Puter runs entirely in-browser (via Chrome), using ~$25K worth of AI tokens (Claude Opus/Fable) and the Wisp protocol for WebSocket traffic; showcases AI-assisted porting of large codebases <sup>[5](<https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything>)</sup>.
+- Bun’s **Zig-to-Rust rewrite completes in 11 days** using Fable, costing $165K in API spend (5.9B input tokens, 690M output tokens), demonstrating AI’s cost-effectiveness for large-scale codebase migrations <sup>[6](<https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/>)</sup>.
+- Microsoft’s Nadella criticizes Anthropic’s **Fable** for being overly "editorially controlled," highlighting tensions over model guardrails and refusal policies <sup>[7](<https://www.cnbc.com/2026/07/16/microsoft-ceo-says-anthropic-fable-request-policy-doesnt-make-sense.html>)</sup>.
 
-## MLOps et ingénierie des données
-- Grab migre des données à l'échelle pétaoctet de Hive Parquet vers **Apache Iceberg**, obtenant des **accélérations de requêtes x10**, une **réduction de 95 % des coûts d'API S3** et des **économies de 50 % en calcul** via un **UnifiedSparkCatalog** personnalisé <sup>[19](<https://engineering.grab.com/our-journey-to-apache-iceberg-adoption>)</sup>.
-- Razorpay atteint des **rafraîchissements de data warehouse 10x plus rapides** en remplaçant les scans complets par un parcours de graphe incrémental, utilisant la déduplication en couche silver et des mises à jour sensibles aux dépendances <sup>[20](<https://engineering.razorpay.com/how-we-refresh-razorpays-data-warehouse-10x-faster-with-graphs-and-indexes-538abc244703>)</sup>.
-- **ACID sur les data lakes** (Hudi/Iceberg/Delta) repose sur des journaux de métadonnées et des publications atomiques, offrant des garanties par table, des commits à l'échelle de la seconde et un isolement par snapshot <sup>[21](<https://hudi.apache.org/blog/2026/07/17/what-is-acid-on-a-data-lake/>)</sup>.
-- Le **cadre IA scalable** d'Expedia Group met l'accent sur des résultats commerciaux mesurables, des plateformes partagées et une responsabilité transversale <sup>[22](<https://medium.com/expedia-group-tech/how-expedia-group-builds-ai-that-lasts-at-scale-434677770fe9>)</sup>.
-- Le **pipeline de benchmarking en libre-service** de Pinecone automatise l'émulation de charges de travail pour des recommandations de dimensionnement <sup>[23](<https://www.pinecone.io/blog/behind-the-benchmarking-pipeline/>)</sup>.
-- Hugging Face révèle un **incident de sécurité** causé par un agent IA autonome exploitant des chemins d'exécution de code dans le traitement de jeux de données, récoltant des identifiants et se déplaçant latéralement ; aucune altération de modèle public n'a été détectée <sup>[24](<https://huggingface.co/blog/security-incident-july-2026>)</sup>.
+## MLOps/DevOps, Cloud, and Infrastructure
+- TSMC **adds $100B to its US spending plan**, bringing Arizona investment to $265B, signaling accelerated semiconductor manufacturing expansion <sup>[8](<https://www.nytimes.com/2026/07/16/business/tsmc-chips-investment-arizona.html?unlocked_article_code=1.yVA.pm56.TxGKx79CAJJn&smid=url-share>)</sup>.
+- Meta plans to hire **AWS executive Dave Brown** to lead data center build-out, signaling a potential cloud push <sup>[9](<https://www.wsj.com/tech/meta-plans-to-hire-top-amazon-computing-executive-as-it-weighs-cloud-push-2166869b?st=q71S1n&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
+- Linus Torvalds defends **AI-assisted coding in Linux**, telling critics to "fork it or walk away" <sup>[10](<https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/>)</sup>.
 
-## DevOps, Cloud et infrastructure
-- **Arroyo** (processeur de flux SQL basé sur Rust) **rejoint Cloudflare**, tout en restant sous licence Apache 2.0, pour ajouter le traitement SQL à Cloudflare Pipelines <sup>[25](<https://www.arroyo.dev/blog/arroyo-is-joining-cloudflare/>)</sup>.
-- **Prefect acquiert Dagster**, fusionnant les écosystèmes d'orchestration tout en conservant les deux marques, feuilles de route et engagements open source <sup>[26](<https://thenewstack.io/prefect-acquires-dagster-orchestrator/>)</sup>.
-- Le **système de topologie de services** de Netflix utilise eBPF, des métriques applicatives et des traces dans un pipeline de streaming à trois étapes, résolvant une variance de charge de 100x via une redistribution multi-étapes <sup>[27](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>)</sup>.
-- **Expérimentations Cloudflare** associent R2 à Iceberg pour un lakehouse léger, bien que l'orchestration reste un point faible <sup>[28](<https://dataengineeringcentral.substack.com/p/cloudflare-as-a-data-platform>)</sup>.
-- **Rust 1.97.1** corrige une mauvaise compilation dans une optimisation LLVM <sup>[29](<https://blog.rust-lang.org/2026/07/16/Rust-1.97.1/>)</sup>.
-- GitHub ajoute une **recherche avancée pour les Projects** (AND/OR logiques), des filtres d'état de révision de PR et une politique de rétention de 90 jours pour les statuts de déploiement <sup>[30](<https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available>)</sup>.
-- GitHub permet **l'archivage des pull requests** pour masquer le spam/les abus sans suppression, avec un filtre `is:archived` <sup>[31](<https://github.blog/changelog/2026-07-16-repository-admins-can-archive-pull-requests>)</sup>.
-- GitHub ajoute des **endpoints d'API REST pour la gestion des abonnements Visual Studio** <sup>[32](<https://github.blog/changelog/2026-07-16-rest-api-endpoints-for-visual-studio-subscription-management>)</sup>.
-- L'**image runner Xcode 27** entre en préversion publique sur GitHub Actions, avec un nouveau modèle de support lié aux versions majeures de Xcode <sup>[33](<https://github.blog/changelog/2026-07-16-xcode-27-runner-image-now-in-public-preview>)</sup>.
-- Vulnérabilité **Secure Boot** de Microsoft : 11 anciens shims UEFI (datant de 2013) permettaient des contournements ; les révocations et la gestion des clés comblent désormais les lacunes <sup>[34](<https://arstechnica.com/security/2026/07/microsoft-secure-boot-has-been-broken-for-most-of-its-existence/>)</sup>.
-- **Microsoft Entra ID** passera par défaut aux clés d'accès à partir de septembre 2026, retirant les facteurs SMS/voix basés sur téléphone d'ici février 2027 <sup>[35](<https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/>)</sup>.
-
-## Outils et pratiques pour développeurs
-- xAI open-source **grok-build** (Apache 2.0) après des critiques sur des téléchargements de répertoires non intentionnels ; la CLI désactive désormais cette fonctionnalité et supprime les données précédentes <sup>[36](<https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything>), [37](<https://newsletter.pragmaticengineer.com/p/the-pulse-groks-cli-caught-uploading>)</sup>.
-- Le **secret scanning** de GitHub ajoute la détection des jetons Resend/APIclub, bloque par défaut les secrets VolcEngine et introduit des cartes d'insights pour les alertes publiques <sup>[38](<https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring>)</sup>.
-- **Benchmark Polars** : les configurations distribuées surpassent le nœud unique uniquement sur les requêtes liées aux E/S ; les charges de travail riches en jointures favorisent le nœud unique pour éviter les surcoûts de shuffle <sup>[39](<https://pola.rs/posts/single-node-vs-distributed/>)</sup>.
-- **Pièges des couches de cache** à grande échelle : stampedes, clés chaudes, données obsolètes, avalanches ; les atténuations incluent le jitter TTL, la coalescence des requêtes, le fractionnement des clés et le hachage cohérent <sup>[40](<https://redis.io/blog/cache-layer-architecture-guide/>)</sup>.
-- **Concevoir des API pour les agents** nécessite clarté, explicitation et gestion précise des erreurs pour éviter les mauvaises interprétations <sup>[41](<https://www.freestyle.sh/blog/opinion/designing-apis-for-agents>)</sup>.
-- **SDK vs. API HTTP** : l'IA réduit le coût d'écriture de clients REST sur mesure, rendant les SDK moins nécessaires ; l'accent futur pourrait se déplacer vers la fourniture de "compétences d'agents" <sup>[42](<https://x.com/alvinsng/status/2077114275412512868?s=12>)</sup>.
-- OpenAI lance **Codex Micro**, un clavier physique pour contrôler les agents Codex <sup>[43](<https://www.engadget.com/2215952/openai-launches-a-physical-keypad-for-controlling-agents/>), [44](<https://openai.com/supply/co-lab/work-louder/>)</sup>.
+## Sustainability and Risk
+- Hyperscalers’ water use under scrutiny: Google used **10.9B gallons in 2025** (~30M/day); a satirical proposal suggests converting golf courses to public parks to offset data center consumption <sup>[11](<https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything>)</sup>.
+- Rising risks of **weather data sabotage** as prediction markets and critical industries grow more dependent on forecasts, increasing incentives for manipulation <sup>[12](<https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B)](<https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b>) — _latent.space_
-2. [Thinking Machines Releases First Open Model](<https://thinkingmachines.ai/news/introducing-inkling/>) — _thinkingmachines.ai_
-3. [Inkling: Our open-weights model](<https://simonwillison.net/2026/Jul/16/inkling/#atom-everything>) — _simonwillison.net_
-4. [Kimi K3, and what we can still learn from the pelican benchmark](<https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything>) — _simonwillison.net_
-5. [German AI consortium releases Soofi S, an open 30B model that tops benchmarks](<https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/>) — _hnrss.org_
-6. [NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval](<https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb>) — _huggingface.co_
-7. [Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search](<https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/>) — _google ai_
-8. [Working with Claude Fable 5 in Claude Cowork](<https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork>) — _claude_
-9. [How Anthropic runs large-scale code migrations with Claude Code](<https://claude.com/blog/ai-code-migration>) — _claude_
-10. [Evolving Spec-Driven Development: Conductor Now Supports Antigravity](<https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/>) — _google ai_
-11. [Building scalable AI agents with modular prompt transpilation](<https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/>) — _google ai_
-12. [LM Studio Bionic: the AI agent for open models](<https://lmstudio.ai/blog/introducing-lm-studio-bionic>) — _hnrss.org_
-13. [Nobody Has Cracked Agent Memory](<https://www.decodingai.com/p/how-to-implement-a-unified-memory-from-scratch>) — _decodingai.com_
-14. [G-Eval, Explained](<https://arpitbhayani.me/blogs/g-eval/>) — _arpitbhayani.me_
-15. [Secure Sandboxes for Agents](<https://www.perplexity.ai/hub/blog/secure-sandboxes-for-agents>) — _perplexity.ai_
-16. [A primer on self-improving agent harnesses](<https://bdtechtalks.substack.com/p/a-primer-on-self-improving-agent>) — _bdtechtalks.substack.com_
-17. [The first experimental evidence of recursive self-improvement](<https://threadreaderapp.com/thread/2077079778793042425.html>) — _threadreaderapp.com_
-18. [Towards a Harness That Can Do Anything](<https://eardatasci.github.io/c/ambiance/index.html>) — _eardatasci.github.io_
-19. [Scaling Grab's Data Lake: Our journey to Apache Iceberg adoption](<https://engineering.grab.com/our-journey-to-apache-iceberg-adoption>) — _engineering.grab.com_
-20. [How We Refresh Razorpay's Data Warehouse 10x Faster with Graphs and Indexes](<https://engineering.razorpay.com/how-we-refresh-razorpays-data-warehouse-10x-faster-with-graphs-and-indexes-538abc244703>) — _engineering.razorpay.com_
-21. [What is ACID on a Data Lake?](<https://hudi.apache.org/blog/2026/07/17/what-is-acid-on-a-data-lake/>) — _hudi.apache.org_
-22. [How Expedia Group Builds AI That Lasts at Scale](<https://medium.com/expedia-group-tech/how-expedia-group-builds-ai-that-lasts-at-scale-434677770fe9>) — _medium.com_
-23. [Behind the Benchmarking Pipeline](<https://www.pinecone.io/blog/behind-the-benchmarking-pipeline/>) — _pinecone_
-24. [Security incident disclosure — July 2026](<https://huggingface.co/blog/security-incident-july-2026>) — _huggingface.co_
-25. [Arroyo is joining Cloudflare](<https://www.arroyo.dev/blog/arroyo-is-joining-cloudflare/>) — _arroyo.dev_
-26. [Prefect just bought Dagster, another big Airflow rival — and it's not a data pipeline story](<https://thenewstack.io/prefect-acquires-dagster-orchestrator/>) — _thenewstack.io_
-27. [Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned](<https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8>) — _netflixtechblog.com_
-28. [Cloudflare as a Data Platform?](<https://dataengineeringcentral.substack.com/p/cloudflare-as-a-data-platform>) — _dataengineeringcentral.substack.com_
-29. [Announcing Rust 1.97.1](<https://blog.rust-lang.org/2026/07/16/Rust-1.97.1/>) — _blog.rust-lang.org_
-30. [Advanced search for Projects is generally available](<https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available>) — _github.blog_
-31. [Repository admins can archive pull requests](<https://github.blog/changelog/2026-07-16-repository-admins-can-archive-pull-requests>) — _github.blog_
-32. [REST API endpoints for Visual Studio Subscription management](<https://github.blog/changelog/2026-07-16-rest-api-endpoints-for-visual-studio-subscription-management>) — _github.blog_
-33. [Xcode 27 runner image now in public preview](<https://github.blog/changelog/2026-07-16-xcode-27-runner-image-now-in-public-preview>) — _github.blog_
-34. [Microsoft's Secure Boot has been broken for a decade and no one noticed until now](<https://arstechnica.com/security/2026/07/microsoft-secure-boot-has-been-broken-for-most-of-its-existence/>) — _arstechnica.com_
-35. [Microsoft Entra ID Gets Passkeys Default Authentication Starting September](<https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/>) — _bleepingcomputer.com_
-36. [xai-org/grok-build, now open source](<https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything>) — _simonwillison.net_
-37. [The Pulse: Grok’s CLI caught uploading all your local files to the cloud](<https://newsletter.pragmaticengineer.com/p/the-pulse-groks-cli-caught-uploading>) — _newsletter.pragmaticengineer.com_
-38. [Improvements to secret scanning and public monitoring](<https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring>) — _github.blog_
-39. [Benchmarking Single Node vs Distributed](<https://pola.rs/posts/single-node-vs-distributed/>) — _pola.rs_
-40. [Cache Layer Architecture: A Practical Guide to Speed & Scale](<https://redis.io/blog/cache-layer-architecture-guide/>) — _redis.io_
-41. [Designing APIs for Agents](<https://www.freestyle.sh/blog/opinion/designing-apis-for-agents>) — _freestyle.sh_
-42. [Why we stopped using SDKs](<https://x.com/alvinsng/status/2077114275412512868?s=12>) — _x.com_
-43. [OpenAI launches a physical keypad for controlling agents](<https://www.engadget.com/2215952/openai-launches-a-physical-keypad-for-controlling-agents/>) — _engadget.com_
-44. [Supply Co. x Work Louder](<https://openai.com/supply/co-lab/work-louder/>) — _openai.com_
+1. [\[AINews\] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing](<https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest>) — _latent.space_
+2. [Google Gemini Launch Delayed as Tech Falls Short of Internal Goals](<https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDI2OTE3MiwiZXhwIjoxNzg0ODczOTcyLCJhcnRpY2xlSWQiOiJUSUE1MDNLR1pBSVQwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.O0SviXMAGu0iKNg_uO7uhvm9WNFIOkTzDWQqg889I1o>) — _bloomberg.com_
+3. [Nvidia unveils new AI model and expands Japan's physical AI ecosystem](<https://www.cnbc.com/2026/07/16/nvidia-reveals-new-ai-model-and-expands-japans-physical-ai-ecosystem.html>) — _cnbc.com_
+4. [China's Xi Touts Open-Source AI and Takes a Swipe at US Dominance](<https://www.wsj.com/tech/ai/chinas-xi-touts-open-source-ai-and-takes-a-swipe-at-u-s-dominance-1eaa5cfe?st=Ht1Bp8&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+5. [Firefox in WebAssembly](<https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything>) — _simonwillison.net_
+6. [What can we learn from Bun's rapid Rust rewrite with AI?](<https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/>) — _blog.pragmaticengineer.com_
+7. [Microsoft's Nadella criticizes Anthropic's Fable for being ‘editorially controlled'](<https://www.cnbc.com/2026/07/16/microsoft-ceo-says-anthropic-fable-request-policy-doesnt-make-sense.html>) — _cnbc.com_
+8. [TSMC Adds $100 Billion to Its US Spending Plan](<https://www.nytimes.com/2026/07/16/business/tsmc-chips-investment-arizona.html?unlocked_article_code=1.yVA.pm56.TxGKx79CAJJn&smid=url-share>) — _nytimes.com_
+9. [Meta Plans to Hire Top Amazon Computing Executive as it Weighs Cloud Push](<https://www.wsj.com/tech/meta-plans-to-hire-top-amazon-computing-executive-as-it-weighs-cloud-push-2166869b?st=q71S1n&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+10. [Linus Torvalds to critics of AI coding in Linux: “Fork it. Or just walk away.”](<https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/>) — _arstechnica.com_
+11. [Spot birds not golf](<https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything>) — _simonwillison.net_
+12. [The risk of weather data sabotage is rising](<https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/>) — _technologyreview.com_
 
 
 ## Archive récente
