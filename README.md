@@ -8,115 +8,30 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-17
-<sub>updated 18 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-18
+<sub>updated 18 July 2026 at 13:00</sub>
 
-## AI/ML Models and Frontier Releases
-- Moonshot AI releases **Kimi K3 2.8T-A50B** as the largest open-weights model to date, with claims of Opus 4.8-class performance at Sonnet 5 pricing and open weights scheduled for July 27 <sup>[1](<https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest>), [2](<https://www.kimi.com/blog/kimi-k3>)</sup>.
-- Google delays **Gemini 3.5 Pro** by months due to unmet internal goals, particularly in coding, frustrating engineers and researchers <sup>[3](<https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDI2OTE3MiwiZXhwIjoxNzg0ODczOTcyLCJhcnRpY2xlSWQiOiJUSUE1MDNLR1pBSVQwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.O0SviXMAGu0iKNg_uO7uhvm9WNFIOkTzDWQqg889I1o>), [4](<https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html>)</sup>.
-- Nvidia unveils **Cosmos 3 Edge**, a world model for real-time physical environment perception and navigation, expanding Japan’s physical AI ecosystem <sup>[5](<https://www.cnbc.com/2026/07/16/nvidia-reveals-new-ai-model-and-expands-japans-physical-ai-ecosystem.html>)</sup>.
-- China’s Xi Jinping endorses open-source AI models, framing China as a champion of openness and criticizing US semiconductor restrictions <sup>[6](<https://www.wsj.com/tech/ai/chinas-xi-touts-open-source-ai-and-takes-a-swipe-at-u-s-dominance-1eaa5cfe?st=Ht1Bp8&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
-- OpenAI introduces a practical **AI scorecard** to measure ROI through useful work, cost per successful task, dependability, and return on compute <sup>[7](<https://openai.com/index/a-scorecard-for-the-ai-age>)</sup>.
-- OpenAI’s **GPT-Red** runs automated prompt-injection attacks against internal models and live agents to harden GPT-5.x against data exfiltration and tool misuse <sup>[8](<https://openai.com/index/unlocking-self-improvement-gpt-red/>)</sup>.
-- NVIDIA releases **Nemotron 3 Embed**, open embedding models for RAG, agentic retrieval, code search, and memory, with the 8B model ranking first on RTEB <sup>[9](<https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb>)</sup>.
+## AI models and provider news
+- Anthropic makes Claude Fable 5 permanently available in Max and Team Premium plans at 50% of limits, while Pro/Team Standard users retain access via usage credits and receive a one-time $100 credit; the move follows competitive pressure from GPT-5.6 Sol and Kimi K3 <sup>[1](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>)</sup>.
+- Community reaction to Moonshot AI’s Kimi K3 launch remains strong, with ongoing discussion of its capabilities <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
 
-## LLM Tooling, Agents, and Engineering
-- **Firefox compiled to WebAssembly** by Puter runs entirely in-browser using AI-assisted porting (Claude Opus/Fable) and the Wisp protocol, showcasing large-scale codebase migrations <sup>[10](<https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything>)</sup>.
-- Bun’s **Zig-to-Rust rewrite completes in 11 days** using Fable, costing $165K in API spend, demonstrating AI’s cost-effectiveness for large-scale migrations <sup>[11](<https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/>)</sup>.
-- Microsoft’s Nadella criticizes Anthropic’s **Fable** for being overly "editorially controlled," highlighting tensions over model guardrails <sup>[12](<https://www.cnbc.com/2026/07/16/microsoft-ceo-says-anthropic-fable-request-policy-doesnt-make-sense.html>)</sup>.
-- GitHub **Copilot code review** now reads custom instructions from the head branch and supports additional files (REVIEW.md, GEMINI.md, CLAUDE.md) for easier testing and validation <sup>[13](<https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements>)</sup>.
-- GitHub Mobile adds **Fix with Copilot** for pull request comments, enabling one-tap AI-assisted fixes <sup>[14](<https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent>)</sup>.
-- **LM Studio Bionic** is an AI agent for coding, research, and document management with open models, supporting local/cloud privacy and cost control <sup>[15](<https://lmstudio.ai/blog/introducing-lm-studio-bionic>)</sup>.
-- **Schema** is a harness that helps frontier models achieve 99% on ARC-AGI-3 by writing executable game mechanisms and testing predictions <sup>[16](<https://x.com/havenfeng/status/2077770348876247502?s=12>)</sup>.
-- Anthropic’s Deputy CISO shares a **risk assessment framework** for agentic AI, emphasizing bounded risk over zero risk <sup>[17](<https://claude.com/blog/ciso-guide-to-agentic-ai>)</sup>.
-- Cursor’s **CursorBench** evaluates models on messy, real-world engineering tasks, revealing gaps between public benchmarks and developer reception <sup>[18](<https://claude.com/blog/working-at-the-frontier-cursor>)</sup>.
-- Anthropic details a **six-step process** for large-scale code migrations with Claude Code, using agents for translation, review, and fixes <sup>[19](<https://claude.com/blog/ai-code-migration>)</sup>.
-- **Agent-device** is a CLI for AI agents to interact with and verify mobile apps across platforms <sup>[20](<https://github.com/callstack/agent-device>)</sup>.
-- **Hermes Studio** is a dashboard for managing Hermes Agents with real-time chat, automation, and model management <sup>[21](<https://github.com/EKKOLearnAI/hermes-studio>)</sup>.
-- **LobeHub** is an open-source platform for building and managing 24/7 AI agent teams with self-hosted options <sup>[22](<https://github.com/lobehub/lobehub>)</sup>.
-- **Open Interpreter** launches a Rust-based version optimized for low-cost models, with an agent harness and QA skill for web/browser automation <sup>[23](<https://github.com/openinterpreter/openinterpreter>)</sup>.
-- **Copilot SDK** enables embedding GitHub Copilot agents into custom applications and developer tools <sup>[24](<https://github.com/github/copilot-sdk>)</sup>.
+## LLM tooling and agents
+- Abhishek Bhardwaj’s keynote highlights the complexity of running agent sandboxes, emphasizing that storage/filesystems are as critical as compute, and notes progress since the Arrakis project and current work on cloud infra behind ChatGPT Work <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
 
-## MLOps/DevOps, Cloud, and Infrastructure
-- **Apache Spark 4.2** introduces governed metric views, vector similarity search primitives, and first-class CDC support, with Arrow-optimized Python UDFs and millisecond-latency streaming <sup>[25](<https://www.databricks.com/blog/introducing-apache-spark-42>)</sup>.
-- **Slack’s Shipyard** is a next-gen EC2 platform using immutable, deployable artifacts, progressive rollouts, and automated rollback for non-containerizable workloads <sup>[26](<https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/>)</sup>.
-- **Turso Limbo** is a PostgreSQL-compatible database written in Rust, targeting cloud-native deployments with async I/O and modular storage <sup>[27](<https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust>)</sup>.
-- **HAMi** becomes a CNCF incubating project, enabling GPU virtualization for Kubernetes to slice and share accelerators <sup>[28](<https://www.cncf.io/blog/2026/07/15/hami-becomes-a-cncf-incubating-project/>)</sup>.
-- AWS demonstrates **automated incident remediation** with AWS DevOps Agent and Kiro CLI, reducing MTTR via event-driven automation <sup>[29](<https://aws.amazon.com/blogs/devops/automated-incident-remediation-with-aws-devops-agent-and-kiro-cli/>)</sup>.
-- GitHub **Agentic Workflows** automate cross-repo documentation updates with AI agents, strict security controls, and human review <sup>[30](<https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/>)</sup>.
-- **NVIDIA OpenShell** sandboxes AI agents with kernel-level policies, addressing individual agent security but not fleet-wide governance <sup>[31](<https://www.tigera.io/blog/nvidia-openshell-secures-the-agent-who-governs-the-fleet/>)</sup>.
+## MLOps and DevOps tooling
+- GitHub Copilot usage metrics API adds repository-level reporting for pull request activity by Copilot coding agent and code review, enabling per-repo visibility into PRs created/merged and review suggestions <sup>[3](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>)</sup>.
+- The same API now includes GitHub Copilot app usage, exposing daily active users, session/request/prompt counts, and token usage breakdowns for enterprise and org admins <sup>[4](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>)</sup>.
 
-## Security and Risk
-- Cloudflare deploys **WAF protections** for two critical WordPress vulnerabilities (unauthenticated RCE and SQL injection) <sup>[32](<https://blog.cloudflare.com/wordpress-vulnerabilities/>)</sup>.
-- **Zoom warns of a critical account takeover vulnerability** (CVSS 9.8) in its Windows desktop client and SDK, patched in recent updates <sup>[33](<https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/>)</sup>.
-- **ClickLock Stealer** bypasses macOS security via social engineering and process killing, exfiltrating credentials and Keychain data to Telegram <sup>[34](<https://www.securityweek.com/clicklock-stealer-bypasses-macos-security-with-social-engineering-process-killing/>)</sup>.
-- **Shark robot vacuums** are vulnerable to RCE due to misconfigured AWS IoT Core MQTT policies, exposing house maps, Wi-Fi passwords, and camera feeds <sup>[35](<https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html>)</sup>.
-- **OAuth client ID spoofing** enables stealthy username enumeration and password validity inference in Microsoft Entra ID, with two active campaigns identified <sup>[36](<https://www.proofpoint.com/us/blog/threat-insight/oauth-client-id-spoofing-why-fake-client-ids-are-gaining-traction-stealthy>)</sup>.
-- **TuxBot v3** is an IoT botnet with LLM-assisted development, using Telnet brute-forcing and encrypted C2 channels <sup>[37](<https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/>)</sup>.
-- A **cyberattack on Nichirei Group** disrupts KFC Japan’s supply chain, halting online ordering and limiting menus <sup>[38](<https://www.theregister.com/security/2026/07/16/cyberattack-threatens-utterly-critical-infrastructure-in-japan-kfc/5272220>)</sup>.
-- A **ransomware attack on Coca-Cola’s Fairlife** temporarily halts US dairy production <sup>[39](<https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/>)</sup>.
-- **Spanish police disrupt a €140M cyber fraud ring** using MitM attacks, CEO fraud, and fake invoices <sup>[40](<https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain>)</sup>.
-- **UK police jail two Scattered Spider hackers** linked to the 2024 Transport for London cyberattack <sup>[41](<https://techcrunch.com/2026/07/16/uk-cops-say-arrest-of-two-young-hackers-disrupted-the-operations-of-an-infamous-hacking-group/>)</sup>.
-
-## Developer Tools and Practices
-- **Yuku** is a high-performance JavaScript/TypeScript parser in Zig, 3–10x faster than npm alternatives, using data-oriented design <sup>[42](<https://arshad.fyi/writings/engineering-high-performance-parsers>)</sup>.
-- **Contract-Driven Development** advocates maintaining a single machine-readable source of truth to prevent discrepancies <sup>[43](<https://benhowdle.im/contract-driven-development.html>)</sup>.
-- GitHub highlights that **the cost of saying yes has changed**: AI reduces coding effort, but meetings and scope decisions remain expensive <sup>[44](<https://github.blog/engineering/the-cost-of-saying-yes-has-changed/>)</sup>.
-- **The Insights Factory** uses LLM agents for deep data investigations with structured, auditable task breakdowns <sup>[45](<https://www.photoroom.com/inside-photoroom/the-insights-factory-how-we-run-deep-data-investigations-with-llm-agents>)</sup>.
-- **1Password and Mercor** argue that agents passing one-shot tests still fail in production, advocating staged rollouts and continuous monitoring <sup>[46](<https://1password.com/blog/agent-evals-production>)</sup>.
-- **Replit’s "Self-Driving Company"** triples code output using AI agents for PR reviews, incident investigation, and data analysis <sup>[47](<https://replit.com/blog/self-driving-company>)</sup>.
-- **Ramp expands AI token spend tracking** to provide finance teams with insights across providers like OpenAI, Anthropic, and Google <sup>[48](<https://siliconangle.com/2026/07/16/ramp-targets-ais-fastest-growing-cost-expanded-token-spend-tracking/>)</sup>.
+## Developer tools and software engineering
+- The Quixote Python web framework receives a new commit, marking 21 years since its initial import into Git, showcasing long-term open-source maintenance <sup>[5](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing](<https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest>) — _latent.space_
-2. [Kimi K3](<https://www.kimi.com/blog/kimi-k3>) — _kimi.com_
-3. [Google Gemini Launch Delayed as Tech Falls Short of Internal Goals](<https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDI2OTE3MiwiZXhwIjoxNzg0ODczOTcyLCJhcnRpY2xlSWQiOiJUSUE1MDNLR1pBSVQwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.O0SviXMAGu0iKNg_uO7uhvm9WNFIOkTzDWQqg889I1o>) — _bloomberg.com_
-4. [Gemini 3.5 Pro Reportedly Faced Delays](<https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html>) — _cnbc.com_
-5. [Nvidia unveils new AI model and expands Japan's physical AI ecosystem](<https://www.cnbc.com/2026/07/16/nvidia-reveals-new-ai-model-and-expands-japans-physical-ai-ecosystem.html>) — _cnbc.com_
-6. [China's Xi Touts Open-Source AI and Takes a Swipe at US Dominance](<https://www.wsj.com/tech/ai/chinas-xi-touts-open-source-ai-and-takes-a-swipe-at-u-s-dominance-1eaa5cfe?st=Ht1Bp8&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-7. [A scorecard for the AI age](<https://openai.com/index/a-scorecard-for-the-ai-age>) — _openai.com_
-8. [GPT‑Red: Unlocking Self-Improvement for Robustness](<https://openai.com/index/unlocking-self-improvement-gpt-red/>) — _openai.com_
-9. [NVIDIA Nemotron 3 Embed](<https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb>) — _huggingface.co_
-10. [Firefox in WebAssembly](<https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything>) — _simonwillison.net_
-11. [What can we learn from Bun's rapid Rust rewrite with AI?](<https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/>) — _blog.pragmaticengineer.com_
-12. [Microsoft's Nadella criticizes Anthropic's Fable for being ‘editorially controlled'](<https://www.cnbc.com/2026/07/16/microsoft-ceo-says-anthropic-fable-request-policy-doesnt-make-sense.html>) — _cnbc.com_
-13. [Copilot code review: Customization and configurability improvements](<https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements>) — _github.blog_
-14. [GitHub Mobile: Fix pull request comments with Copilot cloud agent](<https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent>) — _github.blog_
-15. [Introducing LM Studio Bionic: the AI agent for open models](<https://lmstudio.ai/blog/introducing-lm-studio-bionic>) — _lmstudio.ai_
-16. [Schema](<https://x.com/havenfeng/status/2077770348876247502?s=12>) — _x.com_
-17. [Zero risk isn't the job: a CISO's guide to agentic AI](<https://claude.com/blog/ciso-guide-to-agentic-ai>) — _claude_
-18. [Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems](<https://claude.com/blog/working-at-the-frontier-cursor>) — _claude_
-19. [How Anthropic runs large-scale code migrations with Claude Code](<https://claude.com/blog/ai-code-migration>) — _claude.com_
-20. [agent-device](<https://github.com/callstack/agent-device>) — _github.com_
-21. [Hermes Studio](<https://github.com/EKKOLearnAI/hermes-studio>) — _github.com_
-22. [LobeHub](<https://github.com/lobehub/lobehub>) — _github.com_
-23. [Open Interpreter](<https://github.com/openinterpreter/openinterpreter>) — _github.com_
-24. [Copilot SDK](<https://github.com/github/copilot-sdk>) — _github.com_
-25. [Introducing Apache Spark 4.2](<https://www.databricks.com/blog/introducing-apache-spark-42>) — _databricks.com_
-26. [Shipyard: How We Built Slack's Next-Generation EC2 Platform](<https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/>) — _slack.engineering_
-27. [Turso is building a modern version of Postgres in Rust](<https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust>) — _turso.tech_
-28. [HAMi becomes a CNCF incubating project](<https://www.cncf.io/blog/2026/07/15/hami-becomes-a-cncf-incubating-project/>) — _cncf.io_
-29. [Automated Incident Remediation with AWS DevOps Agent and Kiro CLI](<https://aws.amazon.com/blogs/devops/automated-incident-remediation-with-aws-devops-agent-and-kiro-cli/>) — _aws.amazon.com_
-30. [Automating cross-repo documentation with GitHub Agentic Workflows](<https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/>) — _github.blog_
-31. [NVIDIA OpenShell Secures the Agent. Who Governs the Fleet?](<https://www.tigera.io/blog/nvidia-openshell-secures-the-agent-who-governs-the-fleet/>) — _tigera.io_
-32. [Cloudflare WAF protects WordPress applications from two high-severity vulnerabilities](<https://blog.cloudflare.com/wordpress-vulnerabilities/>) — _blog.cloudflare.com_
-33. [Zoom Warns of Critical Account Takeover Vulnerability](<https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/>) — _bleepingcomputer.com_
-34. [‘ClickLock Stealer' Bypasses macOS Security With Social Engineering, Process Killing](<https://www.securityweek.com/clicklock-stealer-bypasses-macos-security-with-social-engineering-process-killing/>) — _securityweek.com_
-35. [No Shark is Safe: Millions of Shark Vacuums are Vulnerable to RCE](<https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html>) — _tokay0.com_
-36. [OAuth Client ID Spoofing: Why Fake Client IDs Are Gaining Traction for Stealthy Enumeration](<https://www.proofpoint.com/us/blog/threat-insight/oauth-client-id-spoofing-why-fake-client-ids-are-gaining-traction-stealthy>) — _proofpoint.com_
-37. [TuxBot v3 Evolution: Inside an IoT Botnet Framework With LLM-Assisted Development](<https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/>) — _unit42.paloaltonetworks.com_
-38. [Cyberattack threatens utterly critical infrastructure in Japan: KFC](<https://www.theregister.com/security/2026/07/16/cyberattack-threatens-utterly-critical-infrastructure-in-japan-kfc/5272220>) — _theregister.com_
-39. [Coca-Cola says Fairlife ransomware attack halts US dairy production](<https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/>) — _bleepingcomputer.com_
-40. [Police Disrupt a €140M Cyber Fraud Ring in Spain](<https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain>) — _darkreading.com_
-41. [UK cops say arrest of two young hackers disrupted the operations of an infamous hacking group](<https://techcrunch.com/2026/07/16/uk-cops-say-arrest-of-two-young-hackers-disrupted-the-operations-of-an-infamous-hacking-group/>) — _techcrunch.com_
-42. [Engineering High-Performance Parsers with Data-Oriented Design](<https://arshad.fyi/writings/engineering-high-performance-parsers>) — _arshad.fyi_
-43. [Contract-Driven Development: Write the Truth Once](<https://benhowdle.im/contract-driven-development.html>) — _benhowdle.im_
-44. [The cost of saying yes has changed](<https://github.blog/engineering/the-cost-of-saying-yes-has-changed/>) — _github.blog_
-45. [The Insights Factory: how we run deep data investigations with LLM agents](<https://www.photoroom.com/inside-photoroom/the-insights-factory-how-we-run-deep-data-investigations-with-llm-agents>) — _photoroom.com_
-46. [Why agents that pass tests fail in production](<https://1password.com/blog/agent-evals-production>) — _1password.com_
-47. [The Self-Driving Company](<https://replit.com/blog/self-driving-company>) — _replit.com_
-48. [Ramp targets AI's fastest-growing cost with expanded token spend tracking](<https://siliconangle.com/2026/07/16/ramp-targets-ais-fastest-growing-cost-expanded-token-spend-tracking/>) — _siliconangle.com_
+1. [Claude make Fable 5 permanent](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>) — _simonwillison.net_
+2. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-830>) — _latent.space_
+3. [Repository-level GitHub Copilot usage metrics generally available](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>) — _github.blog_
+4. [GitHub Copilot app now available in the usage metrics API](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>) — _github.blog_
+5. [nascheme/quixote](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>) — _simonwillison.net_
 
 
 ## Recent archive
