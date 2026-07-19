@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>33 daily digests archived · newest first.</sub>
+<sub>34 daily digests archived · newest first.</sub>
 
 ### July 2026
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-07-18` | Saturday | [Read →](2026-07-18.md) |
 | `2026-07-17` | Friday | [Read →](2026-07-17.md) |
 | `2026-07-16` | Thursday | [Read →](2026-07-16.md) |
 | `2026-07-15` | Wednesday | [Read →](2026-07-15.md) |
