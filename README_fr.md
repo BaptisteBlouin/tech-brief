@@ -8,46 +8,27 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-18
-<sub>mis à jour le 19 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-19
+<sub>mis à jour le 19 juillet 2026 à 13:01</sub>
 
-## Actualités sur les modèles d'IA et les fournisseurs
-- Anthropic rend Claude Fable 5 définitivement disponible dans les plans Max et Team Premium à 50 % des limites, tandis que les utilisateurs Pro/Team Standard conservent l'accès via des crédits d'utilisation et reçoivent un crédit unique de 100 $ ; cette décision fait suite à la pression concurrentielle de GPT-5.6 Sol et Kimi K3 <sup>[1](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>)</sup>.
-- La réaction de la communauté au lancement de Kimi K3 par Moonshot AI reste forte, avec des discussions en cours sur ses capacités <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
-- GPT-5.6 a utilisé un prompt similaire à l'annonce de preuve CDC d'OpenAI pour combler un écart de 30 ans en optimisation convexe, vérifié dans Lean <sup>[3](<https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/>)</sup>.
-- Un benchmark comparatif sur un problème NP-hard de conception de réseau en fibre a qualifié Fable 5 de « bête absolue », produisant la meilleure solution globale avec une grande cohérence, tandis que le mode natif `/goal` n'est pas un simple interrupteur « essaie plus fort » générique mais modifie la boucle de contrôle et le chemin de recherche — aidant parfois, d'autres fois non <sup>[4](<https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/>)</sup>.
-- Sebastian Raschka analyse le contrôle de l'effort de raisonnement dans les LLM, notant que GPT-5.6 est disponible en trois tailles chacune avec cinq ou six paramètres d'effort de raisonnement, et que les modèles de raisonnement sont devenus une partie standard des versions modernes depuis o1 et la recette RLVR de DeepSeek-R1 <sup>[5](<https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms>)</sup>.
+## Industrie et culture de l'IA
 
-## Outils LLM et agents
-- La keynote d'Abhishek Bhardwaj met en lumière la complexité de l'exécution de bacs à sable d'agents, soulignant que le stockage/les systèmes de fichiers sont aussi critiques que le calcul, et note les progrès réalisés depuis le projet Arrakis ainsi que le travail actuel sur l'infrastructure cloud derrière ChatGPT Work <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
-- ByteByteGo compare les protocoles MCP vs A2A vs ACP pour la communication inter-agents, cadrant la discussion autour de la façon dont les agents IA communiquent réellement entre eux <sup>[6](<https://blog.bytebytego.com/p/mcp-vs-a2a-vs-acp-how-ai-agents-actually>)</sup>.
+- Un essai très discuté de Nik Suresh, amplifié par Mitchell Hashimoto, affirme que les grandes organisations sont en « psychose de l'IA » — les dirigeants imposent des stratégies centrées sur l'IA sans avoir jamais utilisé eux-mêmes les outils d'IA, tandis que les ingénieurs ont recours à un travail de façade lié à l'IA (par ex., réécrire entièrement des dépôts Go en Zig via l'IA) pour satisfaire des métriques internes de classements de jetons <sup>[1](<https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything>), [2](<https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3>)</sup>.
 
-## Outils de développement et ingénierie logicielle
-- Simon Willison a créé un outil SQLite Query Explainer qui exécute SQLite dans Pyodide/WebAssembly dans le navigateur et ajoute une couche explicative par-dessus la sortie `EXPLAIN` et `EXPLAIN QUERY PLAN` ; l'outil a été créé avec Fable et doit être abordé avec prudence car les résultats ne sont pas vérifiés indépendamment <sup>[7](<https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything>)</sup>.
-- Le framework web Python Quixote reçoit un nouveau commit, marquant 21 ans depuis son import initial dans Git, illustrant la maintenance open source à long terme <sup>[8](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>)</sup>.
-- Les tendances du volume de questions sur Stack Overflow sont visualisées via une requête publique sur les données Stack Exchange, illustrant l'impact de l'IA sur l'activité de Q&A des développeurs <sup>[9](<https://data.stackexchange.com/stackoverflow/query/1953768#graph>)</sup>.
+## Outils d'IA et outils de développement
 
-## Outils MLOps et DevOps
-- L'API des métriques d'utilisation de GitHub Copilot ajoute des rapports au niveau du dépôt pour l'activité des pull requests par l'agent de codage Copilot et la révision de code, permettant une visibilité par dépôt des PR créées/fusionnées et des suggestions de révision <sup>[10](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>)</sup>.
-- La même API inclut désormais l'utilisation de l'application GitHub Copilot, exposant les utilisateurs actifs quotidiens, les comptes de sessions/requêtes/prompts, et les ventilations d'utilisation des jetons pour les administrateurs d'entreprise et d'organisation <sup>[11](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>)</sup>.
+- Claude Code a discrètement livré un port Rust de Bun (v1.4.0 preview) dans son binaire depuis la version v2.1.181 du 17 juin ; le démarrage s'est amélioré d'environ 10 % sur Linux sans aucune perturbation visible pour l'utilisateur, renforçant le principe « l'ennui c'est bien » pour l'infrastructure d'exécution <sup>[3](<https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything>)</sup>.
 
-## L'IA en production et dans la société
-- Les infirmières de triage de Kaiser Permanente rapportent que l'IA et la surveillance sur le lieu de travail — y compris des logiciels prédisant la productivité et l'IA évaluant l'empathie et le ton de la voix — dégradent les soins aux patients et les conditions de travail, l'IA devenant un sujet de négociation contractuelle pour 25 000 infirmières en Californie <sup>[12](<https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/>)</sup>.
+## Réglementation et divulgation de l'IA
+
+- Le maire de New York a proposé d'exiger des propriétaires et des agents immobiliers qu'ils divulguent les images générées ou modifiées par IA dans les annonces de location, dans le cadre d'un « Rental Ripoff Report » plus large visant les pratiques trompeuses — un premier exemple notable de réglementation municipale de divulgation de l'IA liée à la protection des consommateurs <sup>[4](<https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/>)</sup>.
 
 ## Sources
 
-1. [Claude make Fable 5 permanent](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>) — _simonwillison.net_
-2. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-830>) — _latent.space_
-3. [GPT-5.6 used a prompt to close a 30-year gap in convex optimization](<https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/>) — _hnrss.org_
-4. [Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?](<https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/>) — _hnrss.org_
-5. [Controlling Reasoning Effort in LLMs](<https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms>) — _magazine.sebastianraschka.com_
-6. [MCP vs A2A vs ACP: How AI Agents Actually Talk to Each Other](<https://blog.bytebytego.com/p/mcp-vs-a2a-vs-acp-how-ai-agents-actually>) — _blog.bytebytego.com_
-7. [SQLite Query Explainer](<https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything>) — _simonwillison.net_
-8. [nascheme/quixote](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>) — _simonwillison.net_
-9. [What AI did to stackoverflow in a graph](<https://data.stackexchange.com/stackoverflow/query/1953768#graph>) — _hnrss.org_
-10. [Repository-level GitHub Copilot usage metrics generally available](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>) — _github.blog_
-11. [GitHub Copilot app now available in the usage metrics API](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>) — _github.blog_
-12. [Kaiser nurses say AI, surveillance are making their jobs and patient care worse](<https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/>) — _hnrss.org_
+1. [AI Mania Is Eviscerating Global Decision-Making](<https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything>) — _simonwillison.net_
+2. [AI Mania Is Eviscerating Global Decision-Making](<https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3>) — _hnrss.org_
+3. [Claude Code uses Bun written in Rust now](<https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything>) — _simonwillison.net_
+4. [NYC may require landlords and realtors to disclose the use of AI in listings](<https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/>) — _hnrss.org_
 
 
 ## Archive récente

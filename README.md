@@ -8,46 +8,27 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-18
-<sub>updated 19 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-19
+<sub>updated 19 July 2026 at 13:01</sub>
 
-## AI models and provider news
-- Anthropic makes Claude Fable 5 permanently available in Max and Team Premium plans at 50% of limits, while Pro/Team Standard users retain access via usage credits and receive a one-time $100 credit; the move follows competitive pressure from GPT-5.6 Sol and Kimi K3 <sup>[1](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>)</sup>.
-- Community reaction to Moonshot AI's Kimi K3 launch remains strong, with ongoing discussion of its capabilities <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
-- GPT-5.6 used a prompt similar to OpenAI's CDC proof announcement to close a 30-year gap in convex optimization, verified in Lean <sup>[3](<https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/>)</sup>.
-- A head-to-head benchmark on an NP-hard fiber-network design problem found Fable 5 "an absolute beast," producing the best overall solution with high consistency, while the native `/goal` mode is not a generic "try harder" switch but changes the control loop and search path—sometimes helping, sometimes not <sup>[4](<https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/>)</sup>.
-- Sebastian Raschka analyzes controlling reasoning effort in LLMs, noting GPT-5.6 ships in three sizes each with five or six reasoning-effort settings, and that reasoning models have become a standard part of modern releases since o1 and DeepSeek-R1's RLVR recipe <sup>[5](<https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms>)</sup>.
+## AI Industry & Culture
 
-## LLM tooling and agents
-- Abhishek Bhardwaj's keynote highlights the complexity of running agent sandboxes, emphasizing that storage/filesystems are as critical as compute, and notes progress since the Arrakis project and current work on cloud infra behind ChatGPT Work <sup>[2](<https://www.latent.space/p/ainews-not-much-happened-today-830>)</sup>.
-- ByteByteGo compares MCP vs A2A vs ACP protocols for inter-agent communication, framing the discussion around how AI agents actually talk to each other <sup>[6](<https://blog.bytebytego.com/p/mcp-vs-a2a-vs-acp-how-ai-agents-actually>)</sup>.
+- A widely discussed essay by Nik Suresh, amplified by Mitchell Hashimoto, argues that large organizations are in "AI psychosis" — executives mandate AI-centric strategies without ever having used AI tools themselves, while engineers resort to performative AI busywork (e.g., rewriting entire Go repos in Zig via AI) to satisfy internal token-leaderboard metrics <sup>[1](<https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything>), [2](<https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3>)</sup>.
 
-## Developer tools and software engineering
-- Simon Willison built a SQLite Query Explainer tool that runs SQLite in Pyodide/WebAssembly in the browser and adds an explanatory layer over `EXPLAIN` and `EXPLAIN QUERY PLAN` output; the tool was built using Fable and should be approached with caution as results aren't independently verified <sup>[7](<https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything>)</sup>.
-- The Quixote Python web framework receives a new commit, marking 21 years since its initial import into Git, showcasing long-term open-source maintenance <sup>[8](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>)</sup>.
-- Stack Overflow question-volume trends are visualized via a public Stack Exchange data query, illustrating AI's impact on developer Q&A activity <sup>[9](<https://data.stackexchange.com/stackoverflow/query/1953768#graph>)</sup>.
+## AI Tooling & Developer Tools
 
-## MLOps and DevOps tooling
-- GitHub Copilot usage metrics API adds repository-level reporting for pull request activity by Copilot coding agent and code review, enabling per-repo visibility into PRs created/merged and review suggestions <sup>[10](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>)</sup>.
-- The same API now includes GitHub Copilot app usage, exposing daily active users, session/request/prompt counts, and token usage breakdowns for enterprise and org admins <sup>[11](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>)</sup>.
+- Claude Code has quietly shipped a Rust port of Bun (v1.4.0 preview) in its binary since the June 17 v2.1.181 release; startup improved ~10% on Linux with no user-visible disruption, reinforcing "boring is good" for runtime infrastructure <sup>[3](<https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything>)</sup>.
 
-## AI in production and society
-- Kaiser Permanente triage nurses report that AI and workplace surveillance— including software predicting productivity and AI rating empathy and tone of voice—are degrading patient care and working conditions, with AI becoming a contract-negotiation issue for 25,000 California nurses <sup>[12](<https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/>)</sup>.
+## AI Regulation & Disclosure
+
+- New York City's mayor proposed requiring landlords and realtors to disclose AI-generated or AI-edited images in rental listings, part of a broader "Rental Ripoff Report" tackling deceptive practices — a notable early example of municipal AI-disclosure regulation tied to consumer protection <sup>[4](<https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/>)</sup>.
 
 ## Sources
 
-1. [Claude make Fable 5 permanent](<https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything>) — _simonwillison.net_
-2. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-830>) — _latent.space_
-3. [GPT-5.6 used a prompt to close a 30-year gap in convex optimization](<https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/>) — _hnrss.org_
-4. [Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?](<https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/>) — _hnrss.org_
-5. [Controlling Reasoning Effort in LLMs](<https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms>) — _magazine.sebastianraschka.com_
-6. [MCP vs A2A vs ACP: How AI Agents Actually Talk to Each Other](<https://blog.bytebytego.com/p/mcp-vs-a2a-vs-acp-how-ai-agents-actually>) — _blog.bytebytego.com_
-7. [SQLite Query Explainer](<https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything>) — _simonwillison.net_
-8. [nascheme/quixote](<https://simonwillison.net/2026/Jul/18/quixote/#atom-everything>) — _simonwillison.net_
-9. [What AI did to stackoverflow in a graph](<https://data.stackexchange.com/stackoverflow/query/1953768#graph>) — _hnrss.org_
-10. [Repository-level GitHub Copilot usage metrics generally available](<https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available>) — _github.blog_
-11. [GitHub Copilot app now available in the usage metrics API](<https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api>) — _github.blog_
-12. [Kaiser nurses say AI, surveillance are making their jobs and patient care worse](<https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/>) — _hnrss.org_
+1. [AI Mania Is Eviscerating Global Decision-Making](<https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything>) — _simonwillison.net_
+2. [AI Mania Is Eviscerating Global Decision-Making](<https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3>) — _hnrss.org_
+3. [Claude Code uses Bun written in Rust now](<https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything>) — _simonwillison.net_
+4. [NYC may require landlords and realtors to disclose the use of AI in listings](<https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/>) — _hnrss.org_
 
 
 ## Recent archive
