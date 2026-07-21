@@ -8,88 +8,70 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-20
-<sub>mis à jour le 21 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-21
+<sub>mis à jour le 21 juillet 2026 à 13:01</sub>
 
-## Modèles de pointe et dynamique des poids ouverts
-- **Kimi K3 perturbe le marché** : le modèle gratuit et open-source Kimi K3 de Moonshot AI rivalise avec les modèles de pointe d'OpenAI et d'Anthropic, déclenchant d'intenses débats politiques aux États-Unis et forçant Kimi à suspendre temporairement les nouveaux abonnements en raison d'une demande écrasante <sup>[1](<https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/>), [2](<https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/>), [3](<https://x.com/kimi_moonshot/status/2078855608565207130>)</sup>. Moonshot AI prévoit désormais une introduction en bourse à Hong Kong <sup>[4](<https://finance.yahoo.com/markets/stocks/articles/moonshot-ai-plans-hong-kong-123000193.html>)</sup>.
-- **Qwen3.8 annoncé** : Alibaba s'apprête à publier Qwen3.8, un modèle de 2,4 billions de paramètres, en version poids ouverts <sup>[5](<https://x.com/Alibaba_Qwen/status/2078759124914098291>)</sup>. Alibaba a également mis en open-source sa pile logicielle de puce IA Zhenwu (SAIL) lors de la WAIC, ciblant directement le verrouillage de l'écosystème CUDA de Nvidia <sup>[6](<https://thenextweb.com/news/alibaba-t-head-sail-open-source-nvidia-cuda-alternative>)</sup>.
-- **L'écart entre ouvert et fermé se réduit** : l'AISI du Royaume-Uni rapporte que l'écart de capacité en cybersécurité entre les modèles à poids ouverts et à poids fermés s'est réduit à 4–7 mois, des modèles comme GLM-5.2 et DeepSeek V4-Pro approchant les performances de pointe fermées <sup>[7](<https://jack-clark.net/2026/07/20/import-ai-465-open-vs-closed-gaps-kimi-k3-demis-big-policy-plan/>)</sup>.
-- **Déploiement de Claude Fable 5** : Anthropic déploie Claude Fable 5 sur les plans Max et Team Premium ; Rakuten signale qu'il s'agit d'un changement radical pour les agents d'entreprise à longue durée d'exécution <sup>[8](<https://claude.com/blog/working-at-the-frontier-rakuten>), [9](<https://x.com/claudeai/status/2078302415804379218>)</sup>.
+## AI Models & Open-Weight Landscape
 
-## Architecture d'agents, économie et outillage
-- **Ingénierie d'essaims d'agents** : Cursor détaille l'ingénierie derrière les essaims d'agents, utilisant des systèmes de contrôle de version pour la mémoire et les lentilles de révision des agents ; leur nouvel essaim a construit SQLite from scratch en Rust, atteignant 80 % de taux de réussite des tests en 4 heures avec Grok 4.5 <sup>[10](<https://cursor.com/blog/agent-swarm-model-economics>)</sup>.
-- **Infrastructure d'agents d'entreprise** : LinkedIn, Walmart et Zendesk rapportent que l'infrastructure héritée — et non la qualité des modèles — est le principal goulot d'étranglement pour les agents ; les solutions incluent le pré-provisionnement de conteneurs et le transfert de 80 % de l'orchestration vers du code déterministe <sup>[11](<https://venturebeat.com/data/agents-think-in-milliseconds-legacy-infrastructure-doesnt-linkedin-walmart-and-zendesk-shared-how-they-closed-the-gap-at-vb-transform-2026>)</sup>.
-- **Optimisation des tokens** : une approche « swamp workflow » structurant les tâches complexes en code déterministe a réduit l'utilisation des tokens de 8x et divisé le temps d'exécution par deux pour les revues de code <sup>[12](<https://www.adamhjk.com/blog/a-practical-guide-to-reducing-token-spend/>)</sup>. Une stratégie de pipeline de recherche par niveaux (modèles bon marché pour trouver, modèles précis pour vérifier, recherche approfondie en dernier) réduit également les coûts <sup>[13](<https://quesma.com/blog/custom-deep-research-pipeline/>)</sup>.
-- **Contexte de données d'agent** : les agents IA d'entreprise ont besoin d'un contexte de produit de données gouverné préservant les frontières et la propriété des sources, plutôt que de simples recherches vectorielles RAG brutes <sup>[14](<https://blog.opendataproducts.org/ai-agents-need-data-product-context-not-more-rag-99fa4690f4c8>)</sup>. Les « graphes d'expérience » de Trellis persistent les artefacts et l'historique des agents, réduisant les coûts en tokens des solutions réussies de 52 % <sup>[15](<https://arxiv.org/html/2606.29823v1>)</sup>.
-- **Nouveaux outils d'agents** : Wigolo est un serveur MCP local open-source pour le scraping/crawling web par agents sans clés API <sup>[16](<https://github.com/KnockOutEZ/wigolo>)</sup>. LoopGain optimise les boucles d'agents en arrêtant les itérations lorsque les performances stagnent <sup>[17](<https://github.com/loopgain-ai/loopgain>)</sup>. Kimi Code CLI est un agent de codage basé sur le terminal <sup>[18](<https://github.com/MoonshotAI/kimi-code>)</sup>.
+- Qwen 3.8 Max (2.4T parameters) has been announced as open-weight, coming shortly after Kimi K3 (2.8T), intensifying the open-weight competition <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-173>)</sup>.
+- The US debate over restricting Chinese open-weight models is shifting from rhetoric toward actual policy, though some argue the industry is overreacting to models like Kimi K3; the real concern is cybersecurity, and the best defense is ensuring defenders have access to the strongest models <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-173>), [2](<https://stratechery.com/2026/whos-afraid-of-chinese-models/?access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6InN0cmF0ZWNoZXJ5LnBhc3Nwb3J0Lm9ubGluZSIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJzdHJhdGVjaGVyeS5wYXNzcG9ydC5vbmxpbmUiLCJhenAiOiJIS0xjUzREd1Nod1AyWURLYmZQV00xIiwiZW50Ijp7InVyaSI6WyJodHRwczovL3N0cmF0ZWNoZXJ5LmNvbS8yMDI2L3dob3MtYWZyYWlkLW9mLWNoaW5lc2UtbW9kZWxzLyJdfSwiZXhwIjoxNzg3MTM3Mzc5LCJpYXQiOjE3ODQ1NDUzNzksImlzcyI6Imh0dHBzOi8vYXBwLnBhc3Nwb3J0Lm9ubGluZS9vYXV0aCIsInNjb3BlIjoiZmVlZDpyZWFkIGFydGljbGU6cmVhZCBhc3NldDpyZWFkIGNhdGVnb3J5OnJlYWQgZW50aXRsZW1lbnRzIiwic3ViIjoiMmUxNzE1OTEtYzAyNC00YjZmLWIwZDYtMzQ3NWQ1NzQ0NGMxIiwidXNlIjoiYWNjZXNzIn0.YoXTMSNiowlq4l7OUExae6nvv6YWZJU4AlzfHPv6qZ1a2Cu5aMt71Pp9WBVewCRUxQN12YiFtXztk9UoOxQlB5zKa3vphsGhvrY6FVac_2ivwD4YLmQtm4w8qstqKve5Vc1VzLKMOqFFC31HuzIiKTd3T2PD5Cy9Yy13vbrK8xN-ilYrXd89DDSXiTI11WOx3wBIbRkGjPGVG-7nOyoKg1eW-Eed0s08ZfB4_Ge1ltbRjc3ZVQYecXQPCH3ecMH_vUgUdjJoMEsjU0jX3uPopXJjqJ8uroh-hsjkLtbO3L4SKNRh5MZ0GQmB-ohzhzByMcHSjcG3dAAWi_LEX8jFIQ>)</sup>.
 
-## MLOps, service LLM et évaluations
-- **Service LLM chez Netflix** : Netflix a détaillé sa pile de service LLM interne, couvrant le choix du moteur, l'empaquetage des modèles, la conception d'API et les compromis sous de vraies charges de production <sup>[19](<https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c>)</sup>.
-- **Évaluation rapide de LLM** : Airbnb a réduit les cycles d'évaluation de LLM de plusieurs semaines à moins d'une journée en mettant en cache les sorties de modèles identiques et les scores des juges, permettant une itération rapide avec de petits adaptateurs LoRA <sup>[20](<https://medium.com/airbnb-engineering/from-weeks-to-a-day-how-we-made-llm-evaluation-fast-enough-to-iterate-on-14e2d35198b4>)</sup>.
-- **Distillation du comportement de pointe** : les traces OpenTelemetry d'agents de production peuvent être converties en étiquettes d'entraînement pour des modèles de codage locaux de 7B-13B, atteignant ~80-85 % de la qualité de pointe à moindre coût <sup>[21](<https://www.infoq.com/presentations/otel-slm-ai/>)</sup>.
-- **Sécurité de la chaîne d'approvisionnement IA** : Google a introduit k8s-aibom, un contrôleur Kubernetes open-source qui génère automatiquement des ML-BOMs CycloneDX pour les charges de travail IA en cours d'exécution sur GKE sans accès privilégié <sup>[22](<https://cloud.google.com/blog/products/identity-security/introducing-k8s-aibom-on-gke-for-automated-ai-bills-of-materials/>)</sup>.
+## Agents & LLM Tooling
 
-## Agents de codage et ingénierie logicielle
-- **Migrations de code par IA** : Anthropic a partagé un processus en 6 étapes pour les migrations de code à grande échelle avec Claude Code, insistant sur la correction du processus de génération de code plutôt que sur la correction du code <sup>[23](<https://claude.com/blog/ai-code-migration>)</sup>.
-- **Fatigue de la supervision humaine** : les développeurs signalent une fatigue unique due à la surveillance constante des sorties d'IA ; la revue de code doit passer de la syntaxe à la validation des exigences, de l'architecture et de la sécurité <sup>[24](<https://www.softwaremaxims.com/blog/reviewing-ai-code>), [25](<https://pydantic.dev/articles/the-human-in-the-loop-is-tired>), [26](<https://chrisloy.dev/post/2026/07/19/coding-too-fast-to-collaborate>)</sup>.
-- **Pression des bugs générés par IA** : le projet curl signale une augmentation de 4x des rapports de bugs générés par LLM, impactant négativement la santé mentale et l'équilibre vie pro/vie perso des mainteneurs <sup>[27](<https://daniel.haxx.se/blog/2026/05/26/the-pressure/>)</sup>.
-- **Échecs de codage par IA** : Docker a documenté un cas où un agent de codage IA a causé une panne de production de 13 heures, soulignant le besoin de garde-fous de sécurité entre les décisions de l'agent et l'exécution shell <sup>[28](<https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/>)</sup>.
+- Cursor published research on engineering agent swarms deliberately, including a version-control system for agents handling up to 1,000 commits/second; a new swarm built SQLite from scratch in Rust, reaching 80% on a held-out test suite in four hours with Grok 4.5 <sup>[3](<https://cursor.com/blog/agent-swarm-model-economics>)</sup>.
+- A design pattern for human-agent collaboration proposes treating the agent as a "guest" editing the same document as the user, enabling real-time co-editing <sup>[4](<https://sunilpai.dev/posts/one-document-two-hands/>)</sup>.
 
-## Cloud, infrastructure et ingénierie des données
-- **Ray sur TPU** : Ray 2.55 introduit une prise en charge de premier ordre pour les TPU de Google Cloud, utilisant KubeRay pour provisionner atomiquement des tranches TPU multi-hôtes via `slice_placement_group()` <sup>[29](<https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/>)</sup>.
-- **Cloudflare Internal DNS GA** : Cloudflare Internal DNS est désormais généralement disponible, unifiant la gestion DNS publique et privée en un seul plan de contrôle pour éliminer la dérive DNS à horizon partagé <sup>[30](<https://blog.cloudflare.com/internal-dns/>)</sup>.
-- **Mises à jour AWS** : Lambda prend désormais en charge le stockage de code S3 autogéré pour les packages de déploiement <sup>[31](<https://aws.amazon.com/about-aws/whats-new/2026/07/lambda-self-managed-code-storage/>)</sup>, et EC2 expose les paramètres SSM publics dans les métadonnées AMI <sup>[32](<https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters/>)</sup>. AWS a également connu un bug de facturation affichant des frais estimés jusqu'à 2,5 billions de dollars <sup>[33](<https://thenextweb.com/news/aws-billing-bug-billion-dollar-estimates>)</sup>.
-- **Apache Spark 4.2 et Iceberg** : Spark 4.2 ajoute la recherche de similarité vectorielle SQL, les types géospatiaux natifs et les requêtes CDC <sup>[34](<https://www.databricks.com/blog/introducing-apache-spark-42>)</sup>. DataFusion Comet accélère les lectures Spark sur Iceberg grâce à l'exécution native Arrow, réduisant le temps d'exécution TPC-DS d'environ 40 % <sup>[35](<https://iceberg.apache.org/blog/accelerating-iceberg-rust-development-with-datafusion-comet/>)</sup>.
-- **Compression Postgres 19** : Postgres 19 prévoit de changer la compression TOAST par défaut de pglz vers LZ4 pour une compression plus rapide et meilleure <sup>[36](<https://www.crunchydata.com/blog/postgres-19-compression-from-pglz-to-lz4>)</sup>.
+## Robotics & Embodied AI
 
-## Sécurité
-- **RCE WordPress** : une RCE pré-authentification dans WordPress Core affecte ~500 millions de sites ; les administrateurs doivent mettre à jour vers 7.0.2 ou bloquer l'accès anonyme aux points de terminaison REST par lots <sup>[37](<https://slcyber.io/research-center/wp2shell-pre-authentication-rce-in-wordpress-core/>), [38](<https://blog.cloudflare.com/wordpress-vulnerabilities/>)</sup>.
-- **Faille OpenSSL HollowByte** : de minuscules handshakes TLS peuvent amener OpenSSL à bloquer jusqu'à 131 Ko de mémoire par connexion ; le correctif a été appliqué silencieusement sans CVE <sup>[39](<https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html>)</sup>.
-- **Modèles à poids ouverts empoisonnés** : un chercheur a démontré le fine-tuning d'un modèle de codage à poids ouverts en un système piégé émettant des bugs RCE pour moins de 100 $, soulignant les risques de la chaîne d'approvisionnement <sup>[40](<https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/5273880>)</sup>.
+- Hugging Face released Grabette, an open-source system for recording robot-manipulation data with SLAM capabilities and conversion to LeRobot datasets <sup>[5](<https://huggingface.co/blog/grabette>)</sup>.
+- BrainCo demonstrated a brain-controlled robot platform at WAIC 2026, using an EEG headset and AI to decode neural signals into commands for a robotic arm <sup>[6](<https://www.therobotreport.com/brainco-demonstrates-brain-controlled-robot-ai-platform/>)</sup>.
+
+## AI Hardware & Infrastructure
+
+- Google is developing a chip that bakes Gemini's neural-network architecture directly into the silicon, locking the model structure for efficiency while allowing weight refreshes <sup>[7](<https://thenextweb.com/news/google-frozen-chip-gemini-silicon>)</sup>.
+- AMD launched Helios, its first rack-scale AI system combining GPUs, CPUs, networking, and software; Microsoft is among the first buyers, with shipments starting later this year at an estimated $5–5.5M per rack <sup>[8](<https://www.cnbc.com/2026/07/20/amd-helios-microsoft-ai-nvidia.html>)</sup>.
+- Z.ai began partial operations at a large data center running exclusively on Chinese-made chips, containing no Nvidia hardware <sup>[9](<https://thenextweb.com/news/z-ai-data-centre-chinese-made-chips-nvidia>)</sup>.
+- Taiwan indicted a former TSMC manager for allegedly stealing 21 confidential chip documents for use in China <sup>[10](<https://www.tomshardware.com/tech-industry/taiwan-inducts-ex-tsmc-manager-for-allegedly-stealing-chip-secrets-for-china>)</sup>.
+- Advanced materials science is increasingly seen as the defining constraint on next-gen AI performance, as semiconductors and data centers push physical limits <sup>[11](<https://www.technologyreview.com/2026/07/21/1140602/advancing-next-gen-ai-with-materials-science-innovation/>)</sup>.
+
+## MLOps & Vector Search
+
+- Weaviate introduced query profiling tooling that goes beyond the existing slow-query log, letting developers break down where a specific slow query spends time—filter, vector search, disk reads, or keyword scoring—without guessing <sup>[12](<https://weaviate.io/blog/query-profiling>)</sup>.
+
+## AI in Mathematics & Formal Methods
+
+- AI tools are now solving theorems and writing proofs in Lean, accelerating formalization research and surfacing counterexamples faster than human mathematicians <sup>[13](<https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/>)</sup>.
+
+## Software Engineering & Developer Practices
+
+- Two essays explore how AI collapses the cost of code: one argues headcount now measures accountability rather than capacity <sup>[14](<https://karimjedda.com/engineering-management-after-cost-of-code-collapse/>)</sup>, while another frames a "12-factor companies" model for organizations to be smaller, faster, and deliver outsized value <sup>[15](<https://x.com/jeffreyhuber/status/2079266941366407380>)</sup>.
+- The "productivity-experience paradox" highlights that AI boosts external output but can erode internal goods like skill, mastery, and satisfaction <sup>[16](<https://annievella.com/posts/the-productivity-experience-paradox/>)</sup>.
+
+## Cloud, Web & Industry
+
+- Google's AI-powered search is sending less traffic to external sites, raising concerns about the open web as the company builds an "AI fence" around its ecosystem <sup>[17](<https://www.nytimes.com/2026/07/20/technology/google-ai-open-web.html?unlocked_article_code=1.zVA.zlFm.N0yQj1yEmr0B&smid=url-share>)</sup>.
+- A US District Judge issued a 14-day pause on the $110B Paramount–Warner Bros. Discovery merger over competition concerns <sup>[18](<https://techcrunch.com/2026/07/20/judge-pauses-110b-paramount-warner-bros-merger/>)</sup>.
 
 ## Sources
 
-1. [China’s AI models have Trump’s AI world at war with itself](<https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/>) — _technologyreview.com_
-2. [The Kimi K3 Moment](<https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/>) — _stephen.bochinski.dev_
-3. [Kimi K3 has received far more love than expected](<https://x.com/kimi_moonshot/status/2078855608565207130>) — _x.com_
-4. [Moonshot AI Plans Hong Kong IPO After Kimi K3 Model Debut](<https://finance.yahoo.com/markets/stocks/articles/moonshot-ai-plans-hong-kong-123000193.html>) — _finance.yahoo.com_
-5. [Qwen3.8 Is Going Open-Weight](<https://x.com/Alibaba_Qwen/status/2078759124914098291>) — _x.com_
-6. [Alibaba open-sources its AI chip software stack at WAIC, targeting Nvidia's CUDA lock-in](<https://thenextweb.com/news/alibaba-t-head-sail-open-source-nvidia-cuda-alternative>) — _thenextweb.com_
-7. [Import AI 465: Open vs closed gaps; Kimi K3; Demis&#8217; big policy plan](<https://jack-clark.net/2026/07/20/import-ai-465-open-vs-closed-gaps-kimi-k3-demis-big-policy-plan/>) — _jack-clark.net_
-8. [Working at the frontier: How Rakuten builds agents overnight with Claude Fable 5](<https://claude.com/blog/working-at-the-frontier-rakuten>) — _claude_
-9. [Claude Fable 5 will be included in all Max and Team Premium plans](<https://x.com/claudeai/status/2078302415804379218>) — _x.com_
-10. [Agent swarms and the new model economics](<https://cursor.com/blog/agent-swarm-model-economics>) — _cursor_
-11. [Agents think in milliseconds, legacy infrastructure doesn't. LinkedIn, Walmart, and Zendesk shared how they closed the gap at VB Transform 2026](<https://venturebeat.com/data/agents-think-in-milliseconds-legacy-infrastructure-doesnt-linkedin-walmart-and-zendesk-shared-how-they-closed-the-gap-at-vb-transform-2026>) — _venturebeat.com_
-12. [A Practical Guide to Reducing Token Spend](<https://www.adamhjk.com/blog/a-practical-guide-to-reducing-token-spend/>) — _adamhjk.com_
-13. [I burned all my tokens researching how to save tokens](<https://quesma.com/blog/custom-deep-research-pipeline/>) — _quesma.com_
-14. [AI Agents Need Data Product Context Not More RAG](<https://blog.opendataproducts.org/ai-agents-need-data-product-context-not-more-rag-99fa4690f4c8>) — _blog.opendataproducts.org_
-15. [Experience Graphs: The Data Foundation for Self-Improving Agents](<https://arxiv.org/html/2606.29823v1>) — _arxiv 2606.29823v1_
-16. [Wigolo](<https://github.com/KnockOutEZ/wigolo>) — _github.com_
-17. [LoopGain](<https://github.com/loopgain-ai/loopgain>) — _github.com_
-18. [Kimi Code CLI](<https://github.com/MoonshotAI/kimi-code>) — _github.com_
-19. [How Netflix Built Its LLM Serving Stack](<https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c>) — _netflixtechblog.com_
-20. [From Weeks to a Day: How We Made LLM Evaluation Fast Enough to Iterate on](<https://medium.com/airbnb-engineering/from-weeks-to-a-day-how-we-made-llm-evaluation-fast-enough-to-iterate-on-14e2d35198b4>) — _medium.com_
-21. [From OTEL to SLMs: Distilling Frontier Model Behaviour from Production Telemetry (45 minute video)](<https://www.infoq.com/presentations/otel-slm-ai/>) — _infoq.com_
-22. [Securing the AI supply chain on GKE: Introducing k8s-aibom for automated AI BOMs](<https://cloud.google.com/blog/products/identity-security/introducing-k8s-aibom-on-gke-for-automated-ai-bills-of-materials/>) — _cloud.google.com_
-23. [How Anthropic runs large-scale code migrations with Claude Code](<https://claude.com/blog/ai-code-migration>) — _claude.com_
-24. [Reviewing AI-generated code](<https://www.softwaremaxims.com/blog/reviewing-ai-code>) — _softwaremaxims.com_
-25. [The Human-in-the-Loop is Tired](<https://pydantic.dev/articles/the-human-in-the-loop-is-tired>) — _pydantic.dev_
-26. [Coding too fast to collaborate](<https://chrisloy.dev/post/2026/07/19/coding-too-fast-to-collaborate>) — _chrisloy.dev_
-27. [The Pressure](<https://daniel.haxx.se/blog/2026/05/26/the-pressure/>) — _daniel.haxx.se_
-28. [Coding Agent Horror Stories: The Agent That Deleted Production](<https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/>) — _docker.com_
-29. [Run Ray on TPU, Part 1: The foundations](<https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/>) — _google ai_
-30. [Cloudflare Internal DNS is now generally available](<https://blog.cloudflare.com/internal-dns/>) — _blog.cloudflare.com_
-31. [AWS Lambda announces self-managed code storage](<https://aws.amazon.com/about-aws/whats-new/2026/07/lambda-self-managed-code-storage/>) — _aws.amazon.com_
-32. [Amazon EC2 now surfaces the public SSM parameters associated with public AMIs](<https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters/>) — _aws.amazon.com_
-33. [An AWS billing bug sent users estimated charges of up to $2.5 trillion](<https://thenextweb.com/news/aws-billing-bug-billion-dollar-estimates>) — _thenextweb.com_
-34. [Introducing Apache Spark 4.2](<https://www.databricks.com/blog/introducing-apache-spark-42>) — _databricks.com_
-35. [Accelerating Apache Spark Queries (and Iceberg Rust Development) with Apache DataFusion Comet](<https://iceberg.apache.org/blog/accelerating-iceberg-rust-development-with-datafusion-comet/>) — _iceberg.apache.org_
-36. [Postgres 19 Compression: from pglz to LZ4](<https://www.crunchydata.com/blog/postgres-19-compression-from-pglz-to-lz4>) — _crunchydata.com_
-37. [WP2Shell: Pre-Authentication RCE in WordPress Core](<https://slcyber.io/research-center/wp2shell-pre-authentication-rce-in-wordpress-core/>) — _slcyber.io_
-38. [Cloudflare WAF protects WordPress applications from two high-severity vulnerabilities](<https://blog.cloudflare.com/wordpress-vulnerabilities/>) — _blog.cloudflare.com_
-39. [OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests](<https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html>) — _thehackernews.com_
-40. [Researcher poisons open-weight AI model for under $100](<https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/5273880>) — _theregister.com_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-173>) — _latent.space_
+2. [Who's Afraid of Chinese Models?](<https://stratechery.com/2026/whos-afraid-of-chinese-models/?access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6InN0cmF0ZWNoZXJ5LnBhc3Nwb3J0Lm9ubGluZSIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJzdHJhdGVjaGVyeS5wYXNzcG9ydC5vbmxpbmUiLCJhenAiOiJIS0xjUzREd1Nod1AyWURLYmZQV00xIiwiZW50Ijp7InVyaSI6WyJodHRwczovL3N0cmF0ZWNoZXJ5LmNvbS8yMDI2L3dob3MtYWZyYWlkLW9mLWNoaW5lc2UtbW9kZWxzLyJdfSwiZXhwIjoxNzg3MTM3Mzc5LCJpYXQiOjE3ODQ1NDUzNzksImlzcyI6Imh0dHBzOi8vYXBwLnBhc3Nwb3J0Lm9ubGluZS9vYXV0aCIsInNjb3BlIjoiZmVlZDpyZWFkIGFydGljbGU6cmVhZCBhc3NldDpyZWFkIGNhdGVnb3J5OnJlYWQgZW50aXRsZW1lbnRzIiwic3ViIjoiMmUxNzE1OTEtYzAyNC00YjZmLWIwZDYtMzQ3NWQ1NzQ0NGMxIiwidXNlIjoiYWNjZXNzIn0.YoXTMSNiowlq4l7OUExae6nvv6YWZJU4AlzfHPv6qZ1a2Cu5aMt71Pp9WBVewCRUxQN12YiFtXztk9UoOxQlB5zKa3vphsGhvrY6FVac_2ivwD4YLmQtm4w8qstqKve5Vc1VzLKMOqFFC31HuzIiKTd3T2PD5Cy9Yy13vbrK8xN-ilYrXd89DDSXiTI11WOx3wBIbRkGjPGVG-7nOyoKg1eW-Eed0s08ZfB4_Ge1ltbRjc3ZVQYecXQPCH3ecMH_vUgUdjJoMEsjU0jX3uPopXJjqJ8uroh-hsjkLtbO3L4SKNRh5MZ0GQmB-ohzhzByMcHSjcG3dAAWi_LEX8jFIQ>) — _stratechery.com_
+3. [Agent swarms and the new model economics](<https://cursor.com/blog/agent-swarm-model-economics>) — _cursor.com_
+4. [One document, two hands](<https://sunilpai.dev/posts/one-document-two-hands/>) — _sunilpai.dev_
+5. [Grabette: an open system to record robot-manipulation data](<https://huggingface.co/blog/grabette>) — _huggingface.co_
+6. [BrainCo demonstrates brain-controlled robot AI platform](<https://www.therobotreport.com/brainco-demonstrates-brain-controlled-robot-ai-platform/>) — _therobotreport.com_
+7. [Google is building a chip with Gemini baked into the silicon](<https://thenextweb.com/news/google-frozen-chip-gemini-silicon>) — _thenextweb.com_
+8. [AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer](<https://www.cnbc.com/2026/07/20/amd-helios-microsoft-ai-nvidia.html>) — _cnbc.com_
+9. [A Chinese AI lab just built a giant data centre with no Nvidia inside](<https://thenextweb.com/news/z-ai-data-centre-chinese-made-chips-nvidia>) — _thenextweb.com_
+10. [Taiwan indicts ex-TSMC manager for allegedly stealing chip secrets for China](<https://www.tomshardware.com/tech-industry/taiwan-inducts-ex-tsmc-manager-for-allegedly-stealing-chip-secrets-for-china>) — _tomshardware.com_
+11. [Advancing next-gen AI with materials science innovation](<https://www.technologyreview.com/2026/07/21/1140602/advancing-next-gen-ai-with-materials-science-innovation/>) — _technologyreview.com_
+12. [Query Profiling: See Where a Slow Query Spends Its Time](<https://weaviate.io/blog/query-profiling>) — _weaviate_
+13. [Human mathematicians are being outcounterexampled](<https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/>) — _xenaproject.wordpress.com_
+14. [Engineering management after the cost of code collapsed](<https://karimjedda.com/engineering-management-after-cost-of-code-collapse/>) — _karimjedda.com_
+15. [12 factor companies](<https://x.com/jeffreyhuber/status/2079266941366407380>) — _x.com_
+16. [The Productivity-Experience Paradox](<https://annievella.com/posts/the-productivity-experience-paradox/>) — _annievella.com_
+17. [Google Is Building an AI Fence Around the Internet It Once Championed](<https://www.nytimes.com/2026/07/20/technology/google-ai-open-web.html?unlocked_article_code=1.zVA.zlFm.N0yQj1yEmr0B&smid=url-share>) — _nytimes.com_
+18. [Judge pauses $110B Paramount-Warner Bros. merger](<https://techcrunch.com/2026/07/20/judge-pauses-110b-paramount-warner-bros-merger/>) — _techcrunch.com_
 
 
 ## Archive récente
