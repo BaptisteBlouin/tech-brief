@@ -9,23 +9,73 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-07-23
-<sub>mis à jour le 24 juillet 2026 à 01:01</sub>
+<sub>mis à jour le 24 juillet 2026 à 07:45</sub>
 
-par 60 % <sup>[1](<https://x.com/cursor_ai/status/2079993729532989500?s=12>)</sup>. De plus, Claude intègre le connecteur Anthropic Economic Index <sup>[2](<https://www.anthropic.com/news/anthropic-economic-index-connector>)</sup>, et Cisco publie les modèles de localisation de vulnérabilités Antares <sup>[3](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>)</sup>.
+## Modèles et capacités d'IA/ML
+- OpenAI lance **Health in ChatGPT**, permettant aux utilisateurs américains éligibles de connecter leurs dossiers médicaux et Apple Health pour obtenir des informations de santé personnalisées <sup>[1](<https://openai.com/index/health-in-chatgpt>)</sup>.
+- OpenAI présente **Presence**, une plateforme entreprise pour déployer des agents vocaux et chatbots en temps réel contrôlés, avec des politiques, des autorisations et des évaluations <sup>[2](<https://openai.com/index/introducing-openai-presence/>), [3](<https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots>)</sup>.
+- **Poolside AI publie Laguna S 2.1**, un modèle surpassant des concurrents plus grands comme ceux de Thinking Machines, avec une taille ~10 fois plus petite, relançant les débats sur les modèles ouverts vs. fermés et États-Unis vs. Chine <sup>[4](<https://www.latent.space/p/ainews-laguna-s-21-released-cheaper>), [5](<https://www.latent.space/p/poolside>)</sup>.
+- **Claude étend le mode vocal** à Opus, Sonnet et Haiku, prenant en charge des conversations multilingues sans les mains et des intégrations d'outils (par ex. Gmail, Slack) pour la résolution de problèmes complexes <sup>[6](<https://claude.com/blog/think-through-hard-problems-in-voice-mode>)</sup>.
+- **Hugging Face intègre l'inférence de diffusion Nunchaku 4-bit** dans Diffusers, permettant une génération texte-image efficace avec des modèles comme Krea_2_Turbo <sup>[7](<https://huggingface.co/blog/nunchaku-diffusers>)</sup>.
+- **PyTorch et Google collaborent sur Helion pour TPU**, un DSL de haut niveau pour écrire des noyaux ML portables en performance, atteignant 79 % MFU sur TPU v7 pour l'attention flash <sup>[8](<https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/>)</sup>.
+- **Arcee AI et le DOE américain annoncent Genesis-Science-1 (GS1)**, un modèle d'IA à poids ouverts pour les flux de travail de calcul scientifique, avec des contributions ouvertes jusqu'au 6 août <sup>[9](<https://www.arcee.ai/science-1>)</sup>.
+- **Cisco publie Antares**, des LLMs à poids ouverts axés sur la sécurité pour la localisation des vulnérabilités dans le code, avec des outils CLI et des intégrations CI/CD <sup>[10](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>)</sup>.
 
-    ## MLOps, DevOps et Infrastructure
-    * **Ingénierie et Stockage des Données** : L'exécution vectorisée de DuckDB optimise le traitement par lots <sup>[4](<https://www.greybeam.ai/blog/duckdb-internals-part-2>)</sup>, tandis qu'Apache DataFusion ajoute la descente de tri (sort pushdown) pour Parquet <sup>[5](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>)</sup>. En local, Iceberg, LakeKeeper et MinIO permettent des ETL CRUD complets avec DuckDB <sup>[6](<https://performancede.substack.com/p/lakekeeperminio>), [7](<https://blog.dataengineerthings.org/ai-schema-analyzer-powered-by-iceberg-and-lakekeeper-94adc7a7c65f>)</sup>, tandis qu'un rétroremplissage (backfilling) robuste demeure une exigence critique pour les pipelines de données <sup>[8](<https://thesis.optoinvest.com/posts/backfilling-most-underrated-feature/>)</sup>.
+---
+
+## Outils pour LLM, RAG et agents
+- **GitHub MCP Server adopte la spécification MCP sans état** (effective le 28 juillet), supprimant les sessions/initialisations pour des connexions plus rapides, une mise à l'échelle plus facile et la prise en charge multi-allers-retours <sup>[11](<https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification>)</sup>.
+- **GitHub Mobile ajoute l'agent cloud Copilot** pour corriger automatiquement les vérifications Actions en échec via un flux de travail en un clic, créant des PR avec les corrections proposées <sup>[12](<https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent>)</sup>.
+- **GitHub Issues introduit des contrôles d'automatisation d'agent**, permettant des approbations, des notes de confiance et des justifications pour les modifications automatisées (par ex. étiquetage, attribution) <sup>[13](<https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview>)</sup>.
+- **Claude lance des certifications basées sur les rôles** pour les déploiements entreprise, avec des examens supervisés et plus de 36 000 consultants déjà certifiés <sup>[14](<https://claude.com/blog/four-role-based-claude-certifications>)</sup>.
+- **Cursor introduit Cursor Router**, un routeur de modèles intelligent offrant des résultats de qualité frontier à 60 % de coût en moins en sélectionnant les modèles optimaux par tâche <sup>[15](<https://x.com/cursor_ai/status/2079993729532989500?s=12>)</sup>.
+- **LangChain publie une compétence d'ingénierie d'évaluation** pour automatiser la cartographie des dépôts d'agents et des traces de production en évaluations Harbor exécutables <sup>[16](<https://x.com/Vtrivedy10/status/2079976006644072796>)</sup>.
+
+---
+
+## MLOps, DevOps et infrastructure
+- **Cloudflare lance Cache Response Rules**, permettant des modifications d'en-têtes post-origine et pré-cache (par ex. suppression de `Set-Cookie`) pour améliorer les taux de succès du cache <sup>[17](<https://blog.cloudflare.com/introducing-cache-response-rules/>)</sup>.
+- **PyPI bloque les nouveaux téléchargements de fichiers pour les versions de plus de 14 jours** afin d'empêcher les attaques sur la chaîne logistique via des jetons/flux de travail compromis <sup>[18](<https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything>)</sup>.
+- **La plateforme Riviera de Dropbox** évolue pour l'IA, utilisant un modèle de plugin pour propager des améliorations (par ex. extraction de texte) dans les aperçus, la recherche et la préparation de documents IA <sup>[19](<https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond>)</sup>.
+- **Amazon GuardDuty s'étend** en une suite de sécurité complète avec des enquêtes pilotées par IA pour corrélier les alertes entre les services AWS <sup>[20](<https://aws.plainenglish.io/why-i-keep-recommending-amazon-guardduty-c3ec98563a15>)</sup>.
+- **Aurora DSQL** (AWS) introduit une compatibilité PostgreSQL, une cohérence forte et un OLTP multi-région actif-actif avec une faible latence inter-régions <sup>[21](<https://arxiv.org/pdf/2607.13276>)</sup>.
+
+---
+## Outils de développement et ingénierie logicielle
+- **L'exécution vectorisée de DuckDB** traite les données par lots de 2 048 lignes, réduisant les frais généraux via des vecteurs de sélection, des opérations précompilées et des pipelines basés sur push <sup>[22](<https://www.greybeam.ai/blog/duckdb-internals-part-2>)</sup>.
+- **Apache DataFusion optimise pour les données presque triées** avec une descente de tri, exploitant les statistiques Parquet et les filtres dynamiques pour éviter les analyses complètes <sup>[23](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>)</sup>.
+- **La spécification WebMCP progresse** mais fait face à une faible adoption ; Chrome/Gemini de Google pourrait être le premier consommateur grand public <sup>[24](<https://www.spronta.com/blog/state-of-webmcp-july-2026/>)</sup>.
+- **Les Durable Objects de Cloudflare** sont positionnés comme idéaux pour les charges de travail d'agents, combinant des isolats V8 serverless, SQLite et la prise en charge WebSocket <sup>[25](<https://calv.info/durable-objects-are-made-for-agents>)</sup>.
+- **L'API Temporal** est recommandée plutôt que `Date` de JavaScript pour une gestion des dates fiable, immuable et consciente des fuseaux horaires <sup>[26](<https://blog.gaborkoos.com/posts/2026-07-21-Your-JS-Date-Is-Lying-to-You/>)</sup>.
 
 ## Sources
 
-1. [Cursor Router](<https://x.com/cursor_ai/status/2079993729532989500?s=12>) — _x.com_
-2. [Claude Added Direct Access to AI Usage Data](<https://www.anthropic.com/news/anthropic-economic-index-connector>) — _anthropic.com_
-3. [Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>) — _blogs.cisco.com_
-4. [DuckDB Internals: Why is DuckDB Fast? (Part 2 Vectorized Execution)](<https://www.greybeam.ai/blog/duckdb-internals-part-2>) — _greybeam.ai_
-5. [Optimizing for Almost Sorted Data: Sort Pushdown in Apache DataFusion](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>) — _datafusion.apache.org_
-6. [LakeKeeper+MinIO](<https://performancede.substack.com/p/lakekeeperminio>) — _performancede.substack.com_
-7. [AI Schema Analyzer: Powered by Iceberg and Lakekeeper](<https://blog.dataengineerthings.org/ai-schema-analyzer-powered-by-iceberg-and-lakekeeper-94adc7a7c65f>) — _blog.dataengineerthings.org_
-8. [Backfilling: the most underrated feature of a data pipeline](<https://thesis.optoinvest.com/posts/backfilling-most-underrated-feature/>) — _thesis.optoinvest.com_
+1. [Launching Health in ChatGPT](<https://openai.com/index/health-in-chatgpt>) — _openai.com_
+2. [OpenAI Presence](<https://openai.com/index/introducing-openai-presence/>) — _openai.com_
+3. [OpenAI unveils Presence, a new platform that lets enterprises launch and manage realtime voice agents and chatbots](<https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots>) — _venturebeat.com_
+4. [\[AINews\] "Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro"](<https://www.latent.space/p/ainews-laguna-s-21-released-cheaper>) — _latent.space_
+5. [Inside the Model Factory — Eiso Kant, Poolside AI](<https://www.latent.space/p/poolside>) — _latent.space_
+6. [Think through hard problems in voice mode](<https://claude.com/blog/think-through-hard-problems-in-voice-mode>) — _claude_
+7. [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<https://huggingface.co/blog/nunchaku-diffusers>) — _huggingface.co_
+8. [Helion on TPU: Towards Hardware Heterogeneous Kernel Authoring](<https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/>) — _pytorch.org_
+9. [Genesis](<https://www.arcee.ai/science-1>) — _arcee.ai_
+10. [Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>) — _blogs.cisco.com_
+11. [GitHub MCP Server supports the next MCP specification](<https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification>) — _github.blog_
+12. [GitHub Mobile: Fix failing Actions checks with Copilot cloud agent](<https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent>) — _github.blog_
+13. [Agent automation controls in GitHub Issues in public preview](<https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview>) — _github.blog_
+14. [Four role-based certifications for the people who put Claude to work for customers](<https://claude.com/blog/four-role-based-claude-certifications>) — _claude_
+15. [Cursor Router](<https://x.com/cursor_ai/status/2079993729532989500?s=12>) — _x.com_
+16. [Towards Automating Eval Engineering](<https://x.com/Vtrivedy10/status/2079976006644072796>) — _x.com_
+17. [Introducing Cache Response Rules](<https://blog.cloudflare.com/introducing-cache-response-rules/>) — _blog.cloudflare.com_
+18. [Quoting Seth Larson](<https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything>) — _simonwillison.net_
+19. [How Our Universal Content Processing Platform Riviera Evolved for AI and Beyond](<https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond>) — _dropbox.tech_
+20. [Why I Keep Recommending Amazon GuardDuty](<https://aws.plainenglish.io/why-i-keep-recommending-amazon-guardduty-c3ec98563a15>) — _aws.plainenglish.io_
+21. [Aurora DSQL: Scalable, Multi-Region OLTP](<https://arxiv.org/pdf/2607.13276>) — _arxiv 2607.13276_
+22. [DuckDB Internals: Why is DuckDB Fast? (Part 2 Vectorized Execution)](<https://www.greybeam.ai/blog/duckdb-internals-part-2>) — _greybeam.ai_
+23. [Optimizing for Almost Sorted Data: Sort Pushdown in Apache DataFusion](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>) — _datafusion.apache.org_
+24. [The State of WebMCP](<https://www.spronta.com/blog/state-of-webmcp-july-2026/>) — _spronta.com_
+25. [Durable Objects are Made for Agents](<https://calv.info/durable-objects-are-made-for-agents>) — _calv.info_
+26. [Your JS Date Is Lying to You](<https://blog.gaborkoos.com/posts/2026-07-21-Your-JS-Date-Is-Lying-to-You/>) — _blog.gaborkoos.com_
 
 
 ## Archive récente
