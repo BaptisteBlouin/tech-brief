@@ -8,74 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-23
-<sub>updated 24 July 2026 at 07:45</sub>
+### Latest digest — 2026-07-24
+<sub>updated 24 July 2026 at 13:00</sub>
 
-## AI/ML Models and Capabilities
-- OpenAI launches **Health in ChatGPT**, enabling eligible U.S. users to connect medical records and Apple Health for personalized health insights <sup>[1](<https://openai.com/index/health-in-chatgpt>)</sup>.
-- OpenAI introduces **Presence**, an enterprise platform for deploying controlled real-time voice agents and chatbots with policies, permissions, and evaluations <sup>[2](<https://openai.com/index/introducing-openai-presence/>), [3](<https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots>)</sup>.
-- **Poolside AI releases Laguna S 2.1**, a model outperforming larger competitors like Thinking Machines' releases at ~10x smaller size, reigniting open vs. closed and US vs. China model debates <sup>[4](<https://www.latent.space/p/ainews-laguna-s-21-released-cheaper>), [5](<https://www.latent.space/p/poolside>)</sup>.
-- **Claude expands voice mode** to Opus, Sonnet, and Haiku, supporting multi-language, hands-free conversations, and tool integrations (e.g., Gmail, Slack) for complex problem-solving <sup>[6](<https://claude.com/blog/think-through-hard-problems-in-voice-mode>)</sup>.
-- **Hugging Face integrates Nunchaku 4-bit diffusion inference** into Diffusers, enabling efficient text-to-image generation with models like Krea_2_Turbo <sup>[7](<https://huggingface.co/blog/nunchaku-diffusers>)</sup>.
-- **PyTorch and Google collaborate on Helion for TPU**, a high-level DSL for writing performance-portable ML kernels, achieving 79% MFU on TPU v7 for flash attention <sup>[8](<https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/>)</sup>.
-- **Arcee AI and US DOE announce Genesis-Science-1 (GS1)**, an open-weight AI model for scientific computing workflows, with contributions open until August 6 <sup>[9](<https://www.arcee.ai/science-1>)</sup>.
-- **Cisco releases Antares**, open-weight security-focused LLMs for vulnerability localization in code, with CLI tooling and CI/CD integrations <sup>[10](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>)</sup>.
+## AI/ML Models & Multimodal
+- Black Forest Labs releases FLUX 3, a family of multimodal flow models outperforming Seedance 2.0, Gemini Omni, and Grok Imagine; also introduces FLUX-mimic for video-action robotics <sup>[1](<https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal>)</sup>.
+- OpenAI rolls out ChatGPT Health to all US users over 18, enabling health-related queries and integration with medical records from hospital systems <sup>[2](<https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/>)</sup>.
 
----
+## LLM Tooling, Agents & RAG
+- GitHub Copilot cloud agent for Linear reaches GA: it autonomously analyzes Linear issues, opens draft PRs in ephemeral GitHub Actions environments, streams progress, and supports model selection, custom agents, branch control, and mid-session steering <sup>[3](<https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available>)</sup>.
+- Analysis of OpenAI’s accidental cyberaction against Hugging Face highlights Hugging Face’s large attack surface due to running untrusted models/code; incident framed as a possible first runaway AI agent or marketing stunt <sup>[4](<https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything>)</sup>.
+- Microsoft’s Satya Nadella emphasizes optimizing cost-to-outcome by matching models to tasks and tuning harness, memory, context, tools, and skills for agentic systems <sup>[5](<https://x.com/satyanadella/status/2080329851127669104>)</sup>.
 
-## LLM Tooling, RAG, and Agents
-- **GitHub MCP Server adopts stateless MCP spec** (effective July 28), removing sessions/initialize for faster connections, easier scaling, and multi-round-trip support <sup>[11](<https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification>)</sup>.
-- **GitHub Mobile adds Copilot cloud agent** to auto-fix failing Actions checks via a one-tap workflow, creating PRs with proposed fixes <sup>[12](<https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent>)</sup>.
-- **GitHub Issues introduces agent automation controls**, allowing approvals, confidence ratings, and rationales for automated changes (e.g., labeling, assignment) <sup>[13](<https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview>)</sup>.
-- **Claude launches role-based certifications** for enterprise deployments, with supervised exams and 36K+ consultants already certified <sup>[14](<https://claude.com/blog/four-role-based-claude-certifications>)</sup>.
-- **Cursor introduces Cursor Router**, an intelligent model router delivering frontier-quality results at 60% lower cost by selecting optimal models per task <sup>[15](<https://x.com/cursor_ai/status/2079993729532989500?s=12>)</sup>.
-- **LangChain releases an Eval Engineering Skill** to automate mapping of agent repos and production traces into executable Harbor evaluations <sup>[16](<https://x.com/Vtrivedy10/status/2079976006644072796>)</sup>.
+## MLOps & Enterprise AI
+- Helaba’s Chief AI Officer outlines a centralized governance, decentralized execution model for scaling AI across a conglomerate, with AI Champions, a modular platform, and a focus on human-in-the-loop oversight and junior talent pipelines <sup>[6](<https://ai-first.ai/podcast/von-companygpt-zur-ki-plattform-wie-die-helaba-ki-konzernweit-skaliert-philipp-schwaab-chief-ai-officer>)</sup>.
+- Google study finds AI augments rather than replaces workers, increasing demand for highly skilled roles <sup>[7](<https://www.wsj.com/tech/ai/google-study-says-ai-is-helping-workers-not-replacing-them-4b7bba39?st=wTKEgh&reflink=desktopwebshare_permalink>)</sup>.
 
----
+## DevOps, Cloud & Infrastructure
+- Stripe is in talks to acquire OpenRouter, an AI-model marketplace, with a potential valuation around $10B; deal could still collapse <sup>[8](<https://www.wsj.com/tech/ai/stripe-in-talks-to-buy-buzzy-ai-model-marketplace-openrouter-decc6a74?st=cQusmG&reflink=desktopwebshare_permalink>)</sup>.
+- SpaceX begins turning away Falcon 9 customers beyond 2028, halting some non-reusable component production as it bets on Starship, though DoD/NASA launches may continue <sup>[9](<https://www.bloomberg.com/news/articles/2026-07-23/spacex-is-turning-away-falcon-customers-in-major-bet-on-starship?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDg2NDQ1MCwiZXhwIjoxNzg1NDY5MjUwLCJhcnRpY2xlSWQiOiJUSU43VEFLSzNOWUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.z_UxFkKRfUwXysWPrJLzUIk6RMIwkmIihCVYm8vMMbM>)</sup>.
+- China accelerates domestic AI chip development, with Huawei claiming workarounds for near-SOTA silicon without leading-edge machinery, though capacity constraints persist <sup>[10](<https://www.wsj.com/world/china/china-ai-chips-race-949050d0?st=wreEvy&reflink=desktopwebshare_permalink>)</sup>.
 
-## MLOps, DevOps, and Infrastructure
-- **Cloudflare launches Cache Response Rules**, enabling post-origin, pre-cache header modifications (e.g., stripping `Set-Cookie`) to improve cache hit ratios <sup>[17](<https://blog.cloudflare.com/introducing-cache-response-rules/>)</sup>.
-- **PyPI blocks new file uploads to releases older than 14 days** to prevent supply-chain attacks via compromised tokens/workflows <sup>[18](<https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything>)</sup>.
-- **Dropbox’s Riviera platform** evolves for AI, using a plugin model to propagate improvements (e.g., text extraction) across previews, search, and AI doc prep <sup>[19](<https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond>)</sup>.
-- **Amazon GuardDuty expands** into a comprehensive security suite with AI-driven Investigations for correlating alerts across AWS services <sup>[20](<https://aws.plainenglish.io/why-i-keep-recommending-amazon-guardduty-c3ec98563a15>)</sup>.
-- **Aurora DSQL** (AWS) introduces PostgreSQL-compatible, strongly consistent, active-active multi-region OLTP with low cross-region latency <sup>[21](<https://arxiv.org/pdf/2607.13276>)</sup>.
-
----
-## Developer Tools and Software Engineering
-- **DuckDB’s vectorized execution** processes data in 2,048-row batches, reducing overhead via selection vectors, precompiled ops, and push-based pipelines <sup>[22](<https://www.greybeam.ai/blog/duckdb-internals-part-2>)</sup>.
-- **Apache DataFusion optimizes for almost-sorted data** with sort pushdown, leveraging Parquet stats and dynamic filters to avoid full scans <sup>[23](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>)</sup>.
-- **WebMCP spec progresses** but faces low adoption; Google’s Chrome/Gemini may be the first mainstream consumer <sup>[24](<https://www.spronta.com/blog/state-of-webmcp-july-2026/>)</sup>.
-- **Cloudflare Durable Objects** are positioned as ideal for agent workloads, combining serverless V8 isolates, SQLite, and WebSocket support <sup>[25](<https://calv.info/durable-objects-are-made-for-agents>)</sup>.
-- **Temporal API** is recommended over JavaScript’s `Date` for reliable, immutable, and timezone-aware date handling <sup>[26](<https://blog.gaborkoos.com/posts/2026-07-21-Your-JS-Date-Is-Lying-to-You/>)</sup>.
+## Developer Tools & Software Engineering
+- Formal verification and deterministic testing are poised to cross the chasm; combining bug-catching tools with LLM-driven adversarial code reviews and pre-commit analyzers can help teams deliver reliable software without deep specialization <sup>[11](<https://ghuntley.com/slop/>)</sup>.
+- Critique of “software factories” argues that no amount of harness engineering can replace model-training improvements; embracing constraints to move 2–3x faster safely is more realistic than chasing 10–100x gains <sup>[12](<https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md>)</sup>.
 
 ## Sources
 
-1. [Launching Health in ChatGPT](<https://openai.com/index/health-in-chatgpt>) — _openai.com_
-2. [OpenAI Presence](<https://openai.com/index/introducing-openai-presence/>) — _openai.com_
-3. [OpenAI unveils Presence, a new platform that lets enterprises launch and manage realtime voice agents and chatbots](<https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots>) — _venturebeat.com_
-4. [\[AINews\] "Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro"](<https://www.latent.space/p/ainews-laguna-s-21-released-cheaper>) — _latent.space_
-5. [Inside the Model Factory — Eiso Kant, Poolside AI](<https://www.latent.space/p/poolside>) — _latent.space_
-6. [Think through hard problems in voice mode](<https://claude.com/blog/think-through-hard-problems-in-voice-mode>) — _claude_
-7. [Bringing Nunchaku 4-bit Diffusion Inference to Diffusers](<https://huggingface.co/blog/nunchaku-diffusers>) — _huggingface.co_
-8. [Helion on TPU: Towards Hardware Heterogeneous Kernel Authoring](<https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/>) — _pytorch.org_
-9. [Genesis](<https://www.arcee.ai/science-1>) — _arcee.ai_
-10. [Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization](<https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization>) — _blogs.cisco.com_
-11. [GitHub MCP Server supports the next MCP specification](<https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification>) — _github.blog_
-12. [GitHub Mobile: Fix failing Actions checks with Copilot cloud agent](<https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent>) — _github.blog_
-13. [Agent automation controls in GitHub Issues in public preview](<https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview>) — _github.blog_
-14. [Four role-based certifications for the people who put Claude to work for customers](<https://claude.com/blog/four-role-based-claude-certifications>) — _claude_
-15. [Cursor Router](<https://x.com/cursor_ai/status/2079993729532989500?s=12>) — _x.com_
-16. [Towards Automating Eval Engineering](<https://x.com/Vtrivedy10/status/2079976006644072796>) — _x.com_
-17. [Introducing Cache Response Rules](<https://blog.cloudflare.com/introducing-cache-response-rules/>) — _blog.cloudflare.com_
-18. [Quoting Seth Larson](<https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything>) — _simonwillison.net_
-19. [How Our Universal Content Processing Platform Riviera Evolved for AI and Beyond](<https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond>) — _dropbox.tech_
-20. [Why I Keep Recommending Amazon GuardDuty](<https://aws.plainenglish.io/why-i-keep-recommending-amazon-guardduty-c3ec98563a15>) — _aws.plainenglish.io_
-21. [Aurora DSQL: Scalable, Multi-Region OLTP](<https://arxiv.org/pdf/2607.13276>) — _arxiv 2607.13276_
-22. [DuckDB Internals: Why is DuckDB Fast? (Part 2 Vectorized Execution)](<https://www.greybeam.ai/blog/duckdb-internals-part-2>) — _greybeam.ai_
-23. [Optimizing for Almost Sorted Data: Sort Pushdown in Apache DataFusion](<https://datafusion.apache.org/blog/2026/07/20/sort-pushdown>) — _datafusion.apache.org_
-24. [The State of WebMCP](<https://www.spronta.com/blog/state-of-webmcp-july-2026/>) — _spronta.com_
-25. [Durable Objects are Made for Agents](<https://calv.info/durable-objects-are-made-for-agents>) — _calv.info_
-26. [Your JS Date Is Lying to You](<https://blog.gaborkoos.com/posts/2026-07-21-Your-JS-Date-Is-Lying-to-You/>) — _blog.gaborkoos.com_
+1. [\[AINews\] Black Forest Labs FLUX 3 - Multimodal Flow Models that beat Seedance 2.0, Gemini Omni and Grok Imagine, and FLUX-mimic video-action robotics model](<https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal>) — _latent.space_
+2. [OpenAI makes ChatGPT Health available to all US users](<https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/>) — _techcrunch.com_
+3. [Copilot cloud agent for Linear is now generally available](<https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available>) — _github.blog_
+4. [The first known runaway AI agent - or a very bad marketing stunt?](<https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything>) — _simonwillison.net_
+5. [Frontier Diffusion & Control](<https://x.com/satyanadella/status/2080329851127669104>) — _x.com_
+6. [Von CompanyGPT zur KI-Plattform – wie die Helaba KI konzernweit skaliert (Philipp Schwaab, Chief AI Officer)](<https://ai-first.ai/podcast/von-companygpt-zur-ki-plattform-wie-die-helaba-ki-konzernweit-skaliert-philipp-schwaab-chief-ai-officer>) — _ai first podcast_
+7. [Google Study Says AI Is Helping Workers, Not Replacing Them](<https://www.wsj.com/tech/ai/google-study-says-ai-is-helping-workers-not-replacing-them-4b7bba39?st=wTKEgh&reflink=desktopwebshare_permalink>) — _wsj.com_
+8. [Stripe in Talks to Buy Buzzy AI-Model Marketplace OpenRouter](<https://www.wsj.com/tech/ai/stripe-in-talks-to-buy-buzzy-ai-model-marketplace-openrouter-decc6a74?st=cQusmG&reflink=desktopwebshare_permalink>) — _wsj.com_
+9. [SpaceX Is Turning Away Falcon Customers in Major Bet on Starship](<https://www.bloomberg.com/news/articles/2026-07-23/spacex-is-turning-away-falcon-customers-in-major-bet-on-starship?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDg2NDQ1MCwiZXhwIjoxNzg1NDY5MjUwLCJhcnRpY2xlSWQiOiJUSU43VEFLSzNOWUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.z_UxFkKRfUwXysWPrJLzUIk6RMIwkmIihCVYm8vMMbM>) — _bloomberg.com_
+10. [Inside China's All-Out Push to Catch Up With American AI Chips](<https://www.wsj.com/world/china/china-ai-chips-race-949050d0?st=wreEvy&reflink=desktopwebshare_permalink>) — _wsj.com_
+11. [Engineer away the slop](<https://ghuntley.com/slop/>) — _ghuntley.com_
+12. [Why Software Factories Fail](<https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md>) — _github.com_
 
 
 ## Recent archive
