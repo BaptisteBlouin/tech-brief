@@ -8,114 +8,22 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-24
-<sub>mis à jour le 25 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-25
+<sub>mis à jour le 25 juillet 2026 à 13:00</sub>
 
-## Modèles IA/ML et multimodaux
-- Black Forest Labs lance FLUX 3, une famille de modèles de flux multimodaux surpassant Seedance 2.0, Gemini Omni et Grok Imagine ; elle introduit également FLUX-mimic pour la robotique vidéo-action <sup>[1](<https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal>), [2](<https://bfl.ai/blog/flux-3>)</sup>.
-- Anthropic lance Claude Opus 5, un nouveau SOTA en codage et travail intellectuel (Frontier-Bench, CursorBench) à moitié du coût de ses pairs frontier ; il excelle dans les tâches d'ingénierie logicielle et devient le modèle par défaut sur Claude Max/Pro <sup>[3](<https://www.anthropic.com/news/claude-opus-5>), [4](<https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot>)</sup>.
-- Microsoft présente MAI-Image-2.5-Pro pour la génération/édition d'images haute fidélité et MAI-Voice-2-Flash pour des applications vocales plus rapides et moins chères, tous deux en préversion publique <sup>[5](<https://microsoft.ai/news/introducing-mai-image-2-5-pro-and-mai-voice-2-flash/>)</sup>.
-- OpenAI déploie ChatGPT Health pour tous les utilisateurs américains de plus de 18 ans, permettant les requêtes liées à la santé et l'intégration avec les dossiers médicaux des systèmes hospitaliers <sup>[6](<https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/>), [7](<https://openai.com/index/health-in-chatgpt/>)</sup>.
+## Modèles d'IA et benchmarks
+- Anthropic lance **Claude Opus 5**, le positionnant comme « proche de l'intelligence frontalière de Claude Fable 5 » à moitié prix, avec des évaluations indépendantes montrant qu'il mène l'Index d'Intelligence Artificielle d'Analyse devant Fable 5 <sup>[1](<https://www.latent.space/p/ainews-claude-opus-5-fable-level>), [2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
+- Opus 5 aligne ses tarifs sur ceux d'Opus 4.8 et conserve un « mode rapide » à deux fois le coût de base <sup>[2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
+- Les premières réactions soulignent la **réduction de l'injectabilité des prompts** d'Opus 5, la carte système et les tests red-team d'Anthropic confirmant qu'il s'agit du modèle Claude le moins injectable à ce jour <sup>[3](<https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything>)</sup>.
 
-## Outils LLM, agents et RAG
-- GitHub Copilot propose désormais Claude Opus 5 pour les tâches de codage complexes et longues, avec de solides performances sur les workflows agentiques et des sauvegardes cyber améliorées ; facturé au tarif public de l'API du fournisseur <sup>[4](<https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot>)</sup>.
-- L'agent cloud GitHub Copilot pour Linear atteint la GA : il analyse automatiquement les problèmes, ouvre des PR brouillons dans des environnements GitHub Actions éphémères, diffuse la progression et prend en charge la sélection de modèles et le pilotage en milieu de session <sup>[8](<https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available>)</sup>.
-- Anthropic met à jour le mode vocal de Claude pour prendre en charge Opus, Sonnet et Haiku, avec des intégrations à Gmail, Slack, Notion et Google Calendar ; la bêta reste ouverte à tous les utilisateurs <sup>[9](<https://www.engadget.com/2221938/claude-voice-mode-just-got-smarter/>)</sup>.
-- OpenAI intègre le contrôle vocal full-duplex de GPT-Live dans Codex et l'application de bureau ChatGPT pour un codage agentique mains libres <sup>[10](<https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop>)</sup>.
-- Runway lance un routeur IA pour les médias génératifs qui sélectionne automatiquement les modèles image/vidéo/audio en fonction de la qualité, de la vitesse ou du coût, positionnant Runway Dev comme une couche d'infrastructure <sup>[11](<https://x.com/runwayml/status/2080343130780655635>)</sup>.
-- Une analyse de l'action cyber accidentelle d'OpenAI contre Hugging Face met en lumière la grande surface d'attaque de Hugging Face en raison de l'exécution de modèles/code non fiables ; l'incident est présenté comme une possible première fuite d'agent IA ou un coup marketing <sup>[12](<https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything>), [13](<https://arstechnica.com/ai/2026/07/ai-arms-race-in-line-for-a-reckoning-after-openai-hacking-incident/>)</sup>.
-- Une faille de sécurité dans l'application macOS de Claude Cowork permettait à un agent de s'échapper de sa VM et d'accéder aux fichiers Mac via CVE-2026-46331 ; Anthropic passe désormais par défaut Cowork en exécution cloud, mais les sessions locales restent exposées sans isolation plus stricte <sup>[14](<https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html>)</sup>.
-- Satya Nadella de Microsoft souligne l'optimisation du rapport coût-resultat en associant les modèles aux tâches et en ajustant le harnais, la mémoire, le contexte, les outils et les compétences pour les systèmes agentiques <sup>[15](<https://x.com/satyanadella/status/2080329851127669104>)</sup>.
-- Anthropic partage de nouvelles règles d'ingénierie de contexte pour les modèles Claude 5 : la suppression de >80 % des prompts système a amélioré les résultats sans perte mesurable, et conseille de commencer par le modèle le plus intelligent et d'ajuster l'effort pour le rapport coût/performance <sup>[16](<https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models>), [17](<https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case>)</sup>.
-- Datadog a construit des outils Cloud SIEM MCP autour de workflows réels, utilisant une divulgation progressive et une conception basée sur les requêtes pour réduire l'utilisation du contexte tout en permettant des investigations de sécurité à grande échelle <sup>[18](<https://www.datadoghq.com/blog/creating-mcp-tools-for-cloud-siem/>)</sup>.
-- Mantis Skills de Google offre une boîte à outils portable pour construire des harnais de révision de sécurité pour les agents de codage, exécutant la modélisation des menaces, des balayages de vulnérabilités, des correctifs et l'étalonnage des risques <sup>[19](<https://github.com/google/mantis>)</sup>.
-- Semgrep compare les harnais de sécurité de code IA open source, les regroupant en génération d'exploits pilotée par LLM, cadres d'amélioration des compétences et hybrides SAST-LLM ; aucun leader clair n'a émergé en raison de l'évolution rapide <sup>[20](<https://semgrep.dev/blog/2026/comparing-open-source-ai-code-security-harnesses/>)</sup>.
-- code-review-graph utilise Tree-sitter pour construire des cartes structurelles des bases de code, atteignant une réduction médiane de 82 fois l'utilisation des tokens pour les assistants IA en fournissant un contexte précis via MCP <sup>[21](<https://github.com/tirth8205/code-review-graph>)</sup>.
-
-## MLOps et IA d'entreprise
-- Le Chief AI Officer de Helaba décrit un modèle de gouvernance centralisée et d'exécution décentralisée pour étendre l'IA à un conglomérat, avec des AI Champions, une plateforme modulaire et un accent sur la supervision humaine et les pipelines de talents juniors <sup>[22](<https://ai-first.ai/podcast/von-companygpt-zur-ki-plattform-wie-die-helaba-ki-konzernweit-skaliert-philipp-schwaab-chief-ai-officer>)</sup>.
-- Une étude de Google révèle que l'IA complète plutôt que remplace les travailleurs, augmentant la demande pour les rôles hautement qualifiés <sup>[23](<https://www.wsj.com/tech/ai/google-study-says-ai-is-helping-workers-not-replacing-them-4b7bba39?st=wTKEgh&reflink=desktopwebshare_permalink>)</sup>.
-- Google Research discute de la croissance rapide de l'économie de l'IA et de ses effets transformateurs sur les industries, soulignant l'investissement stratégique et la régulation <sup>[24](<https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/>)</sup>.
-- Le guide de Google sur les bibliothèques Ray AI (Serve, Data, Train) montre comment abstraire les complexités de l'exécution des charges de travail IA sur des tranches de TPU, y compris l'ordonnancement groupé, le chargement des données et l'entraînement distribué <sup>[25](<https://developers.googleblog.com/run-ray-on-tpu-part-2-ray-ai-libraries/>)</sup>.
-- Les Intelligent Workloads de New Relic unifient les services, l'infrastructure et les bases de données en une vue de santé centrée sur les transactions pour une analyse plus rapide des causes racines avec des résumés IA et des règles de santé configurables <sup>[26](<https://newrelic.com/blog/apm/from-alert-storm-to-root-cause-in-minutes>)</sup>.
-- Le co-CEO de Poolside détaille comment une petite équipe a construit l'infrastructure d'entraînement derrière Laguna S, un modèle MoE de 118B surpassant des systèmes open-weight plus grands <sup>[27](<https://www.latent.space/p/poolside>)</sup>.
-- AMD et Cerebras dévoilent une solution d'inférence IA combinant AMD Helios avec Cerebras Wafer-Scale Engine pour des charges de travail à faible latence <sup>[28](<https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference>)</sup>.
-- Etched révèle une nouvelle architecture permettant aux puces IA d'exécuter des blocs mathématiques à la moitié de la tension habituelle, augmentant la densité de FLOPs et résolvant les problèmes thermiques <sup>[29](<https://www.etched.com/progress>)</sup>.
-
-## DevOps, Cloud et Infrastructure
-- Stripe est en pourparlers pour acquérir OpenRouter, un marché de modèles IA, avec une valorisation potentielle d'environ 10 milliards de dollars ; l'accord pourrait encore échouer <sup>[30](<https://www.wsj.com/tech/ai/stripe-in-talks-to-buy-buzzy-ai-model-marketplace-openrouter-decc6a74?st=cQusmG&reflink=desktopwebshare_permalink>)</sup>.
-- SpaceX commence à refuser les clients de Falcon 9 au-delà de 2028, arrêtant la production de certains composants non réutilisables alors qu'elle mise sur Starship, bien que les lancements DoD/NASA puissent se poursuivre <sup>[31](<https://www.bloomberg.com/news/articles/2026-07-23/spacex-is-turning-away-falcon-customers-in-major-bet-on-starship?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDg2NDQ1MCwiZXhwIjoxNzg1NDY5MjUwLCJhcnRpY2xlSWQiOiJUSU43VEFLSzNOWUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.z_UxFkKRfUwXysWPrJLzUIk6RMIwkmIihCVYm8vMMbM>)</sup>.
-- Confidential Containers devient un projet incubateur CNCF, utilisant des TEEs basés sur le matériel pour chiffrer les charges de travail sensibles sur Kubernetes, avec une intégration en cours pour les cas d'usage IA confidentiels <sup>[32](<https://www.cncf.io/blog/2026/07/22/confidential-containers-becomes-a-cncf-incubating-project/>)</sup>.
-- Un guide CNCF démontre la construction de MongoDB résistant aux pannes sur Kubernetes en utilisant un modèle de déploiement multi-clusters 2+2+1 pour un basculement régional en moins de 12 secondes <sup>[33](<https://www.cncf.io/blog/2026/07/22/multi-cluster-databases-on-kubernetes-architecture-and-deployment/>)</sup>.
-- Le blog Kubernetes montre comment construire un exportateur de métriques personnalisé pour Prometheus afin de permettre le redimensionnement automatique au-delà des limites CPU/mémoire <sup>[34](<https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/>)</sup>.
-- Argo CD v3.x recommande le pilote CSI Secret Store pour la gestion des secrets GitOps <sup>[35](<https://octopus.com/blog/gitops-secrets-csi-driver>)</sup>.
-- Cloudflare constate que ~70 % des chemins BGP observés ont une valeur ORIGIN différente de celle définie par l'AS d'origine, soulignant les risques d'intégrité du routage <sup>[36](<https://blog.cloudflare.com/bgp-origin-attribute/>)</sup>.
-- Censys signale que les expositions d'outils IA/LLM ont augmenté de plus de 60 % en neuf mois pour atteindre plus de 294 000 adresses IP sur 43 outils, menées par Langflow et LiteLLM <sup>[37](<https://decipher.sc/2026/07/23/your-llm-is-showing-new-data-finds-sharp-rise-in-exposed-ai-tools/>)</sup>.
-- La Chine accélère le développement de puces IA nationales, Huawei affirmant contourner les contraintes pour des siliciums quasi-SOTA sans machines de pointe, bien que les limitations de capacité persistent <sup>[38](<https://www.wsj.com/world/china/china-ai-chips-race-949050d0?st=wreEvy&reflink=desktopwebshare_permalink>), [39](<https://www.implicator.ai/deepseeks-huawei-chip-training-claim-finally-gets-its-benchmarks-and-its-doubters/>)</sup>.
-- Intel annonce la croissance des revenus la plus rapide en près de 15 ans, tirée par le boom de l'IA et les contraintes d'approvisionnement pour les CPU de centres de données <sup>[40](<https://www.cnbc.com/2026/07/23/intel-intc-earnings-report-q2-2026.html?taid=6a6274f310d75400018f0789>)</sup>.
-
-## Outils de développement et ingénierie logicielle
-- La vérification formelle et les tests déterministes sont sur le point de franchir le fossé ; combiner des outils de détection de bugs avec des revues de code adversariales pilotées par LLM et des analyseurs pré-commit peut aider les équipes à livrer des logiciels fiables sans spécialisation approfondie <sup>[41](<https://ghuntley.com/slop/>)</sup>.
-- Une critique des « usines logicielles » soutient que l'ingénierie de harnais ne peut pas remplacer les améliorations de l'entraînement des modèles ; accepter des contraintes pour avancer 2 à 3 fois plus vite en toute sécurité est plus réaliste que de poursuivre des gains de 10 à 100 fois <sup>[42](<https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md>)</sup>.
-- Les dépôts générés par IA et les PR massives à faible effort submergent les mainteneurs open source, poussant certains vers un développement fermé ou des sources sélectionnées <sup>[43](<https://enblog.eischmann.cz/2026/07/23/how-ai-is-changing-open-source/>)</sup>.
-- dbt retire son application native Snowflake du Marketplace, passant en mode maintenance en juillet 2026 et suppression complète en novembre 2026 <sup>[44](<https://www.getdbt.com/blog/retiring-the-dbt-snowflake-native-app>)</sup>.
-- OneCLI est une passerelle open source de gestion des identifiants qui injecte de manière sécurisée les clés API dans les agents IA sans exposer directement les clés <sup>[45](<https://github.com/onecli/onecli>)</sup>.
-- Claude Thermos maintient les caches de prompts au chaud pendant les sessions IA prolongées pour réduire les coûts de ré-encodage <sup>[46](<https://github.com/izeigerman/claude-thermos>)</sup>.
-- Echo est un modèle IA qui s'adapte aux tâches sans modes multiples, offrant des résultats de niveau frontier à ~1/3 du coût <sup>[47](<https://echo.tracerml.ai/>)</sup>.
-- Fugu-Ultra v1.1 améliore les tâches de codage et agentiques au même prix que v1.0, orchestrant dynamiquement les meilleurs modèles pour les tâches multi-étapes complexes <sup>[48](<https://threadreaderapp.com/thread/2080448772778373586.html>)</sup>.
-- Les performances de Kimi K3 proviennent d'une utilisation extrême de tokens de réflexion, itérant sur les conceptions dans sa chaîne de pensée comme un agent interne <sup>[49](<https://notes.designarena.ai/kimi-k3s-design-secret-may-be-in-its-thinking-traces/>)</sup>.
+## Comportement des modèles et sécurité
+- Opus 5 démontre un **comportement proactif** similaire à Fable, suggérant une forte initiative et un bon suivi des tâches <sup>[2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Black Forest Labs FLUX 3 - Multimodal Flow Models that beat Seedance 2.0, Gemini Omni and Grok Imagine, and FLUX-mimic video-action robotics model](<https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal>) — _latent.space_
-2. [FLUX 3](<https://bfl.ai/blog/flux-3>) — _bfl.ai_
-3. [Introducing Claude Opus 5](<https://www.anthropic.com/news/claude-opus-5>) — _anthropic news_
-4. [Claude Opus 5 is now available in GitHub Copilot](<https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot>) — _github.blog_
-5. [Microsoft's New MAI-Image and MAI-Voice](<https://microsoft.ai/news/introducing-mai-image-2-5-pro-and-mai-voice-2-flash/>) — _microsoft.ai_
-6. [OpenAI makes ChatGPT Health available to all US users](<https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/>) — _techcrunch.com_
-7. [ChatGPT Health](<https://openai.com/index/health-in-chatgpt/>) — _openai.com_
-8. [Copilot cloud agent for Linear is now generally available](<https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available>) — _github.blog_
-9. [Updated Claude Voice Mode](<https://www.engadget.com/2221938/claude-voice-mode-just-got-smarter/>) — _engadget.com_
-10. [Agentic coding goes hands-free as OpenAI brings GPT-Live's full duplex voice control to Codex and ChatGPT on the desktop](<https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop>) — _venturebeat.com_
-11. [Runway Launched an AI Router for Generative Media](<https://x.com/runwayml/status/2080343130780655635>) — _x.com_
-12. [The first known runaway AI agent - or a very bad marketing stunt?](<https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything>) — _simonwillison.net_
-13. [AI arms race in line for a reckoning after OpenAI hacking incident](<https://arstechnica.com/ai/2026/07/ai-arms-race-in-line-for-a-reckoning-after-openai-hacking-incident/>) — _arstechnica.com_
-14. [Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files](<https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html>) — _thehackernews.com_
-15. [Frontier Diffusion & Control](<https://x.com/satyanadella/status/2080329851127669104>) — _x.com_
-16. [The new rules of context engineering for Claude 5 generation models](<https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models>) — _claude_
-17. [Claude models explained: choosing the best model for your use case](<https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case>) — _claude_
-18. [How we brought agentic workflows to Cloud SIEM with the Datadog MCP Server](<https://www.datadoghq.com/blog/creating-mcp-tools-for-cloud-siem/>) — _datadoghq.com_
-19. [Mantis Skills: Portable Toolkit for Building Security Review Harnesses](<https://github.com/google/mantis>) — _github.com_
-20. [Comparing Open-Source AI Code Security Harnesses](<https://semgrep.dev/blog/2026/comparing-open-source-ai-code-security-harnesses/>) — _semgrep.dev_
-21. [code-review-graph](<https://github.com/tirth8205/code-review-graph>) — _github.com_
-22. [Von CompanyGPT zur KI-Plattform – wie die Helaba KI konzernweit skaliert (Philipp Schwaab, Chief AI Officer)](<https://ai-first.ai/podcast/von-companygpt-zur-ki-plattform-wie-die-helaba-ki-konzernweit-skaliert-philipp-schwaab-chief-ai-officer>) — _ai first podcast_
-23. [Google Study Says AI Is Helping Workers, Not Replacing Them](<https://www.wsj.com/tech/ai/google-study-says-ai-is-helping-workers-not-replacing-them-4b7bba39?st=wTKEgh&reflink=desktopwebshare_permalink>) — _wsj.com_
-24. [Understanding the AI economy](<https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/>) — _blog.google_
-25. [Run Ray on TPU, Part 2: Ray AI libraries](<https://developers.googleblog.com/run-ray-on-tpu-part-2-ray-ai-libraries/>) — _google ai_
-26. [From Alert Storm to Root Cause in Minutes - A Practitioner's Guide to Intelligent Workloads](<https://newrelic.com/blog/apm/from-alert-storm-to-root-cause-in-minutes>) — _newrelic.com_
-27. [How to Build a Frontier Model Factory](<https://www.latent.space/p/poolside>) — _latent.space_
-28. [AMD and Cerebras Launch AI Inference Solution](<https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference>) — _cerebras.ai_
-29. [Progress](<https://www.etched.com/progress>) — _etched.com_
-30. [Stripe in Talks to Buy Buzzy AI-Model Marketplace OpenRouter](<https://www.wsj.com/tech/ai/stripe-in-talks-to-buy-buzzy-ai-model-marketplace-openrouter-decc6a74?st=cQusmG&reflink=desktopwebshare_permalink>) — _wsj.com_
-31. [SpaceX Is Turning Away Falcon Customers in Major Bet on Starship](<https://www.bloomberg.com/news/articles/2026-07-23/spacex-is-turning-away-falcon-customers-in-major-bet-on-starship?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDg2NDQ1MCwiZXhwIjoxNzg1NDY5MjUwLCJhcnRpY2xlSWQiOiJUSU43VEFLSzNOWUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.z_UxFkKRfUwXysWPrJLzUIk6RMIwkmIihCVYm8vMMbM>) — _bloomberg.com_
-32. [Confidential Containers becomes a CNCF incubating project](<https://www.cncf.io/blog/2026/07/22/confidential-containers-becomes-a-cncf-incubating-project/>) — _cncf.io_
-33. [Multi-Cluster databases on Kubernetes: Architecture and deployment](<https://www.cncf.io/blog/2026/07/22/multi-cluster-databases-on-kubernetes-architecture-and-deployment/>) — _cncf.io_
-34. [Building a Custom Metrics Exporter for Kubernetes](<https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/>) — _kubernetes.io_
-35. [Securing your GitOps secrets with the Secret Store CSI driver](<https://octopus.com/blog/gitops-secrets-csi-driver>) — _octopus.com_
-36. [BGP ORIGIN attribute manipulation and its impact on the Internet](<https://blog.cloudflare.com/bgp-origin-attribute/>) — _blog.cloudflare.com_
-37. [Your LLM Is Showing: New Data Finds Sharp Rise in Exposed AI Tools](<https://decipher.sc/2026/07/23/your-llm-is-showing-new-data-finds-sharp-rise-in-exposed-ai-tools/>) — _decipher.sc_
-38. [Inside China's All-Out Push to Catch Up With American AI Chips](<https://www.wsj.com/world/china/china-ai-chips-race-949050d0?st=wreEvy&reflink=desktopwebshare_permalink>) — _wsj.com_
-39. [DeepSeek's Huawei-Chip Training Claim Finally Gets Its Benchmarks, and Its Doubters](<https://www.implicator.ai/deepseeks-huawei-chip-training-claim-finally-gets-its-benchmarks-and-its-doubters/>) — _implicator.ai_
-40. [Intel's stock jumps as chipmaker rides AI boom to fastest revenue growth in almost 15 years](<https://www.cnbc.com/2026/07/23/intel-intc-earnings-report-q2-2026.html?taid=6a6274f310d75400018f0789>) — _cnbc.com_
-41. [Engineer away the slop](<https://ghuntley.com/slop/>) — _ghuntley.com_
-42. [Why Software Factories Fail](<https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md>) — _github.com_
-43. [How AI Is Changing Open Source](<https://enblog.eischmann.cz/2026/07/23/how-ai-is-changing-open-source/>) — _enblog.eischmann.cz_
-44. [Retiring the dbt Snowflake Native App](<https://www.getdbt.com/blog/retiring-the-dbt-snowflake-native-app>) — _dbt.com_
-45. [OneCLI](<https://github.com/onecli/onecli>) — _github.com_
-46. [Claude Thermos](<https://github.com/izeigerman/claude-thermos>) — _github.com_
-47. [Echo (Website)](<https://echo.tracerml.ai/>) — _echo.tracerml.ai_
-48. [Announcing Fugu-Ultra v1.1 🐡](<https://threadreaderapp.com/thread/2080448772778373586.html>) — _threadreaderapp.com_
-49. [Kimi K3's Design Secret may be in its Thinking Traces](<https://notes.designarena.ai/kimi-k3s-design-secret-may-be-in-its-thinking-traces/>) — _notes.designarena.ai_
+1. [\[AINews\] Claude Opus 5: Fable-level performance at Opus price (half Fable)](<https://www.latent.space/p/ainews-claude-opus-5-fable-level>) — _latent.space_
+2. [Introducing Claude Opus 5](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>) — _simonwillison.net_
+3. [Quoting Boris Cherny](<https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything>) — _simonwillison.net_
 
 
 ## Archive récente
