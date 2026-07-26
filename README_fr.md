@@ -8,26 +8,23 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-07-25
-<sub>mis à jour le 26 juillet 2026 à 01:01</sub>
+### Dernier digest — 2026-07-26
+<sub>mis à jour le 26 juillet 2026 à 13:00</sub>
 
-## Modèles d'IA et benchmarks
-- Anthropic lance **Claude Opus 5**, le positionnant comme "proche de l'intelligence frontalière de Claude Fable 5" à moitié prix, avec des évaluations indépendantes montrant qu'il mène l'Indice d'Intelligence Artificielle d'Analyse devant Fable 5 <sup>[1](<https://www.latent.space/p/ainews-claude-opus-5-fable-level>), [2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
-- Opus 5 aligne son tarif sur celui d'Opus 4.8 et conserve un "mode rapide" à deux fois le coût de base <sup>[2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
-- Les premières réactions soulignent la **réduction de l'injectabilité de prompts** d'Opus 5, la fiche système d'Anthropic et les tests de red-team confirmant qu'il s'agit du modèle Claude le moins sensible à l'injection de prompts à ce jour <sup>[3](<https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything>)</sup>.
+## Ingénierie et outils IA/ML
+- Amazon investit considérablement dans le Lean Focused Research Organization pour faire progresser Lean en tant que langage pour les preuves mathématiques, dans le but de rendre les preuves de correction pratiques pour les agents IA et les logiciels à grande échelle <sup>[1](<https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization>)</sup>.
 
-## Comportement des modèles et sécurité
-- Opus 5 démontre un **comportement proactif** similaire à Fable, suggérant une forte initiative et un bon suivi des tâches <sup>[2](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>)</sup>.
+## Outils pour développeurs et ingénierie logicielle
+- Ruff v0.16.0 étend son ensemble de règles par défaut de 59 à 413 règles, activant de nombreuses vérifications précédemment optionnelles qui détectent des problèmes graves comme les erreurs de syntaxe et d'exécution ; ce changement peut interrompre les pipelines CI pour les projets avec des versions non fixées de Ruff <sup>[2](<https://simonwillison.net/2026/Jul/25/ruff/#atom-everything>)</sup>.
 
-## Écosystème IA et modèles ouverts
-- Les modèles d'IA à poids ouverts deviennent la base du prochain écosystème IA, avec des parallèles tirés avec l'essor de Kubernetes en tant que substrat neutre et ouvert qui a galvanisé la communauté cloud-native et stimulé une innovation rapide en matière d'outils, de startups et d'adoption par les entreprises <sup>[4](<https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/>)</sup>.
+## Cloud et infrastructure
+- Cloudflare introduit de nouvelles options de gestion du trafic IA pour ses clients, améliorant le contrôle sur le trafic des bots et crawlers liés à l'IA <sup>[3](<https://blog.cloudflare.com/content-independence-day-ai-options/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Claude Opus 5: Fable-level performance at Opus price (half Fable)](<https://www.latent.space/p/ainews-claude-opus-5-fable-level>) — _latent.space_
-2. [Introducing Claude Opus 5](<https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything>) — _simonwillison.net_
-3. [Quoting Boris Cherny](<https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything>) — _simonwillison.net_
-4. [Open-weight AI is having its Kubernetes moment](<https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/>) — _hnrss.org_
+1. [Amazon is investing in the Lean Focused Research Organization](<https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization>) — _amazon.science_
+2. [Ruff v0.16.0](<https://simonwillison.net/2026/Jul/25/ruff/#atom-everything>) — _simonwillison.net_
+3. [Cloudflare's new AI traffic options for customers](<https://blog.cloudflare.com/content-independence-day-ai-options/>) — _hnrss.org_
 
 
 ## Archive récente
