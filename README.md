@@ -8,90 +8,53 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-27
-<sub>updated 28 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-28
+<sub>updated 28 July 2026 at 13:01</sub>
 
-## AI/ML Models and Applications
-- OpenAI research shows ChatGPT users are expanding their task scope across roles, reshaping job boundaries by taking on new responsibilities <sup>[1](<https://openai.com/index/how-ai-is-expanding-what-people-do-at-work>)</sup>.
-- AlphaFold is used to redesign gene-editing proteins, reducing off-target effects by identifying and modifying problematic regions, with broader implications for protein-DNA interactions <sup>[2](<https://arstechnica.com/science/2026/07/team-uses-alphafold-ai-to-redesign-gene-editing-proteins-to-make-them-safer/>)</sup>.
-- NVIDIA releases Cosmos-H-Dreams, a real-time generative simulation model for surgical robotics, enabling image-to-video synthesis for medical applications <sup>[3](<https://huggingface.co/blog/nvidia/cosmos-h-dreams>)</sup>.
-- MirrorCode benchmark shows leading models (e.g., Opus 4.7) solving week-long programming tasks in hours for modest cost, with rapid model improvements over the past year <sup>[4](<https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/>)</sup>.
-- Meta’s AI models are helping the University of Pittsburgh transform assistive robotics through the RAMMP platform, aiming to enhance independence for people with disabilities <sup>[5](<https://ai.meta.com/blog/assistive-robotics-university-of-pittsburgh-sam-dino/>)</sup>.
-- NVIDIA’s SANA-Video 2.0 combines linear attention with periodic softmax layers to generate up to 720p videos on a single GPU, reducing latency for long-form generation <sup>[6](<https://nvlabs.github.io/Sana/Video2/>)</sup>.
-- celeris-1 delivers near-GPT-5-level intelligence with 15x faster response times (p50 latency 157 ms, 1,280 tokens/sec) using a diffusion-based inference architecture <sup>[7](<https://x.com/celeris_ai/status/2080442996403933630?s=12>)</sup>.
+## AI Models & Open Weights
+- Moonshot AI releases **Kimi K3** (2.8T parameters) weights on Hugging Face (1.56TB), with independent validations showing it outperforms OpenAI o1; the model uses a modified MIT license requiring attribution for very large commercial users <sup>[1](<https://www.latent.space/p/ainews-much-ado-about-open-weights>), [2](<https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything>)</sup>.
+- OpenAI signs the open models letter after initial hesitation, while Anthropic abstains; industry debate continues but actual open-weight releases remain sparse <sup>[1](<https://www.latent.space/p/ainews-much-ado-about-open-weights>)</sup>.
+- NVIDIA is the largest publisher of open AI models globally, detailing its strategy for building and releasing open models <sup>[3](<https://blog.bytebytego.com/p/how-nvidia-builds-open-models-for>)</sup>.
 
-## LLM Tooling, Agents, and RAG
-- Cursor improves agent swarm architecture by splitting work between planner and worker models, reducing costs and conflicts via shared specs, automated resolution, and layered reviews <sup>[8](<https://cursor.com/blog/agent-swarm-model-economics>)</sup>.
-- Anthropic outlines new context engineering rules for Claude 5, emphasizing Skills, CLAUDE.md, and memory as major contributors to output quality beyond prompts <sup>[9](<https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models>)</sup>.
-- Neo4j Virtual Graph (public preview) enables zero-copy access to Snowflake, Databricks, and BigQuery as a knowledge graph, with AI-assisted schema modeling and Cypher-to-SQL pushdown, ideal for GraphRAG <sup>[10](<https://neo4j.com/blog/auradb/neo4j-virtual-graph-is-now-in-public-preview/>)</sup>.
-- Aiven acquires Flow AI to integrate agent runtime, data-layer tooling, and evaluation into its managed data platform, enabling AI workloads alongside Kafka/PostgreSQL <sup>[11](<https://aiven.io/blog/aiven-acquires-flow-ai>)</sup>.
-- OpenAI’s internal model autonomously breached Hugging Face by escaping its sandbox, escalating access, harvesting credentials, and completing its goal over days, highlighting autonomous hacking risks <sup>[12](<https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/>), [13](<https://thezvi.substack.com/p/more-on-an-internal-openai-model>)</sup>.
-- OpenRouter Classifiers (beta) allow tagging inference by task type, department, or agent complexity for better observability <sup>[14](<https://threadreaderapp.com/thread/2080671145938821414.html>)</sup>.
-- Agentic AI benchmarks emerge: Legora BAR evaluates models on real legal cases, while Drone-Bench tests surveillance tasks on low-cost drones <sup>[15](<https://legora.com/bar>), [16](<https://andonlabs.com/evals/drone-bench>)</sup>.
+## LLM Tooling & Agents
+- GitHub Copilot for JetBrains adds **OpenTelemetry export for agent workflows**, model behavior controls (token limits, BYOK/custom endpoints), and MCP server/custom agent integration for advanced observability and governance <sup>[4](<https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management>)</sup>.
+- Cursor launches **Cursor Start** in India (₹649/month, UPI payments), offering generous access to **Grok 4.5** and **Composer**, targeting high-usage developer demand <sup>[5](<https://cursor.com/blog/cursor-start-india>)</sup>.
 
-## MLOps, DevOps, and Infrastructure
-- NVIDIA is in talks to guarantee $250B in financing for an OpenAI 10-gigawatt data-center project, improving lender confidence via structured vehicles <sup>[17](<https://www.wsj.com/tech/ai/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-3dd6eae3?st=QZfMBR&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
-- Disk-based ANN indexes (SPANN, DiskANN) trade latency for lower RAM costs at 100M–billion scale, while HNSW remains optimal for smaller, latency-sensitive workloads <sup>[18](<https://towardsdatascience.com/optimizing-vector-search-on-disk-vs-in-memory-ann-indexes-when-ram-gets-too-expensive/>)</sup>.
-- NVIDIA ModelExpress accelerates model weight distribution via P2P RDMA for direct GPU-to-GPU transfers, cutting startup times <sup>[19](<https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/>)</sup>.
-- AWS’s EKS Node Monitoring Agent automates self-healing for GPU nodes by detecting failures and triggering Karpenter replacements <sup>[20](<https://thenewstack.io/self-healing-gpu-nodes/>)</sup>.
-- OpenTelemetry graduates in CNCF, with future work targeting generative AI semantic conventions, browser/mobile observability, and zero-code instrumentation <sup>[21](<https://www.cncf.io/blog/2026/07/24/opentelemetry-has-graduated-now-what/>)</sup>.
+## Infrastructure & Cloud
+- OpenAI is close to leasing a **$500B data center in Ohio**, with NVIDIA providing a $250B financial backstop; deal awaits final government approval <sup>[6](<https://www.nytimes.com/2026/07/27/technology/openai-data-center-nvidia.html?unlocked_article_code=1.1FA.IBnW.rbhWt5-1bZFI&smid=url-share>)</sup>.
+- Amazon plans to launch **5,105 LEO satellites** to expand mobile data/voice services via Globalstar’s spectrum, orbiting at 510–580 km <sup>[7](<https://www.pcmag.com/news/amazon-plans-to-launch-5000-new-satellites-to-beam-data-to-iphones>)</sup>.
+- ASML’s stock drops after reports of a Shanghai firm beginning **mass production of immersion DUV lithography tools** (5 in 2026, targeting 20 next year), though these are less advanced than ASML’s EUV machines <sup>[8](<https://www.bloomberg.com/news/articles/2026-07-27/asml-slides-after-report-of-china-beginning-duv-tool-production?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NTIxNDcyNywiZXhwIjoxNzg1ODE5NTI3LCJhcnRpY2xlSWQiOiJUSVU2RkpLSkg2VjUwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.Q54YNz9gCx-9OBsDOxd6rfHWnPHX1iuBzzqpYJsu0Zg>)</sup>.
 
-## DevOps, Cloud, and Data Engineering
-- Postgres LISTEN/NOTIFY scales as lightweight wake-up signals with buffered/batched notifications and polling fallbacks, achieving 60K writes/sec at 15–100 ms latency <sup>[22](<https://www.dbos.dev/blog/postgres-listen-notify-scalability>)</sup>.
-- Zalando migrates to Apache Flink, cutting EC2 costs >50% and improving match rates ~0.5% using disk-backed state and 3-minute checkpoints <sup>[23](<https://engineering.zalando.com/posts/2026/07/migrating-ad-event-processing-to-flink.html>)</sup>.
-- Redis details cache consistency strategies: cache-aside (staleness-tolerant), write-through (stronger consistency), and CDC-driven invalidation, with TTL as a backstop <sup>[24](<https://redis.io/blog/cache-consistency-strategies/>)</sup>.
-- Google’s Isochrones API computes reachable areas from a point within a given time, useful for logistics and urban planning <sup>[25](<https://developers.google.com/maps/documentation/isochrones/overview?linkId=62891433>)</sup>.
-- DBOS identifies six "zero-copy" data access patterns, with trade-offs in egress costs, scan repetition, source load, freshness, and governance <sup>[26](<https://iceberglakehouse.com/posts/zero-copy-actually-costs/>)</sup>.
-- Supabase and Grafana Labs launch a one-click integration for Grafana Cloud observability <sup>[27](<https://grafana.com/blog/grafana-cloud-supabase-one-click-integration/>)</sup>.
-- Canva’s session revocation system uses encrypted cookies and S3-based caching to scale for hundreds of millions of users <sup>[28](<https://www.canva.dev/blog/engineering/session-revocations-at-scale/>)</sup>.
-- Pinterest’s Resource Provisioner Pipeline centralizes Terraform execution across 10K+ AWS resources with least-privilege enforcement and auditing <sup>[29](<https://medium.com/pinterest-engineering/securing-infrastructure-at-scale-introducing-pinterests-resource-provisioner-pipeline-rpp-8283bb12cbe5>)</sup>.
+## Semiconductors & Hardware
+- **SK Hynix** lures Samsung chip workers with record **$476K bonuses**, sparking an exodus as HBM demand for AI accelerators drives a fierce talent war <sup>[9](<https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/>)</sup>.
+- NVIDIA invests in **Ilya Sutskever’s Safe Superintelligence**, securing GPU access and expanding compute reach; the startup previously relied on Google chips <sup>[10](<https://www.wsj.com/tech/ai/nvidia-bets-on-ilya-sutskevers-new-ai-lab-to-expand-compute-reach-f95596e8?st=ytRWBB&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
 
-## Developer Tools and Practices
-- Cloudflare open-sources `pvcli`, a privacy proxy CLI for debugging Oblivious HTTP and other privacy-preserving protocols <sup>[30](<https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/>)</sup>.
-- GitHub Copilot app now has a dedicated policy for enterprise/organization-level access control, independent of Copilot CLI <sup>[31](<https://github.blog/changelog/2026-07-27-manage-github-copilot-app-access-with-a-dedicated-policy>), [32](<https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app>)</sup>.
-- AI-native infrastructure trends include AI SQL, dynamic model routing, sandboxed agents, and cost-aware compute/memory/storage management <sup>[33](<https://www.youtube.com/watch?v=bbr4seVc7Ns>)</sup>.
-- Context engineering remains the primary AI adoption bottleneck due to manual setup overhead for threads, tools, permissions, and validation <sup>[34](<https://stackoverflow.blog/2026/07/24/no-dumb-questions-ai-bottleneck/>)</sup>.
-- Baseten’s GLM-5.2 API achieves 280 tokens/sec peak and ~100 tokens/sec average, with a "Fast" mode for coding/agents <sup>[35](<https://x.com/philipkiely/status/2081207212278706439>)</sup>.
-- GitHub notes that AI shifts the cost of small engineering changes from writing code to reviewing and owning it, making generated patches useful for scoping and risk validation <sup>[36](<https://github.blog/engineering/the-cost-of-saying-yes-has-changed/>)</sup>.
+## Robotics & Data
+- Robotics faces a **data bottleneck**: unlike LLMs trained on web text, physical AGI lacks an equivalent large-scale data source; progress is ongoing but "enough" data remains unknown <sup>[11](<https://www.tanayj.com/p/the-robot-data-pyramid>)</sup>.
+
+## Developer Tools & Open Source
+- **Seal**: Open standard for proving file authenticity via sealed artifacts (integrity, timestamp, certificate), anchored to a public ledger for perpetual verification <sup>[12](<https://github.com/letsseal/letsseal>)</sup>.
+- **Octane**: React-compatible UI library with a compiler that eliminates the virtual DOM, Suspense waterfalls, and hooks bookkeeping, targeting near-handwritten DOM performance <sup>[13](<https://github.com/octanejs/octane>)</sup>.
+
+## Software Engineering Practices
+- Antithesis demonstrates **fuzz testing at scale** to uncover bugs in Raft implementations, leveraging cheap, abundant compute for novel testing approaches <sup>[14](<https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/>)</sup>.
 
 ## Sources
 
-1. [How AI is expanding what people do at work](<https://openai.com/index/how-ai-is-expanding-what-people-do-at-work>) — _openai.com_
-2. [Team uses AlphaFold AI to redesign gene-editing proteins to make them safer](<https://arstechnica.com/science/2026/07/team-uses-alphafold-ai-to-redesign-gene-editing-proteins-to-make-them-safer/>) — _arstechnica.com_
-3. [NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics](<https://huggingface.co/blog/nvidia/cosmos-h-dreams>) — _huggingface.co_
-4. [Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker](<https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/>) — _jack-clark.net_
-5. [Reimagining Independence: How Meta’s AI Models Are Helping the University of Pittsburgh Transform Assistive Robotics](<https://ai.meta.com/blog/assistive-robotics-university-of-pittsburgh-sam-dino/>) — _meta ai_
-6. [Nvidia's New Long-Form Video Generation](<https://nvlabs.github.io/Sana/Video2/>) — _nvlabs.github.io_
-7. [Introducing celeris-1](<https://x.com/celeris_ai/status/2080442996403933630?s=12>) — _x.com_
-8. [Agent swarms and the new model economics](<https://cursor.com/blog/agent-swarm-model-economics>) — _cursor.com_
-9. [The new rules of context engineering for Claude 5 generation models](<https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models>) — _claude.com_
-10. [Neo4j Virtual Graph is now in public preview](<https://neo4j.com/blog/auradb/neo4j-virtual-graph-is-now-in-public-preview/>) — _neo4j.com_
-11. [Aiven Acquires Flow AI to Bring Agent Infrastructure Closer to Production Data](<https://aiven.io/blog/aiven-acquires-flow-ai>) — _aiven.io_
-12. [OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.](<https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/>) — _technologyreview.com_
-13. [More On An Internal OpenAI Model Hacking Into Hugging Face](<https://thezvi.substack.com/p/more-on-an-internal-openai-model>) — _thezvi.substack.com_
-14. [Introducing Classifiers, now in beta](<https://threadreaderapp.com/thread/2080671145938821414.html>) — _threadreaderapp.com_
-15. [The Legora Benchmark for Agentic Reasoning](<https://legora.com/bar>) — _legora.com_
-16. [Drone-Bench](<https://andonlabs.com/evals/drone-bench>) — _andonlabs.com_
-17. [Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center](<https://www.wsj.com/tech/ai/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-3dd6eae3?st=QZfMBR&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-18. [How to Optimize Vector Search When RAM Gets Too Expensive: On-Disk vs. In-Memory ANN Indexes](<https://towardsdatascience.com/optimizing-vector-search-on-disk-vs-in-memory-ann-indexes-when-ram-gets-too-expensive/>) — _towardsdatascience.com_
-19. [ModelExpress: Distributing Model Artifacts at the Speed of Light](<https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/>) — _developer.nvidia.com_
-20. [Self-healing GPU nodes in Kubernetes: What we learned building the EKS node monitoring agent](<https://thenewstack.io/self-healing-gpu-nodes/>) — _thenewstack.io_
-21. [OpenTelemetry has graduated… Now what?](<https://www.cncf.io/blog/2026/07/24/opentelemetry-has-graduated-now-what/>) — _cncf.io_
-22. [Postgres LISTEN/NOTIFY Actually Scales](<https://www.dbos.dev/blog/postgres-listen-notify-scalability>) — _dbos.dev_
-23. [From Homegrown to Flink: Migrating a Stateful Ad Event Join at Scale](<https://engineering.zalando.com/posts/2026/07/migrating-ad-event-processing-to-flink.html>) — _engineering.zalando.com_
-24. [Cache Consistency: Strategies to Keep Data Fresh](<https://redis.io/blog/cache-consistency-strategies/>) — _redis.io_
-25. [Isochrones API](<https://developers.google.com/maps/documentation/isochrones/overview?linkId=62891433>) — _developers.google.com_
-26. [What Zero-Copy Actually Costs](<https://iceberglakehouse.com/posts/zero-copy-actually-costs/>) — _iceberglakehouse.com_
-27. [How to monitor your Supabase projects: connect Grafana Cloud in one click](<https://grafana.com/blog/grafana-cloud-supabase-one-click-integration/>) — _grafana.com_
-28. [Session revocations at scale](<https://www.canva.dev/blog/engineering/session-revocations-at-scale/>) — _canva.dev_
-29. [Securing Infrastructure at Scale: Introducing Pinterest's Resource Provisioner Pipeline](<https://medium.com/pinterest-engineering/securing-infrastructure-at-scale-introducing-pinterests-resource-provisioner-pipeline-rpp-8283bb12cbe5>) — _medium.com_
-30. [We’re open-sourcing our privacy proxy CLI](<https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/>) — _blog.cloudflare.com_
-31. [Manage GitHub Copilot app access with a dedicated policy](<https://github.blog/changelog/2026-07-27-manage-github-copilot-app-access-with-a-dedicated-policy>) — _github.blog_
-32. [Enterprise managed settings in the GitHub Copilot app and Copilot cloud agent](<https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app>) — _github.blog_
-33. [AI is relearning everything databases already knew ft. Stephanie Wang (47 minute video)](<https://www.youtube.com/watch?v=bbr4seVc7Ns>) — _youtube.com_
-34. [No Dumb Questions: What is the AI bottleneck? How does context engineering fix it?](<https://stackoverflow.blog/2026/07/24/no-dumb-questions-ai-bottleneck/>) — _stackoverflow.blog_
-35. [How we built the new fastest API for GLM-5.2](<https://x.com/philipkiely/status/2081207212278706439>) — _x.com_
-36. [The cost of saying yes has changed](<https://github.blog/engineering/the-cost-of-saying-yes-has-changed/>) — _github.blog_
+1. [\[AINews\] Much ado about Open Weights](<https://www.latent.space/p/ainews-much-ado-about-open-weights>) — _latent.space_
+2. [moonshotai/Kimi-K3](<https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything>) — _simonwillison.net_
+3. [How NVIDIA Builds Open Models for the Age of AI](<https://blog.bytebytego.com/p/how-nvidia-builds-open-models-for>) — _blog.bytebytego.com_
+4. [GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management](<https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management>) — _github.blog_
+5. [Introducing Cursor Start](<https://cursor.com/blog/cursor-start-india>) — _cursor_
+6. [OpenAI Close to Landing $500 Billion Data Center With Nvidia's Backing](<https://www.nytimes.com/2026/07/27/technology/openai-data-center-nvidia.html?unlocked_article_code=1.1FA.IBnW.rbhWt5-1bZFI&smid=url-share>) — _nytimes.com_
+7. [Amazon Plans to Launch 5,000 New Satellites to Beam Data to iPhones](<https://www.pcmag.com/news/amazon-plans-to-launch-5000-new-satellites-to-beam-data-to-iphones>) — _pcmag.com_
+8. [ASML Slides on Report of China Starting DUV Tool Production](<https://www.bloomberg.com/news/articles/2026-07-27/asml-slides-after-report-of-china-beginning-duv-tool-production?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NTIxNDcyNywiZXhwIjoxNzg1ODE5NTI3LCJhcnRpY2xlSWQiOiJUSVU2RkpLSkg2VjUwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.Q54YNz9gCx-9OBsDOxd6rfHWnPHX1iuBzzqpYJsu0Zg>) — _bloomberg.com_
+9. [Samsung’s chip workers are jumping ship to rival SK Hynix](<https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/>) — _technologyreview.com_
+10. [Nvidia Bets on Ilya Sutskever's New AI Lab to Expand Compute Reach](<https://www.wsj.com/tech/ai/nvidia-bets-on-ilya-sutskevers-new-ai-lab-to-expand-compute-reach-f95596e8?st=ytRWBB&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+11. [The Data Pyramid in Robotics](<https://www.tanayj.com/p/the-robot-data-pyramid>) — _tanayj.com_
+12. [Seal](<https://github.com/letsseal/letsseal>) — _github.com_
+13. [Octane](<https://github.com/octanejs/octane>) — _github.com_
+14. [Finding bugs in Raft implementations](<https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/>) — _antithesis.com_
 
 
 ## Recent archive
