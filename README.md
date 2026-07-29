@@ -8,92 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-28
-<sub>updated 29 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-29
+<sub>updated 29 July 2026 at 13:00</sub>
 
-## AI Models & Open Weights
-- Moonshot AI releases **Kimi K3** (2.8T parameters, 1M-token context) weights on Hugging Face (1.56TB), with independent validations showing it outperforms OpenAI o1; the model uses a modified MIT license requiring attribution for very large commercial users <sup>[1](<https://www.latent.space/p/ainews-much-ado-about-open-weights>), [2](<https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything>), [3](<https://threadreaderapp.com/thread/2081760186235289764.html>)</sup>. UK AISI/CAISI preliminary assessment places Kimi K3 behind frontier US models on cyber tasks (32% on ExploitBench vs 76.2% for top US models), though it matched on coverage and completed a full cyber range once in ten attempts <sup>[4](<https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities>)</sup>.
-- OpenAI signs the open models letter after initial hesitation, while Anthropic rejects blanket bans on open-weight models and instead advocates tighter chip controls, action against industrial-scale distillation, and mandatory safety testing for sufficiently capable models <sup>[1](<https://www.latent.space/p/ainews-much-ado-about-open-weights>), [5](<https://www.anthropic.com/news/position-open-weights-models>)</sup>.
-- NVIDIA is the largest publisher of open AI models globally, detailing its strategy for building and releasing open models <sup>[6](<https://blog.bytebytego.com/p/how-nvidia-builds-open-models-for>)</sup>. NVIDIA also invests in **Ilya Sutskever’s Safe Superintelligence**, securing GPU access and expanding compute reach; Safe Superintelligence later announced a long-term partnership with NVIDIA, including access to the Vera Rubin GPU platform <sup>[7](<https://www.wsj.com/tech/ai/nvidia-bets-on-ilya-sutskevers-new-ai-lab-to-expand-compute-reach-f95596e8?st=ytRWBB&reflink=desktopwebshare_permalink&mod=tldr>), [8](<https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/>)</sup>.
+## AI/ML Frontiers and Safety
+- Over 1,000 employees from major frontier labs (OpenAI, Anthropic, Google DeepMind, Meta, etc.) cosign a letter warning that AI progress may soon accelerate beyond human control, urging a measured pace in development <sup>[1](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>)</sup>.
+- Anthropic’s Claude Mythos Preview autonomously discovers novel flaws in a weakened AES variant and HAWK, achieving attacks 200–1,000× faster than prior human research; verification took human researchers ~1 month <sup>[2](<https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything>), [3](<https://www.nytimes.com/2026/07/28/us/politics/anthropic-ai-encryption-security-aes.html?unlocked_article_code=1.1VA.kWg5.C7htJ8NC3S5z&smid=url-share>)</sup>.
+- Hugging Face details a machine-speed offensive cyberattack scenario, underscoring emerging AI-driven security threats <sup>[1](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>)</sup>.
 
-## LLM Tooling, Agents & Evaluations
-- GitHub Copilot for JetBrains adds **OpenTelemetry export for agent workflows**, model behavior controls (token limits, BYOK/custom endpoints), and MCP server/custom agent integration for observability and governance <sup>[9](<https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management>)</sup>. **Grok 4.5** is now available in GitHub Copilot, designed for fast, agentic coding and complex multi-step workflows with a 500K-token context, text/image inputs, and low/medium/high reasoning effort <sup>[10](<https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot>)</sup>.
-- **MCP 2026-07-28** spec moves to a stateless core, hardens authorization (OAuth 2.0/OIDC), and graduates official extensions; SDK downloads surpassed 400M/month, and support is rolling out across Claude products <sup>[11](<https://claude.com/blog/bringing-mcp-2026-07-28-to-claude>)</sup>.
-- OpenAI reports on **scientific computing with agentic AI**, showing how scientists use AI coding agents to accelerate software development and discovery in genomics and beyond <sup>[12](<https://openai.com/index/scientific-computing-agentic-ai>)</sup>. OpenAI also found workers increasingly use ChatGPT for tasks traditionally associated with other occupations, identifying “task crossover” in many occupation-specific conversations <sup>[13](<https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/>)</sup>.
-- **Cursor Start** launches in India (₹649/month, UPI payments), offering access to **Grok 4.5** and **Composer**, targeting high-usage developer demand <sup>[14](<https://cursor.com/blog/cursor-start-india>)</sup>. Codex usage has surged >10x since Jan 2026, with ChatGPT Work and Codex reaching 10M users combined shortly after launch <sup>[15](<https://www.latent.space/p/chatgpt-work>)</sup>.
-- **Molt** is a new PyTorch-native agentic reinforcement learning framework supporting custom Python rewards, tool use, multimodal environments, and LLM judges, with a compact stack scaling to trillion-parameter MoE models <sup>[16](<https://github.com/NVIDIA-NeMo/labs-molt>)</sup>. **PorTAL** is open-sourced by Ramp Labs for shared task representations and cross-model LoRA adaptation, enabling base-agnostic task latents and light per-base alignment <sup>[17](<https://threadreaderapp.com/thread/2081819550329327689.html>)</sup>.
+## LLM Tooling, Agents, and RAG
+- The Model Context Protocol (MCP) releases its largest update (2026-07-28): stateless design enables serverless/edge deployments and horizontal scaling; a formal extension path is now available <sup>[4](<https://threadreaderapp.com/thread/2082164248697069935.html>)</sup>.
+- Martin Fowler introduces the "Orchestrator’s Tax": subagents should protect an orchestrator’s working memory by offloading reasoning, with explicit delegation rules <sup>[5](<https://martinfowler.com/articles/orchestrator-tax.html>)</sup>.
+- DoorDash, Instacart, and Uber Eats integrate LLMs into search differently: offline knowledge-graph enrichment, query understanding, and fine-tuned embeddings for two-tower retrieval, respectively <sup>[6](<https://blog.bytebytego.com/p/why-doordash-instacart-and-uber-eats>)</sup>.
 
-## Security & Cyber
-- **ChatGPT AgentForger** vulnerability allowed deploying rogue Workspace Agents via phishing links, silently creating agents, connecting integrations (Outlook, Gmail, Slack, Drive), and changing write-action permissions to 'Never ask'; OpenAI patched it on June 8 <sup>[18](<https://cybersecuritynews.com/chatgpt-agentforger-vulnerability/>)</sup>.
-- **OpenAI’s agent accidentally cyberattacked Hugging Face** via a zero-day in JFrog’s Artifactory package proxy; Hugging Face released a detailed technical timeline of the July 2026 incident <sup>[19](<https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/#atom-everything>)</sup>.
-- **GitHub Actions** now holds potentially malicious workflows for approval before execution in public repositories, automatically flagging suspicious runs for review by collaborators with write access <sup>[20](<https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval>)</sup>. Dependabot now ingests malware advisories from the OpenSSF malicious-packages repository, expanding coverage across ecosystems like npm and PyPI <sup>[21](<https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems>), [22](<https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/>)</sup>. GitHub also issued a $100,000 bounty for CVE-2026-3854, an unauthenticated RCE flaw in crafted repository URL handling <sup>[23](<https://runtimewire.com/article/github-issues-100-000-bounty-for-critical-rce-vulnerability-disclosed-by-sagitz>)</sup>.
-- **Microsoft** launched **MAI-Cyber-1-Flash**, a specialized model for finding vulnerabilities in large codebases, powering the new MDASH platform <sup>[24](<https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/>)</sup>. **Cogent VR-1** is a frontier cyber reasoning model achieving >2x lift in pass@3 on the IntrusionBench black-box configuration <sup>[25](<https://www.cogent.com/blog/how-we-built-and-benchmarked-vr-1-our-frontier-cyber-reasoning-model>)</sup>.
-- **BlueNoroff** deployed a fake meeting kit capturing webcams, disabling Defender, and stealing cryptocurrency credentials via deepfake lures and PowerShell loaders <sup>[26](<https://gbhackers.com/bluenoroff-fake-meeting-kit/>)</sup>. **Hotel Wi-Fi DNS hijacking** redirected Microsoft 365 logins to fake pages, bypassing MFA via device code flow <sup>[27](<https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/>)</sup>. **Volvo/Eicher’s My Eicher telematics platform** exposed unauthenticated APIs leaking customer, vehicle, and OTP data, enabling fleet takeover <sup>[28](<https://eaton-works.com/2026/07/27/my-eicher-hack/>)</sup>.
-- **Tachyon’s canary .env** exposure on GitHub led to AWS quarantine policies and external credential access within minutes, demonstrating rapid secret harvesting <sup>[29](<https://tachyon.so/blog/what-happened-after-we-pushed-env-to-public-repo>)</sup>. **Docker** highlights a case where an agent read 29M secrets after malicious Nx npm packages were published <sup>[30](<https://www.docker.com/blog/coding-agent-horror-stories-the-29-million-secret-problem/>)</sup>.
+## MLOps, DevOps, and Security
+- npm introduces publish-time malware scanning: new packages are scanned before availability, adding a ~5–15 minute delay; dual-use content now requires metadata <sup>[7](<https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata>)</sup>.
+- GitHub Copilot app usage metrics expand: activity is now attributed per user in enterprise/organization reports and broken out in feature, model, and language rollups <sup>[8](<https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups>)</sup>.
+- CodeQL 2.26.1 improves analysis accuracy with expanded framework coverage (Go log/slog, Java/Kotlin Apache POI, JS/TS Angular decorators) and reduced Rust false positives <sup>[9](<https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage>)</sup>.
+- Modal clarifies a recent incident: a customer’s unauthenticated endpoint exposed sandbox code execution to the internet; Modal’s platform and isolation were not compromised <sup>[10](<https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything>)</sup>.
 
-## MLOps, DevOps & Infrastructure
-- OpenAI is close to leasing a **$500B data center in Ohio**, with NVIDIA providing a $250B financial backstop; the deal awaits final government approval <sup>[31](<https://www.nytimes.com/2026/07/27/technology/openai-data-center-nvidia.html?unlocked_article_code=1.1FA.IBnW.rbhWt5-1bZFI&smid=url-share>)</sup>.
-- **OlmoEarth Platform** from AllenAI enables geospatial inference at planetary scale, running open Earth observation foundation models (pretrained on ~10TB multimodal satellite data) cost-effectively for deforestation monitoring, food security, and wildfire risk <sup>[32](<https://huggingface.co/blog/allenai/olmoearth-infrastructure>)</sup>. **LFM2.5-Encoders** from LiquidAI enable fast long-context inference on CPU <sup>[33](<https://huggingface.co/blog/LiquidAI/lfm2-5-encoders>)</sup>.
-- **Google Cloud** launched **Gemini Distillation Service**, allowing users to train smaller “student” models using the outputs of larger “teacher” models (e.g., gemini-3.1-pro → gemini-2.5-flash) for high-volume, latency-sensitive applications <sup>[34](<https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/distillation>)</sup>.
-- **Cloudflare** documented Q2 2026 Internet disruptions: Super Typhoon Sinlaku caused the longest outage near Guam; Sudan’s exam-period shutdowns were most frequent; Iran restored access after an 88-day blackout; a cable cut in Saint Lucia and faulty DNSSEC signatures in Germany also caused disruptions <sup>[35](<https://blog.cloudflare.com/q2-2026-internet-disruption-summary/>)</sup>.
+## Cloud, Infrastructure, and Hardware
+- The US FCC bans new imports of foreign-made (primarily Chinese) humanoid robots and grid inverters on national-security grounds <sup>[11](<https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china>)</sup>.
 
-## Developer Tools & Engineering
-- **uv 0.12.0** introduces breaking changes to the default project generated by `uv init`, simplifying the initial structure <sup>[36](<https://simonwillison.net/2026/Jul/28/uv/#atom-everything>)</sup>.
-- **Seal** is an open standard for proving file authenticity via sealed artifacts (integrity, timestamp, certificate), anchored to a public ledger for perpetual verification <sup>[37](<https://github.com/letsseal/letsseal>)</sup>. **Octane** is a React-compatible UI library with a compiler eliminating the virtual DOM, Suspense waterfalls, and hooks bookkeeping for near-handwritten DOM performance <sup>[38](<https://github.com/octanejs/octane>)</sup>.
-- **TanStack.com** replaced React Server Components (RSC) with simpler SSR after optimizing its content renderer, as RSC’s architectural overhead was no longer justified <sup>[39](<https://tanstack.com/blog/we-stopped-using-rsc-on-tanstack-com>)</sup>. **Shopify** upgraded its Checkout Blocks app to Polaris web components and remote-dom, reducing bundle sizes and improving load times <sup>[40](<https://shopify.engineering/upgrading-checkout-blocks-app-to-polaris-web-components>)</sup>.
-- **Scriptc** compiles standard TypeScript into efficient native executables without a JS engine, offering static/dynamic execution modes and fast startup <sup>[41](<https://github.com/vercel-labs/scriptc>)</sup>. **Edge Aura** is a customizable screen effect library for organic display glows, integrable via npm and React <sup>[42](<https://edge-aura.js.org/>)</sup>.
-- **Antithesis** demonstrates fuzz testing at scale to uncover bugs in Raft implementations, leveraging cheap compute for novel testing <sup>[43](<https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/>)</sup>. A **formally verified 3D CSG** implementation in Lean 4 proves correctness against a 93-line spec, with AI autonomously generating 60K+ lines of proofs <sup>[44](<https://github.com/schildep/verified-3d-mesh-intersection>)</sup>.
-
-## Robotics & Data
-- Robotics faces a **data bottleneck**: unlike LLMs trained on web text, physical AGI lacks an equivalent large-scale data source; progress continues but "enough" data remains unknown <sup>[45](<https://www.tanayj.com/p/the-robot-data-pyramid>)</sup>.
+## Applied AI and Robotics
+- Tau launches an invite-only humanoid cleaning service in San Francisco at $30/hour, with joint human-AI control <sup>[12](<https://threadreaderapp.com/thread/2082135074615763251.html>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Much ado about Open Weights](<https://www.latent.space/p/ainews-much-ado-about-open-weights>) — _latent.space_
-2. [moonshotai/Kimi-K3](<https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything>) — _simonwillison.net_
-3. [Releasing the model weights and technical report of Kimi K3](<https://threadreaderapp.com/thread/2081760186235289764.html>) — _threadreaderapp.com_
-4. [UK AISI/CAISI Preliminary Assessment of Kimi K3's Cyber Capabilities](<https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities>) — _nist.gov_
-5. [Anthropic Rejected Blanket Bans on Open-Weight Models](<https://www.anthropic.com/news/position-open-weights-models>) — _anthropic.com_
-6. [How NVIDIA Builds Open Models for the Age of AI](<https://blog.bytebytego.com/p/how-nvidia-builds-open-models-for>) — _blog.bytebytego.com_
-7. [Nvidia Bets on Ilya Sutskever's New AI Lab to Expand Compute Reach](<https://www.wsj.com/tech/ai/nvidia-bets-on-ilya-sutskevers-new-ai-lab-to-expand-compute-reach-f95596e8?st=ytRWBB&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-8. [Safe Superintelligence Partnered with Nvidia](<https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/>) — _techcrunch.com_
-9. [GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management](<https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management>) — _github.blog_
-10. [Grok 4.5 is now available in GitHub Copilot](<https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot>) — _github.blog_
-11. [Bringing MCP 2026-07-28 to Claude](<https://claude.com/blog/bringing-mcp-2026-07-28-to-claude>) — _claude_
-12. [Scientific computing in the age of agentic AI](<https://openai.com/index/scientific-computing-agentic-ai>) — _openai.com_
-13. [OpenAI's Report on How AI is Expanding](<https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/>) — _openai.com_
-14. [Introducing Cursor Start](<https://cursor.com/blog/cursor-start-india>) — _cursor_
-15. [Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI](<https://www.latent.space/p/chatgpt-work>) — _latent.space_
-16. [Molt Agentic Reinforcement Learning Framework](<https://github.com/NVIDIA-NeMo/labs-molt>) — _github.com_
-17. [PorTAL](<https://threadreaderapp.com/thread/2081819550329327689.html>) — _threadreaderapp.com_
-18. [ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link](<https://cybersecuritynews.com/chatgpt-agentforger-vulnerability/>) — _cybersecuritynews.com_
-19. [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/#atom-everything>) — _simonwillison.net_
-20. [GitHub Actions holds potentially malicious workflows for approval](<https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval>) — _github.blog_
-21. [Dependabot alerts on malicious packages across more ecosystems](<https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems>) — _github.blog_
-22. [GitHub, PyPI add time-based defenses against supply chain attacks](<https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/>) — _bleepingcomputer.com_
-23. [GitHub issues $100,000 bounty for critical RCE vulnerability disclosed by @sagitz_](<https://runtimewire.com/article/github-issues-100-000-bounty-for-critical-rce-vulnerability-disclosed-by-sagitz>) — _runtimewire.com_
-24. [Microsoft Introduced a Cybersecurity Model](<https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/>) — _microsoft.ai_
-25. [How we built and benchmarked VR-1, our frontier cyber reasoning model](<https://www.cogent.com/blog/how-we-built-and-benchmarked-vr-1-our-frontier-cyber-reasoning-model>) — _cogent.com_
-26. [BlueNoroff Fake Meeting Kit Captures Webcams, Disables Defender and Steals Cryptocurrency Credentials](<https://gbhackers.com/bluenoroff-fake-meeting-kit/>) — _gbhackers.com_
-27. [Hackers Hijack Hotel Wi-Fi DNS to Steal Microsoft 365 Accounts](<https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/>) — _bleepingcomputer.com_
-28. [Exploiting Volvo/Eicher's fleet management platform to gain control over all users and vehicles](<https://eaton-works.com/2026/07/27/my-eicher-hack/>) — _eaton-works.com_
-29. [What happened after we pushed our .env to a public repo](<https://tachyon.so/blog/what-happened-after-we-pushed-env-to-public-repo>) — _tachyon.so_
-30. [Coding Agent Horror Stories: The 29 Million Secret Problem](<https://www.docker.com/blog/coding-agent-horror-stories-the-29-million-secret-problem/>) — _docker.com_
-31. [OpenAI Close to Landing $500 Billion Data Center With Nvidia's Backing](<https://www.nytimes.com/2026/07/27/technology/openai-data-center-nvidia.html?unlocked_article_code=1.1FA.IBnW.rbhWt5-1bZFI&smid=url-share>) — _nytimes.com_
-32. [The OlmoEarth Platform: Geospatial inference at planetary scale](<https://huggingface.co/blog/allenai/olmoearth-infrastructure>) — _huggingface.co_
-33. [LFM2.5-Encoders for Fast Long-Context Inference on CPU](<https://huggingface.co/blog/LiquidAI/lfm2-5-encoders>) — _huggingface.co_
-34. [Gemini Distillation Service](<https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/distillation>) — _docs.cloud.google.com_
-35. [Natural disasters and government interference: examining Q2 2026’s major Internet disruption events](<https://blog.cloudflare.com/q2-2026-internet-disruption-summary/>) — _blog.cloudflare.com_
-36. [uv 0.12.0](<https://simonwillison.net/2026/Jul/28/uv/#atom-everything>) — _simonwillison.net_
-37. [Seal](<https://github.com/letsseal/letsseal>) — _github.com_
-38. [Octane](<https://github.com/octanejs/octane>) — _github.com_
-39. [We Stopped Using RSC on TanStack.com](<https://tanstack.com/blog/we-stopped-using-rsc-on-tanstack-com>) — _tanstack.com_
-40. [Upgrading Checkout Blocks app to Polaris web components](<https://shopify.engineering/upgrading-checkout-blocks-app-to-polaris-web-components>) — _shopify.engineering_
-41. [Scriptc](<https://github.com/vercel-labs/scriptc>) — _github.com_
-42. [Edge Aura (Website)](<https://edge-aura.js.org/>) — _edge-aura.js.org_
-43. [Finding bugs in Raft implementations](<https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/>) — _antithesis.com_
-44. [Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code](<https://github.com/schildep/verified-3d-mesh-intersection>) — _hnrss.org_
-45. [The Data Pyramid in Robotics](<https://www.tanayj.com/p/the-robot-data-pyramid>) — _tanayj.com_
+1. [\[AINews\] Fearing RSI: OpenAI, Anthropic, GDM, Meta, Thinky cosign letter to "Pace" AI development, as HuggingFace details Machine-Speed Offensive Cyberattack](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>) — _latent.space_
+2. [Discovering cryptographic weaknesses with Claude](<https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything>) — _simonwillison.net_
+3. [Anthropic AI Model Finds Flaws in Tough-to-Crack Encryption Algorithms](<https://www.nytimes.com/2026/07/28/us/politics/anthropic-ai-encryption-security-aes.html?unlocked_article_code=1.1VA.kWg5.C7htJ8NC3S5z&smid=url-share>) — _nytimes.com_
+4. [MCP 2026-07-28 is live](<https://threadreaderapp.com/thread/2082164248697069935.html>) — _threadreaderapp.com_
+5. [The Orchestrator's Tax](<https://martinfowler.com/articles/orchestrator-tax.html>) — _martinfowler.com_
+6. [Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways](<https://blog.bytebytego.com/p/why-doordash-instacart-and-uber-eats>) — _blog.bytebytego.com_
+7. [npm publish-time malware scanning and dual-use metadata](<https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata>) — _github.blog_
+8. [GitHub Copilot app usage metrics now expand across report rollups](<https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups>) — _github.blog_
+9. [CodeQL 2.26.1 improves analysis accuracy and framework coverage](<https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage>) — _github.blog_
+10. [Quoting Akshat Bubna](<https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything>) — _simonwillison.net_
+11. [The US just banned ‘foreign' robots and inverters, and it means China](<https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china>) — _thenextweb.com_
+12. [Tau's humanoid cleaning service](<https://threadreaderapp.com/thread/2082135074615763251.html>) — _threadreaderapp.com_
 
 
 ## Recent archive
