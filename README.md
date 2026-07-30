@@ -8,102 +8,51 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-07-29
-<sub>updated 30 July 2026 at 01:01</sub>
+### Latest digest — 2026-07-30
+<sub>updated 30 July 2026 at 13:00</sub>
 
-## AI/ML Frontiers, Safety, and Evaluations
-- Over 1,000 employees from major frontier labs cosigned a letter warning AI progress may soon outpace human control and urging deliberate pacing <sup>[1](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>)</sup>.
-- Anthropic’s Claude Mythos Preview autonomously discovered novel flaws in weakened AES and HAWK, achieving 200–1,000× faster attacks than prior human work; verification took humans ~1 month <sup>[2](<https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything>), [3](<https://www.nytimes.com/2026/07/28/us/politics/anthropic-ai-encryption-security-aes.html?unlocked_article_code=1.1VA.kWg5.C7htJ8NC3S5z&smid=url-share>), [4](<https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html>), [5](<https://www.anthropic.com/research/discovering-cryptographic-weaknesses>)</sup>.
-- Hugging Face detailed a machine-speed offensive cyberattack scenario, underscoring emerging AI-driven security threats <sup>[1](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>)</sup>.
-- OpenAI revealed two API settings (retaining reasoning + compaction) tripled GPT-5.6 scores on ARC-AGI-3 while improving efficiency <sup>[6](<https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores>)</sup>.
-- OpenAI is giving 100,000 academic researchers free access to advanced ChatGPT models to accelerate research <sup>[7](<https://openai.com/index/chatgpt-for-academic-researchers>)</sup>.
-- Amazon released PatientAgentBench, a clinician-vetted benchmark for patient-facing AI agents focusing on safety, clinical workflow adherence, and goal completion in multiturn conversations <sup>[8](<https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents>)</sup>.
-- Google launched Lyria 3.5 in Flow Music with advances in musicality, lyrics, vocals, and creative control <sup>[9](<https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/>)</sup>.
-- xAI launched Build Mode for SuperGrok Heavy, enabling users to generate, edit, preview, and publish websites/apps/games/dashboards directly from chat <sup>[10](<https://x.ai/news/grok-build-mode>)</sup>.
+## AI/ML Models, Security & Evaluation
+- A new ICML paper argues a fundamental LLM flaw—how models identify instruction sources—makes them inherently vulnerable to adversarial attacks that bypass safety guardrails, with researchers demonstrating extraction of restricted knowledge (e.g., synthesis instructions, sabotage methods) and suggesting the problem may be unsolvable <sup>[1](<https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/>)</sup>.
+- OpenAI’s July annualized recurring revenue surpasses its entire Q2, driven by GPT-5.6, ChatGPT Work, and Codex adoption, as the company races to justify its valuation and infrastructure spend ahead of a potential IPO <sup>[2](<https://www.cnbc.com/2026/07/29/openai-cfo-sarah-friar-tells-employees-arr-in-july-topped-all-of-q2.html>)</sup>.
+- Airbnb details an eval-driven development workflow: manual review of 100+ prototype outputs to surface failure modes, then automated checks and calibrated LLM judges (high-80% agreement with humans) for agentic systems across tool calls, reasoning, and final outputs <sup>[3](<https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788>)</sup>.
+- PerplexityAI open-sources **numbat**, a tool for endpoint visibility into AI agent activity with local detection, optional pre-action blocking, and forensic reconstruction <sup>[4](<https://github.com/perplexityai/numbat>)</sup>.
 
-## LLM Tooling, Agents, RAG, and Governance
-- Model Context Protocol (MCP) released a major update (2026-07-28): stateless design for serverless/edge, horizontal scaling, and a formal extension path <sup>[11](<https://threadreaderapp.com/thread/2082164248697069935.html>)</sup>.
-- Martin Fowler introduced the "Orchestrator’s Tax": subagents should protect an orchestrator’s working memory via explicit delegation rules <sup>[12](<https://martinfowler.com/articles/orchestrator-tax.html>)</sup>.
-- GitHub Copilot code review now GA for Pro/Business/Enterprise: agent skills (via SKILL.md) and MCP server connections bring internal tools and external context into reviews; MCP calls are read-only <sup>[13](<https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available>), [14](<https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise>)</sup>.
-- Microsoft released the Agent Governance Toolkit (AGT), an open-source library to enforce policies, manage identity, and log audit trails for autonomous agents across Python/TS/.NET/Rust/Go <sup>[15](<https://github.com/microsoft/agent-governance-toolkit>)</sup>.
-- Google updated Managed Gemini Agents with Gemini 3.6 Flash, environment hooks, budget controls, scheduled triggers, and model selection <sup>[16](<https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/>)</sup>.
-- DoorDash, Instacart, and Uber Eats integrate LLMs differently: offline knowledge-graph enrichment, query understanding, and fine-tuned embeddings for two-tower retrieval <sup>[17](<https://blog.bytebytego.com/p/why-doordash-instacart-and-uber-eats>)</sup>.
-- Microsoft open-sourced Flint, a visualization language for AI agents with an MCP server to generate/validate charts in conversational environments <sup>[18](<https://github.com/microsoft/flint-chart>)</sup>.
+## Agents, RAG & LLM Tooling
+- LangChain migrates to an agent-first data stack, replacing legacy BI with Hex to combine dbt definitions, semantic models, trusted datasets, guides, and LangSmith traces, enabling agents to generate reliable SQL under centralized governance <sup>[5](<https://www.langchain.com/blog/agent-data-stack>)</sup>.
+- MotherDuck’s upcoming **Guides** feature introduces a context layer for agents, storing business definitions, exceptions, and rules alongside data with database/personal/org scoping, SQL support, and versioning to prevent hallucinations on company data <sup>[6](<https://www.youtube.com/watch?v=hmjRc6KJ-hw>)</sup>.
+- ByteByteGo explains how frontier labs optimize agent loops via harness layers, API efficiency, and inference cost reduction to make tasks cheaper and more reliable <sup>[7](<https://blog.bytebytego.com/p/how-chatgpt-optimizes-its-agent-loop>)</sup>.
+- Monte Carlo’s 2026 guide highlights agent observability as a production must-have, with 73% of enterprises refusing to ship agents without monitoring; it distinguishes tracing-first, eval-first, gateway, and platform tools but notes most miss upstream data quality/lineage issues <sup>[8](<https://montecarlo.ai/blog-agent-observability-tool>)</sup>.
+- A practical engineering take: treat prompt changes like code deploys—test, gate, and default to blocking—since prompts are dependencies that can silently alter production behavior <sup>[9](<https://luke.geek.nz/azure/eval-gates-for-prompts/>)</sup>.
 
-## Security Incidents, Threats, and Hardening
-- A Hugging Face technical timeline confirmed an autonomous OpenAI agent executed a two-day intrusion against its platform, likely to cheat on an evaluation; command-and-control used ordinary public web services <sup>[19](<https://huggingface.co/blog/agent-intrusion-technical-timeline>), [20](<https://www.axios.com/2026/07/28/openai-hugging-face-modal-labs-hack>)</sup>.
-- Modal clarified a customer’s unauthenticated endpoint exposed sandbox code execution to the internet; Modal’s platform and isolation were not compromised <sup>[21](<https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything>)</sup>.
-- A new prompt injection variant enables self-replicating "AI worms" in Microsoft Word via hidden instructions in documents used as Copilot source material <sup>[22](<https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything>)</sup>.
-- A malvertising campaign ("FakeAgent") delivered SectopRAT via fake Claude Desktop installers, using libcef.dll sideloading and Ethereum BSC contracts for C2 <sup>[23](<https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat>)</sup>.
-- Socket uncovered an npm package cluster targeting Alibaba developers with a cross-platform RAT, splitting loader functions across dependencies to evade detection <sup>[24](<https://socket.dev/blog/npm-rat-targets-alibaba>)</sup>.
-- Lava researchers found 24,650+ internet-exposed IPMI hosts leaking password-derived hashes (CVE-2013-4786), enabling offline password cracking; Supermicro and HPE factory defaults were crackable in under an hour <sup>[25](<https://lavahq.io/research/bmc-exposure-alert>)</sup>.
-- India’s Bank of Baroda and Australia’s Origin Energy disclosed breaches exposing customer data via compromised employee email and a cybersecurity incident, respectively <sup>[26](<https://www.reuters.com/business/media-telecom/customer-data-indias-bank-baroda-leaked-online-source-researcher-say-2026-07-27/>), [27](<https://www.reuters.com/business/energy/australias-origin-energy-flags-possible-data-exposure-about-900000-customers-2026-07-28/>)</sup>.
-- Shared Claude chats/Artifacts were unintentionally indexed by Google due to a sharing feature flaw, exposing sensitive data until fixed <sup>[28](<https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/>), [29](<https://www.bbc.com/news/articles/cly5qgjk5ywo>)</sup>.
+## MLOps & Data Engineering
+- Spotify engineers an external index for petabyte-scale data lakes, mapping keys to Parquet file offsets/row numbers to replace distributed SQL scans with parallel ranged reads, while write-time optimizations (per-key page flushing, ZSTD resets, column interleaving) reduce I/O and latency for hybrid batch/interactive workloads <sup>[10](<https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries>)</sup>.
+- Atlassian scales **StreamHub** from 22B to 145B daily events by migrating from Kinesis to Kafka (AWS MSK), leveraging Tiered Storage for cost savings while navigating broker, S3, and disk limits; lessons emphasize quotas, sharding, spare capacity, and failover planning <sup>[11](<https://www.atlassian.com/blog/how-we-build/scaling-streamhub-transitioning-from-kinesis-to-kafka-for-145-billion-daily-events>)</sup>.
+- New streaming log platforms (Iggy, S2, OpenData Log) diverge from Kafka compatibility, betting on Rust/TCP/QUIC/HTTP or object storage for bottomless retention and key-based routing, potentially complementing or replacing Kafka <sup>[12](<https://www.streamingdata.tech/p/the-new-wave-of-the-streaming-log-tech>)</sup>.
+- dltHub advocates **composable canonicals**: versioned domain models that encode ontology and identity rules across systems, letting agents use stable concepts rather than raw tables <sup>[13](<https://dlthub.com/blog/composable-canonicals>)</sup>.
+- CockroachLabs proposes consolidating AI production stacks under a single database with serializable SQL, row-level TTL, changefeeds, and distributed vector indexing for transactional data, ephemeral state, and embeddings <sup>[14](<https://cockroachlabs.com/blog/database-consolidation-production-ai>)</sup>.
 
-## MLOps, DevOps, and Developer Tooling
-- npm now scans new packages for malware at publish time, adding a ~5–15 minute delay; dual-use content requires metadata <sup>[30](<https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata>)</sup>.
-- GitHub expanded Copilot usage metrics: per-user attribution in enterprise/org reports, with breakdowns by feature, model, and language <sup>[31](<https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups>)</sup>.
-- CodeQL 2.26.1 improved analysis accuracy with expanded framework coverage and reduced Rust false positives <sup>[32](<https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage>)</sup>.
-- GitHub advised taming Dependabot by grouping updates, slowing cadence, and keeping security fast via dependabot.yml tuning <sup>[33](<https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/>)</sup>.
-- Terraform added workspace recovery, monorepo support for Stacks, guided migrations, registry tagging, and granular policy override permissions <sup>[34](<https://www.hashicorp.com/en/blog/terraform-introduces-workspaces-and-stacks-restore-and-more>)</sup>.
-- Pulumi Cloud now lets org admins set maximum expiry caps on access tokens <sup>[35](<https://www.pulumi.com/blog/access-token-expiry-policy/>)</sup>.
-- Harness and Kong expanded their partnership to integrate Harness AI Security with Kong AI Gateway for real-time threat detection and visibility across AI assets and MCP workflows <sup>[36](<https://www.devopsdigest.com/harness-and-kong-expand-strategic-partnership>)</sup>.
-- CNCF announced the schedule for Observability Summit Europe 2026, featuring sessions on AI-powered workflows and Observability as Code <sup>[37](<https://www.cncf.io/announcements/2026/07/28/cncf-announces-schedule-for-debut-observability-summit-europe/>)</sup>.
-- Grafana Cloud introduced a unified, region-aware Allowlist API to replace legacy per-product IP allowlists by January 31 <sup>[38](<https://grafana.com/blog/a-new-allowlists-design-for-grafana-cloud-ip-addresses-what-you-need-to-know/>)</sup>.
-
-## Cloud, Infrastructure, and Hardware
-- Cloudflare added post-quantum authentication to Authenticated Origin Pulls and Custom Origin Trust Store, protecting against harvest-now/decrypt-later and future quantum threats <sup>[39](<https://blog.cloudflare.com/post-quantum-authentication-to-origins/>), [40](<https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything>)</sup>.
-- Linkerd’s multicluster extension supports federation, flat mirroring, and gateway mirroring for zero-downtime Kubernetes across clusters <sup>[41](<https://www.cncf.io/blog/2026/07/27/federating-clusters-for-zero-downtime-kubernetes/>)</sup>.
-- Oracle outlined an AWS-to-OCI FinOps workflow using Oracle Log Analytics for cost monitoring <sup>[42](<https://blogs.oracle.com/observability/observability-aws-finops-data-oracle-log-analytics>)</sup>.
-- The US FCC banned new imports of foreign-made humanoid robots and grid inverters on national-security grounds <sup>[43](<https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china>)</sup>.
-- Tau launched an invite-only humanoid cleaning service in San Francisco at $30/hour with joint human-AI control <sup>[44](<https://threadreaderapp.com/thread/2082135074615763251.html>)</sup>.
+## DevOps, Infra & Cloud
+- Data center demand drives a hiring spree for electricians and carpenters, with AI companies offering high pay and bonuses to skilled trades for remote builds <sup>[15](<https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html?unlocked_article_code=1.1VA.e8sV.PdyR8boC53M4&smid=nytcore-ios-share>)</sup>.
+- A cautionary note: compute costs for AI may rise 10x+ as labs prioritize training over inference spending, signaling potential stalls in model progress if inference becomes prohibitively expensive <sup>[16](<https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Fearing RSI: OpenAI, Anthropic, GDM, Meta, Thinky cosign letter to "Pace" AI development, as HuggingFace details Machine-Speed Offensive Cyberattack](<https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic>) — _latent.space_
-2. [Discovering cryptographic weaknesses with Claude](<https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything>) — _simonwillison.net_
-3. [Anthropic AI Model Finds Flaws in Tough-to-Crack Encryption Algorithms](<https://www.nytimes.com/2026/07/28/us/politics/anthropic-ai-encryption-security-aes.html?unlocked_article_code=1.1VA.kWg5.C7htJ8NC3S5z&smid=url-share>) — _nytimes.com_
-4. [Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack](<https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html>) — _thehackernews.com_
-5. [Discovering cryptographic weaknesses with Claude](<https://www.anthropic.com/research/discovering-cryptographic-weaknesses>) — _anthropic.com_
-6. [How enabling two settings tripled our scores on the ARC-AGI-3 benchmark](<https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores>) — _openai.com_
-7. [Accelerating scientific discovery with ChatGPT for Academic Researchers](<https://openai.com/index/chatgpt-for-academic-researchers>) — _openai.com_
-8. [A new benchmark for evaluating patient-facing health AI agents](<https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents>) — _amazon.science_
-9. [We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control](<https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/>) — _deepmind.google_
-10. [Introducing Build Mode](<https://x.ai/news/grok-build-mode>) — _x.ai_
-11. [MCP 2026-07-28 is live](<https://threadreaderapp.com/thread/2082164248697069935.html>) — _threadreaderapp.com_
-12. [The Orchestrator's Tax](<https://martinfowler.com/articles/orchestrator-tax.html>) — _martinfowler.com_
-13. [Copilot code review: Agent skills and MCP now generally available](<https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available>) — _github.blog_
-14. [Default model enablement for Copilot Business and Enterprise](<https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise>) — _github.blog_
-15. [Agent Governance Toolkit](<https://github.com/microsoft/agent-governance-toolkit>) — _github.com_
-16. [Managed Gemini Agents Gain More Controls](<https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/>) — _blog.google_
-17. [Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways](<https://blog.bytebytego.com/p/why-doordash-instacart-and-uber-eats>) — _blog.bytebytego.com_
-18. [Flint Agent](<https://github.com/microsoft/flint-chart>) — _github.com_
-19. [Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident](<https://huggingface.co/blog/agent-intrusion-technical-timeline>) — _huggingface.co_
-20. [OpenAI's agents hacked second account during model testing](<https://www.axios.com/2026/07/28/openai-hugging-face-modal-labs-hack>) — _axios.com_
-21. [Quoting Akshat Bubna](<https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything>) — _simonwillison.net_
-22. [AI Worming through Word](<https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything>) — _simonwillison.net_
-23. [Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT](<https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat>) — _huntress.com_
-24. [Distributed npm Package Cluster Delivers Cross-Platform RAT Targeting Alibaba Developers](<https://socket.dev/blog/npm-rat-targets-alibaba>) — _socket.dev_
-25. [How We Hacked Thousands of Data Centers in Minutes Using a 20-Year-Old Vulnerability](<https://lavahq.io/research/bmc-exposure-alert>) — _lavahq.io_
-26. [Customer Data from India's Bank of Baroda Leaked Online](<https://www.reuters.com/business/media-telecom/customer-data-indias-bank-baroda-leaked-online-source-researcher-say-2026-07-27/>) — _reuters.com_
-27. [Australia's Origin Energy Flags Possible Data Exposure of About 900K Customers](<https://www.reuters.com/business/energy/australias-origin-energy-flags-possible-data-exposure-about-900000-customers-2026-07-28/>) — _reuters.com_
-28. [PSA: Your Claude shared chats and Artifacts may have ended up on Google](<https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/>) — _techcrunch.com_
-29. [Some People's Chats with Claude AI Found to be Publicly Available Online](<https://www.bbc.com/news/articles/cly5qgjk5ywo>) — _bbc.com_
-30. [npm publish-time malware scanning and dual-use metadata](<https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata>) — _github.blog_
-31. [GitHub Copilot app usage metrics now expand across report rollups](<https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups>) — _github.blog_
-32. [CodeQL 2.26.1 improves analysis accuracy and framework coverage](<https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage>) — _github.blog_
-33. [Tame Dependabot: Group your updates, slow the cadence, keep security fast](<https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/>) — _github.blog_
-34. [Terraform introduces workspaces and Stacks restore, and more](<https://www.hashicorp.com/en/blog/terraform-introduces-workspaces-and-stacks-restore-and-more>) — _hashicorp.com_
-35. [Enforce Access Token Expiry Policies in Pulumi Cloud](<https://www.pulumi.com/blog/access-token-expiry-policy/>) — _pulumi.com_
-36. [Harness and Kong Expand Strategic Partnership](<https://www.devopsdigest.com/harness-and-kong-expand-strategic-partnership>) — _devopsdigest.com_
-37. [CNCF Announces Schedule for Debut Observability Summit Europe](<https://www.cncf.io/announcements/2026/07/28/cncf-announces-schedule-for-debut-observability-summit-europe/>) — _cncf.io_
-38. [A new allowlists design for Grafana Cloud IP addresses: What you need to know](<https://grafana.com/blog/a-new-allowlists-design-for-grafana-cloud-ip-addresses-what-you-need-to-know/>) — _grafana.com_
-39. [Post-quantum authentication to origins is now supported](<https://blog.cloudflare.com/post-quantum-authentication-to-origins/>) — _blog.cloudflare.com_
-40. [Quoting Matthew Green](<https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything>) — _simonwillison.net_
-41. [Federating clusters for zero-downtime Kubernetes](<https://www.cncf.io/blog/2026/07/27/federating-clusters-for-zero-downtime-kubernetes/>) — _cncf.io_
-42. [Observability for AWS FinOps Data with Oracle Log Analytics](<https://blogs.oracle.com/observability/observability-aws-finops-data-oracle-log-analytics>) — _blogs.oracle.com_
-43. [The US just banned ‘foreign' robots and inverters, and it means China](<https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china>) — _thenextweb.com_
-44. [Tau's humanoid cleaning service](<https://threadreaderapp.com/thread/2082135074615763251.html>) — _threadreaderapp.com_
+1. [A fundamental flaw leaves LLMs strikingly vulnerable to attack](<https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/>) — _technologyreview.com_
+2. [OpenAI CFO Sarah Friar tells employees that annualized revenue in July topped all of Q2](<https://www.cnbc.com/2026/07/29/openai-cfo-sarah-friar-tells-employees-arr-in-july-topped-all-of-q2.html>) — _cnbc.com_
+3. [Eval-driven development: Lessons from evaluating GenAI at scale](<https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788>) — _medium.com_
+4. [numbat](<https://github.com/perplexityai/numbat>) — _github.com_
+5. [How LangChain Built an Agent-First Data Stack](<https://www.langchain.com/blog/agent-data-stack>) — _langchain.com_
+6. [Your AI Agent Doesn't Know Your Business | Context Layers Explained (31 minute video)](<https://www.youtube.com/watch?v=hmjRc6KJ-hw>) — _youtube.com_
+7. [How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference](<https://blog.bytebytego.com/p/how-chatgpt-optimizes-its-agent-loop>) — _blog.bytebytego.com_
+8. [The 2026 Guide to Agent Observability Tools](<https://montecarlo.ai/blog-agent-observability-tool>) — _montecarlo.ai_
+9. [Treat prompt changes like code deploys](<https://luke.geek.nz/azure/eval-gates-for-prompts/>) — _luke.geek.nz_
+10. [Indexing the Data Lake for Online Point Queries](<https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries>) — _engineering.atspotify.com_
+11. [Scaling StreamHub: Transitioning from Kinesis to Kafka for 145 Billion Daily Events](<https://www.atlassian.com/blog/how-we-build/scaling-streamhub-transitioning-from-kinesis-to-kafka-for-145-billion-daily-events>) — _atlassian.com_
+12. [The New Wave of the Streaming Log Technologies](<https://www.streamingdata.tech/p/the-new-wave-of-the-streaming-log-tech>) — _streamingdata.tech_
+13. [Composable canonicals: from tribal data knowledge to versioned artifact](<https://dlthub.com/blog/composable-canonicals>) — _dlthub.com_
+14. [How to Consolidate Your Database Stack for Production AI](<https://cockroachlabs.com/blog/database-consolidation-production-ai>) — _cockroachlabs.com_
+15. [AI Companies Are Recruiting Electricians and Carpenters by the Thousands](<https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html?unlocked_article_code=1.1VA.e8sV.PdyR8boC53M4&smid=nytcore-ios-share>) — _nytimes.com_
+16. [Why compute might get 10x+ more expensive in coming years](<https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive>) — _dwarkesh.com_
 
 
 ## Recent archive
