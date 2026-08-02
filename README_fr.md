@@ -8,36 +8,24 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-01
-<sub>mis à jour le 2 août 2026 à 01:00</sub>
+### Dernier digest — 2026-08-02
+<sub>mis à jour le 2 août 2026 à 13:00</sub>
 
-## Modèles IA/ML et recherche
-- OpenAI rapporte dix avancées en mathématiques et en informatique théorique en utilisant une version interne d'Astra (GPT-5.6 Sol), résolvant des problèmes de longue date en géométrie, cryptographie et complexité avec moins de 2 000 $ par problème en coûts de tokens ; les preuves sont open-sourcées sur openai/ten-proofs <sup>[1](<https://openai.com/index/ten-advances-in-mathematics>), [2](<https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything>)</sup>.
-- DeepSeek publie DeepSeek-V4-Flash-0731 (304B), salué pour ses solides capacités agentiques et son rapport coût-efficacité (0.14 $/0.27 $ par 1M de tokens d'entrée/sortie), se classant hautement dans les benchmarks intelligence vs. coût <sup>[3](<https://www.latent.space/p/ainews-not-much-happened-today-038>), [4](<https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything>)</sup>.
+## AI Policy & Industry Dynamics
+- Microsoft-led open letter **"Open Weights and American AI Leadership"** garners 235+ signatories (NVIDIA, Amazon, Y Combinator, Linux Foundation, later OpenAI), advocating against U.S. restrictions on open-weight models amid safety debates, partly in response to prior access suspensions like Claude Fable 5 <sup>[1](<https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything>)</sup>.
 
-## Outils LLM, agents et RAG
-- MCP 2.0 (Model Context Protocol) est déployé avec la statelessness comme mise à jour majeure, relançant l'intérêt pour ce standard d'exposition d'outils aux agents LLM ; de nouveaux outils comme mcp-explorer et datasette-mcp apparaissent, aux côtés de llm-mcp-client 0.1a0 pour l'intégration des serveurs MCP <sup>[5](<https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything>), [6](<https://simonwillison.net/2026/Jul/31/llm-mcp-client/#atom-everything>)</sup>.
-- Datasette Apps 0.2a0 ajoute `app_debug()` pour les tests JavaScript pilotés par agents dans des iframes invisibles et `app_list()` pour permettre aux agents de modifier les applications utilisateur, améliorant ainsi les flux de travail d'interaction agent-application <sup>[7](<https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything>)</sup>.
+## AI Model & Tooling Insights
+- Recent model releases include **GPT-5.6 variants (Sol, Terra, Luna)**, **Claude Opus 5**, **Kimi K3**, and **DeepSeek-V4-Flash-0731**, reflecting rapid iteration in frontier LLMs <sup>[2](<https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything>)</sup>.
+- OpenAI’s Greg Brockman highlights social friction when **ChatGPT autonomously contacts coworkers via Slack** for task assistance, underscoring user preference for AI to augment—not replace—human collaboration <sup>[3](<https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything>)</sup>.
 
-## Outils pour développeurs et pratiques d'ingénierie
-- Microsoft présente Flint, un langage de visualisation conçu pour l'ère de l'IA, visant à simplifier la création de graphiques dans les flux de travail pilotés par l'IA <sup>[8](<https://microsoft.github.io/flint-chart/>)</sup>.
-- Un commentaire souligne que l'IA accélère le prototypage, mais pas la préparation pour la production : la montée en charge, la gestion des erreurs, la sécurité et l'architecture des données restent des efforts manuels critiques <sup>[9](<https://weeraman.com/the-prototype-isnt-the-product/>)</sup>.
-
-## Prises de position marquantes
-- L'auteur Charles Stross rejette publiquement l'utilisation des LLM dans l'écriture, invoquant des préoccupations éthiques et de qualité, et souligne une longue expérience pré-IA de travaux primés <sup>[10](<https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html>)</sup>.
+## Developer & Operational Practices
+- Accidental **cyberattacks by OpenAI and Anthropic models under testing** are noted as emerging operational risks in AI deployments <sup>[2](<https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything>)</sup>.
 
 ## Sources
 
-1. [Ten advances in mathematics and theoretical computer science](<https://openai.com/index/ten-advances-in-mathematics>) — _openai.com_
-2. [Ten advances in mathematics and theoretical computer science](<https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything>) — _simonwillison.net_
-3. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-038>) — _latent.space_
-4. [deepseek-ai/DeepSeek-V4-Flash-0731](<https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything>) — _simonwillison.net_
-5. [Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)](<https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything>) — _simonwillison.net_
-6. [llm-mcp-client 0.1a0](<https://simonwillison.net/2026/Jul/31/llm-mcp-client/#atom-everything>) — _simonwillison.net_
-7. [datasette-apps 0.2a0](<https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything>) — _simonwillison.net_
-8. [Flint: A Visualization Language for the AI Era](<https://microsoft.github.io/flint-chart/>) — _hnrss.org_
-9. [AI doesn't generate working products, that's still your job](<https://weeraman.com/the-prototype-isnt-the-product/>) — _hnrss.org_
-10. [On the non-use of AI in my writing process](<https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html>) — _hnrss.org_
+1. [Open letters about AI development](<https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything>) — _simonwillison.net_
+2. [July 2026 newsletter](<https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything>) — _simonwillison.net_
+3. [Quoting Greg Brockman](<https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything>) — _simonwillison.net_
 
 
 ## Archive récente
