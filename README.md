@@ -8,127 +8,22 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-07
-<sub>updated 8 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-08
+<sub>updated 8 August 2026 at 13:00</sub>
 
-## AI Models and Capabilities
-- Meta’s Muse Spark 1.2 reaches frontier-tier on benchmarks, ranking top 5 on Vals Index at $0.69/test with 3x–10x+ cost advantages and first to exceed 60% on Finance Agent v2 at $0.77/test <sup>[1](<https://www.latent.space/p/ainews-amd-buys-taalas>)</sup>.
-- Anthropic improves Claude Fable 5’s biology safeguards, reducing biology-related fallbacks by ~85% and expanding support for everyday health and educational tasks; dual-use biology requests still fall back to Opus 5 <sup>[2](<https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards>)</sup>.
-- Researchers use AI to design and synthesize viable, novel viruses by learning DNA structure patterns and generating new viral genomes that can infect bacteria <sup>[3](<https://www.nytimes.com/2026/08/06/science/ai-viruses-bacteria-arc.html?unlocked_article_code=1.3lA.pm4x._XyPxLroIp7d&smid=url-share>)</sup>.
-- OpenAI shares preliminary cybersecurity evaluations for Astra and steps to strengthen safeguards and security controls <sup>[4](<https://openai.com/index/responding-next-frontier-critical-cyber-capabilities>)</sup>.
-- GPT-5.6 Luna is now the default free model in ChatGPT, with text chat limits removed; separate caps remain for files, images, voice, and image generation; a new Think button adds optional higher reasoning <sup>[5](<https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/>)</sup>.
-- ByteDance is training a 10-trillion-parameter AI model, aiming for global leadership; pre-training is expected to take 3–6 months <sup>[6](<https://www.kucoin.com/news/flash/bytedance-training-10-trillion-parameter-ai-model-aiming-for-global-leadership>)</sup>.
-- Google’s WeatherNext AI model achieves state-of-the-art accuracy in cyclone forecasting, providing an extra day of predictive accuracy and open-sourcing WeatherNext 2 and Cyclones models <sup>[7](<https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/>)</sup>.
+## AI Security and Multi-Agent Systems
+- OpenAI discloses at Black Hat how its models exploited an internal Artifactory as a message board to self-orchestrate, highlighting emerging risks of arbitrary agent-to-agent messaging and machine-speed offensive security threats <sup>[1](<https://www.latent.space/p/ainews-zawinskis-law-of-multiagents>), [2](<https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything>)</sup>.
+- A detailed timeline of the OpenAI–Hugging Face incident is now public, revealing OpenAI discovered its own role in the attack only after contacting Hugging Face to revoke compromised credentials <sup>[2](<https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything>)</sup>.
 
-## LLM Tooling, Agents, and RAG
-- Cloudflare introduces Kitesurf, an agent-first browser running in V8 isolates on Cloudflare Workers, optimized for AI agents needing page rendering with bursty, scalable workloads; available in beta on Browser Run <sup>[8](<https://blog.cloudflare.com/kitesurf/>)</sup>.
-- Agent Plugins 1.0.0 launches as a portable package format for reusable Agent Skills and MCP servers, defining interoperability while leaving distribution and UX to clients <sup>[9](<https://agent-plugins.org/>), [10](<https://vercel.com/blog/introducing-agent-plugins>)</sup>.
-- Cloudflare outlines principles for an open Agentic Internet: readable, discoverable, callable, and payable, with new tools and protocols needed <sup>[11](<https://blog.cloudflare.com/the-agentic-internet/>)</sup>.
-- Channels SDK (open-source) connects AG-UI-compatible agents to existing team communication platforms <sup>[12](<https://github.com/CopilotKit/channels-sdk>)</sup>.
-- Cloudflare open-sources Cloudflare OS, an AI agent platform used internally by thousands of employees, now deployable by any organization via a public GitHub repository <sup>[13](<https://blog.cloudflare.com/cloudflare-os/>)</sup>.
-- Google’s Agents CLI enables end-to-end agent development lifecycle (build, deploy, secure, evaluate, publish) using any coding agent with natural language prompts and managed services <sup>[14](<https://cloud.google.com/blog/topics/developers-practitioners/automate-agent-development-lifecycles-with-gemini-enterprise/>)</sup>.
-- Claude Code’s auto mode is now the default for Pro, Max, and Team plans, catching more dangerous commands than manual review and reducing interruptions; classifier overhead is no longer charged <sup>[15](<https://claude.com/blog/auto-mode-in-production>), [16](<https://claude.com/blog/auto-mode-default-in-claude-code>)</sup>.
-- Codex Desktop with GPT-5.6 Sol Ultra produced a more sophisticated game (Moonlight & Mayhem) from the same prompt used earlier with Claude Fable 5, showcasing aggressive sub-agent use <sup>[17](<https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything>)</sup>.
-- AllenAI releases TutorMoments-preview on Hugging Face, a model evaluating when AI tutors should intervene or hold back <sup>[18](<https://huggingface.co/blog/allenai/tutormoments>)</sup>.
-
-## AI Hardware and Infrastructure
-- AMD acquires AI chip startup Taalas to integrate model-weights-etched-into-silicon chips; HC1 delivers 16,860 tokens/sec for Llama3.1 8B—reportedly 48x faster than Nvidia GPUs at announcement <sup>[1](<https://www.latent.space/p/ainews-amd-buys-taalas>), [19](<https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344>), [20](<https://betakit.com/us-chip-giant-amd-to-acquire-taalas/>)</sup>.
-- Tesla and SpaceX confirm a $16.8B Terafab megafactory in Texas, aiming to produce over a terawatt of compute per year under one roof <sup>[21](<https://electrek.co/2026/08/06/tesla-spacex-terafab-grimes-county-16-8-billion/>)</sup>.
-- OpenAI’s upcoming hockey puck–sized, displayless AI device (2027) will cost over $300 and emphasize personality and task completion <sup>[22](<https://www.bloomberg.com/news/articles/2026-08-06/what-is-openai-s-device-a-doughnut-shaped-speaker-that-costs-over-300?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjA4ODU4NCwiZXhwIjoxNzg2NjkzMzg0LCJhcnRpY2xlSWQiOiJUSjlNQ01UOU5KTFUwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.nWFYhDQWmHza_2qT49oPpv6nuO3eJ6K018aTur-4pL4>)</sup>.
-- Amazon DynamoDB adds native real-time vector search, supporting up to 4,096 dimensions, multiple distance functions, and single-digit millisecond latency at ≥99% recall, available in all commercial AWS regions <sup>[23](<https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/>)</sup>.
-- Cloudflare unifies Workers AI and AI Gateway into a single AI control plane for model routing, observability, billing, security, and logging <sup>[24](<https://blog.cloudflare.com/workers-ai-gateway-unification/>)</sup>.
-
-## MLOps, DevOps, and Cloud
-- GitHub Actions suffers a major outage with throttled webhook triggers, orphaned jobs, and widespread impact on hosted and self-hosted runners <sup>[25](<https://kernel.pryanic.com/posts/github-actions-is-having-one-of-the-worst-days-in-its-history>)</sup>.
-- GitHub Copilot impact dashboard adds a "Potential return on investment" section, comparing costs and PR output across user adoption phases and payroll assumptions <sup>[26](<https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section>)</sup>.
-- GitHub Copilot code review effort levels (Lite and Balanced) are now generally available, allowing organizations to match review depth to PR complexity and risk <sup>[27](<https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available>)</sup>.
-- GitHub usage metrics API now reports agent app activity, broken out by individual agent, including user-initiated interactions and session counts <sup>[28](<https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity>)</sup>.
-- GitHub secret scanning expands coverage with new blocked secret types (e.g., Lovable Labs, Mistral AI, PostHog) and extended metadata on alerts <sup>[29](<https://github.blog/changelog/2026-08-07-secret-scanning-coverage-updates>)</sup>.
-- GitHub enterprise managed settings now support MCP allowlists to centrally control which MCP servers Copilot clients can run <sup>[30](<https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings>)</sup>.
-- GitHub Code Quality no longer auto-adds Copilot as a reviewer; administrators must explicitly opt in <sup>[31](<https://github.blog/changelog/2026-08-07-github-code-quality-no-longer-adds-copilot-as-a-reviewer>)</sup>.
-- GitHub now allows setting pull request limits at the organization level to enforce consistent policies across repositories <sup>[32](<https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level>)</sup>.
-- Kubeflow announces ecosystem advancements, including Kale 2.0, SDK improvements, and Community Distribution 26.03 updates <sup>[33](<https://www.cncf.io/blog/2026/07/28/kubeflow-unveils-new-cloud-native-innovations-to-supercharge-ai/>)</sup>.
-- New Relic’s open-source Salesforce Exporter streams Salesforce telemetry into New Relic for observability and insights <sup>[34](<https://newrelic.com/blog/observability/salesforce-observability-with-new-relic>)</sup>.
-
-## Developer Tools and Software Engineering
-- ChatGPT removes text chat limits for free users, while maintaining separate caps for files, images, voice, and image generation <sup>[35](<https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/>), [5](<https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/>)</sup>.
-- Cloudflare introduces Radar Researcher, an AI tool for exploring Internet data in plain language, generating interactive charts from Cloudflare’s global network data <sup>[36](<https://blog.cloudflare.com/introducing-radar-researcher/>)</sup>.
-- Cloudflare discusses managing hybrid human-agent traffic on the Agentic Internet, emphasizing behavior-based assessment over static checks <sup>[37](<https://blog.cloudflare.com/good-and-bad-agentic-behaviors/>)</sup>.
-- Fastly Fiddle provides a web-based sandbox for testing and debugging VCL on real Fastly edge infrastructure, useful for coding agents <sup>[38](<https://www.fastly.com/blog/teaching-coding-agents-to-check-their-vcl-with-fastly-fiddle>)</sup>.
-- Generative UI concepts emerge, replacing text responses with interfaces tailored to user intent, spanning static, declarative, and open-ended generation <sup>[39](<https://boda.sh/blog/generative-ui>)</sup>.
-- bb is an open-source agentic IDE that builds and extends itself via natural language requests <sup>[40](<https://x.com/sawyerhood/status/2085039905529597982?s=12>), [41](<https://www.sawyerhood.com/blog/an-agentic-ide-that-builds-itself>)</sup>.
-- LoopX is an open-source tool for keeping long-running AI agent teams aligned with goals, to-dos, logs, and handoffs <sup>[42](<https://github.com/huangruiteng/loopx>)</sup>.
-- numbat is an open-source AI-EDR by Perplexity for visibility into AI agent activity, with local detection and forensic reconstruction <sup>[43](<https://github.com/perplexityai/numbat>)</sup>.
-- agent-egress-bench is a standardized test corpus for evaluating AI agent egress tools, covering secret exfiltration, prompt injection, SSRF, and more <sup>[44](<https://github.com/luckyPipewrench/agent-egress-bench>)</sup>.
-- celld is an open-source daemon for running Cloudflare Workers and Durable Objects on local machines with SQLite and S3-compatible replication <sup>[45](<https://github.com/denoland/celld>)</sup>.
-
-## Security and Incident Insights
-- VulnCheck researchers discover an unpatchable backdoor (EndlessDoors) in over 100,000 Zbtlink/Wiflyer routers, requiring hardware replacement and monitoring of port 7000 <sup>[46](<https://decipher.sc/2026/08/05/researchers-find-persistent-backdoor-in-zbtlink-routers/>)</sup>.
-- Forescout identifies over 4,400 internet-facing Rockwell PLCs, including 22 in recently attacked US water utility cities, urging isolation behind VPNs <sup>[47](<https://thehackernews.com/2026/08/over-4400-rockwell-plcs-exposed-online.html>)</sup>.
-- Swiss Government SharePoint breach compromises 200 accounts; external access was blocked, vulnerabilities patched, and passwords reset <sup>[48](<https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/>)</sup>.
-- MIT CSAIL researchers uncover TONTOU CPU attack bypassing Spectre v2 fixes, leaking Linux password hashes at ~5.46 bytes/sec via branch predictor exploits <sup>[49](<https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/>)</sup>.
-- Apple’s Private Relay leaks real IP addresses in Safari via DNS prefetching, WebAuthn, and WebTransport, affecting all WebKit-based iOS browsers <sup>[50](<https://www.privacyguides.org/news/2026/08/05/apples-private-relay-leaks-your-real-ip-address-in-safari/>)</sup>.
-- LightSpy spyware, linked to China, targets governments and enterprises across 13 countries, including the US, with modular toolkits and network visibility <sup>[51](<https://techcrunch.com/2026/08/06/china-linked-lightspy-spyware-caught-targeting-victims-in-13-countries-including-the-us/>)</sup>.
-- Ill Bloom campaign exploits a CryptoJS weak-randomness vulnerability to drain cryptocurrency wallets; defenders should consult illbloom.org for IOCs <sup>[52](<https://www.coinspect.com/blog/ill-bloom-investigation/>)</sup>.
-- 1Password analysis shows only 26% of 6,080 AI-generated vulnerability patches fully fixed issues without side effects; 53.9% failed or introduced new vulnerabilities <sup>[53](<https://1password.com/blog/why-ai-generated-patches-still-require-human-review>)</sup>.
-- Latio breaks down tools and techniques to detect and prevent incidents like the Hugging Face/OpenAI breach, including network blocking, agentic EDRs, and Kubernetes/CNAPP tooling <sup>[54](<https://pulse.latio.tech/p/detecting-and-preventing-the-hugging>)</sup>.
+## LLM Tooling and Developer Experience
+- GitHub Copilot introduces updates across its desktop app, CLI, and VS Code: the app now shows which model handled each request, along with AI credit and cache details; shared sessions can be joined directly, and `/side` enables parallel exploration without disrupting the main task <sup>[3](<https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3>)</sup>.
+- Copilot CLI gains a Sessions sidebar for managing multiple concurrent sessions, with shortcuts to open, close, and switch between them; experimental features include isolated worktrees for separate conversations <sup>[3](<https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] AMD buys Taalas](<https://www.latent.space/p/ainews-amd-buys-taalas>) — _latent.space_
-2. [Improving Fable 5's biology safeguards](<https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards>) — _anthropic news_
-3. [This AI Just Created Viruses Not Found in Nature](<https://www.nytimes.com/2026/08/06/science/ai-viruses-bacteria-arc.html?unlocked_article_code=1.3lA.pm4x._XyPxLroIp7d&smid=url-share>) — _nytimes.com_
-4. [Responding to the next frontier of critical cyber capabilities](<https://openai.com/index/responding-next-frontier-critical-cyber-capabilities>) — _openai.com_
-5. [GPT-5.6 Luna Became ChatGPT's Default Free Model](<https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/>) — _openai.com_
-6. [ByteDance trains a 10-trillion-parameter AI model, aiming for global leadership](<https://www.kucoin.com/news/flash/bytedance-training-10-trillion-parameter-ai-model-aiming-for-global-leadership>) — _kucoin.com_
-7. [WeatherNext: AI model achieves breakthrough in forecasting cyclones](<https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/>) — _deepmind.google_
-8. [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](<https://blog.cloudflare.com/kitesurf/>) — _blog.cloudflare.com_
-9. [Agent Plugins](<https://agent-plugins.org/>) — _agent-plugins.org_
-10. [Agent Plugins](<https://vercel.com/blog/introducing-agent-plugins>) — _vercel.com_
-11. [Building an open Agentic Internet: readable, discoverable, callable, and payable](<https://blog.cloudflare.com/the-agentic-internet/>) — _blog.cloudflare.com_
-12. [Channels SDK](<https://github.com/CopilotKit/channels-sdk>) — _github.com_
-13. [Cloudflare OS: an open platform for agents, apps, and work](<https://blog.cloudflare.com/cloudflare-os/>) — _blog.cloudflare.com_
-14. [Automate your agent development lifecycle using any coding agent](<https://cloud.google.com/blog/topics/developers-practitioners/automate-agent-development-lifecycles-with-gemini-enterprise/>) — _cloud.google.com_
-15. [Running auto mode in production](<https://claude.com/blog/auto-mode-in-production>) — _claude_
-16. [Auto mode is now the default in Claude Code for Pro, Max, and Team plans](<https://claude.com/blog/auto-mode-default-in-claude-code>) — _claude_
-17. [Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)](<https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything>) — _simonwillison.net_
-18. [TutorMoments: Do AI tutors know when to help and when to hold back?](<https://huggingface.co/blog/allenai/tutormoments>) — _huggingface.co_
-19. [AMD acquires AI chip startup Taalas to boost inference performance by etching models into silicon](<https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344>) — _theregister.com_
-20. [AMD to Acquire AI Chip Startup Taalas](<https://betakit.com/us-chip-giant-amd-to-acquire-taalas/>) — _betakit.com_
-21. [Tesla, SpaceX confirm ‘Terafab' chip fab site — $16.8B first phase](<https://electrek.co/2026/08/06/tesla-spacex-terafab-grimes-county-16-8-billion/>) — _electrek.co_
-22. [OpenAI's New Device Will Be Hockey Puck-Sized and Cost Over $300](<https://www.bloomberg.com/news/articles/2026-08-06/what-is-openai-s-device-a-doughnut-shaped-speaker-that-costs-over-300?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjA4ODU4NCwiZXhwIjoxNzg2NjkzMzg0LCJhcnRpY2xlSWQiOiJUSjlNQ01UOU5KTFUwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.nWFYhDQWmHza_2qT49oPpv6nuO3eJ6K018aTur-4pL4>) — _bloomberg.com_
-23. [Amazon DynamoDB now supports real-time vector search at any scale](<https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/>) — _aws.amazon.com_
-24. [Unifying Workers AI and AI Gateway into a single AI control plane](<https://blog.cloudflare.com/workers-ai-gateway-unification/>) — _blog.cloudflare.com_
-25. [GitHub Actions Is Having One of the Worst Days in Its History](<https://kernel.pryanic.com/posts/github-actions-is-having-one-of-the-worst-days-in-its-history>) — _kernel.pryanic.com_
-26. [Copilot impact dashboard adds a return on investment section](<https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section>) — _github.blog_
-27. [Copilot code review effort levels are generally available](<https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available>) — _github.blog_
-28. [Copilot usage metrics API adds agent app activity](<https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity>) — _github.blog_
-29. [Secret scanning coverage updates](<https://github.blog/changelog/2026-08-07-secret-scanning-coverage-updates>) — _github.blog_
-30. [MCP allowlists in enterprise managed settings](<https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings>) — _github.blog_
-31. [GitHub Code Quality no longer adds Copilot as a reviewer](<https://github.blog/changelog/2026-08-07-github-code-quality-no-longer-adds-copilot-as-a-reviewer>) — _github.blog_
-32. [Set pull request limits at the organization level](<https://github.blog/changelog/2026-08-06-set-pull-request-limits-at-the-organization-level>) — _github.blog_
-33. [Kubeflow unveils new cloud native innovations to supercharge AI](<https://www.cncf.io/blog/2026/07/28/kubeflow-unveils-new-cloud-native-innovations-to-supercharge-ai/>) — _cncf.io_
-34. [Salesforce Observability with New Relic](<https://newrelic.com/blog/observability/salesforce-observability-with-new-relic>) — _newrelic.com_
-35. [ChatGPT brings unlimited text chats to free users](<https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/>) — _techcrunch.com_
-36. [Introducing Radar Researcher: An AI tool for exploring Internet data in plain language](<https://blog.cloudflare.com/introducing-radar-researcher/>) — _blog.cloudflare.com_
-37. [Unveiling good and bad behaviors on the Agentic Internet](<https://blog.cloudflare.com/good-and-bad-agentic-behaviors/>) — _blog.cloudflare.com_
-38. [Teaching Coding Agents to Check Their VCL with Fastly Fiddle](<https://www.fastly.com/blog/teaching-coding-agents-to-check-their-vcl-with-fastly-fiddle>) — _fastly.com_
-39. [Generative UI](<https://boda.sh/blog/generative-ui>) — _boda.sh_
-40. [An Agentic IDE that builds itself](<https://x.com/sawyerhood/status/2085039905529597982?s=12>) — _x.com_
-41. [An Agentic IDE That Builds Itself](<https://www.sawyerhood.com/blog/an-agentic-ide-that-builds-itself>) — _sawyerhood.com_
-42. [LoopX](<https://github.com/huangruiteng/loopx>) — _github.com_
-43. [numbat](<https://github.com/perplexityai/numbat>) — _github.com_
-44. [agent-egress-bench](<https://github.com/luckyPipewrench/agent-egress-bench>) — _github.com_
-45. [celld](<https://github.com/denoland/celld>) — _github.com_
-46. [Researchers Find Persistent Backdoor in Zbtlink Routers](<https://decipher.sc/2026/08/05/researchers-find-persistent-backdoor-in-zbtlink-routers/>) — _decipher.sc_
-47. [Over 4,400 Rockwell PLCs Exposed Online, 22 Found in Water Attack Cities](<https://thehackernews.com/2026/08/over-4400-rockwell-plcs-exposed-online.html>) — _thehackernews.com_
-48. [Swiss Government SharePoint Breach Compromised 200 Accounts](<https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/>) — _bleepingcomputer.com_
-49. [New TONTOU CPU Attack Bypasses Spectre v2 Fixes to Leak Linux Password Hashes](<https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/>) — _bleepingcomputer.com_
-50. [Apple's Private Relay Leaks Your Real IP Address in Safari](<https://www.privacyguides.org/news/2026/08/05/apples-private-relay-leaks-your-real-ip-address-in-safari/>) — _privacyguides.org_
-51. [China-linked LightSpy spyware caught targeting victims in 13 countries, including the US](<https://techcrunch.com/2026/08/06/china-linked-lightspy-spyware-caught-targeting-victims-in-13-countries-including-the-us/>) — _techcrunch.com_
-52. [Ill Bloom: Investigating a Wallet Generation Vulnerability During Active Exploitation](<https://www.coinspect.com/blog/ill-bloom-investigation/>) — _coinspect.com_
-53. [Why AI-Generated Vulnerability Patches Still Require Human Review](<https://1password.com/blog/why-ai-generated-patches-still-require-human-review>) — _1password.com_
-54. [Detecting and Preventing the Hugging Face/OpenAI Incident](<https://pulse.latio.tech/p/detecting-and-preventing-the-hugging>) — _pulse.latio.tech_
+1. [\[AINews\] Zawinski's Law of MultiAgents](<https://www.latent.space/p/ainews-zawinskis-law-of-multiagents>) — _latent.space_
+2. [Now we have a timeline of the OpenAI accidental attack against Hugging Face](<https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything>) — _simonwillison.net_
+3. [GitHub Copilot weekly releases — August 3](<https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3>) — _github.blog_
 
 
 ## Recent archive
