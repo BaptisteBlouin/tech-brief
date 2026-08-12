@@ -8,88 +8,49 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-11
-<sub>updated 12 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-12
+<sub>updated 12 August 2026 at 13:01</sub>
 
-## AI/ML Models and Capabilities
-- OpenAI begins testing labeled ads in ChatGPT to sustain free access, with privacy protections and user control <sup>[1](<https://openai.com/index/testing-ads-in-chatgpt>)</sup>.
-- Meta releases **Muse Glimmer**, a 30B-parameter Apache 2.0 open-weight model optimized for end-to-end agentic task completion, reliable tool use, and multi-step reasoning <sup>[2](<https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything>), [3](<https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model>), [4](<https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/>), [5](<https://www.latent.space/p/ainews-muse-glimmer-and-spark-open>)</sup>.
-- Anthropic’s **Claude** advances mathematical research by improving the lower bound of zeros satisfying the Riemann hypothesis from 41.6% to 67.2% via coordinated subagents <sup>[6](<https://www.anthropic.com/research/riemann-zeta>)</sup>.
-- OpenAI introduces **GPT-5.6-Cyber** for vulnerability research and exploit validation, and expands **Daybreak** access tiers (Blue/Red) for cybersecurity practitioners <sup>[7](<https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/>), [8](<https://runtimewire.com/article/openai-gpt-5-6-cyber-daybreak-red>), [9](<https://openai.com/index/daybreak-models-are-now-available-on-aws>)</sup>.
-- **Dyna-2**, a world-action model trained on 1M+ hours of human video, proves scaling laws for robotics with 87% zero-shot pass rates in real-world deployments <sup>[10](<https://www.humanoidsdaily.com/news/dyna-2-proves-scaling-laws-for-robotics-1-million-hours-of-human-video-unlocks-zero-shot-dexterity>), [11](<https://www.dyna.co/dyna-2>)</sup>.
-- Google’s **LiteRT** and **Gemma** enable fast, secure Edge AI on Raspberry Pi, with Hailo AI accelerator support coming soon <sup>[12](<https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/>)</sup>.
-- IBM Research proposes **ALTK-Evolve**, a token-efficient alternative to ACE for agentic memory, reducing costs by learning from agent trajectories <sup>[13](<https://huggingface.co/blog/ibm-research/altk-evolve-sldd>)</sup>.
+## AI/ML Security and Interpretability
+- A new paper demonstrates that encrypted chain-of-thought blocks from Anthropic, OpenAI, and Google can be replayed across sessions/users/models, enabling attackers to decode and port reasoning traces and improve open models via stolen traces <sup>[1](<https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace>), [2](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything>)</sup>.
+- The technique builds on earlier responsible disclosures (e.g., latency side-channels) and shows that even cryptographically signed reasoning can be exfiltrated, raising concerns for alignment, security, and CoT monitoring <sup>[1](<https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace>)</sup>.
 
-## LLM Tooling, RAG, and Agents
-- Claude’s **Compliance API** now covers **Cowork** (desktop/web/mobile) and **Claude Code** (CLI/desktop), consolidating session content and metadata for audits <sup>[14](<https://claude.com/blog/compliance-api-cowork-and-claude-code>)</sup>.
-- Weaviate’s **Query Agent Search Mode** adds an `effort` parameter (medium/high/ultrahigh) to scale test-time compute, boosting nDCG@10 from 13.0 to 57.5 on BRIGHT Biology <sup>[15](<https://weaviate.io/blog/search-mode-effort>)</sup>.
-- GitHub Copilot for JetBrains gains **persistent memory** across chat sessions, **Ollama BYOK** support, and enterprise-managed settings <sup>[16](<https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains>)</sup>.
-- **Ante** and **OpenChamber** emerge as open-source, local-first coding agents with sandboxed execution and multi-model support <sup>[17](<https://github.com/AntigmaLabs/ante>), [18](<https://openchamber.dev/>)</sup>.
-- Docker launches **Sandboxes for Coding Agents**, providing disposable, isolated microVMs for safe unattended execution of agents like Claude Code <sup>[19](<https://www.docker.com/products/docker-sandboxes/>)</sup>.
+## LLM Adoption and Agents
+- Google’s Gemini reaches 1 billion monthly active users, becoming the company’s fastest-growing product and embedding deeply into Google’s search and product ecosystem <sup>[3](<https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/>)</sup>.
+- SpaceXAI unveils Grok Bot, an agentic system that operates like a team of AI agents, retaining context across tasks, signing into apps, and sharing state; it is already used internally for engineering, growth, marketing, sales, and finance workflows <sup>[4](<https://www.bloomberg.com/news/articles/2026-08-11/spacexai-unveils-grok-bot-to-work-like-a-team-of-ai-agents?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjUxNDY4OSwiZXhwIjoxNzg3MTE5NDg5LCJhcnRpY2xlSWQiOiJUSks0RVpUOTZPU0cwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.6KeWdyBAMxNwBVL5_raTXhaTvTFoDOI__drrs5yRJLU>)</sup>.
 
-## MLOps and DevOps
-- GitHub Enterprise Server **3.22 RC** adds **Copilot CLI in air-gapped environments**, centralized **Enterprise Teams** GA, and enhanced secret scanning controls <sup>[20](<https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate>)</sup>.
-- GitHub introduces **per-model token breakdowns** in AI usage reports (input/output/cache) and **automated migration** of branch protection rules to repository rulesets <sup>[21](<https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report>), [22](<https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets>)</sup>.
-- **MAI-Code-1.1-Flash** rolls out in GitHub Copilot with 73% lower cost, vision support, and improved coding/tool use; **MAI-Code-1-Flash** to be deprecated on Sept 10 <sup>[23](<https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot>), [24](<https://github.blog/changelog/2026-08-11-upcoming-deprecation-of-mai-code-1-flash>)</sup>.
-- Google pairs **OSS-Fuzz** with **CodeMender** (DeepMind’s AI agent) to auto-generate and validate patches for C/C++ memory safety bugs <sup>[25](<https://blog.google/security/from-finding-to-fixing-reducing-maintainer-burden-with-automated-patches/>)</sup>.
+## AI Applications and Startups
+- Columbia researchers deploy an AI system to locate rare sperm in infertile men, addressing cases of azoospermia where manual microscopy misses viable cells <sup>[5](<https://www.nytimes.com/2026/08/11/science/ai-infertile-men-sperm.html?unlocked_article_code=1.41A.Jn5D.uMN3qB1ku73k&smid=url-share>)</sup>.
+- Igor Babuschkin (ex-xAI) launches River AI to build trainable, open-source AI that runs on personal home computers, aiming to decentralize control away from big corporations <sup>[6](<https://www.nytimes.com/2026/08/11/technology/igor-babuschkin-xai-river-ai.html?unlocked_article_code=1.41A.60Pc.HSJcWvW3aO1r&smid=url-share>)</sup>.
 
-## Cloud and Infrastructure
-- **Daybreak models** (OpenAI) are now available on **Amazon Bedrock** for enterprise security workflows <sup>[9](<https://openai.com/index/daybreak-models-are-now-available-on-aws>)</sup>.
-- Cloudflare’s **H1 2026 DDoS Threat Report** highlights a 519% QoQ surge in 1+ Tbps attacks, with DNS floods dominating (40% of network-layer activity) <sup>[26](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>)</sup>.
-- Cloudflare for Government achieves **FedRAMP Class D (High)** certification, enabling handling of sensitive unclassified data on its global network <sup>[27](<https://blog.cloudflare.com/fedramp-class-d-certification/>)</sup>.
-- Apple Silicon macOS VMs achieve **11–16× faster LLM inference** in llama.cpp via GPU passthrough and Metal kernel optimizations <sup>[28](<https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md>)</sup>.
+## Engineering and Developer Practices
+- Sophie Alpert’s policy for AI-assisted writing emphasizes that engineers must stand behind every idea and sentence in their docs, as lossless transformations of natural language are impossible; reviewers should never hear “AI wrote that” as an excuse <sup>[7](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything>)</sup>.
+- Vercel argues that as AI models become more capable at cybersecurity, defenders must continuously improve vulnerability discovery and remediation, since the gap between open and closed models will shrink <sup>[8](<https://vercel.com/blog/everything-hackable-will-get-hacked>)</sup>.
+- Scaling agentic coding SDKs requires accounting for the high cost of concurrency, as it involves many partially trusted computers operating simultaneously <sup>[9](<https://sahansera.dev/scaling-an-agentic-coding-sdk-what-concurrency-actually-costs/>)</sup>.
 
-## Developer Tools and Security
-- Google advocates **Go** as ideal for AI-assisted engineering, emphasizing reviewability and maintainability over write speed <sup>[29](<https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/>)</sup>.
-- **h3-metal** brings native **MiniMax-H3** (video/audio) inference to Apple Silicon with Metal optimizations <sup>[30](<https://github.com/antirez/h3.c>)</sup>.
-- Security: Researchers demonstrate **reasoning trace extraction** from proprietary LLM APIs (Anthropic/OpenAI/Google) via encrypted chain-of-thought replay <sup>[31](<https://stolen-thoughts.com/>)</sup>.
-- **CVE-2026-53360** in KVM’s SEV-SNP handler allowed VM escape via heap out-of-bounds; patched in kernels v7.0.12+/v6.18.35+/v6.12.93 <sup>[32](<https://blog.himanshuanand.com/2026/08/i-found-a-vm-escape-bug-in-kvm-and-someone-else-got-there-first/>)</sup>.
-- **Apple PCC vulnerability** (CVE-2026-20685) enabled path traversal and telemetry hijacking; patched in release 5E290.3 <sup>[33](<https://blog.sentry.security/beyond-prompt-injection-hacking-apples-private-cloud-compute/>)</sup>.
-- **Atlassian Rovo** patched "RovoBlast," a one-click prompt injection flaw exposing enterprise data across 50+ platforms <sup>[34](<https://www.csoonline.com/article/4207306/one-click-flaw-in-atlassian-rovo-exposed-enterprise-data-via-prompt-injection-attack.html>)</sup>.
+## Language and Tooling
+- Modular announces Mojo 1.0, marking the language’s transition into a general-purpose tool with a growing developer community <sup>[10](<https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here>)</sup>.
+- ngrok explores the duality between compression and prediction, linking entropy in compression to improved language model performance <sup>[11](<https://ngrok.com/blog/compression-is-prediction>)</sup>.
 
-## Notable Engineering Insights
-- a16z analysis shows agents now effectively automate computer use for repetitive tasks (e.g., ticket processing, legacy system navigation) <sup>[35](<https://a16z.com/can-agents-use-a-computer-yet-weve-got-the-data/>)</sup>.
-- Meta’s Zuckerberg outlines a vision for **personal superintelligence**, emphasizing open weights and a $1B fund for data center communities <sup>[36](<https://www.wsj.com/tech/ai/mark-zuckerberg-lays-out-new-ai-vision-in-6-500-word-essay-966e9a56?st=Tfgtoj&reflink=desktopwebshare_permalink>), [37](<https://about.fb.com/news/2026/08/the-future-is-for-everyone/>)</sup>.
+## Software Engineering Insights
+- A deep dive into Optiver reveals how proprietary trading firms invest in bespoke hardware and large platform teams, offering lucrative, full-stack engineering challenges <sup>[12](<https://newsletter.pragmaticengineer.com/p/optiver>)</sup>.
+- Roadmaps should prioritize decisions over dates, as timelines are rarely constrained purely by time but by approvals, handoffs, or unresolved choices <sup>[13](<https://lethain.com/decisions-not-dates/>)</sup>.
 
 ## Sources
 
-1. [Testing ads in ChatGPT](<https://openai.com/index/testing-ads-in-chatgpt>) — _openai.com_
-2. [Introducing Muse Glimmer](<https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything>) — _simonwillison.net_
-3. [Meta released Muse Glimmer](<https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model>) — _research.meta.ai_
-4. [Introducing Muse Glimmer](<https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/>) — _simonwillison.net_
-5. [\[AINews\] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise](<https://www.latent.space/p/ainews-muse-glimmer-and-spark-open>) — _latent.space_
-6. [Learning more about Claude's mathematical capabilities](<https://www.anthropic.com/research/riemann-zeta>) — _anthropic.com_
-7. [GPT-5.6-Cyber](<https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/>) — _openai.com_
-8. [OpenAI Launches GPT-5.6-Cyber with Fewer Refusals for Exploit Research](<https://runtimewire.com/article/openai-gpt-5-6-cyber-daybreak-red>) — _runtimewire.com_
-9. [Daybreak models are now available on AWS](<https://openai.com/index/daybreak-models-are-now-available-on-aws>) — _openai.com_
-10. [Dyna-2 Proves Scaling Laws for Robotics: 1 Million Hours of Human Video Unlocks Zero-Shot Dexterity](<https://www.humanoidsdaily.com/news/dyna-2-proves-scaling-laws-for-robotics-1-million-hours-of-human-video-unlocks-zero-shot-dexterity>) — _humanoidsdaily.com_
-11. [Dyna-2: A 1-Million-Hour Scaling Law for World-Action Models](<https://www.dyna.co/dyna-2>) — _dyna.co_
-12. [Mastering Edge AI on Raspberry Pi with LiteRT and Gemma](<https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/>) — _google ai_
-13. [Thinking of ACE? We Can Do It with Fewer Tokens](<https://huggingface.co/blog/ibm-research/altk-evolve-sldd>) — _huggingface.co_
-14. [Compliance API coverage extends to Claude Cowork and Claude Code](<https://claude.com/blog/compliance-api-cowork-and-claude-code>) — _claude_
-15. [Scaling Test-Time Compute in Search Mode](<https://weaviate.io/blog/search-mode-effort>) — _weaviate_
-16. [Copilot memory and Ollama in GitHub Copilot for JetBrains](<https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains>) — _github.blog_
-17. [Ante](<https://github.com/AntigmaLabs/ante>) — _github.com_
-18. [OpenChamber (Website)](<https://openchamber.dev/>) — _openchamber.dev_
-19. [Sandboxes for Coding Agents (Website)](<https://www.docker.com/products/docker-sandboxes/>) — _docker.com_
-20. [GitHub Enterprise Server 3.22 release candidate](<https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate>) — _github.blog_
-21. [Per-model token breakdown in the usage report](<https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report>) — _github.blog_
-22. [Automatically migrate branch protection rules to repository rulesets](<https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets>) — _github.blog_
-23. [MAI-Code-1.1-Flash available in GitHub Copilot](<https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot>) — _github.blog_
-24. [Upcoming deprecation of MAI-Code-1-Flash](<https://github.blog/changelog/2026-08-11-upcoming-deprecation-of-mai-code-1-flash>) — _github.blog_
-25. [From Finding to Fixing: Reducing maintainer burden with automated patches](<https://blog.google/security/from-finding-to-fixing-reducing-maintainer-burden-with-automated-patches/>) — _blog.google_
-26. [Cloudflare DDoS Threat Report H1 2026: 1 Tbps attacks soar as DNS floods and geopolitical tensions drive a new wave](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>) — _blog.cloudflare.com_
-27. [Serving the most critical missions: Cloudflare for Government achieves FedRAMP Class D (High) Certified status](<https://blog.cloudflare.com/fedramp-class-d-certification/>) — _blog.cloudflare.com_
-28. [Apple Silicon and macOS VMs: Faster LLM Inference with llama.cpp](<https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md>) — _hnrss.org_
-29. [Why Go is an Ideal Language for AI-Assisted Software Engineering](<https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/>) — _google ai_
-30. [h3-metal](<https://github.com/antirez/h3.c>) — _github.com_
-31. [Stealing Reasoning Traces from Proprietary LLM APIs](<https://stolen-thoughts.com/>) — _hnrss.org_
-32. [I found a VM escape bug in KVM and someone else got there first](<https://blog.himanshuanand.com/2026/08/i-found-a-vm-escape-bug-in-kvm-and-someone-else-got-there-first/>) — _blog.himanshuanand.com_
-33. [Beyond Prompt Injection: Hacking Apple's Private Cloud Compute](<https://blog.sentry.security/beyond-prompt-injection-hacking-apples-private-cloud-compute/>) — _blog.sentry.security_
-34. [One-click flaw in Atlassian Rovo exposed enterprise data via prompt injection attack](<https://www.csoonline.com/article/4207306/one-click-flaw-in-atlassian-rovo-exposed-enterprise-data-via-prompt-injection-attack.html>) — _csoonline.com_
-35. [Can Agents Use a Computer Yet? We've Got the Data](<https://a16z.com/can-agents-use-a-computer-yet-weve-got-the-data/>) — _a16z.com_
-36. [Mark Zuckerberg Lays Out New AI Vision in 6,500-Word Essay](<https://www.wsj.com/tech/ai/mark-zuckerberg-lays-out-new-ai-vision-in-6-500-word-essay-966e9a56?st=Tfgtoj&reflink=desktopwebshare_permalink>) — _wsj.com_
-37. [The Future is for Everyone](<https://about.fb.com/news/2026/08/the-future-is-for-everyone/>) — _about.fb.com_
+1. [\[AINews\] How to steal a Reasoning Trace](<https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace>) — _latent.space_
+2. [Stealing Reasoning Traces from Proprietary LLM APIs](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything>) — _simonwillison.net_
+3. [Gemini becomes Google's fastest-growing product ever as it hits 1B users](<https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/>) — _arstechnica.com_
+4. [SpaceXAI Unveils Grok Bot to Work Like a Team of AI Agents](<https://www.bloomberg.com/news/articles/2026-08-11/spacexai-unveils-grok-bot-to-work-like-a-team-of-ai-agents?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjUxNDY4OSwiZXhwIjoxNzg3MTE5NDg5LCJhcnRpY2xlSWQiOiJUSks0RVpUOTZPU0cwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.6KeWdyBAMxNwBVL5_raTXhaTvTFoDOI__drrs5yRJLU>) — _bloomberg.com_
+5. [AI Is Finding Sperm Where Doctors Couldn't](<https://www.nytimes.com/2026/08/11/science/ai-infertile-men-sperm.html?unlocked_article_code=1.41A.Jn5D.uMN3qB1ku73k&smid=url-share>) — _nytimes.com_
+6. [His Start-Up's Goal: AI That Is Trainable and Not Controlled by a Big Company](<https://www.nytimes.com/2026/08/11/technology/igor-babuschkin-xai-river-ai.html?unlocked_article_code=1.41A.60Pc.HSJcWvW3aO1r&smid=url-share>) — _nytimes.com_
+7. [There are no lossless transformations of natural-language text](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything>) — _simonwillison.net_
+8. [Everything hackable will get hacked](<https://vercel.com/blog/everything-hackable-will-get-hacked>) — _vercel.com_
+9. [Scaling an Agentic Coding SDK: What Concurrency Actually Costs](<https://sahansera.dev/scaling-an-agentic-coding-sdk-what-concurrency-actually-costs/>) — _sahansera.dev_
+10. [Modular 26.5: Mojo 1.0 is here!](<https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here>) — _modular.com_
+11. [Compression is prediction](<https://ngrok.com/blog/compression-is-prediction>) — _ngrok.com_
+12. [Software engineering at a proprietary trading company: Optiver](<https://newsletter.pragmaticengineer.com/p/optiver>) — _newsletter.pragmaticengineer.com_
+13. [Roadmap decisions rather than dates](<https://lethain.com/decisions-not-dates/>) — _lethain.com_
 
 
 ## Recent archive
