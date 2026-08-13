@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>59 digests quotidiens archivés · du plus récent au plus ancien.</sub>
+<sub>60 digests quotidiens archivés · du plus récent au plus ancien.</sub>
 
 ### Août 2026
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-08-13` | Jeudi | [Lire →](2026-08-13.md) |
 | `2026-08-12` | Mercredi | [Lire →](2026-08-12.md) |
 | `2026-08-11` | Mardi | [Lire →](2026-08-11.md) |
 | `2026-08-10` | Lundi | [Lire →](2026-08-10.md) |
