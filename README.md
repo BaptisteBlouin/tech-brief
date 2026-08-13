@@ -8,103 +8,54 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-12
-<sub>updated 13 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-13
+<sub>updated 13 August 2026 at 13:01</sub>
 
-## AI/ML Models, Agents, and Tooling
-- Google’s Gemini surpasses 1 billion monthly active users, embedding deeply into Google’s search and product ecosystem <sup>[1](<https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/>), [2](<https://x.com/newsfromgoogle/status/2087233951031009665?s=46&t=sVvVqfqtrpFRLF39Bfwg9w>)</sup>.
-- SpaceXAI’s Grok Bot deploys teams of AI agents with persistent context, app sign-in, and shared state for internal workflows; Grok 4.6 focuses on long-running agents and interactive/visual tasks, matching GPT-5.6 Sol on a composite benchmark <sup>[3](<https://www.bloomberg.com/news/articles/2026-08-11/spacexai-unveils-grok-bot-to-work-like-a-team-of-ai-agents?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjUxNDY4OSwiZXhwIjoxNzg3MTE5NDg5LCJhcnRpY2xlSWQiOiJUSks0RVpUOTZPU0cwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.6KeWdyBAMxNwBVL5_raTXhaTvTFoDOI__drrs5yRJLU>), [4](<https://cursor.com/blog/grok-4-6>), [5](<http://x.ai/news/introducing-grok-bot>)</sup>.
-- OpenAI highlights enterprise adoption of agentic AI via ChatGPT and Codex, with frontier firms pulling ahead <sup>[6](<https://openai.com/index/how-enterprises-put-ai-to-work>), [7](<https://openai.com/index/ringcentral>)</sup>.
-- Google DeepMind releases a massively multilingual sign-language-to-text (SL2T) model, powering dictation in Gboard and Live Transcribe on Pixel 11 for ASL→English <sup>[8](<https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/>)</sup>.
-- NVIDIA introduces Nemotron 3.5 Lightning (30B MoE, 3B active) and NeMo Switchyard, a router that reshuffles models mid-task to cut agent costs to ~1/3 while retaining accuracy <sup>[9](<https://venturebeat.com/orchestration/nvidias-switchyard-router-reshuffles-ai-models-mid-task-cutting-task-costs-to-a-third-in-its-own-tests>), [10](<https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4>)</sup>.
-- Microsoft’s MAI-Code-1.1-Flash improves code quality and token efficiency at ~25% of prior cost, now in GitHub Copilot <sup>[11](<https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/>)</sup>.
-- AllenAI releases OlmoEarth embeddings for remote sensing, enabling custom exports for downstream analysis <sup>[12](<https://huggingface.co/blog/allenai/olmoearth-embeddings>)</sup>.
-- LiquidAI’s LFM2.5-VL-3B offers improved, faster vision capabilities for edge devices <sup>[13](<https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b>)</sup>.
+## AI Models & Agents
+- SpaceXAI releases **Grok 4.6**, a 1.5T model optimized for long-running agents, coding, and knowledge work, surpassing Kimi K3 and matching GPT-5.6 Sol on Artificial Analysis; API pricing starts at $2/$6 per million input/output tokens, undercutting GPT-5.6 Sol by >50% <sup>[1](<https://www.latent.space/p/ainews-spacexai-grok-46-and-grok>), [2](<https://venturebeat.com/technology/spacexai-debuts-grok-4-6-overtaking-kimi-k3s-performance-and-matching-gpt-5-6-sol-for-worlds-third-best-on-artificial-analysis>)</sup>.
+- **DeepSeek V4 Pro 0813** is now available via OpenRouter (API-only), with reasoning modes producing visibly distinct outputs; prior DeepSeek V4 models had open weights, suggesting this may follow <sup>[3](<https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/>)</sup>.
+- Meta releases **Muse Glimmer (30B)**, an open-weight model quantizable to <20 GB for local agent workflows on consumer GPUs <sup>[4](<https://www.testingcatalog.com/meta-releases-muse-glimmer-for-local-ai-agents/>)</sup>.
+- DeepSeek is building a team to challenge **Claude Code**, signaling intensified competition in AI coding agents <sup>[5](<https://www.bloomberg.com/news/articles/2026-08-12/deepseek-publicizes-efforts-to-challenge-anthropic-s-claude-code?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU5MjA0MCwiZXhwIjoxNzg3MTk2ODQwLCJhcnRpY2xlSWQiOiJUSk5XRU5UOU5KTFYwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.aybpc7rfFGTcwTN6BlU1XCafnXRg4sYT3XYvrFKJKdU>)</sup>.
 
-## Security and Safety
-- Encrypted chain-of-thought blocks from Anthropic, OpenAI, and Google can be replayed across sessions/users/models; attackers can decode and port reasoning traces, even bypassing cryptographic signing, enabling theft of reasoning and improvement of open models <sup>[14](<https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace>), [15](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything>), [16](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/>), [17](<https://stolen-thoughts.com/>)</sup>.
-- Rapid7 chained SharePoint CVEs (CVE-2026-55040, CVE-2026-63520) to achieve unauthenticated RCE, with an AI agent aiding exploit discovery; patches are available <sup>[18](<https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html>)</sup>.
-- Metabase Cloud patched a SQL injection zero-day (CVSS 10) allowing admin access and data exfiltration; self-hosted users must patch or block endpoints and rotate credentials <sup>[19](<https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius>)</sup>.
-- OpenSSH 10.5 fixed a flaw where locking ssh-agent exposed local-only keys to remote forwarding and PKCS#11 token access <sup>[20](<https://www.helpnetsecurity.com/2026/08/11/openssh-10-5-ssh-agent-flaw/>)</sup>.
-- Amazon S3 Vectors can be abused: attackers with PutVectorBucketPolicy can poison RAG pipelines, forge citations, or manipulate embeddings to dominate retrieval, even achieving command execution in tool-enabled agents; CloudTrail data events are off by default and lack metadata <sup>[21](<https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning>)</sup>.
-- Docker proposes an Agent Baseline: six security outcomes to constrain enterprise agents’ reach, authority, and actions <sup>[22](<https://www.docker.com/blog/a-new-security-baseline-for-enterprise-agentic-adoption/>)</sup>.
-- Cloudflare reports 1 Tbps+ DDoS attacks surged in H1 2026, with DNS floods and geopolitical tensions driving a new wave; Brazil overtook the US as the top source <sup>[23](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>)</sup>.
-- Zoom patched “Zoomsday” (CVE-2026-53413), a zero-click RCE in its annotation protocol <sup>[24](<https://securityaffairs.com/197042/hacking/zoom-patches-zoomsday-zero-click-flaw-enabling-remote-code-execution.html>)</sup>.
-- A malicious Chrome extension for AI sidebars, previously banned, returned to the store and resumed stealing chats and hijacking uninstalls for affiliate revenue <sup>[25](<https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/>)</sup>.
-- Pass-ta-key malware can steal passkeys from infected Windows PCs via Google Password Manager by impersonating an iPhone and abusing device sync <sup>[26](<https://arstechnica.com/security/2026/08/heres-why-the-new-pass-ta-key-attack-is-mostly-a-nothingburger/>)</sup>.
+## RAG, Vector Search & Knowledge Graphs
+- Qdrant analyzes **filtered vector search trade-offs**, comparing filterable HNSW, ACORN expansion, and full scans; ACORN helps in some cases, but extra index-time edges can outperform query-time repairs <sup>[6](<https://qdrant.tech/articles/filtered-vector-search-acorn/>)</sup>.
+- Knowledge graphs often fail due to SQL-like design mistakes; best practices include use-case-specific scopes, staged/federated graphs, SHACL validation, and query-time graph construction <sup>[7](<https://ontologist.substack.com/p/why-knowledge-graph-projects-fail>)</sup>.
 
-## LLM Tooling, APIs, and Developer Ecosystem
-- GitHub releases Agent Plugins 1.0 as an open standard to package agent skills and MCP servers into one installable plugin, supported across VS Code, Copilot CLI, and the Copilot app; Google is a core maintainer <sup>[27](<https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app>)</sup>.
-- Claude’s Chrome side panel is now Claude Cowork: sessions persist across browser, desktop, mobile, and web apps, with skills and connectors working in-browser <sup>[28](<https://claude.com/blog/cowork-chrome-side-panel>)</sup>.
-- Pinecone outlines agent-friendly API design principles: errors as guidance, budgeted context, self-description over docs, safe machine tempo, access without humans, and treating the agent surface as a product <sup>[29](<https://www.pinecone.io/blog/designing-agent-friendly-apis/>)</sup>.
-- Cursor is preparing to launch “Cursor Review” (formerly Origin), offering codebase sync and an automated PR pipeline for human+agent collaboration <sup>[30](<https://www.testingcatalog.com/cursor-prepares-to-launch-origin-platform-for-code-reviews/>), [31](<https://arslan.io/2026/08/10/joining-cursor/>)</sup>.
-- Open-source agent orchestration and integration tools emerge: Paperclip (agent teams for business), Corsair (unified, permissioned agent integrations), Sourcebot (self-hosted codebase Q&A), Code-Graph-RAG (multi-language code graph + MCP server), and OpenCodeReview (Alibaba’s AI code review) <sup>[32](<https://github.com/paperclipai/paperclip>), [33](<https://github.com/corsairdev/corsair>), [34](<https://github.com/sourcebot-dev/sourcebot>), [35](<https://github.com/vitali87/code-graph-rag>), [36](<https://github.com/alibaba/open-code-review>)</sup>.
+## MLOps & AI Reliability
+- **AI model drift** requires monitoring data, concept, pipeline, prompt, embedding, and output drift in LLM/RAG systems, combining baselines, distribution checks, telemetry, and user feedback <sup>[8](<https://www.honeycomb.io/blog/ai-model-drift>)</sup>.
+- Data teams should prepare for **AI agents in data work** with strong evals, explicit business context, and low-latency infra for bursty, parallel workloads; proactive insights remain hard due to relevance/false-positive challenges <sup>[9](<https://www.infoworld.com/article/4203157/agents-are-coming-for-data-just-slowly.html>)</sup>.
+- **Databricks acquires Electric** to integrate PGlite (WASM Postgres) into AI agent sandboxes, enabling local DBs with sync to Lakebase for governed, distributed agent state <sup>[10](<https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes>)</sup>.
 
-## MLOps, DevOps, and Infrastructure
-- CNCF graduates Cloud Native Buildpacks, an open standard for building OCI-compliant container images from source, now adopted by DigitalOcean, GitLab, Google, and Bloomberg for AI infra <sup>[37](<https://www.cncf.io/announcements/2026/08/11/cncf-announces-graduation-of-cloud-native-buildpacks-advancing-the-standard-for-container-builds/>)</sup>.
-- Docker VMM Public Beta replaces third-party VMM in Docker Desktop with a first-party, performance-optimized layer for Mac/Windows <sup>[38](<https://www.docker.com/blog/docker-vmm-public-beta/>)</sup>.
-- AWS IAM Identity Center adds one-click multi-Region configuration for new organization instances, improving resilience <sup>[39](<https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-identity-center-supports-one-click-multi-region-option-new-organization-instances/>)</sup>.
-- Databricks introduces FILE type (beta) for native storage of unstructured data (videos, images, docs) in lakehouse tables <sup>[40](<https://www.databricks.com/blog/introducing-file-type-native-column-type-multimodal-data>)</sup>.
-- Datadog improved APM Java startup by encoding a prefix trie as a JVM constant, cutting class-matching overhead by 30% over four years <sup>[41](<https://www.datadoghq.com/blog/engineering/improving-apm-java-startup-with-a-prefix-trie/>)</sup>.
+## DevOps, Infrastructure & Cloud
+- **Stripe** automates MongoDB incident recovery using **graph search + state machines**, reducing pager alerts by ~30% and avoiding ~12 days of unhealthy shard states/year via Dijkstra-based planning <sup>[11](<https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet>)</sup>.
+- **Vercel** migrates its build warm pool state from Redis to DynamoDB, using dual writes, shadow reads, and feature flags; the move exposed a hidden dependency on Redis’s ultra-low latency, forcing a concurrency redesign <sup>[12](<https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build>)</sup>.
+- **NATS 2.12** adds **atomic batch publishing** for JetStream, ensuring all-or-nothing message commits for event-sourced systems and state replacement workflows <sup>[13](<https://www.synadia.com/blog/atomic-batch-publishing-nats-2-12/>)</sup>.
+- **Tailscale** and SQLite maintainers collaborate to fix a **16-year-old SQLite WAL reset bug**, showcasing cross-team debugging at scale <sup>[14](<https://tailscale.com/blog/sqlite-wal-reset-bug>)</sup>.
 
-## Engineering Practices and Insights
-- Sophie Alpert’s policy insists engineers must stand behind every idea and sentence in AI-assisted docs; lossless natural-language transformations are impossible <sup>[42](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything>), [43](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/>)</sup>.
-- Charity Majors argues that skepticism about AI for development is no longer rational in 2026, as AI is demonstrably changing the industry <sup>[44](<https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for>)</sup>.
-- Florian Herrengt’s cautionary tale illustrates how over-reliance on AI can obfuscate system understanding, leaving teams unable to debug convoluted, AI-generated code <sup>[45](<https://simonwillison.net/2026/Aug/12/florian-herrengt/>)</sup>.
-- Roadmaps should prioritize decisions over dates, as timelines are gated by approvals, handoffs, or unresolved choices <sup>[46](<https://lethain.com/decisions-not-dates/>)</sup>.
-- Code review remains a human skill: experienced reviewers catch bugs, design flaws, and operational risks that automated or LLM reviews miss <sup>[47](<https://typesanitizer.com/blog/code-review.html>)</sup>.
-- Scaling agentic coding SDKs must account for high concurrency costs across many partially trusted computers <sup>[48](<https://sahansera.dev/scaling-an-agentic-coding-sdk-what-concurrency-actually-costs/>)</sup>.
+## Developer Tools & Engineering Practices
+- **sqlfmt** launches as a **gofmt-style SQL formatter**, enforcing "river alignment" with lowercase keywords, consistent indentation, and semantic-preserving tokenization; runs as CLI or WASM in-browser <sup>[15](<https://tapoueh.org/blog/2026/08/introducing-sqlfmt-an-sql-gofmt-style-formatter/>)</sup>.
+- **Netflix’s Maestro** (Apache-2.0) is an open-source **workflow orchestrator** for large-scale data/ML/batch pipelines, offering a production-tested alternative/complement to Airflow <sup>[16](<https://github.com/Netflix/maestro>)</sup>.
+- **Salesforce** standardizes product telemetry via a **Product Data Platform**, reducing time-to-insight by 97% while processing 45B rows/day across 19K events <sup>[17](<https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97>)</sup>.
 
 ## Sources
 
-1. [Gemini becomes Google's fastest-growing product ever as it hits 1B users](<https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/>) — _arstechnica.com_
-2. [Gemini Passed 1 Billion Monthly Users](<https://x.com/newsfromgoogle/status/2087233951031009665?s=46&t=sVvVqfqtrpFRLF39Bfwg9w>) — _x.com_
-3. [SpaceXAI Unveils Grok Bot to Work Like a Team of AI Agents](<https://www.bloomberg.com/news/articles/2026-08-11/spacexai-unveils-grok-bot-to-work-like-a-team-of-ai-agents?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjUxNDY4OSwiZXhwIjoxNzg3MTE5NDg5LCJhcnRpY2xlSWQiOiJUSks0RVpUOTZPU0cwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.6KeWdyBAMxNwBVL5_raTXhaTvTFoDOI__drrs5yRJLU>) — _bloomberg.com_
-4. [Introducing Grok 4.6](<https://cursor.com/blog/grok-4-6>) — _cursor_
-5. [Introducing Grok Bot](<http://x.ai/news/introducing-grok-bot>) — _x.ai_
-6. [From assistance to execution: How enterprises put AI to work](<https://openai.com/index/how-enterprises-put-ai-to-work>) — _openai.com_
-7. [How RingCentral builds AI-native work from engineering to ops](<https://openai.com/index/ringcentral>) — _openai.com_
-8. [Putting sign language AI into users’ hands](<https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/>) — _deepmind.google_
-9. [Nvidia's Switchyard router reshuffles AI models mid-task, cutting task costs to a third in its own tests](<https://venturebeat.com/orchestration/nvidias-switchyard-router-reshuffles-ai-models-mid-task-cutting-task-costs-to-a-third-in-its-own-tests>) — _venturebeat.com_
-10. [Nemotron 3.5 Lightning](<https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4>) — _huggingface.co_
-11. [MAI-Code-1.1-Flash: Better, faster, at a quarter of the cost](<https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/>) — _microsoft.ai_
-12. [Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis](<https://huggingface.co/blog/allenai/olmoearth-embeddings>) — _huggingface.co_
-13. [LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge](<https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b>) — _huggingface.co_
-14. [\[AINews\] How to steal a Reasoning Trace](<https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace>) — _latent.space_
-15. [Stealing Reasoning Traces from Proprietary LLM APIs](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything>) — _simonwillison.net_
-16. [Stealing Reasoning Traces from Proprietary LLM APIs](<https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/>) — _simonwillison.net_
-17. [Stealing Reasoning Traces from Proprietary LLM APIs (Website)](<https://stolen-thoughts.com/>) — _stolen-thoughts.com_
-18. [Researchers Disclose AI-Assisted SharePoint Exploit Chain Reaching Unauthenticated RCE](<https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html>) — _thehackernews.com_
-19. [Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius](<https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius>) — _darkreading.com_
-20. [Locking your ssh-agent exposed local-only keys until OpenSSH 10.5](<https://www.helpnetsecurity.com/2026/08/11/openssh-10-5-ssh-agent-flaw/>) — _helpnetsecurity.com_
-21. [A Security Analysis of Amazon S3 Vectors and Its Use in LLM Retrieval Pipelines](<https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning>) — _offensai.com_
-22. [A new security baseline for enterprise agentic adoption](<https://www.docker.com/blog/a-new-security-baseline-for-enterprise-agentic-adoption/>) — _docker.com_
-23. [Cloudflare DDoS Threat Report H1 2026: 1 Tbps attacks soar as DNS floods and geopolitical tensions drive a new wave](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>) — _blog.cloudflare.com_
-24. [Zoom Patches "Zoomsday" Zero-Click Flaw Enabling Remote Code Execution](<https://securityaffairs.com/197042/hacking/zoom-patches-zoomsday-zero-click-flaw-enabling-remote-code-execution.html>) — _securityaffairs.com_
-25. [Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities](<https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/>) — _securityweek.com_
-26. [New Pass-ta-key attack reveals all the things we didn't know about passkeys](<https://arstechnica.com/security/2026/08/heres-why-the-new-pass-ta-key-attack-is-mostly-a-nothingburger/>) — _arstechnica.com_
-27. [Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app](<https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app>) — _github.blog_
-28. [The Claude in Chrome side panel is now Claude Cowork](<https://claude.com/blog/cowork-chrome-side-panel>) — _claude_
-29. [Designing Agent-Friendly APIs](<https://www.pinecone.io/blog/designing-agent-friendly-apis/>) — _pinecone_
-30. [Cursor prepares to launch Origin platform for code reviews](<https://www.testingcatalog.com/cursor-prepares-to-launch-origin-platform-for-code-reviews/>) — _testingcatalog.com_
-31. [Joining Cursor](<https://arslan.io/2026/08/10/joining-cursor/>) — _arslan.io_
-32. [Paperclip](<https://github.com/paperclipai/paperclip>) — _github.com_
-33. [Corsair](<https://github.com/corsairdev/corsair>) — _github.com_
-34. [Sourcebot](<https://github.com/sourcebot-dev/sourcebot>) — _github.com_
-35. [Code-Graph-RAG](<https://github.com/vitali87/code-graph-rag>) — _github.com_
-36. [OpenCodeReview](<https://github.com/alibaba/open-code-review>) — _github.com_
-37. [CNCF Announces Graduation of Cloud Native Buildpacks, Advancing the Standard for Container Builds](<https://www.cncf.io/announcements/2026/08/11/cncf-announces-graduation-of-cloud-native-buildpacks-advancing-the-standard-for-container-builds/>) — _cncf.io_
-38. [Docker VMM Public Beta: A Complete Overhaul, Built for Performance](<https://www.docker.com/blog/docker-vmm-public-beta/>) — _docker.com_
-39. [AWS IAM Identity Center supports one-click multi-Region option for new organization instances](<https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-identity-center-supports-one-click-multi-region-option-new-organization-instances/>) — _aws.amazon.com_
-40. [Introducing FILE type: a native column type for multimodal data](<https://www.databricks.com/blog/introducing-file-type-native-column-type-multimodal-data>) — _databricks.com_
-41. [How we improved APM Java startup by encoding a prefix trie as a JVM constant](<https://www.datadoghq.com/blog/engineering/improving-apm-java-startup-with-a-prefix-trie/>) — _datadoghq.com_
-42. [There are no lossless transformations of natural-language text](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything>) — _simonwillison.net_
-43. [There are no lossless transformations of natural-language text](<https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/>) — _simonwillison.net_
-44. [Stop being skeptical about AI for development with Charity Majors](<https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for>) — _newsletter.pragmaticengineer.com_
-45. [Quoting Florian Herrengt](<https://simonwillison.net/2026/Aug/12/florian-herrengt/>) — _simonwillison.net_
-46. [Roadmap decisions rather than dates](<https://lethain.com/decisions-not-dates/>) — _lethain.com_
-47. [Reviewing code is a skill](<https://typesanitizer.com/blog/code-review.html>) — _typesanitizer.com_
-48. [Scaling an Agentic Coding SDK: What Concurrency Actually Costs](<https://sahansera.dev/scaling-an-agentic-coding-sdk-what-concurrency-actually-costs/>) — _sahansera.dev_
+1. [\[AINews\] SpaceXAI Grok 4.6 and Grok @Bot](<https://www.latent.space/p/ainews-spacexai-grok-46-and-grok>) — _latent.space_
+2. [SpaceXAI debuts Grok 4.6, overtaking Kimi K3's performance and matching GPT-5.6 Sol for world's third best on Artificial Analysis](<https://venturebeat.com/technology/spacexai-debuts-grok-4-6-overtaking-kimi-k3s-performance-and-matching-gpt-5-6-sol-for-worlds-third-best-on-artificial-analysis>) — _venturebeat.com_
+3. [DeepSeek V4 Pro 0813 (on OpenRouter)](<https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/>) — _simonwillison.net_
+4. [Meta releases Muse Glimmer for local AI agents](<https://www.testingcatalog.com/meta-releases-muse-glimmer-for-local-ai-agents/>) — _testingcatalog.com_
+5. [DeepSeek Publicizes Efforts to Challenge Anthropic's Claude Code](<https://www.bloomberg.com/news/articles/2026-08-12/deepseek-publicizes-efforts-to-challenge-anthropic-s-claude-code?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU5MjA0MCwiZXhwIjoxNzg3MTk2ODQwLCJhcnRpY2xlSWQiOiJUSk5XRU5UOU5KTFYwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.aybpc7rfFGTcwTN6BlU1XCafnXRg4sYT3XYvrFKJKdU>) — _bloomberg.com_
+6. [Filtered Vector Search: What ACORN Fixes, and What Fixes ACORN](<https://qdrant.tech/articles/filtered-vector-search-acorn/>) — _qdrant.tech_
+7. [Why Knowledge Graph Projects Fail — and How to Make Them Succeed](<https://ontologist.substack.com/p/why-knowledge-graph-projects-fail>) — _ontologist.substack.com_
+8. [AI Model Drift: How to Keep Models Reliable](<https://www.honeycomb.io/blog/ai-model-drift>) — _honeycomb.io_
+9. [Agents are coming for data (just slowly)](<https://www.infoworld.com/article/4203157/agents-are-coming-for-data-just-slowly.html>) — _infoworld.com_
+10. [Electric joins Databricks to bring WASM Postgres to AI agent sandboxes](<https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes>) — _databricks.com_
+11. [Stripe Uses Graph Search and State Machines to Automate Database Remediation](<https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet>) — _stripe.dev_
+12. [How we migrated the database behind every Vercel build](<https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build>) — _vercel.com_
+13. [Atomic Batch Publishing in NATS 2.12: All-or-Nothing Message Guarantees](<https://www.synadia.com/blog/atomic-batch-publishing-nats-2-12/>) — _synadia.com_
+14. [How we tracked down a 16-year-old SQLite bug](<https://tailscale.com/blog/sqlite-wal-reset-bug>) — _tailscale.com_
+15. [Introducing sqlfmt: an SQL gofmt-style formatter](<https://tapoueh.org/blog/2026/08/introducing-sqlfmt-an-sql-gofmt-style-formatter/>) — _tapoueh.org_
+16. [Maestro: Netflix's open-source workflow orchestrator keeps moving](<https://github.com/Netflix/maestro>) — _github.com_
+17. [How Standardizing Product Telemetry Reduced Time to Insight by 97%](<https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97>) — _engineering.salesforce.com_
 
 
 ## Recent archive
