@@ -8,103 +8,40 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-13
-<sub>mis à jour le 14 août 2026 à 01:02</sub>
+### Dernier digest — 2026-08-14
+<sub>mis à jour le 14 août 2026 à 13:01</sub>
 
-## Modèles et agents IA
-- SpaceXAI publie **Grok 4.6** (1,5T), optimisé pour les agents à long terme, le codage et le travail cognitif, rivalisant avec GPT-5.6 Sol sur Artificial Analysis ; les tarifs API commencent à 2 $/6 $ par million de tokens en entrée/sortie, soit >50 % moins cher que GPT-5.6 Sol <sup>[1](<https://www.latent.space/p/ainews-spacexai-grok-46-and-grok>), [2](<https://venturebeat.com/technology/spacexai-debuts-grok-4-6-overtaking-kimi-k3s-performance-and-matching-gpt-5-6-sol-for-worlds-third-best-on-artificial-analysis>), [3](<https://x.ai/news/grok-4-6>), [4](<https://x.com/ericzakariasson/status/2087566447178547494>)</sup>.
-- **DeepSeek V4 Pro 0813** est désormais disponible uniquement via l'API OpenRouter, avec des modes de raisonnement distincts ; les modèles V4 précédents avaient des poids ouverts, suggérant que celui-ci pourrait suivre <sup>[5](<https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/>), [6](<https://wccftech.com/deepseek-prices-its-new-v4-pro-0813-model-at-0-87-per-1-million-output-tokens-as-the-high-flying-chinese-ai-lab-wows-with-its-soaring-token-consumption/>)</sup>.
-- Meta publie **Muse Glimmer (30B)**, un modèle à poids ouverts quantifiable à <20 Go pour des workflows d'agents locaux sur des GPU grand public <sup>[7](<https://www.testingcatalog.com/meta-releases-muse-glimmer-for-local-ai-agents/>)</sup>.
-- Google lance **Gemini 3.7 Flash**, un modèle polyvalent pour le codage/les agents avec des gains significatifs par rapport à 3.6 Flash (ex. FrontierCode 1.1 Main 43,6 % vs 34,4 %, DeepSWE v1.1 65,3 % vs 49,0 %) à moitié prix ; désormais intégré à GitHub Copilot <sup>[8](<https://deepmind.google/blog/introducing-gemini-3-7-flash/>), [9](<https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot>)</sup>.
-- Microsoft présente **MAI-Thinking-1**, un modèle de raisonnement de taille moyenne pour des tâches de codage/mathématiques/connaissances économiques en entreprise <sup>[10](<https://microsoft.ai/news/introducing-mai-thinking-1/>)</sup>.
-- DeepSeek constitue une équipe pour rivaliser avec **Claude Code**, intensifiant la concurrence dans les agents de codage IA <sup>[11](<https://www.bloomberg.com/news/articles/2026-08-12/deepseek-publicizes-efforts-to-challenge-anthropic-s-claude-code?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU5MjA0MCwiZXhwIjoxNzg3MTk2ODQwLCJhcnRpY2xlSWQiOiJUSk5XRU5UOU5KTFYwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.aybpc7rfFGTcwTN6BlU1XCafnXRg4sYT3XYvrFKJKdU>)</sup>.
-- OpenAI présente en avant-première le **mode Ultrafast** pour GPT-5.6 Sol, offrant jusqu'à 14× de rapidité (750 tokens/sec) via Cerebras <sup>[12](<https://openai.com/index/previewing-ultrafast>)</sup>.
-- OpenAI étend **Daybreak** (cyberdéfense) avec GPT-5.6-Cyber, atteignant 95 % de réussite sur les benchmarks de chaînes d'exploitation et découvrant CVE-2026-15903 ; l'accès est restreint aux défenseurs approuvés avec des clés de sécurité matérielles <sup>[13](<https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/>)</sup>.
+## AI Models & Capabilities
+- OpenAI previews an Ultrafast API tier for GPT-5.6 Sol, delivering 750 output tokens per second—14× faster than Standard—initially for select customers, with a broader rollout planned as Cerebras-powered capacity scales <sup>[1](<https://www.testingcatalog.com/openai-previews-ultrafast-api-tier-for-gpt-5-6-sol/>)</sup>.
+- Google’s Gemini 3.7 Flash update narrows the gap with Claude 4.8+ and GPT-5.5+ series, reviving Google’s GDM (Gemini Data Model) competitiveness after prior versions fell behind <sup>[2](<https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm>)</sup>.
 
-## Outils pour LLM, RAG et connaissances
-- OpenAI publie un **guide du constructeur pour GPT-5.6**, mettant en avant le coût/efficacité des agents et les nouvelles capacités de l'API Responses <sup>[14](<https://openai.com/index/builders-guide-to-gpt-5-6>)</sup>.
-- Hugging Face active des **workflows d'agents de bout en bout** avec Strands Agents, LeRobot et des boucles de données en streaming vers HF Storage Buckets <sup>[15](<https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop>)</sup>.
-- Qdrant analyse les **compromis de la recherche vectorielle filtrée**, montrant qu'ACORN et des arêtes supplémentaires à l'indexation peuvent surpasser les réparations en temps de requête <sup>[16](<https://qdrant.tech/articles/filtered-vector-search-acorn/>)</sup>.
-- Weaviate détaille les **pannes de workflow créatifs** dans la recherche sémantique : dérive de nommage, dégradation des métadonnées et échecs de récupération à mesure que les projets grandissent <sup>[17](<https://weaviate.io/blog/building-foundry-where-workflows-break>)</sup>.
-- Les graphes de connaissances échouent en raison d'une conception de type SQL ; les bonnes pratiques incluent des portées spécifiques à l'usage, des graphes étagés/fédérés, une validation SHACL et une construction en temps de requête <sup>[18](<https://ontologist.substack.com/p/why-knowledge-graph-projects-fail>)</sup>.
+## LLM Tooling & Agents
+- DeepSeek releases **DeepSeek Harness** in developer preview: a modular, plugin-based framework where every capability can be swapped or recomposed, with append-only session logging for full transparency <sup>[3](<https://deepseek.com/harness/en/>)</sup>.
+- **Foreman** (Vercel Labs) is an AI-native software factory that orchestrates agents across the dev loop: Classifier (triage), Analyst (planning), Implementer (sandboxed execution), and Reviewer (independent judgment), delivering reviewed draft PRs from GitHub/Linear tasks <sup>[4](<https://github.com/vercel-labs/eve-software-factory-template>), [5](<https://ask-foreman.dev/docs/how-it-works>)</sup>.
+- BLP Digital integrates **300 AI agents into core ERP processes**, emphasizing ROI over pilot costs, with governance shifting from IT to business owners and a focus on validation sets and change management <sup>[6](<https://ai-first.ai/podcast/agentic-ai-im-erp-wie-blp-300-agenten-in-kernprozesse-bringt>)</sup>.
 
-## MLOps, DevOps et fiabilité de l'IA
-- La **dérive des modèles IA** dans les LLM/RAG nécessite de surveiller la dérive des données, des concepts, du pipeline, des prompts, des embeddings et des sorties via des références, des vérifications de distribution, de la télémétrie et des retours utilisateurs <sup>[19](<https://www.honeycomb.io/blog/ai-model-drift>)</sup>.
-- Les équipes données doivent se préparer à l'arrivée des **agents IA dans le travail sur les données** avec des évaluations solides, un contexte métier explicite et une infrastructure à faible latence pour les charges de travail irrégulières ; les insights proactifs restent difficiles <sup>[20](<https://www.infoworld.com/article/4203157/agents-are-coming-for-data-just-slowly.html>)</sup>.
-- **Databricks acquiert Electric** pour intégrer PGlite (Postgres WASM) dans les sandboxes d'agents IA, permettant des bases de données locales avec synchronisation vers Lakebase pour un état gouverné <sup>[21](<https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes>)</sup>.
-- **Cursor** introduit **builds** pour les agents cloud, réduisant le temps de démarrage d'environ 3× en pré-construisant les environnements de développement ; Firetiger rejoint Cursor pour connecter les agents de codage et de production <sup>[22](<https://cursor.com/blog/builds>), [23](<https://cursor.com/blog/firetiger>)</sup>.
-- **Cursor obtient la certification AIUC-1** pour la sécurité/la fiabilité des agents via des audits indépendants et des tests adversariaux <sup>[24](<https://cursor.com/blog/aiuc-1>)</sup>.
-- **1Password** constate que seulement 26 % des correctifs de vulnérabilités générés par IA (ChatGPT-5.5/Opus 4.8) résolvent les problèmes sans effets secondaires, soulignant la nécessité d'une révision humaine <sup>[25](<https://1password.com/blog/why-ai-generated-patches-still-require-human-review>)</sup>.
+## MLOps & Engineering Practices
+- OpenAI’s revenue run rate exceeds **$40B**, driven by AI coding tools, subscriptions, ads, and consumer products, signaling rapid enterprise and developer adoption <sup>[7](<https://www.bloomberg.com/news/articles/2026-08-13/openai-s-revenue-run-rate-tops-40-billion-ahead-of-ipo?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjY4NDEzNywiZXhwIjoxNzg3Mjg4OTM3LCJhcnRpY2xlSWQiOiJUSlE1OTFOM04wOUswMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.ck5lnOJGYjhYF2uLM8H2-BhUlJ_8XuDgIDW_i3EsXZo>)</sup>.
 
-## Outils de développement et pratiques d'ingénierie
-- **sqlfmt** est lancé en tant que formateur SQL de style gofmt avec alignement river, mots-clés en minuscules et tokenisation préservant la sémantique (CLI/WASM) <sup>[26](<https://tapoueh.org/blog/2026/08/introducing-sqlfmt-an-sql-gofmt-style-formatter/>)</sup>.
-- **Netflix open-source Maestro** (Apache-2.0), un orchestrateur de workflows à grande échelle pour les pipelines de données/ML/traitement par lots <sup>[27](<https://github.com/Netflix/maestro>)</sup>.
-- **Salesforce** réduit le temps d'obtention d'insights de 97 % avec une **plateforme de données produit**, traitant 45 milliards de lignes/jour sur 19 000 événements <sup>[28](<https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97>)</sup>.
-- **Simon Willison** publie **alchemy-utils 0.1a1**, des utilitaires sqlite-utils multi-bases de données basés sur SQLAlchemy avec des améliorations de performance pour DuckDB/CSV <sup>[29](<https://simonwillison.net/2026/Aug/13/alchemy-utils/>)</sup>.
-- **Zed introduit Delta**, un environnement de codage multijoueur pour une collaboration en temps réel entre humains/agents avec des commentaires synchronisés <sup>[30](<https://zed.dev/blog/introducing-delta>)</sup>.
-- **Yelp** achève une migration de 3 ans d'un grand monorepo Flow vers TypeScript, garantissant l'intégrité des types <sup>[31](<https://engineeringblog.yelp.com/2026/08/migrating-a-large-flow-monorepo-to-typescript.html>)</sup>.
+## Developer Tools & Infrastructure
+- **sqlite-utils 4.2.1** patches a crash caused by a missing `typing-extensions` dependency and introduces a smoke test to ensure CLI functionality without dev dependencies <sup>[8](<https://simonwillison.net/2026/Aug/13/sqlite-utils-2/>)</sup>.
+- Bluesky launches **Bluesky Protocol Services**, consolidating documentation, clarifying service contracts for Bluesky-provided infra, and streamlining future releases <sup>[9](<https://atproto.com/blog/introducing-bluesky-protocol-services>)</sup>.
 
-## Cloud, infrastructure et performance
-- **HeyGen porte Avatar IV (18B+)** sur les TPU Trillium de Google Cloud via torchax/XLA, atteignant une accélération de 1,86× avec des noyaux Pallas personnalisés et des optimisations du compilateur <sup>[32](<https://developers.googleblog.com/heygen-x-google-cloud-bringing-avatar-iv-to-tpus/>)</sup>.
-- **PyTorch** implémente en amont l'entraînement FP8 sur les GPU AMD (TorchTitan/TorchAO), offrant un gain de débit de 13,4 % par rapport à BF16 sur Llama3-8B et récupérant 89 % du surcoût FP8 sur DeepSeek-V3 671B MoE <sup>[33](<https://pytorch.org/blog/fp8-training-on-amd-gpus-with-torchtitan-and-torchao-upstreaming-performance-improvements/>)</sup>.
-- **NATS 2.12** ajoute la publication par lots atomique pour JetStream, garantissant des validations tout ou rien pour les systèmes basés sur des événements <sup>[34](<https://www.synadia.com/blog/atomic-batch-publishing-nats-2-12/>)</sup>.
-- **Stripe** réduit les alertes de pager d'environ 30 % en automatisant la récupération des incidents MongoDB avec une recherche par graphe + des machines à états basées sur Dijkstra <sup>[35](<https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet>)</sup>.
-- **Vercel** migre l'état du pool de préchauffage des builds de Redis vers DynamoDB, nécessitant une reconception de la concourance après avoir exposé des dépendances de latence cachées <sup>[36](<https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build>)</sup>.
-- **Tailscale/SQLite** corrigent un bug de réinitialisation WAL vieux de 16 ans, démontrant un débogage inter-équipes <sup>[37](<https://tailscale.com/blog/sqlite-wal-reset-bug>)</sup>.
-
-## Sécurité et réponse aux incidents
-- **Docker CopyEscape (CVE-2026-17106)** : une condition de course dans `docker cp` permet une échappée de conteneur et l'écrasement de fichiers hôte ; corrigé dans Engine 29.7.2/Desktop 4.86.0 <sup>[38](<https://gbhackers.com/docker-copyescape-vulnerability/>)</sup>.
-- **Attaque de la chaîne d'approvisionnement LiteLLM** (TeamPCP) : Trivy est trojanisé dans la CI, exposant 2 500 organisations/434 000 pipelines en 40 minutes ; faire tourner les identifiants et vérifier les logs <sup>[39](<https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/>)</sup>.
-- **Extension Chrome malveillante** "AI Sidebar with DeepSeek ChatGPT Claude and more" réapparaît après son interdiction, collectant des commissions d'affiliation ; bloquer en tant que Trojan.GenericFCA.Script.37952 <sup>[40](<https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/>)</sup>.
-- **Cisco corrige une faille zero-day dans son pare-feu (CVE-2026-20349)** exploitée pour des attaques DoS via des requêtes HTTP craftées vers SSL VPN ; la CISA impose le correctif avant le 14 août <sup>[41](<https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/>)</sup>.
-- **Rapport Cloudflare sur les DDoS S1 2026** : 935 attaques >1 Tbps, les inondations DNS augmentent de 580 %, le Brésil dépasse les États-Unis comme principale source d'attaques <sup>[42](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>)</sup>.
-- **Cyberattaque contre Ceva Logistics** perturbe 8 entrepôts, exposant des données clients (Bol/Valve) <sup>[43](<https://therecord.media/ceva-logistics-cyberattack-bol-steam-debijenkorf-ace-tate>)</sup>.
+## Cloud & Platforms
+- X open-sources its **For You ranking algorithm and core engine** under Apache 2.0, expanding transparency and enabling users to check for shadowbanning via a pilot tool <sup>[10](<https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] SpaceXAI Grok 4.6 and Grok @Bot](<https://www.latent.space/p/ainews-spacexai-grok-46-and-grok>) — _latent.space_
-2. [SpaceXAI debuts Grok 4.6, overtaking Kimi K3's performance and matching GPT-5.6 Sol for world's third best on Artificial Analysis](<https://venturebeat.com/technology/spacexai-debuts-grok-4-6-overtaking-kimi-k3s-performance-and-matching-gpt-5-6-sol-for-worlds-third-best-on-artificial-analysis>) — _venturebeat.com_
-3. [Introducing Grok 4.6](<https://x.ai/news/grok-4-6>) — _x.ai_
-4. [Grok 4.6 – A field guide](<https://x.com/ericzakariasson/status/2087566447178547494>) — _x.com_
-5. [DeepSeek V4 Pro 0813 (on OpenRouter)](<https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/>) — _simonwillison.net_
-6. [)](<https://wccftech.com/deepseek-prices-its-new-v4-pro-0813-model-at-0-87-per-1-million-output-tokens-as-the-high-flying-chinese-ai-lab-wows-with-its-soaring-token-consumption/>) — _wccftech.com_
-7. [Meta releases Muse Glimmer for local AI agents](<https://www.testingcatalog.com/meta-releases-muse-glimmer-for-local-ai-agents/>) — _testingcatalog.com_
-8. [Introducing Gemini 3.7 Flash](<https://deepmind.google/blog/introducing-gemini-3-7-flash/>) — _deepmind.google_
-9. [Gemini 3.7 Flash is now available in GitHub Copilot](<https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot>) — _github.blog_
-10. [Microsoft Launches MAI-Thinking-1](<https://microsoft.ai/news/introducing-mai-thinking-1/>) — _microsoft.ai_
-11. [DeepSeek Publicizes Efforts to Challenge Anthropic's Claude Code](<https://www.bloomberg.com/news/articles/2026-08-12/deepseek-publicizes-efforts-to-challenge-anthropic-s-claude-code?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU5MjA0MCwiZXhwIjoxNzg3MTk2ODQwLCJhcnRpY2xlSWQiOiJUSk5XRU5UOU5KTFYwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.aybpc7rfFGTcwTN6BlU1XCafnXRg4sYT3XYvrFKJKdU>) — _bloomberg.com_
-12. [Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed](<https://openai.com/index/previewing-ultrafast>) — _openai.com_
-13. [Expanding Daybreak as the Cyber Defense Window Narrows](<https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/>) — _openai.com_
-14. [The builder’s guide to GPT‑5.6](<https://openai.com/index/builders-guide-to-gpt-5-6>) — _openai.com_
-15. [Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets](<https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop>) — _huggingface.co_
-16. [Filtered Vector Search: What ACORN Fixes, and What Fixes ACORN](<https://qdrant.tech/articles/filtered-vector-search-acorn/>) — _qdrant.tech_
-17. [Building Foundry Part 2: Where creative workflows break](<https://weaviate.io/blog/building-foundry-where-workflows-break>) — _weaviate_
-18. [Why Knowledge Graph Projects Fail — and How to Make Them Succeed](<https://ontologist.substack.com/p/why-knowledge-graph-projects-fail>) — _ontologist.substack.com_
-19. [AI Model Drift: How to Keep Models Reliable](<https://www.honeycomb.io/blog/ai-model-drift>) — _honeycomb.io_
-20. [Agents are coming for data (just slowly)](<https://www.infoworld.com/article/4203157/agents-are-coming-for-data-just-slowly.html>) — _infoworld.com_
-21. [Electric joins Databricks to bring WASM Postgres to AI agent sandboxes](<https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes>) — _databricks.com_
-22. [Cloud agents start 3x faster with builds](<https://cursor.com/blog/builds>) — _cursor_
-23. [Firetiger joins Cursor](<https://cursor.com/blog/firetiger>) — _cursor_
-24. [Cursor earns AIUC-1 certification for agent security and reliability](<https://cursor.com/blog/aiuc-1>) — _cursor_
-25. [Why AI-Generated Vulnerability Patches Still Require Expert Human Review](<https://1password.com/blog/why-ai-generated-patches-still-require-human-review>) — _1password.com_
-26. [Introducing sqlfmt: an SQL gofmt-style formatter](<https://tapoueh.org/blog/2026/08/introducing-sqlfmt-an-sql-gofmt-style-formatter/>) — _tapoueh.org_
-27. [Maestro: Netflix's open-source workflow orchestrator keeps moving](<https://github.com/Netflix/maestro>) — _github.com_
-28. [How Standardizing Product Telemetry Reduced Time to Insight by 97%](<https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97>) — _engineering.salesforce.com_
-29. [alchemy-utils 0.1a1](<https://simonwillison.net/2026/Aug/13/alchemy-utils/>) — _simonwillison.net_
-30. [Introducing Delta](<https://zed.dev/blog/introducing-delta>) — _zed.dev_
-31. [Migrating a Large Flow Monorepo to TypeScript](<https://engineeringblog.yelp.com/2026/08/migrating-a-large-flow-monorepo-to-typescript.html>) — _engineeringblog.yelp.com_
-32. [HeyGen x Google Cloud: Bringing Avatar IV to TPUs](<https://developers.googleblog.com/heygen-x-google-cloud-bringing-avatar-iv-to-tpus/>) — _google ai_
-33. [FP8 Training on AMD GPUs with TorchTitan and TorchAO: Upstreaming Performance Improvements](<https://pytorch.org/blog/fp8-training-on-amd-gpus-with-torchtitan-and-torchao-upstreaming-performance-improvements/>) — _pytorch.org_
-34. [Atomic Batch Publishing in NATS 2.12: All-or-Nothing Message Guarantees](<https://www.synadia.com/blog/atomic-batch-publishing-nats-2-12/>) — _synadia.com_
-35. [Stripe Uses Graph Search and State Machines to Automate Database Remediation](<https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet>) — _stripe.dev_
-36. [How we migrated the database behind every Vercel build](<https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build>) — _vercel.com_
-37. [How we tracked down a 16-year-old SQLite bug](<https://tailscale.com/blog/sqlite-wal-reset-bug>) — _tailscale.com_
-38. [Docker CopyEscape Vulnerability Enables Host File Overwrite and Root Code Execution](<https://gbhackers.com/docker-copyescape-vulnerability/>) — _gbhackers.com_
-39. [Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack](<https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/>) — _securityweek.com_
-40. [Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities](<https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/>) — _securityweek.com_
-41. [Cisco Patches Firewall Zero-Day Exploited for DoS Attacks](<https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/>) — _securityweek.com_
-42. [Cloudflare DDoS Threat Report H1 2026: 1 Tbps attacks soar as DNS floods and geopolitical tensions drive a new wave](<https://blog.cloudflare.com/ddos-threat-report-2026-h1/>) — _blog.cloudflare.com_
-43. [Cyberattack on logistics giant Ceva hits retailers and Steam customers across Europe](<https://therecord.media/ceva-logistics-cyberattack-bol-steam-debijenkorf-ace-tate>) — _therecord.media_
+1. [OpenAI previews Ultrafast API tier for GPT-5.6 Sol](<https://www.testingcatalog.com/openai-previews-ultrafast-api-tier-for-gpt-5-6-sol/>) — _testingcatalog.com_
+2. [\[AINews\] Gemini 3.7 Flash brings GDM back to the forefront](<https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm>) — _latent.space_
+3. [DeepSeek Harness (Website)](<https://deepseek.com/harness/en/>) — _deepseek.com_
+4. [Foreman](<https://github.com/vercel-labs/eve-software-factory-template>) — _github.com_
+5. [Foreman](<https://ask-foreman.dev/docs/how-it-works>) — _ask-foreman.dev_
+6. [Agentic AI im ERP: Wie BLP 300 Agenten in Kernprozesse bringt](<https://ai-first.ai/podcast/agentic-ai-im-erp-wie-blp-300-agenten-in-kernprozesse-bringt>) — _ai first podcast_
+7. [OpenAI's Revenue Run Rate Tops $40 Billion Ahead of IPO](<https://www.bloomberg.com/news/articles/2026-08-13/openai-s-revenue-run-rate-tops-40-billion-ahead-of-ipo?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjY4NDEzNywiZXhwIjoxNzg3Mjg4OTM3LCJhcnRpY2xlSWQiOiJUSlE1OTFOM04wOUswMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.ck5lnOJGYjhYF2uLM8H2-BhUlJ_8XuDgIDW_i3EsXZo>) — _bloomberg.com_
+8. [sqlite-utils 4.2.1](<https://simonwillison.net/2026/Aug/13/sqlite-utils-2/>) — _simonwillison.net_
+9. [Introducing Bluesky Protocol Services](<https://atproto.com/blog/introducing-bluesky-protocol-services>) — _atproto.com_
+10. [X open sources its ranking algorithm, letting users see if they've been ‘shadowbanned'](<https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/>) — _techcrunch.com_
 
 
 ## Archive récente
