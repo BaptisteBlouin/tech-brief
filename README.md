@@ -8,82 +8,16 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-14
-<sub>updated 15 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-15
+<sub>updated 15 August 2026 at 13:00</sub>
 
-## AI Models & Capabilities
-- OpenAI previews **GPT-5.6 Sol Ultrafast**, delivering 750 output tokens/second—14× faster than Standard—initially for select customers, scaling on Cerebras-powered infrastructure <sup>[1](<https://www.testingcatalog.com/openai-previews-ultrafast-api-tier-for-gpt-5-6-sol/>), [2](<https://openai.com/index/previewing-ultrafast/>), [3](<https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai>)</sup>.
-- Google releases **Gemini 3.7 Flash** with improved coding/agent performance and a 50% introductory price cut ($0.75/M input, $3.75/M output tokens through year-end) <sup>[4](<https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm>), [5](<https://venturebeat.com/technology/googles-gemini-3-7-flash-targets-coding-and-agents-with-a-50-introductory-price-cut>), [6](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/>)</sup>.
-- **Grok 4.6** rolls out in GitHub Copilot for agentic coding and long-horizon tasks, available across VS Code, CLI, cloud agent, JetBrains, Xcode, Eclipse <sup>[7](<https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot>), [8](<https://cursor.com/blog/joining-spacex>)</sup>.
-- Mistral launches **OCR 4.1**, a vision-multimodal model specialized for parsing complex documents into structured JSON/Markdown, pressuring cloud pricing for multimodal inputs <sup>[9](<https://docs.mistral.ai/models/ocr-4-1>)</sup>.
-
-## LLM Tooling, Agents & Harnesses
-- **DeepSeek Harness** (dev preview) is a modular, plugin-based framework with append-only session logging for transparency <sup>[10](<https://deepseek.com/harness/en/>)</sup>.
-- **Foreman** (Vercel Labs) orchestrates agents across the dev loop (Classifier, Analyst, Implementer, Reviewer) to produce reviewed draft PRs from tasks <sup>[11](<https://github.com/vercel-labs/eve-software-factory-template>), [12](<https://ask-foreman.dev/docs/how-it-works>)</sup>.
-- GitHub Copilot adds **Agent Plugins 1.0** (GA) for portable skills across VS Code, CLI, SDK, and Copilot app; **Kimi K3** and **MAI-Code-1.1-Flash** roll out with image understanding and coding improvements <sup>[13](<https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10>)</sup>.
-- **Cursor** joins SpaceX, gaining access to large GPU fleets to build stronger, cheaper models; Grok 4.6 is an early output of this collaboration <sup>[8](<https://cursor.com/blog/joining-spacex>)</sup>.
-- **Switchyard** (NVIDIA, pre-alpha) is an open-source Rust proxy to route LLM traffic across providers, translating OpenAI/Anthropic formats for agents to use vLLM, Ollama, or NIM <sup>[14](<https://github.com/NVIDIA-NeMo/Switchyard>)</sup>.
-- **Cloudflare Computer** (open-source preview) offers persistent, stateful, computer-like environments for agents with SQLite-backed filesystem and auditing <sup>[15](<https://www.infoq.com/news/2026/08/cloudflare-computer-agents/>), [16](<https://github.com/cloudflare/computer>)</sup>.
-
-## MLOps, Agentics & Engineering Practices
-- **dbt State** makes dbt stateful: it builds only changed models, skipping unchanged ones to cut warehouse compute and speed runs <sup>[17](<https://www.getdbt.com/blog/dbt-state-use-case>)</sup>.
-- **Databricks Unity AI Gateway** introduces **Smart Routing** (beta), matching task complexity to models to achieve frontier quality at 30%+ lower cost per task <sup>[18](<https://www.databricks.com/blog/smart-routing-unity-ai-gateway-match-frontier-quality-30-lower-cost-task>)</sup>.
-- **Why agentics projects fail**: successes (Wayfair, C.H. Robinson) hinge on trusted data and governance, while failures (Klarna) stem from poor data quality and validation <sup>[19](<https://www.getdbt.com/blog/why-agentics-projects-fail-and-how-to-fix-them>)</sup>.
-- **Anthropic** analyzes how benign agent behaviors can compound into systemic failures at scale (confabulation, reward hacking) <sup>[20](<https://www.anthropic.com/research/multiagent-systems>)</sup>.
-- **Microsoft** advocates least-privilege identities, task-based roles, JIT access, and human gating for AI agents <sup>[21](<https://www.microsoft.com/en-us/security/blog/2026/07/16/least-privilege-for-ai-agents-identity-access-and-tool-binding/>)</sup>.
-- **Cloudflare** warns that AI agents break human-speed risk assumptions; new Cloudflare One capabilities inspect MCP traffic and identify users/servers generating it <sup>[22](<https://blog.cloudflare.com/mcp-security-updates/>), [23](<https://blog.cloudflare.com/workers-protected-by-access/>)</sup>.
-
-## Developer Tools & Infrastructure
-- **Docker VMM Public Beta** replaces third-party VMM in Docker Desktop (Mac/Windows) with faster container startup, better file I/O, and smarter memory management; GA targeted for October <sup>[24](<https://www.docker.com/blog/docker-vmm-public-beta/>)</sup>.
-- **sqlite-utils 4.2.1** patches a crash from missing `typing-extensions` and adds CLI smoke tests <sup>[25](<https://simonwillison.net/2026/Aug/13/sqlite-utils-2/>)</sup>.
-- **Tailscale** and SQLite maintainers fix a 16-year-old SQLite WAL race condition causing database corruption, released in SQLite 3.51.3 <sup>[26](<https://tailscale.com/blog/sqlite-wal-reset-bug>)</sup>.
-- **Cursor** adds **builds** to keep cloud agent environments warm, cutting startup time by 3× <sup>[27](<https://cursor.com/blog/builds>)</sup>.
-
-## Cloud & Platforms
-- **X open-sources** its For You ranking algorithm and core engine under Apache 2.0, with a pilot tool to check shadowbanning <sup>[28](<https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/>)</sup>.
-- **Bluesky** consolidates documentation and service contracts via **Bluesky Protocol Services** <sup>[29](<https://atproto.com/blog/introducing-bluesky-protocol-services>)</sup>.
-
-## Security & Governance
-- **Claude** will watermark text to comply with the EU AI Act; the method is imperceptible, adds no tokens/cost, and carries no identifying metadata <sup>[30](<https://www.anthropic.com/news/claude-text-watermark>)</sup>.
-- **VMware vCenter RCE flaw** (directory traversal) is actively exploited for reverse SSH persistence <sup>[31](<https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/>)</sup>.
-- **Trezor** discloses a breach via ShipMonk affecting ~14k customers’ PII <sup>[32](<https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/>)</sup>.
-- **City-Forum** campaign targets Salesforce/ServiceNow with custom Go binaries, enumerating guest-user access at scale <sup>[33](<https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/>)</sup>.
+- ## DevOps & Authentication
+ - GitHub OAuth apps now support expiring access tokens (8-hour lifetime) and refresh tokens (6-month validity), enabling automatic token rotation for improved security <sup>[1](<https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps>)</sup>.
+ - OAuth apps can now register multiple redirect URIs and use wildcard matching for both GitHub Apps and OAuth apps <sup>[1](<https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps>)</sup>.
 
 ## Sources
 
-1. [OpenAI previews Ultrafast API tier for GPT-5.6 Sol](<https://www.testingcatalog.com/openai-previews-ultrafast-api-tier-for-gpt-5-6-sol/>) — _testingcatalog.com_
-2. [GPT-5.6 Sol Ultrafast](<https://openai.com/index/previewing-ultrafast/>) — _openai.com_
-3. [Accelerating GPT-5.6 Sol Ultrafast with OpenAI](<https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai>) — _cerebras.ai_
-4. [\[AINews\] Gemini 3.7 Flash brings GDM back to the forefront](<https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm>) — _latent.space_
-5. [Google's Gemini 3.7 Flash targets coding and agents with a 50% introductory price cut](<https://venturebeat.com/technology/googles-gemini-3-7-flash-targets-coding-and-agents-with-a-50-introductory-price-cut>) — _venturebeat.com_
-6. [Introducing Gemini 3.7 Flash](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/>) — _blog.google_
-7. [Grok 4.6 is now available in GitHub Copilot](<https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot>) — _github.blog_
-8. [Cursor is now a part of SpaceX](<https://cursor.com/blog/joining-spacex>) — _cursor_
-9. [OCR 4.1 (Website)](<https://docs.mistral.ai/models/ocr-4-1>) — _docs.mistral.ai_
-10. [DeepSeek Harness (Website)](<https://deepseek.com/harness/en/>) — _deepseek.com_
-11. [Foreman](<https://github.com/vercel-labs/eve-software-factory-template>) — _github.com_
-12. [Foreman](<https://ask-foreman.dev/docs/how-it-works>) — _ask-foreman.dev_
-13. [GitHub Copilot weekly releases — August 10](<https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10>) — _github.blog_
-14. [Switchyard](<https://github.com/NVIDIA-NeMo/Switchyard>) — _github.com_
-15. [Cloudflare Launches Persistent, Stateful, Computer-like Environments for Agents](<https://www.infoq.com/news/2026/08/cloudflare-computer-agents/>) — _infoq.com_
-16. [Cloudflare Computer](<https://github.com/cloudflare/computer>) — _github.com_
-17. [How dbt State cuts warehouse compute and speeds up every run](<https://www.getdbt.com/blog/dbt-state-use-case>) — _dbt.com_
-18. [Smart Routing in Unity AI Gateway: Match frontier quality with 30%+ lower cost per task](<https://www.databricks.com/blog/smart-routing-unity-ai-gateway-match-frontier-quality-30-lower-cost-task>) — _databricks.com_
-19. [Why agentics projects fail and how to fix them](<https://www.getdbt.com/blog/why-agentics-projects-fail-and-how-to-fix-them>) — _dbt.com_
-20. [How AI Agents Could Fail at Scale](<https://www.anthropic.com/research/multiagent-systems>) — _anthropic.com_
-21. [Least Privilege for AI Agents: Identity, Access, and Tool Binding](<https://www.microsoft.com/en-us/security/blog/2026/07/16/least-privilege-for-ai-agents-identity-access-and-tool-binding/>) — _microsoft.com_
-22. [How Cloudflare detects MCP traffic and helps secure it](<https://blog.cloudflare.com/mcp-security-updates/>) — _blog.cloudflare.com_
-23. [Secure all your internal vibe-coded applications — in one click](<https://blog.cloudflare.com/workers-protected-by-access/>) — _blog.cloudflare.com_
-24. [Announcing: Docker VMM Public Beta](<https://www.docker.com/blog/docker-vmm-public-beta/>) — _docker.com_
-25. [sqlite-utils 4.2.1](<https://simonwillison.net/2026/Aug/13/sqlite-utils-2/>) — _simonwillison.net_
-26. [How we tracked down a 16-year-old SQLite bug](<https://tailscale.com/blog/sqlite-wal-reset-bug>) — _tailscale.com_
-27. [Cloud agents start 3x faster with builds](<https://cursor.com/blog/builds>) — _cursor.com_
-28. [X open sources its ranking algorithm, letting users see if they've been ‘shadowbanned'](<https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/>) — _techcrunch.com_
-29. [Introducing Bluesky Protocol Services](<https://atproto.com/blog/introducing-bluesky-protocol-services>) — _atproto.com_
-30. [How Claude’s text watermark works](<https://www.anthropic.com/news/claude-text-watermark>) — _anthropic news_
-31. [Critical VMware vCenter RCE Flaw Exploited for Reverse SSH Access](<https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/>) — _bleepingcomputer.com_
-32. [Trezor Discloses Data Breach Affecting Nearly 14k Customers](<https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/>) — _bleepingcomputer.com_
-33. [Stealthy ‘City-Forum' Attacks Target Salesforce and ServiceNow With Custom Toolset](<https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/>) — _securityweek.com_
+1. [Multiple redirect URIs and token refresh for OAuth apps](<https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps>) — _github.blog_
 
 
 ## Recent archive
