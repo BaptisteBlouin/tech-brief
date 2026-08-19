@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>65 daily digests archived · newest first.</sub>
+<sub>66 daily digests archived · newest first.</sub>
 
 ### August 2026
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-08-19` | Wednesday | [Read →](2026-08-19.md) |
 | `2026-08-18` | Tuesday | [Read →](2026-08-18.md) |
 | `2026-08-17` | Monday | [Read →](2026-08-17.md) |
 | `2026-08-16` | 🗓️ Weekly recap | [Read →](2026-08-16.md) |
