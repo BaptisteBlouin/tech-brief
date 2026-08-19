@@ -8,73 +8,47 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-18
-<sub>updated 19 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-19
+<sub>updated 19 August 2026 at 13:01</sub>
 
-## AI Models and Capabilities
-- Qwen 3.8 27B achieves a score of 52 on the Artificial Analysis Intelligence Index, matching GPT-5.6 Luna (max) and trailing GLM-5.2 (753B) and DeepSeek V4 Pro 0813 (1.7T) by just one point, highlighting its exceptional performance for its size <sup>[1](<https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/>)</sup>.
-- Thinking Machines releases Inkling, a 66-layer model with 256 experts per layer (6 active per token), combining short- and long-context layers and older positional encoding methods <sup>[2](<https://blog.bytebytego.com/p/the-new-american-ai-model-designed>)</sup>.
-- OpenAI's GPT-5.6 Sol is praised for its vision capabilities, excelling in object detection and counting but still facing cost, latency, and occasional error challenges <sup>[3](<https://blog.roboflow.com/openai-gpt-5-6/>)</sup>.
-- Anthropic's Claude Science (beta) targets life sciences with traceable, reproducible, and defensible AI workflows, addressing trust and reliability barriers in research <sup>[4](<https://claude.com/blog/the-claude-science-product-guide>)</sup>.
+## AI/ML Models and Safety
+- OpenAI rewrites its Preparedness Framework, expands monitoring, and strengthens research-environment isolation while keeping its largest frontier RL run and significant Astra/cyber workloads paused; Astra may meet OpenAI’s Critical cyber threshold, but no technical postmortem of the Hugging Face breach has been released <sup>[1](<https://www.implicator.ai/openai-safety-framework-frontier-training-paused/>)</sup>.
+- GenBio launches AIDO Cell, a “virtual cell” world model simulating natural states and responses to perturbations for K562 and HepG2 cell lines, with an early-access academic program planned <sup>[2](<https://lifespan.io/genbio-launches-a-virtual-cell-ai-model/>)</sup>.
+- Analysts argue raw internet data is suboptimal for AGI and advocate equalizing intelligence per token to improve scaling efficiency <sup>[3](<https://www.mbi-deepdives.com/data-moat/>)</sup>.
 
-## LLM Tooling, Agents, and RAG
-- Model routing demand surges due to frontier model competition and open-weight advancements (e.g., Kimi K3, Qwen3.8-Max), with enterprises like Glean optimizing model selection and avoiding LLM overuse for simple tasks <sup>[5](<https://www.latent.space/p/glean-model-routing>)</sup>.
-- Stripe acquires OpenRouter for $7B, a model-routing platform handling 250 trillion tokens/month with ~70% gross margins, underscoring the strategic value of routing infrastructure <sup>[6](<https://www.latent.space/p/ainews-stripe-buys-openrouter-for>)</sup>.
-- IBM Research finds that agent memory dosage should be calibrated—more is not always better—with cheaper memory strategies sometimes outperforming accumulation <sup>[7](<https://huggingface.co/blog/ibm-research/altk-evolve-hmm>)</sup>.
-- Warp introduces persistent agent memory (research preview) shared across harnesses, machines, and teammates with provenance and configurable access <sup>[8](<https://docs.warp.dev/agents/agent-memory/>)</sup>.
+## LLM Tooling and Developer Experience
+- GitHub Copilot for JetBrains gains enterprise-managed settings: administrators can centrally govern plugins, MCP server allowlists, OpenTelemetry, and permission modes across the enterprise plan <sup>[4](<https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains>)</sup>.
+- Vercel’s AI SDK introduces Code Mode, enabling models to write JavaScript/TypeScript that calls AI SDK tools <sup>[5](<https://ai-sdk.dev/docs/ai-sdk-core/code-mode>)</sup>.
+- Mojo language is now fully open source under Apache 2.0 with LLVM exceptions, targeting GPUs and AI accelerators; prebuilt compilers remain required for custom MAX kernels or models <sup>[6](<https://www.modular.com/blog/mojo-open-source>)</sup>.
+- fx is a new coding agent harness and CLI designed for research and embeddability within larger systems <sup>[7](<https://fx.sh/>)</sup>.
 
-## MLOps and AI Engineering
-- OpenAI strengthens monitoring, alignment, and security for frontier models to pace development amid cyber-critical capabilities <sup>[9](<https://openai.com/index/pacing-model-development-cyber-capabilities>)</sup>.
-- Asana replaces a 5-year-old testing system in 2 weeks using OpenAI Codex for ~$12K, showcasing rapid AI-driven engineering wins <sup>[10](<https://openai.com/index/asana>)</sup>.
-- The AI Observatory launches as an independent platform analyzing real AI conversations (with consent) to provide unbiased insights into model usage patterns <sup>[11](<https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/>)</sup>.
-- A study reveals AI agents struggle with open-ended research, lacking judgment and creativity for top-tier contributions, tempering expectations of recursive self-improvement <sup>[12](<https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/>)</sup>.
+## Infrastructure and Hardware
+- DRAM prices surge ~500% in 12 months, with 128GB DDR5 kits now ~10× their historical low; hyperscalers have reportedly pre-booked nearly all 2027 global DRAM capacity via advance deposits <sup>[8](<https://www.latent.space/p/ainews-memory-prices-up-500-in-12>)</sup>.
 
-## DevOps, Cloud, and Infrastructure
-- GitHub adds token-type-specific credential revocation, enabling finer-grained deauthorization (e.g., PATs, SSH keys, OAuth tokens) during security incidents <sup>[13](<https://github.blog/changelog/2026-08-18-credential-revocation-and-deauthorization-by-token-type>)</sup>.
-- Docker highlights agent security as a systems problem, citing Hugging Face’s 17,600 attacker actions over 4.5 days as evidence that manual approvals are infeasible for AI workloads <sup>[14](<https://www.docker.com/blog/ai-agent-security-systems-problem/>), [15](<https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/>)</sup>.
-- Cursor launches Origin, a code-hosting platform for agent scale with GitHub sync, aiming to capitalize on GitHub outages and AI-native workflows <sup>[16](<https://venturebeat.com/infrastructure/cursor-launches-origin-code-hosting-platform-as-github-outage-exposes-opening-in-ai-coding-race>), [17](<https://cursor.com/changelog/origin-code-hosting>)</sup>.
-- Cloudflare tracks BGP RFC 9234 adoption to mitigate route leaks, improving Internet routing integrity <sup>[18](<https://blog.cloudflare.com/rfc9234-bgp-role-model/>)</sup>.
+## DevOps and Software Engineering
+- A deep dive explains Git’s scalability challenges at scale, contrasting approaches to distribute the filesystem, packfiles, or Git itself for large repositories <sup>[9](<https://cursor.com/blog/git-at-any-scale>)</sup>.
+- Commentary highlights the importance of extensible software and APIs in the LLM era, balancing upfront design with long-term support benefits <sup>[10](<https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/>)</sup>.
+- Observers argue that malleable software—combining solid bases with custom code—will dominate the productivity market <sup>[11](<https://www.mdubakov.me/malleable-software-solid-bases-custom-code/>)</sup>.
 
-## Developer Tools and Software Engineering
-- Mojo🔥 is now open-source under Apache 2.0, marking a shift from its Python-superset origins to a standalone language with AI-assisted migration tools <sup>[19](<https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/>)</sup>.
-- DuckDB v2.0 preview adds JSON functions (e.g., `json_merge_patch_diff`, `json_deep_merge`) to address state reconciliation in data pipelines <sup>[20](<https://duckdb.org/2026/08/18/reconciling-json.html>)</sup>.
-- Fastify’s `logController` can reduce log volume by silencing noisy routes or subclassing for selective logging <sup>[21](<https://backend.cafe/million-log-lines-a-month>)</sup>.
-- A simple latency fix for LLMs: sending duplicate requests can outperform priority tiers for real-time applications <sup>[22](<https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/>)</sup>.
-
-## Security and Incident Response
-- OWASP releases its Top 10 CI/CD Security Risks, covering dependency abuse, pipeline poisoning, and access control gaps <sup>[23](<https://owasp.org/www-project-top-10-ci-cd-security-risks>)</sup>.
-- Mozilla revokes a Firefox signing key after an unencrypted copy was exposed in a private GitHub repo <sup>[24](<https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908>)</sup>.
-- Wiz Red Agent autonomously exploits a Snowflake GitHub Actions vulnerability, demonstrating AI-driven security testing risks <sup>[25](<https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug>)</sup>.
-- Trivy compromise (not LiteLLM) is linked to 2,085 of 2,188 tracked data exposures, with stolen tokens and credentials sold on Telegram <sup>[26](<https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/>)</sup>.
+## Cloud and Business
+- OpenAI expands ChatGPT Ads to 31 European markets, enabling advertisers to reach users during exploration and decision-making <sup>[12](<https://openai.com/index/chatgpt-ads-expands-across-europe>)</sup>.
+- OpenAI’s Q2 revenue grows 18% while losses deepen, lagging Anthropic which more than doubled revenue and turned a small operating profit in the same period <sup>[13](<https://www.wsj.com/tech/ai/openais-second-quarter-sales-show-tepid-growth-compared-with-anthropic-5cb42998?st=HwiWbo&reflink=desktopwebshare_permalink>)</sup>.
 
 ## Sources
 
-1. [Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index](<https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/>) — _simonwillison.net_
-2. [The New American AI Model Designed to be Customized](<https://blog.bytebytego.com/p/the-new-american-ai-model-designed>) — _blog.bytebytego.com_
-3. [GPT 5.6 Sol is the best "vision" model OpenAI ever released](<https://blog.roboflow.com/openai-gpt-5-6/>) — _blog.roboflow.com_
-4. [The Claude Science product guide](<https://claude.com/blog/the-claude-science-product-guide>) — _claude_
-5. [Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing](<https://www.latent.space/p/glean-model-routing>) — _latent.space_
-6. [\[AINews\] Stripe buys OpenRouter for $7B](<https://www.latent.space/p/ainews-stripe-buys-openrouter-for>) — _latent.space_
-7. [How Much Memory Does Your Agent Actually Need?](<https://huggingface.co/blog/ibm-research/altk-evolve-hmm>) — _huggingface.co_
-8. [Warp Agent Memory (Research Preview)](<https://docs.warp.dev/agents/agent-memory/>) — _docs.warp.dev_
-9. [Pacing model development in an era of cyber-critical capabilities](<https://openai.com/index/pacing-model-development-cyber-capabilities>) — _openai.com_
-10. [Asana cleared 5 years of engineering work in 2 weeks with Codex](<https://openai.com/index/asana>) — _openai.com_
-11. [We still don’t know how people are really using AI](<https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/>) — _technologyreview.com_
-12. [AI’s recursive self-improvement might not come so quickly after all](<https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/>) — _technologyreview.com_
-13. [Credential revocation and deauthorization by token type](<https://github.blog/changelog/2026-08-18-credential-revocation-and-deauthorization-by-token-type>) — _github.blog_
-14. [17,600 Actions: Agent Security Is a Systems Problem](<https://www.docker.com/blog/ai-agent-security-systems-problem/>) — _docker.com_
-15. [Coding Agent Horror Stories: The Command You Already Approved](<https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/>) — _docker.com_
-16. [Cursor launches Origin code hosting platform as GitHub outage exposes opening in AI coding race](<https://venturebeat.com/infrastructure/cursor-launches-origin-code-hosting-platform-as-github-outage-exposes-opening-in-ai-coding-race>) — _venturebeat.com_
-17. [Origin Code Hosting](<https://cursor.com/changelog/origin-code-hosting>) — _cursor.com_
-18. [BGP Role model: tracking the adoption of RFC 9234](<https://blog.cloudflare.com/rfc9234-bgp-role-model/>) — _blog.cloudflare.com_
-19. [Mojo🔥 is now open source](<https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/>) — _simonwillison.net_
-20. [Reconciling JSON in DuckDB, One Patch at a Time](<https://duckdb.org/2026/08/18/reconciling-json.html>) — _duckdb.org_
-21. [Cut your Fastify log volume with logController](<https://backend.cafe/million-log-lines-a-month>) — _backend.cafe_
-22. [A simple fix for LLM tail latency](<https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/>) — _engineering.myhoai.com_
-23. [OWASP Top 10 CI/CD Security Risks](<https://owasp.org/www-project-top-10-ci-cd-security-risks>) — _owasp.org_
-24. [Mozilla Revokes Firefox Signing Key After Unencrypted Copy Lands in GitHub](<https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908>) — _theregister.com_
-25. [Red Agent Exploits Snowflake Vuln Missed by GitHub Copilot](<https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug>) — _wiz.io_
-26. [Trivy, Not LiteLLM Behind the 2,500 Org Compromise](<https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/>) — _securityweek.com_
+1. [OpenAI Rewrites Safety Framework as Largest Training Run Stays Paused](<https://www.implicator.ai/openai-safety-framework-frontier-training-paused/>) — _implicator.ai_
+2. [GenBio Launches a “Virtual Cell” AI Model](<https://lifespan.io/genbio-launches-a-virtual-cell-ai-model/>) — _lifespan.io_
+3. [Rethinking the Data Moat](<https://www.mbi-deepdives.com/data-moat/>) — _mbi-deepdives.com_
+4. [Enterprise managed settings in GitHub Copilot for JetBrains](<https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains>) — _github.blog_
+5. [Code Mode](<https://ai-sdk.dev/docs/ai-sdk-core/code-mode>) — _ai-sdk.dev_
+6. [Mojo🔥 is now open source!](<https://www.modular.com/blog/mojo-open-source>) — _modular.com_
+7. [fx (Website)](<https://fx.sh/>) — _fx.sh_
+8. [\[AINews\] Memory prices up 500% in 12 months](<https://www.latent.space/p/ainews-memory-prices-up-500-in-12>) — _latent.space_
+9. [Git at any scale](<https://cursor.com/blog/git-at-any-scale>) — _cursor.com_
+10. [Extensible Software in the age of LLMs](<https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/>) — _jeremymorrell.dev_
+11. [Malleable software = solid bases + custom code](<https://www.mdubakov.me/malleable-software-solid-bases-custom-code/>) — _mdubakov.me_
+12. [ChatGPT Ads expands across Europe](<https://openai.com/index/chatgpt-ads-expands-across-europe>) — _openai.com_
+13. [OpenAI's Second-Quarter Sales Show Tepid Growth Compared With Anthropic](<https://www.wsj.com/tech/ai/openais-second-quarter-sales-show-tepid-growth-compared-with-anthropic-5cb42998?st=HwiWbo&reflink=desktopwebshare_permalink>) — _wsj.com_
 
 
 ## Recent archive
