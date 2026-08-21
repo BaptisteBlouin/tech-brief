@@ -8,104 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-20
-<sub>updated 21 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-21
+<sub>updated 21 August 2026 at 13:00</sub>
 
-## AI/ML Models and Research
-- OpenAI launches **AI Futures**, a blog by its Strategic Futures team, to explore restructuring free society for transformative AI and concentration-of-power risks <sup>[1](<https://openai.com/index/introducing-ai-futures>)</sup>.
-- **GLM 5.3** and new post-training scaling laws: parameter count must now be considered alongside data volume, compute allocation, and deployment constraints, as memorization and reasoning scale differently <sup>[2](<https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie>)</sup>.
-- **Ornith-1.5** open models debut in 397B, 35B, and 9B sizes, using a closed self-improvement loop to jointly optimize task generation, scaffold construction, and solution rollouts <sup>[3](<https://www.testingcatalog.com/ornith-1-5-open-models-launch-in-397b-35b-and-9-b-sizes/>)</sup>.
-- **Meta’s Muse Video** (closed beta) generates 10-second videos with native audio, strong detail, world understanding, and temporal consistency <sup>[4](<https://www.testingcatalog.com/exclusive-early-outputs-of-muse-video-model-from-meta/>)</sup>.
-- **Agentic Transaction** research applies ACID guarantees to AI agents, treating multi-step workflows as transactions; ACID-Agent outperforms Claude Code by up to 10.6% on a data agent benchmark <sup>[5](<https://arxiv.org/html/2608.13900v1>)</sup>.
-- **LiquidAI LFM2.5-DSpark** achieves up to 3.2x faster inference on Hugging Face <sup>[6](<https://huggingface.co/blog/LiquidAI/lfm25-dspark>)</sup>.
-- **Superwhisper S1-mini** is a 0.6B-parameter text normalizer for ASR outputs, hitting 94.8% token accuracy and running on CPU <sup>[7](<https://huggingface.co/superwhisper/s1-mini>)</sup>.
-- **DFlash 2** improves speculative decoding, delivering ~3x faster LLM inference by accepting more tokens per pass <sup>[8](<https://inco.ai/blog/dflash2/>)</sup>.
-- OpenAI **pauses model scaling** to implement stricter security, monitoring, and alignment safeguards amid cyber-critical capability concerns <sup>[9](<https://openai.com/index/pacing-model-development-cyber-capabilities/>)</sup>, and previews **Private Safety Processing** for zero-data-retention frontier models <sup>[10](<https://openai.com/index/our-commitment-to-zero-data-retention/>)</sup>.
+## AI/ML Models and Industry Moves
+- NVIDIA acquires Poolside in a $12B reverse-execuhire, licensing its Model Factory and hiring 109 employees, signaling a major consolidation of AI training and eval talent <sup>[1](<https://www.latent.space/p/ainews-poolside-gets-12b-reverse>)</sup>.
+- Anthropic prepares for a potential IPO, aiming to match or exceed SpaceX’s record size, and secures a >$10B revolving credit facility while considering super-voting shares for founder control <sup>[2](<https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzI5NzA2MCwiZXhwIjoxNzg3OTAxODYwLCJhcnRpY2xlSWQiOiJUSzBUVktLSzNOWUMwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.OxE678o5_5twVs_xmvCzAFwLomwkkT77ZbpvHnLXzco>)</sup>.
+- ChatGPT Search now heavily uses the `site:` operator in fanout queries, a shift tied to the GPT-5.6 rollout, impacting Generative Engine Optimization (GEO) strategies <sup>[3](<https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/>)</sup>.
+- EU clarifies that copyright does not protect AI-generated content, a key legal constraint for deployments in the region <sup>[4](<https://mathstodon.xyz/@maxpool/117128107757895678>)</sup>.
 
-## LLM Tooling, RAG and Agents
-- **Matt Pocock’s /wayfinder** skill helps agents and users navigate ambiguous projects ("fog of war") by iteratively clarifying end states <sup>[11](<https://www.latent.space/p/wayfinder-skill>)</sup>.
-- **ACID-compliant agent systems** show reliability-oriented architecture can rival model scale gains <sup>[5](<https://arxiv.org/html/2608.13900v1>)</sup>.
-- **Agent Lightning v1.0** is a lightweight harnessed agentic RL framework (3.5K LOC) that boosts Qwen3.5-9B by 14.6 points on SWE-bench Verified with 6K examples <sup>[12](<https://arxiv.org/abs/2608.17528>)</sup>.
-- **OneCLI** and **Munder Difflin** are new multi-agent harnesses: OneCLI offers sandboxed, policy-guarded agents routed via a gateway on company infra <sup>[13](<https://github.com/onecli/onecli>)</sup>, while Munder Difflin provides a visual, office-themed multi-agent desktop app <sup>[14](<https://github.com/chaitanyagiri/munder-difflin>)</sup>.
-- **Cursor** adds cloud agents with event subscriptions (PRs, Slack), VM-based subagents, and mid-task steering <sup>[15](<https://cursor.com/changelog/08-19-26>)</sup>.
-- **Replit Free Mode** enables 30x more creation using GPT-5.6 Luna without consuming credits for everyday tasks <sup>[16](<https://replit.com/blog/replit-introduces-free-mode>)</sup>.
-- **Stampli** cuts launch hours by 68% using ChatGPT Work and Codex to unify context, decisions, and assets <sup>[17](<https://openai.com/index/stampli>)</sup>.
-- **RAG quality** at DataTalks.Club improved via curated GitHub issues, Slack threads, YouTube transcripts, and explicit evaluation cases <sup>[18](<https://alexeyondata.substack.com/p/rebuilding-a-faq-system-for-datatalksclub>)</sup>.
-- **Agent memory as a moat**: structured scopes, retention policies, and access controls compound context into a competitive advantage <sup>[19](<https://redis.io/blog/compounding-context-memory-as-the-moat/>)</sup>.
+## LLM Tooling, Agents, and RAG
+- Slack launches **Slack Code**, enabling project-specific channels where teams and AI coding agents collaborate end-to-end—spinning up, archiving, and tracking work directly in Slack <sup>[5](<https://thenextweb.com/news/slack-code-ai-coding-channels-launch>)</sup>.
 
-## MLOps, DevOps, Cloud and Infrastructure
-- **GitHub Actions**: Windows 11 arm64 with Visual Studio 2026 is now GA on standard and larger runners; migration from VS2022 begins Sep 21 <sup>[20](<https://github.blog/changelog/2026-08-20-windows-11-arm64-vs2026-image-generally-available>)</sup>. Code scanning adds a **Mitigated** alert dismissal reason for externally controlled risks <sup>[21](<https://github.blog/changelog/2026-08-20-code-scanning-adds-a-mitigated-alert-dismissal-reason>)</sup>. GitHub Code Quality gets a dedicated Actions path and audit-log events for enable/disable/config changes <sup>[22](<https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality>), [23](<https://github.blog/changelog/2026-08-20-track-github-code-quality-enablement-changes-in-the-audit-log>)</sup>.
-- **DuckDB v2.0** preview: new SQL parser (PEG-based), client/server mode, triggers, VARIANT type for semi-structured data, async I/O, and major storage/query performance gains <sup>[24](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>), [25](<https://duckdb.org/2026/08/17/duckdb-20-highlights>)</sup>. **Apache Iceberg v3** adds a VARIANT type for semi-structured data with Parquet binary encoding <sup>[26](<https://iceberg.apache.org/blog/variant-in-apache-iceberg/>)</sup>.
-- **Netflix** rebuilt its live ads event pipeline on **Apache Flink** with stateful streaming joins, late-event handling, dual-run validation (>99.99% agreement), and hourly Spark recovery <sup>[27](<https://netflixtechblog.medium.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb>)</sup>.
-- **Uber’s Data Abstraction Layer** decouples product integrations from physical schemas/backends, cutting advertiser reporting delivery from weeks to under two days <sup>[28](<https://www.uber.com/us/en/blog/data-abstraction-layer/>)</sup>.
-- **PlanetScale** details massively parallel Postgres backups via sharded workers restoring from S3, replaying WAL, and freezing consistent snapshots <sup>[29](<https://planetscale.com/blog/massively-parallel-postgres-backups>)</sup>.
-- **Incident.io** eliminated Google Pub/Sub as a SPOF by adding NATS and an active-active load balancer, surviving full Pub/Sub disable tests with zero customer impact <sup>[30](<https://incident.io/blog/we-turned-off-pub-sub-and-nobody-noticed>)</sup>.
-- **Router** (router.com) and **fx** (fx.sh) emerge: Router dynamically matches requests to the lowest-cost model meeting SLOs, cutting AI costs by ~40% <sup>[31](<https://router.com/>)</sup>; fx is a minimal, fast-starting coding agent CLI with plugin/skill extensibility <sup>[32](<https://fx.sh/>)</sup>.
+## MLOps / DevOps / Infrastructure
+- GitHub adds **pinned saved views** to repository issue sidebars, profile avatars for issue reactions, adjustable Issues Dashboard density, and scoped filtering for issue dependency APIs <sup>[6](<https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar>)</sup>.
+- Waymo unveils a custom **5nm robocar chip** (TSMC) to accelerate sensor-to-driving-response pipelines, a hardware move to maintain autonomy performance edges <sup>[7](<https://www.theregister.com/edge-and-iot/2026/08/20/waymo-has-designed-a-robocar-chip-to-stay-ahead-of-tesla/5290592>)</sup>.
 
 ## Developer Tools and Software Engineering
-- **Cloudflare OAuth** moves from all-or-nothing to task-based consent, letting users narrow requested scopes on the consent screen <sup>[33](<https://blog.cloudflare.com/task-based-oauth-consent/>)</sup>.
-- **Docker Verified Publisher** applications are now self-serve, accelerating trusted content discovery for agentic software selection <sup>[34](<https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/>)</sup>.
-- **Rust 1.98.0** released <sup>[35](<https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/>)</sup>; a **supply-chain attack** on the `arrayref` crate (via malicious `proc-macro1` dependency) was mitigated by Rust’s security team <sup>[36](<https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/>)</sup>.
-- **VS Code / Cursor**: Vercel Agent now integrates with Slack <sup>[37](<https://x.com/vercel/status/2090172360410406988>)</sup>; Cursor improves cloud agent subscriptions and steering <sup>[15](<https://cursor.com/changelog/08-19-26>)</sup>.
-- **Spark partition tuning** guidance: size for core utilization, filter early, avoid shuffles, and repartition around joins/writes to handle skew and spills <sup>[38](<https://luminousmen.substack.com/p/spark-tips-partition-tuning>)</sup>.
-- **Postgres 19** advice remains largely unchanged: use COPY for bulk loads, model hot data, index carefully, and partition for lifecycle management; new features include resilient COPY, LZ4 compression by default, and smoother partition management <sup>[39](<https://www.crunchydata.com/blog/postgres-19-how-our-advice-has-changed-since-we-wrote-it>)</sup>.
-- **Polars 2.0** first release candidate is due next week <sup>[40](<https://threadreaderapp.com/thread/2089338347286093851.html>)</sup>.
+- A critique of Rust’s stdlib gaps highlights organizational bottlenecks (e.g., no OS random-byte stream API), contrasting Python’s "ship early" philosophy <sup>[8](<https://matklad.github.io/2026/08/20/better-batteries.html>)</sup>.
+- Commentary argues junior engineers meaningfully contribute by solving customer problems under manageable complexity, debunking myths about their limited impact <sup>[9](<https://franciscotrindade.me/blog/the-kids-are-really-alright/>)</sup>.
+- Analysis suggests GitHub’s dual optimization for ephemeral experiments and long-lived projects creates inherent trade-offs that make "the next GitHub" a less compelling target <sup>[10](<https://davidpoblador.com/blog/the-next-github-is-not-worth-winning.html>)</sup>.
 
-## Security and Risk
-- **MLflow vulnerability (CVE-2026-64849)** under active exploitation: SSRF in versions <3.15.0 enables credential theft via DNS rebinding; patch immediately <sup>[41](<https://decipher.sc/2026/08/18/mlflow-bug-actively-exploited-to-steal-credentials>)</sup>.
-- **Endor Labs** uncovered 14 critical/high-severity flaws in AI agent platforms (NocoBase, Flowise, Langflow, Dify, Activepieces, Kestra, Airflow), including unauthenticated RCE and sandbox escapes <sup>[42](<https://www.endorlabs.com/learn/hacking-your-life-with-ai-can-get-you-hacked>)</sup>.
-- **Prompt-injection worm risk**: AI agents parsing external inputs (e.g., emails) could exfiltrate data and propagate; organizations should map AI integrations and access levels <sup>[43](<https://danielmiessler.com/blog/prompt-injection-worm>)</sup>.
-- **CareCloud breach** expands to 3.7M individuals after AWS environment access (Mar 10–16) and claimed database theft <sup>[44](<https://www.securityweek.com/carecloud-data-breach-impact-grows-to-3-7-million-individuals/>)</sup>.
-- **Sakura Internet** hack exposes 1.36M accounts via sales management system access <sup>[45](<https://www.bleepingcomputer.com/news/security/sakura-internet-hack-exposes-data-of-up-to-136-million-accounts/>)</sup>. **Dahua camera campaign** compromised 14,500 IP cameras in 35 days via brute force, known exploits, and embedded credentials <sup>[46](<https://www.bleepingcomputer.com/news/security/hackers-compromise-14-500-dahua-web-cameras-in-35-day-campaign/>)</sup>.
+## Cloud and Edge
+- Tesla’s Austin robotaxi fleet is now fully driverless per crowdsourced tracking, with early driverless deployments also spotted in Dallas and Houston <sup>[11](<https://thenextweb.com/news/tesla-robotaxi-austin-fully-driverless-bollards>)</sup>.
+- Tesla claims **FSD v15** is a "step-change" and targets **Optimus robot sales in 2027**, marking accelerated autonomy and robotics timelines <sup>[12](<https://electrek.co/2026/08/20/tesla-jpmorgan-fremont-fsd-v15-hw4-optimus-2027/>)</sup>.
 
 ## Sources
 
-1. [Introducing AI Futures](<https://openai.com/index/introducing-ai-futures>) — _openai.com_
-2. [\[AINews\] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 and the new Post-training Scaling Law](<https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie>) — _latent.space_
-3. [Ornith-1.5 open models launch in 397B, 35B, and 9 B sizes](<https://www.testingcatalog.com/ornith-1-5-open-models-launch-in-397b-35b-and-9-b-sizes/>) — _testingcatalog.com_
-4. [Early outputs of Muse Video model from Meta](<https://www.testingcatalog.com/exclusive-early-outputs-of-muse-video-model-from-meta/>) — _testingcatalog.com_
-5. [Agentic Transaction: Towards ACID-Compliant Agent Systems](<https://arxiv.org/html/2608.13900v1>) — _arxiv 2608.13900v1_
-6. [Up to 3.2x Faster Inference with LFM2.5-DSpark](<https://huggingface.co/blog/LiquidAI/lfm25-dspark>) — _huggingface.co_
-7. [superwhisper/s1-mini](<https://huggingface.co/superwhisper/s1-mini>) — _huggingface.co_
-8. [DFlash 2: Keep Drafting Parallel](<https://inco.ai/blog/dflash2/>) — _inco.ai_
-9. [Pacing model development in an era of cyber-critical capabilities](<https://openai.com/index/pacing-model-development-cyber-capabilities/>) — _openai.com_
-10. [Offering Zero Data Retention for frontier models](<https://openai.com/index/our-commitment-to-zero-data-retention/>) — _openai.com_
-11. [The /wayfinder Skill: Navigating the “Fog of War” of Planning](<https://www.latent.space/p/wayfinder-skill>) — _latent.space_
-12. [Agent Lightning v1.0: Towards Harnessed Agentic RL](<https://arxiv.org/abs/2608.17528>) — _arxiv 2608.17528_
-13. [OneCLI](<https://github.com/onecli/onecli>) — _github.com_
-14. [Munder Difflin](<https://github.com/chaitanyagiri/munder-difflin>) — _github.com_
-15. [Cloud Agents and Cursor Harness Improvements](<https://cursor.com/changelog/08-19-26>) — _cursor.com_
-16. [Replit Introduces Free Mode](<https://replit.com/blog/replit-introduces-free-mode>) — _replit.com_
-17. [Stampli cuts launch hours by 68% using ChatGPT Work](<https://openai.com/index/stampli>) — _openai.com_
-18. [(Re)Building a FAQ System for DataTalks.Club](<https://alexeyondata.substack.com/p/rebuilding-a-faq-system-for-datatalksclub>) — _alexeyondata.substack.com_
-19. [Agent Memory as a Moat: How Context Compounds](<https://redis.io/blog/compounding-context-memory-as-the-moat/>) — _redis.io_
-20. [Windows 11 arm64 VS2026 image generally available](<https://github.blog/changelog/2026-08-20-windows-11-arm64-vs2026-image-generally-available>) — _github.blog_
-21. [Code scanning adds a mitigated alert dismissal reason](<https://github.blog/changelog/2026-08-20-code-scanning-adds-a-mitigated-alert-dismissal-reason>) — _github.blog_
-22. [Separate GitHub Actions path for GitHub Code Quality](<https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality>) — _github.blog_
-23. [Track GitHub Code Quality enablement changes in the audit log](<https://github.blog/changelog/2026-08-20-track-github-code-quality-enablement-changes-in-the-audit-log>) — _github.blog_
-24. [DuckDB v2.0: Your Database Deserves a Better Parser](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>) — _duckdb.org_
-25. [A Preview of DuckDB v2.0](<https://duckdb.org/2026/08/17/duckdb-20-highlights>) — _duckdb.org_
-26. [Semi-Structured Data in Apache Iceberg: Meet the Variant Type](<https://iceberg.apache.org/blog/variant-in-apache-iceberg/>) — _iceberg.apache.org_
-27. [Behind the Scenes: Evolving Netflix's Ads Event Pipeline for Live](<https://netflixtechblog.medium.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb>) — _netflixtechblog.medium.com_
-28. [Simplifying data and product integrations with a data abstraction layer](<https://www.uber.com/us/en/blog/data-abstraction-layer/>) — _uber.com_
-29. [Massively parallel Postgres backups](<https://planetscale.com/blog/massively-parallel-postgres-backups>) — _planetscale.com_
-30. [We turned off Pub/Sub and nobody noticed](<https://incident.io/blog/we-turned-off-pub-sub-and-nobody-noticed>) — _incident.io_
-31. [Router (Website)](<https://router.com/>) — _router.com_
-32. [fx (Website)](<https://fx.sh/>) — _fx.sh_
-33. [From all-or-nothing to task-based OAuth consent](<https://blog.cloudflare.com/task-based-oauth-consent/>) — _blog.cloudflare.com_
-34. [Docker Verified Publisher Applications Are Now Self-Serve](<https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/>) — _docker.com_
-35. [Announcing Rust 1.98.0](<https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/>) — _blog.rust-lang.org_
-36. [Supply chain attack on arrayref](<https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/>) — _blog.rust-lang.org_
-37. [Vercel Agent comes to Slack](<https://x.com/vercel/status/2090172360410406988>) — _x.com_
-38. [Spark Tips. Partition Tuning](<https://luminousmen.substack.com/p/spark-tips-partition-tuning>) — _luminousmen.substack.com_
-39. [Postgres 19: How Our Advice Has Changed Since We Wrote It](<https://www.crunchydata.com/blog/postgres-19-how-our-advice-has-changed-since-we-wrote-it>) — _crunchydata.com_
-40. [We will ship the first Polars 2.0 release candidate next week](<https://threadreaderapp.com/thread/2089338347286093851.html>) — _threadreaderapp.com_
-41. [MLflow Bug Actively Exploited to Steal Credentials](<https://decipher.sc/2026/08/18/mlflow-bug-actively-exploited-to-steal-credentials>) — _decipher.sc_
-42. [Hacking Your Life With AI Can Get You Hacked](<https://www.endorlabs.com/learn/hacking-your-life-with-ai-can-get-you-hacked>) — _endorlabs.com_
-43. [I'm Worried About a Prompt Injection Worm](<https://danielmiessler.com/blog/prompt-injection-worm>) — _danielmiessler.com_
-44. [CareCloud Data Breach Impact Grows to 3.7 Million Individuals](<https://www.securityweek.com/carecloud-data-breach-impact-grows-to-3-7-million-individuals/>) — _securityweek.com_
-45. [Sakura Internet Hack Exposes Data of up to 1.36M Accounts](<https://www.bleepingcomputer.com/news/security/sakura-internet-hack-exposes-data-of-up-to-136-million-accounts/>) — _bleepingcomputer.com_
-46. [Hackers Compromise 14,500 Dahua Web Cameras in 35-Day Campaign](<https://www.bleepingcomputer.com/news/security/hackers-compromise-14-500-dahua-web-cameras-in-35-day-campaign/>) — _bleepingcomputer.com_
+1. [\[AINews\] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud](<https://www.latent.space/p/ainews-poolside-gets-12b-reverse>) — _latent.space_
+2. [Anthropic Expects to Match or Top SpaceX's Record IPO Size](<https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzI5NzA2MCwiZXhwIjoxNzg3OTAxODYwLCJhcnRpY2xlSWQiOiJUSzBUVktLSzNOWUMwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.OxE678o5_5twVs_xmvCzAFwLomwkkT77ZbpvHnLXzco>) — _bloomberg.com_
+3. [ChatGPT search now uses the site:operator at scale](<https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/>) — _simonwillison.net_
+4. [Copyright does not protect AI-generated content in EU](<https://mathstodon.xyz/@maxpool/117128107757895678>) — _hnrss.org_
+5. [Slack launches Slack Code, where teams and AI agents build together](<https://thenextweb.com/news/slack-code-ai-coding-channels-launch>) — _thenextweb.com_
+6. [Pinning saved views to the repository issues sidebar is generally available and more](<https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar>) — _github.blog_
+7. [Waymo has designed a robocar chip to stay ahead of Tesla](<https://www.theregister.com/edge-and-iot/2026/08/20/waymo-has-designed-a-robocar-chip-to-stay-ahead-of-tesla/5290592>) — _theregister.com_
+8. [Better Batteries](<https://matklad.github.io/2026/08/20/better-batteries.html>) — _matklad.github.io_
+9. [The Kids Are Really Alright](<https://franciscotrindade.me/blog/the-kids-are-really-alright/>) — _franciscotrindade.me_
+10. [The next GitHub is not worth winning](<https://davidpoblador.com/blog/the-next-github-is-not-worth-winning.html>) — _davidpoblador.com_
+11. [Tesla's Austin robotaxis are now fully driverless, tracking shows](<https://thenextweb.com/news/tesla-robotaxi-austin-fully-driverless-bollards>) — _thenextweb.com_
+12. [Tesla says FSD v15 is a ‘step-change,' Optimus sells in 2027](<https://electrek.co/2026/08/20/tesla-jpmorgan-fremont-fsd-v15-hw4-optimus-2027/>) — _electrek.co_
 
 
 ## Recent archive
