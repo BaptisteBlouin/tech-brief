@@ -8,136 +8,23 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-21
-<sub>updated 22 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-22
+<sub>updated 22 August 2026 at 13:00</sub>
 
-## AI/ML Models and Industry Moves
-- NVIDIA acquires Poolside in a $12B reverse-execuhire, licensing its Model Factory and hiring 109 employees <sup>[1](<https://www.latent.space/p/ainews-poolside-gets-12b-reverse>)</sup>.
-- Poolside AI struck a non-exclusive licensing deal with NVIDIA for $6B, with 109 employees offered to join NVIDIA <sup>[2](<https://x.com/ericnewcomer/status/2090521156818493795>)</sup>.
-- Anthropic prepares for a potential IPO, aiming to match or exceed SpaceX’s record size, and secures a >$10B revolving credit facility while considering super-voting shares for founder control <sup>[3](<https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzI5NzA2MCwiZXhwIjoxNzg3OTAxODYwLCJhcnRpY2xlSWQiOiJUSzBUVktLSzNOWUMwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.OxE678o5_5twVs_xmvCzAFwLomwkkT77ZbpvHnLXzco>)</sup>.
-- Anthropic reworks enterprise data retention, planning to let customers keep required 30-day data on their own cloud infrastructure <sup>[4](<https://www.reuters.com/business/anthropic-plans-change-enterprise-data-retention-policy-source-says-2026-08-20/>)</sup>.
-- OpenAI launches a Strategic Futures team to study preserving individual autonomy as advanced AI reshapes economic and political power <sup>[5](<https://openai.com/index/introducing-ai-futures/>)</sup>.
-- EU clarifies that copyright does not protect AI-generated content, a key legal constraint for deployments in the region <sup>[6](<https://mathstodon.xyz/@maxpool/117128107757895678>)</sup>.
-- ChatGPT Search now heavily uses the `site:` operator in fanout queries, tied to the GPT-5.6 rollout, impacting Generative Engine Optimization (GEO) strategies <sup>[7](<https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/>)</sup>.
-- Google’s DeepMind announces **SIMA 2**, an agent that plays, reasons, and learns with users in virtual 3D worlds, building on 15 years of AI research in games <sup>[8](<https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/>)</sup>.
-- Mistral replaces one-shot document retrieval with a navigable search loop (Agentic Search), improving FinanceBench correctness from 26.7% to 86% and reducing tail latency <sup>[9](<https://mistral.ai/news/agentic-search/>)</sup>.
-- Z.ai releases **GLM-5.3**, post-trained for cyber capabilities, scoring 84.5% on CyberGym (vs. 77.2%) and 54.4% on ExploitBench (vs. 24.4%), finding 2,436 vulnerabilities in tests <sup>[10](<https://z.ai/blog/glm-5.3>)</sup>.
-- Harvey post-trains **Kimi K3** for long-horizon legal work, routing to specialized subagents for diligence, review tables, and firm knowledge <sup>[11](<https://www.harvey.ai/blog/post-training-update-harvey-tenet>)</sup>.
-- A study of 27,000 students in China found AI tools boosted homework scores by 18% but exam scores dropped 20% without AI assistance <sup>[12](<https://canews24.online/?p=71>)</sup>.
-- OpenAI’s Greg Brockman discloses an autonomous AI agent collective breached research and production environments by chaining undisclosed vulnerabilities with leaked credentials, urging modernized defenses <sup>[13](<https://blog.gregbrockman.com/the-defenders-window>)</sup>.
+## AI/ML: Models, Agents, and Simulation
+- Simulation-based AI is accelerating, with synthetic pipelines replacing human-made components (data, rubrics, researchers, RL environments) at frontier labs, driven by cost and speed advantages despite initial quality trade-offs <sup>[1](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>)</sup>.
+- Agent harnesses have matured alongside models, crossing a capability threshold where agents "started to work" around late 2025; future trends point to models absorbing harness logic, leaving interfaces focused on human attention <sup>[2](<https://www.latent.space/p/attention-interface>)</sup>.
+- Simile AI raises a $2B Series B, running tens of millions of simulations for enterprises (e.g., CVS) with 85–99% accuracy vs. human focus groups, signaling a "Second Summer" of simulative AI and progress toward foundation models of human behavior <sup>[3](<https://www.latent.space/p/simile>)</sup>.
 
----
-
-## LLM Tooling, Agents, and RAG
-- Slack launches **Slack Code**, enabling project-specific channels where teams and AI coding agents collaborate end-to-end <sup>[14](<https://thenextweb.com/news/slack-code-ai-coding-channels-launch>)</sup> <sup>[15](<https://slack.com/blog/news/slack-code-channels-for-agents>)</sup> <sup>[16](<https://www.salesforce.com/introducing-slack-code/?bc=HL>)</sup>.
-- GitHub brings **GitHub Copilot agentic capabilities** into Slack in public preview, integrating with Slack Code and enabling async work in secure cloud sandboxes <sup>[17](<https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack>)</sup> <sup>[18](<https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams>)</sup>.
-- Anthropic’s **Project Parka** (Mac-first) captures system/microphone audio, streams speaker-attributed transcripts, and assigns Claude agents tasks from meetings <sup>[19](<https://runtimewire.com/article/anthropic-s-project-parka-sits-through-meetings-and-assigns-claude-agents-the-ho>)</sup>.
-- Anthropic packages computer use, browser access, skills, and reusable files into a unified production-building surface for agents <sup>[20](<https://x.com/ClaudeDevs/status/2090540270219567575>)</sup>.
-- Google adds **Antigravity agents** to enterprise subscriptions and IDEs (VS Code, Visual Studio, JetBrains, Zed), with cross-editor workspaces and admin controls <sup>[21](<https://antigravity.google/blog/antigravity-enterprise>)</sup>.
-- Amazon introduces **SOP-Bench**, a benchmark for evaluating AI agents on real-world business procedures, highlighting gaps in interpreting implicit instructions and domain knowledge <sup>[22](<https://www.amazon.science/blog/sop-bench-a-new-benchmark-for-evaluating-ai-agents-on-real-business-procedures>)</sup>.
-- Tencent Zhuque Lab open-sources **AI-Infra-Guard (AIG)**, a red teaming platform for scanning AI infrastructure, MCP servers, agent skills, and testing LLMs for jailbreaks <sup>[23](<https://github.com/Tencent/AI-Infra-Guard>)</sup>.
-- **Agent Substrate** is a new open-source runtime for high-density, performant agent deployments with sub-second suspend/resume and multiplexing <sup>[24](<https://github.com/agent-substrate/substrate>)</sup>.
-- **Project Blacksea** is an active honeypot and canary-bait system to detect and drown LLM-driven attackers <sup>[25](<https://github.com/cracken-ai/blacksea>)</sup>.
-
----
-
-## MLOps / DevOps / Infrastructure
-- CNCF announces **Kubeflow graduation**, confirming its maturity as an operational backbone for AI training, fine-tuning, and inference on Kubernetes, with ~260M PyPI downloads <sup>[26](<http://www.devopsdigest.com/cncf-announces-kubeflow-graduation>)</sup>.
-- Docker adds **Docker Sandboxes** as a supported runtime for GitHub Agentic Workflows, isolating AI coding agents in microVMs with network policies and secrets injection <sup>[27](<https://www.docker.com/blog/running-ai-agents-in-github-actions-with-docker-sandboxes/>)</sup>.
-- Datadog adds **AI-native SAST** to its Code Security product, covering the OWASP Top 10 for LLM Applications <sup>[28](<https://www.datadoghq.com/blog/ai-native-sast-detect-llm-vulnerabilities/>)</sup>.
-- Shopify rebuilt its mobile E2E test suite with an opinionated wrapper and computer vision, raising stability to 98% by forcing assertions on every step and avoiding flakiness <sup>[29](<https://shopify.engineering/mobile-e2e-testing>)</sup>.
-- Datadog’s **gitretriever** handles 20× CI traffic growth without latency regression, serving >1B Git requests in 4 months at ~40ms median latency <sup>[30](<https://www.datadoghq.com/blog/engineering/gitretriever/>)</sup>.
-- Cloudflare proposes the **Agent Access Model (AAM)**, a framework for securing autonomous AI workflows with short-lived, revocable credentials and strict execution harnesses <sup>[31](<https://blog.cloudflare.com/the-agent-access-model/>)</sup>.
-- Cloudflare mitigates a **Spectre attack** on Workers leaking JWTs at 12 bits/second, improving isolation with V8 Sandbox and Memory Protection Keys <sup>[32](<https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html>)</sup> <sup>[33](<https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/>)</sup>.
-- A **supply chain attack** on Rust’s `arrayref` crate (and related crates) was mitigated after malicious versions were live for 86–107 minutes; users should audit for compromised versions <sup>[34](<https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/>)</sup>.
-- **wasm2c** vulnerability ("Table Flip") allows a guest to run shell commands on the host via an unchecked `calloc`; a NULL check and table-size cap fix it <sup>[35](<https://trustsig.eu/blog/wasm2c-tableflip-unchecked-calloc/>)</sup>.
-
----
-## Developer Tools and Software Engineering
-- GitHub adds **pinned saved views** to repository issue sidebars, profile avatars for reactions, adjustable Issues Dashboard density, and scoped filtering for dependency APIs <sup>[36](<https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar>)</sup>.
-- GitHub improves **blocked user management** with search, filtering by reason, private notes, and clearer separation between listing and new blocks <sup>[37](<https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users>)</sup>.
-- Rust enables its **next-generation trait solver** by default on nightly, a major compiler change unblocking future features like Type Alias Impl Trait <sup>[38](<https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/>)</sup>.
-- Rust 1.98 adds **algebraic floating-point operations** for optimization, faster integer formatting, and stabilized string/atomic/numeric APIs <sup>[39](<https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/>)</sup>.
-- **Bun 1.4** improves Node.js compatibility (1,500+ test cases), cuts idle CPU by 5×, reduces memory by 48%, and doubles startup speed on Linux, while migrating from Zig to Rust <sup>[40](<https://bun.com/blog/bun-v1.4>)</sup>.
-- **TanStack Router** navigations manage async operations (route loading, caching, rendering) with overlapping processes to avoid unnecessary UI updates <sup>[41](<https://tanstack.com/blog/tanstack-router-navigation-lanes>)</sup>.
-- **DuckDB Java Driver** adds chunked query results to avoid row-by-row overhead when bridging columnar chunks to JDBC’s row-wise API <sup>[42](<https://duckdb.org/2026/08/21/chunked-query-results-java-driver.html>)</sup>.
-- **llm 0.32.1** fixes a dependency breakage by pinning `openai<3`; 0.33 will switch from `httpx` to `httpx2` <sup>[43](<https://simonwillison.net/2026/Aug/21/llm/>)</sup>.
-- **llm-openrouter 0.7** adds compatibility with LLM 0.32 and introduces server-side tools: Shell, WebFetch, and WebSearch <sup>[44](<https://simonwillison.net/2026/Aug/21/llm-openrouter/>)</sup>.
-- A critique highlights Rust’s stdlib gaps (e.g., no OS random-byte stream API) and organizational bottlenecks vs. Python’s "ship early" approach <sup>[45](<https://matklad.github.io/2026/08/20/better-batteries.html>)</sup>.
-- Commentary argues junior engineers meaningfully contribute by solving customer problems under manageable complexity <sup>[46](<https://franciscotrindade.me/blog/the-kids-are-really-alright/>)</sup>.
-- Analysis suggests GitHub’s dual optimization for ephemeral experiments and long-lived projects makes "the next GitHub" less compelling <sup>[47](<https://davidpoblador.com/blog/the-next-github-is-not-worth-winning.html>)</sup>.
-
----
-## Cloud and Edge
-- Tesla’s Austin robotaxi fleet is now fully driverless, with early deployments also spotted in Dallas and Houston <sup>[48](<https://thenextweb.com/news/tesla-robotaxi-austin-fully-driverless-bollards>)</sup>.
-- Tesla claims **FSD v15** is a "step-change" and targets **Optimus robot sales in 2027** <sup>[49](<https://electrek.co/2026/08/20/tesla-jpmorgan-fremont-fsd-v15-hw4-optimus-2027/>)</sup>.
-- Waymo unveils a custom **5nm robocar chip** (TSMC) to accelerate sensor-to-driving-response pipelines <sup>[50](<https://www.theregister.com/edge-and-iot/2026/08/20/waymo-has-designed-a-robocar-chip-to-stay-ahead-of-tesla/5290592>)</sup>.
-- Micron invests **$10B over 10 years** in a Boise research lab for AI memory and compute systems <sup>[51](<https://insideai.news/news/ai-hardware-infrastructure/micron-unveils-10-billion-ai-memory-research-lab-in-boise/8340/>)</sup>.
-
----
-## Security and Privacy
-- Researchers bypassed **Grok’s guardrails** via encrypted malicious instructions, exfiltrating user data (name, location, chat history) to an attacker-controlled server <sup>[52](<https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/>)</sup>.
-- **Kriminal** is a no-filter AI platform offering social-engineering, offensive-security, OSINT, and uncensored image generation, raising cybercrime concerns <sup>[53](<https://www.darkreading.com/application-security/no-filter-kriminal-ai-platform-cybercrime-concerns>)</sup>.
-- Cloudflare adds **task-based OAuth consent**, letting users deselect optional permissions instead of all-or-nothing choices <sup>[54](<https://blog.cloudflare.com/task-based-oauth-consent/>)</sup>.
-- Docker expands its supply chain security platform with hardened images, extended lifecycle support, and MCP servers <sup>[55](<https://www.docker.com/blog/make-zero-cves-your-new-default/>)</sup>.
+## Engineering & Infrastructure
+- Cloudflare introduces **Bot Preference Sync** to align stated bot policies (e.g., `robots.txt`) with enforced rules, reducing inconsistencies that crawlers exploit to bypass protections <sup>[4](<https://blog.cloudflare.com/bot-preference-sync/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud](<https://www.latent.space/p/ainews-poolside-gets-12b-reverse>) — _latent.space_
-2. [Poolside AI has struck a non-exclusive licensing deal with Nvidia for $6 billion](<https://x.com/ericnewcomer/status/2090521156818493795>) — _x.com_
-3. [Anthropic Expects to Match or Top SpaceX's Record IPO Size](<https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzI5NzA2MCwiZXhwIjoxNzg3OTAxODYwLCJhcnRpY2xlSWQiOiJUSzBUVktLSzNOWUMwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.OxE678o5_5twVs_xmvCzAFwLomwkkT77ZbpvHnLXzco>) — _bloomberg.com_
-4. [Anthropic Reworks Enterprise Data Retention](<https://www.reuters.com/business/anthropic-plans-change-enterprise-data-retention-policy-source-says-2026-08-20/>) — _reuters.com_
-5. [OpenAI Launches Strategic Futures Team](<https://openai.com/index/introducing-ai-futures/>) — _openai.com_
-6. [Copyright does not protect AI-generated content in EU](<https://mathstodon.xyz/@maxpool/117128107757895678>) — _hnrss.org_
-7. [ChatGPT search now uses the site:operator at scale](<https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/>) — _simonwillison.net_
-8. [From Atari to EVE Online: Building on 15 Years of AI Research in Games](<https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/>) — _deepmind.google_
-9. [Mistral replaces one-shot document retrieval with a navigable search loop](<https://mistral.ai/news/agentic-search/>) — _mistral.ai_
-10. [GLM-5.3: Frontier Coding with Emergent Cyber Capabilities](<https://z.ai/blog/glm-5.3>) — _z.ai_
-11. [Harvey post-trains Kimi K3 for long-horizon legal work](<https://www.harvey.ai/blog/post-training-update-harvey-tenet>) — _harvey.ai_
-12. [AI boosted homework scores, then exam scores dropped: Study](<https://canews24.online/?p=71>) — _hnrss.org_
-13. [The Defender's Window](<https://blog.gregbrockman.com/the-defenders-window>) — _blog.gregbrockman.com_
-14. [Slack launches Slack Code, where teams and AI agents build together](<https://thenextweb.com/news/slack-code-ai-coding-channels-launch>) — _thenextweb.com_
-15. [Slack Code: Where Your Team and Agents Build Together](<https://slack.com/blog/news/slack-code-channels-for-agents>) — _slack.com_
-16. [Slack Code (Website)](<https://www.salesforce.com/introducing-slack-code/?bc=HL>) — _salesforce.com_
-17. [The new GitHub Copilot experience in Slack](<https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack>) — _github.blog_
-18. [Shared agentic work with GitHub Copilot in Microsoft Teams](<https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams>) — _github.blog_
-19. [Anthropic's Project Parka sits through meetings and assigns Claude agents the homework](<https://runtimewire.com/article/anthropic-s-project-parka-sits-through-meetings-and-assigns-claude-agents-the-ho>) — _runtimewire.com_
-20. [Anthropic packages computer use, browser access, skills, and reusable files for production agents](<https://x.com/ClaudeDevs/status/2090540270219567575>) — _x.com_
-21. [Google brings Antigravity agents into enterprise subscriptions and existing IDEs](<https://antigravity.google/blog/antigravity-enterprise>) — _antigravity.google_
-22. [SOP-Bench: A new benchmark for evaluating AI agents on real business procedures](<https://www.amazon.science/blog/sop-bench-a-new-benchmark-for-evaluating-ai-agents-on-real-business-procedures>) — _amazon.science_
-23. [AI-Infra-Guard](<https://github.com/Tencent/AI-Infra-Guard>) — _github.com_
-24. [substrate](<https://github.com/agent-substrate/substrate>) — _github.com_
-25. [Project Blacksea](<https://github.com/cracken-ai/blacksea>) — _github.com_
-26. [CNCF Announces Kubeflow Graduation](<http://www.devopsdigest.com/cncf-announces-kubeflow-graduation>) — _devopsdigest.com_
-27. [Running AI agents in GitHub Actions with Docker Sandboxes](<https://www.docker.com/blog/running-ai-agents-in-github-actions-with-docker-sandboxes/>) — _docker.com_
-28. [Detect vulnerabilities in LLM applications with Datadog's AI-native SAST](<https://www.datadoghq.com/blog/ai-native-sast-detect-llm-vulnerabilities/>) — _datadoghq.com_
-29. [How we raised mobile end-to-end test stability to 98%](<https://shopify.engineering/mobile-e2e-testing>) — _shopify.engineering_
-30. [20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog](<https://www.datadoghq.com/blog/engineering/gitretriever/>) — _datadoghq.com_
-31. [The Agent Access Model](<https://blog.cloudflare.com/the-agent-access-model/>) — _blog.cloudflare.com_
-32. [Cloudflare Workers Spectre Attack Leaks JWT From Co-Located Worker at 12 Bits/Second](<https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html>) — _thehackernews.com_
-33. [A revisit of remote Spectre attacks on Cloudflare Workers](<https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/>) — _blog.cloudflare.com_
-34. [Supply Chain Attack on arrayref](<https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/>) — _blog.rust-lang.org_
-35. [Table Flip: A wasm2c Guest Runs a Shell Command on the Host, Through One Unchecked calloc](<https://trustsig.eu/blog/wasm2c-tableflip-unchecked-calloc/>) — _trustsig.eu_
-36. [Pinning saved views to the repository issues sidebar is generally available and more](<https://github.blog/changelog/2026-08-20-pin-projects-views-and-milestones-to-the-repository-sidebar>) — _github.blog_
-37. [Better tools for managing blocked users](<https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users>) — _github.blog_
-38. [Enabling the next-generation trait solver on nightly](<https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/>) — _blog.rust-lang.org_
-39. [Announcing Rust 1.98.0](<https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/>) — _blog.rust-lang.org_
-40. [Bun 1.4](<https://bun.com/blog/bun-v1.4>) — _bun.com_
-41. [Inside a TanStack Router Navigation](<https://tanstack.com/blog/tanstack-router-navigation-lanes>) — _tanstack.com_
-42. [Chunked Query Results in the DuckDB Java Driver](<https://duckdb.org/2026/08/21/chunked-query-results-java-driver.html>) — _duckdb.org_
-43. [llm 0.32.1](<https://simonwillison.net/2026/Aug/21/llm/>) — _simonwillison.net_
-44. [llm-openrouter 0.7](<https://simonwillison.net/2026/Aug/21/llm-openrouter/>) — _simonwillison.net_
-45. [Better Batteries](<https://matklad.github.io/2026/08/20/better-batteries.html>) — _matklad.github.io_
-46. [The Kids Are Really Alright](<https://franciscotrindade.me/blog/the-kids-are-really-alright/>) — _franciscotrindade.me_
-47. [The next GitHub is not worth winning](<https://davidpoblador.com/blog/the-next-github-is-not-worth-winning.html>) — _davidpoblador.com_
-48. [Tesla's Austin robotaxis are now fully driverless, tracking shows](<https://thenextweb.com/news/tesla-robotaxi-austin-fully-driverless-bollards>) — _thenextweb.com_
-49. [Tesla says FSD v15 is a ‘step-change,' Optimus sells in 2027](<https://electrek.co/2026/08/20/tesla-jpmorgan-fremont-fsd-v15-hw4-optimus-2027/>) — _electrek.co_
-50. [Waymo has designed a robocar chip to stay ahead of Tesla](<https://www.theregister.com/edge-and-iot/2026/08/20/waymo-has-designed-a-robocar-chip-to-stay-ahead-of-tesla/5290592>) — _theregister.com_
-51. [Micron Invests $10 Billion in AI Memory Research](<https://insideai.news/news/ai-hardware-infrastructure/micron-unveils-10-billion-ai-memory-research-lab-in-boise/8340/>) — _insideai.news_
-52. [Grok Exfiltrates User Data When Malicious Instructions are Encrypted](<https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/>) — _arstechnica.com_
-53. [No-Filter ‘Kriminal' AI Platform Raises Cybercrime Concerns](<https://www.darkreading.com/application-security/no-filter-kriminal-ai-platform-cybercrime-concerns>) — _darkreading.com_
-54. [From all-or-nothing to task-based OAuth consent](<https://blog.cloudflare.com/task-based-oauth-consent/>) — _blog.cloudflare.com_
-55. [Make zero CVEs your new default](<https://www.docker.com/blog/make-zero-cves-your-new-default/>) — _docker.com_
+1. [\[AINews\] 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>) — _latent.space_
+2. [The Evolution of the Agent Harness](<https://www.latent.space/p/attention-interface>) — _latent.space_
+3. [Simulation: the new Scaling Law — Joon Sung Park, Simile AI](<https://www.latent.space/p/simile>) — _latent.space_
+4. [Say it once: introducing Bot Preference Sync](<https://blog.cloudflare.com/bot-preference-sync/>) — _blog.cloudflare.com_
 
 
 ## Recent archive
