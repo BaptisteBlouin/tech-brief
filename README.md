@@ -8,35 +8,15 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-22
-<sub>updated 23 August 2026 at 01:00</sub>
+### Latest digest — 2026-08-23
+<sub>updated 23 August 2026 at 13:00</sub>
 
-## AI/ML: Models, Agents, and Simulation
-- Simulation-based AI is accelerating at frontier labs, with synthetic pipelines replacing human-made data, rubrics, researchers, and RL environments due to cost and speed, despite early quality trade-offs <sup>[1](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>)</sup>.
-- Agent harnesses have matured, crossing a threshold where agents "started to work" around late 2025; future direction suggests models will absorb harness logic, simplifying interfaces to focus on human attention <sup>[2](<https://www.latent.space/p/attention-interface>)</sup>.
-- Simile AI raises a $2B Series B, running tens of millions of simulations for enterprises (e.g., CVS) with 85–99% accuracy vs. human focus groups, signaling a "Second Summer" of simulative AI and progress toward foundation models of human behavior <sup>[3](<https://www.latent.space/p/simile>)</sup>.
-- Linus Torvalds recounts using an AI assistant for a difficult debug session, noting it persisted in adding debug code and analysis even after declaring the problem unsolvable, and ultimately wrote the commit message <sup>[4](<https://simonwillison.net/2026/Aug/22/linus-torvalds/>)</sup>.
-
-## LLM Tooling and Practices
-- `llm` 0.33 upgrades to OpenAI Python library 3.x, switches HTTP client from `httpx` to `httpx2`, and adds `--key` support for `llm embed`/`embed-multi` and corresponding Python methods to pass per-call keys to embedding plugins <sup>[5](<https://simonwillison.net/2026/Aug/22/llm/>)</sup>.
-- A deep dive explains how Claude watermarks AI-generated text, with a detailed 48-minute lecture and slides covering the implementation and nuances <sup>[6](<https://magazine.sebastianraschka.com/p/claude-watermarking>)</sup>.
-- A system design refresher compares Ollama, vLLM, and SGLang for running open-weight models locally, outlining their trade-offs and use cases <sup>[7](<https://blog.bytebytego.com/p/ep223-ollama-vs-vllm-vs-sglang>)</sup>.
-- Productive use of coding agents hinges on the ability to confidently instruct them and verify changes, not solely via line-by-line code review but through other validation methods <sup>[8](<https://simonwillison.net/2026/Aug/22/more-than-just-code-review/>)</sup>.
-
-## Engineering & Infrastructure
-- Cloudflare introduces **Bot Preference Sync** to align stated bot policies (e.g., `robots.txt`) with enforced rules, reducing inconsistencies that crawlers exploit to bypass protections <sup>[9](<https://blog.cloudflare.com/bot-preference-sync/>)</sup>.
+- ## Developer Tools & Emulation
+ - MartyPC is released as a cross-platform emulator of early PCs implemented in Rust, supporting a range of vintage hardware configurations including MDA, Hercules, CGA, EGA, VGA, and memory sidecars <sup>[1](<https://martypc.net/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>) — _latent.space_
-2. [The Evolution of the Agent Harness](<https://www.latent.space/p/attention-interface>) — _latent.space_
-3. [Simulation: the new Scaling Law — Joon Sung Park, Simile AI](<https://www.latent.space/p/simile>) — _latent.space_
-4. [Quoting Linus Torvalds](<https://simonwillison.net/2026/Aug/22/linus-torvalds/>) — _simonwillison.net_
-5. [llm 0.33](<https://simonwillison.net/2026/Aug/22/llm/>) — _simonwillison.net_
-6. [How Claude Watermarks AI-Generated Text](<https://magazine.sebastianraschka.com/p/claude-watermarking>) — _magazine.sebastianraschka.com_
-7. [EP223: Ollama vs vLLM vs SGLang](<https://blog.bytebytego.com/p/ep223-ollama-vs-vllm-vs-sglang>) — _blog.bytebytego.com_
-8. [More than just code review](<https://simonwillison.net/2026/Aug/22/more-than-just-code-review/>) — _simonwillison.net_
-9. [Say it once: introducing Bot Preference Sync](<https://blog.cloudflare.com/bot-preference-sync/>) — _blog.cloudflare.com_
+1. [MartyPC is a cross-platform emulator of early PCs written in Rust](<https://martypc.net/>) — _hnrss.org_
 
 
 ## Recent archive

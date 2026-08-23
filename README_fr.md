@@ -8,35 +8,15 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-22
-<sub>mis à jour le 23 août 2026 à 01:00</sub>
+### Dernier digest — 2026-08-23
+<sub>mis à jour le 23 août 2026 à 13:00</sub>
 
-## IA/ML : Modèles, Agents et Simulation
-- L'IA basée sur la simulation accélère dans les laboratoires de pointe, les pipelines synthétiques remplaçant les données, grilles d'évaluation, chercheurs et environnements de RL créés par l'homme en raison des coûts et de la rapidité, malgré des compromis initiaux sur la qualité <sup>[1](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>)</sup>.
-- Les harnais d'agents ont mûri, franchissant un seuil où les agents « ont commencé à fonctionner » vers fin 2025 ; l'évolution future suggère que les modèles intégreront la logique des harnais, simplifiant les interfaces pour se concentrer sur l'attention humaine <sup>[2](<https://www.latent.space/p/attention-interface>)</sup>.
-- Simile AI lève 2 milliards de dollars en série B, exécutant des dizaines de millions de simulations pour les entreprises (par ex. CVS) avec une précision de 85 à 99 % par rapport aux groupes de discussion humains, annonçant un « Deuxième Été » de l'IA simulative et des progrès vers des modèles de base du comportement humain <sup>[3](<https://www.latent.space/p/simile>)</sup>.
-- Linus Torvalds raconte avoir utilisé un assistant IA pour une session de débogage difficile, notant qu'il a persisté à ajouter du code de débogage et des analyses même après avoir déclaré le problème insoluble, et a finalement rédigé le message de commit <sup>[4](<https://simonwillison.net/2026/Aug/22/linus-torvalds/>)</sup>.
-
-## Outils et Pratiques pour LLM
-- `llm` 0.33 passe à la bibliothèque Python OpenAI 3.x, remplace le client HTTP `httpx` par `httpx2`, et ajoute la prise en charge de `--key` pour `llm embed`/`embed-multi` ainsi que les méthodes Python correspondantes pour transmettre des clés par appel aux plugins d'embedding <sup>[5](<https://simonwillison.net/2026/Aug/22/llm/>)</sup>.
-- Une analyse approfondie explique comment Claude marque à l'eau les textes générés par IA, avec une conférence détaillée de 48 minutes et des diapositives couvrant la mise en œuvre et les nuances <sup>[6](<https://magazine.sebastianraschka.com/p/claude-watermarking>)</sup>.
-- Un rappel sur la conception système compare Ollama, vLLM et SGLang pour exécuter des modèles à poids ouverts localement, en décrivant leurs compromis et cas d'usage <sup>[7](<https://blog.bytebytego.com/p/ep223-ollama-vs-vllm-vs-sglang>)</sup>.
-- L'utilisation productive des agents de codage repose sur la capacité à les instruire avec confiance et à vérifier les modifications, non seulement par une revue de code ligne par ligne, mais aussi par d'autres méthodes de validation <sup>[8](<https://simonwillison.net/2026/Aug/22/more-than-just-code-review/>)</sup>.
-
-## Ingénierie et Infrastructure
-- Cloudflare introduit **Bot Preference Sync** pour aligner les politiques de bots déclarées (par ex. `robots.txt`) avec les règles appliquées, réduisant les incohérences que les crawlers exploitent pour contourner les protections <sup>[9](<https://blog.cloudflare.com/bot-preference-sync/>)</sup>.
+- ## Outils de développement & émulation
+ - MartyPC est publié en tant qu'émulateur multiplateforme des premiers PC, implémenté en Rust, prenant en charge une gamme de configurations matérielles vintage, y compris MDA, Hercules, CGA, EGA, VGA et les cartes mémoire additionnelles <sup>[1](<https://martypc.net/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over](<https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x>) — _latent.space_
-2. [The Evolution of the Agent Harness](<https://www.latent.space/p/attention-interface>) — _latent.space_
-3. [Simulation: the new Scaling Law — Joon Sung Park, Simile AI](<https://www.latent.space/p/simile>) — _latent.space_
-4. [Quoting Linus Torvalds](<https://simonwillison.net/2026/Aug/22/linus-torvalds/>) — _simonwillison.net_
-5. [llm 0.33](<https://simonwillison.net/2026/Aug/22/llm/>) — _simonwillison.net_
-6. [How Claude Watermarks AI-Generated Text](<https://magazine.sebastianraschka.com/p/claude-watermarking>) — _magazine.sebastianraschka.com_
-7. [EP223: Ollama vs vLLM vs SGLang](<https://blog.bytebytego.com/p/ep223-ollama-vs-vllm-vs-sglang>) — _blog.bytebytego.com_
-8. [More than just code review](<https://simonwillison.net/2026/Aug/22/more-than-just-code-review/>) — _simonwillison.net_
-9. [Say it once: introducing Bot Preference Sync](<https://blog.cloudflare.com/bot-preference-sync/>) — _blog.cloudflare.com_
+1. [MartyPC is a cross-platform emulator of early PCs written in Rust](<https://martypc.net/>) — _hnrss.org_
 
 
 ## Archive récente
