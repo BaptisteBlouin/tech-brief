@@ -8,103 +8,51 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### 🗓️ Weekly recap (2026-08-17 → 2026-08-23)
-<sub>updated 24 August 2026 at 01:00</sub>
+### Latest digest — 2026-08-24
+<sub>updated 24 August 2026 at 13:00</sub>
 
-## AI Models and Research
-- OpenAI pauses frontier model scaling to implement stricter security, monitoring, and alignment safeguards amid cyber-critical capability concerns and previews **Private Safety Processing** for zero-data-retention frontier models <sup>[1](<https://openai.com/index/pacing-model-development-cyber-capabilities/>), [2](<https://openai.com/index/our-commitment-to-zero-data-retention/>), [3](<https://openai.com/index/offering-zero-data-retention-for-frontier-models>), [4](<https://openai.com/index/pacing-model-development-cyber-capabilities/>), [5](<https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/>)</sup>.
-- Z.ai releases **GLM-5.3**, achieving frontier coding performance and emergent cyber capabilities through extended post-training; weights are delayed for security review and now available on API at 1.4/4.4 $ per M tokens <sup>[6](<https://z.ai/blog/glm-5.3>), [7](<https://www.implicator.ai/z-ai-delays-glm-5-3-weights-two-weeks-after-cyber-score-beats-mythos-5/>), [8](<https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>), [9](<https://venturebeat.com/ai/glm-5-3-hits-the-api-at-1-4-4-4-per-million-tokens>), [10](<https://z.ai/blog/glm-5.3>)</sup>.
-- Qwen 3.8 27B achieves strong benchmarks, running efficiently on local hardware and scoring 52 on the Artificial Analysis Intelligence Index <sup>[11](<https://simonwillison.net/2026/Aug/16/qwen-38-27b/>), [12](<https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/>)</sup>.
-- Anthropic reports no plans to release a stronger internal model ("Model 2") due to rising risks and verification challenges <sup>[13](<https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk>)</sup>.
-- OpenAI’s ChatGPT Computer History feature on macOS logs all clicks/keystrokes in plaintext, raising privacy concerns <sup>[14](<https://hwbusters.com/news/chatgpt-computer-history-logs-every-click-and-keystroke-on-your-mac/>)</sup>.
+## AI/ML Models, Agents, and Tooling
+- Children still outperform LLMs in language learning efficiency, as models require orders of magnitude more data to achieve fluency, highlighting a core gap in how machines learn language <sup>[1](<https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/>)</sup>.
+- TrueFoundry open-sources TrueForge, a self-hostable enterprise agent harness that reduces task costs by 30–75% via context compaction, lazy tool loading, subagents, and sandboxed execution, decoupling orchestration from model choice <sup>[2](<https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents>)</sup>.
+- MCP’s updated roadmap prioritizes agentic messaging primitives, HTTP-native transport hardening, enterprise security/identity, and SDK improvements, with expedited reviews for aligned proposals <sup>[3](<https://blog.modelcontextprotocol.io/posts/mcp-roadmap/>)</sup>.
+- Agent scaffolding (e.g., CLI vs. MCP) dominates cost efficiency: CLI-only scaffolds were 5x–28x cheaper, while interface choice alone weakly predicted performance <sup>[4](<https://arxiv.org/abs/2608.08654>)</sup>.
+- Nvidia notifies customers of >15% price hikes for AI servers with Vera Rubin/Grace Blackwell chips and gaming GPUs, citing soaring memory costs, effective early next year <sup>[5](<https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzU0NjUyMiwiZXhwIjoxNzg4MTUxMzIyLCJhcnRpY2xlSWQiOiJUSzZIQURLSUpIOFIwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.Wc6ZwJbx9gkhHWTcHlu7y-AsKUlMS3ChmCSkeSRqGu8>)</sup>.
+- Nvidia invests $1B in Poolside (valuation $12B) and pays $6B to license its tech and hire most engineers, aiming to build a U.S. alternative to Chinese AI <sup>[6](<https://www.wsj.com/tech/ai/nvidia-is-spending-6-billion-to-build-a-powerful-u-s-alternative-to-chinese-ai-c51c38cc?st=LEwMmM&reflink=desktopwebshare_permalink>)</sup>.
 
-## LLM Tooling, Agents, and RAG
-- Claude Managed Agents enable ABC Legal to scale a governed fleet of specialized, versioned, and observable agents across 1,100 employees <sup>[15](<https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents>)</sup>.
-- Cloudflare adds MCP traffic detection and Zero Trust controls for AI agent traffic, including Gateway selectors and OAuth support for MCP Portals <sup>[16](<https://blog.cloudflare.com/workers-protected-by-access/>), [17](<https://blog.cloudflare.com/mcp-security-updates/>)</sup>.
-- Needle 2 (45M params) is a tiny, efficient open model for tool calling and structured extraction, outperforming larger models on benchmarks <sup>[18](<https://github.com/cactus-compute/needle>)</sup>.
-- Hex’s DataBench evaluates AI agents on realistic analytics tasks, finding strengths in evidence gathering but weaknesses in open-ended judgment <sup>[19](<https://hex.tech/blog/databench-agentic-analytics-benchmark/>)</sup>.
-- Google Antigravity introduces Custom Agents for scoped, file-based agent configurations to reduce token overhead and improve task focus <sup>[20](<https://antigravity.google/blog/introducing-custom-agents>)</sup>.
-- Agent Safehouse provides a macOS sandbox to restrict local LLM access to only necessary files/integrations <sup>[21](<https://github.com/eugene1g/agent-safehouse>)</sup>.
-- Stripe acquires OpenRouter for >$7B, gaining a model-routing platform to strengthen its AI footprint <sup>[22](<https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjkzODUzMCwiZXhwIjoxNzg3NTQzMzMwLCJhcnRpY2xlSWQiOiJUSThMNlJLSVVQUzAwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.pkZkmbMn4rGnxII2FL6UJUYi35K78_NwpKpHwiGCWCQ>), [23](<https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/>), [24](<https://www.latent.space/p/ainews-stripe-buys-openrouter-for>)</sup>.
-- Vercel’s AI SDK adds Code Mode so models can write JavaScript/TypeScript that invokes AI SDK tools <sup>[25](<https://ai-sdk.dev/docs/ai-sdk-core/code-mode>)</sup>.
-- GitHub Copilot for JetBrains gains enterprise-managed settings for plugins, MCP server allowlists, OpenTelemetry, and permission modes <sup>[26](<https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains>)</sup>.
-- Replit introduces Free Mode powered by GPT-5.6 Luna to let anyone build working software without token-cost concerns <sup>[27](<https://openai.com/index/replit>), [28](<https://replit.com/blog/replit-introduces-free-mode>)</sup>.
-- GraphRAG is profiled as a technique to answer cross-document questions by structuring retrieval over knowledge graphs rather than flat corpora <sup>[29](<https://blog.bytebytego.com/p/graphrag-how-ai-answers-questions>)</sup>.
+## MLOps, Data, and Engineering Practices
+- Airbnb’s forecasting team distinguishes parameter drift from structural change post-COVID, opting for selective refit/respecify/hold instead of blind retraining, yielding a robust production model under regime shifts <sup>[7](<https://airbnb.tech/ai-ml/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn/>)</sup>.
+- Netflix migrates 30,000+ Flink jobs from a homegrown autoscaler to Apache Flink’s OSS autoscaler, achieving 58% annualized compute savings by reasoning at the operator level <sup>[8](<https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b>)</sup>.
+- DuckDB v2.0 replaces its PostgreSQL-derived parser with a PEG-based design, eliminating Bison conflicts, avoiding exponential backtracking, and enabling runtime grammar extensions <sup>[9](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>)</sup>.
+- Shared table references (Iceberg REST catalogs, object storage, Parquet) are superseding bulk export APIs, shifting complexity to contracts, compaction, semantics, and privacy while avoiding pagination/rate limits <sup>[10](<https://blog.dataengineerthings.org/the-most-valuable-api-in-the-modern-data-stack-returns-no-data-88978bd2ad4c>)</sup>.
 
-## MLOps, DevOps, and Engineering Practices
-- dbt Core v1.12 is GA with UDF improvements, Iceberg catalog simplifications, and an opt-in Rust parser for v2.0 prep <sup>[30](<https://www.getdbt.com/blog/dbt-core-v1-12-is-ga>)</sup>.
-- Apache Hudi 1.0 indexes accelerate lakehouse point lookups to near-database performance <sup>[31](<https://hudi.apache.org/blog/2026/08/14/hudi-for-read-heavy-workloads-point-lookups-with-indexes>)</sup>.
-- DuckDB v2.0 preview introduces a new SQL parser, storage format, and server-focused features, marking a shift toward server use cases <sup>[32](<https://duckdb.org/2026/08/17/duckdb-20-highlights.html>), [33](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>), [34](<https://duckdb.org/2026/08/17/duckdb-20-highlights>)</sup>.
-- OpenSearch 3.8 improves vector ingestion, radial query throughput, and adds gRPC streaming inference for lower latency <sup>[35](<https://opensearch.org/blog/whats-new-in-opensearch-3-8/>)</sup>.
-- Docker Desktop 4.86 beta introduces a unified hypervisor for consistent performance across macOS/Windows/Linux <sup>[36](<https://cloudnativenow.com/features/docker-desktop-gets-a-hypervisor-of-its-own/>)</sup>.
-- Docker expands supply-chain security with new updates to reduce CVEs amid rising AI-authored code and dependency risks <sup>[37](<https://www.docker.com/blog/make-zero-cves-your-new-default/>)</sup>.
-- AWS IAM Role Manager auto-creates roles for new workloads, simplifying onboarding for users new to AWS <sup>[38](<https://aws.amazon.com/blogs/security/how-aws-iam-role-manager-rethinks-the-starting-point-for-iam-roles/>)</sup>.
-- Argo Workflows 4.1 adds OpenTelemetry tracing, GPU/device allocation via Kubernetes DRA, and reduced controller memory usage <sup>[39](<https://medium.com/@joibel/argo-workflows-4-1-first-release-candidate-6d680014278d>)</sup>.
-- Mojo is now fully open source under Apache 2.0 with LLVM exceptions, targeting GPUs and AI accelerators <sup>[40](<https://www.modular.com/blog/mojo-open-source>), [41](<https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/>)</sup>.
-- GitHub adds token-type-specific credential revocation, enabling finer-grained deauthorization during security incidents <sup>[42](<https://github.blog/changelog/2026-08-18-credential-revocation-and-deauthorization-by-token-type>)</sup>.
+## Cloud, Infrastructure, and DevOps
+- Uber’s Gulfstream payments platform handles $217B annualized bookings with immutable zero-sum money orders, double-entry accounting, DynamoDB-backed balances, Kafka pipelines, and Cadence for synchronous flows <sup>[11](<https://www.uber.com/us/en/blog/ubers-payments-platform/>)</sup>.
+- WarpStream’s Orbit automates Kafka migration planning and cutover checks to prevent silent breaks in producers, consumers, offsets, or ordering <sup>[12](<https://www.warpstream.com/blog/orbit-kafka-auto-migration>)</sup>.
+- Cloudflare’s AutoSQL uses DataFusion for distributed serverless SQL over Iceberg and R2, showcasing custom planning and execution optimizations for non-standard analytics <sup>[13](<https://www.youtube.com/watch?v=oKEtmUzdPoM>)</sup>.
 
-## Security and Incident Response
-- Critical prototype pollution vulnerability (CVE-2026-33696) in n8n allows RCE via GSuiteAdmin node schema manipulation; immediate upgrades required <sup>[43](<https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce>)</sup>.
-- RingCentral discloses a breach exposing 1.6M accounts’ PII via a social engineering attack <sup>[44](<https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/>)</sup>.
-- Tailscale traces a 16-year-old SQLite WAL race condition causing corruption, leading to upstream fixes and recovery tooling <sup>[45](<https://tailscale.com/blog/sqlite-wal-reset-bug>)</sup>.
-- Snowflake QUERY_HISTORY exports can corrupt INT32 values; casting affected columns prevents overflow and bad analysis <sup>[46](<https://espresso.ai/post/snowflake-bytes-scanned-considered-harmful>)</sup>.
-- OWASP releases its Top 10 CI/CD Security Risks, covering dependency abuse, pipeline poisoning, and access control gaps <sup>[47](<https://owasp.org/www-project-top-10-ci-cd-security-risks>)</sup>.
-- Mozilla revokes a Firefox signing key after an unencrypted copy was exposed in a private GitHub repo <sup>[48](<https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908>)</sup>.
-- MLflow vulnerability (CVE-2026-64849) under active exploitation: SSRF in versions <3.15.0 enables credential theft via DNS rebinding; patch immediately <sup>[49](<https://decipher.sc/2026/08/18/mlflow-bug-actively-exploited-to-steal-credentials>)</sup>.
-- Endor Labs uncovered 14 critical/high-severity flaws in AI agent platforms (NocoBase, Flowise, Langflow, Dify, Activepieces, Kestra, Airflow), including unauthenticated RCE and sandbox escapes <sup>[50](<https://www.endorlabs.com/learn/hacking-your-life-with-ai-can-get-you-hacked>)</sup>.
+## Developer Tools and Software Engineering
+- Well-designed SQL indexes (e.g., composite with equality filters first) can reduce query times from 17ms→0.04ms and 436ms→0.5ms; EXPLAIN ANALYZE is key for validation <sup>[14](<https://milanjovanovic.tech/blog/how-to-design-the-right-sql-index>)</sup>.
+- AI reduces optimization costs, enabling rapid experimentation with previously risky performance improvements, turning days of work into trivial loops <sup>[15](<https://danluu.com/perf-opt/>)</sup>.
+- Hybrid AI systems excel: use agents for reasoning but keep business logic, metrics, routing, and guardrails deterministic where possible <sup>[16](<https://www.cio.com/article/4210687/not-every-problem-needs-an-ai-agent.html>)</sup>.
 
 ## Sources
 
-1. [Pacing model development in an era of cyber-critical capabilities](<https://openai.com/index/pacing-model-development-cyber-capabilities/>) — _openai.com_
-2. [Offering Zero Data Retention for frontier models](<https://openai.com/index/our-commitment-to-zero-data-retention/>) — _openai.com_
-3. [Offering Zero Data Retention for frontier models](<https://openai.com/index/offering-zero-data-retention-for-frontier-models>) — _openai.com_
-4. [OpenAI Slowed Training Over Cyber Risks](<https://openai.com/index/pacing-model-development-cyber-capabilities/>) — _openai.com_
-5. [OpenAI Institutes New Safeguards After Hugging Face Breach](<https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/>) — _techcrunch.com_
-6. [GLM-5.3: Frontier Coding with Emergent Cyber Capabilities](<https://z.ai/blog/glm-5.3>) — _z.ai_
-7. [Z.ai Delays GLM-5.3 Weights Two Weeks After Cyber Score Beats Mythos 5](<https://www.implicator.ai/z-ai-delays-glm-5-3-weights-two-weeks-after-cyber-score-beats-mythos-5/>) — _implicator.ai_
-8. [GLM-5.3: How Chinese labs keep stride with the frontier](<https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride>) — _interconnects.ai_
-9. [GLM-5.3 hits the API at 1.4/4.4 per million tokens](<https://venturebeat.com/ai/glm-5-3-hits-the-api-at-1-4-4-4-per-million-tokens>) — _venturebeat.com_
-10. [GLM-5.3: Frontier Coding with Emergent Cyber Capabilities](<https://z.ai/blog/glm-5.3>) — _z.ai_
-11. [Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things](<https://simonwillison.net/2026/Aug/16/qwen-38-27b/>) — _simonwillison.net_
-12. [Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index](<https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/>) — _simonwillison.net_
-13. [Anthropic sees AI risks rising, no plan to release stronger "Model 2"](<https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk>) — _axios.com_
-14. [ChatGPT Computer History Logs Every Click and Keystroke on Your Mac](<https://hwbusters.com/news/chatgpt-computer-history-logs-every-click-and-keystroke-on-your-mac/>) — _hwbusters.com_
-15. [How ABC Legal turned every employee into a builder with Claude Managed Agents](<https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents>) — _claude_
-16. [Secure all your internal vibe-coded applications — in one click](<https://blog.cloudflare.com/workers-protected-by-access/>) — _blog.cloudflare.com_
-17. [How Cloudflare detects MCP traffic and helps secure it](<https://blog.cloudflare.com/mcp-security-updates/>) — _blog.cloudflare.com_
-18. [Needle](<https://github.com/cactus-compute/needle>) — _github.com_
-19. [Introducing DataBench](<https://hex.tech/blog/databench-agentic-analytics-benchmark/>) — _hex.tech_
-20. [Introducing Custom Agents](<https://antigravity.google/blog/introducing-custom-agents>) — _antigravity.google_
-21. [Agent Safehouse](<https://github.com/eugene1g/agent-safehouse>) — _github.com_
-22. [Stripe Clinches Over $7 Billion Deal to Buy AI Firm OpenRouter](<https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjkzODUzMCwiZXhwIjoxNzg3NTQzMzMwLCJhcnRpY2xlSWQiOiJUSThMNlJLSVVQUzAwMCIsImJjb25uZWN0SWQiOiIwOThFNzNDQTE5QTA0RDkxODEyQzQ4MjcwRDZERTI0QiJ9.pkZkmbMn4rGnxII2FL6UJUYi35K78_NwpKpHwiGCWCQ>) — _bloomberg.com_
-23. [Stripe Will Reportedly Acquire OpenRouter for Over $7B](<https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/>) — _techcrunch.com_
-24. [\[AINews\] Stripe buys OpenRouter for $7B](<https://www.latent.space/p/ainews-stripe-buys-openrouter-for>) — _latent.space_
-25. [Code Mode](<https://ai-sdk.dev/docs/ai-sdk-core/code-mode>) — _ai-sdk.dev_
-26. [Enterprise managed settings in GitHub Copilot for JetBrains](<https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains>) — _github.blog_
-27. [Replit expands access to software creation with GPT-5.6 Luna](<https://openai.com/index/replit>) — _openai.com_
-28. [Replit Introduces Free Mode](<https://replit.com/blog/replit-introduces-free-mode>) — _replit.com_
-29. [GraphRAG: How AI Answers Questions Hidden Across Many Documents](<https://blog.bytebytego.com/p/graphrag-how-ai-answers-questions>) — _blog.bytebytego.com_
-30. [dbt Core v1.12 is GA](<https://www.getdbt.com/blog/dbt-core-v1-12-is-ga>) — _dbt.com_
-31. [Point Lookups on the Lakehouse: How Hudi Indexes Accelerate Read-Heavy Workloads](<https://hudi.apache.org/blog/2026/08/14/hudi-for-read-heavy-workloads-point-lookups-with-indexes>) — _hudi.apache.org_
-32. [A Preview of DuckDB v2.0](<https://duckdb.org/2026/08/17/duckdb-20-highlights.html>) — _duckdb.org_
-33. [DuckDB v2.0: Your Database Deserves a Better Parser](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>) — _duckdb.org_
-34. [A Preview of DuckDB v2.0](<https://duckdb.org/2026/08/17/duckdb-20-highlights>) — _duckdb.org_
-35. [What's new in OpenSearch 3.8](<https://opensearch.org/blog/whats-new-in-opensearch-3-8/>) — _opensearch.org_
-36. [Docker Desktop Gets a Hypervisor of its Own](<https://cloudnativenow.com/features/docker-desktop-gets-a-hypervisor-of-its-own/>) — _cloudnativenow.com_
-37. [Make zero CVEs your new default](<https://www.docker.com/blog/make-zero-cves-your-new-default/>) — _docker.com_
-38. [How AWS IAM Role Manager Rethinks the Starting Point for IAM Roles](<https://aws.amazon.com/blogs/security/how-aws-iam-role-manager-rethinks-the-starting-point-for-iam-roles/>) — _aws.amazon.com_
-39. [Argo Workflows 4.1](<https://medium.com/@joibel/argo-workflows-4-1-first-release-candidate-6d680014278d>) — _medium.com_
-40. [Mojo🔥 is now open source!](<https://www.modular.com/blog/mojo-open-source>) — _modular.com_
-41. [Mojo🔥 is now open source](<https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/>) — _simonwillison.net_
-42. [Credential revocation and deauthorization by token type](<https://github.blog/changelog/2026-08-18-credential-revocation-and-deauthorization-by-token-type>) — _github.blog_
-43. [From a Schema Name to RCE in n8n](<https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce>) — _simonkoeck.com_
-44. [RingCentral Data Breach Exposed Info of 1.6M Accounts](<https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/>) — _bleepingcomputer.com_
-45. [How we tracked down a 16-year-old SQLite bug](<https://tailscale.com/blog/sqlite-wal-reset-bug>) — _tailscale.com_
-46. [Snowflake says this 149 GB query scanned -1.5 GB](<https://espresso.ai/post/snowflake-bytes-scanned-considered-harmful>) — _espresso.ai_
-47. [OWASP Top 10 CI/CD Security Risks](<https://owasp.org/www-project-top-10-ci-cd-security-risks>) — _owasp.org_
-48. [Mozilla Revokes Firefox Signing Key After Unencrypted Copy Lands in GitHub](<https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908>) — _theregister.com_
-49. [MLflow Bug Actively Exploited to Steal Credentials](<https://decipher.sc/2026/08/18/mlflow-bug-actively-exploited-to-steal-credentials>) — _decipher.sc_
-50. [Hacking Your Life With AI Can Get You Hacked](<https://www.endorlabs.com/learn/hacking-your-life-with-ai-can-get-you-hacked>) — _endorlabs.com_
+1. [Kids outlearn AI—and we still don&#8217;t know why](<https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/>) — _technologyreview.com_
+2. [TrueFoundry open-sources TrueForge, an enterprise AI agent harness](<https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents>) — _venturebeat.com_
+3. [The New MCP Roadmap](<https://blog.modelcontextprotocol.io/posts/mcp-roadmap/>) — _blog.modelcontextprotocol.io_
+4. [The Scaffolding Matters More Than the Interface](<https://arxiv.org/abs/2608.08654>) — _arxiv 2608.08654_
+5. [Nvidia Customers Notified About AI-Related Price Hikes Above 15%](<https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzU0NjUyMiwiZXhwIjoxNzg4MTUxMzIyLCJhcnRpY2xlSWQiOiJUSzZIQURLSUpIOFIwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.Wc6ZwJbx9gkhHWTcHlu7y-AsKUlMS3ChmCSkeSRqGu8>) — _bloomberg.com_
+6. [Nvidia Is Spending $6 Billion to Build a Powerful US Alternative to Chinese AI](<https://www.wsj.com/tech/ai/nvidia-is-spending-6-billion-to-build-a-powerful-u-s-alternative-to-chinese-ai-c51c38cc?st=LEwMmM&reflink=desktopwebshare_permalink>) — _wsj.com_
+7. [How we knew COVID was over (and what our models had to unlearn)](<https://airbnb.tech/ai-ml/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn/>) — _airbnb.tech_
+8. [A tale of two Flink autoscalers](<https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b>) — _netflixtechblog.com_
+9. [DuckDB v2.0: Your database deserves a better parser](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>) — _duckdb.org_
+10. [The most valuable API in the modern data stack returns no data](<https://blog.dataengineerthings.org/the-most-valuable-api-in-the-modern-data-stack-returns-no-data-88978bd2ad4c>) — _blog.dataengineerthings.org_
+11. [Zero-sum by design: 10 years of Uber's payments platform](<https://www.uber.com/us/en/blog/ubers-payments-platform/>) — _uber.com_
+12. [Automatic Apache Kafka migrations with Orbit](<https://www.warpstream.com/blog/orbit-kafka-auto-migration>) — _warpstream.com_
+13. [DataFusion Community Showcase Vol. 4: RDF Fusion & Cloudflare R2 SQL (63 minute video)](<https://www.youtube.com/watch?v=oKEtmUzdPoM>) — _youtube.com_
+14. [From 17ms to 0.04ms: How to Design the Right SQL Index](<https://milanjovanovic.tech/blog/how-to-design-the-right-sql-index>) — _milanjovanovic.tech_
+15. [There's no reason for software to be slow anymore](<https://danluu.com/perf-opt/>) — _danluu.com_
+16. [Not every problem needs an AI agent](<https://www.cio.com/article/4210687/not-every-problem-needs-an-ai-agent.html>) — _cio.com_
 
 
 ## Recent archive
