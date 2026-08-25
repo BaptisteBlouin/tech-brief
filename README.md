@@ -8,91 +8,49 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-24
-<sub>updated 25 August 2026 at 01:01</sub>
+### Latest digest — 2026-08-25
+<sub>updated 25 August 2026 at 13:00</sub>
 
-## AI/ML Models, Agents, and Tooling
-- Children outperform LLMs in language learning efficiency, requiring orders of magnitude less data to achieve fluency <sup>[1](<https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/>)</sup>.
-- OpenAI releases GPT‑5.6 in Kiro for developers, emphasizing improved price-performance for planning, building, reviewing, and testing software <sup>[2](<https://openai.com/index/gpt-5-6-in-kiro>)</sup>.
-- OpenAI temporarily cuts GPT‑5.6 Sol API pricing by >20% for at least three months <sup>[3](<https://developers.openai.com/api/docs/pricing>), [4](<https://openai.com/index/gpt-5-6/>)</sup>.
-- TrueFoundry open-sources TrueForge, a self-hostable enterprise agent harness reducing task costs by 30–75% via context compaction, lazy tool loading, subagents, and sandboxed execution <sup>[5](<https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents>)</sup>.
-- MCP’s roadmap prioritizes agentic messaging primitives, HTTP-native transport hardening, enterprise security/identity, and SDK improvements <sup>[6](<https://blog.modelcontextprotocol.io/posts/mcp-roadmap/>)</sup>.
-- Agent scaffolding choice (CLI vs. MCP) dominates cost efficiency: CLI-only scaffolds were 5x–28x cheaper, while interface choice weakly predicted performance <sup>[7](<https://arxiv.org/abs/2608.08654>)</sup>.
-- Google ADK adds native live evaluation for voice agents, enabling automated testing of graph-based workflows against LLM-driven simulated users with audio via Gemini TTS <sup>[8](<https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/>)</sup>.
-- Anthropic upgrades Claude Security to use Claude Mythos 5 for code scanning, providing actionable vulnerability findings (CWE categories, confidence, severity) without raw model access <sup>[9](<https://thenextweb.com/news/anthropic-mythos-5-defenders-open-source-fund>), [10](<https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders>)</sup>.
-- Anthropic’s Opus 5 overtakes Fable 5 in corporate spending due to lower cost, though it may require more attempts or human review per task <sup>[11](<https://www.implicator.ai/anthropic-opus-5-overtakes-fable-5-corporate-spending/>)</sup>.
-- Inherent’s Faraday (27B) outperforms larger Anthropic/OpenAI models at replicating research papers <sup>[12](<https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/>)</sup>.
-- Qwen 3.8 27B completes a reverse-engineering task in 30 minutes offline, challenging assumptions about frontier model requirements <sup>[13](<https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/>)</sup>.
-- Researchers demonstrate a time-release backdoor in open-source models (Qwen 3.5 2B) that activates on a specific date, exploiting auto-injected timestamps in prompts <sup>[14](<https://morgin.ai/articles/your-open-source-model-could-have-a-hidden-time-release-backdoor.html>)</sup>.
-- Grok Bot expands to more plans (SuperGrok Plus, Cursor Pro+/Teams), enabling multi-bot management for roles like Sales Prospector or Website Builder <sup>[15](<https://x.ai/news/grok-bot-more-plans>)</sup>.
-- DigitalOcean’s Inference Router adds cache-aware routing, model affinity headers, and routing budget controls to balance cost and performance <sup>[16](<https://www.digitalocean.com/blog/inference-router-cache-aware>)</sup>.
-- Open source models now account for 62% token share at Vercel, up from 28% two months ago <sup>[17](<https://threadreaderapp.com/thread/2091542026072338623.html>)</sup>.
+## AI/ML: Models, Tooling, Agents, and Engineering
 
-## MLOps, Data, and Engineering Practices
-- Airbnb’s forecasting team distinguishes parameter drift from structural change post-COVID, opting for selective refit/respecify/hold to maintain robustness under regime shifts <sup>[18](<https://airbnb.tech/ai-ml/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn/>)</sup>.
-- Netflix migrates 30,000+ Flink jobs to Apache Flink’s OSS autoscaler, achieving 58% annualized compute savings via operator-level reasoning <sup>[19](<https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b>)</sup>.
-- DuckDB v2.0 replaces its PostgreSQL-derived parser with a PEG-based design, eliminating Bison conflicts and enabling runtime grammar extensions <sup>[20](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>)</sup>.
-- Shared table references (Iceberg REST catalogs, object storage, Parquet) are superseding bulk export APIs, shifting complexity to contracts, compaction, semantics, and privacy <sup>[21](<https://blog.dataengineerthings.org/the-most-valuable-api-in-the-modern-data-stack-returns-no-data-88978bd2ad4c>)</sup>.
-- AWS Glue 6.0 launches with 30% lower pricing, Apache Spark 4.1, Python 3.13, Scala 2.13, and full Apache Iceberg v3 support <sup>[22](<https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/>)</sup>.
-- Hybrid AI systems are recommended: use agents for reasoning but keep business logic, metrics, routing, and guardrails deterministic <sup>[23](<https://www.cio.com/article/4210687/not-every-problem-needs-an-ai-agent.html>)</sup>.
+- OpenAI disrupts a Russia-origin covert influence campaign that used AI to promote a fake Israel-based think tank and a pro-Russia "sovereignty" index, banning the involved accounts <sup>[1](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia>)</sup>.
+- Andrew Ng refocuses DeepLearning.ai on AI Engineering, identifying key skills (e.g., building/deploying AI apps) via analysis of 10,000+ job postings and expert interviews, emphasizing broad applicability beyond the "AI Engineer" title <sup>[2](<https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering>)</sup>.
+- Hugging Face introduces a guide for building, running, and deploying AI workflows in Gradio, showcasing practical tooling for LLM applications <sup>[3](<https://huggingface.co/blog/gradio-workflow-guide>)</sup>.
+- Uber reveals a "software factory" for agentic coding, with >70% of PRs now AI-authored and productivity doubled; the platform uses MCP gateways to enable safe, scalable agent workflows across thousands of engineers <sup>[4](<https://newsletter.port.io/p/how-uber-built-a-software-factory>)</sup>.
+- Context engineering is framed as a state machine problem: every harness component shapes the model's context, controls input, or validates output, with the context window acting as the state machine <sup>[5](<https://www.vedanshh.com/blog/context-engineering>)</sup>.
 
-## Cloud, Infrastructure, and DevOps
-- Uber’s Gulfstream payments platform handles $217B annualized bookings using immutable zero-sum money orders, double-entry accounting, DynamoDB, Kafka, and Cadence <sup>[24](<https://www.uber.com/us/en/blog/ubers-payments-platform/>)</sup>.
-- WarpStream’s Orbit automates Kafka migration planning and cutover checks to prevent silent breaks in producers, consumers, offsets, or ordering <sup>[25](<https://www.warpstream.com/blog/orbit-kafka-auto-migration>)</sup>.
-- Cloudflare’s AutoSQL uses DataFusion for distributed serverless SQL over Iceberg and R2, with custom planning/execution optimizations <sup>[26](<https://www.youtube.com/watch?v=oKEtmUzdPoM>)</sup>.
-- Docker’s Verified Publisher program is now self-serve, offering badges, prioritized search, and analytics for all content types (including MCP servers, models, agents) <sup>[27](<https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/>)</sup>.
-- Docker ELS keeps end-of-life software like MinIO patched and audit-ready for up to five years <sup>[28](<https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/>)</sup>.
-- Azure’s July 23 West US outage lasted ~5 hours due to flawed blast radius analysis, inadequate safety validation, and misleading health signals <sup>[29](<https://surfingcomplexity.blog/2026/08/16/quick-thoughts-on-azure-regional-outage-from-july-23-26/>)</sup>.
-- Google’s Agent2Agent Protocol joins the AAIF alongside MCP for cross-vendor agent communication standards <sup>[30](<http://www.devopsdigest.com/google-agent2agent-protocol-joins-aaif>)</sup>.
+## Robotics and Embodied AI
+
+- China’s humanoid robot ecosystem accelerates, with nearly 90% of global two-armed, two-legged robots delivered last year made in China; a Shanghai "robot carnival" highlights public and industrial momentum in embodied AI <sup>[6](<https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/>)</sup>.
+- The World Humanoid Games in Beijing demonstrate rapid advances in robotic speed, intelligence, and capability, signaling a hardware takeoff phase <sup>[7](<https://itcanthink.substack.com/p/approaching-robotics-hardware-takeoff>)</sup>.
+- Tesla confirms a Cybercab launch event on September 3 in Austin, targeting top Robotaxi users and lottery winners, with ~20–30 unsupervised vehicles active and 380K cumulative unsupervised miles driven <sup>[8](<https://electrek.co/2026/08/24/tesla-cybercab-exclusive-access-robotaxi-sept-3/>)</sup>.
+- AI’s next leap is into the physical world, requiring "large action models" or world models to perform real-world tasks <sup>[9](<https://www.wsj.com/tech/ai/ai-world-models-robotics-33ab46cb?st=xnEhg4&reflink=desktopwebshare_permalink>)</sup>.
+
+## MLOps, DevOps, and Infrastructure
+
+- Solid-state power transformers emerge as a "killer application" for AI data centers, offering smaller size, lighter weight, modularity, and direct AC-to-DC conversion using silicon carbide, driven by the AI boom <sup>[10](<https://arstechnica.com/gadgets/2026/08/energy-hungry-ai-data-centers-spur-new-power-transformer-technology/>)</sup>.
+- DuckDB adds Java table functions to its JDBC driver, enabling JVM-based environments (e.g., Trino) to integrate DuckDB for single-node analytics with mature Java clients and corporate-approved auth <sup>[11](<https://duckdb.org/2026/08/25/table-functions-in-java.html>)</sup>.
 
 ## Developer Tools and Software Engineering
-- Well-designed SQL indexes (e.g., composite with equality filters first) can reduce query times dramatically (e.g., 17ms→0.04ms, 436ms→0.5ms); EXPLAIN ANALYZE is key for validation <sup>[31](<https://milanjovanovic.tech/blog/how-to-design-the-right-sql-index>)</sup>.
-- AI reduces optimization costs, enabling rapid experimentation with performance improvements, turning days of work into trivial loops <sup>[32](<https://danluu.com/perf-opt/>)</sup>.
-- Elastic’s Security Labs releases zero-dependency hooks for agentic IDEs (Cursor, Claude Code) to audit 13M+ tool calls, focusing on metadata collection and access control <sup>[33](<https://www.elastic.co/security-labs/ai-coding-agent-audit-cursor-hooks>)</sup>.
-- Semgrep enforces org-wide SHA pinning for GitHub Actions using native enforcement, pinact, and Renovate to mitigate supply chain risks <sup>[34](<https://semgrep.dev/blog/2026/sha-pinning-for-github-actions-org-wide/>)</sup>.
-- Octopus Easy Mode enables Kubernetes microservice orchestration via parent projects, coordinating sequential/parallel deployments <sup>[35](<https://octopus.com/blog/octo-easy-mode-20-microservices>)</sup>.
-- Local AI coding agents pose risks (arbitrary prompts, full machine access), necessitating sandboxing to prevent accidental/malicious actions <sup>[36](<https://octopus.com/blog/local-ai-agent-sandboxes>)</sup>.
-- AI accelerates code writing but outdated SDLC processes can bottleneck productivity; an AI-native SDLC playbook is emerging <sup>[37](<https://claude.com/blog/the-ai-native-sdlc-playbook>)</sup>.
+
+- A technical deep dive explores replacing ELF with SQLite as an executable format, highlighting creative approaches to binary packaging and runtime <sup>[12](<https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database>)</sup>.
+- Organizational insights emphasize that "the harness is the company": leaders should build environments where AI multiplies the impact of great people <sup>[13](<https://blog.sshh.io/p/the-harness-is-the-company>)</sup>.
 
 ## Sources
 
-1. [Kids outlearn AI—and we still don&#8217;t know why](<https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/>) — _technologyreview.com_
-2. [Advancing price-performance for developers with GPT‑5.6 in Kiro](<https://openai.com/index/gpt-5-6-in-kiro>) — _openai.com_
-3. [OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)](<https://developers.openai.com/api/docs/pricing>) — _hnrss.org_
-4. [OpenAI temporarily cuts GPT-5.6 Sol API pricing](<https://openai.com/index/gpt-5-6/>) — _openai.com_
-5. [TrueFoundry open-sources TrueForge, an enterprise AI agent harness](<https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents>) — _venturebeat.com_
-6. [The New MCP Roadmap](<https://blog.modelcontextprotocol.io/posts/mcp-roadmap/>) — _blog.modelcontextprotocol.io_
-7. [The Scaffolding Matters More Than the Interface](<https://arxiv.org/abs/2608.08654>) — _arxiv 2608.08654_
-8. [How to Evaluate Live & Voice Agents in ADK](<https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/>) — _google ai_
-9. [Anthropic will give defenders what its strongest model finds, but not the model itself](<https://thenextweb.com/news/anthropic-mythos-5-defenders-open-source-fund>) — _thenextweb.com_
-10. [Bringing the Cybersecurity Capabilities of Claude Mythos 5 to More Defenders](<https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders>) — _claude.com_
-11. [Anthropic's Cheaper Opus 5 Overtakes Fable 5 in Corporate Spending](<https://www.implicator.ai/anthropic-opus-5-overtakes-fable-5-corporate-spending/>) — _implicator.ai_
-12. [Inherent, founded by DeepMind alumni, says its AI 'teammate' just outperformed Anthropic and OpenAI at replicating research](<https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/>) — _techcrunch.com_
-13. [I gave Qwen 3.8 27B a reverse-engineering job I assumed needed a frontier model, and it finished in 30 minutes](<https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/>) — _xda-developers.com_
-14. [Your Open Source Model Could Have a Hidden Time-Release Backdoor](<https://morgin.ai/articles/your-open-source-model-could-have-a-hidden-time-release-backdoor.html>) — _morgin.ai_
-15. [Grok Bot is now included with more plans](<https://x.ai/news/grok-bot-more-plans>) — _x.ai_
-16. [DigitalOcean Inference Router, Now Cache-Aware: Why the Cheapest Model Isn't Always the Best Deal](<https://www.digitalocean.com/blog/inference-router-cache-aware>) — _digitalocean.com_
-17. [More data than open-source AI is taking share from OpenAI and Anthropic](<https://threadreaderapp.com/thread/2091542026072338623.html>) — _threadreaderapp.com_
-18. [How we knew COVID was over (and what our models had to unlearn)](<https://airbnb.tech/ai-ml/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn/>) — _airbnb.tech_
-19. [A tale of two Flink autoscalers](<https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b>) — _netflixtechblog.com_
-20. [DuckDB v2.0: Your database deserves a better parser](<https://duckdb.org/2026/08/20/duckdb-20-peg-parser.html>) — _duckdb.org_
-21. [The most valuable API in the modern data stack returns no data](<https://blog.dataengineerthings.org/the-most-valuable-api-in-the-modern-data-stack-returns-no-data-88978bd2ad4c>) — _blog.dataengineerthings.org_
-22. [AWS Glue 6.0 now available with 30% lower price and full Apache Iceberg v3 support](<https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/>) — _aws.amazon.com_
-23. [Not every problem needs an AI agent](<https://www.cio.com/article/4210687/not-every-problem-needs-an-ai-agent.html>) — _cio.com_
-24. [Zero-sum by design: 10 years of Uber's payments platform](<https://www.uber.com/us/en/blog/ubers-payments-platform/>) — _uber.com_
-25. [Automatic Apache Kafka migrations with Orbit](<https://www.warpstream.com/blog/orbit-kafka-auto-migration>) — _warpstream.com_
-26. [DataFusion Community Showcase Vol. 4: RDF Fusion & Cloudflare R2 SQL (63 minute video)](<https://www.youtube.com/watch?v=oKEtmUzdPoM>) — _youtube.com_
-27. [Docker Verified Publisher Apps Are Now Self-Serve](<https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/>) — _docker.com_
-28. [MinIO End of Life: How to Stay Patched and Audit-Ready with Docker ELS](<https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/>) — _docker.com_
-29. [Quick thoughts on Azure Regional Outage from July 23, '26](<https://surfingcomplexity.blog/2026/08/16/quick-thoughts-on-azure-regional-outage-from-july-23-26/>) — _surfingcomplexity.blog_
-30. [Google Agent2Agent Protocol Joins AAIF](<http://www.devopsdigest.com/google-agent2agent-protocol-joins-aaif>) — _devopsdigest.com_
-31. [From 17ms to 0.04ms: How to Design the Right SQL Index](<https://milanjovanovic.tech/blog/how-to-design-the-right-sql-index>) — _milanjovanovic.tech_
-32. [There's no reason for software to be slow anymore](<https://danluu.com/perf-opt/>) — _danluu.com_
-33. [13 Million Tool Calls: Auditing Every AI Coding Agent Action with Elastic Agent](<https://www.elastic.co/security-labs/ai-coding-agent-audit-cursor-hooks>) — _elastic.co_
-34. [Speedrunning SHA pinning for GitHub Actions org-wide](<https://semgrep.dev/blog/2026/sha-pinning-for-github-actions-org-wide/>) — _semgrep.dev_
-35. [Octopus Easy Mode - Kubernetes Microservice Orchestration](<https://octopus.com/blog/octo-easy-mode-20-microservices>) — _octopus.com_
-36. [Sandboxing local AI Agents](<https://octopus.com/blog/local-ai-agent-sandboxes>) — _octopus.com_
-37. [The AI-Native SDLC playbook](<https://claude.com/blog/the-ai-native-sdlc-playbook>) — _claude.com_
+1. [Disrupting a new covert influence campaign from Russia](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia>) — _openai.com_
+2. [\[AINews\] Andrew Ng gets into AI Engineering](<https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering>) — _latent.space_
+3. [Wire It, Run It, Deploy It: AI Workflows in Gradio](<https://huggingface.co/blog/gradio-workflow-guide>) — _huggingface.co_
+4. [How Uber built a software factory for agentic coding: the MCP gateway and the platform underneath](<https://newsletter.port.io/p/how-uber-built-a-software-factory>) — _newsletter.port.io_
+5. [The State Machine Nobody Designed](<https://www.vedanshh.com/blog/context-engineering>) — _vedanshh.com_
+6. [I spent a day at a robot “carnival” in Shanghai. Here’s what I saw.](<https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/>) — _technologyreview.com_
+7. [Approaching Robotics Hardware Takeoff](<https://itcanthink.substack.com/p/approaching-robotics-hardware-takeoff>) — _itcanthink.substack.com_
+8. [Tesla confirms Cybercab launch coming next week](<https://electrek.co/2026/08/24/tesla-cybercab-exclusive-access-robotaxi-sept-3/>) — _electrek.co_
+9. [AI's Next Big Leap Is Into the Real World](<https://www.wsj.com/tech/ai/ai-world-models-robotics-33ab46cb?st=xnEhg4&reflink=desktopwebshare_permalink>) — _wsj.com_
+10. [Data centers become “killer application” for new power transformer tech](<https://arstechnica.com/gadgets/2026/08/energy-hungry-ai-data-centers-spur-new-power-transformer-technology/>) — _arstechnica.com_
+11. [DuckDB Table Functions in Java](<https://duckdb.org/2026/08/25/table-functions-in-java.html>) — _duckdb.org_
+12. [Your executable is a SQLite database](<https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database>) — _fzakaria.com_
+13. [The Harness Is the Company](<https://blog.sshh.io/p/the-harness-is-the-company>) — _blog.sshh.io_
 
 
 ## Recent archive
