@@ -8,81 +8,43 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-25
-<sub>updated 26 August 2026 at 01:00</sub>
+### Latest digest — 2026-08-26
+<sub>updated 26 August 2026 at 13:00</sub>
 
-## AI/ML: Models, Tooling, Agents, and Engineering
+## AI/ML Models and Tooling
+- OpenAI claims its new "Jalapeno" chips outperform Nvidia's current lineup in tests and will support its AI models later this year, developed in partnership with Broadcom <sup>[1](<https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzcxNTE4MiwiZXhwIjoxNzg4MzE5OTgyLCJhcnRpY2xlSWQiOiJUS0JXODFOM04wQUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.g7aynXoS1Cg_lAitk1xUe_PLVBoXyT7wr4nF1iv0D8k>)</sup>.
+- Bill Gates warns that AI's rapid advancement outpaces guardrails, raising concerns about economic collapse, terrorism, and loss of control over AI systems <sup>[2](<https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/>)</sup>.
+- Puzzles and games reveal AI strengths and weaknesses; models improved from solving 18% of NYT Connections puzzles in late 2024 to near-perfect scores by early 2025 <sup>[3](<https://www.technologyreview.com/2026/08/26/1141952/puzzles-ai-models-flub-these-tests/>)</sup>.
+- loveholidays uses OpenAI Codex to democratize software development across teams, accelerating idea-to-product cycles <sup>[4](<https://openai.com/index/loveholidays>)</sup>.
+- Paul Dix highlights AI's ability to write and refine 1M+ lines of code into reliable software when given proper direction and verification systems <sup>[5](<https://simonwillison.net/2026/Aug/26/paul-dix/>)</sup>.
 
-- OpenAI outlines how compounding advances across chips, compute, models, and products drive more useful, scalable, and cost‑effective intelligence <sup>[1](<https://openai.com/index/the-full-stack-behind-abundant-intelligence>)</sup>.
-- OpenAI unveils Jalapeño, a custom inference chip delivering faster, more power‑efficient AI inference with higher throughput and lower latency <sup>[2](<https://openai.com/index/jalapeno-first-results>)</sup>.
-- Anthropic launches a $5M grant program to fund independent, open‑source evaluations of AI’s impact on user wellbeing, with model access and technical support for grantees <sup>[3](<https://www.anthropic.com/news/wellbeing-research-grants>)</sup>.
-- Claude’s memory is now unified across chat and Cowork, letting users see, edit, or delete remembered context and carry it seamlessly between tasks <sup>[4](<https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it>)</sup>.
-- GitHub Copilot’s new Customize tab centralizes MCP servers, plugins, skills, and canvases for team‑tailored workflows <sup>[5](<https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available>)</sup>.
-- IBM releases Granite 4.2 LLMs optimized for efficient reasoning, thinking, multilingual generation, coding, and AI assistant workflows <sup>[6](<https://huggingface.co/blog/ibm-granite/granite-4-2>)</sup>.
-- An anonymous Ox Alpha model processes 26T tokens in four days on OpenCode, hitting 327K users and 8.3M sessions and breaking OpenRouter launch records <sup>[7](<https://runtimewire.com/article/anonymous-ox-alpha-processes-26t-tokens-on-opencode-breaks-openrouter-launch-rec>)</sup>.
-- A 4‑bit quantization‑aware model (Hypernova‑60B) outperforms its full‑precision original, demonstrating compressed models can retain or exceed quality <sup>[8](<https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing>)</sup>.
-- OpenAI disrupts a Russia‑origin covert influence campaign using AI to promote a fake Israel‑based think tank and pro‑Russia index, banning the accounts <sup>[9](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia>)</sup>.
-- Andrew Ng refocuses DeepLearning.ai on AI Engineering, deriving key skills from 10K+ job postings and expert interviews, emphasizing broad applicability beyond the "AI Engineer" title <sup>[10](<https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering>)</sup>.
-- Hugging Face publishes a guide for building, running, and deploying AI workflows in Gradio <sup>[11](<https://huggingface.co/blog/gradio-workflow-guide>)</sup>.
-- Uber’s "software factory" for agentic coding now authors >70% of PRs and doubles productivity, using MCP gateways for safe, scalable agent workflows across thousands of engineers <sup>[12](<https://newsletter.port.io/p/how-uber-built-a-software-factory>)</sup>.
-- Context engineering is framed as a state machine problem: harness components shape context, control input, or validate output, with the context window as the state machine <sup>[13](<https://www.vedanshh.com/blog/context-engineering>)</sup>.
-- OWASP releases an Agentic Skills Top 10 and Universal Agentic Skill Format v1.0, flagging malicious skills and supply‑chain compromise as top risks and urging provenance tracking and rapid disablement <sup>[14](<https://www.darkreading.com/application-security/owasp-flags-top-ai-skill-risks-security-blueprint>)</sup>.
-
-## Robotics and Embodied AI
-
-- China delivered nearly 90% of the world’s two‑armed, two‑legged humanoid robots last year, with public and industrial momentum highlighted at a Shanghai robot carnival <sup>[15](<https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/>)</sup>.
-- The World Humanoid Games in Beijing showcase rapid advances in robotic speed, intelligence, and capability, signaling a hardware takeoff phase <sup>[16](<https://itcanthink.substack.com/p/approaching-robotics-hardware-takeoff>)</sup>.
-- Tesla confirms a Cybercab launch event on September 3 in Austin, with ~20–30 unsupervised vehicles active and 380K cumulative unsupervised miles driven <sup>[17](<https://electrek.co/2026/08/24/tesla-cybercab-exclusive-access-robotaxi-sept-3/>)</sup>.
-- AI’s next leap into the physical world will require "large action models" or world models to perform real‑world tasks <sup>[18](<https://www.wsj.com/tech/ai/ai-world-models-robotics-33ab46cb?st=xnEhg4&reflink=desktopwebshare_permalink>)</sup>.
+## Agents, RAG, and Data
+- Scaling AI exposes data quality and governance gaps; 92% of companies plan to increase AI investments, but only 1% consider themselves mature in deployment, with trusted data infrastructure critical for reliable outcomes <sup>[6](<https://www.getdbt.com/blog/scaling-ai-is-easy-trusting-it-is-hard>)</sup>.
+- GitHub Next demonstrates that technical documentation can be compressed by ~50% without significantly reducing its usefulness to language models, cutting token costs <sup>[7](<https://githubnext.com/posts/knowledge-compressor/>)</sup>.
+- Vercel introduces Run SDK, a secure sandbox for executing untrusted JavaScript/TypeScript in agents via QuickJS and serialized host functions <sup>[8](<https://vercel.com/blog/introducing-run>)</sup>.
+- Figure AI launches Index, an app to collect large-scale, diverse physical datasets for training its AI stack <sup>[9](<https://www.figure.ai/news/introducing-index>)</sup>.
 
 ## MLOps, DevOps, and Infrastructure
+- Docker urges Minimus hardened-image users to migrate to Docker Hardened Images after Minimus announced a 60-day maintenance window before shutting down on Oct 22, 2026 <sup>[10](<https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/>)</sup>.
+- Apple refreshes Mac mini (M6) and Mac Studio (M5 Max/Ultra) with a focus on local AI development, leveraging unified memory and fast SoC GPUs/CPUs <sup>[11](<https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference/>)</sup>.
 
-- NVIDIA enters full production of Groq 3 LPX AI inference accelerator chips, integrated into the Vera Rubin platform, delivering 4x faster response times for agentic workloads <sup>[19](<https://wccftech.com/nvidia-groq-3-lpx-ai-inference-accelerator-full-production-supercharging-vera-rubin/>)</sup>.
-- Solid‑state power transformers emerge as a "killer application" for AI data centers, offering smaller size, lighter weight, modularity, and direct AC‑to‑DC conversion using silicon carbide <sup>[20](<https://arstechnica.com/gadgets/2026/08/energy-hungry-ai-data-centers-spur-new-power-transformer-technology/>)</sup>.
-- DuckDB adds Java table functions to its JDBC driver, enabling JVM environments (e.g., Trino) to integrate DuckDB for single‑node analytics with mature Java clients and corporate auth <sup>[21](<https://duckdb.org/2026/08/25/table-functions-in-java.html>)</sup>.
-- OpenAI introduces an Admin plugin for ChatGPT Work and Codex to analyze usage, manage members/permissions, adjust limits, and act on admin requests <sup>[22](<https://openai.com/index/introducing-admin-plugin>)</sup>.
-- GitHub adds path exceptions to push rules in rulesets, allowing granular exemptions for file paths within repository‑wide rules <sup>[23](<https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions>)</sup>.
-- GitHub now lets users block others directly from security advisory pages in public repositories, streamlining moderation <sup>[24](<https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories>)</sup>.
-
-## Developer Tools and Software Engineering
-
-- Ramp built its own in‑house coding agent, Inspect, running on remote sandboxes with access to internal data and verifying all backtests, to accelerate development <sup>[25](<https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect>)</sup>.
-- IMDEX uses Cursor to consolidate fragmented geological data systems and re‑platform legacy apps, achieving 10x faster pace and avoiding millions in development costs <sup>[26](<https://cursor.com/blog/imdex>)</sup>.
-- A technical deep dive explores replacing ELF with SQLite as an executable format, highlighting creative binary packaging and runtime approaches <sup>[27](<https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database>)</sup>.
-- Organizational insight: "the harness is the company" — leaders should build environments where AI multiplies the impact of great people <sup>[28](<https://blog.sshh.io/p/the-harness-is-the-company>)</sup>.
-- Speculative Programmatic Tool Calling (sPTC) optimizes recursive LMs by pre‑launching tool calls during token generation, yielding 1–1.2x runtime speed‑ups in memory‑bound or high‑volume systems <sup>[29](<https://alexzhang13.github.io/blog/2026/spec-ptc/>)</sup>.
+## Developer Tools and Engineering
+- EVE Online begins a Python 3 migration, using `futurize` on 2.4M lines of Stackless Python 2.7 code, with manual review for ~20k behavioral differences <sup>[12](<https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/>)</sup>.
 
 ## Sources
 
-1. [The full stack behind abundant intelligence](<https://openai.com/index/the-full-stack-behind-abundant-intelligence>) — _openai.com_
-2. [Jalapeño’s first results show industry-leading speed and efficiency in AI inference](<https://openai.com/index/jalapeno-first-results>) — _openai.com_
-3. [Funding better evaluations of AI’s impact on wellbeing](<https://www.anthropic.com/news/wellbeing-research-grants>) — _anthropic news_
-4. [Claude's memory works everywhere, and you decide what's in it](<https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it>) — _claude_
-5. [GitHub Copilot app Customize tab is generally available](<https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available>) — _github.blog_
-6. [Granite 4.2 LLMs: How They're Built](<https://huggingface.co/blog/ibm-granite/granite-4-2>) — _huggingface.co_
-7. [Anonymous Ox Alpha processes 26T tokens on OpenCode, breaks OpenRouter launch record](<https://runtimewire.com/article/anonymous-ox-alpha-processes-26t-tokens-on-opencode-breaks-openrouter-launch-rec>) — _runtimewire.com_
-8. [Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original](<https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing>) — _huggingface.co_
-9. [Disrupting a new covert influence campaign from Russia](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia>) — _openai.com_
-10. [\[AINews\] Andrew Ng gets into AI Engineering](<https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering>) — _latent.space_
-11. [Wire It, Run It, Deploy It: AI Workflows in Gradio](<https://huggingface.co/blog/gradio-workflow-guide>) — _huggingface.co_
-12. [How Uber built a software factory for agentic coding: the MCP gateway and the platform underneath](<https://newsletter.port.io/p/how-uber-built-a-software-factory>) — _newsletter.port.io_
-13. [The State Machine Nobody Designed](<https://www.vedanshh.com/blog/context-engineering>) — _vedanshh.com_
-14. [OWASP Flags Top AI Skill Risks in New Security Blueprint](<https://www.darkreading.com/application-security/owasp-flags-top-ai-skill-risks-security-blueprint>) — _darkreading.com_
-15. [I spent a day at a robot “carnival” in Shanghai. Here’s what I saw.](<https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/>) — _technologyreview.com_
-16. [Approaching Robotics Hardware Takeoff](<https://itcanthink.substack.com/p/approaching-robotics-hardware-takeoff>) — _itcanthink.substack.com_
-17. [Tesla confirms Cybercab launch coming next week](<https://electrek.co/2026/08/24/tesla-cybercab-exclusive-access-robotaxi-sept-3/>) — _electrek.co_
-18. [AI's Next Big Leap Is Into the Real World](<https://www.wsj.com/tech/ai/ai-world-models-robotics-33ab46cb?st=xnEhg4&reflink=desktopwebshare_permalink>) — _wsj.com_
-19. [NVIDIA Enters Full Production of Groq 3 LPX AI Inference Accelerator Chips, Supercharging Vera Rubin With The Fastest Token Generation Speeds Ever Recorded](<https://wccftech.com/nvidia-groq-3-lpx-ai-inference-accelerator-full-production-supercharging-vera-rubin/>) — _wccftech.com_
-20. [Data centers become “killer application” for new power transformer tech](<https://arstechnica.com/gadgets/2026/08/energy-hungry-ai-data-centers-spur-new-power-transformer-technology/>) — _arstechnica.com_
-21. [DuckDB Table Functions in Java](<https://duckdb.org/2026/08/25/table-functions-in-java.html>) — _duckdb.org_
-22. [Introducing the Admin plugin for ChatGPT Work and Codex](<https://openai.com/index/introducing-admin-plugin>) — _openai.com_
-23. [Push rules in rulesets now support path exceptions](<https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions>) — _github.blog_
-24. [Block users directly from security advisories](<https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories>) — _github.blog_
-25. [Why Ramp built its own in-house coding agent, Inspect](<https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect>) — _newsletter.pragmaticengineer.com_
-26. [IMDEX uses Cursor to build integrated subsurface data and analytics platform in months, not years](<https://cursor.com/blog/imdex>) — _cursor_
-27. [Your executable is a SQLite database](<https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database>) — _fzakaria.com_
-28. [The Harness Is the Company](<https://blog.sshh.io/p/the-harness-is-the-company>) — _blog.sshh.io_
-29. [Speculative Programmatic Tool Calling](<https://alexzhang13.github.io/blog/2026/spec-ptc/>) — _alexzhang13.github.io_
+1. [OpenAI Claims Its New Chips Can Outperform Nvidia Processors in Tests](<https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzcxNTE4MiwiZXhwIjoxNzg4MzE5OTgyLCJhcnRpY2xlSWQiOiJUS0JXODFOM04wQUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.g7aynXoS1Cg_lAitk1xUe_PLVBoXyT7wr4nF1iv0D8k>) — _bloomberg.com_
+2. [Bill Gates says we’ve passed AI’s danger thresholds. Now what?](<https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/>) — _technologyreview.com_
+3. [AI models flub these intelligence tests. Can you fare any better?](<https://www.technologyreview.com/2026/08/26/1141952/puzzles-ai-models-flub-these-tests/>) — _technologyreview.com_
+4. [How loveholidays is making everyone a builder with Codex](<https://openai.com/index/loveholidays>) — _openai.com_
+5. [Quoting Paul Dix](<https://simonwillison.net/2026/Aug/26/paul-dix/>) — _simonwillison.net_
+6. [Scaling AI is easy. Trusting it is hard.](<https://www.getdbt.com/blog/scaling-ai-is-easy-trusting-it-is-hard>) — _dbt.com_
+7. [Knowledge Compressor](<https://githubnext.com/posts/knowledge-compressor/>) — _githubnext.com_
+8. [Introducing Run SDK: secure eval for your agents](<https://vercel.com/blog/introducing-run>) — _vercel.com_
+9. [Introducing Index: Building The World's Largest and Most Diverse Physical Dataset](<https://www.figure.ai/news/introducing-index>) — _figure.ai_
+10. [Moving from Minimus to Docker Hardened Images](<https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/>) — _docker.com_
+11. [Apple's new desktop computers are designed specifically for local AI development](<https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference/>) — _arstechnica.com_
+12. [EVE Online: The Move to Python 3 Begins!](<https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/>) — _simonwillison.net_
 
 
 ## Recent archive
