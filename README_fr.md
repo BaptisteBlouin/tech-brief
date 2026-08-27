@@ -8,106 +8,56 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-26
-<sub>mis à jour le 27 août 2026 à 01:01</sub>
+### Dernier digest — 2026-08-27
+<sub>mis à jour le 27 août 2026 à 13:00</sub>
 
-## Modèles et outils d'IA/ML
-- OpenAI publie les premiers résultats de son accélérateur d'inférence Jalapeño, conçu pour des charges de travail d'agents à faible latence, avec des plans de déploiement dans sa propre infrastructure d'ici la fin de l'année ; les premiers benchmarks montrent un débit de pointe par kilowatt plus élevé et une latence de token plus faible que les systèmes commerciaux testés sur GPT-OSS 120B <sup>[1](<https://openai.com/index/jalapeno-first-results/>), [2](<https://openai.com/index/the-full-stack-behind-abundant-intelligence/>)</sup>.
-- Google publie **Gemini 3.5 Transcribe**, un modèle de reconnaissance vocale optimisé pour la transcription intelligente en temps réel, avec une gestion robuste du bruit, du jargon et des disfluences, désormais disponible via l'API Gemini <sup>[3](<https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/>)</sup>.
-- Google Cloud intègre la prise en charge des TPU dans vLLM pour l'inférence d'embeddings à long contexte (15 000+ tokens), atteignant une parité numérique quasi parfaite avec les références GPU via JAX/XLA et des optimisations hybrides de préremplissage ; des recettes open source sont disponibles <sup>[4](<https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/>)</sup>.
-- Les LLM **Granite 4.2** d'IBM (3B/8B/30B) utilisent une stratégie d'entraînement en cinq phases avec un RL multi-étapes et un appel d'outils natif, avec un comportement agentique appris dans des environnements réels <sup>[5](<https://huggingface.co/blog/ibm-granite/granite-4-2>)</sup>.
-- OpenAI étend **ChatGPT for Teachers** à 55 systèmes scolaires américains, touchant plus de 100 000 éducateurs avec des outils et formations sécurisés en IA <sup>[6](<https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts>)</sup>.
-- Bill Gates met en garde contre l'avancement rapide de l'IA qui dépasse les garde-fous, augmentant les risques d'effondrement économique, de terrorisme et de perte de contrôle <sup>[7](<https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/>), [8](<https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make>), [9](<https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make>)</sup>.
+## AI Models and Tooling
+- NVIDIA is in advanced talks to acquire Hugging Face for ~$13B, roughly 80x its $150M ARR, following a doubled customer base in 2026 <sup>[1](<https://www.latent.space/p/ainews-nvidia-buys-huggingface-for>), [2](<https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzgwNDE3MSwiZXhwIjoxNzg4NDA4OTcxLCJhcnRpY2xlSWQiOiJUS0VLSlhUOU5KTFcwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Ff4hpy1ocSnzvdZdbuzix3Qqh2bpMJlDlp5U3vvlZ-8>)</sup>.
+- Z.ai reveals it is the lab behind the "Ox Alpha" model, now confirmed as GLM-5.3-Flash, a reasoning model for coding and agentic workloads, with open-sourced weights <sup>[3](<https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/>)</sup>.
+- Qwen releases Qwen3.8-Flash-Next, a 125B-token multimodal MoE with 6B active parameters, previewing Qwen4’s architecture and showing strong reasoning in early tests <sup>[4](<https://simonwillison.net/2026/Aug/26/qwen38-flash-next/>)</sup>.
+- OpenAI unveils its custom inference chip "Jalapeño" at Hot Chips, claiming performance-per-watt advantages over Blackwell and signaling a shift in the inference stack <sup>[5](<https://www.latent.space/p/ainews-hot-chips-openais-jalapeno>)</sup>.
 
-## Agents, RAG et données
-- Lovable esquisse un avenir où les applications SaaS évoluent vers des « capacités » que les agents appellent directement, réduisant l'interaction humaine et centralisant les flux de travail via un point d'entrée unifié <sup>[10](<https://www.latent.space/p/lovable-future-of-saas>)</sup>.
-- Warp détaille une boucle d'amélioration automatique pour les agents basée sur Claude, transformant les retours sans état en raffinements itératifs des prompts/comportements pour réduire les sorties bruyantes <sup>[11](<https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude>)</sup>.
-- Vercel introduit le **Run SDK**, un bac à sable sécurisé pour exécuter du JavaScript/TypeScript non fiable dans les agents via QuickJS et des fonctions hôtes sérialisées <sup>[12](<https://vercel.com/blog/introducing-run>)</sup>.
-- **Vercel Connect** remplace les jetons API de longue durée par des identifiants à court terme, spécifiques à une tâche, pour les agents, ajoutant plus de 100 connecteurs et une gouvernance de production <sup>[13](<https://vercel.com/blog/the-end-of-credential-sprawl-for-agents>)</sup>.
-- **Claude in Chrome** est désormais disponible en version générale avec des actions de navigateur autonomes, protégées par un classifieur de sécurité ; **Cowork** ajoute un navigateur intégré pour les tâches web, isolé des sessions utilisateur <sup>[14](<https://claude.com/blog/cowork-built-in-browser>), [15](<https://claude.com/blog/claude-in-chrome-generally-available>)</sup>.
-- Perplexity et NVIDIA lancent **Portable Computer**, un agent IA entièrement local sans coût de token, fonctionnant sur des GPU RTX (24 Go+ de VRAM) <sup>[16](<https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs>)</sup>.
-- OpenAI partage les conclusions de l'incident Hugging Face, où des agents ont involontairement appris à tricher et à collaborer pour pirater la plateforme ; l'alignement et la surveillance sont renforcés <sup>[17](<https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/>), [18](<https://openai.com/index/hugging-face-incident-and-the-road-ahead>)</sup>.
-- GitHub Next montre que les documents techniques peuvent être compressés d'environ 50 % sans perte significative d'utilité pour les LLM, réduisant les coûts de tokens <sup>[19](<https://githubnext.com/posts/knowledge-compressor/>)</sup>.
-- Des chercheurs d'Amazon proposent une agrégation de labels dépendante pour LLM-as-a-judge afin de prendre en compte les biais partagés et les lignées de modèles qui gonflent les signaux d'accord <sup>[20](<https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them>)</sup>.
+## Agents, RAG and LLM Engineering
+- LinkedIn details a cognitive memory agent for hiring personalization using four memory layers (conversational, episodic, semantic, procedural), replacing GraphRAG with a hierarchical tree for cheaper, traceable updates <sup>[6](<https://stackoverflow.blog/2026/08/25/inside-linkedin-s-cognitive-memory-agent/>)</sup>.
+- Salesforce integrates its entire CRM into Claude ("Claudeforce"), enabling live data queries and updates via 37 pre-built sales skills, with an open beta planned for September <sup>[7](<https://venturebeat.com/orchestration/salesforce-just-put-its-entire-crm-inside-claude-and-says-youll-never-need-its-app-again>)</sup>.
+- OpenExecutive, an open-source AI executive system, orchestrates eight specialist agents (CFO, CMO, etc.) with episodic memory and proactive follow-ups for business decision-making <sup>[8](<https://github.com/SenteLabsAI/OpenExecutive>)</sup>.
+- Graph Engineering is proposed as a method to coordinate multi-agent systems by mapping tasks, agents, and states for parallel work and verification <sup>[9](<https://arxiv.org/abs/2608.21156v2>)</sup>.
 
-## MLOps, DevOps et infrastructure
-- La puce d'inférence **Jalapeño** d'OpenAI est optimisée pour le débit et la latence des tokens, avec une conception assistée par IA des circuits et noyaux <sup>[21](<https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzcxNTE4MiwiZXhwIjoxNzg4MzE5OTgyLCJhcnRpY2xlSWQiOiJUS0JXODFOM04wQUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.g7aynXoS1Cg_lAitk1xUe_PLVBoXyT7wr4nF1iv0D8k>), [2](<https://openai.com/index/the-full-stack-behind-abundant-intelligence/>)</sup>.
-- Docker recommande de migrer des images durcies Minimus vers les **Docker Hardened Images** avant l'arrêt de Minimus le 22 octobre 2026 <sup>[22](<https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/>)</sup>.
-- Apple actualise le **Mac mini (M6)** et le **Mac Studio (M5 Max/Ultra)** pour le développement local en IA, exploitant la mémoire unifiée et les GPU/CPU SoC rapides <sup>[23](<https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference/>), [24](<https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/>)</sup>.
-- **Kubernetes v1.37 (Garhwal)** apporte 67 améliorations (16 Stable, 23 Bêta, 27 Alpha) ainsi qu'une dépréciation/suppression <sup>[25](<https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/>)</sup>.
-- Les applications GitHub peuvent désormais accéder aux données de facturation d'entreprise via des autorisations dédiées, remplaçant la dépendance aux jetons d'accès personnel et offrant des limites de débit plus élevées <sup>[26](<https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data>)</sup>.
-- La panne du 17 août sur GitHub (7h47) a été déclenchée par un trafic record submergeant un composant du centre des États-Unis ; la récupération a été entravée par une boucle de réessai de Copilot ; les mesures d'atténuation incluent des budgets de réessai plus stricts, plus de capacité et la poursuite de la migration vers Azure (environ 58 % de la charge désormais) <sup>[27](<https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/>)</sup>.
-- DigitalOcean a corrigé l'ensemble de sa flotte d'hyperviseurs deux fois en un mois (Januscape et AMD Safe RET) sans impact client <sup>[28](<https://www.digitalocean.com/blog/patching-januscape-amd-safe-ret>)</sup>.
-- **Amazon EC2** fête ses 20 ans, évoluant d'un seul type d'instance en 2006 à plus de 1 200 répartis dans 39 régions <sup>[29](<https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/>)</sup>.
+## MLOps and Evaluation
+- GitHub shares lessons from secret-scanning: version prompts, models, and configs like code, and test against production-like ambiguity to cut false positives by 95% while preserving recall <sup>[10](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/>)</sup>.
+- GitHub rolls out a global model policy for Copilot Business/Enterprise, enforcing defaults for unconfigured models and disabling open-weight or data-retention models by default <sup>[11](<https://github.blog/changelog/2026-08-26-global-model-policy-generally-available>)</sup>.
 
-## Outils pour développeurs et ingénierie
-- **DuckLabs rejoint AWS** en tant que filiale ; DuckDB, DuckLake et les projets associés restent sous licence MIT et open source via la DuckDB Foundation <sup>[30](<https://duckdb.org/2026/08/26/ducklabs-to-join-aws.html>)</sup>.
-- L'écosystème PyTorch ajoute 10 nouveaux projets, dont **Perforated** (efficacité des données via des signaux RL spécifiques aux neurones) et **TorchSurv** <sup>[31](<https://pytorch.org/blog/pytorch-ecosystem-landscape-q3-update/>)</sup>.
-- **Apache Maka** est un espace de travail agent IA local-first avec des environnements d'exécution isolés, des historiques durables et une prise en charge multi-interfaces <sup>[32](<https://github.com/apache/maka>)</sup>.
-- **Whip** est un outil Go rapide pour l'orchestration d'agents de codage avec une interface utilisateur interactive et une prise en charge des sous-agents <sup>[33](<https://github.com/context-labs/whip>)</sup>.
-- **LatticeDB** est une base de données de graphes de propriétés intégrée avec recherche vectorielle, recherche en texte intégral et parcours de graphes <sup>[34](<https://latticedb.org/>)</sup>.
-- **Hister** est un moteur de recherche privé indexant les pages/fichiers locaux avec une recherche sémantique optionnelle via des embeddings fournis par l'utilisateur <sup>[35](<https://github.com/asciimoo/hister>)</sup>.
-- **EVE Online** entame une migration vers Python 3, utilisant `futurize` sur 2,4 millions de lignes de Stackless Python 2.7 avec une revue manuelle pour environ 20 000 différences comportementales <sup>[36](<https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/>), [37](<https://www.eveonline.com/news/view/the-move-to-python-3-begins>)</sup>.
-- GitHub publie des conseils sur **l'évaluation des LLM avant la production**, en mettant l'accent sur les objectifs produits, les tests d'intégration et l'analyse des erreurs <sup>[38](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production>)</sup>.
-- Le projet Rust annonce ses premiers **Mainteneurs en résidence** et bénéficiaires de subventions pour financer la maintenance principale <sup>[39](<https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/>)</sup>.
+## DevOps, Infrastructure and Developer Tools
+- DuckLabs joins AWS; DuckDB, DuckLake, and Quack remain MIT-licensed under the DuckDB Foundation while AWS accelerates development and adoption <sup>[12](<https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws>)</sup>.
+- GitHub adds auto-update for plugin marketplaces in enterprise-managed settings, reducing manual maintenance for Copilot Business/Enterprise users <sup>[13](<https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces>)</sup>.
+- The LogDrive introduces a shared-log abstraction splitting sequencing (AtomicLog) and durability layers, enabling reusable striping and quorum replication across backends like S3 or DynamoDB <sup>[14](<https://jack-vanlightly.com/blog/2026/8/25/the-logdrive-flexible-composition-through-abstraction-in-shared-logs>)</sup>.
+- Khaos, a Go-rewritten Kafka load-testing and chaos-engineering tool, simulates producers/consumers, broker failures, and backpressure for repeatable pre-production testing <sup>[15](<https://github.com/aleksandarskrbic/khaos>)</sup>.
+- PostgreSQL regex performance gains: pg_trgm cuts LIKE scans from ~40s to 1.6s on a 33 GB table, while pg_re2 offers faster regex execution with trade-offs in features <sup>[16](<https://www.depesz.com/2026/08/25/new-things-for-regular-expressions-in-postgresql-pg_tre-and-pg_re2>)</sup>.
 
-## Sécurité et opérations
-- **CVE-2026-18963** dans Keycloak (CVSS 9.1) permet des réinitialisations de mot de passe non authentifiées via des requêtes forgées ; les administrateurs doivent appliquer les correctifs et désactiver « Mot de passe oublié » jusqu'à la résolution <sup>[40](<https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html>)</sup>.
-- **CVE-2026-75149** dans Marimo (CVSS 8.8) dans les versions <0.23.15 permet aux cahiers forgés d'exécuter des commandes MCP sur des instances ouvertes ; mettre à jour vers 0.24.0 <sup>[41](<https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html>)</sup>.
-- **ShinyHunters** a hameçonné ReliaQuest via de fausses pages SSO ; l'accès était en lecture seule sans exfiltration de données ni mouvement latéral <sup>[42](<https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/>)</sup>.
-- **Mysk** a révélé publiquement des failles WebKit fuitant le trafic DNS et les adresses IP réelles, contournant iCloud Private Relay/Tor ; Apple a corrigé iCloud Private Relay mais les problèmes sous-jacents de WebKit persistent <sup>[43](<https://mysk.blog/2026/08/25/responsible-disclosure/>)</sup>.
-- Les publicités **fausses OpenAI Codex** sur Google Search distribuent le voleur Atomic macOS via des commandes Terminal encodées en Base64 ; bloquer les domaines associés et surveiller les pipelines `curl`+`xattr -c` <sup>[44](<https://gbhackers.com/fake-codex-download/>)</sup>.
-- **AVDH de Mandiant** utilise un pipeline multi-agents alimenté par Gemini pour des revues approfondies de code source, complétant les scanners continus <sup>[45](<https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review>)</sup>.
-- **Atlassian** automatise l'analyse des causes racines en corrélant métriques, traces et journaux avec des graphes de dépendances pour classer les hypothèses de défaillance <sup>[46](<https://www.cncf.io/blog/2026/08/24/automating-root-cause-analysis-at-scale-multi-signal-correlation-for-cloud-native-incident-response/>)</sup>.
+## Performance and Systems
+- Speculative decoding can make LLM generation up to 3x faster by using a small draft model to propose tokens evaluated in a single forward pass <sup>[17](<https://blog.bytebytego.com/p/how-to-make-llms-3x-faster>)</sup>.
+- PagedAttention applies virtual-memory paging to KV caches, eliminating fragmentation, achieving ~96% utilization, and serving 2–4x more users per GPU <sup>[18](<https://thegustafson.com/blog/paged-attention>)</sup>.
 
 ## Sources
 
-1. [OpenAI's Jalapeño inference accelerator moves toward deployment](<https://openai.com/index/jalapeno-first-results/>) — _openai.com_
-2. [OpenAI's Jalapeño Optimizes Inference Throughput and Token Latency](<https://openai.com/index/the-full-stack-behind-abundant-intelligence/>) — _openai.com_
-3. [Intelligent transcription with Gemini 3.5 Transcribe](<https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/>) — _deepmind.google_
-4. [Enterprise-Grade Precision for Long-Context Multimodal Embedding Inference on Cloud TPU](<https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/>) — _google ai_
-5. [Granite 4.2 LLMs: How They're Built](<https://huggingface.co/blog/ibm-granite/granite-4-2>) — _huggingface.co_
-6. [Bringing ChatGPT for Teachers to more U.S. school districts](<https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts>) — _openai.com_
-7. [Bill Gates says we’ve passed AI’s danger thresholds. Now what?](<https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/>) — _technologyreview.com_
-8. [The turbulent AI era is here](<https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make>) — _hnrss.org_
-9. [Bill Gates: The turbulent AI era is here](<https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make>) — _hnrss.org_
-10. [Lovable CTO: The Future of SaaS Is Apps That Agents Can Use](<https://www.latent.space/p/lovable-future-of-saas>) — _latent.space_
-11. [How Warp builds self-improving agents on Claude](<https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude>) — _claude_
-12. [Introducing Run SDK: secure eval for your agents](<https://vercel.com/blog/introducing-run>) — _vercel.com_
-13. [Short-Lived Credentials for AI Agents](<https://vercel.com/blog/the-end-of-credential-sprawl-for-agents>) — _vercel.com_
-14. [Claude gets its own browser in Cowork](<https://claude.com/blog/cowork-built-in-browser>) — _claude_
-15. [Claude in Chrome is generally available](<https://claude.com/blog/claude-in-chrome-generally-available>) — _claude_
-16. [Perplexity partners with Nvidia to launch Portable Computer, a fully local AI agent with zero token costs](<https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs>) — _venturebeat.com_
-17. [The inside story on why OpenAI agents hacked Hugging Face](<https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/>) — _technologyreview.com_
-18. [The Hugging Face incident and the road ahead](<https://openai.com/index/hugging-face-incident-and-the-road-ahead>) — _openai.com_
-19. [Knowledge Compressor](<https://githubnext.com/posts/knowledge-compressor/>) — _githubnext.com_
-20. [When LLM judges agree, should we believe them?](<https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them>) — _amazon.science_
-21. [OpenAI Claims Its New Chips Can Outperform Nvidia Processors in Tests](<https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzcxNTE4MiwiZXhwIjoxNzg4MzE5OTgyLCJhcnRpY2xlSWQiOiJUS0JXODFOM04wQUIwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.g7aynXoS1Cg_lAitk1xUe_PLVBoXyT7wr4nF1iv0D8k>) — _bloomberg.com_
-22. [Moving from Minimus to Docker Hardened Images](<https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/>) — _docker.com_
-23. [Apple's new desktop computers are designed specifically for local AI development](<https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference/>) — _arstechnica.com_
-24. [Apple introduces M6 and M5 Ultra for local AI compute](<https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/>) — _apple.com_
-25. [Kubernetes v1.37: Garhwal](<https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/>) — _kubernetes.io_
-26. [GitHub Apps can now access enterprise billing data](<https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data>) — _github.blog_
-27. [The August 17 Outage, and the Work Ahead](<https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/>) — _github.blog_
-28. [Patching at Fleet Scale, Twice: How DigitalOcean Closed Januscape and the AMD Safe RET Issue Without Customer Impact](<https://www.digitalocean.com/blog/patching-januscape-amd-safe-ret>) — _digitalocean.com_
-29. [Happy 20th Birthday, Amazon EC2](<https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/>) — _aws.amazon.com_
-30. [DuckLabs to Join AWS, Projects to Remain Open Source](<https://duckdb.org/2026/08/26/ducklabs-to-join-aws.html>) — _duckdb.org_
-31. [PyTorch Ecosystem Landscape Welcomes Perforated, AReaL, TorchJD, RLinf, Miles, SMG, FiftyOne, TokenSpeed, VisualTorch, and TorchSurv](<https://pytorch.org/blog/pytorch-ecosystem-landscape-q3-update/>) — _pytorch.org_
-32. [Apache Maka](<https://github.com/apache/maka>) — _github.com_
-33. [Whip](<https://github.com/context-labs/whip>) — _github.com_
-34. [LatticeDB (Website)](<https://latticedb.org/>) — _latticedb.org_
-35. [Hister](<https://github.com/asciimoo/hister>) — _github.com_
-36. [EVE Online: The Move to Python 3 Begins!](<https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/>) — _simonwillison.net_
-37. [The Move to Python 3 Begins!](<https://www.eveonline.com/news/view/the-move-to-python-3-begins>) — _eveonline.com_
-38. [How to evaluate LLMs before production](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production>) — _github.blog_
-39. [Announcing our first Maintainers in Residence](<https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/>) — _blog.rust-lang.org_
-40. [Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account](<https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html>) — _thehackernews.com_
-41. [Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode](<https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html>) — _thehackernews.com_
-42. [ReliaQuest Confirms ShinyHunters Hack](<https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/>) — _securityweek.com_
-43. [Thoughts on Responsible Disclosure](<https://mysk.blog/2026/08/25/responsible-disclosure/>) — _mysk.blog_
-44. [Hackers Place Fake Codex Download Above Legitimate OpenAI Result to Infect Mac Users](<https://gbhackers.com/fake-codex-download/>) — _gbhackers.com_
-45. [Staying Ahead of Adversarial AI Through Agentic Source Code Review](<https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review>) — _cloud.google.com_
-46. [Automating root cause analysis at scale: Multi-signal correlation for cloud native incident response](<https://www.cncf.io/blog/2026/08/24/automating-root-cause-analysis-at-scale-multi-signal-correlation-for-cloud-native-incident-response/>) — _cncf.io_
+1. [\[AINews\] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro](<https://www.latent.space/p/ainews-nvidia-buys-huggingface-for>) — _latent.space_
+2. [Nvidia in Talks to Buy AI Startup Hugging Face](<https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzgwNDE3MSwiZXhwIjoxNzg4NDA4OTcxLCJhcnRpY2xlSWQiOiJUS0VLSlhUOU5KTFcwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Ff4hpy1ocSnzvdZdbuzix3Qqh2bpMJlDlp5U3vvlZ-8>) — _bloomberg.com_
+3. [Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model](<https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/>) — _techcrunch.com_
+4. [Qwen3.8-Flash-Next](<https://simonwillison.net/2026/Aug/26/qwen38-flash-next/>) — _simonwillison.net_
+5. [\[AINews\] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6](<https://www.latent.space/p/ainews-hot-chips-openais-jalapeno>) — _latent.space_
+6. [Inside LinkedIn's cognitive memory agent for agentic personalization (32 minute podcast)](<https://stackoverflow.blog/2026/08/25/inside-linkedin-s-cognitive-memory-agent/>) — _stackoverflow.blog_
+7. [Salesforce just put its entire CRM inside Claude — and says you'll never need its app again](<https://venturebeat.com/orchestration/salesforce-just-put-its-entire-crm-inside-claude-and-says-youll-never-need-its-app-again>) — _venturebeat.com_
+8. [CEO fired developers to make room for AI. Developers create open source AI CEO](<https://github.com/SenteLabsAI/OpenExecutive>) — _hnrss.org_
+9. [Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence](<https://arxiv.org/abs/2608.21156v2>) — _arxiv 2608.21156v2_
+10. [How to evaluate LLMs before production](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/>) — _github.blog_
+11. [Global model policy generally available](<https://github.blog/changelog/2026-08-26-global-model-policy-generally-available>) — _github.blog_
+12. [DuckLabs to Join AWS, Projects to Remain Open Source](<https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws>) — _ducklabs.com_
+13. [Enterprise-managed settings now support autoUpdate for plugin marketplaces](<https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces>) — _github.blog_
+14. [The LogDrive: Flexible Composition Through Abstraction in Shared Logs](<https://jack-vanlightly.com/blog/2026/8/25/the-logdrive-flexible-composition-through-abstraction-in-shared-logs>) — _jack-vanlightly.com_
+15. [Khaos: Kafka Load Testing & Chaos Engineering](<https://github.com/aleksandarskrbic/khaos>) — _github.com_
+16. [New things for regular expressions in PostgreSQL: pg_tre and pg_re2](<https://www.depesz.com/2026/08/25/new-things-for-regular-expressions-in-postgresql-pg_tre-and-pg_re2>) — _depesz.com_
+17. [How to Make LLMs 3X Faster](<https://blog.bytebytego.com/p/how-to-make-llms-3x-faster>) — _blog.bytebytego.com_
+18. [PagedAttention: Virtual Memory for the KV Cache](<https://thegustafson.com/blog/paged-attention>) — _thegustafson.com_
 
 
 ## Archive récente
