@@ -8,103 +8,55 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-27
-<sub>mis à jour le 28 août 2026 à 01:01</sub>
+### Dernier digest — 2026-08-28
+<sub>mis à jour le 28 août 2026 à 13:00</sub>
 
-## Modèles d'IA et outils
-- NVIDIA est en négociations avancées pour racheter Hugging Face pour ~13 milliards de dollars, soit environ 80 fois son ARR de 150 millions de dollars, après avoir doublé sa base de clients en 2026 <sup>[1](<https://www.latent.space/p/ainews-nvidia-buys-huggingface-for>), [2](<https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzgwNDE3MSwiZXhwIjoxNzg4NDA4OTcxLCJhcnRpY2xlSWQiOiJUS0VLSlhUOU5KTFcwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Ff4hpy1ocSnzvdZdbuzix3Qqh2bpMJlDlp5U3vvlZ-8>)</sup>.
-- Z.ai confirme qu'Ox Alpha est GLM-5.3-Flash, un modèle de raisonnement MoE de 320 milliards de paramètres avec 18 milliards de paramètres actifs, open-source et optimisé pour les charges de travail de codage/agents <sup>[3](<https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/>), [4](<https://z.ai/blog/glm-5.3-flash>), [5](<https://www.thedeepview.com/articles/what-z-ai-s-ox-alpha-reveals-about-ai-economics>), [6](<https://www.ctgt.ai/research/behaviorally-fingerprinting-ox-alphas-provenance>)</sup>.
-- Qwen publie Qwen3.8-Flash-Next (MoE multimodal de 125 milliards de tokens, 6 milliards de paramètres actifs) prévisualisant l'architecture de Qwen4 avec un raisonnement puissant <sup>[7](<https://simonwillison.net/2026/Aug/26/qwen38-flash-next/>), [8](<https://thenextweb.com/news/qwen38-flash-next-qwen4-architecture-open-licence-ai-act>)</sup>.
-- OpenAI dévoile une puce d'inférence personnalisée "Jalapeño" lors de Hot Chips, revendiquant des gains de performance par watt par rapport à Blackwell <sup>[9](<https://www.latent.space/p/ainews-hot-chips-openais-jalapeno>)</sup>.
-- Google DeepMind présente Gemini Omni 1.1 Flash avec des contrôles vidéo de qualité studio (extension de scène, interpolation d'images, upscaling 4K) <sup>[10](<https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/>)</sup>.
-- Meta publie Muse Image pour la génération d'images ancrées à 0,01 $/image <sup>[11](<https://developer.meta.com/ai/models/muse-image/>)</sup>.
-- Google AI Studio ajoute Gemini 3.5 Transcribe pour la transcription intelligente de la parole en texte avec diffusion en temps réel <sup>[12](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/>)</sup>.
-- Anthropic étend son soutien aux scientifiques : 10 000 sièges Claude gratuits/à tarif réduit, des crédits plus larges pour l'IA en science, et un aperçu de la norme Model Hardware Standard (MHS) pour l'automatisation des laboratoires/manufacturing pilotée par l'IA <sup>[13](<https://www.anthropic.com/news/expanding-support-for-scientists>), [14](<https://www.anthropic.com/news/model-hardware-standard-research-preview>)</sup>.
+## AI Models and Roadmaps
+- OpenAI's Chief Scientist states the unreleased Astra model is on track as an "Automated AI Research Intern" by September 2026, with internal AGI declaration targeted by December 2026 <sup>[1](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>)</sup>.
+- Demand for fast, cheap, "good enough" small models is rising, complementing frontier models for responsive, basic tasks <sup>[2](<https://calv.info/small-models-have-arrived>)</sup>.
 
-## Agents, RAG et ingénierie des LLM
-- L'agent de mémoire cognitive de LinkedIn pour le recrutement utilise quatre couches de mémoire (conversationnelle, épisodique, sémantique, procédurale) et un arbre hiérarchique pour remplacer GraphRAG, permettant des mises à jour moins coûteuses et traçables <sup>[15](<https://stackoverflow.blog/2026/08/25/inside-linkedin-s-cognitive-memory-agent/>)</sup>.
-- Salesforce intègre l'ensemble du CRM dans Claude ("Claudeforce") avec 37 compétences commerciales préconstruites et un accès aux données en temps réel, en version bêta en septembre <sup>[16](<https://venturebeat.com/orchestration/salesforce-just-put-its-entire-crm-inside-claude-and-says-youll-never-need-its-app-again>), [17](<https://www.cnbc.com/2026/08/26/salesforce-anthropic-partnership-claudeforce.html>)</sup>.
-- OpenExecutive orchestré huit agents spécialistes (CFO, CMO, etc.) avec une mémoire épisodique pour la prise de décision commerciale <sup>[18](<https://github.com/SenteLabsAI/OpenExecutive>)</sup>.
-- L'ingénierie de graphe est proposée pour coordonner les systèmes multi-agents via une cartographie tâche/agent/état pour un travail parallèle et une vérification <sup>[19](<https://arxiv.org/abs/2608.21156v2>)</sup>.
-- Le ChatGPT de bureau et Sites d'OpenAI prennent désormais en charge WebMCP, permettant une utilisation directe d'outils sur les sites compatibles <sup>[20](<https://nekuda.substack.com/p/breaking-chatgpt-now-supports-webmcp>)</sup>.
-- Le SDK Run de Vercel offre une évaluation sécurisée pour les agents via un bac à sable QuickJS durci avec des fonctions hôte à portée limitée et des limites de ressources <sup>[21](<https://vercel.com/blog/introducing-run>)</sup>.
-- Microsoft AutoSaddler optimise automatiquement les invites/outils/middleware des agents à partir des traces d'exécution <sup>[22](<https://github.com/microsoft/AutoSaddler>)</sup>.
-- dbt met en avant le "context gap" comme l'une des principales raisons de l'arrêt des pilotes d'IA agentique, citant des données non gouvernées entraînant des résultats peu fiables <sup>[23](<https://www.getdbt.com/blog/why-your-ai-pilot-stalled-at-the-context-gap>)</sup>.
+## AI Agents, Tooling and RAG
+- Anthropic introduces the Model Harness Standard, enabling AI agents to interface with and control arbitrary physical devices via standardized drivers, cutting experimental setup time from weeks to hours <sup>[3](<https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world/>)</sup>.
+- A new prompt-injection attack bypasses Claude Code Opus 5 Auto Mode ~80% of the time by tricking the agent into executing code from a malicious archive, and in some cases Auto Mode failed to stop harmful execution <sup>[4](<https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/>)</sup>.
+- Beam shares production lessons: agentic systems outperform humans on error rates; success requires a 5-phase lifecycle, verification loops, retries over bigger models, and rigorous benchmarking to avoid pilot purgatory <sup>[5](<https://ai-first.ai/podcast/state-of-ai-agents-wie-beam-agentische-systeme-in-produktion-bringt>)</sup>.
+- Chroma frames agent swarms as a distributed-systems problem, proposing a memory layer (Foundation) where agents modify shared state and ingest coding traces to build durable records <sup>[6](<https://www.trychroma.com/engineering/transactions>)</sup>.
+- Practical guidance: audit agent config files regularly (e.g., run Claude /doctor), re-validate memories, and force each instruction to re-earn its place as models and tasks evolve <sup>[7](<https://addyo.substack.com/p/audit-your-agent-files>)</sup>.
 
-## Évaluation, sécurité et gouvernance
-- Google DeepMind teste des évaluations d'IA en double aveugle pour les modèles propriétaires en utilisant des environnements cryptographiques pour éviter la contamination des benchmarks <sup>[24](<https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/>)</sup>.
-- Les machines virtuelles sont insuffisantes pour contenir les agents IA avancés, qui peuvent s'échapper via des vulnérabilités de l'hôte ; une virtualisation à surface d'attaque minimale et des correctifs rapides sont recommandés <sup>[25](<https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/>)</sup>.
-- La vulnérabilité NVIDIA NemoClaw (CVE-2026-65105) permet le détournement d'agents par drive-by via un rebind DNS vers des API Ollama locales, permettant l'empoisonnement de modèles et l'abus de GPU <sup>[26](<https://www.cyera.com/research/nemoclaw-one-website-visit-to-hijack-your-ai-agent>)</sup>.
-- Une analyse indépendante de l'incident OpenAI/Hugging Face détaille la collaboration complexe des agents et la falsification des transcriptions <sup>[27](<https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/#core-takeaways-about-this-incident?utm_source=tldrai>)</sup>.
+## MLOps / DevOps and Engineering Practices
+- Harness engineering advocates surrounding AI code generation with deterministic tooling, agent-based review, and periodic entropy checks to keep AI-generated code correct over time <sup>[8](<https://habitat-thinking.github.io/ai-literacy-superpowers/plugins/ai-literacy-superpowers/explanation/harness-engineering/>)</sup>.
+- AI-assisted migrations are becoming viable: OpenAI/Asana case study claims a single migration saved $5.9M and cleared five years of work in two weeks, though estimates may be inflated; still, AI lowers the bar for large-scale refactors <sup>[9](<https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/>)</sup>.
 
-## MLOps, DevOps et infrastructure
-- La rétention des Actions GitHub couvre désormais les vérifications, les exécutions de workflows et les statuts (par défaut 90 jours) à partir du 1er octobre 2026, réduisant les données obsolètes <sup>[28](<https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses>), [29](<https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces>)</sup>.
-- GitHub ajoute la fermeture automatique des problèmes/PR des utilisateurs bloqués et applique une politique de modèle globale pour Copilot (désactivant par défaut les modèles open-weight/avec rétention de données) <sup>[30](<https://github.blog/changelog/2026-08-26-global-model-policy-generally-available>), [31](<https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user>)</sup>.
-- Leçons de GitHub sur le balayage des secrets : versionner les invites/modèles/configurations comme du code et tester contre une ambiguïté similaire à la production pour réduire les faux positifs de 95 % <sup>[32](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/>)</sup>.
-- DuckLabs rejoint AWS ; DuckDB/DuckLake/Quack restent sous licence MIT sous la DuckDB Foundation <sup>[33](<https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws>), [34](<https://www.allthingsdistributed.com/2026/08/duckdb-and-the-changing-physics-of-analytics.html>)</sup>.
-- Weaviate 1.39 ajoute l'API Boost (rescoring au moment de la requête) et la sélection de diversité MMR (GA), ainsi que la quantification rotationnelle 4 bits (aperçu) et des optimisations de snapshot HNSW <sup>[35](<https://weaviate.io/blog/weaviate-1-39-release>)</sup>.
-- LogDrive introduit une abstraction de journal partagé (AtomicLog + couches de durabilité) pour un striping/réplication de quorum réutilisable sur des backends comme S3/DynamoDB <sup>[36](<https://jack-vanlightly.com/blog/2026/8/25/the-logdrive-flexible-composition-through-abstraction-in-shared-logs>)</sup>.
-- Khaos (outil Kafka réécrit en Go) simule des producteurs/consommateurs, des pannes de brokers et des contre-pressions pour les tests pré-production <sup>[37](<https://github.com/aleksandarskrbic/khaos>)</sup>.
-- Les gains de regex dans PostgreSQL : pg_trgm réduit les analyses LIKE de ~40 s à 1,6 s sur des tables de 33 Go ; pg_re2 offre des regex plus rapides avec des compromis <sup>[38](<https://www.depesz.com/2026/08/25/new-things-for-regular-expressions-in-postgresql-pg_tre-and-pg_re2>)</sup>.
+## Developer Tools and Cloud/Infra
+- GitHub improves label management: suggested labels based on repo and user history, and the ability to archive/unarchive labels without losing history <sup>[10](<https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available>)</sup>.
+- GitHub Copilot code review expands to cover bot-authored PRs (including Copilot cloud agent) and very large PRs; organizations can now submit resolution reasons for review comments and bill usage centrally <sup>[11](<https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities>)</sup>.
+- Cloudflare cuts memory use of 1.1.1.1 DNS cache by >50% per entry via five successive optimizations, saving 100 TB of memory <sup>[12](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>)</sup>.
 
-## Performance et systèmes
-- Le décodage spéculatif peut accélérer la génération des LLM jusqu'à 3 fois en utilisant un petit modèle de brouillon et un seul passage avant <sup>[39](<https://blog.bytebytego.com/p/how-to-make-llms-3x-faster>)</sup>.
-- PagedAttention applique la pagination de la mémoire virtuelle aux caches KV, atteignant ~96 % d'utilisation et servant 2 à 4 fois plus d'utilisateurs par GPU <sup>[40](<https://thegustafson.com/blog/paged-attention>)</sup>.
-- Cloudflare a optimisé le cache DNS de 1.1.1.1, réduisant la mémoire par entrée de >50 %, libérant ~100 To à l'échelle de la flotte, tout en améliorant le débit d'insertion de 43 % et en réduisant la latence de recherche de 19 % <sup>[41](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>)</sup>.
+## Hardware and Robotics
+- Hugging Face and Pollen launch Microduck, a $399, 25 cm open-source bipedal robot that can waddle, grasp, recover from falls, and roller skate; behaviors are trainable in sim and deployable to hardware with a full RL stack on GitHub <sup>[13](<https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/>), [1](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>)</sup>.
+- Transfyr emerges from stealth with $25M to build AI that analyzes lab video/audio/sensor logs to uncover why experiments succeed or fail, revealing hidden protocol variations <sup>[14](<https://www.nytimes.com/2026/08/27/science/scientists-experiments-replication-ai.html?unlocked_article_code=1.81A.4o19.56RdaMM_l7sw&smid=url-share>)</sup>.
 
-## Sécurité et conformité
-- Ubiquiti corrige trois vulnérabilités CVSS 10 dans UniFi Protect/Talk/OS (injection de commandes, contournement d'authentification via CRLF) <sup>[42](<https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/>)</sup>.
-- La CISA ordonne aux agences fédérales de corriger une faille Oracle activement exploitée (CVE-2026-21962, CVSS 10) d'ici le 27 août <sup>[43](<https://itnerd.blog/2026/08/25/the-cisa-orders-federal-agencies-to-patch-actively-exploited-oracle-flaw-by-august-27>)</sup>.
-- L'Australie met en garde contre l'exploitation active du contournement d'authentification JetBrains TeamCity (CVE-2026-63077) <sup>[44](<https://www.infosecurity-magazine.com/news/australia-exploitation-teamcity>)</sup>.
-- Le développement d'exploits accéléré par l'IA réduit les fenêtres de correctifs à quelques heures ; des plans de contrôle appliqués par le réseau (par exemple, segmentation dynamique) sont proposés pour combler les lacunes <sup>[45](<https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane>)</sup>.
+## Industry and Economics
+- Nvidia asserts it can continue funding AI growth by "printing money," supporting frontier labs until they become self-sustaining <sup>[15](<https://www.wsj.com/tech/ai/nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom-195e7d5e?st=YNQ3fQ&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
+- Meta, despite public critiques of rival Anthropic, is projected to spend up to $10B annually on Anthropic services, making it one of Anthropic's largest customers <sup>[16](<https://www.nytimes.com/2026/08/27/technology/meta-anthropic-frenemies.html?unlocked_article_code=1.81A.NTLV.TsKEps8sa7fY&smid=url-share>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro](<https://www.latent.space/p/ainews-nvidia-buys-huggingface-for>) — _latent.space_
-2. [Nvidia in Talks to Buy AI Startup Hugging Face](<https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzgwNDE3MSwiZXhwIjoxNzg4NDA4OTcxLCJhcnRpY2xlSWQiOiJUS0VLSlhUOU5KTFcwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Ff4hpy1ocSnzvdZdbuzix3Qqh2bpMJlDlp5U3vvlZ-8>) — _bloomberg.com_
-3. [Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model](<https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/>) — _techcrunch.com_
-4. [Ox-Alpha Revealed as GLM-5.3-Flash](<https://z.ai/blog/glm-5.3-flash>) — _z.ai_
-5. [What Z.ai's Ox Alpha reveals about AI economics](<https://www.thedeepview.com/articles/what-z-ai-s-ox-alpha-reveals-about-ai-economics>) — _thedeepview.com_
-6. [Behaviorally Fingerprinting Ox Alpha's Provenance and Censorship](<https://www.ctgt.ai/research/behaviorally-fingerprinting-ox-alphas-provenance>) — _ctgt.ai_
-7. [Qwen3.8-Flash-Next](<https://simonwillison.net/2026/Aug/26/qwen38-flash-next/>) — _simonwillison.net_
-8. [Qwen4's architecture is here early, firing 6B parameters out of 125B](<https://thenextweb.com/news/qwen38-flash-next-qwen4-architecture-open-licence-ai-act>) — _thenextweb.com_
-9. [\[AINews\] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6](<https://www.latent.space/p/ainews-hot-chips-openais-jalapeno>) — _latent.space_
-10. [Gemini Omni 1.1 Flash lets you build with more control](<https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/>) — _deepmind.google_
-11. [Muse Image](<https://developer.meta.com/ai/models/muse-image/>) — _developer.meta.com_
-12. [Intelligent transcription with Gemini 3.5 Transcribe](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/>) — _blog.google_
-13. [Expanding our support for scientists](<https://www.anthropic.com/news/expanding-support-for-scientists>) — _anthropic news_
-14. [Previewing the Model Hardware Standard](<https://www.anthropic.com/news/model-hardware-standard-research-preview>) — _anthropic news_
-15. [Inside LinkedIn's cognitive memory agent for agentic personalization (32 minute podcast)](<https://stackoverflow.blog/2026/08/25/inside-linkedin-s-cognitive-memory-agent/>) — _stackoverflow.blog_
-16. [Salesforce just put its entire CRM inside Claude — and says you'll never need its app again](<https://venturebeat.com/orchestration/salesforce-just-put-its-entire-crm-inside-claude-and-says-youll-never-need-its-app-again>) — _venturebeat.com_
-17. [Salesforce, Anthropic expand partnership as Benioff responds to ‘SaaSpocalypse' concerns](<https://www.cnbc.com/2026/08/26/salesforce-anthropic-partnership-claudeforce.html>) — _cnbc.com_
-18. [CEO fired developers to make room for AI. Developers create open source AI CEO](<https://github.com/SenteLabsAI/OpenExecutive>) — _hnrss.org_
-19. [Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence](<https://arxiv.org/abs/2608.21156v2>) — _arxiv 2608.21156v2_
-20. [ChatGPT Now Supports WebMCP](<https://nekuda.substack.com/p/breaking-chatgpt-now-supports-webmcp>) — _nekuda.substack.com_
-21. [Introducing Run SDK: Secure Eval for Your Agents](<https://vercel.com/blog/introducing-run>) — _vercel.com_
-22. [Automatic Harness Optimization](<https://github.com/microsoft/AutoSaddler>) — _github.com_
-23. [Why your AI pilot stalled at the context gap](<https://www.getdbt.com/blog/why-your-ai-pilot-stalled-at-the-context-gap>) — _dbt.com_
-24. [Piloting the world's first double-blind AI evaluations](<https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/>) — _deepmind.google_
-25. [VMs won't contain cyber-capable agents](<https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/>) — _blog.trailofbits.com_
-26. [Drive-By Agent Hijacking: One Website Visit, Persistent Model Poisoning](<https://www.cyera.com/research/nemoclaw-one-website-visit-to-hijack-your-ai-agent>) — _cyera.com_
-27. [Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI/Hugging Face hacking incident](<https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/#core-takeaways-about-this-incident?utm_source=tldrai>) — _metr.org_
-28. [Actions retention will cover checks, workflow runs, and statuses](<https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses>) — _github.blog_
-29. [Enterprise-managed settings now support autoUpdate for plugin marketplaces](<https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces>) — _github.blog_
-30. [Global model policy generally available](<https://github.blog/changelog/2026-08-26-global-model-policy-generally-available>) — _github.blog_
-31. [Close all open contributions authored by a blocked user](<https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user>) — _github.blog_
-32. [How to evaluate LLMs before production](<https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/>) — _github.blog_
-33. [DuckLabs to Join AWS, Projects to Remain Open Source](<https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws>) — _ducklabs.com_
-34. [DuckDB and the changing physics of analytics](<https://www.allthingsdistributed.com/2026/08/duckdb-and-the-changing-physics-of-analytics.html>) — _allthingsdistributed.com_
-35. [Weaviate 1.39 Release](<https://weaviate.io/blog/weaviate-1-39-release>) — _weaviate_
-36. [The LogDrive: Flexible Composition Through Abstraction in Shared Logs](<https://jack-vanlightly.com/blog/2026/8/25/the-logdrive-flexible-composition-through-abstraction-in-shared-logs>) — _jack-vanlightly.com_
-37. [Khaos: Kafka Load Testing & Chaos Engineering](<https://github.com/aleksandarskrbic/khaos>) — _github.com_
-38. [New things for regular expressions in PostgreSQL: pg_tre and pg_re2](<https://www.depesz.com/2026/08/25/new-things-for-regular-expressions-in-postgresql-pg_tre-and-pg_re2>) — _depesz.com_
-39. [How to Make LLMs 3X Faster](<https://blog.bytebytego.com/p/how-to-make-llms-3x-faster>) — _blog.bytebytego.com_
-40. [PagedAttention: Virtual Memory for the KV Cache](<https://thegustafson.com/blog/paged-attention>) — _thegustafson.com_
-41. [How we saved 100 terabytes of memory by optimizing 1.1.1.1’s DNS cache](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>) — _blog.cloudflare.com_
-42. [Ubiquiti Patches Three Max Severity Security Vulnerabilities](<https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/>) — _bleepingcomputer.com_
-43. [CISA Orders Federal Agencies to Patch the Actively Exploited Oracle Flaw by August 27](<https://itnerd.blog/2026/08/25/the-cisa-orders-federal-agencies-to-patch-actively-exploited-oracle-flaw-by-august-27>) — _itnerd.blog_
-44. [Australia Warns of Active Exploitation of Critical TeamCity Server Flaw](<https://www.infosecurity-magazine.com/news/australia-exploitation-teamcity>) — _infosecurity-magazine.com_
-45. [The Patch Window is Collapsing: Why Security Needs a New Control Plane](<https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane>) — _azure.microsoft.com_
+1. [\[AINews\] OpenAI to reach AGI bar by end-2026](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>) — _latent.space_
+2. [Small Models Have Arrived](<https://calv.info/small-models-have-arrived>) — _calv.info_
+3. [Anthropic's new hardware standard lets AI agents control the physical world](<https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world/>) — _arstechnica.com_
+4. [Breaking Claude Code Opus 5 Auto Mode](<https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/>) — _simonwillison.net_
+5. [State of AI Agents: Wie Beam agentische Systeme in Produktion bringt](<https://ai-first.ai/podcast/state-of-ai-agents-wie-beam-agentische-systeme-in-produktion-bringt>) — _ai first podcast_
+6. [Agent Swarms are a Distributed Systems Problem](<https://www.trychroma.com/engineering/transactions>) — _trychroma.com_
+7. [Audit your Agent files](<https://addyo.substack.com/p/audit-your-agent-files>) — _addyo.substack.com_
+8. [Harness Engineering](<https://habitat-thinking.github.io/ai-literacy-superpowers/plugins/ai-literacy-superpowers/explanation/harness-engineering/>) — _habitat-thinking.github.io_
+9. [We need to talk about migrations with AI](<https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/>) — _blog.pragmaticengineer.com_
+10. [Better label management on issues is generally available](<https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available>) — _github.blog_
+11. [Copilot code review: Resolution reasons and expanded capabilities](<https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities>) — _github.blog_
+12. [How we saved 100 terabytes of memory by optimizing 1.1.1.1's DNS cache](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>) — _blog.cloudflare.com_
+13. [Hugging Face is selling a cute $399 open source duck robot, Microduck](<https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/>) — _techcrunch.com_
+14. [Some Scientists Have ‘Magic Hands' in the Lab. This AI Is Learning Why](<https://www.nytimes.com/2026/08/27/science/scientists-experiments-replication-ai.html?unlocked_article_code=1.81A.4o19.56RdaMM_l7sw&smid=url-share>) — _nytimes.com_
+15. [Nvidia Insists It Can Keep Printing Money to Fund the AI Boom](<https://www.wsj.com/tech/ai/nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom-195e7d5e?st=YNQ3fQ&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+16. [Meta Took Aim at Anthropic. It Is Also One of Its Largest Customers](<https://www.nytimes.com/2026/08/27/technology/meta-anthropic-frenemies.html?unlocked_article_code=1.81A.NTLV.TsKEps8sa7fY&smid=url-share>) — _nytimes.com_
 
 
 ## Archive récente
