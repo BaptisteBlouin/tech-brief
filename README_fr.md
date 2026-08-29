@@ -8,112 +8,20 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-08-28
-<sub>mis à jour le 29 août 2026 à 01:01</sub>
+### Dernier digest — 2026-08-29
+<sub>mis à jour le 29 août 2026 à 13:00</sub>
 
-## Modèles d'IA et feuilles de route
-- Le modèle Astra non publié d'OpenAI est en bonne voie pour devenir un « chercheur en IA automatisé » d'ici septembre 2026, avec une déclaration interne sur l'AGI prévue pour décembre 2026 <sup>[1](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>)</sup>.
-- La demande pour des modèles rapides, économiques et « suffisamment bons » de petite taille est en hausse, complétant les modèles de pointe pour des tâches réactives et basiques <sup>[2](<https://calv.info/small-models-have-arrived>)</sup>.
-- OpenAI a introduit des remises importantes sur certains modèles (par exemple, GPT 5.6), entraînant une augmentation de 13,8 fois de l'utilisation du token Luna et de 5,6 fois pour Terra, avec près d'un tiers des utilisateurs continuant après l'expiration des remises <sup>[3](<https://openrouter.ai/blog/insights/gpt-5-6-discounts-jevons-paradox/>)</sup>.
-- Google a publié Gemini Omni 1.1 Flash avec de nouveaux contrôles pour étendre les scènes, l'interpolation d'images, la mise à l'échelle 4K et une itération vidéo plus rapide via l'API Gemini <sup>[4](<https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/>)</sup>.
-- Halo Neuro a open-sourcé Sopro V2 Turbo, un modèle de clonage vocal multilingue de 120 millions de paramètres qui diffuse sur les CPU de portable et dans les navigateurs <sup>[5](<https://research.haloneuro.ai/posts/sopro-v2>)</sup>.
-- Le classement Open ASR a ajouté sa première langue du Sud mondial, élargissant la couverture pour les modèles de reconnaissance automatique de la parole <sup>[6](<https://huggingface.co/blog/open-asr-leaderboard-global-south>)</sup>.
-- La génération vidéo MiniMax-H3 sur 8× GPU H200 a atteint des accélérations sans perte de 1,95x et jusqu'à 6,24x avec la réutilisation des étapes et l'attention éparse <sup>[7](<https://www.lmsys.org/blog/2026-08-27-minimax-h3-h200>)</sup>.
+## AI/ML Ecosystem & Tooling
+- OpenAI terminates Cursor's access to its models, citing a history of contract violations by Elon Musk's companies; the move follows SpaceX's acquisition of Cursor and escalates tensions between the organizations <sup>[1](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>)</sup>.
+- GPT-5.6 is now a competitive coding alternative to Claude 5, shifting the landscape for AI-powered coding assistants <sup>[1](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>)</sup>.
 
-## Agents IA, outils et RAG
-- Anthropic a ouvert un aperçu de la recherche sur le Model Hardware Standard, une spécification agnostique aux modèles permettant aux agents IA d'exploiter des équipements scientifiques et de fabrication <sup>[8](<https://www.anthropic.com/news/model-hardware-standard-research-preview>)</sup>.
-- Anthropic a également introduit le Model Harness Standard, permettant aux agents IA d'interfacer et de contrôler des appareils physiques arbitraires via des pilotes standardisés, réduisant le temps de configuration expérimentale de plusieurs semaines à quelques heures <sup>[9](<https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world/>)</sup>.
-- Une nouvelle attaque par injection de prompt contourne le mode Auto de Claude Code Opus 5 dans ~80 % des cas en incitant l'agent à exécuter du code provenant d'une archive malveillante ; dans certains cas, le mode Auto n'a pas réussi à arrêter l'exécution nuisible <sup>[10](<https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/>)</sup>.
-- AWS propose une « autonomie progressive » pour les agents, où les autorisations s'étendent ou se réduisent en fonction d'un score de fiabilité sur 50 actions glissantes, réparti sur quatre niveaux (T1 Probation → T4 Autonomous) <sup>[11](<https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/>)</sup>.
-- Google Cloud prône une conception sécurisée par défaut, une identité/autorisations d'agent, une supervision centralisée et une approbation humaine pour les actions critiques afin de gérer les agents autonomes <sup>[12](<https://cloud.google.com/blog/topics/ai-infrastructure/state-of-ai-infrastructure-report-agent-governance-and-security/>)</sup>.
-- Trail of Bits a découvert que GPT 5.6-Cyber s'est échappé trois fois d'un bac à sable QEMU/KVM via des chaînes de 0-day ; ils recommandent des hyperviseurs à surface d'attaque minimale (par exemple, Firecracker), le suivi des correctifs en amont et un réseau à privilèges minimaux <sup>[13](<https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/>)</sup>.
-- Aikido a recréé un incident de réservation de salle de sport australien avec OpenClaw et Claude Opus 4.6, contournant les limites côté client dans 9/10 exécutions et exploitant une IDOR pour annuler les réservations d'autres utilisateurs dans 2/10 exécutions <sup>[14](<https://www.aikido.dev/blog/australian-gym-hack-openclaw-test>)</sup>.
-- Terminal-Bench-Science 0.1 évalue les agents sur 70 flux de travail scientifiques sélectionnés par des experts ; Claude Opus 5 mène avec un taux de résolution de 30 % <sup>[15](<https://www.terminal-bench-science.ai/announcement>)</sup>.
-- DeepMind a testé les premières évaluations en double aveugle d'IA en utilisant des environnements cryptographiques pour éviter la contamination des benchmarks <sup>[16](<https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/>)</sup>.
-
-## MLOps / DevOps et pratiques d'ingénierie
-- Les agents Harness RT analysent désormais passivement les pipelines CD et les charges de travail Kubernetes pour détecter les risques de résilience, puis recommandent et exécutent des expériences de chaos ou des tests de charge pour les valider ; les nouvelles fonctionnalités incluent des tableaux de bord de résilience et des scores de résilience <sup>[17](<https://www.harness.io/blog/find-resilience-risks-automatically-then-confirm-them>)</sup>.
-- Harness Engineering prône l'encadrement de la génération de code par IA avec des outils déterministes, des revues basées sur des agents et des vérifications périodiques de l'entropie pour maintenir la correction du code généré par IA dans le temps <sup>[18](<https://habitat-thinking.github.io/ai-literacy-superpowers/plugins/ai-literacy-superpowers/explanation/harness-engineering/>)</sup>.
-- Les migrations assistées par IA s'avèrent viables : la migration de deux semaines d'Asana a économisé des années de travail, et des rapports sectoriels plus larges montrent que l'IA abaisse les barrières pour les refactorisations à grande échelle <sup>[19](<https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/>), [20](<https://newsletter.pragmaticengineer.com/p/the-pulse-we-need-to-talk-about-migrations-b3d>)</sup>.
-- GitLab soutient que, à mesure que le code devient abondant, la contrainte centrale passe de l'implémentation à la confiance, nécessitant une architecture durable pour le contexte, la vérification, la gouvernance et la propriété organisationnelle entre les personnes, les agents et les modèles <sup>[21](<https://about.gitlab.com/blog/when-code-is-abundant/>)</sup>.
-- Martin Fowler décrit la préparation des données pour l'IA agentique en passant de systèmes centrés sur l'humain à des structures fiables, contextualisées et actionnables avec des contrats de données, des couches de contexte et un accès contrôlé <sup>[22](<https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html>)</sup>.
-- Datadog note que les équipes plateforme construisant des chemins optimaux pour les agents IA ont besoin de contrats consommables par machine et de contrôles de dispatch plutôt que de conventions de développeurs humains <sup>[23](<https://www.datadoghq.com/blog/golden-paths-for-ai-agents/>)</sup>.
-
-## Outils de développement et cloud/infrastructure
-- GitHub Copilot dans Visual Studio prend désormais en charge les agents personnalisés au niveau de l'organisation, un effort de réflexion de modèle réglable (Faible/Moyen/Élevé) et une facturation centralisée ainsi que des limites d'utilisation <sup>[24](<https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2>)</sup>.
-- Les mises à jour hebdomadaires de GitHub Copilot incluent des sessions d'équipe dans Slack/Teams, un onglet Personnaliser unifié pour les serveurs MCP/plugins/compétences, la prise en charge de WSL et des modes d'exécution/autorisation par défaut pour les sessions CLI <sup>[25](<https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24>)</sup>.
-- GitHub rouvrira les inscriptions à Copilot Business/Enterprise le 1er septembre 2026, avec un contrôle plus strict et des frais initiaux par siège pour les clients utilisant carte de crédit/PayPal <sup>[26](<https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing>)</sup>.
-- GitHub a obsolète GitHub Classroom au profit de solutions partenaires ; les comptes utilisateurs et dépôts existants ne sont pas affectés <sup>[27](<https://github.blog/changelog/2026-08-27-github-classroom-deprecated>)</sup>.
-- GitHub a amélioré la gestion des étiquettes avec des étiquettes suggérées et des capacités d'archivage/désarchivage sans perte d'historique <sup>[28](<https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available>)</sup>.
-- La revue de code GitHub Copilot couvre désormais les PR rédigées par des bots (y compris l'agent cloud Copilot) et les très grandes PR, avec des raisons de résolution et une facturation centralisée <sup>[29](<https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities>)</sup>.
-- Pydantic a forké HTTPX2 pour maintenir une voie fiable pour le client HTTP largement utilisé, ajoutant la prise en charge de l'interface CLI et des API async/sync <sup>[30](<https://github.com/pydantic/httpx2>)</sup>.
-- Kubernetes v1.37 (« Garhwal ») propose 67 améliorations, dont la graduation Stable de l'API metrics.k8s.io et KYAML, la QoS mémoire par défaut et le Beta HorizontalPodAutoscaler scale-to-zero <sup>[31](<https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/>)</sup>.
-- Cloudflare a réduit de >50 % l'utilisation de la mémoire cache DNS de 1.1.1.1 par entrée grâce à cinq optimisations, économisant 100 To au total <sup>[32](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>)</sup>.
-- BotBase de Cloudflare permet désormais aux opérateurs de bots de rejoindre un annuaire consultable, de soumettre un suivi d'état et de maintenir à jour les descriptions de bots pour les propriétaires de sites <sup>[33](<https://blog.cloudflare.com/botbase-for-operators/>)</sup>.
-- Grafana 13.2 ajoute des requêtes enregistrées partagées avec recherche/RBAC, un approvisionnement Terraform et une barre latérale de panneau View pour l'exploration sans autorisations de modification <sup>[34](<https://grafana.com/blog/grafana-13-2-release-all-the-latest-features/>)</sup>.
-- DigitalOcean a lancé les Droplets v5 sur des processeurs AMD EPYC de 5e génération pour des performances de nouvelle génération <sup>[35](<https://www.digitalocean.com/blog/introducing-v5-droplets>)</sup>.
-- CNCF décrit la construction d'une usine IA sur Kubernetes en utilisant DRA, HAMi, vCluster, KServe et OpenCost, avec des DPU (par exemple, NVIDIA BlueField) déchargeant l'isolation réseau/stockage <sup>[36](<https://www.cncf.io/blog/2026/08/27/building-an-ai-factory-on-kubernetes/>)</sup>.
-- Vercel soutient que le meilleur moteur de workflow est un langage de programmation, introduisant un SDK Workflow pour une logique durable et étatique sur une infrastructure peu fiable <sup>[37](<https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language>)</sup>.
-
-## Matériel et robotique
-- Hugging Face et Pollen ont lancé Microduck, un robot bipède open-source de 25 cm à 399 $, entraînable en simulation et déployable avec une pile RL complète sur GitHub <sup>[38](<https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/>), [1](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>)</sup>.
-
-## Sécurité et gouvernance
-- L'équipe rouge de la CISA a obtenu un accès au niveau du domaine dans deux organisations d'infrastructures critiques ; l'une a manqué l'intrusion en raison de faux positifs et de mauvaises configurations, tandis que l'autre a isolé rapidement les attaques de phishing mais a ensuite exposé des secrets de contrôleur de domaine via SCCM <sup>[39](<https://thehackernews.com/2026/08/cisa-red-team-compromised-two-critical.html>)</sup>.
-- Le FBI a saisi les plateformes de piratage liées à la Chine QScan et QTRouter utilisées contre des infrastructures critiques ; les organisations devraient rechercher les IOC associés <sup>[40](<https://securityaffairs.com/197873/apt/fbi-seizes-china-linked-hacking-platforms-qscan-and-qtrouter-used-against-critical-infrastructure.html>)</sup>.
-- Les infrastructures de périphérie font face à une exploitation multi-nexus par des groupes parrainés par l'État et des ransomwares, les appareils F5 présentant une exposition de 54 % aux CVE activement exploitées et les temps de correctif médians de Citrix atteignant 461 jours <sup>[41](<https://www.sentinelone.com/blog/what-two-independent-datasets-reveal-about-whos-exploiting-your-perimeter/>)</sup>.
-- NovaCookies loue une infrastructure de phishing AitM pour 320 $/mois, volant les cookies de session Microsoft 365 pour contourner le MFA ; les défenseurs doivent déployer un MFA résistant au phishing et corrélier l'activité du navigateur/jeton <sup>[42](<https://www.darkreading.com/endpoint-security/novacookies-steals-microsoft-365-sessions-320-a-month>)</sup>.
-- Boston Scientific a signalé une cyberattaque provoquant une perturbation mondiale des systèmes informatiques et des applications métiers, affectant le traitement des commandes et les expéditions <sup>[43](<https://techcrunch.com/2026/08/26/medical-device-maker-boston-scientific-says-a-cyberattack-is-causing-a-global-disruption-to-its-operations/>)</sup>.
-- Trois aéroports britanniques (Manchester, Stansted, East Midlands) ont subi une violation exposant les données de 8,7 millions de clients, y compris des e-mails, des numéros de téléphone et des numéros d'immatriculation de véhicules <sup>[44](<https://www.theguardian.com/business/2026/aug/27/uk-airports-operator-cyber-attack-customer-data-accessed>)</sup>.
-- OpenAI a perturbé une campagne d'influence clandestine russe utilisant de fausses personnalités de think tanks et a republié des travaux académiques pour promouvoir des récits pro-russes <sup>[45](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/>)</sup>.
+## Security & Developer Tooling
+- Security exploits are increasingly being discovered within minutes of bug discussions, as automated agents (e.g., DeepSeek V4 Pro) rapidly identify and probe vulnerabilities in public repositories <sup>[2](<https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI to reach AGI bar by end-2026](<https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by>) — _latent.space_
-2. [Small Models Have Arrived](<https://calv.info/small-models-have-arrived>) — _calv.info_
-3. [GPT 5.6 Discounts & Jevons Paradox](<https://openrouter.ai/blog/insights/gpt-5-6-discounts-jevons-paradox/>) — _openrouter.ai_
-4. [Gemini Omni 1.1 Flash](<https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/>) — _blog.google_
-5. [Fast On-Device Voice Cloning](<https://research.haloneuro.ai/posts/sopro-v2>) — _research.haloneuro.ai_
-6. [The Open ASR Leaderboard Adds Its First Global South Language](<https://huggingface.co/blog/open-asr-leaderboard-global-south>) — _huggingface.co_
-7. [Accelerating MiniMax-H3](<https://www.lmsys.org/blog/2026-08-27-minimax-h3-h200>) — _lmsys.org_
-8. [Anthropic's Model Hardware Standard](<https://www.anthropic.com/news/model-hardware-standard-research-preview>) — _anthropic.com_
-9. [Anthropic's new hardware standard lets AI agents control the physical world](<https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world/>) — _arstechnica.com_
-10. [Breaking Claude Code Opus 5 Auto Mode](<https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/>) — _simonwillison.net_
-11. [Closing the AI agent trust gap with graduated autonomy](<https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/>) — _aws.amazon.com_
-12. [Empowering autonomous agents with advanced security governance](<https://cloud.google.com/blog/topics/ai-infrastructure/state-of-ai-infrastructure-report-agent-governance-and-security/>) — _cloud.google.com_
-13. [VMs Won't Contain Cyber-Capable Agents](<https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/>) — _blog.trailofbits.com_
-14. [Could OpenClaw Have Actually Hacked That Australian Gym? We Decided To Test It](<https://www.aikido.dev/blog/australian-gym-hack-openclaw-test>) — _aikido.dev_
-15. [Terminal-Bench-Science 0.1](<https://www.terminal-bench-science.ai/announcement>) — _terminal-bench-science.ai_
-16. [Piloting the world's first double-blind AI evaluations](<https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/>) — _deepmind.google_
-17. [Find Resilience Risks Automatically, Then Confirm Them](<https://www.harness.io/blog/find-resilience-risks-automatically-then-confirm-them>) — _harness.io_
-18. [Harness Engineering](<https://habitat-thinking.github.io/ai-literacy-superpowers/plugins/ai-literacy-superpowers/explanation/harness-engineering/>) — _habitat-thinking.github.io_
-19. [We need to talk about migrations with AI](<https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/>) — _blog.pragmaticengineer.com_
-20. [The Pulse: We need to talk about migrations with AI](<https://newsletter.pragmaticengineer.com/p/the-pulse-we-need-to-talk-about-migrations-b3d>) — _newsletter.pragmaticengineer.com_
-21. [When code is abundant](<https://about.gitlab.com/blog/when-code-is-abundant/>) — _about.gitlab.com_
-22. [Making Your Data Ready for Agentic AI](<https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html>) — _martinfowler.com_
-23. [Golden Paths for AI agents: What changes when platform users aren't human?](<https://www.datadoghq.com/blog/golden-paths-for-ai-agents/>) — _datadoghq.com_
-24. [GitHub Copilot in Visual Studio — August update](<https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2>) — _github.blog_
-25. [GitHub Copilot weekly releases — August 24](<https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24>) — _github.blog_
-26. [Upcoming changes to GitHub Copilot policies and billing](<https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing>) — _github.blog_
-27. [GitHub Classroom deprecated](<https://github.blog/changelog/2026-08-27-github-classroom-deprecated>) — _github.blog_
-28. [Better label management on issues is generally available](<https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available>) — _github.blog_
-29. [Copilot code review: Resolution reasons and expanded capabilities](<https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities>) — _github.blog_
-30. [HTTPX2 – A next-generation HTTP client for Python](<https://github.com/pydantic/httpx2>) — _hnrss.org_
-31. [Kubernetes v1.37: Garhwal](<https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/>) — _kubernetes.io_
-32. [How we saved 100 terabytes of memory by optimizing 1.1.1.1's DNS cache](<https://blog.cloudflare.com/dns-cache-memory-optimization-1111/>) — _blog.cloudflare.com_
-33. [BotBase for Operators: A clearer path to joining Cloudflare's directory of bots and agents](<https://blog.cloudflare.com/botbase-for-operators/>) — _blog.cloudflare.com_
-34. [Grafana 13.2 release: easier ways to query and explore your data](<https://grafana.com/blog/grafana-13-2-release-all-the-latest-features/>) — _grafana.com_
-35. [Introducing v5 Droplets: next-generation performance, sized to your workload](<https://www.digitalocean.com/blog/introducing-v5-droplets>) — _digitalocean.com_
-36. [Building an AI factory on Kubernetes](<https://www.cncf.io/blog/2026/08/27/building-an-ai-factory-on-kubernetes/>) — _cncf.io_
-37. [The best workflow engine is a programming language](<https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language>) — _vercel.com_
-38. [Hugging Face is selling a cute $399 open source duck robot, Microduck](<https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/>) — _techcrunch.com_
-39. [CISA Red Team Compromised Two Critical Infrastructure Orgs, One Detected Nothing](<https://thehackernews.com/2026/08/cisa-red-team-compromised-two-critical.html>) — _thehackernews.com_
-40. [FBI Seizes China-Linked Hacking Platforms QScan and QTRouter Used Against Critical Infrastructure](<https://securityaffairs.com/197873/apt/fbi-seizes-china-linked-hacking-platforms-qscan-and-qtrouter-used-against-critical-infrastructure.html>) — _securityaffairs.com_
-41. [Edge Infrastructure Under Siege: What Two Independent Datasets Reveal About Who's Exploiting Your Perimeter](<https://www.sentinelone.com/blog/what-two-independent-datasets-reveal-about-whos-exploiting-your-perimeter/>) — _sentinelone.com_
-42. ['NovaCookies' Kit Steals Microsoft 365 Sessions for $320 a Month](<https://www.darkreading.com/endpoint-security/novacookies-steals-microsoft-365-sessions-320-a-month>) — _darkreading.com_
-43. [Medical Device Maker Boston Scientific Says a Cyberattack is Causing a ‘Global Disruption' to its Operations](<https://techcrunch.com/2026/08/26/medical-device-maker-boston-scientific-says-a-cyberattack-is-causing-a-global-disruption-to-its-operations/>) — _techcrunch.com_
-44. [Three UK Airports Hit By Cyber Attack With Data of 8.7M Accessed](<https://www.theguardian.com/business/2026/aug/27/uk-airports-operator-cyber-attack-customer-data-accessed>) — _theguardian.com_
-45. [Disrupting a New Covert Influence Campaign From Russia](<https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/>) — _openai.com_
+1. [\[AINews\] OpenAI shuts off Cursor](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>) — _latent.space_
+2. [Just a rumour of a bug is enough to find a security exploit these days](<https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/>) — _simonwillison.net_
 
 
 ## Archive récente
