@@ -8,20 +8,15 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-29
-<sub>updated 29 August 2026 at 13:00</sub>
+### Latest digest — 2026-08-30
+<sub>updated 30 August 2026 at 13:00</sub>
 
-## AI/ML Ecosystem & Tooling
-- OpenAI terminates Cursor's access to its models, citing a history of contract violations by Elon Musk's companies; the move follows SpaceX's acquisition of Cursor and escalates tensions between the organizations <sup>[1](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>)</sup>.
-- GPT-5.6 is now a competitive coding alternative to Claude 5, shifting the landscape for AI-powered coding assistants <sup>[1](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>)</sup>.
-
-## Security & Developer Tooling
-- Security exploits are increasingly being discovered within minutes of bug discussions, as automated agents (e.g., DeepSeek V4 Pro) rapidly identify and probe vulnerabilities in public repositories <sup>[2](<https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/>)</sup>.
+## AI/ML Models
+- Tencent releases Hy4 Preview, an open-weight text-only LLM with 770B total parameters (49B active), a 1M-token context window, and a 1.56TB model size on Hugging Face, significantly scaling up from its Hy3 predecessor (295B total, 21B active, 256K context, 598GB) <sup>[1](<https://simonwillison.net/2026/Aug/29/hy4/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI shuts off Cursor](<https://www.latent.space/p/ainews-openai-shuts-off-cursor>) — _latent.space_
-2. [Just a rumour of a bug is enough to find a security exploit these days](<https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/>) — _simonwillison.net_
+1. [Introducing Hy4 Preview](<https://simonwillison.net/2026/Aug/29/hy4/>) — _simonwillison.net_
 
 
 ## Recent archive
