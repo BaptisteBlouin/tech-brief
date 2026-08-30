@@ -30,6 +30,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-08-29` | Samedi | [Lire →](news/fr/2026-08-29.md) |
 | `2026-08-28` | Vendredi | [Lire →](news/fr/2026-08-28.md) |
 | `2026-08-27` | Jeudi | [Lire →](news/fr/2026-08-27.md) |
 | `2026-08-26` | Mercredi | [Lire →](news/fr/2026-08-26.md) |
@@ -43,9 +44,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-08-18` | Mardi | [Lire →](news/fr/2026-08-18.md) |
 | `2026-08-17` | Lundi | [Lire →](news/fr/2026-08-17.md) |
 | `2026-08-16` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-08-16.md) |
-| `2026-08-15` | Samedi | [Lire →](news/fr/2026-08-15.md) |
 
-<sub>[Parcourir toute l’archive (75) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (76) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>

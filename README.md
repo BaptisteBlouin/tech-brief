@@ -30,6 +30,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-08-29` | Saturday | [Read →](news/en/2026-08-29.md) |
 | `2026-08-28` | Friday | [Read →](news/en/2026-08-28.md) |
 | `2026-08-27` | Thursday | [Read →](news/en/2026-08-27.md) |
 | `2026-08-26` | Wednesday | [Read →](news/en/2026-08-26.md) |
@@ -43,9 +44,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-08-18` | Tuesday | [Read →](news/en/2026-08-18.md) |
 | `2026-08-17` | Monday | [Read →](news/en/2026-08-17.md) |
 | `2026-08-16` | 🗓️ Weekly recap | [Read →](news/en/2026-08-16.md) |
-| `2026-08-15` | Saturday | [Read →](news/en/2026-08-15.md) |
 
-<sub>[Browse the full archive (75) →](news/en/)</sub>
+<sub>[Browse the full archive (76) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
