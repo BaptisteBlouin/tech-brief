@@ -8,110 +8,41 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-08-31
-<sub>updated 1 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-01
+<sub>updated 1 September 2026 at 13:01</sub>
 
-## AI Models and Tooling
-- OpenAI is internally testing GPT-6 "Astra," with early outputs indicating a major capability jump and a potential public launch within weeks <sup>[1](<https://www.testingcatalog.com/first-outputs-from-gpt-6-astra-model-from-openai/>)</sup>.
-- ChatGPT Ads reaches $1B annualized revenue run rate, funding broader free and affordable AI access <sup>[2](<https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads>)</sup>.
-- OpenAI clarifies ChatGPT Work as two products: Work Cloud (web/mobile) and Work Local (desktop app with local file/program access) <sup>[3](<https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/>)</sup>.
-- OpenAI will terminate Cursor’s model access on Nov 12 following its SpaceX acquisition, citing ToS compliance uncertainty <sup>[4](<https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html>), [5](<https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/>)</sup>.
-- Anthropic reports automated researchers can mitigate alignment failures in other models with minimal human involvement, previewing self-improving AI workflows <sup>[6](<https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures>)</sup>.
-- Google introduces WikiSkill, a framework co-evolving reusable agent skills with a persistent wiki for knowledge consolidation <sup>[7](<https://arxiv.org/abs/2608.27454>)</sup>.
-- OpenAI releases Rosalind Workbench (research preview) as a guided life-science environment for specialized biology models and workflows in ChatGPT <sup>[8](<https://developers.openai.com/blog/rosalind-workbench>)</sup>.
-- DeepSeek-V4-Pro-0813-NVFP4 is a quantized MoE model optimized for advanced reasoning, agentic AI, and tool use, ready for commercial/non-commercial use <sup>[9](<https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-NVFP4>)</sup>.
-- Tencent’s open-weight Hy4 model has 770B total/49B active parameters and a 1M-token context window, with toggleable reasoning <sup>[10](<https://simonwillison.net/2026/Aug/29/hy4/>)</sup>.
-- ContextPilot-14B teaches agents to plan, maintain long-term memory, and offload less useful context during reasoning and tool use <sup>[11](<https://huggingface.co/tencent/ContextPilot-14B>)</sup>.
+## AI/ML Models and Generative Media
+- Fal’s H3 Max Live achieves real-time, infinite AI video generation by post-training Minimax’s H3 and optimizing it for their inference engine, enabling 35x speedup and interactive live streams where user prompts dynamically shape the output <sup>[1](<https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the>)</sup>.
+- Anthropic signs a $35B cloud deal with Nvidia-backed Lambda, with Nvidia holding the data center lease, signaling major infrastructure commitments for frontier model deployment <sup>[2](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
 
-## Agents, RAG, and Data Engineering
-- GitHub Agentic Workflows enable event-triggered repository automation with guardrails, supporting engines like Copilot, Claude Code, Gemini, and Codex <sup>[12](<https://github.github.com/gh-aw/>)</sup>.
-- GitHub Copilot in VS Code adds multi-chat layouts, side conversations, prompt timeline navigation, and Agent Host/integrated browser updates <sup>[13](<https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases>)</sup>.
-- Pinterest scales home-feed candidate generation via conditional learned retrieval with context embeddings, GPU inference, deduplication, and unified models <sup>[14](<https://medium.com/pinterest-engineering/scaling-conditional-learned-retrieval-for-pinterest-home-feed-ecfba7e5a426>)</sup>.
-- A geospatial framework autonomously selects and fuses satellite, tabular, and FM embeddings for high-resolution predictions <sup>[15](<http://arxiv.org/abs/2608.26088>)</sup>.
-- Agentic data prep requires trusted data, unified metadata, scalable serving, and continuous evaluation for reliability <sup>[16](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-285>)</sup>.
-- Grow Therapy built an agentic threat-hunting workflow on AWS for <$500/month, using Sonnet for gathering and Opus for analysis, enrichment, scoring, and adversarial validation <sup>[17](<https://engineering.growtherapy.com/post/threat-hunt-ai-how-we-built-an-ai-security-analyst-on-aws-for-under-500-month>)</sup>.
+## LLM Tooling, Agents, and Product Trends
+- Google expands AI Overviews to dominate the full search results page for some queries, pushing AI responses to the forefront of user experience <sup>[3](<https://9to5google.com/2026/08/31/google-search-ai-overviews-bigger/>)</sup>.
+- OpenClaw 2.0 releases with over 16,000 merged PRs, reflecting rapid open-source development in agentic tooling and workflow automation <sup>[4](<https://openclaw.ai/blog/openclaw-2-accidentally/>)</sup>.
 
-## MLOps, Data, and Engineering
-- Grab operationalizes data reliability via automated Data Production Issues and a Data Health API to standardize incident lifecycles and root-cause assignment <sup>[18](<https://engineering.grab.com/data-mesh-at-grab-part-three>)</sup>.
-- Twilio improves petabyte-scale Hudi pipeline freshness by computing "time in queue" from Kafka offsets and checkpoints, converting SLA drift into actionable breach ratios <sup>[19](<https://www.infoq.com/articles/beyond-offset-lag-kafka-apache-hudi/>)</sup>.
-- Apache DataFusion 55.0.0 adds MERGE INTO, range partitioning, runtime pruning, TopK pruning, and reduced object-store requests <sup>[20](<https://datafusion.apache.org/blog/2026/08/25/datafusion-55.0.0>)</sup>.
-- Apache Spark 4.1.0 introduces declarative pipelines, real-time structured streaming, Arrow-native UDFs/UDTFs, SQL scripting, and VARIANT GA <sup>[21](<https://spark.apache.org/releases/spark-release-4.1.0.html>)</sup>.
-- Datadog saves >$1M/month on AI usage via agent evaluations, spending guardrails, and context optimization <sup>[22](<https://www.datadoghq.com/blog/how-datadog-saves-money-by-optimizing-ai-usage/>)</sup>.
-- Adobe engineers built a predictive Kubernetes autoscaler using a Bi-LSTM model to forecast GPU demand 10 minutes ahead, with graduated scaling and burst detection <sup>[23](<https://www.cncf.io/blog/2026/08/28/scale-before-the-spike-predictive-autoscaling-for-gpu-workloads-on-kubernetes/>)</sup>.
-- vLLM v0.28.0 ships with 584 commits from 270 contributors, expanding serving capabilities <sup>[24](<https://github.com/vllm-project/vllm/releases/tag/v0.28.0>)</sup>.
+## MLOps/DevOps and Engineering Stack
+- **Wrapture** is introduced by Graham Dumpleton as a monkeypatching-inspired library for tracing and testing, offering an alternative to `unittest.mock` and enabling non-intrusive observation of third-party code <sup>[5](<https://simonwillison.net/2026/Aug/31/introducing-wrapture/>)</sup>.
 
-## DevOps, Infrastructure, and Cloud
-- SpaceX begins in-house turbine blade manufacturing to cut generator lead times by 18 months for AI data centers <sup>[25](<https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months>)</sup>.
-- AI compute may face a ~15GW power shortfall in 2027 due to site-level infrastructure bottlenecks <sup>[26](<https://x.com/elonmusk/status/2093810234141634702>)</sup>.
-- Cloud outages remain unavoidable; organizations should invest in incident response over elimination attempts <sup>[27](<https://surfingcomplexity.blog/2026/08/29/omnipresent-availability-risks-in-cloud-software/>)</sup>.
-- Kubernetes 1.37 GA’s Pod Certificates and Cluster Trust Bundles add X.509 issuance for TLS/mTLS as a proof-of-possession alternative to service-account JWTs; Tinycert offers a third-party signer <sup>[28](<https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/>)</sup>.
-- Pulumi Kubernetes v4.34.0 allows extending the provider with any CRD via a new --extension flag <sup>[29](<https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/>)</sup>.
-- A PostgreSQL query achieved a 1,000x speedup by fixing a `timestamp` vs `timestamptz` index mismatch under Row Level Security <sup>[30](<https://www.linkedin.com/posts/karla-burnett-02997762_people-like-to-talk-about-how-ai-is-making-share-7498991302563278848-ToTF>)</sup>.
+## Cloud and Infrastructure
+- Google removes all remaining Manifest V2 extensions (including uBlock Origin) from the Chrome Web Store, effectively blocking updates and new installs, though existing installs on Chrome ≤138 remain functional until removal <sup>[6](<https://webiterate.dev/google-removed-extensions-ublock-origin-108/>)</sup>.
 
-## Security and Reliability
-- OpenAI and hundreds of companies call for rapid cyber defense action against automated attacks, urging patching, least privilege, and compensating controls <sup>[31](<https://openai.com/collective-cyberdefense/>)</sup>.
-- Amazon fixed a Kiro IDE prompt-injection flaw enabling .env data exfiltration via crafted workspaces in v0.8.140 <sup>[32](<https://mindgard.ai/blog/amazon-kiro-data-exfiltration>)</sup>.
-- Chrome/Edge extensions weaponized via supply-chain compromise stole crypto and browser data before removal <sup>[33](<https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/>)</sup>.
-- Fire Ant threat actor evolved from hypervisor compromises to IOS XR router implants, GRE tunnel abuse, and tac_plus credential harvesting <sup>[34](<https://www.sygnia.co/blog/fire-ant-evolves-from-hypervisors-to-trusted-infrastructure/>)</sup>.
-- TerminalFix campaign deploys reverse tunnels via multistage intrusion, abusing LockScreenContentServer.exe and PNG steganography <sup>[35](<https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/>)</sup>.
-- kernel.org reports AI scrapers now drive ~98% of git.kernel.org traffic (~6M daily requests), forcing disabling of expensive features <sup>[36](<https://people.kernel.org/monsieuricon/creepy-crawlies>)</sup>.
-- A security flaw in Omarchy’s default Docker config allowed any user process to escalate to root; update to 4.0.1 mitigates <sup>[37](<https://0xcc.io/posts/omarchy-root-creds/>)</sup>.
+## Developer Tools and Practices
+- The role of **Product Architect** is proposed as the future of tech work, focusing on defining systems, directing agents, and verifying outputs as coding shifts toward automation <sup>[7](<https://akashyap.ai/the-future-tech-role-is-the-product-architect/>)</sup>.
 
-## Software Engineering Practices and Tooling
-- Target leakage risks stem from improper splits or mixed-entity calculations; safe workflows require out-of-fold statistics and group-aware transforms <sup>[38](<https://levelup.gitconnected.com/the-feature-that-was-100-correlated-with-the-answer-because-it-was-the-answer-7c86eeb7adb8>)</sup>.
-- "Bug blindness" leads developers to overlook UX issues due to familiarity with workarounds <sup>[39](<https://danluu.com/bug-blind/>)</sup>.
-- Domain-driven design and structured change management help apply LLMs effectively to legacy systems with technical debt <sup>[40](<https://coldtake.dev/blog/domain-driven-agents>)</sup>.
-- Verus enables provably correct Rust code by adding formal verification to Rust’s type safety, addressing gaps like out-of-bounds access and secret leakage <sup>[41](<https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus>)</sup>.
-- Trail of Bits adds a Rust chapter to its Testing Handbook, covering guarantees, dynamic/static analysis, and gotchas <sup>[42](<https://blog.trailofbits.com/2026/07/13/rust-proof-your-code-with-our-new-testing-handbook-chapter/>)</sup>.
-- Docker argues "secure by default" is essential as agentic workflows inherit and amplify unexamined trust in existing foundations <sup>[43](<https://www.docker.com/blog/secure-by-default-is-your-only-way-forward/>)</sup>.
-- AiPermission offers a local-first permission gateway for AI agents with scoped tokens, human approval, audit logs, and encrypted credentials <sup>[44](<https://github.com/aipermission/aipermission>)</sup>.
+## Broader Context (Non-Engineering)
+- FTC sues Amazon for allegedly deceiving advertisers by secretly raising ad prices, impacting its $68B ad business <sup>[8](<https://www.wsj.com/tech/ftc-to-file-lawsuit-alleging-amazon-deceived-advertisers-d71039ee?st=Cy2s3h&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
+- Apple’s Tim Cook steps down as CEO, transitioning to executive chairman while highlighting confidence in successor John Ternus <sup>[9](<https://www.bloomberg.com/news/articles/2026-08-31/apple-s-cook-says-he-will-miss-this-work-as-he-leaves-ceo-role?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODIzNjEyNCwiZXhwIjoxNzg4ODQwOTI0LCJhcnRpY2xlSWQiOiJUS040QVBUOTZPU0swMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.AgN0WKy7okaCGfwGQ3RJkzuUJEEDhlbrYYWzxE07A44>)</sup>.
 
 ## Sources
 
-1. [First outputs from GPT-6 "Astra" model from OpenAI](<https://www.testingcatalog.com/first-outputs-from-gpt-6-astra-model-from-openai/>) — _testingcatalog.com_
-2. [A milestone in expanding access to AI](<https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads>) — _openai.com_
-3. [Understanding ChatGPT Work](<https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/>) — _simonwillison.net_
-4. [OpenAI to end model access to Cursor after acquisition by Elon Musk's SpaceX](<https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html>) — _cnbc.com_
-5. [OpenAI Ends Cursor Partnership After SpaceX Acquisition](<https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/>) — _openai.com_
-6. [Anthropic's report on Self-Improving AI](<https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures>) — _anthropic.com_
-7. [Google Introduces WikiSkill for Persistent Agent Learning](<https://arxiv.org/abs/2608.27454>) — _arxiv 2608.27454_
-8. [Rosalind Workbench](<https://developers.openai.com/blog/rosalind-workbench>) — _developers.openai.com_
-9. [DeepSeek-V4-Pro-0813-NVFP4](<https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-NVFP4>) — _huggingface.co_
-10. [Introducing Hy4 Preview](<https://simonwillison.net/2026/Aug/29/hy4/>) — _simonwillison.net_
-11. [ContextPilot-14B (Hugging Face Repository)](<https://huggingface.co/tencent/ContextPilot-14B>) — _huggingface.co_
-12. [GitHub Agentic Workflows](<https://github.github.com/gh-aw/>) — _github.github.com_
-13. [GitHub Copilot in VS Code, August 2026 releases](<https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases>) — _github.blog_
-14. [Scaling Conditional Learned Retrieval for Pinterest Home Feed](<https://medium.com/pinterest-engineering/scaling-conditional-learned-retrieval-for-pinterest-home-feed-ecfba7e5a426>) — _medium.com_
-15. [Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings](<http://arxiv.org/abs/2608.26088>) — _arxiv 2608.26088_
-16. [Data Engineering Weekly #285](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-285>) — _dataengineeringweekly.com_
-17. [Threat Hunt AI: How We Built an AI Security Analyst on AWS for Under $500 a Month](<https://engineering.growtherapy.com/post/threat-hunt-ai-how-we-built-an-ai-security-analyst-on-aws-for-under-500-month>) — _engineering.growtherapy.com_
-18. [Data Mesh at Grab: Operationalizing Data Reliability with Automated DPIs](<https://engineering.grab.com/data-mesh-at-grab-part-three>) — _engineering.grab.com_
-19. [Beyond Offset Lag: Computing Time in Queue for Apache Hudi Data Lake Pipelines at Petabyte Scale](<https://www.infoq.com/articles/beyond-offset-lag-kafka-apache-hudi/>) — _infoq.com_
-20. [Apache DataFusion 55.0.0 Released](<https://datafusion.apache.org/blog/2026/08/25/datafusion-55.0.0>) — _datafusion.apache.org_
-21. [Spark Release 4.1.0](<https://spark.apache.org/releases/spark-release-4.1.0.html>) — _spark.apache.org_
-22. [How Datadog saves over $1 million each month by optimizing AI usage](<https://www.datadoghq.com/blog/how-datadog-saves-money-by-optimizing-ai-usage/>) — _datadoghq.com_
-23. [Scale before the spike: Predictive autoscaling for GPU workloads on Kubernetes](<https://www.cncf.io/blog/2026/08/28/scale-before-the-spike-predictive-autoscaling-for-gpu-workloads-on-kubernetes/>) — _cncf.io_
-24. [vllm v0.28.0](<https://github.com/vllm-project/vllm/releases/tag/v0.28.0>) — _github.com_
-25. [SpaceX starts in-house turbine blade manufacturing to boost gas-powered generator output for Elon's AI data centers — new manufacturing strategy cuts generator delays by 18 months](<https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months>) — _tomshardware.com_
-26. [AI compute could face a 15GW power shortfall in 2027](<https://x.com/elonmusk/status/2093810234141634702>) — _x.com_
-27. [Omnipresent availability risks in cloud software](<https://surfingcomplexity.blog/2026/08/29/omnipresent-availability-risks-in-cloud-software/>) — _surfingcomplexity.blog_
-28. [Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles](<https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/>) — _kubernetes.io_
-29. [Pulumi Kubernetes v4.34.0: CRDs as provider extensions](<https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/>) — _pulumi.com_
-30. [Speeding up some Postgres queries by up to 1000x with a single typecast](<https://www.linkedin.com/posts/karla-burnett-02997762_people-like-to-talk-about-how-ai-is-making-share-7498991302563278848-ToTF>) — _linkedin.com_
-31. [A Call for Collective Action on Cyber Defense](<https://openai.com/collective-cyberdefense/>) — _openai.com_
-32. [Power Leak: Amazon Kiro IDE Prompt Injection Enables Data Exfiltration](<https://mindgard.ai/blog/amazon-kiro-data-exfiltration>) — _mindgard.ai_
-33. [Chrome Web Store Extensions Caught Stealing Crypto, Browser Data](<https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/>) — _bleepingcomputer.com_
-34. [Fire Ant Evolves: From Hypervisors to Trusted Infrastructure](<https://www.sygnia.co/blog/fire-ant-evolves-from-hypervisors-to-trusted-infrastructure/>) — _sygnia.co_
-35. [TerminalFix Campaign Deploys a Reverse Tunnel Through Multistage Intrusion](<https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/>) — _microsoft.com_
-36. [Creepy crawlies](<https://people.kernel.org/monsieuricon/creepy-crawlies>) — _people.kernel.org_
-37. [Omarchy: Any User Process Can Escalate to Root](<https://0xcc.io/posts/omarchy-root-creds/>) — _0xcc.io_
-38. [The Feature That Was 100% Correlated With the Answer — Because It Was the Answer](<https://levelup.gitconnected.com/the-feature-that-was-100-correlated-with-the-answer-because-it-was-the-answer-7c86eeb7adb8>) — _levelup.gitconnected.com_
-39. [Bug blindness](<https://danluu.com/bug-blind/>) — _danluu.com_
-40. [Domain-Driven Agents](<https://coldtake.dev/blog/domain-driven-agents>) — _coldtake.dev_
-41. [Developing provably correct Rust code with Verus](<https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus>) — _amazon.science_
-42. [Rust-Proof Your Code with Our New Testing Handbook Chapter](<https://blog.trailofbits.com/2026/07/13/rust-proof-your-code-with-our-new-testing-handbook-chapter/>) — _blog.trailofbits.com_
-43. [Secure by default is your only way forward](<https://www.docker.com/blog/secure-by-default-is-your-only-way-forward/>) — _docker.com_
-44. [AiPermission](<https://github.com/aipermission/aipermission>) — _github.com_
+1. [\[AINews\] Fal’s H3 Max Live breaks the infinite videogen barrier](<https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the>) — _latent.space_
+2. [Anthropic Signs $35 Billion Cloud Deal Backed by Nvidia](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+3. [Google is making AI Overviews even bigger on some search queries](<https://9to5google.com/2026/08/31/google-search-ai-overviews-bigger/>) — _9to5google.com_
+4. [OpenClaw 2.0, Accidentally](<https://openclaw.ai/blog/openclaw-2-accidentally/>) — _openclaw.ai_
+5. [Introducing wrapture](<https://simonwillison.net/2026/Aug/31/introducing-wrapture/>) — _simonwillison.net_
+6. [Google Has Removed Manifest V2 Extensions From the Chrome Web Store, Including uBlock Origin](<https://webiterate.dev/google-removed-extensions-ublock-origin-108/>) — _webiterate.dev_
+7. [The Future Tech Role Is the Product Architect](<https://akashyap.ai/the-future-tech-role-is-the-product-architect/>) — _akashyap.ai_
+8. [FTC Sues Amazon, Alleging It Deceived Advertisers and Drove Up Prices](<https://www.wsj.com/tech/ftc-to-file-lawsuit-alleging-amazon-deceived-advertisers-d71039ee?st=Cy2s3h&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
+9. [Apple's Cook Says He ‘Will Miss This Work' in Final Memo as CEO](<https://www.bloomberg.com/news/articles/2026-08-31/apple-s-cook-says-he-will-miss-this-work-as-he-leaves-ceo-role?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODIzNjEyNCwiZXhwIjoxNzg4ODQwOTI0LCJhcnRpY2xlSWQiOiJUS040QVBUOTZPU0swMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.AgN0WKy7okaCGfwGQ3RJkzuUJEEDhlbrYYWzxE07A44>) — _bloomberg.com_
 
 
 ## Recent archive
