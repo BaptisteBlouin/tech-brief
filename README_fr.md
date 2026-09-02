@@ -8,84 +8,45 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-01
-<sub>mis à jour le 2 septembre 2026 à 01:00</sub>
+### Dernier digest — 2026-09-02
+<sub>mis à jour le 2 septembre 2026 à 13:00</sub>
 
-## Modèles d'IA/ML et médias génératifs
-- Fal’s H3 Max Live permet la génération vidéo IA en temps réel et infinie grâce à l'optimisation post-formation de Minimax’s H3 et de son moteur d'inférence, offrant une accélération de 35x et des flux en direct interactifs où les invites utilisateur façonnent dynamiquement la sortie <sup>[1](<https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the>)</sup>.
-- Google lance la compréhension vidéo agentique pour les modèles Gemini 3.7/3.6/3.5 Flash, analysant dynamiquement les segments vidéo pour réduire l'utilisation des tokens jusqu'à 88 % et les coûts jusqu'à 66 % tout en améliorant la précision <sup>[2](<https://deepmind.google/blog/introducing-agentic-video-in-gemini/>)</sup>.
-- Runway présente Solaris, un Interface World Model qui génère des interfaces interactives en temps réel image par image, gérant conjointement le rendu et les interactions utilisateur sans représentations intermédiaires <sup>[3](<https://runway.com/news/research/introducing-solaris>)</sup>.
-- Astra d'OpenAI est le premier modèle à atteindre le seuil de capacité critique en cybersécurité dans le cadre de son Preparedness Framework, avec des garde-fous renforcés pour sa publication <sup>[4](<https://openai.com/index/path-to-astra>)</sup>.
-- TimesFM-3 de Google est un modèle de base pour séries temporelles zero-shot de 330M paramètres pré-entraîné sur >1T de points temporels, prenant en charge la prévision multivariée sans fine-tuning spécifique à la tâche <sup>[5](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>)</sup>.
+## AI/ML Models & Benchmarks
+- Anthropic releases **Claude Fable 5.1** and **Mythos 5.1**, with Fable 5.1 GA and Mythos 5.1 in restricted access; Fable cache reads drop **75% in price**, though output token usage rises ~70%, leading to a net **~20% per-task cost increase** for long sessions <sup>[1](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>), [2](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>)</sup>. Fable 5.1 sets new SOTA on coding/knowledge benchmarks and scores **52.6% on Terminal-Bench-Science 0.1** (vs. 24.7% for Fable 5) <sup>[1](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>), [3](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>)</sup>.
+- Google prepares a new **Flash model** (smaller, cheaper, faster) that internal testers prefer over Anthropic’s Opus for coding, narrowing the gap; Pro series update is delayed due to insufficient gains over Flash <sup>[4](<https://www.wsj.com/tech/ai/new-google-ai-model-said-to-narrow-gap-on-coding-ability-264c6052?st=TqBXaT&reflink=desktopwebshare_permalink>)</sup>.
+- Google introduces **agentic video understanding with Gemini**, cutting token use by **up to 88%**, costs by **up to 66%**, and improving quality by **up to 7%** <sup>[5](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>)</sup>.
 
-## Outils LLM, agents et RAG
-- OpenClaw 2.0 est publié avec >16 000 PR fusionnées, reflétant un développement open-source rapide dans les outils agentiques et l'automatisation des flux de travail <sup>[6](<https://openclaw.ai/blog/openclaw-2-accidentally/>), [7](<https://openclaw.ai/blog/openclaw-2-accidentally>)</sup>.
-- Les principaux projets open-source d'IA (par ex. Flue, tldraw) refusent désormais les PR externes, préférant des agents internes ou des "software factories" (équipes d'agents) pour trier, reproduire, corriger, examiner et fusionner les contributions <sup>[8](<https://www.latent.space/p/pr-not-welcome>)</sup>.
-- La software factory de Vercel pour AI SDK utilise des agents pour gérer les contributions à grande échelle, avec >20M de téléchargements npm hebdomadaires <sup>[8](<https://www.latent.space/p/pr-not-welcome>)</sup>.
-- L'agent de support de Pinecone (via Nexus) résout désormais 55,1 % des tickets de manière autonome, contre 24,6 %, en interrogeant des artefacts de connaissance internes <sup>[9](<https://www.pinecone.io/blog/support-agent-nexus/>)</sup>.
-- Weaviate détaille le RAG à interaction tardive pour extraire le sens des graphiques/tableaux dans les PDF, sans OCR/extraction de texte, permettant une récupération directe des données visuelles <sup>[10](<https://weaviate.io/blog/charts-tables-pdfs>)</sup>.
-- GitHub Copilot code review peut désormais approuver les PR (désactivé par défaut, configurable au niveau entreprise/org/dépôt) et inclut des évaluations d'approbation dans les commentaires de synthèse <sup>[11](<https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests>)</sup>.
-- OpenAI partage comment des entreprises natives IA (Basis, Clay, Exa Labs) utilisent des agents pour l'onboarding, la gestion de comptes et les intégrations développeurs <sup>[12](<https://openai.com/index/ai-native-company-workflows>)</sup>.
-- Anthropic annonce Enterprise Frontier Safeguards (EFS), combinant zéro rétention de données avec détection de mauvaise utilisation, stockage cloud contrôlé par le client et support sur les plateformes Claude et les principaux fournisseurs cloud <sup>[13](<https://www.anthropic.com/news/enterprise-frontier-safeguards>)</sup>.
-- Meta publie Muse Code, un agent de codage terminal/CI avec planification, édition, exécution de commandes, sandboxing OS et approbations par défaut <sup>[14](<https://dev.meta.ai/>)</sup>.
-- Hugging Face publie @huggingface/kernels : 200+ noyaux WebGPU pour l'IA locale, avec Fleet pour le benchmarking GPU dans le navigateur <sup>[15](<https://huggingface.co/blog/webgpu-kernels>)</sup>.
-- OpenAI permet à ChatGPT de se connecter à des données de santé de confiance (EHR, recherche) pour un accès sécurisé au contexte clinique <sup>[16](<https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources>)</sup>.
-- OpenAI teste une tarification basée sur les résultats avec certains clients entreprise, allant au-delà de la facturation par token <sup>[17](<https://thenextweb.com/news/openai-outcome-based-pricing-enterprise>)</sup>.
+## LLM Tooling & Agents
+- **Agentic testing** emerges: developers set goals, agents autonomously iterate (look → act → look), with Meta reporting only ~25% of outputs retained but the loop still effective due to automatic discard of failures <sup>[6](<https://theaiengineer.substack.com/p/what-is-agentic-testing-fa2>)</sup>.
+- **Android Studio Quail 4** integrates **Gemma 4** and supports **23 curated skills** plus custom skills to extend Agent Mode for specialized workflows <sup>[7](<https://android-developers.googleblog.com/2026/09/leverage-gemma-4-android-studio-quail.html>)</sup>.
+- Analysis of **MCP (Model Context Protocol) "tax"**: schema fetching can add hidden costs per server before the first prompt; Claude Code defers schema loads until tool use, reducing overhead <sup>[8](<https://okaneland.com/study/the-mcp-context-tax/>)</sup>.
 
-## MLOps/DevOps et pile technique
-- **Wrapture** de Graham Dumpleton propose un traçage/test inspiré du monkeypatching comme alternative à `unittest.mock`, permettant une observation non intrusive du code tiers <sup>[18](<https://simonwillison.net/2026/Aug/31/introducing-wrapture/>)</sup>.
-- Cloudflare prototype Cache Transcoding avec Zstandard dans Pingora, échangeant un léger coût CPU contre des économies significatives de stockage et de bande passante inter-DC dans le cache <sup>[19](<https://blog.cloudflare.com/cache-transcoding/>)</sup>.
-- Cloudflare lance Adaptive Intelligence, un moteur de détection de bots avec réentraînement continu sur le trafic en direct, pondération non déterministe des signaux et réactions différées pour contrer l'économie de l'évasion <sup>[20](<https://blog.cloudflare.com/introducing-adaptive-intelligence/>)</sup>.
-- Lakebase Postgres de Neon permet le redimensionnement automatique en temps réel du calcul basé sur l'utilisation CPU, la mémoire et la taille du jeu de travail du cache sans interrompre les opérations <sup>[21](<https://neon.com/blog/autoscaling-lakebase-postgres>)</sup>.
-- rustup 1.29.1 améliore la concurrence pour `rustup update` et les installations multi-composants <sup>[22](<https://blog.rust-lang.org/2026/09/01/Rustup-1.29.1/>)</sup>.
-- Le candidat de version 2 de Python 3.15.0 est disponible, avec une sortie finale prévue en octobre ; les mainteneurs sont incités à préparer leurs projets <sup>[23](<https://simonwillison.net/2026/Sep/1/python-315-rc-2/>)</sup>.
+## MLOps & Engineering Insights
+- **Type systems as search oracles**: Models excel more in **Rust/Lean** than C++ due to stricter compilers (Rust) and cheap verifiers (Lean), which constrain search space and improve correctness <sup>[9](<https://hiraditya.github.io/posts/a-type-system-is-a-search-oracle/>)</sup>.
+- **Small models catching up**: Reasoning performance of smaller LLMs is improving rapidly, though large models remain dominant for now <sup>[10](<https://blog.dshr.org/2026/09/small-is-beautiful.html>)</sup>.
 
-## Cloud et infrastructure
-- Anthropic signe un accord cloud de 35 Md$ avec Lambda (soutenu par Nvidia), Nvidia détenant le bail du datacenter, signalant des engagements majeurs en infrastructure pour le déploiement de modèles frontaliers <sup>[24](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
-- Google supprime toutes les extensions Manifest V2 restantes (y compris uBlock Origin) du Chrome Web Store, bloquant les mises à jour/nouvelles installations ; les installations existantes sur Chrome ≤138 restent fonctionnelles jusqu'à leur suppression <sup>[25](<https://webiterate.dev/google-removed-extensions-ublock-origin-108/>)</sup>.
+## DevOps & Infrastructure
+- **GitHub Enterprise Live Migrations (ELM)** from GHES to GitHub Enterprise Cloud (with Data Residency) is now **GA**, enabling near-zero-downtime migrations for large monorepos with continuous sync and cutover in minutes <sup>[11](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>)</sup>.
+- **Apple simplifies dropping Intel support** for macOS developers by easing the transition to arm64-only builds, reducing testing and binary footprint <sup>[12](<https://reverseeverything.com/blog/apple-makes-it-easier-for-mac-developers-to-drop-intel-support/>)</sup>.
 
-## Outils et pratiques de développement
-- Le rôle de **Product Architect** est proposé comme l'avenir du travail technique, axé sur la définition des systèmes, la direction des agents et la vérification des sorties alors que le codage évolue vers l'automatisation <sup>[26](<https://akashyap.ai/the-future-tech-role-is-the-product-architect/>)</sup>.
-- GitHub CLI prend désormais en charge `--attach` pour télécharger directement des images/vidéos dans les issues, PR et commentaires, simplifiant les flux de travail pour les humains et les agents de codage <sup>[27](<https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments>)</sup>.
-- GitHub ajoute des dates d'expiration pour les budgets utilisateurs individuels (Copilot Business/Enterprise), réduisant le nettoyage manuel à grande échelle <sup>[28](<https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets>), [29](<https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories>)</sup>.
-- Les agents de Vercel utilisent un fichier `DESIGN.md` pour créer des pages conformes à la marque avec des paramètres de conception cohérents, des directives et des boucles d'évaluation <sup>[30](<https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md>)</sup>.
-- Memoryfields propose un format portable Markdown+YAML+SQLite pour la mémoire des agents, traitant la mémoire comme des données inspectables plutôt que comme un pipeline propriétaire <sup>[31](<https://calpaterson.com/memoryfields.html>)</sup>.
-- diffium-db fournit une TUI en direct pour surveiller les modifications de la base de données en temps réel lorsque les agents ou les migrations modifient les schémas/données <sup>[32](<https://denislavgavrilov.com/diffium-db-live-database-diff>)</sup>.
+## Notable Developer Tooling
+- **Paint.NET** adds **internal, clean-room Direct2D rewrite** for WINE compatibility, authored by Claude; the 180K-line implementation is "vibe coded" and unreviewed but functional <sup>[13](<https://simonwillison.net/2026/Sep/2/rick-brewster/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Fal’s H3 Max Live breaks the infinite videogen barrier](<https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the>) — _latent.space_
-2. [Introducing agentic video understanding with Gemini](<https://deepmind.google/blog/introducing-agentic-video-in-gemini/>) — _deepmind.google_
-3. [Introducing Solaris](<https://runway.com/news/research/introducing-solaris>) — _runway.com_
-4. [Path to Astra: critical capabilities and frontier safeguards](<https://openai.com/index/path-to-astra>) — _openai.com_
-5. [Google's Foundation Model for Zero-Shot Forecasting](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>) — _research.google_
-6. [OpenClaw 2.0, Accidentally](<https://openclaw.ai/blog/openclaw-2-accidentally/>) — _openclaw.ai_
-7. [OpenClaw 2.0](<https://openclaw.ai/blog/openclaw-2-accidentally>) — _openclaw.ai_
-8. [PRs NOT Welcome: How Top AI Open Source Projects Are Managing Thousands of Contributors](<https://www.latent.space/p/pr-not-welcome>) — _latent.space_
-9. [Our support agent now solves most tickets without a human](<https://www.pinecone.io/blog/support-agent-nexus/>) — _pinecone_
-10. [How to extract meaning from charts and tables in PDFs](<https://weaviate.io/blog/charts-tables-pdfs>) — _weaviate_
-11. [Copilot code review can now approve pull requests](<https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests>) — _github.blog_
-12. [How AI-native companies turn workflows into operating capability](<https://openai.com/index/ai-native-company-workflows>) — _openai.com_
-13. [Developing Enterprise Frontier Safeguards with our customers](<https://www.anthropic.com/news/enterprise-frontier-safeguards>) — _anthropic news_
-14. [Muse Code (Website)](<https://dev.meta.ai/>) — _dev.meta.ai_
-15. [Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI](<https://huggingface.co/blog/webgpu-kernels>) — _huggingface.co_
-16. [Healthcare organizations can now connect EHR and additional industry data to ChatGPT](<https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources>) — _openai.com_
-17. [OpenAI has started letting some customers pay only when the AI works](<https://thenextweb.com/news/openai-outcome-based-pricing-enterprise>) — _thenextweb.com_
-18. [Introducing wrapture](<https://simonwillison.net/2026/Aug/31/introducing-wrapture/>) — _simonwillison.net_
-19. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
-20. [Introducing Adaptive Intelligence: Undermining the Economics of Every Bot Attack](<https://blog.cloudflare.com/introducing-adaptive-intelligence/>) — _blog.cloudflare.com_
-21. [Autoscaling Lakebase Postgres](<https://neon.com/blog/autoscaling-lakebase-postgres>) — _neon.com_
-22. [Announcing rustup 1.29.1](<https://blog.rust-lang.org/2026/09/01/Rustup-1.29.1/>) — _blog.rust-lang.org_
-23. [Python 3.15.0 candidate 2 is here!](<https://simonwillison.net/2026/Sep/1/python-315-rc-2/>) — _simonwillison.net_
-24. [Anthropic Signs $35 Billion Cloud Deal Backed by Nvidia](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-25. [Google Has Removed Manifest V2 Extensions From the Chrome Web Store, Including uBlock Origin](<https://webiterate.dev/google-removed-extensions-ublock-origin-108/>) — _webiterate.dev_
-26. [The Future Tech Role Is the Product Architect](<https://akashyap.ai/the-future-tech-role-is-the-product-architect/>) — _akashyap.ai_
-27. [GitHub CLI: Media in issues, pull requests, and comments](<https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments>) — _github.blog_
-28. [Set an expiration date for individual user budgets](<https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets>) — _github.blog_
-29. [Block users from discussion comments in personal repositories](<https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories>) — _github.blog_
-30. [How our agents build on-brand pages with design.md](<https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md>) — _vercel.com_
-31. [A Portable File Format for Agent Memory](<https://calpaterson.com/memoryfields.html>) — _calpaterson.com_
-32. [diffium-db: A live diff of what agents do to your database](<https://denislavgavrilov.com/diffium-db-live-database-diff>) — _denislavgavrilov.com_
+1. [\[AINews\] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>) — _latent.space_
+2. [Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>) — _venturebeat.com_
+3. [Claude Fable 5.1 made me a really nice animated pelican](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>) — _simonwillison.net_
+4. [New Google AI Model Said to Narrow Gap on Coding Ability](<https://www.wsj.com/tech/ai/new-google-ai-model-said-to-narrow-gap-on-coding-ability-264c6052?st=TqBXaT&reflink=desktopwebshare_permalink>) — _wsj.com_
+5. [Introducing agentic video understanding with Gemini](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>) — _blog.google_
+6. [What is Agentic Testing?](<https://theaiengineer.substack.com/p/what-is-agentic-testing-fa2>) — _theaiengineer.substack.com_
+7. [Leverage Android skills and Gemma 4 in Android Studio Quail 4](<https://android-developers.googleblog.com/2026/09/leverage-gemma-4-android-studio-quail.html>) — _android-developers.googleblog.com_
+8. [The MCP tax: what each server costs before your first prompt](<https://okaneland.com/study/the-mcp-context-tax/>) — _okaneland.com_
+9. [A Type System Is a Search Oracle](<https://hiraditya.github.io/posts/a-type-system-is-a-search-oracle/>) — _hiraditya.github.io_
+10. [Small Is Beautiful](<https://blog.dshr.org/2026/09/small-is-beautiful.html>) — _blog.dshr.org_
+11. [Enterprise Live Migrations from GHES to ghe.com generally available](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>) — _github.blog_
+12. [Apple Makes It Easier for Mac Developers to Drop Intel Support](<https://reverseeverything.com/blog/apple-makes-it-easier-for-mac-developers-to-drop-intel-support/>) — _reverseeverything.com_
+13. [Quoting Rick Brewster](<https://simonwillison.net/2026/Sep/2/rick-brewster/>) — _simonwillison.net_
 
 
 ## Archive récente
