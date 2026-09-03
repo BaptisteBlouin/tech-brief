@@ -8,85 +8,56 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-02
-<sub>mis à jour le 3 septembre 2026 à 01:00</sub>
+### Dernier digest — 2026-09-03
+<sub>mis à jour le 3 septembre 2026 à 13:01</sub>
 
-## Modèles et benchmarks d'IA/ML
-- Anthropic publie **Claude Fable 5.1** (GA) et **Mythos 5.1** (restreint), avec des lectures de cache pour Fable 5.1 **75 % moins chères**, mais une utilisation des tokens de sortie en hausse d'environ 70 %, ce qui entraîne une **augmentation d'environ 20 % du coût par tâche** pour les longues sessions ; Fable 5.1 établit un nouveau SOTA en codage/connaissances et obtient **52,6 % sur Terminal-Bench-Science 0.1** (contre 24,7 % pour Fable 5) <sup>[1](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>), [2](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>), [3](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>), [4](<https://www.anthropic.com/claude-fable-and-mythos-5-1>)</sup>.
-- Google lance **Gemini 3.8 Flash** et **3.8 Flash Cyber** (réservé aux défenseurs de confiance), avec 3.8 Flash tarifé à **0,75 $/M de tokens d'entrée et 3,75 $/M de tokens de sortie**, offrant des gains majeurs en ingénierie logicielle, tâches agentiques et raisonnement multi-étapes <sup>[5](<https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/>), [6](<https://simonwillison.net/2026/Sep/2/llm-gemini/>), [5](<https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/>)</sup>.
-- La **compréhension vidéo agentique de Google avec Gemini** réduit les tokens de **jusqu'à 88 %**, les coûts de **jusqu'à 66 %** et améliore la qualité de **jusqu'à 7 %** <sup>[7](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>)</sup>.
-- Google prépare un nouveau **modèle Flash** (plus petit, moins cher, plus rapide) que les testeurs internes préfèrent à Opus d'Anthropic pour le codage ; la mise à jour de la série Pro est retardée en raison de gains insuffisants par rapport à Flash <sup>[8](<https://www.wsj.com/tech/ai/new-google-ai-model-said-to-narrow-gap-on-coding-ability-264c6052?st=TqBXaT&reflink=desktopwebshare_permalink>)</sup>.
-- **Atlas** est un nouveau modèle de monde pour l'intelligence spatiale, pré-entraîné à partir de zéro sur du texte, des images, des vidéos et des données 3D pour générer, reconstruire et simuler des mondes, avec des performances évoluant avec la puissance de calcul <sup>[9](<https://www.worldlabs.ai/blog/atlas>)</sup>.
+## AI Models & Frontier Progress
+- Meta releases Muse Spark 1.3, matching GPT-5.6-Sol and ranking #3 globally per AAII; it offers >90% training-cost discounts for opt-in data use, with open weights promised for Spark 1.2 and under consideration for 1.3 <sup>[1](<https://www.latent.space/p/ainews-muse-spark-13-matches-gpt>), [2](<https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODQwNzY0NiwiZXhwIjoxNzg5MDEyNDQ2LCJhcnRpY2xlSWQiOiJUS1FVQVVUOTZPVDEwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Lid2dpYcy9_z5AEIw7C2bxhfSjYXlXDa4ZshhXaUBjg>)</sup>.
+- Google launches Gemini 3.8 Flash in two variants: a general agentic/software model and a Cyber variant tuned for vulnerability detection (limited to trusted testers); introductory pricing is $0.75/$3.75 per M input/output tokens through year-end <sup>[3](<https://arstechnica.com/ai/2026/09/google-releases-gemini-3-8-flash-its-third-flash-model-in-six-weeks/>)</sup>.
 
-## Outils LLM, agents et RAG
-- Les **agents commerciaux sur Claude** montrent des **paniers jusqu'à 35 % plus grands** et une **finalisation d'achat 60 % plus élevée** ; des plans et implémentations de référence (agents shopping/marchand) sont désormais disponibles pour le commerce, les voyages, les télécoms et la billetterie <sup>[10](<https://claude.com/blog/claude-for-commerce-agents>), [11](<https://claude.com/blog/the-anatomy-of-effective-commerce-agents>)</sup>.
-- Les **tests agentiques** émergent : les agents itèrent de manière autonome (observer → agir → observer), Meta rapportant que seulement ~25 % des sorties sont conservées, tout en restant efficaces grâce à l'élimination automatique des échecs <sup>[12](<https://theaiengineer.substack.com/p/what-is-agentic-testing-fa2>)</sup>.
-- **Android Studio Quail 4** intègre **Gemma 4** et prend en charge **23 compétences sélectionnées** ainsi que des compétences personnalisées pour étendre le mode Agent <sup>[13](<https://android-developers.googleblog.com/2026/09/leverage-gemma-4-android-studio-quail.html>)</sup>.
-- La **"taxe" MCP** : la récupération des schémas peut ajouter des coûts cachés par serveur avant la première invite ; Claude Code reporte le chargement des schémas jusqu'à l'utilisation de l'outil pour réduire la surcharge <sup>[14](<https://okaneland.com/study/the-mcp-context-tax/>)</sup>.
-- La **qualité du RAG dépend du modèle d'embedding** : de mauvais traducteurs peuvent mal classer les politiques de remboursement ou manquer des détails critiques, compromettant la précision de la récupération <sup>[15](<https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without>)</sup>.
+## Agent Systems & Tooling
+- Google’s AI Agents Challenge highlights winning patterns: bidirectional MCP for inter-agent comms, async event buses, unified validation for fallbacks, and tiered routing to cut inference costs <sup>[4](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Databricks traces silent MCP tool failures causing $499k in wasted tokens and $1.2M annual productivity loss; fixes took ~1 hour, underscoring the need for tool-call tracing and LLM-tolerant input handling <sup>[5](<https://www.databricks.com/blog/how-we-eliminated-1-million-year-wasted-ai-agent-spend-one-hour>)</sup>.
+- FrontierHarness Eval shows coding-agent harnesses with similar pass rates can vary up to 17x in cost; Codex leads at 66.7% pass rate with moderate cost, while Exo is cheapest and DSH Minimal fastest <sup>[6](<https://runta.com/blog/introducing-frontierharness-eval/>)</sup>.
+- GitHub details cost-efficiency tactics for AI coding: optimize for task outcome over token count, as concise tool responses can increase calls and slow progress <sup>[7](<https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/>)</sup>.
+- Hugging Face introduces Funes, a benchmark and method for giving coding agents persistent, owned memory via handoff/recall traces <sup>[8](<https://huggingface.co/blog/funes>)</sup>.
 
-## Insights MLOps et ingénierie
-- Les **systèmes de types comme oracles de recherche** : les modèles excellent davantage en **Rust/Lean** qu'en C++ grâce à des compilateurs plus stricts et des vérificateurs peu coûteux qui contraignent l'espace de recherche et améliorent la justesse <sup>[16](<https://hiraditya.github.io/posts/a-type-system-is-a-search-oracle/>)</sup>.
-- Les **petits modèles rattrapent leur retard** : les performances de raisonnement des petits LLMs s'améliorent rapidement, bien que les grands modèles restent dominants pour l'instant <sup>[17](<https://blog.dshr.org/2026/09/small-is-beautiful.html>)</sup>.
-- La **frontière de l'inférence efficace** : des techniques comme le dimensionnement des lots, le parallélisme, la quantification, l'optimisation des noyaux et le décodage spéculatif équilibrent les compromis latence/débit/qualité <sup>[18](<https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/>), [19](<https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/#quantization?utm_source=tldrai>)</sup>.
-- Le **RL de frontière pour les agents** : un post-entraînement SkyRL sur Qwen3.5-397B a amélioré le Pass@1 des APEX-Agents de **70 %**, soulignant l'importance des environnements robustes, de la comptabilité exacte des tokens, du RL asynchrone et de la conception du harnais à grande échelle <sup>[20](<https://www.mercor.com/blog/training-frontier-knowledge-work-agents-a-397b-rl-training-guide-with-skyrl/>)</sup>.
-- Les **boucles d'agents nécessitent des harnais** : les boucles autonomes d'objectifs efficaces nécessitent d'exposer les échecs, de localiser les capacités manquantes et de conserver les leçons pour les sessions futures <sup>[21](<https://jx0.ca/building-autonomous-goal-loops-that-deliver/>)</sup>.
+## MLOps & Benchmarks
+- MLCommons MLPerf Storage v3.0 adds KV cache, vector DB, and S3 object-storage tests, reflecting real-world AI bottlenecks in inference caches, indexes, and checkpoints <sup>[9](<https://mlcommons.org/2026/09/mlperf-storage-v3-0-results/>)</sup>.
 
-## DevOps et infrastructure
-- Les **migrations en direct GitHub Enterprise (ELM)** de GHES vers GitHub Enterprise Cloud (avec résidence des données) sont **GA**, permettant des migrations quasi sans temps d'arrêt pour les grands monodépôts avec synchronisation continue et basculement en quelques minutes <sup>[22](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>)</sup>.
-- **Kubernetes v1.37** active la **migration de version de stockage par défaut**, permettant aux administrateurs de migrer les ressources API stockées de manière déclarative via un objet StorageVersionMigration <sup>[23](<https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/>)</sup>.
-- **Apple simplifie l'abandon du support Intel** pour les développeurs macOS en facilitant la transition vers des builds arm64 uniquement, réduisant les tests et l'empreinte binaire <sup>[24](<https://reverseeverything.com/blog/apple-makes-it-easier-for-mac-developers-to-drop-intel-support/>)</sup>.
-- **DuckDB v2.0-alpha** crée une branche avec gel des fonctionnalités, se concentrant sur les tests et les corrections de bugs en vue d'une sortie v2.0 prévue fin octobre <sup>[25](<https://duckdb.org/2026/09/02/try-duckdb-20-alpha.html>)</sup>.
-- **PyTorch 2.14** ajoute des noyaux générés par NVGEMM CuTeDSL, un nouveau backend nccl2 pour Distributed, la tolérance aux pannes comme concept de première classe dans c10d, l'algèbre linéaire native pour Apple Silicon et des formes dynamiques déclaratives <sup>[26](<https://pytorch.org/blog/pytorch-2-14-release-blog/>)</sup>.
-- Les instances **AWS EC2 R9g/R9gd** alimentées par **Graviton5** sont désormais GA <sup>[27](<https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/>)</sup>.
+## Cloud & Infrastructure
+- Netflix parallelizes Apache Spark experiments at production scale to expose memory/shuffle bottlenecks faster, replacing slow one-off tuning <sup>[10](<https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8>)</sup>.
+- Lyft migrates its streaming fleet from a custom Flink Kubernetes operator to the open-source Apache Flink Operator, using parallel operation and preserved contracts to simplify ownership <sup>[11](<https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250>)</sup>.
+- Cloudflare prototypes Cache Transcoding with Zstandard in Pingora, cutting text asset sizes to ~1/3 and unlocking petabytes of cache capacity with minimal CPU overhead <sup>[12](<https://blog.cloudflare.com/cache-transcoding/>)</sup>.
+- PostgreSQL 19’s WAIT FOR LSN enables read-your-own-writes consistency on replicas by waiting for a specific WAL position, avoiding primary pinning or sleep hacks <sup>[13](<https://boringsql.com/posts/read-your-own-writes/>)</sup>.
 
-## Outils et pratiques de développement
-- **GitHub Copilot** prend désormais en charge les **modèles par défaut gérés par l'entreprise** par équipe via `team-mappings.json`, avec des remplacements pour Business/Enterprise dans l'application, l'interface CLI et VS Code <sup>[28](<https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model>)</sup>.
-- **GitHub Copilot** respecte les **stratégies d'exclusion de contenu** dans l'application et l'interface CLI, empêchant l'utilisation des fichiers exclus comme contexte dans les flux de travail agentiques <sup>[29](<https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli>)</sup>.
-- **Cursor** permet des **agents cloud auto-hébergés** sur des machines gérées par l'utilisateur, avec des Lambda MicroVM pour un calcul quasi instantané et avec état dans les comptes AWS <sup>[30](<https://cursor.com/blog/self-hosted-machines>)</sup>.
-- **Nokia a utilisé Cursor** pour analyser **plus de 50 millions de lignes de code en deux semaines** avec deux ingénieurs, un travail qui aurait pris des mois avec des outils personnalisés <sup>[31](<https://cursor.com/blog/nokia>)</sup>.
-- Les **Docker Sandboxes** fournissent des flux de travail d'évaluation IA reproductibles, résolvant les problèmes de dérive d'environnement et de dépendances pour un benchmarking cohérent <sup>[32](<https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/>)</sup>.
-- **ECC** est un harnais d'ingénierie open-source pour les agents de codage, avec planification, tests, vérification, mémoire et analyse de sécurité, prenant en charge Claude Code et d'autres environnements <sup>[33](<https://github.com/affaan-m/ECC>)</sup>.
-- **OpenClaude** est un agent de codage CLI open-source prenant en charge plusieurs backends (API compatibles OpenAI, Gemini, GitHub Models, Codex, Ollama) <sup>[34](<https://github.com/Gitlawb/openclaude>)</sup>.
-- **Wigolo** est un outil d'intelligence web local-first pour les agents IA, permettant de rechercher, récupérer, explorer, extraire et mettre en cache sans clés API ni coûts par requête <sup>[35](<https://github.com/KnockOutEZ/wigolo>)</sup>.
+## Developer Tools & Data
+- AWS acquires DuckLabs to influence DuckDB’s roadmap, positioning DuckDB/DuckLake/Quack as S3-based analytics and AI agent foundations; DuckDB remains independent and open source <sup>[14](<https://www.linkedin.com/pulse/why-aws-bought-ducklabs-michael-driscoll-1gm7c/>)</sup>.
+- dbt-doctor is an open-source static analysis tool for dbt projects, flagging missing docs/tests, schema drift, stale models, DAG complexity, and governance gaps in CI or via agents <sup>[15](<https://github.com/northgraindata/dbt-doctor>)</sup>.
+- Keenable SELECT lets agents query the live web via read-only DuckDB, combining search, filtering, and AI extraction <sup>[16](<https://keenableai.github.io/select-showcase/>)</sup>.
+
+## Research & Forecasting
+- Google’s TimesFM-3 extends zero-shot time-series foundation models to multivariate forecasting with past/future covariates, targeting retail, observability, finance, and ops without fine-tuning <sup>[17](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>) — _latent.space_
-2. [Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>) — _venturebeat.com_
-3. [Claude Fable 5.1 made me a really nice animated pelican](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>) — _simonwillison.net_
-4. [Claude Fable 5.1 and Mythos 5.1](<https://www.anthropic.com/claude-fable-and-mythos-5-1>) — _anthropic.com_
-5. [Introducing Gemini 3.8 Flash and 3.8 Flash Cyber](<https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/>) — _deepmind.google_
-6. [llm-gemini 0.34](<https://simonwillison.net/2026/Sep/2/llm-gemini/>) — _simonwillison.net_
-7. [Introducing agentic video understanding with Gemini](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>) — _blog.google_
-8. [New Google AI Model Said to Narrow Gap on Coding Ability](<https://www.wsj.com/tech/ai/new-google-ai-model-said-to-narrow-gap-on-coding-ability-264c6052?st=TqBXaT&reflink=desktopwebshare_permalink>) — _wsj.com_
-9. [Atlas: A World Model for Spatial Intelligence](<https://www.worldlabs.ai/blog/atlas>) — _worldlabs.ai_
-10. [Building commerce agents with Claude](<https://claude.com/blog/claude-for-commerce-agents>) — _claude_
-11. [A guide to the anatomy of effective commerce agents](<https://claude.com/blog/the-anatomy-of-effective-commerce-agents>) — _claude_
-12. [What is Agentic Testing?](<https://theaiengineer.substack.com/p/what-is-agentic-testing-fa2>) — _theaiengineer.substack.com_
-13. [Leverage Android skills and Gemma 4 in Android Studio Quail 4](<https://android-developers.googleblog.com/2026/09/leverage-gemma-4-android-studio-quail.html>) — _android-developers.googleblog.com_
-14. [The MCP tax: what each server costs before your first prompt](<https://okaneland.com/study/the-mcp-context-tax/>) — _okaneland.com_
-15. [Why Your RAG System Is Only as Good as Its Translator Model](<https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without>) — _blog.bytebytego.com_
-16. [A Type System Is a Search Oracle](<https://hiraditya.github.io/posts/a-type-system-is-a-search-oracle/>) — _hiraditya.github.io_
-17. [Small Is Beautiful](<https://blog.dshr.org/2026/09/small-is-beautiful.html>) — _blog.dshr.org_
-18. [The efficient frontier of LLM inference](<https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/>) — _baseten.co_
-19. [The efficient frontier of LLM inference](<https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/#quantization?utm_source=tldrai>) — _baseten.co_
-20. [Training frontier knowledge work agents: A 397B RL training guide with SkyRL](<https://www.mercor.com/blog/training-frontier-knowledge-work-agents-a-397b-rl-training-guide-with-skyrl/>) — _mercor.com_
-21. [Building Autonomous Goal Loops That Deliver](<https://jx0.ca/building-autonomous-goal-loops-that-deliver/>) — _jx0.ca_
-22. [Enterprise Live Migrations from GHES to ghe.com generally available](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>) — _github.blog_
-23. [Kubernetes v1.37: Storage Version Migration Enabled by Default](<https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/>) — _kubernetes.io_
-24. [Apple Makes It Easier for Mac Developers to Drop Intel Support](<https://reverseeverything.com/blog/apple-makes-it-easier-for-mac-developers-to-drop-intel-support/>) — _reverseeverything.com_
-25. [Try DuckDB v2.0-alpha](<https://duckdb.org/2026/09/02/try-duckdb-20-alpha.html>) — _duckdb.org_
-26. [PyTorch 2.14 Release Blog](<https://pytorch.org/blog/pytorch-2-14-release-blog/>) — _pytorch.org_
-27. [Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available](<https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/>) — _aws.amazon.com_
-28. [Enterprise-managed settings support any default model](<https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model>) — _github.blog_
-29. [Content exclusions generally available in Copilot app and CLI](<https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli>) — _github.blog_
-30. [Run cloud agents on machines you manage](<https://cursor.com/blog/self-hosted-machines>) — _cursor_
-31. [Nokia analyzes 50M+ lines of code in two weeks with Cursor](<https://cursor.com/blog/nokia>) — _cursor_
-32. [Building Reproducible AI Evaluation Workflows with Docker Sandboxes](<https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/>) — _docker.com_
-33. [ECC](<https://github.com/affaan-m/ECC>) — _github.com_
-34. [Openclaude](<https://github.com/Gitlawb/openclaude>) — _github.com_
-35. [Wigolo](<https://github.com/KnockOutEZ/wigolo>) — _github.com_
+1. [\[AINews\] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training](<https://www.latent.space/p/ainews-muse-spark-13-matches-gpt>) — _latent.space_
+2. [Meta Releases More Powerful AI Model, Edging Closer to Rivals](<https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODQwNzY0NiwiZXhwIjoxNzg5MDEyNDQ2LCJhcnRpY2xlSWQiOiJUS1FVQVVUOTZPVDEwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Lid2dpYcy9_z5AEIw7C2bxhfSjYXlXDa4ZshhXaUBjg>) — _bloomberg.com_
+3. [Google releases Gemini 3.8 Flash, its third Flash model in six weeks](<https://arstechnica.com/ai/2026/09/google-releases-gemini-3-8-flash-its-third-flash-model-in-six-weeks/>) — _arstechnica.com_
+4. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+5. [How we eliminated $1 million a year of wasted AI agent spend in one hour](<https://www.databricks.com/blog/how-we-eliminated-1-million-year-wasted-ai-agent-spend-one-hour>) — _databricks.com_
+6. [Introducing FrontierHarness Eval](<https://runta.com/blog/introducing-frontierharness-eval/>) — _runta.com_
+7. [How we make AI coding more cost efficient without sacrificing task quality](<https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/>) — _github.blog_
+8. [Give Your Coding Agents a Memory You Own](<https://huggingface.co/blog/funes>) — _huggingface.co_
+9. [MLCommons Releases New MLPerf Storage v3.0 Benchmark Results](<https://mlcommons.org/2026/09/mlperf-storage-v3-0-results/>) — _mlcommons.org_
+10. [Running Apache Spark experiments in my sleep (and on a plane)](<https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8>) — _netflixtechblog.medium.com_
+11. [Rerouting the Stream: How Lyft Moved to the Apache Flink Operator](<https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250>) — _eng.lyft.com_
+12. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
+13. [Read your own writes, off the primary](<https://boringsql.com/posts/read-your-own-writes/>) — _boringsql.com_
+14. [Why AWS Bought DuckLabs](<https://www.linkedin.com/pulse/why-aws-bought-ducklabs-michael-driscoll-1gm7c/>) — _linkedin.com_
+15. [dbt doctor](<https://github.com/northgraindata/dbt-doctor>) — _github.com_
+16. [Keenable SELECT showcase (Tool)](<https://keenableai.github.io/select-showcase/>) — _keenableai.github.io_
+17. [TimesFM-3: A zero-shot foundation model for multivariate forecasting](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>) — _research.google_
 
 
 ## Archive récente
