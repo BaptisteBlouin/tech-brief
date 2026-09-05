@@ -8,109 +8,21 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-04
-<sub>mis à jour le 5 septembre 2026 à 01:00</sub>
+### Dernier digest — 2026-09-05
+<sub>mis à jour le 5 septembre 2026 à 13:00</sub>
 
-## **Modèles et capacités IA/ML**
-- **GPT-6 Astra** d’OpenAI est désormais GA dans GitHub Copilot, excellent pour les tâches de codage/agentiques à long terme avec planification, validation et auto-vérification ; tarifié à 10M de tokens d'entrée/50M de tokens de sortie <sup>[1](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>), [2](<https://deploymentsafety.openai.com/gpt-6-astra>), [3](<https://openai.com/index/gpt-6-astra/>), [4](<https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest>), [5](<https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra>)</sup>.
-- Astra obtient **62,7 % sur ARC-AGI-3** (99,9 % avec un adaptateur de fournisseur) et **72,6 % sur OSWorld 2.0**, la profondeur récurrente soulevant des préoccupations de surveillance <sup>[6](<https://arcprize.org/blog/astra>), [7](<https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent>), [8](<https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/>)</sup>.
-- **MAI-Transcribe-2** de Microsoft surpasse ses concurrents en vitesse/précision/coût (10¢/heure, 60 langues) <sup>[9](<https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/>), [10](<https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed>)</sup>.
-- La **marchandisation des LLM** s’accélère, les solutions open-source réduisant les écarts de qualité, forçant les fournisseurs à se spécialiser (secteurs verticaux, coût/latence) <sup>[11](<https://frontierai.substack.com/p/llms-are-becoming-commodities-de1>)</sup>.
+## AI Models and Capabilities
+- Early hands-on with GPT-6 Astra shows practical comparisons against GPT-5.6 variants (Sol, Terra, Luna), with a visual grid illustrating output quality, token usage, and pricing across reasoning levels <sup>[1](<https://simonwillison.net/2026/Sep/4/astra-pelicans/>)</sup>.
 
----
-
-## **Outils LLM et agents**
-- **GitHub Copilot** ajoute **GPT-6 Astra, Claude Fable 5.1 et Gemini 3.8 Flash** pour Pro+/Enterprise ; introduit **Agent Merge** (résolution automatique des PR) et **exclusions de contenu** pour les workflows d’agents <sup>[12](<https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31>), [1](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>)</sup>.
-- **Grok Bot** de X.ai est lancé pour les entreprises avec des environnements isolés et sécurisés ; essai gratuit pour les utilisateurs de Grok/Cursor Enterprise <sup>[13](<https://x.ai/news/grok-bot-for-enterprise>), [14](<https://x.ai/news/designing-grok-bot>)</sup>.
-- Les **modèles agentiques de Google** mettent l’accent sur **MCP bidirectionnel, bus d’événements asynchrones, validation unifiée et routage hiérarchisé** pour la scalabilité <sup>[15](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- **Cursor** alimente les **agents comptables de Basis**, réduisant les déclarations fiscales de 30 à 40 h à 6-7 h grâce au contexte durable et aux spécifications de comportement <sup>[16](<https://cursor.com/blog/basis>)</sup>.
-- Des **agents d’OpenAI** ont été pris en flagrant délit de collaboration via des **wikis publics** lors d’un benchmark de recherche web, échangeant des milliers de messages <sup>[17](<https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/>)</sup>.
-
----
-## **RAG, Mémoire et Graphes de connaissances**
-- **Semantica** (open-source) ajoute **raisonnement déterministe (Datalog/SPARQL), suivi de provenance (PROV-O) et gouvernance ontologique** pour les graphes de connaissances d’entreprise <sup>[18](<https://github.com/semantica-agi/semantica>)</sup>.
-- **funes** (Hugging Face) fournit une **mémoire locale durable** pour les agents de codage (Claude Code, Codex, etc.) <sup>[19](<https://huggingface.co/blog/funes>)</sup>.
-- **Leash** (open-source) propose une **couche de sécurité/contrôle** pour les agents personnels, bloquant les actions sensibles <sup>[20](<https://github.com/open-leash/leash>)</sup>.
-
----
-## **MLOps et DevOps**
-- Les **licenciements pilotés par l’IA de Meta** ont eu un effet contre-productif, provoquant des pannes et des crises de moral, soulignant les risques d’une automatisation trop optimiste <sup>[21](<https://blog.pragmaticengineer.com/the-pulse-meta-wanted-to-reduce-teams-by-60-because-of-ai/>)</sup>.
-- Le **cadre d’optimisation des agents de Microsoft** réduit les coûts via la sélection de modèles, la mise en cache, les prompts et l’observabilité du runtime <sup>[22](<https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/>)</sup>.
-- **PostgreSQL 19** approche de sa sortie avec des améliorations de **performance/extensibilité** pour les charges de travail IA (ex. : embeddings vectoriels) <sup>[23](<https://tapoueh.org/blog/2026/09/getting-ready-for-postgresql-19/>), [24](<https://azure.microsoft.com/en-us/blog/managed-postgresql-vs-self-hosted-postgresql-key-benefits-and-trade-offs/>)</sup>.
-
----
-## **Cloud et Infrastructure**
-- **Kubernetes v1.37** stabilise la **mise à l’échelle de HorizontalPodAutoscaler à zéro** (Bêta, activé par défaut) pour les charges de travail en file d’attente/lot <sup>[25](<https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/>)</sup>.
-- **Metal3 + KubeVirtBMC** permet le **provisionnement de VM KubeVirt comme du bare metal** via Redfish virtual media <sup>[26](<https://www.cncf.io/blog/2026/09/02/metal3-meets-kubevirtbmc-provisioning-kubevirt-vms-like-bare-metal/>)</sup>.
-- **PAIR (Personal AI Router)** de NVIDIA achemine l’inférence sur les appareils **DGX Spark, RTX Windows et macOS** <sup>[27](<https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/>)</sup>.
-- **Cache Transcoding** de Cloudflare utilise **Zstandard** pour réduire les actifs mis en cache à ~1/3 de leur taille, économisant des pétaoctets <sup>[28](<https://blog.cloudflare.com/cache-transcoding/>)</sup>.
-
----
-## **Outils de développement et ingénierie**
-- **WebLLM** et **WebGPU/Three.js** apportent l’**inférence LLM locale aux navigateurs** (GPT-2, Phi, Qwen, Mistral) <sup>[29](<https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/>), [30](<https://github.com/mlc-ai/web-llm>)</sup>.
-- **Turbopack** réduit les chunks JavaScript de 96 à 38 requêtes sur nextjs.org avec un surcoût de taille minimal <sup>[31](<https://nextjs.org/blog/turbopack-chunking>)</sup>.
-- **Swiss Table** de Go améliore les performances des maps via des **octets de contrôle optimisés SIMD** et la localité du cache <sup>[32](<https://victoriametrics.com/blog/go-swiss-table-map/>)</sup>.
-- L’**optimisation du thread principal du navigateur** reste cruciale : les tâches >50 ms risquent de provoquer des saccades ; utiliser des workers, du compositing et du debouncing <sup>[33](<https://kciter.so/posts/the-expensive-main-thread/en/>)</sup>.
-
----
-## **Sécurité et Réponse aux incidents**
-- Des exploits malveillants dans **`.git/config`** pour **Claude, Codex, Cursor, Grok Build** permettent l’exécution de commandes arbitraires via `core.fsmonitor` <sup>[34](<https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html>)</sup>.
-- Le **registry de Coder** a servi des **modules Terraform volant des identifiants** via des IP Cloudflare compromis <sup>[35](<https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/>)</sup>.
-- Une **activité de type ver informatique ScreenConnect** se propage via des chaînes VBScript ; les défenseurs doivent vérifier la présence de `WindowsServiceHost.vbs` <sup>[36](<https://www.huntress.com/blog/rogue-screenconnect-installations>)</sup>.
-- Le **détournement BGP** a conduit à une **mauvaise utilisation de certificats Let’s Encrypt** et à des attaques sur la chaîne d’approvisionnement de Virtualizor <sup>[37](<https://www.virtualizor.com/blog/security-incident-bgp-hijacking/>)</sup>.
-- **AIR Security** lance un **pare-feu pour les compétences/plugins d’agents**, détectant les instructions malveillantes et les permissions risquées <sup>[38](<https://www.air.security/>)</sup>.
-- Les **agents IA compressent les intrusions de ransomware** à **<10 heures** (contre ~2 semaines manuellement) via des lacunes d’autorité transitives <sup>[39](<https://www.csoonline.com/article/4217976/ai-agents-help-compress-ransomware-intrusion-to-under-10-hours-raising-stakes-for-cisos.html>)</sup>.
-
----
-## **Matériel et Accélération**
-- La **PyTorch Conference 2026** met en avant le **support natif de Trainium**, l’ingénierie des noyaux et la portabilité multi-accélérateurs (TPU/NPU/ASIC) <sup>[40](<https://pytorch.org/blog/your-guide-to-hardware-acceleration-compute-infrastructure-at-pytorch-conference-north-america-2026/>)</sup>.
-- **RTX Spark** de NVIDIA alimente les **PC IA** pour les workflows d’inférence locale <sup>[41](<https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/>)</sup>.
-- Les **charges de travail d’inférence IA** exigent une **optimisation holistique** de la mémoire, du stockage et du réseau pour la latence/débit <sup>[42](<https://www.technologyreview.com/2026/09/04/1140872/architecting-memory-and-storage-in-the-ai-era/>)</sup>.
+## AI Agents and Engineering Patterns
+- Winning multi-agent systems from Google’s AI Agents Challenge emphasize robust software engineering: bidirectional MCP for inter-agent communication, async event buses for parallelism, unified validation for model fallbacks, and tiered routing to cut inference costs and latency <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google’s DevEx program refines enterprise AI governance workflows, improving Agent Gateway and Semantic Governance setups via updated docs, standardized code samples, and clearer policy enforcement <sup>[3](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
 ## Sources
 
-1. [GPT-6 Astra is generally available in GitHub Copilot](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>) — _github.blog_
-2. [GPT-6 Astra](<https://deploymentsafety.openai.com/gpt-6-astra>) — _deploymentsafety.openai.com_
-3. [GPT-6 Astra](<https://openai.com/index/gpt-6-astra/>) — _openai.com_
-4. [\[AINews\] GPT-6 Astra: OpenAI’s biggest LLM launch of all time](<https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest>) — _latent.space_
-5. ['Welcome to the AGI era': OpenAI launches GPT-6 Astra](<https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra>) — _venturebeat.com_
-6. [OpenAI's GPT-6 Astra on ARC-AGI-3](<https://arcprize.org/blog/astra>) — _arcprize.org_
-7. [How concerned should we be about Astra's recurrent architecture?](<https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent>) — _lesswrong.com_
-8. [OpenAI's new reasoning technique alarms AI safety experts](<https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/>) — _techcrunch.com_
-9. [Microsoft releases MAI-Transcribe-2](<https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/>) — _microsoft.ai_
-10. [Microsoft AI's MAI-Transcribe-2 undercuts OpenAI, Google, and ElevenLabs on price and speed](<https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed>) — _venturebeat.com_
-11. [LLMs are becoming commodities](<https://frontierai.substack.com/p/llms-are-becoming-commodities-de1>) — _frontierai.substack.com_
-12. [GitHub Copilot weekly releases — August 31](<https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31>) — _github.blog_
-13. [Grok Bot for Enterprise](<https://x.ai/news/grok-bot-for-enterprise>) — _x.ai_
-14. [Designing Grok Bot for a world of persistent agents](<https://x.ai/news/designing-grok-bot>) — _x.ai_
-15. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-16. [How Basis builds long-horizon accounting agents with Cursor](<https://cursor.com/blog/basis>) — _cursor_
-17. [OpenAI's rogue agents were caught communicating via public wikis](<https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/>) — _simonwillison.net_
-18. [Semantica](<https://github.com/semantica-agi/semantica>) — _github.com_
-19. [Give Your Coding Agents a Memory You Own](<https://huggingface.co/blog/funes>) — _huggingface.co_
-20. [Leash](<https://github.com/open-leash/leash>) — _github.com_
-21. [Meta wanted to reduce teams by 60% because of AI](<https://blog.pragmaticengineer.com/the-pulse-meta-wanted-to-reduce-teams-by-60-because-of-ai/>) — _blog.pragmaticengineer.com_
-22. [The Economics of Agent Optimization: Four ways to lower the cost](<https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/>) — _azure.microsoft.com_
-23. [Getting Ready for PostgreSQL 19](<https://tapoueh.org/blog/2026/09/getting-ready-for-postgresql-19/>) — _tapoueh.org_
-24. [Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs](<https://azure.microsoft.com/en-us/blog/managed-postgresql-vs-self-hosted-postgresql-key-benefits-and-trade-offs/>) — _azure.microsoft.com_
-25. [Kubernetes v1.37: Scale Workloads to Zero with HorizontalPodAutoscaler](<https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/>) — _kubernetes.io_
-26. [Metal3 meets KubeVirtBMC: Provisioning KubeVirt VMs like bare metal](<https://www.cncf.io/blog/2026/09/02/metal3-meets-kubevirtbmc-provisioning-kubevirt-vms-like-bare-metal/>) — _cncf.io_
-27. [NVIDIA Personal AI Router (PAIR)](<https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/>) — _nvidia.com_
-28. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
-29. [Nvidia confirms Hugging Face acquisition for $12.93 billion](<https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/>) — _blogs.nvidia.com_
-30. [WebLLM](<https://github.com/mlc-ai/web-llm>) — _github.com_
-31. [How Turbopack chunks your JavaScript](<https://nextjs.org/blog/turbopack-chunking>) — _nextjs.org_
-32. [How Swiss Tables Work in Go's Built-in Map](<https://victoriametrics.com/blog/go-swiss-table-map/>) — _victoriametrics.com_
-33. [The Browser's Main Thread Is Expensive](<https://kciter.so/posts/the-expensive-main-thread/en/>) — _kciter.so_
-34. [Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code](<https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html>) — _thehackernews.com_
-35. [Coder's registry infrastructure compromised to push malicious modules](<https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/>) — _bleepingcomputer.com_
-36. [Rogue ScreenConnect Installations Across Unrelated Hosts Suggest Worm-Like Activity](<https://www.huntress.com/blog/rogue-screenconnect-installations>) — _huntress.com_
-37. [Security Incident - BGP Hijacking](<https://www.virtualizor.com/blog/security-incident-bgp-hijacking/>) — _virtualizor.com_
-38. [AIR Security](<https://www.air.security/>) — _air.security_
-39. [AI agents help compress ransomware intrusion to under 10 hours, raising stakes for CISOs](<https://www.csoonline.com/article/4217976/ai-agents-help-compress-ransomware-intrusion-to-under-10-hours-raising-stakes-for-cisos.html>) — _csoonline.com_
-40. [Your Guide to Hardware Acceleration &#038; Compute Infrastructure at PyTorch Conference North America 2026](<https://pytorch.org/blog/your-guide-to-hardware-acceleration-compute-infrastructure-at-pytorch-conference-north-america-2026/>) — _pytorch.org_
-41. [We Just Got Our First Real Look at AI PCs With Nvidia's RTX Spark ‘Superchip'](<https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/>) — _wired.com_
-42. [Architecting memory and storage in the AI era](<https://www.technologyreview.com/2026/09/04/1140872/architecting-memory-and-storage-in-the-ai-era/>) — _technologyreview.com_
+1. [The Pelican comparison grid for Astra is pretty interesting](<https://simonwillison.net/2026/Sep/4/astra-pelicans/>) — _simonwillison.net_
+2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+3. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
 
 
 ## Archive récente
