@@ -8,27 +8,23 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-05
-<sub>mis à jour le 6 septembre 2026 à 01:01</sub>
+### Dernier digest — 2026-09-06
+<sub>mis à jour le 6 septembre 2026 à 13:01</sub>
 
-## Modèles d'IA et capacités
-- Les premiers tests pratiques avec GPT-6 Astra montrent des comparaisons concrètes avec les variantes de GPT-5.6 (Sol, Terra, Luna), avec une grille visuelle illustrant la qualité de sortie, l'utilisation des tokens et les tarifs selon les niveaux de raisonnement <sup>[1](<https://simonwillison.net/2026/Sep/4/astra-pelicans/>)</sup>.
+## AI Agents and LLM Engineering
+- Winning multi-agent systems in Google’s AI Agents Challenge emphasize software engineering over raw model power: bidirectional MCP for inter-agent communication, async event buses for parallelism, unified validation for fallbacks, and tiered routing to cut inference costs and latency <sup>[1](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google’s DevEx program refines enterprise AI governance via sprint testing, improving Agent Gateway and Semantic Governance setup, extension security, and policy enforcement with updated docs and code samples <sup>[2](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
+- GPT-6 Astra is introduced for developers, showcasing stronger prompt understanding, attention to detail, and advanced 3D modeling capabilities, including renderings of animals and complex scenes <sup>[3](<https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/>)</sup>.
 
-## Agents IA et modèles d'ingénierie
-- Les systèmes multi-agents gagnants du défi Google AI Agents Challenge mettent l'accent sur une ingénierie logicielle robuste : MCP bidirectionnel pour la communication inter-agents, bus d'événements asynchrones pour le parallélisme, validation unifiée pour les replis de modèles, et routage hiérarchisé pour réduire les coûts et la latence d'inférence <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Le programme DevEx de Google affine les flux de travail de gouvernance IA en entreprise, améliorant les configurations Agent Gateway et Semantic Governance grâce à des documentations mises à jour, des exemples de code standardisés et une application plus claire des politiques <sup>[3](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
-- Grok Bot simplifie la configuration des agents en quelques clics et une connexion navigateur, permettant une mise en place rapide pour des flux de travail comme des bulletins d'actualités personnalisés ou la surveillance des tickets de support Freshdesk, sans coller de code manuel, de JSON de serveur MCP ou d'identifiants API <sup>[4](<https://www.latent.space/p/grok-bot>)</sup>.
-- Les agents de codage sur macOS peuvent désormais utiliser Blender via son API Python, permettant la génération et l'affinage itératifs de scènes (par exemple, rendre un pélican à vélo et l'enrichir avec des arrière-plans et des détails) via des invites en langage naturel <sup>[5](<https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/>)</sup>.
-- Les agents CX en production nécessitent après le lancement une attention particulière sur l'observabilité, la surveillance des défaillances et l'amélioration continue à partir de conversations réelles avec les clients, avec des conseils des équipes de Lyft, Vodafone et LATAM Airlines pour maintenir la qualité des prompts, détecter tôt les modes de défaillance et choisir des architectures résilientes <sup>[6](<https://blog.bytebytego.com/p/ep224-mcp-vs-rag-vs-ai-agents>)</sup>.
+## Software Engineering and Technical Debt
+- Zach Kehs argues that unlike physical structures, software can always degrade further—new layers of indirection or performance regressions have no theoretical limit, highlighting the risks of unbounded technical debt <sup>[4](<https://simonwillison.net/2026/Sep/6/zach-kehs/>)</sup>.
 
 ## Sources
 
-1. [The Pelican comparison grid for Astra is pretty interesting](<https://simonwillison.net/2026/Sep/4/astra-pelicans/>) — _simonwillison.net_
-2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-3. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-4. [OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot](<https://www.latent.space/p/grok-bot>) — _latent.space_
-5. [Using Blender with coding agents on macOS](<https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/>) — _simonwillison.net_
-6. [EP224: MCP vs RAG vs AI Agents](<https://blog.bytebytego.com/p/ep224-mcp-vs-rag-vs-ai-agents>) — _blog.bytebytego.com_
+1. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+2. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+3. [Introducing GPT-6 Astra for developers](<https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/>) — _simonwillison.net_
+4. [Quoting Zach Kehs](<https://simonwillison.net/2026/Sep/6/zach-kehs/>) — _simonwillison.net_
 
 
 ## Archive récente
