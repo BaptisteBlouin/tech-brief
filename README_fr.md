@@ -8,259 +8,55 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### 🗓️ Récap de la semaine (du 2026-08-31 au 2026-09-06)
-<sub>mis à jour le 7 septembre 2026 à 01:03</sub>
+### Dernier digest — 2026-09-07
+<sub>mis à jour le 7 septembre 2026 à 13:00</sub>
 
-## Modèles d'IA et Capacités
-- OpenAI lance **GPT-6 Astra** (GA), un modèle de transformateur en boucle tarifé à **10 $ / 50 $ par million de jetons d'entrée/sortie**, s'approchant de la saturation sur FrontierMath (97,6 %) et ARC-AGI-3 (99,9 %), et classé comme **Critique** selon le cadre de préparation d'OpenAI <sup>[1](<https://www.latent.space/p/astra>), [2](<https://simonwillison.net/2026/Sep/3/gpt6-astra/>), [3](<https://openai.com/index/safety-overview-gpt-6-astra>), [4](<https://openai.com/index/path-to-astra/>), [5](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>), [6](<https://deploymentsafety.openai.com/gpt-6-astra>), [7](<https://openai.com/index/gpt-6-astra/>), [8](<https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest>), [9](<https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra>), [10](<https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/>)</sup>.
-- Astra obtient **62,7 % sur ARC-AGI-3** (99,9 % avec un adaptateur de fournisseur) et **72,6 % sur OSWorld 2.0**, la profondeur récurrente soulevant des préoccupations en matière de surveillance <sup>[11](<https://arcprize.org/blog/astra>), [12](<https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent>), [13](<https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/>)</sup>.
-- Google lance **Gemini 3.8 Flash** (et **3.8 Flash Cyber** pour les défenseurs) à **0,75 $ / 3,75 $ par million de jetons d'entrée/sortie**, avec des gains majeurs en génie logiciel, tâches d'agents et raisonnement en plusieurs étapes <sup>[14](<https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/>), [15](<https://simonwillison.net/2026/Sep/2/llm-gemini/>), [16](<https://arstechnica.com/ai/2026/09/google-releases-gemini-3-8-flash-its-third-flash-model-in-six-weeks/>), [17](<https://blog.cloudflare.com/vulnerability-discovery-remediation/>), [18](<https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot>), [19](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/>)</sup>.
-- Meta lance **Muse Spark 1.3**, égalant GPT-5.6-Sol et se classant au 3e rang mondial (AAII), avec des **réductions de coûts d'entraînement >90 %** pour l'utilisation de données opt-in et **~20 % d'appels d'outils en moins / 25 % de jetons en moins** dans les tests de code <sup>[20](<https://www.latent.space/p/ainews-muse-spark-13-matches-gpt>), [21](<https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODQwNzY0NiwiZXhwIjoxNzg5MDEyNDQ2LCJhcnRpY2xlSWQiOiJUS1FVQVVUOTZPVDEwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Lid2dpYcy9_z5AEIw7C2bxhfSjYXlXDa4ZshhXaUBjg>), [22](<https://research.meta.ai/blog/introducing-muse-spark-1-3>), [23](<https://developer.meta.com/ai/models/muse-spark/>)</sup>.
-- Anthropic lance **Claude Fable 5.1** (GA) avec des **lectures de cache 75 % moins chères** mais **~70 % d'utilisation de jetons de sortie en plus**, ce qui donne une **augmentation nette du coût par tâche d'environ 20 %** pour les sessions longues ; il établit un nouvel SOTA en matière de codage/connaissances et obtient **52,6 % sur Terminal-Bench-Science 0.1** <sup>[24](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>), [25](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>), [26](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>), [27](<https://www.anthropic.com/claude-fable-and-mythos-5-1>)</sup>.
-- La **compréhension vidéo par agent** de Google pour Gemini réduit les jetons de **jusqu'à 88 %**, les coûts de **jusqu'à 66 %**, et améliore la qualité de **jusqu'à 7 %** <sup>[28](<https://deepmind.google/blog/introducing-agentic-video-in-gemini/>), [29](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>)</sup>.
-- Google présente **TimesFM-3**, un modèle de fondation de séries temporelles zero-shot à 330 millions de paramètres pré-entraîné sur **>1 000 milliards de points temporels**, prenant en charge la prévision multivariée sans réglage fin <sup>[30](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>), [31](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>)</sup>.
-- Google DeepMind lance **WeatherNext 3**, un modèle météo par IA doté de données satellites en temps réel, de rafraîchissements horaires, d'une résolution plus élevée et de variables d'énergie propre <sup>[32](<https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/>)</sup>.
-- **Atlas** est un nouveau modèle du monde pour l'intelligence spatiale, pré-entraîné à partir de zéro sur du texte, des images, de la vidéo et de la 3D pour générer, reconstruire et simuler des mondes <sup>[33](<https://www.worldlabs.ai/blog/atlas>)</sup>.
-- **MAI-Transcribe-2** de Microsoft surpasse ses concurrents en termes de vitesse, de précision et de coût (**0,10 $/heure, 60 langues**) <sup>[34](<https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/>), [35](<https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed>)</sup>.
-- La **commoditisation des LLM** s'accélère à mesure que l'open-source réduit les écarts de qualité, forçant les fournisseurs à se spécialiser (verticaux, coût/latence) <sup>[36](<https://frontierai.substack.com/p/llms-are-becoming-commodities-de1>)</sup>.
+## AI Models and Research
+- OpenAI publishes details on its progress toward Recursive Self-Improvement (RSI), framing it as a step toward AGI and advocating for public transparency and governance of highly capable systems <sup>[1](<https://openai.com/index/research-acceleration-view-inside-openai/>)</sup>.
+- OpenAI also launches an AI program with AIRPPU and WAN-IFRA to support Ukrainian news organizations in strengthening innovation and independent journalism <sup>[2](<https://openai.com/index/supporting-independent-journalism-in-ukraine>)</sup>.
 
----
+## Agentic Systems and Tooling
+- Google’s AI Agents Challenge highlights that top multi-agent systems rely on software engineering patterns: bidirectional MCP for inter-agent communication, async event buses for parallel execution, unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[3](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Spotify’s Portal routes bulk I/O (e.g., reading files) to lightweight, declarative modes using cheaper models (Gemini 2.5 Flash), cutting Claude Code token usage by 90% and reserving frontier models for complex reasoning <sup>[4](<https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90>)</sup>.
+- Governed agentic analytics should avoid free-form SQL against inconsistent metadata; instead, use verified semantic layers, parameterized calls, and explicit refusal paths, reserving open-ended SQL for human inspection <sup>[5](<https://www.eckerson.com/articles/configuring-agentic-ai-analytics-from-free-text-to-sql-to-model-context-protocol>)</sup>.
+- Nao recommends starting agentic analytics with a focused use case, measuring results, and improving data models before investing in a full semantic layer <sup>[6](<https://www.youtube.com/watch?v=BbWfELhzQRU>)</sup>.
+- A primer explains how context, semantic, and ontology layers help agents interpret data, but humans must keep the knowledge accurate and current <sup>[7](<https://motherduck.com/blog/context-layer-vs-semantic-layer-ontology/>)</sup>.
 
-## Outils pour LLM, Agents et RAG
-- **GitHub Copilot** ajoute **GPT-6 Astra, Claude Fable 5.1 et Gemini 3.8 Flash** pour Pro+/Enterprise ; introduit **Agent Merge (résolution automatique de PR)** et des **exclusions de contenu** pour les flux de travail d'agents <sup>[37](<https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31>), [5](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>)</sup>.
-- **Cursor** permet d'exécuter des **agents cloud auto-hébergés** sur des machines gérées par l'utilisateur (Lambda MicroVMs) et alimente les **agents comptables de Basis**, réduisant les déclarations fiscales de 30 à 40 heures à 6 à 7 heures grâce à un contexte persistant <sup>[38](<https://cursor.com/blog/self-hosted-machines>), [39](<https://cursor.com/blog/basis>)</sup>.
-- Les **motifs d'agents de Google** mettent l'accent sur le **MCP bidirectionnel, les bus d'événements asynchrones, la validation unifiée et le routage hiérarchisé** pour l'évolutivité <sup>[40](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [41](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [42](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- L'**agent de support de Pinecone (Nexus)** résout **55,1 % des tickets de manière autonome** (contre 24,6 %) en consultant des artefacts de connaissances internes <sup>[43](<https://www.pinecone.io/blog/support-agent-nexus/>)</sup>.
-- **Weaviate** détaille le **RAG à interaction tardive** pour extraire le sens des graphiques/tableaux dans les PDF, en évitant l'OCR et l'extraction de texte <sup>[44](<https://weaviate.io/blog/charts-tables-pdfs>)</sup>.
-- **Hugging Face** lance **@huggingface/kernels** (plus de 200 noyaux WebGPU) et **Funes** (mémoire persistante pour les agents de codage) <sup>[45](<https://huggingface.co/blog/webgpu-kernels>), [46](<https://huggingface.co/blog/funes>)</sup>.
-- **Meta lance Muse Code**, un agent de codage de terminal/CI doté de fonctionnalités de planification, d'édition, d'exécution de commandes et de sandboxing du SE <sup>[47](<https://dev.meta.ai/>)</sup>.
-- **OpenAI** permet à **ChatGPT de se connecter à des données de santé de confiance (DSE, recherche)** et teste une **tarification basée sur les résultats** <sup>[48](<https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources>), [49](<https://thenextweb.com/news/openai-outcome-based-pricing-enterprise>)</sup>.
-- **Anthropic** annonce les **Enterprise Frontier Safeguards (EFS)**, combinant une conservation nulle des données avec la détection des utilisations abusives et un stockage cloud contrôlé par le client <sup>[50](<https://www.anthropic.com/news/enterprise-frontier-safeguards>), [51](<https://www.anthropic.com/news/enterprise-frontier-safeguards>)</sup>.
-- **Les agents de commerce sur Claude** affichent des **paniers jusqu'à 35 % plus volumineux** et un **taux de finalisation des achats supérieur de 60 %** <sup>[52](<https://claude.com/blog/claude-for-commerce-agents>), [53](<https://claude.com/blog/the-anatomy-of-effective-commerce-agents>)</sup>.
-- **« Taxe » MCP** : la récupération de schémas peut engendrer des coûts cachés par serveur avant le premier prompt ; **Claude Code diffère le chargement des schémas** jusqu'à l'utilisation de l'outil <sup>[54](<https://okaneland.com/study/the-mcp-context-tax/>)</sup>.
-- **La qualité du RAG repose sur le modèle d'intégration (embedding)** : de mauvaises intégrations peuvent mal classifier les politiques ou omettre des détails cruciaux <sup>[55](<https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without>)</sup>.
-- **Semantica** (open-source) ajoute un **raisonnement déterministe (Datalog/SPARQL), un suivi de la provenance et une gouvernance des ontologies** pour les graphes de connaissances d'entreprise <sup>[56](<https://github.com/semantica-agi/semantica>)</sup>.
-- **Leash** (open-source) offre une **couche de sécurité/contrôle** pour les agents personnels, limitant les actions sensibles <sup>[57](<https://github.com/open-leash/leash>)</sup>.
+## MLOps and Data Engineering
+- Vortex, an open-source columnar format, streams training data from S3 to GPUs with minimal copying, using lightweight encodings, layout-aware pruning, and zero-copy memory paths to reduce CPU/NVMe bottlenecks <sup>[8](<https://www.infoq.com/presentations/vortex-columnar-file-format-gpu-streaming/>)</sup>.
+- Polars 2.0 pre-release switches the streaming engine as the default for lazy queries, lowering memory use and speeding execution, while tightening type coercion and removing deprecated APIs to fail fast on mismatches <sup>[9](<https://pola.rs/posts/announcing-polars-2/>)</sup>.
+- Sail 0.7 adds stateless compute with durable job state, persisting shuffle outputs as compressed Arrow streams and supporting checkpoints to improve resilience under preemption <sup>[10](<https://lakesail.com/blog/sail-0-7-blocking-shuffle-checkpoint/>)</sup>.
+- DuckFlight enables PostgreSQL tools and Arrow Flight SQL clients to read/write live DuckDB databases without a separate service or data copying <sup>[11](<https://github.com/sidequery/duckflight-extension>)</sup>.
 
----
+## DevOps and Infrastructure
+- Meta’s ZGateway proxy in front of ZippyDB reduces client connection fan-in by ~97–98%, enables batching/coalescing across clients, rejects noisy tenant traffic, and centralizes failover/load-balancing policies <sup>[12](<https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/>)</sup>.
+- A real-world Postgres example shows COPY reducing a 100,000-row load from 41 minutes (row-by-row) to 11 seconds by eliminating round trips, parse overhead, and WAL flush barriers <sup>[13](<https://ankit-rana.com/logs/47-batching-one-round-trip-beats-a-thousand/>)</sup>.
+- Apache Iggy, a Rust streaming engine, offers Kafka-like logs with thread-per-core execution and modern Linux I/O, suited for low-latency single-node or simpler deployments, though Kafka remains stronger for replication and multi-region ops <sup>[14](<https://softwaremill.com/apache-kafka-vs-apache-iggy-same-log-different-engine/>)</sup>.
+- PostgreSQL 19 Beta 3 introduces temporal SQL, idempotent upsert-and-fetch, concurrent repacking, and stricter NULL handling <sup>[15](<https://tapoueh.org/blog/2026/09/getting-ready-for-postgresql-19/>)</sup>.
 
-## MLOps, DevOps et Ingénierie
-- **Datadog économise >1 million de dollars/mois** sur l'utilisation de l'IA grâce à des évaluations d'agents, des garde-fous de dépenses et l'optimisation du contexte <sup>[58](<https://www.datadoghq.com/blog/how-datadog-saves-money-by-optimizing-ai-usage/>)</sup>.
-- **Adobe** a construit un **autoscaler Kubernetes prédictif** utilisant un **modèle Bi-LSTM** pour prévoir la demande en GPU 10 minutes à l'avance <sup>[59](<https://www.cncf.io/blog/2026/08/28/scale-before-the-spike-predictive-autoscaling-for-gpu-workloads-on-kubernetes/>)</sup>.
-- **Grab opérationnalise la fiabilité des données** via des **problèmes de production de données** automatisés et une **API de santé des données** <sup>[60](<https://engineering.grab.com/data-mesh-at-grab-part-three>)</sup>.
-- **Twilio** améliore la fraîcheur des pipelines Hudi à l'échelle du pétaoctet en calculant le **« temps dans la file d'attente »** à partir des décalages Kafka <sup>[61](<https://www.infoq.com/articles/beyond-offset-lag-kafka-apache-hudi/>)</sup>.
-- **Apache Spark 4.1.0** introduit des pipelines déclaratifs, du streaming structuré en temps réel, des UDF/UDTF natifs Arrow et **VARIANT GA** <sup>[62](<https://spark.apache.org/releases/spark-release-4.1.0.html>)</sup>.
-- **vLLM v0.28.0** sort avec **584 commits de 270 contributeurs**, élargissant les capacités de service <sup>[63](<https://github.com/vllm-project/vllm/releases/tag/v0.28.0>)</sup>.
-- **PyTorch 2.14** ajoute des **noyaux générés par CuTeDSL NVGEMM**, un nouveau backend **nccl2**, la tolérance aux pannes et l'algèbre linéaire native pour Apple Silicon <sup>[64](<https://pytorch.org/blog/pytorch-2-14-release-blog/>)</sup>.
-- **DuckDB v2.0-alpha** se sépare avec un gel des fonctionnalités, ciblant une sortie fin octobre <sup>[65](<https://duckdb.org/2026/09/02/try-duckdb-20-alpha.html>)</sup>.
-- Les instances **AWS EC2 R9g/R9gd** (Graviton5) sont désormais en GA <sup>[66](<https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/>)</sup>.
-- **Netflix parallélise les expériences Apache Spark** pour identifier plus rapidement les goulots d'étranglement de la mémoire et du brassage <sup>[67](<https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8>)</sup>.
-- **Lyft migre** sa flotte de streaming vers l'**opérateur Apache Flink** open-source <sup>[68](<https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250>)</sup>.
-- **PostgreSQL 19** approche de sa sortie avec **WAIT FOR LSN** pour la cohérence de lecture sur les réplicas <sup>[69](<https://boringsql.com/posts/read-your-own-writes/>)</sup>.
-- **Kubernetes v1.37** fait passer la **prise en charge des ressources étendues DRA** en GA et stabilise le **passage à zéro du HorizontalPodAutoscaler** <sup>[70](<https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/>), [71](<https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/>)</sup>.
-- Les **migrations en direct GitHub Enterprise (ELM)** de GHES vers GitHub Enterprise Cloud sont en **GA**, permettant des migrations avec un temps d'indisponibilité quasi nul <sup>[72](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>)</sup>.
-- **GitHub Copilot** prend désormais en charge les **modèles par défaut gérés par l'entreprise** par équipe et les **politiques d'exclusion de contenu** <sup>[73](<https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model>), [74](<https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli>)</sup>.
-- **Cursor** a été utilisé par **Nokia** pour analyser **plus de 50 millions de lignes de code en deux semaines** avec deux ingénieurs <sup>[75](<https://cursor.com/blog/nokia>)</sup>.
-- **Docker Sandboxes** fournit des flux de travail d'évaluation de l'IA reproductibles <sup>[76](<https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/>)</sup>.
-- **ECC** est un harnais d'ingénierie open-source pour les agents de codage doté de fonctionnalités de planification, de test, de vérification, de mémoire et d'analyse de sécurité <sup>[77](<https://github.com/affaan-m/ECC>)</sup>.
-- **OpenClaude** est un agent de codage CLI open-source prenant en charge plusieurs backends <sup>[78](<https://github.com/Gitlawb/openclaude>)</sup>.
-- **Wigolo** est un outil d'intelligence Web local-first pour les agents d'IA <sup>[79](<https://github.com/KnockOutEZ/wigolo>)</sup>.
-- **Les entreprises technologiques (Uber, Pinterest, Stripe, etc.) signalent des économies de coûts d'IA d'environ 50 %** en acheminant les charges de travail plus simples vers des modèles ouverts <sup>[80](<https://newsletter.pragmaticengineer.com/p/the-pulse-tech-companies-move-to>)</sup>.
-- **Le cadre d'optimisation des agents de Microsoft** réduit les coûts grâce à la sélection des modèles, à la mise en cache, aux prompts et à l'observabilité à l'exécution <sup>[81](<https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/>)</sup>.
-- **Le « Second Cerveau Organisationnel » de Meta**, un agent d'IA, formalise l'expertise avec une architecture structurée et auditable <sup>[82](<https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/>)</sup>.
-- **Astra utilise des transformateurs en boucle** pour augmenter la capacité du modèle sans ajouter de paramètres, échangeant un coût de calcul plus élevé contre un stockage/RAM réduit <sup>[83](<https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html>)</sup>.
-
----
-## Cloud et Infrastructure
-- **SpaceX commence la fabrication interne de pales de turbines** pour réduire les délais de livraison des générateurs de **18 mois** pour les centres de données d'IA <sup>[84](<https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months>)</sup>.
-- **Le calcul pour l'IA pourrait faire face à un déficit de puissance d'environ 15 GW en 2027** en raison de goulots d'étranglement dans l'infrastructure des sites <sup>[85](<https://x.com/elonmusk/status/2093810234141634702>)</sup>.
-- **Anthropic signe un contrat cloud de 35 milliards de dollars avec Lambda** (soutenu par Nvidia), Nvidia détenant le bail du centre de données <sup>[86](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>)</sup>.
-- **Cloudflare prototype le transcodage de cache avec Zstandard**, réduisant la taille des actifs textuels à **~1/3** et libérant des pétaoctets de capacité de cache <sup>[87](<https://blog.cloudflare.com/cache-transcoding/>), [88](<https://blog.cloudflare.com/cache-transcoding/>), [89](<https://blog.cloudflare.com/cache-transcoding/>)</sup>.
-- **Lakebase Postgres de Neon** permet le redimensionnement automatique en temps réel du calcul en fonction du processeur, de la mémoire et de la taille de l'ensemble de travail du cache <sup>[90](<https://neon.com/blog/autoscaling-lakebase-postgres>)</sup>.
-- **Uppy 6.0** consolide les paquets et ajoute un **plugin S3** robuste avec des modes de signature explicites <sup>[91](<https://uppy.io/blog/uppy-6.0/>)</sup>.
-- **Wasmi 2.0** (interprète WebAssembly basé sur Rust) s'exécute **~2,2 fois plus vite** que la v1.0 <sup>[92](<https://wasmi-labs.github.io/blog/posts/wasmi-v2.0/>)</sup>.
-- **PAIR (Personal AI Router) de NVIDIA** achemine l'inférence entre les appareils **DGX Spark, RTX Windows et macOS** <sup>[93](<https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/>)</sup>.
-- **Metal3 + KubeVirtBMC** permet de provisionner des **machines virtuelles KubeVirt comme du matériel nu (bare metal)** via le média virtuel Redfish <sup>[94](<https://www.cncf.io/blog/2026/09/02/metal3-meets-kubevirtbmc-provisioning-kubevirt-vms-like-bare-metal/>)</sup>.
-
----
-## Outils et Pratiques de Développement
-- **GitHub CLI** prend désormais en charge l'option **`--attach`** pour télécharger des images/vidéos directement dans les tickets/PRs et ajoute des **dates d'expiration pour les budgets individuels des utilisateurs** <sup>[95](<https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments>), [96](<https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets>), [97](<https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories>)</sup>.
-- **Les agents de Vercel** utilisent un fichier **`DESIGN.md`** pour créer des pages fidèles à la marque avec des paramètres de design cohérents <sup>[98](<https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md>)</sup>.
-- **Memoryfields** propose un format portable **Markdown+YAML+SQLite** pour la mémoire des agents <sup>[99](<https://calpaterson.com/memoryfields.html>)</sup>.
-- **diffium-db** fournit une interface TUI en direct pour surveiller les modifications de base de données en temps réel <sup>[100](<https://denislavgavrilov.com/diffium-db-live-database-diff>)</sup>.
-- **GitHub Actions** ajoute une API REST pour les dépréciations de versions de runners, une nouvelle **permission vulnerability-alerts** et des propriétés de contexte de travail <sup>[101](<https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates>)</sup>.
-- **GitHub** dépréciera certains modèles Copilot sélectionnés (par ex., **Gemini 3.5/3.6 Flash, Kimi K2.7, Claude Opus 4.7**) le **2 octobre** <sup>[102](<https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models>)</sup>.
-- **GitHub rouvre les inscriptions Copilot Business/Enterprise** avec un contrôle plus strict et des frais de licence initiaux à partir du **1er octobre** <sup>[103](<https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups>)</sup>.
-- **GitHub** propose désormais **plusieurs configurations de publication de confiance par paquet npm**, une analyse des logiciels malveillants par étapes et une visibilité de l'historique par étapes <sup>[104](<https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm>)</sup>.
-- **WebLLM** et **WebGPU/Three.js** apportent l'inférence de LLM locaux aux navigateurs <sup>[105](<https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/>), [106](<https://github.com/mlc-ai/web-llm>)</sup>.
-- **Turbopack** réduit les blocs JavaScript de **96 à 38 requêtes** sur nextjs.org <sup>[107](<https://nextjs.org/blog/turbopack-chunking>)</sup>.
-- **La table suisse de Go** améliore les performances des tables de hachage (maps) grâce à des **octets de contrôle optimisés par SIMD** <sup>[108](<https://victoriametrics.com/blog/go-swiss-table-map/>)</sup>.
-- **Rust 1.98.1** corrige une erreur de compilation dans la génération de tables virtuelles (vtable) <sup>[109](<https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/>)</sup>.
-- **Python 3.15.0 RC2** est disponible, la version finale étant attendue en octobre <sup>[110](<https://simonwillison.net/2026/Sep/1/python-315-rc-2/>)</sup>.
-- **rustup 1.29.1** améliore la concurrence pour `rustup update` et les installations multi-composants <sup>[111](<https://blog.rust-lang.org/2026/09/01/Rustup-1.29.1/>)</sup>.
-- **Val Town** met l'accent sur l'**Answer Engine Optimization (AEO)** à mesure que les recommandations guidées par l'IA surpassent la recherche traditionnelle <sup>[112](<https://blog.val.town/aeo>)</sup>.
-- **Cline** a migré **11 millions d'utilisateurs** vers un SDK d'agent refactorisé via un déploiement A/B, réduisant les erreurs consécutives des agents de **6,34 % à 0,62 %** <sup>[113](<https://cline.ghost.io/how-we-migrated-11-million-users-to-clines-biggest-refactor>)</sup>.
-
----
-## Sécurité et Paysage des Menaces
-- **OpenAI et des centaines d'entreprises** appellent à une action rapide de cyberdéfense contre les attaques automatisées, exhortant à l'application de correctifs, au principe du moindre privilège et à des contrôles compensatoires <sup>[114](<https://openai.com/collective-cyberdefense/>)</sup>.
-- **Cloudflare intègre les modèles OpenAI Daybreak** (notamment **GPT-5.6 Cyber**) dans sa solution **Managed Defense** pour la découverte de vulnérabilités consciente du contexte <sup>[17](<https://blog.cloudflare.com/vulnerability-discovery-remediation/>)</sup>.
-- **CrowdStrike signale que 88 % des vulnérabilités observées** ont été exploitées dans les **48 heures** suivant la publication d'un PoC (janvier-juin 2026) <sup>[115](<https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/>)</sup>.
-- **Un détournement BGP** a redirigé le **trafic de mise à jour de Virtualizor** via un préfixe Softaculous piraté <sup>[116](<https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/>)</sup>.
-- **Des modules Apache malveillants** sur des serveurs du gouvernement brésilien ont fait du reverse-proxying pour rediriger les visiteurs vers de faux magasins d'applications <sup>[117](<https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html>)</sup>.
-- **Les robots humanoïdes Unitree G1** présentent des failles permettant une **exécution de code à distance (RCE) en root non authentifiée via Bluetooth** <sup>[118](<https://gbhackers.com/unitree-g1-humanoid-robot-flaws/>)</sup>.
-- **Une vulnérabilité RCE critique dans Langflow (CVE-2026-0768, CVSS 9.8)** fait l'objet d'exploitations actives <sup>[119](<https://www.darkreading.com/vulnerabilities-threats/critical-langflow-flaw-exploited-attacks-rise>)</sup>.
-- **Le ver Shai-Hulud** a compromis **plus de 400 paquets npm** en quelques heures via des pipelines signés piratés, ciblant désormais les jetons d'authentification des outils d'IA <sup>[120](<https://thenewstack.io/shai-hulud-pipeline-security/>)</sup>.
-- **Anthropic déploie les Enterprise Frontier Safeguards**, conservant les journaux d'activité dans un stockage cloud contrôlé par le client <sup>[51](<https://www.anthropic.com/news/enterprise-frontier-safeguards>)</sup>.
-- **Nvidia et CrowdStrike introduisent SafeMind**, une famille de modèles d'IA agents pour trouver et combler les chemins d'attaque <sup>[121](<https://www.wsj.com/cio-journal/nvidia-and-crowdstrike-develop-new-cybersecurity-ai-models-937bb2aa?st=th6257&reflink=desktopwebshare_permalink>)</sup>.
-- **Un service sur le dark Web a vendu plus de 153 millions de permis de conduire américains et canadiens** numérisés, attribués à une violation potentielle chez idscan.net <sup>[122](<https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/>)</sup>.
-- **Des exploits de `.git/config` malveillants** dans **Claude, Codex, Cursor, Grok Build** permettent l'exécution de commandes arbitraires via `core.fsmonitor` <sup>[123](<https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html>)</sup>.
-- **Le registre de Coder** a servi des **modules Terraform voleurs d'identifiants** via des adresses IP Cloudflare compromises <sup>[124](<https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/>)</sup>.
-- **Une activité de type ver ScreenConnect** se propage via des chaînes VBScript <sup>[125](<https://www.huntress.com/blog/rogue-screenconnect-installations>)</sup>.
-- **AIR Security** lance un **pare-feu pour les compétences/plugins d'agents** <sup>[126](<https://www.air.security/>)</sup>.
-- **Les agents d'IA compressent les intrusions de ransomware à moins de 10 heures** via des failles d'autorité transitive <sup>[127](<https://www.csoonline.com/article/4217976/ai-agents-help-compress-ransomware-intrusion-to-under-10-hours-raising-stakes-for-cisos.html>)</sup>.
-- **kernel.org signale que les scrapers d'IA** représentent désormais **~98 % du trafic de git.kernel.org (~6 millions de requêtes par jour)**, forçant la désactivation de fonctionnalités coûteuses <sup>[128](<https://people.kernel.org/monsieuricon/creepy-crawlies>)</sup>.
-- **Une faille de sécurité dans la configuration Docker par défaut d'Omarchy** a permis une escalade des privilèges root ; la mise à jour vers la version **4.0.1** atténue le problème <sup>[129](<https://0xcc.io/posts/omarchy-root-creds/>)</sup>.
-- **Amazon a corrigé une faille d'injection de prompt dans l'IDE Kiro** permettant l'exfiltration de données de fichiers `.env` <sup>[130](<https://mindgard.ai/blog/amazon-kiro-data-exfiltration>)</sup>.
-- **Des extensions Chrome/Edge** transformées en armes via une compromission de la chaîne d'approvisionnement ont volé des cryptomonnaies et des données de navigateur <sup>[131](<https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/>)</sup>.
-- **L'acteur de menace Fire Ant** a évolué de la compromission d'hyperviseurs vers des implants sur routeurs IOS XR <sup>[132](<https://www.sygnia.co/blog/fire-ant-evolves-from-hypervisors-to-trusted-infrastructure/>)</sup>.
-- **La campagne TerminalFix** déploie des tunnels inverses via une intrusion en plusieurs étapes, en abusant de LockScreenContentServer.exe et de la stéganographie PNG <sup>[133](<https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/>)</sup>.
+## Developer Tools and Practices
+- Warner Music Group built a resilient pipeline to ingest hand-edited Google Sheets into governed Databricks tables, handling shifting tabs, renamed headers, and late edits for executive reporting <sup>[16](<https://tech.wmg.com/handling-the-messy-reality-of-google-sheets-building-a-resilient-counterfeit-takedown-pipeline-d4c3502664bd>)</sup>.
+- A Lean 4-based Terraform alternative, "infra," reconciles declared resources with cloud state, demonstrating rapid IaC development with compile-time guarantees <sup>[17](<https://ngrislain.github.io/blog/2026-9-6-terraform-in-lean-4-if-it-compiles-it-will-likely-deploy/>)</sup>.
 
 ## Sources
 
-1. [GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour](<https://www.latent.space/p/astra>) — _latent.space_
-2. [GPT‑6 Astra](<https://simonwillison.net/2026/Sep/3/gpt6-astra/>) — _simonwillison.net_
-3. [Safety overview: GPT-6 Astra](<https://openai.com/index/safety-overview-gpt-6-astra>) — _openai.com_
-4. [Path to Astra: Critical Capabilities and Frontier Safeguards](<https://openai.com/index/path-to-astra/>) — _openai.com_
-5. [GPT-6 Astra is generally available in GitHub Copilot](<https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot>) — _github.blog_
-6. [GPT-6 Astra](<https://deploymentsafety.openai.com/gpt-6-astra>) — _deploymentsafety.openai.com_
-7. [GPT-6 Astra](<https://openai.com/index/gpt-6-astra/>) — _openai.com_
-8. [\[AINews\] GPT-6 Astra: OpenAI’s biggest LLM launch of all time](<https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest>) — _latent.space_
-9. ['Welcome to the AGI era': OpenAI launches GPT-6 Astra](<https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra>) — _venturebeat.com_
-10. [Introducing GPT-6 Astra for developers](<https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/>) — _simonwillison.net_
-11. [OpenAI's GPT-6 Astra on ARC-AGI-3](<https://arcprize.org/blog/astra>) — _arcprize.org_
-12. [How concerned should we be about Astra's recurrent architecture?](<https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent>) — _lesswrong.com_
-13. [OpenAI's new reasoning technique alarms AI safety experts](<https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/>) — _techcrunch.com_
-14. [Introducing Gemini 3.8 Flash and 3.8 Flash Cyber](<https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/>) — _deepmind.google_
-15. [llm-gemini 0.34](<https://simonwillison.net/2026/Sep/2/llm-gemini/>) — _simonwillison.net_
-16. [Google releases Gemini 3.8 Flash, its third Flash model in six weeks](<https://arstechnica.com/ai/2026/09/google-releases-gemini-3-8-flash-its-third-flash-model-in-six-weeks/>) — _arstechnica.com_
-17. [Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models](<https://blog.cloudflare.com/vulnerability-discovery-remediation/>) — _blog.cloudflare.com_
-18. [Gemini 3.8 Flash is now available in GitHub Copilot](<https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot>) — _github.blog_
-19. [Google Launches Gemini 3.8 Flash](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/>) — _blog.google_
-20. [\[AINews\] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training](<https://www.latent.space/p/ainews-muse-spark-13-matches-gpt>) — _latent.space_
-21. [Meta Releases More Powerful AI Model, Edging Closer to Rivals](<https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODQwNzY0NiwiZXhwIjoxNzg5MDEyNDQ2LCJhcnRpY2xlSWQiOiJUS1FVQVVUOTZPVDEwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.Lid2dpYcy9_z5AEIw7C2bxhfSjYXlXDa4ZshhXaUBjg>) — _bloomberg.com_
-22. [Muse Spark 1.3](<https://research.meta.ai/blog/introducing-muse-spark-1-3>) — _research.meta.ai_
-23. [Muse Spark 1.3 (Website)](<https://developer.meta.com/ai/models/muse-spark/>) — _developer.meta.com_
-24. [\[AINews\] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens](<https://www.latent.space/p/ainews-claude-fablemythos-51-new>) — _latent.space_
-25. [Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads](<https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads>) — _venturebeat.com_
-26. [Claude Fable 5.1 made me a really nice animated pelican](<https://simonwillison.net/2026/Sep/1/claude-fable-5-1/>) — _simonwillison.net_
-27. [Claude Fable 5.1 and Mythos 5.1](<https://www.anthropic.com/claude-fable-and-mythos-5-1>) — _anthropic.com_
-28. [Introducing agentic video understanding with Gemini](<https://deepmind.google/blog/introducing-agentic-video-in-gemini/>) — _deepmind.google_
-29. [Introducing agentic video understanding with Gemini](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/>) — _blog.google_
-30. [Google's Foundation Model for Zero-Shot Forecasting](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>) — _research.google_
-31. [TimesFM-3: A zero-shot foundation model for multivariate forecasting](<https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/>) — _research.google_
-32. [Introducing WeatherNext 3, our most advanced and accurate global weather AI model](<https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/>) — _deepmind.google_
-33. [Atlas: A World Model for Spatial Intelligence](<https://www.worldlabs.ai/blog/atlas>) — _worldlabs.ai_
-34. [Microsoft releases MAI-Transcribe-2](<https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/>) — _microsoft.ai_
-35. [Microsoft AI's MAI-Transcribe-2 undercuts OpenAI, Google, and ElevenLabs on price and speed](<https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed>) — _venturebeat.com_
-36. [LLMs are becoming commodities](<https://frontierai.substack.com/p/llms-are-becoming-commodities-de1>) — _frontierai.substack.com_
-37. [GitHub Copilot weekly releases — August 31](<https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31>) — _github.blog_
-38. [Run cloud agents on machines you manage](<https://cursor.com/blog/self-hosted-machines>) — _cursor_
-39. [How Basis builds long-horizon accounting agents with Cursor](<https://cursor.com/blog/basis>) — _cursor_
-40. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-41. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-42. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-43. [Our support agent now solves most tickets without a human](<https://www.pinecone.io/blog/support-agent-nexus/>) — _pinecone_
-44. [How to extract meaning from charts and tables in PDFs](<https://weaviate.io/blog/charts-tables-pdfs>) — _weaviate_
-45. [Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI](<https://huggingface.co/blog/webgpu-kernels>) — _huggingface.co_
-46. [Give Your Coding Agents a Memory You Own](<https://huggingface.co/blog/funes>) — _huggingface.co_
-47. [Muse Code (Website)](<https://dev.meta.ai/>) — _dev.meta.ai_
-48. [Healthcare organizations can now connect EHR and additional industry data to ChatGPT](<https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources>) — _openai.com_
-49. [OpenAI has started letting some customers pay only when the AI works](<https://thenextweb.com/news/openai-outcome-based-pricing-enterprise>) — _thenextweb.com_
-50. [Developing Enterprise Frontier Safeguards with our customers](<https://www.anthropic.com/news/enterprise-frontier-safeguards>) — _anthropic news_
-51. [Developing Enterprise Frontier Safeguards With Our Customers](<https://www.anthropic.com/news/enterprise-frontier-safeguards>) — _anthropic.com_
-52. [Building commerce agents with Claude](<https://claude.com/blog/claude-for-commerce-agents>) — _claude_
-53. [A guide to the anatomy of effective commerce agents](<https://claude.com/blog/the-anatomy-of-effective-commerce-agents>) — _claude_
-54. [The MCP tax: what each server costs before your first prompt](<https://okaneland.com/study/the-mcp-context-tax/>) — _okaneland.com_
-55. [Why Your RAG System Is Only as Good as Its Translator Model](<https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without>) — _blog.bytebytego.com_
-56. [Semantica](<https://github.com/semantica-agi/semantica>) — _github.com_
-57. [Leash](<https://github.com/open-leash/leash>) — _github.com_
-58. [How Datadog saves over $1 million each month by optimizing AI usage](<https://www.datadoghq.com/blog/how-datadog-saves-money-by-optimizing-ai-usage/>) — _datadoghq.com_
-59. [Scale before the spike: Predictive autoscaling for GPU workloads on Kubernetes](<https://www.cncf.io/blog/2026/08/28/scale-before-the-spike-predictive-autoscaling-for-gpu-workloads-on-kubernetes/>) — _cncf.io_
-60. [Data Mesh at Grab: Operationalizing Data Reliability with Automated DPIs](<https://engineering.grab.com/data-mesh-at-grab-part-three>) — _engineering.grab.com_
-61. [Beyond Offset Lag: Computing Time in Queue for Apache Hudi Data Lake Pipelines at Petabyte Scale](<https://www.infoq.com/articles/beyond-offset-lag-kafka-apache-hudi/>) — _infoq.com_
-62. [Spark Release 4.1.0](<https://spark.apache.org/releases/spark-release-4.1.0.html>) — _spark.apache.org_
-63. [vllm v0.28.0](<https://github.com/vllm-project/vllm/releases/tag/v0.28.0>) — _github.com_
-64. [PyTorch 2.14 Release Blog](<https://pytorch.org/blog/pytorch-2-14-release-blog/>) — _pytorch.org_
-65. [Try DuckDB v2.0-alpha](<https://duckdb.org/2026/09/02/try-duckdb-20-alpha.html>) — _duckdb.org_
-66. [Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available](<https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/>) — _aws.amazon.com_
-67. [Running Apache Spark experiments in my sleep (and on a plane)](<https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8>) — _netflixtechblog.medium.com_
-68. [Rerouting the Stream: How Lyft Moved to the Apache Flink Operator](<https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250>) — _eng.lyft.com_
-69. [Read your own writes, off the primary](<https://boringsql.com/posts/read-your-own-writes/>) — _boringsql.com_
-70. [Kubernetes v1.37: DRA Updates](<https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/>) — _kubernetes.io_
-71. [Kubernetes v1.37: Scale Workloads to Zero with HorizontalPodAutoscaler](<https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/>) — _kubernetes.io_
-72. [Enterprise Live Migrations from GHES to ghe.com generally available](<https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available>) — _github.blog_
-73. [Enterprise-managed settings support any default model](<https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model>) — _github.blog_
-74. [Content exclusions generally available in Copilot app and CLI](<https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli>) — _github.blog_
-75. [Nokia analyzes 50M+ lines of code in two weeks with Cursor](<https://cursor.com/blog/nokia>) — _cursor_
-76. [Building Reproducible AI Evaluation Workflows with Docker Sandboxes](<https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/>) — _docker.com_
-77. [ECC](<https://github.com/affaan-m/ECC>) — _github.com_
-78. [Openclaude](<https://github.com/Gitlawb/openclaude>) — _github.com_
-79. [Wigolo](<https://github.com/KnockOutEZ/wigolo>) — _github.com_
-80. [The Pulse: tech companies move to open AI models](<https://newsletter.pragmaticengineer.com/p/the-pulse-tech-companies-move-to>) — _newsletter.pragmaticengineer.com_
-81. [The Economics of Agent Optimization: Four ways to lower the cost](<https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/>) — _azure.microsoft.com_
-82. [An Organizational Second Brain: Building an AI That Learns From Experts](<https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/>) — _engineering.fb.com_
-83. [OpenAI Astra and Looped Transformers](<https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html>) — _sebastianraschka.com_
-84. [SpaceX starts in-house turbine blade manufacturing to boost gas-powered generator output for Elon's AI data centers — new manufacturing strategy cuts generator delays by 18 months](<https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months>) — _tomshardware.com_
-85. [AI compute could face a 15GW power shortfall in 2027](<https://x.com/elonmusk/status/2093810234141634702>) — _x.com_
-86. [Anthropic Signs $35 Billion Cloud Deal Backed by Nvidia](<https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1?st=VpMjYp&reflink=desktopwebshare_permalink&mod=tldr>) — _wsj.com_
-87. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
-88. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
-89. [How we could save petabytes of cache storage with Zstandard and Pingora](<https://blog.cloudflare.com/cache-transcoding/>) — _blog.cloudflare.com_
-90. [Autoscaling Lakebase Postgres](<https://neon.com/blog/autoscaling-lakebase-postgres>) — _neon.com_
-91. [Uppy 6.0: fewer packages, fewer moving parts, and a robust S3 Plugin](<https://uppy.io/blog/uppy-6.0/>) — _uppy.io_
-92. [Wasmi 2.0: Engineering one of the fastest Wasm interpreters](<https://wasmi-labs.github.io/blog/posts/wasmi-v2.0/>) — _wasmi-labs.github.io_
-93. [NVIDIA Personal AI Router (PAIR)](<https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/>) — _nvidia.com_
-94. [Metal3 meets KubeVirtBMC: Provisioning KubeVirt VMs like bare metal](<https://www.cncf.io/blog/2026/09/02/metal3-meets-kubevirtbmc-provisioning-kubevirt-vms-like-bare-metal/>) — _cncf.io_
-95. [GitHub CLI: Media in issues, pull requests, and comments](<https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments>) — _github.blog_
-96. [Set an expiration date for individual user budgets](<https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets>) — _github.blog_
-97. [Block users from discussion comments in personal repositories](<https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories>) — _github.blog_
-98. [How our agents build on-brand pages with design.md](<https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md>) — _vercel.com_
-99. [A Portable File Format for Agent Memory](<https://calpaterson.com/memoryfields.html>) — _calpaterson.com_
-100. [diffium-db: A live diff of what agents do to your database](<https://denislavgavrilov.com/diffium-db-live-database-diff>) — _denislavgavrilov.com_
-101. [GitHub Actions: Early September 2026 updates](<https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates>) — _github.blog_
-102. [Upcoming deprecation of selected GitHub Copilot models](<https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models>) — _github.blog_
-103. [Reopening Copilot Business and Enterprise signups](<https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups>) — _github.blog_
-104. [Multiple trusted publishing configurations for npm](<https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm>) — _github.blog_
-105. [Nvidia confirms Hugging Face acquisition for $12.93 billion](<https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/>) — _blogs.nvidia.com_
-106. [WebLLM](<https://github.com/mlc-ai/web-llm>) — _github.com_
-107. [How Turbopack chunks your JavaScript](<https://nextjs.org/blog/turbopack-chunking>) — _nextjs.org_
-108. [How Swiss Tables Work in Go's Built-in Map](<https://victoriametrics.com/blog/go-swiss-table-map/>) — _victoriametrics.com_
-109. [Announcing Rust 1.98.1](<https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/>) — _blog.rust-lang.org_
-110. [Python 3.15.0 candidate 2 is here!](<https://simonwillison.net/2026/Sep/1/python-315-rc-2/>) — _simonwillison.net_
-111. [Announcing rustup 1.29.1](<https://blog.rust-lang.org/2026/09/01/Rustup-1.29.1/>) — _blog.rust-lang.org_
-112. [A docs page is a very long and complex search query to find wandering AI agents and make them route interested people to your company](<https://blog.val.town/aeo>) — _blog.val.town_
-113. [How We Migrated 11 Million Users to Cline's Biggest Refactor](<https://cline.ghost.io/how-we-migrated-11-million-users-to-clines-biggest-refactor>) — _cline.ghost.io_
-114. [A Call for Collective Action on Cyber Defense](<https://openai.com/collective-cyberdefense/>) — _openai.com_
-115. [CrowdStrike 2026 Threat Hunting Report: Exploitation Window Closes as AI Use Accelerates](<https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/>) — _crowdstrike.com_
-116. [BGP Hijack Infecting Networks Caused By a Comedy of Errors That's Not Funny at All](<https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/>) — _arstechnica.com_
-117. [Malicious Apache Modules Hijack Brazilian Government Site Traffic to Push Betting Pages](<https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html>) — _thehackernews.com_
-118. [Unitree G1 Humanoid Robot Flaws Allow Unauthenticated root RCE Over Bluetooth](<https://gbhackers.com/unitree-g1-humanoid-robot-flaws/>) — _gbhackers.com_
-119. [Critical Langflow Vulnerability Exploited as Attacks on AI Platform Rise](<https://www.darkreading.com/vulnerabilities-threats/critical-langflow-flaw-exploited-attacks-rise>) — _darkreading.com_
-120. [Shai-Hulud: Whoever Controls Your Package Registry Controls Your Pipeline](<https://thenewstack.io/shai-hulud-pipeline-security/>) — _thenewstack.io_
-121. [Nvidia and CrowdStrike Develop New Cybersecurity AI Models](<https://www.wsj.com/cio-journal/nvidia-and-crowdstrike-develop-new-cybersecurity-ai-models-937bb2aa?st=th6257&reflink=desktopwebshare_permalink>) — _wsj.com_
-122. [FBI Probes Service Selling 153M+ Drivers Licenses](<https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/>) — _krebsonsecurity.com_
-123. [Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code](<https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html>) — _thehackernews.com_
-124. [Coder's registry infrastructure compromised to push malicious modules](<https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/>) — _bleepingcomputer.com_
-125. [Rogue ScreenConnect Installations Across Unrelated Hosts Suggest Worm-Like Activity](<https://www.huntress.com/blog/rogue-screenconnect-installations>) — _huntress.com_
-126. [AIR Security](<https://www.air.security/>) — _air.security_
-127. [AI agents help compress ransomware intrusion to under 10 hours, raising stakes for CISOs](<https://www.csoonline.com/article/4217976/ai-agents-help-compress-ransomware-intrusion-to-under-10-hours-raising-stakes-for-cisos.html>) — _csoonline.com_
-128. [Creepy crawlies](<https://people.kernel.org/monsieuricon/creepy-crawlies>) — _people.kernel.org_
-129. [Omarchy: Any User Process Can Escalate to Root](<https://0xcc.io/posts/omarchy-root-creds/>) — _0xcc.io_
-130. [Power Leak: Amazon Kiro IDE Prompt Injection Enables Data Exfiltration](<https://mindgard.ai/blog/amazon-kiro-data-exfiltration>) — _mindgard.ai_
-131. [Chrome Web Store Extensions Caught Stealing Crypto, Browser Data](<https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/>) — _bleepingcomputer.com_
-132. [Fire Ant Evolves: From Hypervisors to Trusted Infrastructure](<https://www.sygnia.co/blog/fire-ant-evolves-from-hypervisors-to-trusted-infrastructure/>) — _sygnia.co_
-133. [TerminalFix Campaign Deploys a Reverse Tunnel Through Multistage Intrusion](<https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/>) — _microsoft.com_
+1. [Research acceleration: The view inside OpenAI](<https://openai.com/index/research-acceleration-view-inside-openai/>) — _openai.com_
+2. [Supporting independent journalism in Ukraine](<https://openai.com/index/supporting-independent-journalism-in-ukraine>) — _openai.com_
+3. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+4. [Portal by Spotify cut my Claude Code token usage by 90%](<https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90>) — _engineering.atspotify.com_
+5. [Configuring agentic AI analytics: From free-text-to-SQL to Model Context Protocol](<https://www.eckerson.com/articles/configuring-agentic-ai-analytics-from-free-text-to-sql-to-model-context-protocol>) — _eckerson.com_
+6. [Taking Analytics by Storm with Agents (49 minute video)](<https://www.youtube.com/watch?v=BbWfELhzQRU>) — _youtube.com_
+7. [Context, Semantics, and Ontology: A Primer for the Agentic Era](<https://motherduck.com/blog/context-layer-vs-semantic-layer-ontology/>) — _motherduck.com_
+8. [From S3 to GPU in one copy: Rethinking data loading for ML training (50 minute video)](<https://www.infoq.com/presentations/vortex-columnar-file-format-gpu-streaming/>) — _infoq.com_
+9. [Pre-release of Polars 2.0](<https://pola.rs/posts/announcing-polars-2/>) — _pola.rs_
+10. [Sail 0.7: Stateless Compute, Durable Job State](<https://lakesail.com/blog/sail-0-7-blocking-shuffle-checkpoint/>) — _lakesail.com_
+11. [DuckFlight](<https://github.com/sidequery/duckflight-extension>) — _github.com_
+12. [ZGateway: Learnings from putting a proxy in front of ZippyDB](<https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/>) — _engineering.fb.com_
+13. [One round trip beats a thousand, and your batch API probably is not batching](<https://ankit-rana.com/logs/47-batching-one-round-trip-beats-a-thousand/>) — _ankit-rana.com_
+14. [Apache Kafka vs Apache Iggy: Same log, different engine](<https://softwaremill.com/apache-kafka-vs-apache-iggy-same-log-different-engine/>) — _softwaremill.com_
+15. [Getting ready for PostgreSQL 19](<https://tapoueh.org/blog/2026/09/getting-ready-for-postgresql-19/>) — _tapoueh.org_
+16. [When the source of truth is a Google Sheet](<https://tech.wmg.com/handling-the-messy-reality-of-google-sheets-building-a-resilient-counterfeit-takedown-pipeline-d4c3502664bd>) — _tech.wmg.com_
+17. [Terraform in Lean 4: If It Compiles, It Will Likely Deploy](<https://ngrislain.github.io/blog/2026-9-6-terraform-in-lean-4-if-it-compiles-it-will-likely-deploy/>) — _ngrislain.github.io_
 
 
 ## Archive récente
