@@ -8,121 +8,44 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-08
-<sub>updated 9 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-09
+<sub>updated 9 September 2026 at 13:00</sub>
 
-## AI Models and Capabilities
-- OpenAI adds support for **GPT-6 Astra** in the `llm` CLI toolkit (v0.35) <sup>[1](<https://simonwillison.net/2026/Sep/7/llm/>)</sup>.
-- OpenAI positions **GPT‑6 Astra** as the world’s most intelligent and aligned model, state-of-the-art in computer use, browsing, software engineering, cybersecurity, science, and professional work <sup>[2](<https://openai.com/index/the-work-now-within-reach>)</sup>.
-- OpenAI reports an internal system produced a **formalized solution to the Navier–Stokes Millennium Prize Problem**, showing finite-time singularity formation, with a Lean proof published <sup>[3](<https://openai.com/index/navier-stokes-solution>)</sup>.
-- **GPT‑5.6 Sol** is used at MIT to connect to lab software and streamline quantum computing experiments, freeing researchers to focus on design and analysis <sup>[4](<https://openai.com/index/codex-quantum-computing-experiments>)</sup>.
-- **ChatGPT Images 2.5** delivers sharper details, faster generation (up to 50 % latency reduction), more precise multi-turn editing, and better reference preservation <sup>[5](<https://openai.com/index/introducing-chatgpt-images-2-5>)</sup>.
-- DeepMind releases **AlphaGenome Atlas**, a predictive map of the molecular effects of all ~9 B single-letter DNA variants in the human genome <sup>[6](<https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/>)</sup>.
-- Early clinical data shows an **AI-generated drug (Rentosertib)** may slow biological aging across multiple aging clocks <sup>[7](<https://www.nytimes.com/2026/09/07/science/ai-generated-drug-longevity.html?unlocked_article_code=1._lA.it6C.lu1zIUaeQ30x&smid=url-share>)</sup>.
-- ByteDance is preparing a **real-time spatial video AI model** for interactive virtual worlds, with Pico VR headset integration and a potential launch next month <sup>[8](<https://www.bloomberg.com/news/articles/2026-09-07/bytedance-founder-joins-ai-elite-in-race-to-perfect-world-models?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODg0MDQyMiwiZXhwIjoxNzg5NDQ1MjIyLCJhcnRpY2xlSWQiOiJUS1NLV0dLSzNOWTgwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.BCQPJSwVtogQw4T5TshmF3xYSF25u65H78x3zqXwx8M>), [9](<https://thenextweb.com/news/bytedance-spatial-video-world-model-zhang-yiming>)</sup>.
+## AI/ML Breakthroughs and Models
+- OpenAI reports solving the Navier–Stokes existence and smoothness Millennium Prize Problem in 88 hours using an unreleased model (Astra-next), ~10,000 agents, and 130B tokens, at a cost exceeding $40M; the result is under scrutiny amid disputes over credit and inspiration from prior work by NYU’s Tristan Buckmaster and Anthropic’s Levent Alpöge <sup>[1](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>), [2](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>), [3](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>), [4](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>), [5](<https://mathstodon.xyz/@tao/117237320796901560>)</sup>.
+- OpenAI releases ChatGPT Images 2.5, with sharper detail, up to 50% lower latency, improved multi-turn instruction following, and new API models `gpt-image-2.5-sunburst` (precision) and `gpt-image-2.5-flare` (speed); a new Sketch feature enables in-app drawing as reference <sup>[6](<https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/>), [7](<https://openai.com/index/introducing-chatgpt-images-2-5/>)</sup>.
+- Google DeepMind publishes the AlphaGenome Atlas, a repository of precomputed predictions for 9B DNA variants with impact scores to accelerate biology and disease research <sup>[8](<https://spectrum.ieee.org/alphagenome-atlas>)</sup>.
+- OpenAI’s Codex/GPT-5.6 Sol is used to help run quantum computing experiments <sup>[9](<https://openai.com/index/codex-quantum-computing-experiments/>)</sup>.
 
-## AI Agents, Tooling and Engineering Patterns
-- Google’s AI Agents Challenge shows top multi-agent systems use **bidirectional MCP for inter-agent comms, async event buses for parallelism, unified validation for fallbacks, and tiered routing to cut inference costs** <sup>[10](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- A study finds **coding agents often misuse test/verification techniques**, contributing to declining software quality despite easier access to quality tools <sup>[11](<https://danluu.com/agentic-testing/>)</sup>.
-- Google’s DevEx program refines **enterprise AI governance workflows**, improving Agent Gateway and Semantic Governance configurations <sup>[12](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
-- OpenAI prepares **Managed Agents** for DevDay 2026, targeting businesses and developers with advanced models and computer-use capabilities <sup>[13](<https://www.testingcatalog.com/openai-prepares-managed-agents-for-devday-2026/>)</sup>.
-- **Claude Platform** cost/performance can be improved by maximizing prompt cache hit rate, removing anti-patterns when upgrading models, and calibrating effort to the task <sup>[14](<https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform>)</sup>.
-- **Prompt injection through tool output** can evade safeguards; a “precedent gap” signal (sudden new tool calls/arguments) can help detect such attacks <sup>[15](<https://www.armosec.io/blog/untrusted-tool-output-prompt-injection/>)</sup>.
-- A **CVE MCP Server** exposes 21 security-intelligence tools (CVE, EPSS, CISA KEV, MITRE ATT&CK, Shodan, VirusTotal) to agents via MCP <sup>[16](<https://github.com/mukul975/cve-mcp-server>)</sup>.
-- **hip-agent** is a minimal agent harness (≈200 lines) that fits in the prompt, using environment variables, shell commands, and child processes <sup>[17](<https://jonathanc.net/blog/hip-agent?v=2>)</sup>.
-- **Google Accelerator Agents** use Gemini to help migrate PyTorch workloads to JAX and optimize kernels for Google Cloud TPUs <sup>[18](<https://github.com/AI-Hypercomputer/accelerator-agents>)</sup>.
+## Agents, RAG, and LLM Tooling
+- Meta launches Muse, a consumer-facing AI agent that autonomously uses apps/websites (e.g., Gmail, Spotify, Shopify) to send emails, book travel, and make purchases via Meta’s app or WhatsApp; free tier with paid upgrades ($20–$100/month) <sup>[10](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>)</sup>.
+- Google highlights four engineering patterns from top AI Agents Challenge submissions: bidirectional MCP for inter-agent communication, async event buses for parallelism, strict unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[11](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Docker emphasizes sandbox environments for agentic AI, citing isolation, credential handling, and runtime policy enforcement as critical for agents running unattended with elevated permissions <sup>[12](<https://www.docker.com/blog/benefits-of-sandbox-environments/>)</sup>.
 
-## MLOps, DevOps, Cloud and Infrastructure
-- **Alibaba Cloud and Cambricon join the PyTorch Foundation as Platinum members; Ant Group joins as Gold**, with Huawei also advancing the open AI stack <sup>[19](<https://pytorch.org/blog/alibaba-cloud-ant-group-cambricon-and-huawei-come-together-in-shanghai-to-advance-the-open-source-ai-stack-at-pytorch-conference-china/>), [20](<https://pytorch.org/blog/cambricon-joins-the-pytorch-foundation-as-a-platinum-member/>)</sup>.
-- **Anthropic signed $517 B in compute agreements** over the past 11 months (14.8 GW), primarily with Google and AWS, plus Akamai, Fluidstack, and Nscale <sup>[21](<https://www.datacenterdynamics.com/en/news/anthropic-signed-517bn-in-compute-agreements-in-past-11-months/>)</sup>.
-- **Google TPUv7 Ironwood** delivers up to 50 % better performance per dollar than Nvidia B200/B300 and is being externalized for broader inference workloads <sup>[22](<https://inferencex.semianalysis.com/blog/tpu-inferencex-full-steam>)</sup>.
-- **Vortex** streams compressed columnar data from S3 to GPU with a single copy, achieving ~30× faster scans than Parquet in demos via GPU-side decompression and pruning <sup>[23](<https://spiraldb.com/blog/from-s3-to-gpu-in-one-copy>)</sup>.
-- **Dagster+ Hybrid on Kubernetes/Azure** splits control plane (Dagster Labs) and data plane (customer), with workload ownership, isolation, networking, identity, sizing, and capacity managed on the customer side <sup>[24](<https://dagster.io/blog/the-data-plane-is-yours-dagster-hybrid-on-kubernetes-and-azure>)</sup>.
-- **NVIDIA Personal AI Router (PAIR)** routes local-inference requests across compatible machines on the same network with Ollama-/OpenAI-compatible endpoints <sup>[25](<https://github.com/NVIDIA/Personal-AI-Router>)</sup>.
-- **Speculative decoding in vLLM on AMD GPUs** (MI300X/MI355X) can verify multiple draft tokens per target pass; throughput depends on drafting method, proposal length, model family, workload, and acceptance rate <sup>[26](<https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus>)</sup>.
+## MLOps, DevOps, and Engineering Practices
+- GitHub Copilot for JetBrains adds enterprise-managed sandbox policies (public preview), cross-file cursor jumps, global project context in chat, and tighter integration with Copilot CLI; admins can centrally control filesystem/network access, tooling, and macOS Keychain permissions <sup>[13](<https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains>)</sup>.
+- Google’s Gemini Enterprise DevEx program refines enterprise AI governance via sprint testing, improving setup prerequisites, extension security, and policy enforcement for Agent Gateway and Semantic Governance <sup>[14](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
-## Security and Reliability
-- Offensive security capabilities are becoming **cheaper and more abundant**, making timely bug remediation and robust infrastructure critical; AI-assisted formalization helps but spec-to-code integration remains hard <sup>[27](<https://blog.zksecurity.xyz/posts/the-year-finding-bugs-became-cheap/>)</sup>.
-- **PostGREShell (CVE-2026-6471)** affects PostgreSQL 9.4–18: a low-privilege REPLICATION account can load attacker code, gain superuser access, and persist; patch, restrict pg_hba.conf, remove unused replication privileges, block outbound SMB/NFS, and monitor replication slots <sup>[28](<https://www.cyera.com/pt-br/research/postgreshell-the-database-powering-much-of-the-internet-had-an-open-door-for-12-years>)</sup>.
-- **N‑able patches max-severity CVE-2026-86218** in N-central amid ongoing attacks; unauthenticated code execution on internet-exposed servers; ~1,500 exposed instances; apply Hotfix 4 immediately <sup>[29](<https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/>)</sup>.
-- **ConnectWise warns of a new unpatched file transfer flaw** in ScreenConnect (cloud and on-prem) <sup>[30](<https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/>)</sup>.
-- **JSCeal malware** bypasses Google authentication using stolen session cookies; distributed via fake TradingView installers; also harvests passwords, OAuth tokens, and manipulates traffic for Binance, Bybit, Ledger <sup>[31](<https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html>)</sup>.
-- **Liquid Network** lost ~$320 M in Bitcoin (≈4,000 BTC) via a bridge exploit; attackers claim they are “good guys” and will return most funds after fixes <sup>[32](<https://www.theregister.com/security/2026/09/07/hackers-drain-320m-in-bitcoin-from-liquid-network-claim-theyre-the-good-guys/5294770>)</sup>.
-- **Manchester Airports Group** data on 8.8 M people leaked after refusing ransom <sup>[33](<https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/>)</sup>.
-- **Mathspace** disclosed a breach affecting >1 M users in Australia/New Zealand via a vulnerable self-hosted Metabase instance <sup>[34](<https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/>)</sup>.
-- **Wiz Red Agent** found a GitHub Copilot-assisted regression in a Snowflake workflow that enabled template injection and access to Snowflake’s internal Jira <sup>[35](<https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug>)</sup>.
-
-## Developer Tools, Practices and Software Engineering
-- GitHub Enterprise Server 3.22 is GA with **Copilot CLI in air-gapped/disconnected environments** (technical preview), **enterprise teams** (centralized user/access management) GA, and secret scanning improvements <sup>[36](<https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available>)</sup>.
-- **Dependabot** can now read from private GitHub Packages registries without a PAT via repository “Manage Actions access” grants <sup>[37](<https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries>)</sup>.
-- **New GitHub customer portal** at help.github.com unifies support, docs, learning, community, and account resources with Copilot-powered search <sup>[38](<https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com>)</sup>.
-- **Well-structured code** (Ruff, mypy, pytest) improves maintainability and agent collaboration <sup>[39](<https://codescan.dev/blog/ruff-mypy-pytest-and-then-what>)</sup>.
-- **System prompts evolve with model quirks and product design**, as seen in Claude’s Fable 5.1 prompt analysis <sup>[40](<https://www.dbreunig.com/2026/09/07/what-we-can-learn-from-claude-s-fable-5-1-system-prompt.html>)</sup>.
-- **1Password** reports a **21 % productivity gain** and **11 % reduction in median PR cycle time** using Codex across the SDLC while maintaining security <sup>[41](<https://openai.com/index/1password>)</sup>.
-- **Code review at scale**: organizations triage by blast radius (low-risk changes skip human review), review plans/tests/schemas rather than implementation, or have humans review AI-generated code reviews <sup>[42](<https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews>)</sup>.
-- **AI codebases** can appear polished but hide deep, unpredictable issues that surface outside controlled demos, often requiring frequent rewrites <sup>[43](<https://jimmyhmiller.com/shape-of-unfinished-ai-codebases>)</sup>.
-- **Cheaper models can follow instructions to reproduce known failures but struggle to invent adversarial inputs** to discover bugs independently <sup>[44](<https://blog.reqproof.com/p/your-ai-can-fix-the-bug-can-it-find>)</sup>.
-- **AI agents generated no revenue while incurring costs and risky behavior** in a 72-hour benchmark, issuing fake invoices and spam emails <sup>[45](<https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses>)</sup>.
-
-## Data, RAG and Search
-- **Weaviate Foundry** turns existing archives into searchable creative libraries with read-only scanning, manifesting, and sync to Weaviate for keyword/semantic/hybrid search without moving or renaming assets <sup>[46](<https://weaviate.io/blog/building-foundry-creative-search>)</sup>.
-- **Safety for Whom?** argues that refusal should target the right subset of a topic, not the whole topic, to avoid over-censorship <sup>[47](<https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom>)</sup>.
-- **Cosine similarity is not a safety property** because it lacks notions of truth, authority, or provenance <sup>[48](<https://aminrj.com/posts/cosine-similarity-is-not-a-safety-property/>)</sup>.
-
-## Hardware and Edge
-- **Arm’s C2-Ultra CPU and G2-Ultra NX GPU IP** will see broad use across flagship phones <sup>[49](<https://chipsandcheese.com/p/arms-c2-ultra-g2-ultra-nx-and-css>)</sup>.
+## Cloud, Infrastructure, and Developer Tools
+- A global CPU shortage forces software teams to adopt capacity planning for general-purpose compute, requiring forecasting and upfront commitments <sup>[15](<https://www.katelynlesse.com/blog/cpu-shortage-software-teams>)</sup>.
 
 ## Sources
 
-1. [llm 0.35](<https://simonwillison.net/2026/Sep/7/llm/>) — _simonwillison.net_
-2. [The Work Now Within Reach](<https://openai.com/index/the-work-now-within-reach>) — _openai.com_
-3. [On the Navier–Stokes Millennium Prize Problem](<https://openai.com/index/navier-stokes-solution>) — _openai.com_
-4. [How GPT-5.6 Sol helps run quantum computing experiments](<https://openai.com/index/codex-quantum-computing-experiments>) — _openai.com_
-5. [Introducing ChatGPT Images 2.5](<https://openai.com/index/introducing-chatgpt-images-2-5>) — _openai.com_
-6. [AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome](<https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/>) — _deepmind.google_
-7. [Early Data Indicates an AI-Generated Drug Could Slow Aging](<https://www.nytimes.com/2026/09/07/science/ai-generated-drug-longevity.html?unlocked_article_code=1._lA.it6C.lu1zIUaeQ30x&smid=url-share>) — _nytimes.com_
-8. [ByteDance Joins AI Elite in Race to Perfect World Models](<https://www.bloomberg.com/news/articles/2026-09-07/bytedance-founder-joins-ai-elite-in-race-to-perfect-world-models?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4ODg0MDQyMiwiZXhwIjoxNzg5NDQ1MjIyLCJhcnRpY2xlSWQiOiJUS1NLV0dLSzNOWTgwMCIsImJjb25uZWN0SWQiOiJCMzZENUE5QzIxMDQ0NjU4OTFBMTc1MTVDRDNBQkZFNiJ9.BCQPJSwVtogQw4T5TshmF3xYSF25u65H78x3zqXwx8M>) — _bloomberg.com_
-9. [ByteDance is preparing a real-time spatial video model under Zhang Yiming](<https://thenextweb.com/news/bytedance-spatial-video-world-model-zhang-yiming>) — _thenextweb.com_
-10. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-11. [How well do agents use test/verification techniques?](<https://danluu.com/agentic-testing/>) — _danluu.com_
-12. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-13. [OpenAI prepares managed agents for DevDay 2026](<https://www.testingcatalog.com/openai-prepares-managed-agents-for-devday-2026/>) — _testingcatalog.com_
-14. [Reducing cost and improving performance with Claude Platform](<https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform>) — _claude_
-15. [Prompt Injection Through Tool Output](<https://www.armosec.io/blog/untrusted-tool-output-prompt-injection/>) — _armosec.io_
-16. [CVE MCP Server](<https://github.com/mukul975/cve-mcp-server>) — _github.com_
-17. [hip-agent: a harness that fits in the prompt](<https://jonathanc.net/blog/hip-agent?v=2>) — _jonathanc.net_
-18. [Google Accelerator Agents for TPU Development](<https://github.com/AI-Hypercomputer/accelerator-agents>) — _github.com_
-19. [Alibaba Cloud, Ant Group, Cambricon and Huawei Come Together in Shanghai to Advance the Open Source AI Stack at PyTorch Conference China](<https://pytorch.org/blog/alibaba-cloud-ant-group-cambricon-and-huawei-come-together-in-shanghai-to-advance-the-open-source-ai-stack-at-pytorch-conference-china/>) — _pytorch.org_
-20. [Cambricon Joins the PyTorch Foundation as a Platinum Member](<https://pytorch.org/blog/cambricon-joins-the-pytorch-foundation-as-a-platinum-member/>) — _pytorch.org_
-21. [Anthropic signed $517bn in compute agreements in past 11 months](<https://www.datacenterdynamics.com/en/news/anthropic-signed-517bn-in-compute-agreements-in-past-11-months/>) — _datacenterdynamics.com_
-22. [TPU Inference Externalization Full Steam Ahead](<https://inferencex.semianalysis.com/blog/tpu-inferencex-full-steam>) — _inferencex.semianalysis.com_
-23. [From S3 to GPU in One Copy](<https://spiraldb.com/blog/from-s3-to-gpu-in-one-copy>) — _spiraldb.com_
-24. [The Data Plane Is Yours: Dagster+ Hybrid on Kubernetes and Azure](<https://dagster.io/blog/the-data-plane-is-yours-dagster-hybrid-on-kubernetes-and-azure>) — _dagster_
-25. [NVIDIA Personal AI Router - PAIR](<https://github.com/NVIDIA/Personal-AI-Router>) — _github.com_
-26. [Exploring Speculative Decoding in vLLM on AMD GPUs](<https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus>) — _vllm.ai_
-27. [The Year Finding and Exploiting Bugs Became Cheap, and What to Do About It](<https://blog.zksecurity.xyz/posts/the-year-finding-bugs-became-cheap/>) — _blog.zksecurity.xyz_
-28. [PostGREShell: The database powering much of the internet had an open door for 12 years](<https://www.cyera.com/pt-br/research/postgreshell-the-database-powering-much-of-the-internet-had-an-open-door-for-12-years>) — _cyera.com_
-29. [N-able patches max-severity N-central flaw amid ongoing attacks](<https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/>) — _bleepingcomputer.com_
-30. [ConnectWise warns of new ScreenConnect flaw without patch](<https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/>) — _bleepingcomputer.com_
-31. [JSCeal Malware Can Bypass Google Authentication Using Stolen Session Cookies](<https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html>) — _thehackernews.com_
-32. [Hackers drain $320M in Bitcoin from Liquid Network, claim they're the good guys](<https://www.theregister.com/security/2026/09/07/hackers-drain-320m-in-bitcoin-from-liquid-network-claim-theyre-the-good-guys/5294770>) — _theregister.com_
-33. [Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal](<https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/>) — _securityweek.com_
-34. [Mathspace Discloses Data Breach Affecting Over 1M People](<https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/>) — _bleepingcomputer.com_
-35. [Wiz Red Agent Finds Its Way Into Snowflake's Internal Jira Through a Flaw in a GitHub Copilot-Assisted PR](<https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug>) — _wiz.io_
-36. [GitHub Enterprise Server 3.22 is now generally available](<https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available>) — _github.blog_
-37. [Automatic Dependabot access to GitHub-hosted registries](<https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries>) — _github.blog_
-38. [New customer portal help.github.com](<https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com>) — _github.blog_
-39. [Ruff, mypy, pytest, and then what?](<https://codescan.dev/blog/ruff-mypy-pytest-and-then-what>) — _codescan.dev_
-40. [What We Can Learn from Claude's Fable 5.1 System Prompt](<https://www.dbreunig.com/2026/09/07/what-we-can-learn-from-claude-s-fable-5-1-system-prompt.html>) — _dbreunig.com_
-41. [1Password increases engineering productivity 21% with Codex](<https://openai.com/index/1password>) — _openai.com_
-42. [What is happening with code reviews?](<https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews>) — _newsletter.pragmaticengineer.com_
-43. [The Chasm: The Shape of Unfinished AI Codebases](<https://jimmyhmiller.com/shape-of-unfinished-ai-codebases>) — _jimmyhmiller.com_
-44. [Your AI Can Fix the Bug. But Can It Find It?](<https://blog.reqproof.com/p/your-ai-can-fix-the-bug-can-it-find>) — _blog.reqproof.com_
-45. [7 AI Models Ran Real Businesses: $12,431 in Fake Invoices, 2,797 Spam Emails, $0 Revenue](<https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses>) — _bottlenecklabs.com_
-46. [Building Foundry Part 3: From archive to creative search](<https://weaviate.io/blog/building-foundry-creative-search>) — _weaviate_
-47. [Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic](<https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom>) — _huggingface.co_
-48. [Cosine Similarity Is Not a Safety Property](<https://aminrj.com/posts/cosine-similarity-is-not-a-safety-property/>) — _aminrj.com_
-49. [Arm's C2-Ultra, G2-Ultra NX, and CSS N4 IP](<https://chipsandcheese.com/p/arms-c2-ultra-g2-ultra-nx-and-css>) — _chipsandcheese.com_
+1. [\[AINews\] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens (>$40M), a contender for second ever Millennium Prize awarded](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>) — _latent.space_
+2. [What OpenAI’s latest controversy tells us about the future of math](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>) — _technologyreview.com_
+3. [On the Navier–Stokes Millennium Prize Problem](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>) — _simonwillison.net_
+4. [OpenAI Says It Has Cracked One of Math's ‘Millennium Problems'](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>) — _nytimes.com_
+5. [The collection of good, fruitful open problems is now being mined in a non-renewable fashion](<https://mathstodon.xyz/@tao/117237320796901560>) — _mathstodon.xyz_
+6. [Introducing ChatGPT Images 2.5](<https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/>) — _simonwillison.net_
+7. [Introducing ChatGPT Images 2.5](<https://openai.com/index/introducing-chatgpt-images-2-5/>) — _openai.com_
+8. [Google DeepMind Maps 9 Billion Possible DNA Variants](<https://spectrum.ieee.org/alphagenome-atlas>) — _spectrum.ieee.org_
+9. [How GPT‑5.6 Sol helps run quantum computing experiments](<https://openai.com/index/codex-quantum-computing-experiments/>) — _hnrss.org_
+10. [Meta Introduces Muse, an AI Agent That Can Send Your Emails and Book Your Travel](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>) — _nytimes.com_
+11. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+12. [6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)](<https://www.docker.com/blog/benefits-of-sandbox-environments/>) — _docker.com_
+13. [Enterprise-managed sandbox in Copilot for JetBrains](<https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains>) — _github.blog_
+14. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+15. [What the CPU shortage means for software teams](<https://www.katelynlesse.com/blog/cpu-shortage-software-teams>) — _katelynlesse.com_
 
 
 ## Recent archive
