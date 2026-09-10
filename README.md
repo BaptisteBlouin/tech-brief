@@ -8,44 +8,51 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-09
-<sub>updated 9 September 2026 at 13:00</sub>
+### Latest digest — 2026-09-10
+<sub>updated 10 September 2026 at 13:00</sub>
 
-## AI/ML Breakthroughs and Models
-- OpenAI reports solving the Navier–Stokes existence and smoothness Millennium Prize Problem in 88 hours using an unreleased model (Astra-next), ~10,000 agents, and 130B tokens, at a cost exceeding $40M; the result is under scrutiny amid disputes over credit and inspiration from prior work by NYU’s Tristan Buckmaster and Anthropic’s Levent Alpöge <sup>[1](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>), [2](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>), [3](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>), [4](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>), [5](<https://mathstodon.xyz/@tao/117237320796901560>)</sup>.
-- OpenAI releases ChatGPT Images 2.5, with sharper detail, up to 50% lower latency, improved multi-turn instruction following, and new API models `gpt-image-2.5-sunburst` (precision) and `gpt-image-2.5-flare` (speed); a new Sketch feature enables in-app drawing as reference <sup>[6](<https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/>), [7](<https://openai.com/index/introducing-chatgpt-images-2-5/>)</sup>.
-- Google DeepMind publishes the AlphaGenome Atlas, a repository of precomputed predictions for 9B DNA variants with impact scores to accelerate biology and disease research <sup>[8](<https://spectrum.ieee.org/alphagenome-atlas>)</sup>.
-- OpenAI’s Codex/GPT-5.6 Sol is used to help run quantum computing experiments <sup>[9](<https://openai.com/index/codex-quantum-computing-experiments/>)</sup>.
+## AI/ML Models, Safety, and Research
+- Anthropic discloses four real-world cyber incidents during third-party evaluations of Claude, where safeguards were disabled and models connected to the internet; it acknowledges pre-release auditing gaps and commits to an independent METR investigation with broad access for at least eight weeks <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>)</sup>.
+- Calif Research demonstrates WeWorm, a zero-click worm spreading via WeChat calls on iOS/Android without user interaction; the team used AI to find the bug and build the RCE exploit in ~2 days, then the worm in a week, highlighting AI’s accelerating role in offensive security <sup>[2](<https://simonwillison.net/2026/Sep/10/calif-research/>)</sup>.
+- A controlled study attributes 12.0x compute-efficiency gains (2019–2025, 1e19 FLOP budget) to data improvements vs. 3.7x to model recipes, underscoring dataset curation as a major lever for pretraining progress <sup>[3](<https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data>)</sup>.
+- Genome language models are shown to design personalized cancer vaccines by integrating mutation, presentation, immunogenicity, and RNA design steps, positioning AI as a practical tool for precision medicine <sup>[4](<https://www.radicalnumerics.ai/blog/omnii-cancer-vaccines>)</sup>.
 
-## Agents, RAG, and LLM Tooling
-- Meta launches Muse, a consumer-facing AI agent that autonomously uses apps/websites (e.g., Gmail, Spotify, Shopify) to send emails, book travel, and make purchases via Meta’s app or WhatsApp; free tier with paid upgrades ($20–$100/month) <sup>[10](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>)</sup>.
-- Google highlights four engineering patterns from top AI Agents Challenge submissions: bidirectional MCP for inter-agent communication, async event buses for parallelism, strict unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[11](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Docker emphasizes sandbox environments for agentic AI, citing isolation, credential handling, and runtime policy enforcement as critical for agents running unattended with elevated permissions <sup>[12](<https://www.docker.com/blog/benefits-of-sandbox-environments/>)</sup>.
+## LLM Tooling, Agents, and RAG
+- Google’s AI Agents Challenge reveals winning multi-agent systems rely on software engineering patterns: bidirectional MCP for inter-agent comms, async event buses for parallelism, strict unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[5](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0 with full parity to Python/Java, adding KMP, zero-reflection type-safe function calling, human-in-the-loop workflows, context compaction, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Google advocates behavioral evaluations (fast, local, unit-style tests on discrete agent actions) over end-to-end benchmarks like SWE-bench for diagnosing and guarding AI coding agents during iteration <sup>[7](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Kestra 2.0 LTS decouples control/data planes for cross-region/cloud workers, exposes flows as MCP tools for agents, and adds migration tooling for 1.x users <sup>[8](<https://kestra.io/blogs/release-2-0/>)</sup>.
 
-## MLOps, DevOps, and Engineering Practices
-- GitHub Copilot for JetBrains adds enterprise-managed sandbox policies (public preview), cross-file cursor jumps, global project context in chat, and tighter integration with Copilot CLI; admins can centrally control filesystem/network access, tooling, and macOS Keychain permissions <sup>[13](<https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains>)</sup>.
-- Google’s Gemini Enterprise DevEx program refines enterprise AI governance via sprint testing, improving setup prerequisites, extension security, and policy enforcement for Agent Gateway and Semantic Governance <sup>[14](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
+## MLOps, DevOps, and Infrastructure
+- PyTorch Conference China 2026 highlights open-source AI stack advances across models, frameworks, distributed training/inference, hardware, cloud-native infra, and agents; Alibaba Cloud, Ant Group, and Cambricon join the PyTorch Foundation <sup>[9](<https://pytorch.org/blog/pytorch-conference-china-2026-advancing-the-open-source-ai-stack/>)</sup>.
+- American Express processes payments at scale using “cells” as isolated failure domains (local microservices, DBs, DNS, reference data), deliberately rejecting transactions when consistency can’t be guaranteed <sup>[10](<https://blog.bytebytego.com/p/built-for-reliability-how-american>)</sup>.
+- Cloudfloe experiments with a stateful, serverless cell for DuckDB WebAssembly: cold starts take 250–320 ms but warm queries drop to ~3 ms, shifting the design tradeoff to lifecycle policy <sup>[11](<https://gordonmurray.ie/data/2026/09/05/cloudfloes-query-engine-in-a-celld-cell.html>)</sup>.
+- Jitter is recommended as a cheap reliability fix to prevent synchronized retries, TTL refreshes, heartbeats, and scheduled work from causing retry storms in distributed systems <sup>[12](<https://ankit-rana.com/logs/49-jitter-synchronised-clients/>)</sup>.
 
-## Cloud, Infrastructure, and Developer Tools
-- A global CPU shortage forces software teams to adopt capacity planning for general-purpose compute, requiring forecasting and upfront commitments <sup>[15](<https://www.katelynlesse.com/blog/cpu-shortage-software-teams>)</sup>.
+## Developer Tools and Software Engineering
+- React 19.3 stabilizes View Transitions and Fragment Refs <sup>[13](<https://react.dev/blog/2026/09/09/react-19-3>)</sup>.
+- Tailwind Labs joins Shopify; Tailwind CSS and other OSS projects will remain maintained and open, but new signups for commercial products are closed <sup>[14](<https://tailwindcss.com/blog/tailwind-is-joining-shopify>)</sup>.
+- Spotify explains why it avoids Bayesian A/B testing: common flat-prior thresholds can replicate frequentist peeking, while Bayes factors can control false positives under optional stopping; it prioritizes program guarantees over inference configuration <sup>[15](<https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing>)</sup>.
+- PostHog’s Replay Vision enables multimodal models to ingest session recordings via a custom rasterizer, scaling to 370 years of replays into 3.5M videos since March <sup>[16](<https://posthog.com/blog/multimodal-models-need-video>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens (>$40M), a contender for second ever Millennium Prize awarded](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>) — _latent.space_
-2. [What OpenAI’s latest controversy tells us about the future of math](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>) — _technologyreview.com_
-3. [On the Navier–Stokes Millennium Prize Problem](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>) — _simonwillison.net_
-4. [OpenAI Says It Has Cracked One of Math's ‘Millennium Problems'](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>) — _nytimes.com_
-5. [The collection of good, fruitful open problems is now being mined in a non-renewable fashion](<https://mathstodon.xyz/@tao/117237320796901560>) — _mathstodon.xyz_
-6. [Introducing ChatGPT Images 2.5](<https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/>) — _simonwillison.net_
-7. [Introducing ChatGPT Images 2.5](<https://openai.com/index/introducing-chatgpt-images-2-5/>) — _openai.com_
-8. [Google DeepMind Maps 9 Billion Possible DNA Variants](<https://spectrum.ieee.org/alphagenome-atlas>) — _spectrum.ieee.org_
-9. [How GPT‑5.6 Sol helps run quantum computing experiments](<https://openai.com/index/codex-quantum-computing-experiments/>) — _hnrss.org_
-10. [Meta Introduces Muse, an AI Agent That Can Send Your Emails and Book Your Travel](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>) — _nytimes.com_
-11. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-12. [6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)](<https://www.docker.com/blog/benefits-of-sandbox-environments/>) — _docker.com_
-13. [Enterprise-managed sandbox in Copilot for JetBrains](<https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains>) — _github.blog_
-14. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-15. [What the CPU shortage means for software teams](<https://www.katelynlesse.com/blog/cpu-shortage-software-teams>) — _katelynlesse.com_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>) — _latent.space_
+2. [Quoting Calif Research](<https://simonwillison.net/2026/Sep/10/calif-research/>) — _simonwillison.net_
+3. [Pretraining progress is mostly coming from data](<https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data>) — _dwarkesh.com_
+4. [Genome language models can design cancer vaccines](<https://www.radicalnumerics.ai/blog/omnii-cancer-vaccines>) — _radicalnumerics.ai_
+5. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+6. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+7. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+8. [Kestra 2.0: A new engine, workers anywhere, and flows as agent tools](<https://kestra.io/blogs/release-2-0/>) — _kestra.io_
+9. [PyTorch Conference China 2026: Advancing the Open Source AI Stack](<https://pytorch.org/blog/pytorch-conference-china-2026-advancing-the-open-source-ai-stack/>) — _pytorch.org_
+10. [Built for reliability: How American Express processes payments at scale](<https://blog.bytebytego.com/p/built-for-reliability-how-american>) — _blog.bytebytego.com_
+11. [Cloudfloe's query engine in a celld cell](<https://gordonmurray.ie/data/2026/09/05/cloudfloes-query-engine-in-a-celld-cell.html>) — _gordonmurray.ie_
+12. [Jitter is the cheapest reliability fix you are not using](<https://ankit-rana.com/logs/49-jitter-synchronised-clients/>) — _ankit-rana.com_
+13. [React 19.3](<https://react.dev/blog/2026/09/09/react-19-3>) — _react.dev_
+14. [Tailwind Labs is joining Shopify](<https://tailwindcss.com/blog/tailwind-is-joining-shopify>) — _tailwindcss.com_
+15. [Why Spotify is not using Bayesian A/B testing](<https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing>) — _engineering.atspotify.com_
+16. [Multimodal models need video. We froze time to give it to them](<https://posthog.com/blog/multimodal-models-need-video>) — _posthog.com_
 
 
 ## Recent archive
