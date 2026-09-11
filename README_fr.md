@@ -8,119 +8,37 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-10
-<sub>mis à jour le 11 septembre 2026 à 01:01</sub>
+### Dernier digest — 2026-09-11
+<sub>mis à jour le 11 septembre 2026 à 13:01</sub>
 
-## Modèles d'IA/ML, sécurité et recherche
-- Anthropic révèle quatre incidents cyber réels survenus lors d'évaluations tierces de Claude, où les garde-fous étaient désactivés et les modèles connectés à Internet ; l'entreprise reconnaît des lacunes dans les audits pré-livraison et s'engage à mener une enquête METR indépendante avec un accès large pendant au moins huit semaines <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>)</sup>.
-- WeWorm de Calif Research démontre un ver à propagation zero-click via les appels WeChat sur iOS/Android sans interaction utilisateur ; l'IA a été utilisée pour trouver le bug et construire l'exploit RCE en ~2 jours, puis le ver en une semaine, soulignant le rôle accélérateur de l'IA dans la sécurité offensive <sup>[2](<https://simonwillison.net/2026/Sep/10/calif-research/>)</sup>.
-- Une étude contrôlée attribue des gains d'efficacité de calcul de 12,0x (2019–2025, budget de 1e19 FLOP) aux améliorations des données contre 3,7x aux recettes de modèles, soulignant la curation des jeux de données comme un levier majeur pour les progrès du pré-entraînement <sup>[3](<https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data>)</sup>.
-- Des modèles de langage génomique sont utilisés pour concevoir des vaccins contre le cancer personnalisés en intégrant les étapes de mutation, présentation, immunogénicité et conception de l'ARN, positionnant l'IA comme un outil pratique pour la médecine de précision <sup>[4](<https://www.radicalnumerics.ai/blog/omnii-cancer-vaccines>)</sup>.
-- Un chercheur utilise Codex et ChatGPT pour rechercher dans les génomes vivants et éteints des candidats antimicrobiens afin de lutter contre les infections résistantes aux médicaments <sup>[5](<https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials>)</sup>.
-- IonQ estime que la rupture de secp256k1 avec l'algorithme de Shor nécessiterait 19 397 qubits physiques et ~26 jours par tentative, en alignement avec sa feuille de route 2028 <sup>[6](<https://postquantum.com/post-quantum/ionq-secp256k1-resource-estimate>)</sup>.
-- Le GTIG de Google signale que les acteurs malveillants sont passés du prompting basique à des workflows IA agentiques qui gèrent de manière autonome des pipelines de scan, résolvent les erreurs et exécutent des attaques multi-étapes avec une supervision humaine minimale <sup>[7](<https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai>)</sup>.
+## AI Agents and Tooling
+- OpenAI releases a public beta of its **Agents API**, offering a managed harness for long-running agents with context management, tool use, subagent coordination, file/environment interactions, and persistent sessions <sup>[1](<https://openai.com/index/introducing-the-agents-api/>)</sup>.
+- Google highlights **four engineering patterns** behind top AI agent submissions: bidirectional MCP for inter-agent comms, async event buses for parallelism, unified validation for fallbacks, and tiered routing to cut inference costs <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google’s **ADK for Kotlin 1.0** achieves parity with Python/Java, enabling idiomatic multi-agent development with KMP, zero-reflection KSP, human-in-the-loop workflows, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[3](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Google recommends **behavioral evaluations** (fast, local, unit-style tests on discrete actions) to complement end-to-end agent benchmarks, enabling safer prompt/system iteration without regressions <sup>[4](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Industry trend: companies increasingly **route simpler requests to cheaper open models** and invest in model routing to reduce costs, with growing knowledge-sharing on cost-effective AI usage <sup>[5](<https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/>)</sup>.
 
-## Outils pour LLM, agents et RAG
-- Le défi des agents IA de Google révèle que les systèmes multi-agents gagnants reposent sur des modèles d'ingénierie logicielle : MCP bidirectionnel pour les communications inter-agents, bus d'événements asynchrones pour le parallélisme, validation unifiée stricte pour les replis, et routage hiérarchisé pour réduire les coûts d'inférence <sup>[8](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Google publie ADK pour Kotlin 1.0 avec une parité complète avec Python/Java, ajoutant KMP, des appels de fonctions typés sans réflexion, des workflows avec humain dans la boucle, la compaction de contexte et des extensions prioritaires pour Android <sup>[9](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Google préconise les évaluations comportementales (tests rapides, locaux, de type unité sur des actions discrètes d'agents) plutôt que les benchmarks de bout en bout comme SWE-bench pour diagnostiquer et protéger les agents de codage IA pendant l'itération <sup>[10](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- Kestra 2.0 LTS découple les plans de contrôle et de données pour des workers multi-régions/cloud, expose les flux comme outils MCP pour les agents et ajoute des outils de migration pour les utilisateurs 1.x <sup>[11](<https://kestra.io/blogs/release-2-0/>)</sup>.
-- OpenAI introduit l'API Agents pour construire et lancer des agents cloud avec orchestration, sessions longues et utilisation d'outils <sup>[12](<https://openai.com/index/introducing-the-agents-api>)</sup>.
-- OpenAI publie GPT-Live-1 pour des conversations vocales naturelles en full-duplex dans l'API, avec un meilleur suivi des instructions, des voix personnalisées et une prise en charge téléphonique <sup>[13](<https://openai.com/index/introducing-gpt-live-1-in-the-api>)</sup>.
-- OpenAI introduit ChatGPT pour les services financiers, combinant des données financières intégrées et GPT-6 Astra pour la recherche, la modélisation et les supports prêts pour les clients <sup>[14](<https://openai.com/index/introducing-chatgpt-financial-services>)</sup>.
-- OpenAI introduit l'agent Data dans ChatGPT Work pour connecter les données de l'entreprise, découvrir des insights et construire des tableaux de bord interactifs en langage naturel <sup>[15](<https://openai.com/index/put-data-to-work>)</sup>.
-- LangChain introduit Connections pour gérer les identifiants et l'identité par appelant pour les agents Managed Deep Agents <sup>[16](<https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents>)</sup>.
-- Cursor lance Projects pour coordonner des milliers d'agents pour des volumes de travail importants, en maintenant le contexte sur des mois et en déléguant des tâches sans blocage <sup>[17](<https://cursor.com/blog/projects>)</sup>.
-- Un benchmark axé sur Rails signale que Claude Fable 5.1 a égalé Opus 5 en précision à un coût inférieur et avec un temps d'exécution plus rapide ; GLM 5.3 Flash est identifié comme une option compétitive et peu coûteuse <sup>[18](<https://rubyonrails.org/2026/9/2/agents-on-rails-claude-fable-5-1-and-glm-5-3-flash>)</sup>.
-- ZeroModels est une collection Keras 3 de modèles pré-entraînés couvrant la vision, la parole et les tâches multimodales, fonctionnant sur JAX, PyTorch ou TensorFlow sans dépendances d'exécution <sup>[19](<https://imvision12.github.io/ZeroModels/>)</sup>.
-- Les Reasoning Prefills sur quelques modèles ouverts montrent que Qwen3.8 A95B présente la plus grande superposition avec une trace GPT-5.5 Pro, suggérant un apprentissage potentiel à partir de modèles similaires <sup>[20](<https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3>)</sup>.
+## MLOps / DevOps and Infrastructure
+- PlanetScale details the **lifecycle of a sharded Postgres query**, explaining how complex deployments across thousands of servers emulate a single database, with a concrete example across four shards <sup>[6](<https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query>)</sup>.
+- Analysis argues **centralized router platforms** can deliver better economics than local deployments, with outcomes pricing best suited to the infrastructure layer rather than model or app layers <sup>[7](<https://hypersoren.xyz/posts/router-power/>)</sup>.
 
-## MLOps, DevOps et infrastructure
-- La PyTorch Conference China 2026 met en avant les avancées de la pile IA open source à travers les modèles, frameworks, entraînement/distribution d'inférence, matériel, infrastructure cloud-native et agents ; Alibaba Cloud, Ant Group et Cambricon rejoignent la PyTorch Foundation <sup>[21](<https://pytorch.org/blog/pytorch-conference-china-2026-advancing-the-open-source-ai-stack/>)</sup>.
-- American Express utilise des « cellules » comme domaines de défaillance isolés (microservices locaux, bases de données, DNS, données de référence) et rejette délibérément les transactions lorsque la cohérence ne peut pas être garantie <sup>[22](<https://blog.bytebytego.com/p/built-for-reliability-how-american>)</sup>.
-- La cellule DuckDB WebAssembly stateful et serverless de Cloudfloe montre des démarrages à froid de 250–320 ms et des requêtes à chaud à ~3 ms, déplaçant l'accent de conception vers la politique de cycle de vie <sup>[23](<https://gordonmurray.ie/data/2026/09/05/cloudfloes-query-engine-in-a-celld-cell.html>)</sup>.
-- Le jitter est recommandé comme solution de fiabilité peu coûteuse pour éviter les nouvelles tentatives synchronisées, les rafraîchissements de TTL, les heartbeats et les travaux planifiés qui provoquent des tempêtes de nouvelles tentatives <sup>[24](<https://ankit-rana.com/logs/49-jitter-synchronised-clients/>)</sup>.
-- Google Cloud et Accenture forment une unité commune pour déployer des ingénieurs dans les entreprises afin d'adopter les outils IA de Google <sup>[25](<https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/>)</sup>.
-- Une panne de ligne de transmission à Ashburn, en Virginie, a retiré >3 GW du réseau, soulignant que les défis énergétiques de l'IA concernent autant l'architecture du réseau que la génération <sup>[26](<https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/>)</sup>.
-- Des pénuries de CPU émergent en raison de l'utilisation intensive de CPU par les agents IA avec les appels d'outils, incitant à réserver des ressources de calcul dès maintenant <sup>[27](<https://newsletter.pragmaticengineer.com/p/the-pulse-191-a-new-trend-of-cpu>)</sup>.
-
-## Outils de développement et ingénierie logicielle
-- React 19.3 stabilise View Transitions et Fragment Refs <sup>[28](<https://react.dev/blog/2026/09/09/react-19-3>)</sup>.
-- Tailwind Labs rejoint Shopify ; Tailwind CSS et les autres projets OSS restent ouverts, mais les nouvelles inscriptions commerciales sont fermées <sup>[29](<https://tailwindcss.com/blog/tailwind-is-joining-shopify>)</sup>.
-- Shopify passe de React Native au natif Swift et Kotlin, car les agents gèrent désormais suffisamment de mise en œuvre, traduction, tests et revue pour compenser les coûts multiplateformes <sup>[30](<https://simonwillison.net/2026/Sep/10/shopify-react-native/>)</sup>.
-- La page des pull requests du dépôt GitHub rafraîchie entre en préversion publique avec un filtrage avancé, un mode compact et un contexte comme les vérifications d'état et les indicateurs de pile <sup>[31](<https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview>)</sup>.
-- GitHub ajoute des API REST pour gérer AI Scan au niveau des organisations/dépôts pour les pull requests <sup>[32](<https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview>)</sup>.
-- GitHub introduit `cache-mode` pour un accès minimal au cache des GitHub Actions (lecture, écriture, écriture seule, aucun) aux niveaux workflow/tâche <sup>[33](<https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode>)</sup>.
-- GitHub déprécie MAI-Code-1-Flash dans Copilot, recommandant MAI-Code-1.1-Flash <sup>[34](<https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated>)</sup>.
-- L'image runner Xcode 27 pour GitHub Actions fonctionne désormais sur macOS 27 <sup>[35](<https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27>)</sup>.
-- Replay Vision de PostHog permet aux modèles multimodaux d'ingérer des enregistrements de sessions via un rasteriseur personnalisé, avec un passage à l'échelle à 3,5 M de vidéos depuis mars <sup>[36](<https://posthog.com/blog/multimodal-models-need-video>)</sup>.
-- Expo Modules 2.0 remplace son DSL de module natif par des classes Swift/Kotlin annotées, réduisant le code répétitif et améliorant la sécurité des types <sup>[37](<https://expo.dev/blog/an-early-look-at-expo-modules-2-0>)</sup>.
-- ArchSpec est un linter déterministe pour Rails qui impose les limites du codebase à mesure que les agents écrivent plus de code <sup>[38](<https://paolino.me/archspec/>)</sup>.
-- TeamAI CLI synchronise les compétences, règles et configurations MCP entre les agents de codage (Codex, Claude Code, Cursor, OpenCode) via un harnais Git partagé <sup>[39](<https://github.com/Tencent/teamai-cli>)</sup>.
-- PI-Desktop est un espace de travail local-first pour les agents de codage avec des couches de permissions et une prise en charge multi-fournisseurs <sup>[40](<https://github.com/vastsa/PI-Desktop>)</sup>.
-- Kontext applique les politiques locales entre les agents et les outils, en enregistrant les décisions dans un registre d'autorisation <sup>[41](<https://github.com/kontext-security/kontext>)</sup>.
-- Copperhead est une plateforme IA open source pour concevoir et vérifier des cartes de circuits à partir de dépôts KiCad <sup>[42](<https://copperhead.sh/>)</sup>.
-
-## Sécurité et confidentialité
-- CVE-2026-82533 dans DeepSeek Harness permettait une échappée de sandbox via un en-tête Host de confiance, permettant des sessions à accès complet et un contrôle à distance si le port 3080 était exposé ; corrigé dans la version 0.1.2-alpha.1 <sup>[43](<https://www.ox.security/blog/cve-2026-82533-deepseek-harness-ai-agent-sandbox-escape/>)</sup>.
-- CVE-2026-12537 dans Google Gemini CLI permettait une exécution de code à distance pré-tâche via `GEMINI_SANDBOX_PROXY_COMMAND`, exposant les secrets du processus parent avant l'activation du sandbox ; des schémas similaires ont affecté Claude Code et Codex <sup>[44](<https://novee.security/blog/gemini-cli-pre-task-rce/>)</sup>.
-- CVE-2026-75650 (StyleSmuggler) d'Adobe Commerce est activement exploité avec des backdoors Rust et des web shells PHP ; la correction seule peut être insuffisante pour les boutiques déjà compromises <sup>[45](<https://www.csoonline.com/article/4219626/adobe-commerce-max-severity-bug-comes-under-active-attack.html>)</sup>.
-- La vulnérabilité OVERPASS du noyau SAP (CVE-2026-82533) est un débordement de tampon de gravité maximale dans le traitement EPP, permettant l'exécution de commandes arbitraires en tant qu'administrateur <sup>[46](<https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/>)</sup>.
-- Les chaînes d'infection ClearFake WebDAV livrent Amatera Stealer, ZigCryptoStealer et NetSupport Manager via de faux CAPTCHAs et le stockage BNB Smart Chain <sup>[47](<https://blog.talosintelligence.com/clearfake-webdav-infection-chain>)</sup>.
-- 1.1.1.1 valide désormais les signatures DNSSEC post-quantum (ML-DSA-44) comme première étape vers une sécurité post-quantum complète d'ici 2029 <sup>[48](<https://blog.cloudflare.com/post-quantum-dnssec-1111/>)</sup>.
-- Les téléviseurs LG sont accusés d'enregistrer l'audio (y compris en veille) et de transmettre des transcriptions en texte clair, des IPs et des données locales d'appareils ; LG nie l'enregistrement ambiant <sup>[49](<https://www.theregister.com/security/2026/09/08/lg-accused-of-egregious-invasion-of-privacy-over-tv-data-collection/5294956>)</sup>.
+## Developer Tools and Practices
+- **Datasette 1.0a39 and 0.65.4** ship security patches for public-facing instances mixing public/private tables; fixes were audited with Claude Fable 5.1, GPT-5.6, and GPT-6 Astra <sup>[8](<https://simonwillison.net/2026/Sep/11/datasette-security/>)</sup>.
+- **trynix.dev** runs any Nix package from the past 13 years in a browser via qemu-wasm x86_64 Linux VM, enabling interactive shells (e.g., Python 3.6.2) and novel workflows like booting a PR environment for review <sup>[9](<https://simonwillison.net/2026/Sep/10/trynix/>)</sup>.
+- Google’s **Gemini DevEx program** refines enterprise AI governance via sprint testing, improving setup prerequisites, extension security, and policy enforcement for Agent Gateway and Semantic Governance <sup>[10](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>) — _latent.space_
-2. [Quoting Calif Research](<https://simonwillison.net/2026/Sep/10/calif-research/>) — _simonwillison.net_
-3. [Pretraining progress is mostly coming from data](<https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data>) — _dwarkesh.com_
-4. [Genome language models can design cancer vaccines](<https://www.radicalnumerics.ai/blog/omnii-cancer-vaccines>) — _radicalnumerics.ai_
-5. [How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules](<https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials>) — _openai.com_
-6. [IonQ Compiles Shor's Attack on secp256k1 Down to 19,397 Ions and 26 Days per Attempt](<https://postquantum.com/post-quantum/ionq-secp256k1-resource-estimate>) — _postquantum.com_
-7. [GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI](<https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai>) — _cloud.google.com_
-8. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-9. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-10. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-11. [Kestra 2.0: A new engine, workers anywhere, and flows as agent tools](<https://kestra.io/blogs/release-2-0/>) — _kestra.io_
-12. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api>) — _openai.com_
-13. [Build more natural voice experiences with GPT‑Live‑1 in the API](<https://openai.com/index/introducing-gpt-live-1-in-the-api>) — _openai.com_
-14. [Introducing ChatGPT for Financial Services](<https://openai.com/index/introducing-chatgpt-financial-services>) — _openai.com_
-15. [Now everyone can put data to work](<https://openai.com/index/put-data-to-work>) — _openai.com_
-16. [Connections: managed credentials and per-caller identity for Managed Deep Agents](<https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents>) — _langchain.com_
-17. [Introducing Projects](<https://cursor.com/blog/projects>) — _cursor_
-18. [Agents on Rails: Fable 5.1 & GLM 5.3 Flash](<https://rubyonrails.org/2026/9/2/agents-on-rails-claude-fable-5-1-and-glm-5-3-flash>) — _rubyonrails.org_
-19. [Run any model, on any backend (Website)](<https://imvision12.github.io/ZeroModels/>) — _imvision12.github.io_
-20. [Reasoning Prefills on a Few Open Models, v1.1](<https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3>) — _gist.github.com_
-21. [PyTorch Conference China 2026: Advancing the Open Source AI Stack](<https://pytorch.org/blog/pytorch-conference-china-2026-advancing-the-open-source-ai-stack/>) — _pytorch.org_
-22. [Built for reliability: How American Express processes payments at scale](<https://blog.bytebytego.com/p/built-for-reliability-how-american>) — _blog.bytebytego.com_
-23. [Cloudfloe's query engine in a celld cell](<https://gordonmurray.ie/data/2026/09/05/cloudfloes-query-engine-in-a-celld-cell.html>) — _gordonmurray.ie_
-24. [Jitter is the cheapest reliability fix you are not using](<https://ankit-rana.com/logs/49-jitter-synchronised-clients/>) — _ankit-rana.com_
-25. [Google Cloud races to catch up in the AI deployment wars with Accenture deal](<https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/>) — _techcrunch.com_
-26. [Powering AI is an architecture problem](<https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/>) — _technologyreview.com_
-27. [The Pulse #191: a new trend of CPU shortages](<https://newsletter.pragmaticengineer.com/p/the-pulse-191-a-new-trend-of-cpu>) — _newsletter.pragmaticengineer.com_
-28. [React 19.3](<https://react.dev/blog/2026/09/09/react-19-3>) — _react.dev_
-29. [Tailwind Labs is joining Shopify](<https://tailwindcss.com/blog/tailwind-is-joining-shopify>) — _tailwindcss.com_
-30. [Native is now the future of mobile at Shopify](<https://simonwillison.net/2026/Sep/10/shopify-react-native/>) — _simonwillison.net_
-31. [Refreshed repository pull requests page in public preview](<https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview>) — _github.blog_
-32. [AI Scan for pull request APIs in public preview](<https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview>) — _github.blog_
-33. [Control GitHub Actions cache access with cache-mode](<https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode>) — _github.blog_
-34. [MAI-Code-1-Flash deprecated](<https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated>) — _github.blog_
-35. [Xcode 27 runner image now runs on macOS 27](<https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27>) — _github.blog_
-36. [Multimodal models need video. We froze time to give it to them](<https://posthog.com/blog/multimodal-models-need-video>) — _posthog.com_
-37. [An Early Look at Expo Modules 2.0](<https://expo.dev/blog/an-early-look-at-expo-modules-2-0>) — _expo.dev_
-38. [ArchSpec: Executable Architecture Specs for Rails](<https://paolino.me/archspec/>) — _paolino.me_
-39. [TeamAI CLI: Shared Context for Every Coding Agent](<https://github.com/Tencent/teamai-cli>) — _github.com_
-40. [PI-Desktop: A Local-First Workspace for Coding Agents](<https://github.com/vastsa/PI-Desktop>) — _github.com_
-41. [Kontext](<https://github.com/kontext-security/kontext>) — _github.com_
-42. [Copperhead: Cursor for Circuit Boards](<https://copperhead.sh/>) — _copperhead.sh_
-43. [CVE-2026-82533: DeepSeek Harness Vulnerability Lets AI Agents Escape Their Own Sandbox](<https://www.ox.security/blog/cve-2026-82533-deepseek-harness-ai-agent-sandbox-escape/>) — _ox.security_
-44. [Pre-Task RCE in Google Gemini CLI (CVE-2026-12537)](<https://novee.security/blog/gemini-cli-pre-task-rce/>) — _novee.security_
-45. [Adobe Commerce max-severity bug comes under active attack](<https://www.csoonline.com/article/4219626/adobe-commerce-max-severity-bug-comes-under-active-attack.html>) — _csoonline.com_
-46. [SAP Warns of Maximum Severity OVERPASS Kernel Vulnerability](<https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/>) — _bleepingcomputer.com_
-47. [ClearFake WebDAV Infection Chain Delivers Amatera Stealer, ZigCryptoStealer, and NetSupport Manager](<https://blog.talosintelligence.com/clearfake-webdav-infection-chain>) — _blog.talosintelligence.com_
-48. [1.1.1.1 now supports post-quantum DNSSEC, all 2,420 bytes of it](<https://blog.cloudflare.com/post-quantum-dnssec-1111/>) — _blog.cloudflare.com_
-49. [LG accused of 'egregious invasion of privacy' over TV data collection](<https://www.theregister.com/security/2026/09/08/lg-accused-of-egregious-invasion-of-privacy-over-tv-data-collection/5294956>) — _theregister.com_
+1. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api/>) — _openai.com_
+2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+3. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+4. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+5. [Tech companies move to open AI models](<https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/>) — _blog.pragmaticengineer.com_
+6. [The lifecycle of a sharded Postgres query](<https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query>) — _planetscale.com_
+7. [Router Power](<https://hypersoren.xyz/posts/router-power/>) — _hypersoren.xyz_
+8. [Datasette 1.0a39 and 0.65.4 security releases](<https://simonwillison.net/2026/Sep/11/datasette-security/>) — _simonwillison.net_
+9. [Any Nix package, live in your browser](<https://simonwillison.net/2026/Sep/10/trynix/>) — _simonwillison.net_
+10. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
 
 
 ## Archive récente
