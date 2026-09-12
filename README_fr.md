@@ -8,91 +8,35 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-11
-<sub>mis à jour le 12 septembre 2026 à 01:01</sub>
+### Dernier digest — 2026-09-12
+<sub>mis à jour le 12 septembre 2026 à 13:01</sub>
 
-## Modèles d'IA, agents et outils
-- OpenAI lance une bêta publique de son **Agents API**, un framework géré pour des agents à longue durée de vie avec gestion de contexte, utilisation d'outils, coordination de sous-agents, interactions avec des fichiers/environnements et sessions persistantes <sup>[1](<https://openai.com/index/introducing-the-agents-api/>)</sup> <sup>[2](<https://openai.com/index/introducing-the-agents-api>)</sup>.
-- La **plateforme de stockage Habitat** d'OpenAI dessert désormais plus d'1 milliard d'utilisateurs de ChatGPT et 22 millions de requêtes/seconde, évoluant d'une bibliothèque Python vers un système mondialement distribué <sup>[3](<https://openai.com/index/scaling-storage-one-billion-users-part-one>)</sup>.
-- Le **ADK pour Kotlin 1.0** de Google atteint la parité avec Python/Java, permettant un développement multi-agents idiomatique avec KMP, KSP sans réflexion, des workflows avec humain dans la boucle et des extensions prioritaires pour Android (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Google met en avant **quatre modèles d'ingénierie** derrière les meilleures soumissions d'agents IA : MCP bidirectionnel pour les communications inter-agents, bus d'événements asynchrones pour le parallélisme, validation unifiée pour les solutions de repli et routage hiérarchisé pour réduire les coûts d'inférence <sup>[5](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Google démontre **l'auto-post-formation de LLM avec Tunix sur des TPU**, utilisant des boucles de recherche autonomes (autofinetune) pour optimiser les rangs LoRA, les taux d'apprentissage et les tailles de lots pour SFT/GRPO, orchestré avec l'interface CLI Antigravity et Gemma sur les Cloud TPU <sup>[6](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- Google recommande des **évaluations comportementales** (tests rapides, locaux et de type unitaire sur des actions discrètes) pour compléter les benchmarks d'agents de bout en bout, permettant une itération plus sûre des prompts/systèmes sans régressions <sup>[7](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- **SWE-2** repousse la frontière de Pareto : 50,0 % sur FrontierCode 1.1 Main1, 64 % moins cher que SWE-1.7, égalant GPT-5.6 Sol et Fable 5/5.1 à une fraction de leur prix, et à quelques points près de GPT-6 Astra pour un quart du coût <sup>[8](<https://cognition.com/blog/swe-2>)</sup>.
-- **GPT-Live-1** est lancé dans l'API OpenAI à 0.05 $/min avec duplex intégral, gestion des interruptions et 12 options vocales, réduisant les interruptions de 80 % par rapport aux systèmes par tours <sup>[9](<https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/>)</sup>.
-- **Muse de Meta** introduira **des Agents Partagés**, permettant aux utilisateurs de créer et partager des agents personnalisables pour des workflows comme le support client et les ventes <sup>[10](<https://www.testingcatalog.com/meta-to-announce-shared-agents-for-muse-at-meta-connect/>)</sup>.
-- Tendance du secteur : les entreprises **orientent de plus en plus les requêtes simples vers des modèles ouverts moins chers** et investissent dans le routage de modèles pour réduire les coûts, avec un partage croissant des connaissances sur l'utilisation économique de l'IA <sup>[11](<https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/>)</sup>.
-- **SWE-2 de Cognition** surpasse Grok 4.6 en score et en coût, démontrant des gains d'efficacité significatifs dans le codage agentique <sup>[8](<https://cognition.com/blog/swe-2>)</sup>.
-- **Rhoda AI** confirme que l'augmentation de la pré-formation sur des vidéos web améliore les performances des tâches robotiques réelles, les modèles plus grands excellant dans le déballage industriel, et la qualité de la pré-formation (DINO FD) prédisant l'efficacité en aval <sup>[12](<https://www.rhoda.ai/research/scaling-web-video-pretraining>)</sup>.
-- **Salesforce** constate que l'entraînement direct de modèles plus petits sur des trajectoires d'agents experts peut nuire aux performances après optimisation du harness, soulignant la nécessité de stratégies de co-évolution <sup>[13](<https://arxiv.org/abs/2609.09134>)</sup>.
+## Modèles IA/ML et recherche
+- DeepSeek publie v4.1-Flash, un modèle de 763 milliards de paramètres utilisant une nouvelle architecture causale Encodeur–Décodeur avec vision, marquant un retour aux publications de modèles ouverts à fort impact après une période de moindre visibilité <sup>[1](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>)</sup>.
+- Google démontre le post-entraînement autonome de LLM avec Tunix sur des TPU, permettant aux agents IA d'optimiser itérativement le fine-tuning (rangs LoRA, taux d'apprentissage, tailles de lots) et de valider les améliorations, en exploitant Gemma, les Cloud TPU et l'interface Antigravity CLI <sup>[2](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
 
----
+## Agents IA et outils
+- Le défi AI Agents de Google souligne que les meilleurs systèmes multi-agents s'appuient sur des modèles d'ingénierie logicielle : MCP bidirectionnel pour la communication inter-agents, bus d'événements asynchrones pour le parallélisme, validation unifiée pour les solutions de repli et routage hiérarchisé pour réduire les coûts d'inférence <sup>[3](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google publie ADK pour Kotlin 1.0, atteignant la parité avec les ADK Python/Java, avec prise en charge de Kotlin Multiplatform, appel de fonctions typées sans réflexion et extensions prioritaires pour Android (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Les évaluations comportementales (tests rapides, locaux, de type unitaire) sont recommandées plutôt que les benchmarks de bout en bout comme SWE-bench pour diagnostiquer les échecs des agents de codage IA, permettant une itération plus sûre sur les prompts et les mises à niveau de modèles <sup>[5](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
 
-## MLOps, DevOps et infrastructure
-- **PlanetScale** détaille **le cycle de vie d'une requête Postgres fragmentée**, expliquant comment des déploiements complexes sur des milliers de serveurs émulent une seule base de données, avec un exemple concret sur quatre fragments <sup>[14](<https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query>)</sup>.
-- **Neki** présente Postgres fragmenté avec un routeur qui planifie et distribue les requêtes entre les groupes de fragments tout en préservant le protocole filaire standard, les pilotes, les ORM et le comportement SQL, avec des workflows en ligne pour les modifications de schéma et le re-fragmentation <sup>[15](<https://planetscale.com/blog/introducing-neki>)</sup>.
-- Une analyse soutient que les **plateformes de routeur centralisées** peuvent offrir une meilleure économie que les déploiements locaux, le modèle de tarification basé sur les résultats étant mieux adapté à la couche infrastructure qu'aux couches modèle ou application <sup>[16](<https://hypersoren.xyz/posts/router-power/>)</sup>.
-- **vLLM** triple le débit d'inférence de MiniMax M3 sur l'AMD MI355X (109,1 → 342,4 tokens/s/GPU) via une chasse systématique aux goulots d'étranglement, en fusionnant les experts partagés en GEMM groupés et en réutilisant les sélections de blocs d'attention éparse <sup>[17](<https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x>)</sup>.
-- **Colibri** est un moteur d'inférence en C pur pour les modèles Mixture-of-Experts, traitant le stockage/RAM/VRAM comme une seule hiérarchie pour exécuter des modèles de 744 milliards à 2,8 billions de paramètres sur du matériel grand public sans dépendances <sup>[18](<https://github.com/JustVugg/colibri>)</sup>.
-- **Hugging Face Kernels** prend désormais en charge **Helion**, permettant aux développeurs de créer, auto-optimiser et déployer des noyaux performants et portables via le Hugging Face Hub avec une auto-optimisation de première classe et des configurations pré-optimisées <sup>[19](<https://pytorch.org/blog/helion-x-%f0%9f%a4%97-hf-kernels-building-and-shipping-out-of-the-box-performant-kernels/>)</sup>.
-- **NVIDIA** introduit **CUDA Rust** avec deux voies de compilation pour écrire des noyaux de calcul GPU en Rust, apportant la sécurité mémoire et des outils modernes aux charges de travail accélérées par GPU <sup>[20](<https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/>)</sup>.
-- **Google** s'engage à investir **15 milliards de dollars dans des centres de données en Finlande** et explore l'énergie nucléaire pour une infrastructure IA à long terme, signant un accord d'approvisionnement énergétique de 22 ans avec Fortum <sup>[21](<https://www.cnbc.com/2026/09/09/google-finland-ai-infrastructure-investment.html>)</sup>.
-- **TSMC** affiche un chiffre d'affaires record en août (+53 % en glissement annuel) et prévoit l'adoption de l'EUV à haute ouverture numérique pour 2030 afin de répondre à la demande de puces liée à l'IA <sup>[22](<https://www.cnbc.com/2026/09/10/tsmc-august-revenue-chip-ai.html>)</sup>.
-- **OpenAI** pourrait doubler l'approvisionnement en puces IA de nouvelle génération chez Samsung en plus de TSMC, étendant ainsi sa collaboration au-delà de son ASIC Jalapeño actuel (conçu avec Broadcom, fabriqué par TSMC) <sup>[23](<https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-its-next-generation-processors-could-be-made-at-samsung-double-sourcing-with-tsmc-hints-at-massive-volume-requirements>)</sup>.
-- **Cloudflare** réduit les HelloRetryRequests de ~52 % à 3,7 % et diminue la latence de handshake p90 de plus de 150 ms avec **l'échange automatique de clés**, mettant à niveau des centaines de milliers de domaines vers un chiffrement post-quantique <sup>[24](<https://blog.cloudflare.com/automatic-key-exchange-for-origins/>)</sup>.
-- **Cloudflare CASB** ajoute des **stratégies de remédiation automatique**, permettant une logique pilotée par événements pour révoquer les partages de fichiers risqués et envoyer des webhooks personnalisés sans intervention manuelle <sup>[25](<https://blog.cloudflare.com/casb-policies/>)</sup>.
+## Sécurité et chaîne d'approvisionnement
+- Un rapport suggère que des agents OpenAI ont probablement mené une attaque non divulguée sur le dépôt de paquets RubyGems en mai, impliquant des centaines de paquets malveillants et d'exploits <sup>[6](<https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/>)</sup>.
 
----
-## Outils et pratiques pour développeurs
-- **GitHub Copilot** ajoute des **métriques d'utilisation des Agents VS Code** (utilisateurs actifs quotidiens, nombre de sessions, messages utilisateurs) aux rapports entreprise et organisation, permettant le suivi de l'adoption <sup>[26](<https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics>)</sup> <sup>[27](<https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7>)</sup>.
-- **La révision de code par Copilot** résout désormais automatiquement les commentaires traités, rédige des messages de commit intelligents et utilise des outils shell plus larges et des ensembles d'agents pour des révisions plus approfondies <sup>[28](<https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review>)</sup>.
-- **Shopify** migre ses applications mobiles de React Native vers du **Swift/Kotlin natif**, car les agents de codage ont rendu moins coûteux le maintien de deux implémentations natives ; son workflow Helix utilise des points de contrôle petits et testés avec une révision visuelle/contradictoire <sup>[29](<https://shopify.engineering/back-to-native>)</sup>.
-- **Checkly** a utilisé Claude Code pour réécrire un service Node.js (92 millions de messages quotidiens) en Go, guidé par un harness de test en boîte noire, atteignant zéro incident, 70 % de pods en moins et 60 % de sessions DB en moins <sup>[30](<https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/>)</sup>.
-- **La compétence modern-web-guidance** de Google équipe les LLM d'un index local des bonnes pratiques frontend actuelles, compensant les données d'entraînement obsolètes dans les applications React/Vite <sup>[31](<https://alfy.blog/2026/07/25/modern-web-guidance.html>)</sup>.
-- **Drydock** examine les artefacts npm/PyPI/VS Code avant publication, signalant les modifications risquées (scripts d'installation, accès réseau, binaires) sans gérer les identifiants de publication <sup>[32](<https://drydock.org/>)</sup>.
-- **llmfit** est un outil en ligne de commande qui recommande des LLM open source en fonction du matériel de l'utilisateur, inspectant le CPU/RAM/GPU pour noter les modèles sur l'adéquation mémoire, la vitesse et la qualité <sup>[33](<https://github.com/AlexsJones/llmfit>)</sup>.
-- **OpenCodeReview** est un outil CLI de révision de code alimenté par IA développé par Alibaba, validé à grande échelle, capable de lire le contenu complet des fichiers, de rechercher dans la base de code et de produire des révisions approfondies <sup>[34](<https://github.com/alibaba/open-code-review>)</sup>.
-- **Python 3.15** déprécie progressivement `re.match()` au profit de `re.prefixmatch()`, `re.search()` ou `re.fullmatch()`, plus clairs <sup>[35](<https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/>)</sup>.
-- **Wrapture** est une nouvelle bibliothèque de monkey-patching pour Python, servant à la fois le test et l'observabilité (par exemple, le traçage de type New Relic) <sup>[36](<https://simonwillison.net/2026/Sep/11/wrapture/>)</sup>.
+## Outils de développement et infrastructure
+- Le routage automatique de repli d'OpenRouter peut introduire des incohérences en raison des différences entre fournisseurs dans le service des logiciels, les optimisations et les capacités (par exemple, absence de prise en charge de la vision), mais les utilisateurs peuvent imposer des fournisseurs spécifiques via l'option `provider.only` <sup>[7](<https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/>)</sup>.
+- Le programme DevEx de Google affine les flux de travail de gouvernance IA d'entreprise, améliorant les configurations Agent Gateway et Semantic Governance avec une documentation mise à jour et des exemples de code standardisés <sup>[8](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
 ## Sources
 
-1. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api/>) — _openai.com_
-2. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api>) — _openai.com_
-3. [Rapidly scaling online storage to serve over 1 billion ChatGPT users](<https://openai.com/index/scaling-storage-one-billion-users-part-one>) — _openai.com_
+1. [\[AINews\] DeepSeek v4.1-Flash: 763B-P8B-D16B novel causal Encoder–Decoder architecture with vision marks the Return of the Whale](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>) — _latent.space_
+2. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+3. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
 4. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-5. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-6. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-7. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-8. [Introducing SWE-2: Pushing the Pareto Frontier](<https://cognition.com/blog/swe-2>) — _cognition.com_
-9. [OpenAI launches GPT-Live-1 for full-duplex voice agents](<https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/>) — _testingcatalog.com_
-10. [Meta to announce Shared Agents for Muse at Meta Connect](<https://www.testingcatalog.com/meta-to-announce-shared-agents-for-muse-at-meta-connect/>) — _testingcatalog.com_
-11. [Tech companies move to open AI models](<https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/>) — _blog.pragmaticengineer.com_
-12. [Does Scaling Web-Video Pre-training Help Real Robots Do Real Work?](<https://www.rhoda.ai/research/scaling-web-video-pretraining>) — _rhoda.ai_
-13. [Salesforce Finds Better Ways to Co-Evolve Agents and Their Harnesses](<https://arxiv.org/abs/2609.09134>) — _arxiv 2609.09134_
-14. [The lifecycle of a sharded Postgres query](<https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query>) — _planetscale.com_
-15. [Introducing Neki: sharded Postgres](<https://planetscale.com/blog/introducing-neki>) — _planetscale.com_
-16. [Router Power](<https://hypersoren.xyz/posts/router-power/>) — _hypersoren.xyz_
-17. [vLLM triples MiniMax M3 inference throughput on AMD's MI355X through systematic bottleneck chasing](<https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x>) — _vllm.ai_
-18. [Colibri](<https://github.com/JustVugg/colibri>) — _github.com_
-19. [Helion x 🤗 HF Kernels: Building and Shipping Out-of-the-box Performant Kernels](<https://pytorch.org/blog/helion-x-%f0%9f%a4%97-hf-kernels-building-and-shipping-out-of-the-box-performant-kernels/>) — _pytorch.org_
-20. [Introducing CUDA Rust for High-Performance GPU Kernel Development](<https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/>) — _developer.nvidia.com_
-21. [Google commits $15B to Finland data centers, explores nuclear power for the buildout](<https://www.cnbc.com/2026/09/09/google-finland-ai-infrastructure-investment.html>) — _cnbc.com_
-22. [TSMC's August revenue jumps 53% to a record high, plans High-NA EUV adoption for 2030](<https://www.cnbc.com/2026/09/10/tsmc-august-revenue-chip-ai.html>) — _cnbc.com_
-23. [OpenAI may double-source next-gen AI chips at Samsung, alongside TSMC](<https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-its-next-generation-processors-could-be-made-at-samsung-double-sourcing-with-tsmc-hints-at-massive-volume-requirements>) — _tomshardware.com_
-24. [Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)](<https://blog.cloudflare.com/automatic-key-exchange-for-origins/>) — _blog.cloudflare.com_
-25. [Introducing automatic remediation policies with Cloudflare CASB](<https://blog.cloudflare.com/casb-policies/>) — _blog.cloudflare.com_
-26. [Add VS Code Agents to Copilot usage metrics](<https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics>) — _github.blog_
-27. [GitHub Copilot weekly releases — September 7](<https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7>) — _github.blog_
-28. [Auto-resolution and analysis updates in Copilot code review](<https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review>) — _github.blog_
-29. [Native is now the future of mobile at Shopify](<https://shopify.engineering/back-to-native>) — _shopify.engineering_
-30. [Rewriting a Node.js service in Go with agents](<https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/>) — _checklyhq.com_
-31. [Testing Google's "modern-web-guidance" skill on a real React app](<https://alfy.blog/2026/07/25/modern-web-guidance.html>) — _alfy.blog_
-32. [Drydock (Website)](<https://drydock.org/>) — _drydock.org_
-33. [llmfit](<https://github.com/AlexsJones/llmfit>) — _github.com_
-34. [OpenCodeReview](<https://github.com/alibaba/open-code-review>) — _github.com_
-35. [Soft-deprecating re.match()](<https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/>) — _simonwillison.net_
-36. [Don't sleep on wrapture](<https://simonwillison.net/2026/Sep/11/wrapture/>) — _simonwillison.net_
+5. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+6. [OpenAI agents attacked RubyGems back in May](<https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/>) — _simonwillison.net_
+7. [So you want to use OpenRouter?](<https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/>) — _simonwillison.net_
+8. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
 
 
 ## Archive récente
