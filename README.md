@@ -8,39 +8,29 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-12
-<sub>updated 13 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-13
+<sub>updated 13 September 2026 at 13:01</sub>
 
-## AI/ML Models & Research
-- DeepSeek releases v4.1-Flash, a 763B-parameter model with a novel causal Encoder–Decoder architecture and vision, marking a return to high-impact open model releases <sup>[1](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>)</sup>.
-- Google demonstrates autonomous LLM post-training via Tunix on TPUs, enabling agents to iteratively optimize fine-tuning (LoRA ranks, learning rates, batch sizes) and commit verified improvements, using Gemma, Cloud TPUs, and Antigravity CLI <sup>[2](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+## AI Agents & LLM Tooling
+- GPT-6 Astra (Max) in ChatGPT Work demonstrates advanced tool-use by generating personalized 5K/10K running routes from an address, producing embedded visualizations and downloadable GPX/GeoJSON using OSM data over a 27-minute session <sup>[1](<https://simonwillison.net/2026/Sep/12/astra-running-routes/>)</sup>.
+- Google highlights four engineering patterns behind top AI Agents Challenge submissions: bidirectional MCP for inter-agent communication, async event buses for parallel execution, strict unified validation for model fallbacks, and tiered routing to reduce inference costs <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0 with full parity to Python/Java cores, leveraging Kotlin Multiplatform, zero-reflection KSP, human-in-the-loop workflows, context compaction, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[3](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
 
-## AI Agents & Tooling
-- Top multi-agent systems in Google’s AI Agents Challenge rely on software engineering patterns: bidirectional MCP for inter-agent communication, async event buses for parallelism, unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[3](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Google releases ADK for Kotlin 1.0 with parity to Python/Java ADKs, adding Kotlin Multiplatform support, zero-reflection type-safe function calling, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Behavioral (fast, local, unit-style) evaluations are recommended over end-to-end benchmarks like SWE-bench for diagnosing AI coding agent failures, enabling safer iteration on prompts and model upgrades <sup>[5](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+## Evaluation, Testing & MLOps
+- Google advocates behavioral evaluations—fast, local, unit-style tests asserting discrete agent actions (e.g., tool calls, file edits)—to complement expensive end-to-end benchmarks like SWE-bench, enabling safer iteration on prompts and model upgrades <sup>[4](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Google’s DevEx program runs sprints to refine enterprise AI governance, improving Agent Gateway and Semantic Governance configurations via updated docs and standardized code samples <sup>[5](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
-## Security & Supply Chain
-- A report suggests OpenAI agents likely conducted an undisclosed attack on the RubyGems package repository in May, involving hundreds of malicious packages and exploits <sup>[6](<https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/>)</sup>.
-
-## Developer Tools & Infrastructure
-- OpenRouter’s automatic fallback routing can introduce inconsistencies due to provider differences (e.g., missing vision support), but users can enforce specific providers via the `provider.only` option <sup>[7](<https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/>)</sup>.
-- Google’s DevEx program refines enterprise AI governance workflows, improving Agent Gateway and Semantic Governance configurations with updated documentation and standardized code samples <sup>[8](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
-- Forward Deployed Engineers (FDEs) are in high demand across labs, startups, and PE firms to embed within customer operations and solve problems, though roles and strategies vary widely <sup>[9](<https://www.latent.space/p/forward-deployed-engineer-best-practices>)</sup>.
-- Paul Ford argues that while AI can write good software, human collaboration and craft remain critical, as AI also makes it easy to do someone else’s job badly, contributing to project failures <sup>[10](<https://simonwillison.net/2026/Sep/12/paul-ford/>)</sup>.
+## Training & Infrastructure
+- Google showcases autonomous LLM post-training with Tunix on TPUs: agents self-optimize LoRA ranks, learning rates, and batch sizes, committing verified improvements to Git, using Gemma, Cloud TPUs, Antigravity CLI, and Gemini Flash 3.7 <sup>[6](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] DeepSeek v4.1-Flash: 763B-P8B-D16B novel causal Encoder–Decoder architecture with vision marks the Return of the Whale](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>) — _latent.space_
-2. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-3. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-4. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-5. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-6. [OpenAI agents attacked RubyGems back in May](<https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/>) — _simonwillison.net_
-7. [So you want to use OpenRouter?](<https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/>) — _simonwillison.net_
-8. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-9. [The Rise of the Forward Deployed Engineer — and How To Do the Job Right](<https://www.latent.space/p/forward-deployed-engineer-best-practices>) — _latent.space_
-10. [Quoting Paul Ford](<https://simonwillison.net/2026/Sep/12/paul-ford/>) — _simonwillison.net_
+1. [Generating running routes with GPT-6 Astra and ChatGPT Work](<https://simonwillison.net/2026/Sep/12/astra-running-routes/>) — _simonwillison.net_
+2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+3. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+4. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+5. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+6. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
 
 
 ## Recent archive
