@@ -8,109 +8,53 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### 🗓️ Weekly recap (2026-09-07 → 2026-09-13)
-<sub>updated 14 September 2026 at 01:02</sub>
+### Latest digest — 2026-09-14
+<sub>updated 14 September 2026 at 13:01</sub>
 
-## AI Models, Research and Safety
-- OpenAI reports progress on Recursive Self-Improvement (RSI) as a step toward AGI, with public transparency and governance advocacy <sup>[1](<https://openai.com/index/research-acceleration-view-inside-openai/>)</sup>, while an internal system allegedly solved the Navier–Stokes Millennium Prize Problem using Astra-next, 10K agents, and 130B tokens at >$40M cost, though the result is under scrutiny <sup>[2](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>), [3](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>), [4](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>), [5](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>), [6](<https://mathstodon.xyz/@tao/117237320796901560>)</sup>.
-- OpenAI claims GPT-6 Astra as the most intelligent/aligned model, SOTA in computer use, browsing, software engineering, cybersecurity, science, and professional work <sup>[7](<https://openai.com/index/the-work-now-within-reach>)</sup>, scoring 100% on ExploitBench (vs 78.5% for GPT-5.6 Sol) with PoC exploit requests blocked <sup>[8](<https://thehackernews.com/2026/09/gpt-6-astra-scores-100-on-exploitbench.html>)</sup>.
-- Claude (Anthropic) produced a complete computer-verified proof of Fermat’s Last Theorem in Lean (13M lines, 29.5k theorems) <sup>[9](<https://www.anthropic.com/research/formalizing-fermats-last-theorem>)</sup>, while OpenAI’s AGI claim for a 99.9% ARC-AGI-3 score relied on custom harness/agent scaffolding; the same model scored 62.7% via the benchmark’s own software <sup>[10](<https://thenextweb.com/news/openai-astra-arc-agi-3-harness-62-7-vs-99-9-benchmark-revisions>)</sup>.
-- DeepMind releases AlphaGenome Atlas, a predictive map of ~9B human DNA variants <sup>[11](<https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/>), [12](<https://spectrum.ieee.org/alphagenome-atlas>)</sup>, and DeepSeek releases v4.1-Flash (763B parameters, causal Encoder–Decoder + vision) <sup>[13](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>)</sup>.
-- Anthropic discloses four real-world cyber incidents during third-party Claude evaluations with disabled safeguards and internet access, committing to an independent METR investigation <sup>[14](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>)</sup>.
+## AI Models and Agents
+- Perplexity deploys OpenAI's GPT-6 Astra end-to-end for writing communications, modifying software, and monitoring production systems, requiring far less human oversight than prior models <sup>[1](<https://openai.com/index/perplexity-improving-accuracy-with-astra>)</sup>.
+- Google's AI Agents Challenge highlights that robust multi-agent systems rely on software engineering patterns: bidirectional MCP for inter-agent communication, async event buses for parallelism, strict unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0 with full feature parity to Python/Java, enabling idiomatic multi-agent development on Kotlin Multiplatform, Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch), and advanced orchestration like human-in-the-loop and context compaction <sup>[3](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Autonomous LLM post-training loops using Tunix on TPUs can iteratively optimize LoRA ranks, learning rates, and batch sizes overnight, committing verified improvements to Git <sup>[4](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- OpenAI launches ChatGPT Work's Data agent to let employees query approved company data and build dashboards in plain language, respecting existing permissions and integrating with major BI platforms <sup>[5](<https://openai.com/index/put-data-to-work/>)</sup>.
 
----
+## RAG, Retrieval, and Embeddings
+- Pinterest's Manas retrieval platform scales to billions of embeddings; recent optimizations include 20–30% serving cost cuts via quantization, SSD-backed ANN experiments to reduce memory/CPU, and multi-embedding retrieval beyond two-tower matching <sup>[6](<https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01>)</sup>.
 
-## Agentic Systems, Tooling and RAG
-- Google’s AI Agents Challenge highlights top multi-agent systems using **bidirectional MCP for inter-agent comms, async event buses for parallelism, unified validation for fallbacks, and tiered routing to cut inference costs** <sup>[15](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [16](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [17](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [18](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [19](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [20](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>), [21](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- OpenAI releases the **Agents API** for long-running agents with orchestration, tool use, and persistent sessions <sup>[22](<https://openai.com/index/introducing-the-agents-api>), [23](<https://openai.com/index/introducing-the-agents-api/>), [24](<https://openai.com/index/introducing-the-agents-api>)</sup>, and **GPT-Live-1** for full-duplex voice conversations in the API <sup>[25](<https://openai.com/index/introducing-gpt-live-1-in-the-api>), [26](<https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/>)</sup>.
-- Meta launches **Muse**, a consumer-facing autonomous agent for app/website tasks (e.g., Gmail, Spotify, Shopify) via Meta’s app or WhatsApp, with a free tier and paid upgrades ($20–$100/month) <sup>[27](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>)</sup>, and plans **Shared Agents** for customizable workflows <sup>[28](<https://www.testingcatalog.com/meta-to-announce-shared-agents-for-muse-at-meta-connect/>)</sup>.
-- **Spotify’s Portal** routes bulk I/O to cheaper models (Gemini 2.5 Flash), cutting Claude Code token usage by 90% <sup>[29](<https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90>)</sup>, while **SWE-2** achieves 50.0% on FrontierCode 1.1 Main1 at 64% lower cost than SWE-1.7, matching GPT-5.6 Sol and Fable 5/5.1 at a fraction of their price <sup>[30](<https://cognition.com/blog/swe-2>)</sup>.
-- **LLM-as-a-Verifier** provides fine-grained feedback for coding, robotics, and medical agents without additional training, achieving SOTA across benchmarks <sup>[31](<https://github.com/llm-as-a-verifier/llm-as-a-verifier>)</sup>, and **GPT-6 Astra controlled YAM robotic arms** (19/20 block placements, 2/20 puzzle insertions) at ~half the cost of Fable <sup>[32](<https://openai.robocurve.org/gpt-6-astra/>)</sup>.
+## MLOps and Evaluation
+- Google recommends behavioral evaluations—fast, local, unit-style tests asserting discrete intermediate actions (e.g., tool calls, file edits)—to complement slow end-to-end benchmarks like SWE-bench, enabling safer iteration on prompts and model upgrades <sup>[7](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Debugging AI agents requires end-to-end traces of model/tool calls, retrieval inputs/outputs, and separate tests for deterministic system behavior vs. answer quality, as agents can be wrong despite passing CI and evals <sup>[8](<https://thenewstack.io/ai-agent-trace-debugging/>)</sup>.
 
----
+## DevOps, Infrastructure, and Cloud
+- PlanetScale's Neki sharded Postgres achieves 118M queries/sec across 512 shards and 1.22 PiB with a narrow point-select workload, demonstrating clean scaling for primary-key lookups <sup>[9](<https://planetscale.com/blog/118-million-queries-per-second-on-neki>)</sup>.
+- DuckDB 2.0 accelerates S3 queries 2–3x via async I/O, improves deep recursive queries, and optimizes semi-structured VARIANT data over JSON, while adding triggers, nested schemas, and data-modifying CTEs <sup>[10](<https://motherduck.com/blog/why-duckdb-20-is-faster/>)</sup>.
+- Diskless Kafka (KIP-1150) moves durable storage to object storage with strongly consistent metadata, trading cheaper retention for changes in batching, offset assignment, recovery, compaction, latency, and feature support—making it a workload-specific choice <sup>[11](<https://softwaremill.com/diskless-kafka-object-storage-kip-1150-and-kafkas-future/>)</sup>.
+- Estuary details how large PostgreSQL CDC backfills fail due to WAL retention, delayed slot acknowledgments, long-running transactions, and stale snapshots; safer designs keep WAL consumption during chunked reads and reconcile overlaps with watermarks <sup>[12](<https://estuary.dev/blog/postgres-cdc-backfill>)</sup>.
 
-## MLOps, Data Engineering and Infrastructure
-- **Vortex** streams training data from S3 to GPUs with minimal copying via lightweight encodings and zero-copy paths, reducing CPU/NVMe bottlenecks <sup>[33](<https://www.infoq.com/presentations/vortex-columnar-file-format-gpu-streaming/>), [34](<https://spiraldb.com/blog/from-s3-to-gpu-in-one-copy>)</sup>, while **vLLM** triples MiniMax M3 inference throughput on AMD MI355X (109.1 → 342.4 tokens/s/GPU) via bottleneck optimization <sup>[35](<https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x>)</sup>.
-- **Polars 2.0** defaults to the streaming engine for lazy queries, lowering memory use and speeding execution <sup>[36](<https://pola.rs/posts/announcing-polars-2/>)</sup>, and **Sail 0.7** adds stateless compute with durable job state and Arrow-based checkpoints <sup>[37](<https://lakesail.com/blog/sail-0-7-blocking-shuffle-checkpoint/>)</sup>.
-- **DuckFlight** enables PostgreSQL tools and Arrow Flight SQL clients to read/write live DuckDB databases without a separate service <sup>[38](<https://github.com/sidequery/duckflight-extension>)</sup>, and **ClickHouse 26.8** introduces pipelined SQL with a `|>` operator <sup>[39](<https://clickhouse.com/blog/pipelined-sql-26.8>)</sup>.
-- **Google TPUv7 Ironwood** delivers up to 50% better performance per dollar than Nvidia B200/B300 and is being externalized for broader inference workloads <sup>[40](<https://inferencex.semianalysis.com/blog/tpu-inferencex-full-steam>)</sup>, while **Google commits $15B to Finland data centers** and explores nuclear power for long-term AI infrastructure <sup>[41](<https://www.cnbc.com/2026/09/09/google-finland-ai-infrastructure-investment.html>)</sup>.
-
----
-## DevOps, Cloud and Security
-- **Meta’s ZGateway proxy** reduces client connection fan-in by ~97–98% for ZippyDB, enabling batching/coalescing and centralized failover <sup>[42](<https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/>)</sup>, and **Dropbox** treats compute, storage, networking, power, and cooling as one interconnected optimization problem <sup>[43](<https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai>)</sup>.
-- **PostGREShell (CVE-2026-6471)** affects PostgreSQL 9.4–18: low-privilege REPLICATION accounts can gain superuser access; patch and restrict pg_hba.conf <sup>[44](<https://www.cyera.com/pt-br/research/postgreshell-the-database-powering-much-of-the-internet-had-an-open-door-for-12-years>)</sup>, while **N‑able patches CVE-2026-86218** in N-central amid ongoing attacks <sup>[45](<https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/>)</sup>.
-- **Cloudflare** launches early-access Vulnerability Discovery and Remediation using GPT-5.6 Cyber for context-aware scanning and patching <sup>[46](<https://blog.cloudflare.com/vulnerability-discovery-remediation/>)</sup>, reduces HelloRetryRequests from ~52% to 3.7% with **Automatic Key Exchange** <sup>[47](<https://blog.cloudflare.com/automatic-key-exchange-for-origins/>)</sup>, and adds **automatic remediation policies** to CASB <sup>[48](<https://blog.cloudflare.com/casb-policies/>)</sup>.
-- **NVIDIA** proposes centralized identity gateways for federated Kubernetes/AI platforms <sup>[49](<https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms/>)</sup> and introduces **CUDA Rust** for authoring GPU compute kernels in Rust <sup>[50](<https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/>)</sup>.
-
----
-## Developer Tools and Practices
-- **GitHub Enterprise Server 3.22** is GA with Copilot CLI in air-gapped environments (technical preview) and enterprise teams GA <sup>[51](<https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available>)</sup>, while **GitHub Copilot** adds VS Code Agents usage metrics <sup>[52](<https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics>), [53](<https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7>)</sup> and **Copilot code review** auto-resolves addressed comments <sup>[54](<https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review>)</sup>.
-- **Shopify** raised mobile E2E test stability to 98% via a strict builder API and PaddleOCR/OpenCV <sup>[55](<https://shopify.engineering/mobile-e2e-testing>)</sup>, and moves mobile apps from React Native back to native Swift/Kotlin due to agent-driven cost savings <sup>[56](<https://shopify.engineering/back-to-native>)</sup>.
-- **Zod 4.5** reduces schema memory use by an order of magnitude via method memoization <sup>[57](<https://zod.dev/blog/reducing-memory-footprint>)</sup>, and **OpenTofu 1.13** adds built-in linting with experimental rules <sup>[58](<https://opentofu.org/blog/plans-for-linting/>)</sup>.
-- **Docker’s YOLO mode** allows AI coding agents to execute actions without approval prompts, boosting productivity but increasing security risks <sup>[59](<https://www.docker.com/blog/what-is-yolo-mode/>)</sup>, while **TeamAI CLI** synchronizes skills, rules, and MCP config across coding agents <sup>[60](<https://github.com/Tencent/teamai-cli>)</sup>.
+## Developer Tools and Engineering Practices
+- Simon Willison releases commit-rewriter 0.1, a web app to edit Git commit messages (e.g., cleaning up coding agent cruft), runnable via `uvx commit-rewriter` <sup>[13](<https://simonwillison.net/2026/Sep/14/commit-rewriter/>)</sup>.
+- shot-scraper 1.12 adds WebP support with configurable quality, yielding smaller screenshots than JPEG/PNG <sup>[14](<https://simonwillison.net/2026/Sep/13/shot-scraper/>)</sup>.
+- Lyft rebuilds its travel-time map with more accurate ETAs, better coverage, and self-service fields, refreshing every six months and planning time-aware ETAs <sup>[15](<https://eng.lyft.com/refreshing-the-travel-time-map-behind-lyfts-marketplace-rebuilding-neighborhood-reachability-5be3efbc82ea>)</sup>.
+- Jetpack (OSDI '26) adds a portable 1-RTT fast-commit path to consensus systems, cutting write-heavy latency by up to 60% with tradeoffs like redundant work and careful leader-change recovery <sup>[16](<https://muratbuffalo.blogspot.com/2026/09/jetpack-consensus-made-generally-fast.html>)</sup>.
 
 ## Sources
 
-1. [Research acceleration: The view inside OpenAI](<https://openai.com/index/research-acceleration-view-inside-openai/>) — _openai.com_
-2. [\[AINews\] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens (>$40M), a contender for second ever Millennium Prize awarded](<https://www.latent.space/p/ainews-openai-reports-navier-stokes>) — _latent.space_
-3. [What OpenAI’s latest controversy tells us about the future of math](<https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/>) — _technologyreview.com_
-4. [On the Navier–Stokes Millennium Prize Problem](<https://simonwillison.net/2026/Sep/8/on-navier-stokes/>) — _simonwillison.net_
-5. [OpenAI Says It Has Cracked One of Math's ‘Millennium Problems'](<https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html?unlocked_article_code=1._1A.qn87.8x2oWI24XmHE&smid=url-share>) — _nytimes.com_
-6. [The collection of good, fruitful open problems is now being mined in a non-renewable fashion](<https://mathstodon.xyz/@tao/117237320796901560>) — _mathstodon.xyz_
-7. [The Work Now Within Reach](<https://openai.com/index/the-work-now-within-reach>) — _openai.com_
-8. [GPT-6 Astra Scores 100% on ExploitBench as OpenAI Blocks PoC Exploit Requests](<https://thehackernews.com/2026/09/gpt-6-astra-scores-100-on-exploitbench.html>) — _thehackernews.com_
-9. [Formalizing Fermat's Last Theorem](<https://www.anthropic.com/research/formalizing-fermats-last-theorem>) — _anthropic.com_
-10. [OpenAI's AGI number came from a harness, not the model](<https://thenextweb.com/news/openai-astra-arc-agi-3-harness-62-7-vs-99-9-benchmark-revisions>) — _thenextweb.com_
-11. [AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome](<https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/>) — _deepmind.google_
-12. [Google DeepMind Maps 9 Billion Possible DNA Variants](<https://spectrum.ieee.org/alphagenome-atlas>) — _spectrum.ieee.org_
-13. [\[AINews\] DeepSeek v4.1-Flash: 763B-P8B-D16B novel causal Encoder–Decoder architecture with vision marks the Return of the Whale](<https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b>) — _latent.space_
-14. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-d3b>) — _latent.space_
-15. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-16. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-17. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-18. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-19. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-20. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-21. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-22. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api>) — _openai.com_
-23. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api/>) — _openai.com_
-24. [Introducing the Agents API](<https://openai.com/index/introducing-the-agents-api>) — _openai.com_
-25. [Build more natural voice experiences with GPT‑Live‑1 in the API](<https://openai.com/index/introducing-gpt-live-1-in-the-api>) — _openai.com_
-26. [OpenAI launches GPT-Live-1 for full-duplex voice agents](<https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/>) — _testingcatalog.com_
-27. [Meta Introduces Muse, an AI Agent That Can Send Your Emails and Book Your Travel](<https://www.nytimes.com/2026/09/08/technology/meta-muse-ai-agent.html?unlocked_article_code=1._1A.SizP.sP5X3oDk_yD0&smid=url-share>) — _nytimes.com_
-28. [Meta to announce Shared Agents for Muse at Meta Connect](<https://www.testingcatalog.com/meta-to-announce-shared-agents-for-muse-at-meta-connect/>) — _testingcatalog.com_
-29. [Portal by Spotify cut my Claude Code token usage by 90%](<https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90>) — _engineering.atspotify.com_
-30. [Introducing SWE-2: Pushing the Pareto Frontier](<https://cognition.com/blog/swe-2>) — _cognition.com_
-31. [LLM-as-a-Verifier](<https://github.com/llm-as-a-verifier/llm-as-a-verifier>) — _github.com_
-32. [GPT‑6 Astra on robotic manipulation](<https://openai.robocurve.org/gpt-6-astra/>) — _openai.robocurve.org_
-33. [From S3 to GPU in one copy: Rethinking data loading for ML training (50 minute video)](<https://www.infoq.com/presentations/vortex-columnar-file-format-gpu-streaming/>) — _infoq.com_
-34. [From S3 to GPU in One Copy](<https://spiraldb.com/blog/from-s3-to-gpu-in-one-copy>) — _spiraldb.com_
-35. [vLLM triples MiniMax M3 inference throughput on AMD's MI355X through systematic bottleneck chasing](<https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x>) — _vllm.ai_
-36. [Pre-release of Polars 2.0](<https://pola.rs/posts/announcing-polars-2/>) — _pola.rs_
-37. [Sail 0.7: Stateless Compute, Durable Job State](<https://lakesail.com/blog/sail-0-7-blocking-shuffle-checkpoint/>) — _lakesail.com_
-38. [DuckFlight](<https://github.com/sidequery/duckflight-extension>) — _github.com_
-39. [Pipelined SQL in ClickHouse 26.8](<https://clickhouse.com/blog/pipelined-sql-26.8>) — _clickhouse.com_
-40. [TPU Inference Externalization Full Steam Ahead](<https://inferencex.semianalysis.com/blog/tpu-inferencex-full-steam>) — _inferencex.semianalysis.com_
-41. [Google commits $15B to Finland data centers, explores nuclear power for the buildout](<https://www.cnbc.com/2026/09/09/google-finland-ai-infrastructure-investment.html>) — _cnbc.com_
-42. [ZGateway: Learnings from putting a proxy in front of ZippyDB](<https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/>) — _engineering.fb.com_
-43. [Improving infrastructure efficiency for growing demand in the age of AI](<https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai>) — _dropbox.tech_
-44. [PostGREShell: The database powering much of the internet had an open door for 12 years](<https://www.cyera.com/pt-br/research/postgreshell-the-database-powering-much-of-the-internet-had-an-open-door-for-12-years>) — _cyera.com_
-45. [N-able patches max-severity N-central flaw amid ongoing attacks](<https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/>) — _bleepingcomputer.com_
-46. [Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak Models](<https://blog.cloudflare.com/vulnerability-discovery-remediation/>) — _blog.cloudflare.com_
-47. [Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)](<https://blog.cloudflare.com/automatic-key-exchange-for-origins/>) — _blog.cloudflare.com_
-48. [Introducing automatic remediation policies with Cloudflare CASB](<https://blog.cloudflare.com/casb-policies/>) — _blog.cloudflare.com_
-49. [How to Carry User Identity Across Federated Kubernetes and AI Platforms](<https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms/>) — _developer.nvidia.com_
-50. [Introducing CUDA Rust for High-Performance GPU Kernel Development](<https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/>) — _developer.nvidia.com_
-51. [GitHub Enterprise Server 3.22 is now generally available](<https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available>) — _github.blog_
-52. [Add VS Code Agents to Copilot usage metrics](<https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics>) — _github.blog_
-53. [GitHub Copilot weekly releases — September 7](<https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7>) — _github.blog_
-54. [Auto-resolution and analysis updates in Copilot code review](<https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review>) — _github.blog_
-55. [How We Raised Mobile End-to-End Test Stability to 98%](<https://shopify.engineering/mobile-e2e-testing>) — _shopify.engineering_
-56. [Native is now the future of mobile at Shopify](<https://shopify.engineering/back-to-native>) — _shopify.engineering_
-57. [Reducing Zod's Memory Footprint by an Order of Magnitude with Method Memoization](<https://zod.dev/blog/reducing-memory-footprint>) — _zod.dev_
-58. [A Vision for Built-in Linting](<https://opentofu.org/blog/plans-for-linting/>) — _opentofu.org_
-59. [YOLO Mode: Agent Autonomy Without the Guardrails](<https://www.docker.com/blog/what-is-yolo-mode/>) — _docker.com_
-60. [TeamAI CLI: Shared Context for Every Coding Agent](<https://github.com/Tencent/teamai-cli>) — _github.com_
+1. [Perplexity trusts GPT-6 Astra with end-to-end systems](<https://openai.com/index/perplexity-improving-accuracy-with-astra>) — _openai.com_
+2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+3. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+4. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+5. [Now everyone can put data to work](<https://openai.com/index/put-data-to-work/>) — _openai.com_
+6. [Evolving Pinterest's Embedding Retrieval Platform](<https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01>) — _medium.com_
+7. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+8. [It passed CI. It passed your evals. The customer still got the wrong answer](<https://thenewstack.io/ai-agent-trace-debugging/>) — _thenewstack.io_
+9. [118 million queries per second on Neki](<https://planetscale.com/blog/118-million-queries-per-second-on-neki>) — _planetscale.com_
+10. [Why DuckDB 2.0 is faster](<https://motherduck.com/blog/why-duckdb-20-is-faster/>) — _motherduck.com_
+11. [Diskless Kafka: What Happens When Brokers Stop Owning the Data?](<https://softwaremill.com/diskless-kafka-object-storage-kip-1150-and-kafkas-future/>) — _softwaremill.com_
+12. [PostgreSQL CDC Backfills at Scale: Running a Multi-Day Backfill While Production Keeps Writing](<https://estuary.dev/blog/postgres-cdc-backfill>) — _estuary.dev_
+13. [commit-rewriter 0.1](<https://simonwillison.net/2026/Sep/14/commit-rewriter/>) — _simonwillison.net_
+14. [shot-scraper 1.12](<https://simonwillison.net/2026/Sep/13/shot-scraper/>) — _simonwillison.net_
+15. [Refreshing the Travel-Time Map Behind Lyft's Marketplace: Rebuilding Neighborhood Reachability Signals](<https://eng.lyft.com/refreshing-the-travel-time-map-behind-lyfts-marketplace-rebuilding-neighborhood-reachability-5be3efbc82ea>) — _eng.lyft.com_
+16. [Jetpack: Consensus Made Generally Fast (OSDI '26)](<https://muratbuffalo.blogspot.com/2026/09/jetpack-consensus-made-generally-fast.html>) — _muratbuffalo.blogspot.com_
 
 
 ## Recent archive
