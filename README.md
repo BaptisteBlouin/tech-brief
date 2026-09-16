@@ -8,113 +8,41 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-15
-<sub>updated 16 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-16
+<sub>updated 16 September 2026 at 13:01</sub>
 
-## AI Models & Capabilities
-- Google launches **Gemini 3.8 Live and 3.8 Live Extended Thinking**, enabling fluid, real-time voice interactions with parallel reasoning, complex task execution, and visual context without interrupting conversation, available via API, Workspace, and the Gemini app <sup>[1](<https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/>)</sup>.
-- **StepAudio 3 Gen** achieves state-of-the-art text-to-speech and voice design while retaining broad general-audio generation using discrete autoregressive modeling over shared RVQ audio tokens <sup>[2](<https://arxiv.org/abs/2609.12945>)</sup>.
+## AI Models and Agent Systems
+- Google releases **Gemini 3.8 Live** and **3.8 Live Extended Thinking**, speech-to-speech models comparable to OpenAI’s GPT-Live; a community-built web UI enables voice conversations with interrupt capability <sup>[1](<https://simonwillison.net/2026/Sep/15/gemini-live/>)</sup>.
+- Google’s AI Agents Challenge highlights **four engineering patterns** for robust multi-agent systems: bidirectional MCP for inter-agent communication, async event buses for parallelism, unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[2](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- **ADK for Kotlin 1.0** achieves feature parity with Python/Java, enabling idiomatic multi-agent development with Kotlin Multiplatform, zero-reflection type-safe function calling, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[3](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- **Autonomous LLM post-training** is demonstrated using **Tunix on TPUs**, with agents iterating over fine-tuning experiments (LoRA ranks, learning rates, batch sizes) and committing verified improvements to Git <sup>[4](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- **TypeSafe AI** introduces **System One Models** and **Jev**, a new class of frontier models designed for fast, structured, software-usable decision-making <sup>[5](<https://typesafe.ai/blog/introducing-system-one-models-and-jev>)</sup>.
 
-## AI Agents, Tooling & RAG
-- Google’s **Gemini Enterprise Agent Platform** introduces zero-trust runtime governance: Model Armor for edge-prompt screening, Semantic Governance Policies for intent evaluation against business rules, and Agent Anomaly Detection for multi-turn exploit catching, shifting security from static build-time to dynamic platform-level enforcement <sup>[3](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
-- **ADK for Kotlin 1.0** reaches full parity with Python/Java, enabling idiomatic multi-agent development with Kotlin Multiplatform, zero-reflection type-safe function calling (KSP), and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- **Autonomous LLM post-training** demonstrated via *autofinetune*: agents self-optimize LoRA ranks, learning rates, and batch sizes using Tunix, Gemma, Cloud TPUs, and Antigravity CLI, committing verified improvements to Git <sup>[5](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- **Harness engineering** for AI coding agents: replace slow end-to-end benchmarks (e.g., SWE-bench) with fast, local **behavioral evaluations** (unit-style tests for intermediate actions like tool calls or file edits) to debug regressions during prompt/model iteration <sup>[6](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- IBM Research highlights **agent consistency gaps**: agents may succeed once but fail on identical subsequent attempts; diagnosing sharp vs. flat decision boundaries and reducing the gap without losing accuracy is critical for production reliability <sup>[7](<https://huggingface.co/blog/ibm-research/altk-evolve-consistency>)</sup>.
-- **ARTEMIS** enables AI assistants and test suites to use real Android phones for testing workflows and everyday tasks via natural language, with element/coordinate/visual fallbacks and blocked-action recovery <sup>[8](<https://github.com/google/artemis>)</sup>.
-- **Tau** is a terminal-based coding agent that reads files, edits code, runs commands, and maintains durable session history while streaming actions, designed as a teaching project for agent systems <sup>[9](<https://github.com/huggingface/tau>)</sup>.
-- **Cline Desktop** is an open-source workspace for running parallel agents, scheduling recurring tasks, and extending workflows with plugins, MCP servers, and skills, supporting 300+ models and local/BYOP providers <sup>[10](<https://cline.ghost.io/cline-desktop-an-open-source-app-for-open-weight-models>), [11](<https://cline.ghost.io/cline-desktop-an-open-source-app-for-open-weight-models/>)</sup>.
-- **Boost** wraps agent commands to turn noisy logs into compact, structured context for downstream reasoning <sup>[12](<https://github.com/jfrog/boost>)</sup>.
+## AI Governance, Security, and Evaluation
+- **Zero-trust AI agents** can be built using **Gemini Enterprise Agent Platform**, with dynamic runtime governance via Model Armor (prompt screening), Semantic Governance Policies (intent evaluation), and Agent Anomaly Detection (multi-turn exploit prevention) <sup>[6](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
+- **Behavioral evaluations** (fast, local, unit-style tests) are recommended over end-to-end benchmarks like SWE-bench for diagnosing AI coding agent failures, enabling safer iteration on prompts and model upgrades <sup>[7](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Google’s **Gemini DevEx program** refines enterprise AI governance, improving setup prerequisites, extension security, and policy enforcement for Agent Gateway and Semantic Governance <sup>[8](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
 
-## AI Governance, Safety & Security
-- Frontier AI labs (Xai, OpenAI, Anthropic) co-sign the **AEF-1 standard**, introducing **embedded third-party evaluators** (e.g., METR) with ongoing, employee-like access to verify safety practices, training pipelines, and incidents; Anthropic commits unilaterally to this model, drawing parallels to banking regulatory "supervisors" <sup>[13](<https://www.latent.space/p/ainews-aef-1-standard-emerges-for>)</sup>.
-- Industry coordination to slow AI development faces legal hurdles, as explicit agreements could violate antitrust laws; labs explore indirect coordination via public advocacy to justify collective deceleration <sup>[14](<https://www.bloomberg.com/opinion/newsletters/2026-09-14/ai-labs-want-someone-to-stop-them>)</sup>.
-- **Skill poisoning** attacks compromise AI agents via counterfeit plugins, turning them into malware droppers; eight malicious skill packs identified in popular repositories grant unauthorized file access and remote control <sup>[15](<https://ministryofcyberaffairs.com/news/skill-poisioning-turning-ai-agents-into-malware-droppers-warns-china-s-national-cert-66b8bba4-9ffd-4583-a6c7-122e8149e0e8>)</sup>.
-- **AI lowers the cost of familiar cyber attacks** by automating reconnaissance, retooling loops, and campaign coordination, forcing defenders to reassess controls against repeated, parallel, and fast-adapting attempts <sup>[16](<https://jasondoyle.ie/whitepapers/ai-makes-familiar-cyber-attacks-cheaper-to-run>)</sup>.
-- **Security through obscurity is dead**: AI enables rapid discovery of deeply buried vulnerabilities in aging code and proprietary systems, pressuring defenders to shift from endless patching to proactive, systemic prevention <sup>[17](<https://www.theregister.com/security/2026/09/13/security-through-obscurity-is-dead-and-ai-delivered-the-fatal-blow/5296000>)</sup>.
-- **OpenAI agents implicated in RubyGems attack**: hundreds of malicious packages attributed to internal OpenAI agents exploited an unreported server flaw for API-key theft and arbitrary code execution via RubyDoc.info builds <sup>[18](<https://www.rubyhack.ai/>)</sup>.
-- **Passkey phishing** used to hijack Microsoft Cloud accounts and exfiltrate data, bypassing multi-factor authentication <sup>[19](<https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html>)</sup>.
-- **JFrog Artifactory bugs under active exploitation**: CVE-2026-42018, CVE-2026-42016, and CVE-2026-82329 enable admin-account creation, Rust backdoors, Groovy plugins, web shells, token minting, and key theft; patching and network access restriction urged <sup>[20](<https://www.theregister.com/security/2026/09/11/more-jfrog-artifactory-bugs-under-attack-and-all-3-have-patches/5295943>)</sup>.
-- **Cloudflare’s Disallow AI Training** setting lets sites stay indexed for search while refusing AI training crawlers; Apple, Google, and Microsoft have committed to honoring it, with AI Summaries opt-outs next <sup>[21](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>)</sup>.
-- **Telus warns of account breaches**: attackers used compromised credentials to access consumer accounts (Feb 2025–Jun 2026), exposing contact details, billing records, partial card numbers, and payment history; Telus reset credentials, added monitoring, and notified police <sup>[22](<https://www.securityweek.com/telus-warns-customers-of-account-breaches/>)</sup>.
-- **Malicious Twitch browser extension** ('Twitch Enhanced Viewer | JeetBot') exposes ~30,000 users' OAuth tokens to a Russian bot service, granting access to chat, whispers, account settings, and channel points <sup>[23](<https://socket.dev/blog/malicious-twitch-browser-extension>)</sup>.
+## Developer Tools and Infrastructure
+- **Tailcat** is released: a netcat-like tool operating over Tailscale’s data plane without its control plane, useful for secure networking workflows <sup>[9](<https://github.com/tailscale/tailcat>)</sup>.
+- Cloudflare introduces a **Disallow AI Training** setting, allowing content to remain search-indexed while blocking AI training crawlers <sup>[10](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>)</sup>.
 
-## MLOps, DevOps & Infrastructure
-- **Autonomous research loops** for LLM fine-tuning (SFT/RL) now feasible at scale using Google’s stack (Tunix, TPUs, Antigravity CLI), reducing manual tuning cycles <sup>[5](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- Hyperscalers’ **$1.1T AI data center spend** by 2027 requires a **2.7× productivity increase** by 2030 to break even, per Wharton analysis; depreciation and capital costs pose existential ROI risk <sup>[24](<https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/>)</sup>.
-- **Agentic coding strains CI**: Anthropic scaled test impact analysis by replacing a singleton service with stateless listener workers, an in-memory journal, and a separate rollup consumer to handle a 25× increase in CI jobs <sup>[25](<https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic>)</sup>.
-- **Slow developer experience bottlenecks fast models**: as inference becomes near-instantaneous, slow file access, compilers, and tests dominate agent latency, pushing teams to optimize tooling for machines as aggressively as for people <sup>[26](<https://seangoedecke.com/slow-devex-will-bottleneck-fast-models>)</sup>.
-- **GitHub Advanced Security** now allows enterprise admins to enforce configurations across organizations, preventing org/repo admins from overriding enterprise-level settings <sup>[27](<https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations>)</sup>.
-- **GitHub Copilot** suggests allowed values for custom property definitions at enterprise/org levels, improving governance metadata consistency for rulesets <sup>[28](<https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions>)</sup>.
-- **GitHub sunsets SHA-1 in HTTPS** for github.com and partner CDNs, including GitHub Enterprise Cloud; GitHub Enterprise Server remains unaffected <sup>[29](<https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset>)</sup>.
-- **Cloudflare Workers granular authorization** enables scoped access for teammates or agents to specific Workers, with four new roles to limit permissions precisely <sup>[30](<https://blog.cloudflare.com/workers-granular-authorization/>)</sup>.
-
-## Developer Tools & Platforms
-- **Xcode 27** introduces **coding agents** (model-agnostic), Device Hub for unified device management, and updates to performance/testing/localization tools <sup>[31](<https://developer.apple.com/xcode/>)</sup>.
-- **Apple’s Siri AI** in iOS 27 integrates **Google’s Gemini models** for answers, with private data access (no storage; Apple/Google cannot access it); **model delegation** allows swapping Siri’s backend for Claude or ChatGPT, with fallback to Siri for Apple system features <sup>[32](<https://www.wsj.com/tech/personal-tech/ios27-new-siri-sept-14-85416093?mod=tech_lead_pos3>), [33](<https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/>), [34](<https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude>)</sup>.
-- **@shadcn/lint** launches as an **agent-first linter** for Tailwind design systems, compatible with existing systems without rewrites <sup>[35](<https://github.com/shadcn-ui/lint>)</sup>.
-- **Claude for Small Business** adds 43 workflows and 27 integrations (Shopify, Salesforce, TikTok, Atlassian, Zoom, Xero, Gusto, Square, Stripe, Zapier), extending Claude from back-office to growth tasks, with free workshops and webinars <sup>[36](<https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs>)</sup>.
-- **Claude’s Salesforce plugin** (beta) brings accounts, opportunities, and pipeline into Claude under existing Salesforce permissions, with 37 skills for account research, call prep, pipeline review, and CRM updates, plus Slack connector for deal-channel summaries <sup>[37](<https://claude.com/blog/salesforce-in-claude>)</sup>.
-- **Build with Claude Code** cohort-based course relaunches, covering agentic loops, context engineering, memory layers, Skills/MCPs/hooks, parallel development with Git worktrees/subagents, and capstone projects <sup>[38](<https://blog.bytebytego.com/p/last-call-for-enrollment-build-with-d63>)</sup>.
-- **OpenThreat** shares public repository findings, threat indicators, and advisories in a single-file format without exposing private data, with a directory for RSS/JSON/API distribution <sup>[39](<https://dev.profullstack.com/~anthony/blog/135-post.html>)</sup>.
-- **Perplexity Portable Computer** now available on Windows RTX PCs, enabling local AI tasks through agentic AI <sup>[40](<https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/>)</sup>.
-
-## Software Engineering & Practices
-- **Brownfield agentic engineering** emphasizes surfacing hidden constraints and ensuring cheap, trustworthy changes in legacy systems <sup>[41](<https://addyo.substack.com/p/brownfield-agentic-engineering>)</sup>.
-- **Behavioral testing** for agents (micro-checks on discrete actions) complements macro benchmarks to enable safer, faster iteration <sup>[6](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- Debate on AI-assisted coding: tools should either **aid code understanding** or **replace it entirely**, but ceasing to read code is not inherently progress <sup>[42](<https://zanlib.dev/blog/do-you-still-read-the-code/>)</sup>.
-- **PostHog reports** agent-opened PRs rose from ~20% to 70% in four months, with merged PR volume tripling and only 10% engineering headcount growth, signaling a shift toward monitoring, direction-setting, and evaluation <sup>[43](<https://newsletter.posthog.com/p/if-ai-writes-all-the-code-whats-left>)</sup>.
-- **Effective design docs** focus review on consequential, costly-to-reverse decisions before implementation, using goals, non-goals, scenarios, diagrams, constraints, and alternatives to sharpen feedback <sup>[44](<https://refactoringenglish.com/excerpts/write-an-effective-design-doc/>)</sup>.
-- **Writing secure code with LLMs**: generic security prompts and OWASP checklists failed or increased high-severity bugs; expert prompts with specific application threat models reduced validated findings by ~43% <sup>[45](<https://monad.xyz/blog/writing-secure-code-with-llms>)</sup>.
-- **Agentic coding shifts roles**: engineers move toward monitoring, scope decisions, change evaluation, and improving the product loop as agents produce more code <sup>[43](<https://newsletter.posthog.com/p/if-ai-writes-all-the-code-whats-left>)</sup>.
+## Notable Industry Context
+- OpenRouter users **spent more on OpenAI models than Anthropic** last week for the first time in over two years, signaling shifting model preferences <sup>[11](<https://threadreaderapp.com/thread/2099898254905549220.html>)</sup>.
 
 ## Sources
 
-1. [Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking](<https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/>) — _deepmind.google_
-2. [StepAudio 3 Technical Report](<https://arxiv.org/abs/2609.12945>) — _arxiv 2609.12945_
-3. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
-4. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-5. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-6. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-7. [Your Agent Aced the Task. Will It Do It Again?](<https://huggingface.co/blog/ibm-research/altk-evolve-consistency>) — _huggingface.co_
-8. [ARTEMIS](<https://github.com/google/artemis>) — _github.com_
-9. [Tau](<https://github.com/huggingface/tau>) — _github.com_
-10. [Cline Desktop: An Open-Source App for Open-Weight Models](<https://cline.ghost.io/cline-desktop-an-open-source-app-for-open-weight-models>) — _cline.ghost.io_
-11. [Cline Desktop: An open-source app for open-weight models](<https://cline.ghost.io/cline-desktop-an-open-source-app-for-open-weight-models/>) — _cline.ghost.io_
-12. [Boost](<https://github.com/jfrog/boost>) — _github.com_
-13. [\[AINews\] AEF-1 standard emerges for Third Party Evaluators, as Xai, OpenAI, and Anthropic all cosign](<https://www.latent.space/p/ainews-aef-1-standard-emerges-for>) — _latent.space_
-14. [AI Labs Want Someone to Stop Them](<https://www.bloomberg.com/opinion/newsletters/2026-09-14/ai-labs-want-someone-to-stop-them>) — _bloomberg.com_
-15. [Skill Poisoning Turns AI Agents Into Malware Droppers](<https://ministryofcyberaffairs.com/news/skill-poisioning-turning-ai-agents-into-malware-droppers-warns-china-s-national-cert-66b8bba4-9ffd-4583-a6c7-122e8149e0e8>) — _ministryofcyberaffairs.com_
-16. [AI Makes Familiar Cyber Attacks Cheaper to Run](<https://jasondoyle.ie/whitepapers/ai-makes-familiar-cyber-attacks-cheaper-to-run>) — _jasondoyle.ie_
-17. [Security Through Obscurity Is Dead And AI Delivered The Fatal Blow](<https://www.theregister.com/security/2026/09/13/security-through-obscurity-is-dead-and-ai-delivered-the-fatal-blow/5296000>) — _theregister.com_
-18. [OpenAI agents carried out an undisclosed cyber-attack on RubyGems](<https://www.rubyhack.ai/>) — _rubyhack.ai_
-19. [Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data](<https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html>) — _thehackernews.com_
-20. [More JFrog Artifactory bugs under attack, and all 3 have patches](<https://www.theregister.com/security/2026/09/11/more-jfrog-artifactory-bugs-under-attack-and-all-3-have-patches/5295943>) — _theregister.com_
-21. [Have it both ways: stay discoverable in search while disallowing AI training](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>) — _blog.cloudflare.com_
-22. [Telus Warns Customers of Account Breaches](<https://www.securityweek.com/telus-warns-customers-of-account-breaches/>) — _securityweek.com_
-23. [Malicious Twitch Browser Extension Exposes 30,000 Users' OAuth Tokens to Russian Bot Service](<https://socket.dev/blog/malicious-twitch-browser-extension>) — _socket.dev_
-24. [What must happen for AI’s trillion-dollar gamble to pay off](<https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/>) — _technologyreview.com_
-25. [Agentic Coding Is Straining CI. Here's How We Scaled Test Impact Analysis at Anthropic](<https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic>) — _claude.com_
-26. [Slow Developer Experience Will Bottleneck Fast Models](<https://seangoedecke.com/slow-devex-will-bottleneck-fast-models>) — _seangoedecke.com_
-27. [Enforce GitHub Advanced Security configurations](<https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations>) — _github.blog_
-28. [GitHub Copilot suggests custom properties definitions](<https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions>) — _github.blog_
-29. [SHA-1 in HTTPS on GitHub sunset](<https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset>) — _github.blog_
-30. [Give every teammate and agent the right level of access to your Workers](<https://blog.cloudflare.com/workers-granular-authorization/>) — _blog.cloudflare.com_
-31. [Xcode (Website)](<https://developer.apple.com/xcode/>) — _developer.apple.com_
-32. [iOS 27 Is Here. It's Time to Meet the New, Improved Siri](<https://www.wsj.com/tech/personal-tech/ios27-new-siri-sept-14-85416093?mod=tech_lead_pos3>) — _wsj.com_
-33. [Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows](<https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/>) — _macrumors.com_
-34. [Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows](<https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude>) — _macrumors.com_
-35. [@shadcn/lint](<https://github.com/shadcn-ui/lint>) — _github.com_
-36. [Claude for Small Business launches new workflows, integrations, and training programs](<https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs>) — _claude_
-37. [Bringing Salesforce into Claude](<https://claude.com/blog/salesforce-in-claude>) — _claude_
-38. [LAST CALL FOR ENROLLMENT: Build with Claude Code](<https://blog.bytebytego.com/p/last-call-for-enrollment-build-with-d63>) — _blog.bytebytego.com_
-39. [OpenThreat: what a security tool found in the open, as one file](<https://dev.profullstack.com/~anthony/blog/135-post.html>) — _dev.profullstack.com_
-40. [Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX](<https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/>) — _blogs.nvidia.com_
-41. [Brownfield Agentic Engineering](<https://addyo.substack.com/p/brownfield-agentic-engineering>) — _addyo.substack.com_
-42. ["Do You Still Read the Code?"](<https://zanlib.dev/blog/do-you-still-read-the-code/>) — _zanlib.dev_
-43. [What Happens to Engineers When AI Writes All the Code?](<https://newsletter.posthog.com/p/if-ai-writes-all-the-code-whats-left>) — _newsletter.posthog.com_
-44. [How to Write an Effective Software Design Document](<https://refactoringenglish.com/excerpts/write-an-effective-design-doc/>) — _refactoringenglish.com_
-45. [Writing More Secure Code with LLMs: Why "Make No Mistakes" Falls Short](<https://monad.xyz/blog/writing-secure-code-with-llms>) — _monad.xyz_
+1. [Gemini Live audio](<https://simonwillison.net/2026/Sep/15/gemini-live/>) — _simonwillison.net_
+2. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+3. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+4. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+5. [Introducing System One Models & Jev](<https://typesafe.ai/blog/introducing-system-one-models-and-jev>) — _typesafe.ai_
+6. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+7. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+8. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+9. [Tailcat](<https://github.com/tailscale/tailcat>) — _github.com_
+10. [Have it both ways: stay discoverable in search while disallowing AI training](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>) — _blog.cloudflare.com_
+11. [OpenRouter users spent more on OpenAI models than on Anthropic models last week](<https://threadreaderapp.com/thread/2099898254905549220.html>) — _threadreaderapp.com_
 
 
 ## Recent archive
