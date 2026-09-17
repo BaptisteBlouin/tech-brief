@@ -8,129 +8,56 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-16
-<sub>mis à jour le 17 septembre 2026 à 01:02</sub>
+### Dernier digest — 2026-09-17
+<sub>mis à jour le 17 septembre 2026 à 13:01</sub>
 
-## Modèles d'IA, Agents et Outils
-- Google lance **Gemini 3.8 Live** et **3.8 Live Extended Thinking**, des modèles vocaux (speech-to-speech) comparables à GPT-Live d'OpenAI ; une interface Web construite par la communauté permet des conversations vocales avec capacité d'interruption <sup>[1](<https://simonwillison.net/2026/Sep/15/gemini-live/>), [2](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/>), [3](<https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/>)</sup>.
-- L'outil de Google **Agent Anomaly Detection** entre en version préliminaire privée sur la **Gemini Enterprise Agent Platform**, utilisant les traces OpenTelemetry et les appels d'outils pour détecter les risques comportementaux sans latence d'exécution, en s'appuyant sur l'OWASP Agentic Top 10 <sup>[4](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>), [5](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
-- **Claude Cowork et le chat fusionnent en un seul Claude**, unifiant les flux de travail entre le chat, les documents, les présentations et le design, avec un déploiement sur les abonnements Pro/Max ; les tâches persistent même après la fermeture de l'application <sup>[6](<https://claude.com/blog/cowork-is-now-claude>), [7](<https://simonwillison.net/2026/Sep/16/one-claude/>)</sup>.
-- **TypeSafe AI** présente **Jev**, un « modèle de système un » optimisé pour la prise de décision structurée et rapide, la classification, le routage et la notation — >100x plus rapide et >200x moins cher que les petits LLM de pointe, avec échantillonnage et étalonnage parallèles <sup>[8](<https://typesafe.ai/blog/introducing-system-one-models-and-jev>), [9](<https://www.latent.space/p/ainews-jev-a-system-one-model-that>)</sup>.
-- **Periodic Neon** surpasse GPT-6 Astra et Claude Fable 5.1 à moindre coût sur les tâches d'analyse scientifique, établissant une frontière de coût-performance optimale au sens de Pareto grâce au pré-entraînement intermédiaire et à l'apprentissage par renforcement (RL) sur des données de laboratoire <sup>[10](<https://periodic.com/news/nature-is-our-learning-environment>)</sup>.
-- **ADK pour Kotlin 1.0** atteint la parité des fonctionnalités avec Python/Java, permettant un développement multi-agent idiomatique avec Kotlin Multiplatform, un appel de fonction de type sûr sans réflexion et des extensions axées sur Android <sup>[11](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Le **post-entraînement autonome de LLM** est démontré via **Tunix sur TPUs**, avec des agents itérant sur des expériences de fine-tuning et commettant des améliorations vérifiées sur Git <sup>[12](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- Les **DuckDB Skills pour Claude Code** permettent aux agents d'interroger directement les fichiers de données via la CLI DuckDB, améliorant l'efficacité par rapport à l'inspection de données basée sur Python <sup>[13](<https://duckdb.org/2026/09/16/duckdb-skills.html>)</sup>.
-- **OpenAI** publie un cadre pour signaler le **manque d'alignement des modèles**, comprenant six rapports sur des comportements de modèles inattendus ou préoccupants <sup>[14](<https://openai.com/index/model-misalignment-reporting-framework>)</sup>.
-- L'**AIUC** lance **AIUC-1**, une norme de sécurité pour les agents comprenant environ 5 000 tests pour les jailbreaks, les hallucinations et les fuites de données, soutenue par une assurance et des audits validés par des humains ; lève 40 millions de dollars en série A <sup>[15](<https://www.latent.space/p/aiuc>), [16](<https://aiuc.com/>), [17](<https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/>)</sup>.
+## AI Agents, Models and Tooling
+- Steve Yegge shuts down Gas Town, admitting coding agents were unreliable for end-to-end tasks despite heavy spending, echoing broader concerns about agent dependability <sup>[1](<https://www.latent.space/p/ainews-reality-checks-on-ai-news>)</sup>.
+- LangChain’s paid-media agent uses LLMs for judgment, code for calculations/safeguards, and human approvals for critical actions, cutting costs while maintaining performance <sup>[2](<https://www.langchain.com/blog/paid-media-agent>)</sup>.
+- Google’s AI Agents Challenge highlights winning patterns: bidirectional MCP, async event buses, unified validation, and tiered routing for resilient, low-latency multi-agent systems <sup>[3](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0 with full feature parity to Python/Java, enabling idiomatic multi-agent development and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Google introduces Home MCP (early access) to let agents interact with Google Home devices and event history, with safety guardrails <sup>[5](<https://support.google.com/googlehome/thread/467705013/introducing-home-mcp-enabling-your-agent-to-interact-with-your-home>)</sup>.
+- Agent Anomaly Detection (private preview) on Gemini Enterprise Agent Platform monitors OpenTelemetry traces for behavioral risks without adding latency, grounded in OWASP Agentic Top 10 <sup>[6](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
+- Google advocates behavioral evaluations (fast, local unit-style tests) over end-to-end benchmarks for diagnosing agent failures and iterating safely <sup>[7](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Google’s Retrieve-for-Train reduces query-generation latency by 12–20x by teaching a smaller model to produce complementary searches upfront <sup>[8](<https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/>)</sup>.
+- A 4B model post-trained with supervised fine-tuning and agentic RL can generate Postgres query plans 81% faster than Postgres’ default optimizer <sup>[9](<https://rohanbansal.com/qorl>)</sup>.
+- Airbnb’s Insight Miner encodes extract-embed-cluster workflows and prompt tuning to accelerate support conversation analysis from months to days <sup>[10](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/>)</sup>.
 
-## Gouvernance, Sécurité et Évaluation de l'IA
-- Les **agents d'IA Zero Trust** peuvent être construits à l'aide de la **Gemini Enterprise Agent Platform** avec Model Armor (filtrage des prompts), les politiques de gouvernance sémantique (évaluation des intentions) et la détection des anomalies d'agents (prévention des exploits multi-tours) <sup>[4](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
-- Les **évaluations comportementales** (tests unitaires rapides et locaux) sont recommandées par rapport aux benchmarks de bout en bout comme SWE-bench pour diagnostiquer les défaillances des agents de code d'IA <sup>[18](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>), [19](<https://danluu.com/ai-coding>)</sup>.
-- Le **programme Gemini DevEx de Google** affine la gouvernance d'entreprise de l'IA, en améliorant les prérequis de configuration, la sécurité des extensions et l'application des politiques pour Agent Gateway et Semantic Governance <sup>[20](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
-- **ALTK-Evolve** introduit des directives de cohérence pour combler l'**écart d'inconsistance** dans les taux de réussite des tâches des agents lors d'exécutions répétées <sup>[21](<https://huggingface.co/blog/ibm-research/altk-evolve-consistency>)</sup>.
-- **OpenAI et AARP** s'associent pour proposer des **ateliers ChatGPT** gratuits et pratiques à 1 000 adultes plus âgés dans 10 villes américaines <sup>[22](<https://openai.com/index/helping-older-adults-use-ai-in-everyday-life>)</sup>.
+## MLOps, DevOps, Cloud and Infrastructure
+- Apple is reportedly building an AI server with 2–4 M8 Ultra chips, marking its first server release in nearly 20 years, expected in 2029 <sup>[11](<https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/>)</sup>.
+- Form3 runs a payment platform active-active-active across AWS, GCP, and Azure, using Kubernetes, NATS JetStream, and CockroachDB, with architecture tailored to regulatory and latency needs <sup>[12](<https://www.infoq.com/presentations/form3-multicloud-architecture/>)</sup>.
+- PyIceberg 0.12.0 adds REST-catalog views, conflict-aware retries, incremental scans, Iceberg v3 types, and Python 3.14 support, with correctness and security fixes <sup>[13](<https://iceberg.apache.org/blog/apache-iceberg-python-0.12.0-release/>)</sup>.
+- FastRP graph embeddings with Apache DataFusion replace Node2Vec’s random walks with iterative neighbor aggregation, processing 8M-node graphs in ~15 minutes <sup>[14](<https://semyonsinchenko.github.io/ssinchenko/post/fastrp-datafusion/>)</sup>.
 
-## MLOps, Données et Outils pour Développeurs
-- **dbt Summit 2026** : **dbt v2** et **dbt State** atteignent la disponibilité générale (GA), aux côtés du **Fivetran Context Layer**, de **dbt Charts** et d'une vision de lakehouse ouvert pour rendre les données d'entreprise prêtes pour les agents ; **dbt State** réduit les coûts de 59 % en ignorant les modèles inchangés <sup>[23](<https://www.getdbt.com/blog/fivetran-dbt-labs-announces-new-capabilities-to-make-enterprise-data-agent-ready-at-dbt-summit>), [24](<https://www.getdbt.com/blog/dbt-summit-2026-product-announcements>), [25](<https://www.getdbt.com/blog/dbt-state-is-ga>)</sup>.
-- La **PyTorch Conference NA 2026** (20-21 oct.) se concentre sur la recherche ouverte, les outils et l'optimisation, notamment l'architecture des compilateurs, les DSL multi-matériel, l'entraînement distribué à l'exascale et la quantification de faible précision <sup>[26](<https://pytorch.org/blog/open-research-tooling-optimization-at-pytorch-conference-north-america-2026/>)</sup>.
-- **Low Precision Flash Attention 4** s'étend à MXFP8 (avant/arrière) sur Blackwell, atteignant 2,85 PF/s en avant et 2 PF/s en arrière, avec des gains de 1,6× par rapport à BF16 en entraînement de production <sup>[27](<https://pytorch.org/blog/low-precision-flash-attention-4-end-to-end-block-scaled-attention-for-blackwell/>)</sup>.
-- **Insight Miner d'Airbnb** transforme la méthodologie scientifique en infrastructure d'agents d'IA, combinant extraction, intégrations (embeddings), clustering et pistes d'audit pour accélérer les investigations <sup>[28](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement>)</sup>.
-- **Open Code Review** (Alibaba) est un outil CLI de révision de code open source alimenté par l'IA utilisant une architecture hybride combinant déterministe et agent LLM, identifiant des millions de défauts <sup>[29](<https://github.com/alibaba/open-code-review>)</sup>.
-- **OpenResearch** est un espace de travail local qui transforme les agents de codage (Claude Code, Cursor) en agents de recherche pour l'expérimentation et l'analyse autonomes <sup>[30](<https://github.com/alphaXiv/OpenResearch>)</sup>.
-- **Pizza Bot** est une boîte de réception locale pour les agents d'IA de longue durée avec des exécutions durables, des files d'attente d'approbation, la planification et la création de points de contrôle (checkpointing) <sup>[31](<https://github.com/pizza-bot-app/pizza-bot>)</sup>.
-- **OpenHunterAI** est un espace de travail local de red-teaming pour l'IA destiné aux évaluations ciblées sur les applications Web, les API et les applications LLM, avec des barrières d'approbation humaine et une intégration de Claude Code <sup>[32](<https://github.com/LumosLab-Innovation/OpenHunterAI>)</sup>.
-
-## Cloud, Infrastructure et DevOps
-- **Kubernetes v1.37** fait passer **Memory QoS** au statut Bêta, activé par défaut, utilisant cgroup v2 pour guider le traitement de la mémoire par le noyau ; le `memoryThrottlingFactor` par défaut est défini à null pour éviter de brider les charges de travail existantes <sup>[33](<https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/>)</sup>.
-- **Cilium 1.20** ajoute la prise en charge d'IPv6 pour AWS ENI IPAM, des plugins de chemin de données pour l'extensibilité eBPF, une API Multi-Cluster Services stable, et déprécie l'authentification mutuelle héritée au profit du proxy ztunnel <sup>[34](<https://www.cncf.io/blog/2026/09/14/cilium-1-20-gateway-api-externalauth-tcproute-udproute-eni-ipam-for-ipv6-and-more/>)</sup>.
-- **GitHub** active l'**autorisation SSO automatisée pour les PAT classiques et les clés SSH** via des applications GitHub installées au niveau de l'entreprise, permettant une autorisation en masse sur un maximum de 50 organisations par requête <sup>[35](<https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys>)</sup>.
-- Les **réponses utilisateur GitHub SCIM** incluent désormais l'attribut `profileUrl` (RFC 7643) pour une correspondance directe des identités <sup>[36](<https://github.blog/changelog/2026-09-16-scim-user-responses-now-include-a-profileurl-attribute>)</sup>.
-- Les **demandes d'augmentation de budget GitHub Copilot** sont désormais en GA, permettant aux administrateurs d'approuver, d'ajuster ou de refuser les demandes sans quitter les paramètres <sup>[37](<https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available>)</sup>.
-- Le **scan de code GitHub AI Scan** ne nécessite plus la configuration par défaut de CodeQL, élargissant la couverture pour la détection des vulnérabilités alimentée par l'IA <sup>[38](<https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup>)</sup>.
-- **Cloudflare** introduit le paramètre **Désactiver l'entraînement de l'IA** (Disallow AI Training) pour bloquer les robots d'indexation d'entraînement de l'IA tout en maintenant le contenu indexé pour la recherche <sup>[39](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>)</sup>.
-- La **sécurité côté client de Cloudflare** détecte les charges utiles JavaScript malveillantes dans le trafic en direct, interceptant des campagnes manquées par VirusTotal et URLScan <sup>[40](<https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/>)</sup>.
-- **Tailcat** est publié : un outil de type netcat sur le plan de données de Tailscale pour les flux de travail réseau sécurisés <sup>[41](<https://github.com/tailscale/tailcat>)</sup>.
-- **Sysdig** met en évidence la façon dont les **informations d'exécution** (via eBPF) fournissent une détection des menaces en temps réel et un triage de sécurité exploitable pour les agents d'IA <sup>[42](<https://webflow.sysdig.com/blog/how-runtime-insights-help-with-container-security>)</sup>.
-- **Unit 42** démontre le **clustering comportemental** des identités AWS CloudTrail pour détecter les actions anormales (par exemple, des services de sauvegarde exécutant des commandes d'administration) <sup>[43](<https://unit42.paloaltonetworks.com/behavioral-clustering-map-to-cloud-identities/>)</sup>.
-
-## Sécurité et Analyses d'Incidents
-- **CVE-2026-12518** : Logi Options+ permettait une élévation de privilèges vers SYSTEM via une injection de canal (pipe injection) dans son programme de mise à jour ; corrigé en août 2026 <sup>[44](<https://blog.amberwolf.com/blog/2026/september/a-peripheral-path-to-system---exploiting-logi-options+-for-system-shells/>)</sup>.
-- **Beltdown2** : Évasion du bac à sable (sandbox) de Cursor CLI via des hooks `.git/config` malveillants ; corrigé par l'injection de `GIT_CONFIG` pour désactiver les hooks personnalisés <sup>[45](<https://www.accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/>)</sup>.
-- Des **attaques ClickFix** ont incité des utilisateurs à exécuter des commandes malveillantes via de fausses invites CAPTCHA sur des publicités Reddit HBO Max détournées, installant des logiciels voleurs d'informations (infostealers) <sup>[46](<https://techcrunch.com/2026/09/14/clickfix-attacks-are-tricking-mac-and-windows-users-into-hacking-themselves/>)</sup>.
-- **Faille Vite (CVE-2026-39364)** exploitée dans une campagne de balayage de masse pour extraire les informations d'identification du cloud à partir de serveurs de développement exposés via les chemins `@/fs/` <sup>[47](<https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html>)</sup>.
-- **Exposition de PAT GitHub de Baseten** : Un registre Harbor public contenait un jeton GitHub en direct avec un large accès administrateur, récupéré à partir d'une image de conteneur de 2023 <sup>[48](<https://www.strix.ai/blog/baseten-harbor-github-pat-takeover>)</sup>.
-- **Techniques de FulcrumSec** : Un groupe motivé financièrement analyse le JS côté client et les nouveaux bugs (par exemple, React2Shell), enchaîne les pivots via GitHub/AWS/Azure et teste en masse les identifiants récoltés <sup>[49](<https://www.aitmfeed.com/blog/blog-1/fulcrumsec-a-look-at-their-tradecraft-20>)</sup>.
-- **Mythic C2 à l'échelle d'Internet** : 131 hôtes Mythic exposés détectés, beaucoup avec des certificats par défaut ; certains associés à des implants Rust personnalisés et un C2 basé sur Discord <sup>[50](<https://censys.com/blog/mythic-c2>)</sup>.
-- **Apple corrige plus de 200 vulnérabilités macOS** dans Golden Gate 27, Tahoe 26.7 et Sequoia 15.8, y compris des bugs RCE du noyau dans AVEVideoEncoder, UDF, Bluetooth, CUPS et WebDAV <sup>[51](<https://9to5mac.com/2026/09/14/macos-27-golden-gate-macos-tahoe-26-7-and-macos-sequoia-15-8-fix-200-vulnerabilities/>)</sup>.
-- **La faille de l'Agence numérique du Japon** a touché 240 000 utilisateurs via une vulnérabilité VPN divulguée publiquement <sup>[52](<https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/>)</sup>.
-
-## Actualités Notables de l'Industrie et de la Recherche
-- **Évolution de l'utilisation d'OpenRouter** : Les utilisateurs ont dépensé plus d'argent pour les modèles d'OpenAI que pour ceux d'Anthropic pour la première fois en plus de deux ans <sup>[53](<https://threadreaderapp.com/thread/2099898254905549220.html>)</sup>.
-- **Odyssey-3** est un modèle de fondation d'intelligence physique à usage général pour simuler divers scénarios, contrôler des robots et alimenter des androïdes, des véhicules et des drones <sup>[54](<https://odyssey.systems/introducing-odyssey-3>)</sup>.
-- **Dream-RSI** propose une auto-amélioration récursive via des mondes en évolution, utilisant l'historique des découvertes comme simulateurs de relecture pour affiner les stratégies de méta-exploration <sup>[55](<https://paperswithcode.co/paper/2609.14858>), [56](<https://x.com/ProfBuehlerMIT/status/2099834306046664792>)</sup>.
-- **Meta One** est un nouveau service d'abonnement regroupant des fonctionnalités d'IA et d'expression personnelle sur Instagram, Facebook et WhatsApp <sup>[57](<https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/>)</sup>.
-- **Protocole x402** : Un développeur a testé la facturation des agents d'IA (par exemple, Claude) à hauteur d'un centime par page via `x402` ; le système a fonctionné lors des tests <sup>[58](<https://suganthan.com/blog/x402-pay-per-crawl/>)</sup>.
+## Developer Tools and Software Engineering
+- Datasette 1.0a40 and 0.65.5 releases: 1.0a40 adds plugin-managed background tasks and migrates to httpx2; 0.65.5 patches a security bypass via trailing newlines in table names <sup>[15](<https://simonwillison.net/2026/Sep/16/datasette/>), [16](<https://simonwillison.net/2026/Sep/16/datasette-2/>)</sup>.
+- PostgreSQL 19’s `pg_plan_advice` serializes plan guidance (join order, scan type) for replayable, diffable query optimization, with selective pinning recommended <sup>[17](<https://tapoueh.org/blog/2026/09/plan-advice-in-postgresql-19/>)</sup>.
+- TIN is introduced as a fast, full-featured full-text search extension for Postgres <sup>[18](<https://planetscale.com/blog/introducing-tin>)</sup>.
+- DuckDB Skills for Claude Code enable agents to query local/remote files or Iceberg tables directly, with format conversion and session recall <sup>[19](<https://duckdb.org/2026/09/16/duckdb-skills>)</sup>.
+- Redis performance pitfalls: single-threaded execution means `KEYS`, `FLUSHALL`, or large `DEL` operations block all clients; use `SCAN`, `UNLINK`, and sharding instead <sup>[20](<https://ankit-rana.com/logs/53-redis-single-threaded-keys-command/>)</sup>.
 
 ## Sources
 
-1. [Gemini Live audio](<https://simonwillison.net/2026/Sep/15/gemini-live/>) — _simonwillison.net_
-2. [Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/>) — _blog.google_
-3. [Gemini 3.8 Live and 3.5 Transcribe](<https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/>) — _blog.google_
-4. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
-5. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
-6. [Claude Cowork and chat are now one Claude](<https://claude.com/blog/cowork-is-now-claude>) — _claude_
-7. [Claude Cowork and chat are now one Claude](<https://simonwillison.net/2026/Sep/16/one-claude/>) — _simonwillison.net_
-8. [Introducing System One Models & Jev](<https://typesafe.ai/blog/introducing-system-one-models-and-jev>) — _typesafe.ai_
-9. [\[AINews\] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs](<https://www.latent.space/p/ainews-jev-a-system-one-model-that>) — _latent.space_
-10. [Nature Is Our Learning Environment](<https://periodic.com/news/nature-is-our-learning-environment>) — _periodic.com_
-11. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-12. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-13. [DuckDB Skills for Claude Code](<https://duckdb.org/2026/09/16/duckdb-skills.html>) — _duckdb.org_
-14. [Our framework for reporting model misalignment](<https://openai.com/index/model-misalignment-reporting-framework>) — _openai.com_
-15. [Underwriting Superintelligence: Backing Agents you can Sue — Rune Kvist, AIUC](<https://www.latent.space/p/aiuc>) — _latent.space_
-16. [AIUC](<https://aiuc.com/>) — _aiuc.com_
-17. [Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents](<https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/>) — _techcrunch.com_
-18. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-19. [Agentic Test Processes, LLM Benchmarks, and Other Notes on Agentic Coding from Galapagos Island](<https://danluu.com/ai-coding>) — _danluu.com_
-20. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-21. [Your Agent Aced the Task. Will It Do It Again?](<https://huggingface.co/blog/ibm-research/altk-evolve-consistency>) — _huggingface.co_
-22. [Helping older adults use AI in everyday life](<https://openai.com/index/helping-older-adults-use-ai-in-everyday-life>) — _openai.com_
-23. [Fivetran + dbt Labs Announces New Capabilities to Make Enterprise Data Agent-Ready at dbt Summit 2026](<https://www.getdbt.com/blog/fivetran-dbt-labs-announces-new-capabilities-to-make-enterprise-data-agent-ready-at-dbt-summit>) — _dbt.com_
-24. [Everything we announced at dbt Summit and why it matters](<https://www.getdbt.com/blog/dbt-summit-2026-product-announcements>) — _dbt.com_
-25. [We built dbt State to stop rebuilding what hadn't changed](<https://www.getdbt.com/blog/dbt-state-is-ga>) — _dbt.com_
-26. [Open Research, Tooling &#038; Optimization at PyTorch Conference North America 2026](<https://pytorch.org/blog/open-research-tooling-optimization-at-pytorch-conference-north-america-2026/>) — _pytorch.org_
-27. [Low Precision Flash Attention 4: End-to-End Block-Scaled Attention for Blackwell](<https://pytorch.org/blog/low-precision-flash-attention-4-end-to-end-block-scaled-attention-for-blackwell/>) — _pytorch.org_
-28. [Beyond the Model: Engineering AI Infra with Scientific Judgement](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement>) — _airbnb.tech_
-29. [Open Code Review](<https://github.com/alibaba/open-code-review>) — _github.com_
-30. [Openresearch](<https://github.com/alphaXiv/OpenResearch>) — _github.com_
-31. [Pizza Bot](<https://github.com/pizza-bot-app/pizza-bot>) — _github.com_
-32. [OpenHunterAI](<https://github.com/LumosLab-Innovation/OpenHunterAI>) — _github.com_
-33. [Kubernetes v1.37: Memory QoS Graduates to Beta](<https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/>) — _kubernetes.io_
-34. [Cilium 1.20: Gateway API ExternalAuth, TCPRoute/UDPRoute, ENI IPAM for IPv6, and more](<https://www.cncf.io/blog/2026/09/14/cilium-1-20-gateway-api-externalauth-tcproute-udproute-eni-ipam-for-ipv6-and-more/>) — _cncf.io_
-35. [Automate SSO authorization for classic PATs and SSH keys](<https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys>) — _github.blog_
-36. [SCIM user responses now include a profileUrl attribute](<https://github.blog/changelog/2026-09-16-scim-user-responses-now-include-a-profileurl-attribute>) — _github.blog_
-37. [Copilot budget increase requests are generally available](<https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available>) — _github.blog_
-38. [Code scanning AI Scan no longer requires CodeQL default setup](<https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup>) — _github.blog_
-39. [Have it both ways: stay discoverable in search while disallowing AI training](<https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/>) — _blog.cloudflare.com_
-40. [When scanners miss the attack: how Cloudflare Client-Side Security protects storefronts](<https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/>) — _blog.cloudflare.com_
-41. [Tailcat](<https://github.com/tailscale/tailcat>) — _github.com_
-42. [How runtime insights helps with container security](<https://webflow.sysdig.com/blog/how-runtime-insights-help-with-container-security>) — _webflow.sysdig.com_
-43. [Unmasking Cloud Identities: From Behavioral Clustering to Automated Detection](<https://unit42.paloaltonetworks.com/behavioral-clustering-map-to-cloud-identities/>) — _unit42.paloaltonetworks.com_
-44. [A Peripheral Path to SYSTEM - Exploiting Logi Options+ for SYSTEM Shells](<https://blog.amberwolf.com/blog/2026/september/a-peripheral-path-to-system---exploiting-logi-options+-for-system-shells/>) — _blog.amberwolf.com_
-45. [Beltdown2: Escaping the Cursor CLI sandbox](<https://www.accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/>) — _accomplish.ai_
-46. [ClickFix attacks are tricking Mac and Windows users into hacking themselves](<https://techcrunch.com/2026/09/14/clickfix-attacks-are-tricking-mac-and-windows-users-into-hacking-themselves/>) — _techcrunch.com_
-47. [Mass-Scanning Campaign Exploits Vite Flaw to Extract Cloud Credentials From Exposed Dev Servers](<https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html>) — _thehackernews.com_
-48. [We Wanted to Use Baseten for Inference. We Ended Up With Admin Access to Baseten GitHub Repos](<https://www.strix.ai/blog/baseten-harbor-github-pat-takeover>) — _strix.ai_
-49. [FulcrumSec - A look at their tradecraft](<https://www.aitmfeed.com/blog/blog-1/fulcrumsec-a-look-at-their-tradecraft-20>) — _aitmfeed.com_
-50. [Mythic C2 Activity at Internet Scale](<https://censys.com/blog/mythic-c2>) — _censys.com_
-51. [macOS 27 Golden Gate, macOS Tahoe 26.7, and macOS Sequoia 15.8 fix 200+ vulnerabilities](<https://9to5mac.com/2026/09/14/macos-27-golden-gate-macos-tahoe-26-7-and-macos-sequoia-15-8-fix-200-vulnerabilities/>) — _9to5mac.com_
-52. [240,000 Hit by Data Breach at Japan's Digital Agency](<https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/>) — _securityweek.com_
-53. [OpenRouter users spent more on OpenAI models than on Anthropic models last week](<https://threadreaderapp.com/thread/2099898254905549220.html>) — _threadreaderapp.com_
-54. [Introducing Odyssey-3: A General-Purpose Physical Intelligence](<https://odyssey.systems/introducing-odyssey-3>) — _odyssey.systems_
-55. [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](<https://paperswithcode.co/paper/2609.14858>) — _paperswithcode.co_
-56. [Recursive Meta-Intelligence](<https://x.com/ProfBuehlerMIT/status/2099834306046664792>) — _x.com_
-57. [Introducing Meta One](<https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/>) — _about.fb.com_
-58. [I made my website charge AI agents a penny per page. Then I watched Claude pay it](<https://suganthan.com/blog/x402-pay-per-crawl/>) — _suganthan.com_
+1. [\[AINews\] Reality Checks on AI News (Yegge shuts down Gas Town, Databricks’ +60% Astra cost)](<https://www.latent.space/p/ainews-reality-checks-on-ai-news>) — _latent.space_
+2. [How we built LangChain's Paid Media Agent](<https://www.langchain.com/blog/paid-media-agent>) — _langchain.com_
+3. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+4. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+5. [Introducing Home MCP: enabling your agent to interact with your home](<https://support.google.com/googlehome/thread/467705013/introducing-home-mcp-enabling-your-agent-to-interact-with-your-home>) — _support.google.com_
+6. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+7. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+8. [Bypassing inference bottlenecks with Retrieve-for-Train](<https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/>) — _research.google_
+9. [Training a 4B model to produce 81% faster query plans than Postgres](<https://rohanbansal.com/qorl>) — _rohanbansal.com_
+10. [Beyond the model: Engineering AI infra with scientific judgement](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/>) — _airbnb.tech_
+11. [Apple reportedly building server packed with M-series Ultra chips for AI](<https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/>) — _arstechnica.com_
+12. [How To Run on Three Clouds at Once, and When Not To (45 minute presentation)](<https://www.infoq.com/presentations/form3-multicloud-architecture/>) — _infoq.com_
+13. [Apache Iceberg Python 0.12.0 Release](<https://iceberg.apache.org/blog/apache-iceberg-python-0.12.0-release/>) — _iceberg.apache.org_
+14. [FastRP graph embeddings with Apache DataFusion](<https://semyonsinchenko.github.io/ssinchenko/post/fastrp-datafusion/>) — _semyonsinchenko.github.io_
+15. [datasette 1.0a40](<https://simonwillison.net/2026/Sep/16/datasette/>) — _simonwillison.net_
+16. [datasette 0.65.5](<https://simonwillison.net/2026/Sep/16/datasette-2/>) — _simonwillison.net_
+17. [Plan Advice in PostgreSQL 19](<https://tapoueh.org/blog/2026/09/plan-advice-in-postgresql-19/>) — _tapoueh.org_
+18. [Introducing TIN: full-text search for Postgres](<https://planetscale.com/blog/introducing-tin>) — _planetscale.com_
+19. [DuckDB Skills for Claude Code](<https://duckdb.org/2026/09/16/duckdb-skills>) — _duckdb.org_
+20. [Why your Redis is slow: it is single threaded and you sent it KEYS](<https://ankit-rana.com/logs/53-redis-single-threaded-keys-command/>) — _ankit-rana.com_
 
 
 ## Archive récente
