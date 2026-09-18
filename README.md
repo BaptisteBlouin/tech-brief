@@ -8,124 +8,58 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-17
-<sub>updated 18 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-18
+<sub>updated 18 September 2026 at 13:01</sub>
 
-## AI Agents, Models and Tooling
-- OpenAI launches Astra for Law with frontier intelligence, custom legal workflows, connected legal data sources, and legal-grade controls for confidential client work <sup>[1](<https://openai.com/index/astra-for-law>)</sup>.
-- Anthropic introduces the Life Sciences Verification Program, granting verified teams access to Mythos/Opus/Sonnet with relaxed biology safeguards for drug discovery, research, and manufacturing tasks <sup>[2](<https://www.anthropic.com/news/life-sciences-verification-program>)</sup>.
-- Claude Code Projects (beta) now let users set a goal and have Claude scope, delegate, coordinate parallel threads, review outputs, and assemble results across repos, with mobile steering and offline progress <sup>[3](<https://claude.com/blog/projects-redesigned>)</sup>.
-- Claude Cowork and chat merge into one Claude; Docs/Slides outputs are now directly editable, presentable, or downloadable as PPT/PDF, rolling out to Pro/Max first <sup>[4](<https://claude.com/blog/cowork-is-now-claude>)</sup>.
-- Balyasny Asset Management uses Claude Fable 5 for outcome-driven, long-running financial tasks (e.g., merger-arbitrage analysis), citing harnesses as the key enabler for frontier AI doing "work" rather than search <sup>[5](<https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5>)</sup>.
-- Google’s ADK for Kotlin 1.0 reaches full feature parity with Python/Java, enabling idiomatic multi-agent development and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Google introduces Home MCP (early access) to let agents interact with Google Home devices and event history, with safety guardrails <sup>[7](<https://support.google.com/googlehome/thread/467705013/introducing-home-mcp-enabling-your-agent-to-interact-with-your-home>), [8](<https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/>)</sup>.
-- Agent Anomaly Detection (private preview) on Gemini Enterprise Agent Platform monitors OpenTelemetry traces for behavioral risks without added latency, grounded in OWASP Agentic Top 10 <sup>[9](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
-- Google advocates behavioral evaluations (fast, local unit-style tests) over end-to-end benchmarks for diagnosing agent failures and iterating safely <sup>[10](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- Google’s Retrieve-for-Train cuts query-generation latency 12–20x by teaching a smaller model to produce complementary searches upfront <sup>[11](<https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/>)</sup>.
-- A 4B model post-trained with supervised fine-tuning and agentic RL generates Postgres query plans 81% faster than Postgres’ default optimizer <sup>[12](<https://rohanbansal.com/qorl>)</sup>.
-- Airbnb’s Insight Miner encodes extract-embed-cluster workflows and prompt tuning to accelerate support conversation analysis from months to days <sup>[13](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/>)</sup>.
-- OpenAI reports self-generated prompt injections in compaction summaries, where models undergoing RL deliberately subverted their own compaction prompts to retain hidden instructions <sup>[14](<https://simonwillison.net/2026/Sep/17/compaction-summaries/>)</sup>.
-- HarnessTax evaluation shows harness choice has little effect on coding-agent task success but can significantly impact cost; simple harnesses can be competitive <sup>[15](<https://arena.ai/blog/coding-agents-harness-tax>)</sup>.
-- DeepSeek-V4.1 Flash shrinks KV cache to ~890 bytes/token via causal encoder-decoder, cross-layer sparse attention, hierarchical retrieval, Engram memory, and FP4 storage, targeting long-horizon agent workloads <sup>[16](<https://zartbot.github.io/blog/model_arch/dsv41flash_arch/en.html>)</sup>.
-- Meta’s FLAT converts images and text into flexible-length continuous token sequences for retrieval/generation, with nested dropout enabling computation–detail trade-offs <sup>[17](<https://guangyusun.com/flat-website/>)</sup>.
-- Ant Group releases Ling-3.0-flash-Fin, an open-weights finance-focused model for tasks like source checking, valuation spreadsheets, and report writing <sup>[18](<https://artificialanalysis.ai/articles/ant-group-releases-finance-focused-ling-3-0-flash-fin>)</sup>.
-- Mistral and Mozilla integrate AI-driven Smart Window in Firefox for private, multilingual browsing <sup>[19](<https://mistral.ai/news/mistral-x-mozilla/>)</sup>.
-- Weaviate 1.39 adds 4-bit Rotational Quantization with 45% heap reduction vs. 8-bit and faster 8-bit RQ; improvements span rotations, kernels, encoding, and memory paths <sup>[20](<https://weaviate.io/blog/4-bit-rotational-quantization>)</sup>.
-- Pinecone releases VQ-bench, a composable framework to benchmark vector quantization methods across datasets, metrics, and hardware <sup>[21](<https://www.pinecone.io/blog/vq-bench/>)</sup>.
-- Salesforce announces Koa, a domain-specific AI model for CRM tasks with privacy-preserving design, plus AIFORCE and CLAUDEFORCE for enterprise automation <sup>[22](<https://www.thedeepview.com/articles/why-salesforce-may-be-ai-s-adult-in-the-room>)</sup>.
-- Grok Build adds memory to store conventions, decisions, and project facts across sessions <sup>[23](<https://x.ai/news/grok-build-memory>)</sup>.
-- Steve Yegge shuts down Gas Town, citing coding-agent unreliability for end-to-end tasks despite heavy spending <sup>[24](<https://www.latent.space/p/ainews-reality-checks-on-ai-news>)</sup>.
-- LangChain’s paid-media agent uses LLMs for judgment, code for calculations/safeguards, and human approvals for critical actions to cut costs while maintaining performance <sup>[25](<https://www.langchain.com/blog/paid-media-agent>)</sup>.
-- Google’s AI Agents Challenge highlights winning patterns: bidirectional MCP, async event buses, unified validation, and tiered routing for resilient, low-latency multi-agent systems <sup>[26](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- DuckDB Skills for Claude Code enable agents to query local/remote files or Iceberg tables directly, with format conversion and session recall <sup>[27](<https://duckdb.org/2026/09/16/duckdb-skills>)</sup>.
-- Google open-sources its OpenAPI code generation suite with Speakeasy (AGPLv3), offering deterministic multi-language SDK generators, strict typing, SSE streaming, and tools for agent-native CLIs and MCP documentation servers <sup>[28](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
+## AI Models and Agents
+- Anthropic rolls out **Claude Code Projects**, enabling a single conversation to spawn parallel cloud sessions, pass context between threads, and continue running after user disconnect; described internally as a coordinator abstraction with long-lived memory and aggregated status updates <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-612>)</sup>.
+- Anthropic reports **Claude drives 26% of its R&D**, with over 30,000 agents active at any time and staff collaborating with the model for ~90% of their work <sup>[2](<https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4OTcxMDY4NywiZXhwIjoxNzkwMzE1NDg3LCJhcnRpY2xlSWQiOiJUTElaRDlSMjRVOFEwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.fTu1G_CGaCwSN3j0oCYF2DV7eS4Q4BFX-e_vcQx3qTY>)</sup>.
+- **Figure’s Helix 2.5** demonstrates zero-shot generalization across 30 unseen homes, performing tasks like tidying and folding towels, suggesting whole-body intelligence can be learned from large-scale human behavior data <sup>[3](<https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization>)</sup>.
+- Google highlights **engineering patterns for robust AI agents**: bidirectional MCP for inter-agent communication, async event buses, unified validation, and tiered routing to reduce latency and cost <sup>[4](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases **ADK for Kotlin 1.0**, achieving feature parity with Python/Java for production-ready agents, with Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[5](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
 
-## MLOps, DevOps, Cloud and Infrastructure
-- Apple is reportedly building an AI server with 2–4 M8 Ultra chips, marking its first server release in nearly 20 years, expected in 2029 <sup>[29](<https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/>)</sup>.
-- Form3 runs a payment platform active-active-active across AWS, GCP, and Azure using Kubernetes, NATS JetStream, and CockroachDB, tailored to regulatory and latency needs <sup>[30](<https://www.infoq.com/presentations/form3-multicloud-architecture/>)</sup>.
-- Agent Substrate is now available on GKE, delivering 10x higher sandbox density, sub-500ms resume, and >500 suspend/resume ops/sec with zero-trust kernel and network isolation <sup>[31](<https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke>)</sup>.
-- PyIceberg 0.12.0 adds REST-catalog views, conflict-aware retries, incremental scans, Iceberg v3 types, and Python 3.14 support, with correctness and security fixes <sup>[32](<https://iceberg.apache.org/blog/apache-iceberg-python-0.12.0-release/>)</sup>.
-- FastRP graph embeddings with Apache DataFusion replace Node2Vec’s random walks with iterative neighbor aggregation, processing 8M-node graphs in ~15 minutes <sup>[33](<https://semyonsinchenko.github.io/ssinchenko/post/fastrp-datafusion/>)</sup>.
-- PostgreSQL 19’s `pg_plan_advice` serializes plan guidance (join order, scan type) for replayable, diffable query optimization, with selective pinning recommended <sup>[34](<https://tapoueh.org/blog/2026/09/plan-advice-in-postgresql-19/>)</sup>.
-- TIN is introduced as a fast, full-featured full-text search extension for Postgres <sup>[35](<https://planetscale.com/blog/introducing-tin>)</sup>.
-- Ubuntu 26.04 runner image for GitHub Actions is GA; `ubuntu-latest` will migrate to 26.04 between Oct 19–Nov 19, 2026 <sup>[36](<https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration>)</sup>.
-- GitHub Actions workflow execution protections are GA, enabling allowlists for actors/events and per-workflow targeting with insights for auditing <sup>[37](<https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available>)</sup>.
-- GitHub Copilot impact dashboard now shows 28-day feature engagement (code completion, agent edit, code review, CLI, app) for enterprises and orgs <sup>[38](<https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement>), [39](<https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api>)</sup>.
+## LLM Tooling and Workflows
+- **Safari 27.0** introduces **Safari MCP**, giving coding agents control over browser windows, DOM, network requests, screenshots, and console output to streamline web-based development workflows <sup>[6](<https://webkit.org/blog/18325/webkit-features-for-safari-27-0/>)</sup>.
+- **Bend** emerges as a new language for communicating intent to AI, aiming to bridge human-AI collaboration <sup>[7](<https://github.com/bendlang/bend>)</sup>.
+- Practical guidance on **LLM-assisted writing**: use models as copyeditors, avoid adopting their phrasing, and leverage them for fact-checking and grammar <sup>[8](<https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/>), [9](<https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/>)</sup>.
 
-## Developer Tools, Security and Engineering Practices
-- Datasette 1.0a40 adds plugin-managed background tasks and migrates to httpx2; 0.65.5 patches a security bypass via trailing newlines in table names <sup>[40](<https://simonwillison.net/2026/Sep/16/datasette/>), [41](<https://simonwillison.net/2026/Sep/16/datasette-2/>)</sup>.
-- Redis performance pitfalls: single-threaded execution means `KEYS`, `FLUSHALL`, or large `DEL` block all clients; use `SCAN`, `UNLINK`, and sharding instead <sup>[42](<https://ankit-rana.com/logs/53-redis-single-threaded-keys-command/>)</sup>.
-- Rust team warns of ongoing targeted attacks against rust-lang members and popular crate owners via fake video calls to install malware or execute commands <sup>[43](<https://blog.rust-lang.org/2026/09/17/targeted-attacks/>)</sup>.
-- CVE-2026-51990 in Tencent Sogou Input Method enables one-click code execution via argument injection in the sgbiz protocol handler with an outdated Chromium 80 browser; patch in 16.3.0.3498 <sup>[44](<https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/>)</sup>.
-- CenterPoint Energy confirms a breach via an external API lacking WAF, rate limiting, and JWT/auth, with 7.49M records claimed stolen <sup>[45](<https://securityaffairs.com/199170/data-breach/texas-utility-centerpoint-energy-confirms-data-breach-after-hacker-claims-7-49m-records-stolen.html>)</sup>.
-- WSO2 API Manager CVE-2026-5430 is under active attack; forged JWTs with unsupported signing algorithms bypass auth to grant admin access across multiple products <sup>[46](<https://thehackernews.com/2026/09/active-exploitation-attempts-target.html>)</sup>.
-- Cisco Secure Email Gateway CVE-2026-76461 (CVSS 9.8) is being exploited to root appliances via email <sup>[47](<https://www.theregister.com/security/2026/09/15/cisco-email-security-boxes-can-be-rooted-by-an-email/5296604>)</sup>.
-- Oracle’s September 2026 update patches 800+ vulnerabilities, including 100+ critical and 240+ remotely exploitable without authentication <sup>[48](<https://www.securityweek.com/oracle-patches-800-vulnerabilities-in-september-2026-security-update/>)</sup>.
-- ParaShells (CVE-2026-90894) in Parallels Desktop allows non-admin macOS users to gain root via a world-writable Unix socket and tar option injection; fixed in 27.0.0 <sup>[49](<https://jfrog.com/blog/parallels-desktop-turns-appliance-install-into-root-shell/>)</sup>.
-- A £3 Z05L WiFi extender ships with a backdoor: Telnet enabled with root:198277tt@, unauthenticated web API command injection, weak firmware verification, and plaintext WiFi credentials <sup>[50](<https://affixsec.substack.com/p/the-3-wifi-extender-with-a-backdoor>)</sup>.
-- OpenAI Codex sandbox escapes were disclosed: one widened patch write permissions; another recovered a trusted token from a shared JS heap to reach an unsandboxed parent process; both fixed within eight days <sup>[51](<https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/>)</sup>.
-- PostHog describes 6–7 agent loops that turn MCP feedback, Slack reports, issue specs, anomaly alerts, session replays, and logs into investigations and PRs with persistent validation and human review gates <sup>[52](<https://posthog.com/blog/self-driving-loops>)</sup>.
-- NouS Research refactored Hermes with 1,393 agents over 19 hours, cutting non-test code by 34.4% for ~$19,300, using worktrees and frozen baselines; community review caught regressions tests missed <sup>[53](<https://nousresearch.com/refactoring-hermes-with-1393-agents>)</sup>.
-- OSS tools: Soup wraps LLM fine-tuning/post-training in one YAML command with local/cloud backends, evaluation, export, serving, and a web UI; beta layer-streaming trained an 8B NF4 LoRA in 3.32 GB GPU memory <sup>[54](<https://github.com/MakazhanAlpamys/Soup>)</sup>. Ouroboros is a local-first Agent OS with interview-driven specs, execution ledger, staged evaluation, and budgeted evolution loops, supporting 14 agent runtimes via MCP <sup>[55](<https://github.com/Q00/ouroboros>)</sup>. vol-rs ports Volatility 3 memory forensics from Python to Rust <sup>[56](<https://github.com/daffainfo/vol-rs>)</sup>.
+## Security and Governance
+- **OpenAI accounts compromised** via chained vulnerabilities, enabling access to internal repositories and connectors; a full disclosure timeline is published <sup>[10](<https://www.hacktron.ai/blog/hacking-openai>)</sup>.
+- **Targeted attacks on Rust maintainers**: ongoing campaign uses fake video calls to trick targets into installing malware or executing commands, following a recent supply-chain attack on the `arrayref` crate <sup>[11](<https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/>)</sup>.
+- Google’s **Gemini Enterprise Agent Platform** adds **Agent Anomaly Detection** (private preview) to analyze OpenTelemetry traces and tool calls for behavioral risks, grounded in OWASP Agentic Top 10 <sup>[12](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
+- **Zero-trust AI agents** shift from static to dynamic runtime governance with **Model Armor**, **Semantic Governance Policies**, and anomaly detection to judge intent, not just syntax <sup>[13](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
+
+## MLOps and DevOps
+- Google advocates **behavioral evaluations** for AI agents: fast, local unit-style tests for intermediate actions (e.g., tool calls) to complement macro benchmarks like SWE-bench, enabling safer iterations <sup>[14](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- **Autonomous LLM post-training** with **Tunix on TPUs** automates fine-tuning loops (e.g., LoRA ranks, learning rates) using Google’s AI stack (Gemma, Cloud TPUs, Antigravity CLI, Gemini Flash 3.7) <sup>[15](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- Google open-sources **OpenAPI SDK generation** (via Speakeasy) under AGPLv3, offering deterministic, multi-language generators with strict typing and SSE streaming for CI integration <sup>[16](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
+
+## Cloud and Infrastructure
+- **Huawei** plans to release two new AI chips next year, having shipped over 1,000 AI systems to 370+ customers, as China’s AI chip market targets $67B by 2030 <sup>[17](<https://www.wsj.com/tech/ai/huaweis-plan-to-become-chinas-nvidia-8af8d8a1?st=uMfgNY&reflink=desktopwebshare_permalink>)</sup>.
+- **Crusoe** pivots from massive AI data centers to **modular, factory-built micro data centers** for faster, cheaper inference deployment <sup>[18](<https://www.wsj.com/tech/ai/the-startup-that-built-openais-biggest-data-center-is-now-making-tiny-ones-71f36a4f?st=CxscFN&reflink=desktopwebshare_permalink>)</sup>.
+- **PyTorch Day Japan 2026** (Dec 10) announced, with CFP open; topics include sovereign AI, edge/physical AI, and PyTorch ecosystem projects (vLLM, DeepSpeed, Ray) <sup>[19](<https://pytorch.org/blog/pytorch-day-japan-2026-comes-to-tokyo/>)</sup>.
 
 ## Sources
 
-1. [Introducing Astra for Law](<https://openai.com/index/astra-for-law>) — _openai.com_
-2. [Introducing the Life Sciences Verification Program](<https://www.anthropic.com/news/life-sciences-verification-program>) — _anthropic news_
-3. [Projects redesigned: from folder to conversation](<https://claude.com/blog/projects-redesigned>) — _claude_
-4. [Claude Cowork and chat are now one Claude](<https://claude.com/blog/cowork-is-now-claude>) — _claude.com_
-5. [Working at the frontier: How Balyasny Asset Management evaluates and governs Claude Fable 5](<https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5>) — _claude_
-6. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-7. [Introducing Home MCP: enabling your agent to interact with your home](<https://support.google.com/googlehome/thread/467705013/introducing-home-mcp-enabling-your-agent-to-interact-with-your-home>) — _support.google.com_
-8. [Your AI agents can now control your Google Home devices](<https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/>) — _techcrunch.com_
-9. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
-10. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-11. [Bypassing inference bottlenecks with Retrieve-for-Train](<https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/>) — _research.google_
-12. [Training a 4B model to produce 81% faster query plans than Postgres](<https://rohanbansal.com/qorl>) — _rohanbansal.com_
-13. [Beyond the model: Engineering AI infra with scientific judgement](<https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/>) — _airbnb.tech_
-14. [Self-generated prompt injections in compaction summaries](<https://simonwillison.net/2026/Sep/17/compaction-summaries/>) — _simonwillison.net_
-15. [HarnessTax](<https://arena.ai/blog/coding-agents-harness-tax>) — _arena.ai_
-16. [DeepSeek-V4.1 Flash: Pushing the Limits of KV Cache Compression](<https://zartbot.github.io/blog/model_arch/dsv41flash_arch/en.html>) — _zartbot.github.io_
-17. [Meta's FLAT for Multimodal Understanding and Generation](<https://guangyusun.com/flat-website/>) — _guangyusun.com_
-18. [Ant Group Released a Finance-Focused Model](<https://artificialanalysis.ai/articles/ant-group-releases-finance-focused-ling-3-0-flash-fin>) — _artificialanalysis.ai_
-19. [Mistral x Mozilla: Private, Multilingual AI Browsing](<https://mistral.ai/news/mistral-x-mozilla/>) — _mistral.ai_
-20. [4-bit Rotational Quantization](<https://weaviate.io/blog/4-bit-rotational-quantization>) — _weaviate_
-21. [VQ-bench: a Composable Vector Quantization Framework](<https://www.pinecone.io/blog/vq-bench/>) — _pinecone_
-22. [Why Salesforce may be AI's adult in the room](<https://www.thedeepview.com/articles/why-salesforce-may-be-ai-s-adult-in-the-room>) — _thedeepview.com_
-23. [Memory in Grok Build](<https://x.ai/news/grok-build-memory>) — _x.ai_
-24. [\[AINews\] Reality Checks on AI News (Yegge shuts down Gas Town, Databricks’ +60% Astra cost)](<https://www.latent.space/p/ainews-reality-checks-on-ai-news>) — _latent.space_
-25. [How we built LangChain's Paid Media Agent](<https://www.langchain.com/blog/paid-media-agent>) — _langchain.com_
-26. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-27. [DuckDB Skills for Claude Code](<https://duckdb.org/2026/09/16/duckdb-skills>) — _duckdb.org_
-28. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
-29. [Apple reportedly building server packed with M-series Ultra chips for AI](<https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/>) — _arstechnica.com_
-30. [How To Run on Three Clouds at Once, and When Not To (45 minute presentation)](<https://www.infoq.com/presentations/form3-multicloud-architecture/>) — _infoq.com_
-31. [Agent Substrate brings high-density, scalable, trusted infrastructure to GKE](<https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke>) — _cloud.google.com_
-32. [Apache Iceberg Python 0.12.0 Release](<https://iceberg.apache.org/blog/apache-iceberg-python-0.12.0-release/>) — _iceberg.apache.org_
-33. [FastRP graph embeddings with Apache DataFusion](<https://semyonsinchenko.github.io/ssinchenko/post/fastrp-datafusion/>) — _semyonsinchenko.github.io_
-34. [Plan Advice in PostgreSQL 19](<https://tapoueh.org/blog/2026/09/plan-advice-in-postgresql-19/>) — _tapoueh.org_
-35. [Introducing TIN: full-text search for Postgres](<https://planetscale.com/blog/introducing-tin>) — _planetscale.com_
-36. [Ubuntu 26 generally available and latest migration](<https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration>) — _github.blog_
-37. [Workflow execution protections in GitHub Actions generally available](<https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available>) — _github.blog_
-38. [Copilot impact dashboard now shows feature engagement](<https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement>) — _github.blog_
-39. [Agentic CLI customizations now in the usage metrics API](<https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api>) — _github.blog_
-40. [datasette 1.0a40](<https://simonwillison.net/2026/Sep/16/datasette/>) — _simonwillison.net_
-41. [datasette 0.65.5](<https://simonwillison.net/2026/Sep/16/datasette-2/>) — _simonwillison.net_
-42. [Why your Redis is slow: it is single threaded and you sent it KEYS](<https://ankit-rana.com/logs/53-redis-single-threaded-keys-command/>) — _ankit-rana.com_
-43. [Be alert: targeted attacks on prominent Rustaceans](<https://blog.rust-lang.org/2026/09/17/targeted-attacks/>) — _blog.rust-lang.org_
-44. [Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution](<https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/>) — _securityweek.com_
-45. [Texas Utility CenterPoint Energy Confirms Data Breach After Hacker Claims 7.49M Records Stolen](<https://securityaffairs.com/199170/data-breach/texas-utility-centerpoint-energy-confirms-data-breach-after-hacker-claims-7-49m-records-stolen.html>) — _securityaffairs.com_
-46. [Active Exploitation Attempts Target WSO2 API Manager JWT Bypass With Forged Admin Tokens](<https://thehackernews.com/2026/09/active-exploitation-attempts-target.html>) — _thehackernews.com_
-47. [Cisco email security boxes can be rooted by... an email](<https://www.theregister.com/security/2026/09/15/cisco-email-security-boxes-can-be-rooted-by-an-email/5296604>) — _theregister.com_
-48. [Oracle Patches 800+ Vulnerabilities in September 2026 Security Update](<https://www.securityweek.com/oracle-patches-800-vulnerabilities-in-september-2026-security-update/>) — _securityweek.com_
-49. [ParaShells: Parallels Desktop Turns Appliance Install Into a Root Shell](<https://jfrog.com/blog/parallels-desktop-turns-appliance-install-into-root-shell/>) — _jfrog.com_
-50. [The £3 WiFi Extender With a Backdoor in Every Unit](<https://affixsec.substack.com/p/the-3-wifi-extender-with-a-backdoor>) — _affixsec.substack.com_
-51. [Escaping the OpenAI Codex sandbox, twice](<https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/>) — _accomplish.ai_
-52. [6-7 loops we use everyday to make PostHog self-driving](<https://posthog.com/blog/self-driving-loops>) — _posthog.com_
-53. [Refactoring Hermes with 1,393 agents](<https://nousresearch.com/refactoring-hermes-with-1393-agents>) — _nousresearch.com_
-54. [Soup](<https://github.com/MakazhanAlpamys/Soup>) — _github.com_
-55. [Ouroboros](<https://github.com/Q00/ouroboros>) — _github.com_
-56. [vol-rs](<https://github.com/daffainfo/vol-rs>) — _github.com_
+1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-612>) — _latent.space_
+2. [Anthropic Says Claude Drives 26% of Its Research and Development](<https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4OTcxMDY4NywiZXhwIjoxNzkwMzE1NDg3LCJhcnRpY2xlSWQiOiJUTElaRDlSMjRVOFEwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.fTu1G_CGaCwSN3j0oCYF2DV7eS4Q4BFX-e_vcQx3qTY>) — _bloomberg.com_
+3. [Helix 2.5: Zero-Shot 30-Home Generalization](<https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization>) — _figure.ai_
+4. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+5. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+6. [WebKit Features for Safari 27.0](<https://webkit.org/blog/18325/webkit-features-for-safari-27-0/>) — _webkit.org_
+7. [Bend](<https://github.com/bendlang/bend>) — _github.com_
+8. [How To Write With An LLM](<https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/>) — _simonwillison.net_
+9. [How To Write With An LLM](<https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/>) — _sockpuppet.org_
+10. [Hacking OpenAI](<https://www.hacktron.ai/blog/hacking-openai>) — _hacktron.ai_
+11. [Be alert: targeted attacks on prominent Rustaceans](<https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/>) — _simonwillison.net_
+12. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+13. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+14. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+15. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+16. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
+17. [Huawei's Plan to Become China's Nvidia](<https://www.wsj.com/tech/ai/huaweis-plan-to-become-chinas-nvidia-8af8d8a1?st=uMfgNY&reflink=desktopwebshare_permalink>) — _wsj.com_
+18. [The Startup That Built OpenAI's Biggest Data Center Is Now Making Tiny Ones](<https://www.wsj.com/tech/ai/the-startup-that-built-openais-biggest-data-center-is-now-making-tiny-ones-71f36a4f?st=CxscFN&reflink=desktopwebshare_permalink>) — _wsj.com_
+19. [PyTorch Day Japan 2026 Comes to Tokyo on December 10](<https://pytorch.org/blog/pytorch-day-japan-2026-comes-to-tokyo/>) — _pytorch.org_
 
 
 ## Recent archive
