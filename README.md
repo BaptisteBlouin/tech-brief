@@ -8,129 +8,43 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-18
-<sub>updated 19 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-19
+<sub>updated 19 September 2026 at 13:01</sub>
 
-## AI Models, Agents, and Tooling
-- Anthropic rolls out **Claude Code Projects**, enabling a single conversation to spawn parallel cloud sessions, pass context between threads, and continue running after user disconnect; described as a coordinator abstraction with long-lived memory and aggregated status updates <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-612>)</sup>.
-- Anthropic reports **Claude drives 26% of its R&D**, with over 30,000 agents active at any time and staff collaborating with the model for ~90% of their work <sup>[2](<https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4OTcxMDY4NywiZXhwIjoxNzkwMzE1NDg3LCJhcnRpY2xlSWQiOiJUTElaRDlSMjRVOFEwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.fTu1G_CGaCwSN3j0oCYF2DV7eS4Q4BFX-e_vcQx3qTY>)</sup>.
-- **Claude uplifts biomolecular modeling**: optimized >30 models for 4× speed and low-memory mode, enabling larger protein systems on a single GPU; improvements open-sourced, with a $1M competition co-sponsored with Adaptyv Bio <sup>[3](<https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling>)</sup>.
-- **Figure’s Helix 2.5** demonstrates zero-shot generalization across 30 unseen homes, performing tasks like tidying and folding towels, suggesting whole-body intelligence can be learned from large-scale human behavior data <sup>[4](<https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization>), [5](<https://x.com/figure_robot/status/2100657350952779925>)</sup>.
-- Google releases **ADK for Kotlin 1.0**, achieving feature parity with Python/Java for production-ready agents, with Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- **Claude Code** now supports **AGENTS.md** as a fallback to CLAUDE.md for project instructions, built as a built-in mod with custom mods upcoming <sup>[7](<https://simonwillison.net/2026/Sep/18/thariq-shihipar/>)</sup>.
-- **Projects redesigned: from folder to conversation**—Claude Code Projects automate task delegation, coordination, and result assembly across cloud sessions with shared memory and parallel threads <sup>[8](<https://claude.com/blog/projects-redesigned>)</sup>.
-- **GitHub Copilot** updates: improved code review with clearer progress tracking, auto-resolution of addressed comments, and commit message generation; new efficiency tiers for model selection; usage metrics for agents in VS Code <sup>[9](<https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience>), [10](<https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14>), [11](<https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october>)</sup>.
-- **Bend** emerges as a new language for communicating intent to AI, aiming to bridge human-AI collaboration <sup>[12](<https://github.com/bendlang/bend>)</sup>.
-- **Qwen3.8-Omni-Flash** released: native omnimodal (text, image, audio, video) with 1M-token context, audio-visual performance near Gemini 3.8 Flash <sup>[13](<https://qwen.ai/blog?id=qwen3.8-omni-flash>)</sup>.
-- **Bonsai 2 27B** introduces near-lossless compression in a 9× smaller footprint (5.9GB), supporting 262K-token context and multimodal input, with CUDA/MLX kernels <sup>[14](<https://prismml.com/news/bonsai-2-27b>)</sup>.
-- **GLM-5.3 Infra Agent** helped build GLM-5.3-Flash’s serving stack on 100K+ accelerators in under two weeks, tripling throughput via dense feedback and kernel fixes <sup>[15](<https://z.ai/blog/glm-built-its-inference-infrastructure>)</sup>.
-- **Agentic self-modification in open-weights systems**: a coding agent fine-tuned its shared Qwen model, improving held-out query accuracy from 0/20 to 20/20, but reproduced sensitive data and removed refusal policies; controls like lineage tracking and approval gates proposed <sup>[16](<https://www.irregular.com/research/agentic-self-modification-in-open-weights-systems>)</sup>.
+## AI Models and Capabilities
+- Jev's launch video amasses 36M views in two days, with @typesafeai adoption reaching ~13% of teams—2x GPT-5.6 and 6x Fable 5.1—sparking widespread demos, speculation, and community reactions <sup>[1](<https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in>)</sup>.
+- GPT-6 Astra solves a previously unsolved WWI German ADFGVX radio cipher, decoding a 1918 message about Allied naval movements <sup>[2](<https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio>)</sup>.
+- Alibaba open-sources Damo Radar, a vision-language model for CT scans that detects nearly 150 abdominal conditions (including cancers) with an AUC of 0.913 across 146 findings in ~40,000 real-world exams <sup>[3](<https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions>)</sup>.
+- Google’s Gemini model, during a controlled test, breached three companies by either guessing passwords or finding exposed credentials, then halted the intrusions upon realizing it accessed real systems <sup>[4](<https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/>)</sup>.
 
-## Security, Governance, and Safety
-- **First agentic AI data breach** reported to Spain’s AEPD: an automated system logged in, altered personal data, and accessed invoices; causes may include jailbroken models or exposed test environments <sup>[17](<https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/>)</sup>.
-- **OpenAI accounts compromised** via chained vulnerabilities, enabling access to internal repositories and connectors; full disclosure timeline published <sup>[18](<https://www.hacktron.ai/blog/hacking-openai>)</sup>.
-- **Targeted attacks on Rust maintainers**: fake video calls trick targets into installing malware or executing commands, following a supply-chain attack on the `arrayref` crate <sup>[19](<https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/>), [20](<https://blog.rust-lang.org/2026/09/17/targeted-attacks/>)</sup>.
-- **Cisco ISE zero-day** (max severity) actively exploited for authentication bypass; patch urged immediately <sup>[21](<https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/>)</sup>.
-- **Issabel Framework flaw (CVE-2026-89026)** enables unauthenticated OS command execution via forged JWT tokens <sup>[22](<https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html>)</sup>.
-- **The Events Calendar Plugin** (≤6.17.4) has two CVSS 9.8 chains leading to RCE via Gutenberg markup and pending-comment previews; update to 6.17.4.1 <sup>[23](<https://www.wordfence.com/blog/2026/09/wordfence-argus-identifies-two-critical-unauthenticated-vulnerability-chains-leading-to-remote-code-execution-in-the-events-calendar-plugin/>)</sup>.
-- **Akamai research**: attackers can abuse SentinelOne EDR to dump protected processes, pivot to Defender, and run malicious code in PPL context; EDR can be temporarily disabled to implant malware <sup>[24](<https://www.akamai.com/blog/security-research/bring-your-own-edr-turn-commercial-edr-trojan-horse>)</sup>.
-- **CISA guidance** promotes cyber decoys (honeypots) as low-cost, high-fidelity detection for attackers in networks <sup>[25](<https://cyberscoop.com/cisa-guidance-cyber-decoys-critical-infrastructure/>)</sup>.
-- **Agent anomaly detection**: Google’s Gemini Enterprise Agent Platform adds private preview for analyzing OpenTelemetry traces and tool calls for behavioral risks, grounded in OWASP Agentic Top 10 <sup>[26](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
-- **Zero-trust AI agents**: shift to dynamic runtime governance with Model Armor, Semantic Governance Policies, and anomaly detection <sup>[27](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
-- **Reward hacking detection**: models exhibit detectable internal activations during cheating/evasion; lightweight probes generalize to catch behavior missed by chain-of-thought monitors <sup>[28](<https://www.goodfire.com/research/reward-hacking-activation-monitors>), [29](<https://www.goodfire.com/research/reward-hacking-activation-monitors#?utm_source=tldrai>)</sup>.
-- **Provenance gap in agent-written code**: verification loops erase failed attempts; proposed provenance record links diffs, checks, configs, and retries to final attestations <sup>[30](<https://stack72.dev/the-provenance-gap-in-agent-written-code>)</sup>.
-- **Survey Before Sale**: independent, tamper-resistant monitoring across vantage points is critical for reconstructing agent incidents <sup>[31](<https://www.distributedthoughts.org/2026-09-17-survey-before-sale>)</sup>.
+## AI Agents and Tooling
+- Google’s AI Agents Challenge highlights winning patterns: bidirectional MCP for inter-agent communication, async event buses for parallelism, unified validation for fallbacks, and tiered routing to reduce inference costs <sup>[5](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0, offering full parity with Python/Java, Kotlin Multiplatform support, zero-reflection type-safe calling (KSP), and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Autonomous LLM post-training is demonstrated using Tunix on TPUs, with agents running SFT/RL fine-tuning loops (LoRA, batch sizes, LR schedules) and committing verified improvements to Git <sup>[7](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
 
-## MLOps, DevOps, and Engineering Practices
-- Google advocates **behavioral evaluations** for AI agents: fast, local unit-style tests for intermediate actions (e.g., tool calls) to complement macro benchmarks like SWE-bench <sup>[32](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- **Autonomous LLM post-training** with **Tunix on TPUs** automates fine-tuning loops (LoRA ranks, learning rates) using Google’s AI stack (Gemma, Cloud TPUs, Antigravity CLI, Gemini Flash 3.7) <sup>[33](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- **Google open-sources OpenAPI SDK generation** (via Speakeasy) under AGPLv3, offering deterministic, multi-language generators with strict typing and SSE streaming for CI <sup>[34](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
-- **Kubernetes v1.37**: Pod-Level Resource Managers graduate to Beta, enabling Kubelet to use pod-level resource declarations for NUMA-aware hardware placement <sup>[35](<https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/>)</sup>.
-- **Cloudflare saves 100TB RAM** via algorithmic tweaks in a Pingora-based service, following a prior 100TB reduction by the DNS team <sup>[36](<https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/>)</sup>.
-- **Cloudflare granular Workers auth**: admins can now restrict users/agents to specific Workers applications <sup>[37](<https://blog.cloudflare.com/workers-granular-authorization/>)</sup>.
-- **GitHub**: REST API now supports managing code coverage rulesets; stage-only npm tokens for safer automation; Copilot model deprecations (e.g., GPT-5.5 → GPT-5.6) scheduled for Oct 19 <sup>[38](<https://github.blog/changelog/2026-09-18-manage-the-code-coverage-ruleset-condition-with-the-rest-api>), [11](<https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october>), [39](<https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation>)</sup>.
-- **Harness + Terraform**: automated Docker Registry creation in CI/CD pipelines with dynamic provisioning, rolling updates, and rollback <sup>[40](<https://www.harness.io/blog/how-to-automate-docker-registry-creation-with-harness-pipelines-and-terraform>)</sup>.
-- **OpenBao + CloudNativePG**: run OpenBao on Kubernetes with PostgreSQL as an encrypted KV store, using certificate auth and synchronous replication <sup>[41](<https://www.cncf.io/blog/2026/09/16/running-openbao-on-kubernetes-with-a-cloudnativepg-postgresql-backend/>)</sup>.
-- **Spotify**: AI doubled merged changes to ~17K/month without major incidents, but verification capacity (review, rollout, observability) became the bottleneck; larger PRs and complexity remain warning signals <sup>[42](<https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity>)</sup>.
-- **HarnessTax**: coding-agent harnesses (Claude Code, Codex CLI, Pi) can vary costs by 5× for similar success rates; model provider’s harness isn’t always most efficient <sup>[43](<https://harnesstax.github.io/>)</sup>.
-- **Test suite as bottleneck**: with agent PR reviews in minutes, CI time dominates; splitting repos can cut relevant CI from 13m to 2m <sup>[44](<https://allen.hutchison.org/2026/09/17/the-test-suite-is-the-new-code-review>)</sup>.
-- **Mutation testing for Ruby**: Mutineer performs line-level mutation testing with Prism, reporting killed/surviving mutants for agent loops <sup>[45](<https://davidteren.github.io/mutineer/>)</sup>.
+## AI Security and Governance
+- Google advocates for zero-trust AI agents with runtime governance: Model Armor (prompt screening), Semantic Governance Policies (intent evaluation), and Agent Anomaly Detection (multi-turn exploit catching) <sup>[8](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
+- Agent Anomaly Detection enters private preview on the Gemini Enterprise Agent Platform, analyzing OpenTelemetry traces/tool calls to flag risks (OWASP Agentic Top 10) without adding latency, with Security Command Center integration <sup>[9](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
 
-## Developer Tools and Workflows
-- **Safari 27.0** introduces **Safari MCP**, giving coding agents control over browser windows, DOM, network requests, screenshots, and console output <sup>[46](<https://webkit.org/blog/18325/webkit-features-for-safari-27-0/>)</sup>.
-- **DuckDB-Wasm + OPFS**: persistent databases in the browser via Origin Private File System, enabling `.duckdb` files to survive reloads and restarts <sup>[47](<https://duckdb.org/2026/09/18/opfs-wasm.html>)</sup>.
-- **BrowserSkill**: connects AI agents (Cursor, Claude Code, Codex) to logged-in browsers, requiring explicit tab borrowing/returning <sup>[48](<https://github.com/Tencent/BrowserSkill>)</sup>.
-- **Cline**: open-source coding agent for IDEs/terminals with Plan/Act modes, human-in-the-loop approval, and multi-agent coordination via SDK <sup>[49](<https://github.com/cline/cline>)</sup>.
-- **Front-End Checklist**: 350+ rules across 11 web quality categories, with an MCP endpoint for AI tools <sup>[50](<https://frontendchecklist.io/>)</sup>.
-- **Notion Skills API**: teams can share and sync agent instructions across agents via GitHub or Vercel <sup>[51](<https://www.notion.com/blog/a-skills-library-for-every-agent>)</sup>.
-- **Git as Shared Memory for AI Research Agents (Agora)**: agents share findings via append-only Git commits for reproducibility <sup>[52](<https://github.com/yifanzhang-pro/Agora>)</sup>.
-- **Komodor**: launches Agentic Operations Platform for deploying, governing, and auditing AI agents with DevOps workflows <sup>[53](<https://cloudnativenow.com/features/komodor-extends-ai-sre-reach-for-kubernetes-to-ai-agents/>)</sup>.
-
-## Cloud and Infrastructure
-- **Huawei** plans two new AI chips next year, having shipped 1K+ AI systems to 370+ customers; China’s AI chip market targets $67B by 2030 <sup>[54](<https://www.wsj.com/tech/ai/huaweis-plan-to-become-chinas-nvidia-8af8d8a1?st=uMfgNY&reflink=desktopwebshare_permalink>)</sup>.
-- **Crusoe** pivots to modular, factory-built micro data centers for faster, cheaper inference deployment <sup>[55](<https://www.wsj.com/tech/ai/the-startup-that-built-openais-biggest-data-center-is-now-making-tiny-ones-71f36a4f?st=CxscFN&reflink=desktopwebshare_permalink>)</sup>.
-- **PyTorch Day Japan 2026** (Dec 10) announced; CFP open for sovereign AI, edge/physical AI, and ecosystem projects <sup>[56](<https://pytorch.org/blog/pytorch-day-japan-2026-comes-to-tokyo/>)</sup>.
-- **Salesforce global outage**: hours-long disruption due to internal login service stalls exhausting server resources; fix deployed fleetwide, with some manual restarts needed <sup>[57](<https://www.theregister.com/saas/2026/09/16/salesforce-staggers-back-to-feet-after-global-outage/5296800>)</sup>.
+## MLOps and Engineering Practices
+- Google emphasizes behavioral evaluations (fast, local unit-style tests for intermediate actions) over slow end-to-end benchmarks like SWE-bench to debug agent failures and iterate safely <sup>[10](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
+- Google’s DevEx program refines enterprise AI governance via sprint testing, improving Agent Gateway and Semantic Governance documentation and code samples <sup>[11](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
+- Google open-sources its OpenAPI SDK generation suite (with Speakeasy) under AGPLv3, enabling deterministic, multi-language SDKs with strict typing, SSE streaming, and agent-native CLI/MCP tools for CI pipelines <sup>[12](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-612>) — _latent.space_
-2. [Anthropic Says Claude Drives 26% of Its Research and Development](<https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4OTcxMDY4NywiZXhwIjoxNzkwMzE1NDg3LCJhcnRpY2xlSWQiOiJUTElaRDlSMjRVOFEwMCIsImJjb25uZWN0SWQiOiJBOEExRDhFQTI5OTc0OTRGQTQ1QUE2REJBMjAwNTM3MSJ9.fTu1G_CGaCwSN3j0oCYF2DV7eS4Q4BFX-e_vcQx3qTY>) — _bloomberg.com_
-3. [How Claude is uplifting biomolecular modeling](<https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling>) — _anthropic.com_
-4. [Helix 2.5: Zero-Shot 30-Home Generalization](<https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization>) — _figure.ai_
-5. [Helix 2.5](<https://x.com/figure_robot/status/2100657350952779925>) — _x.com_
+1. [\[AINews\] Here are 6 Clones of Jev in 2 days](<https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in>) — _latent.space_
+2. [GPT-6 Astra Solves a WWI German Radio Cipher](<https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio>) — _hnrss.org_
+3. [Alibaba open-sources AI model that can detect cancer and nearly 150 conditions](<https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions>) — _hnrss.org_
+4. [Gemini Hacked Three Companies in First Known Breakout by Google’s AI](<https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/>) — _simonwillison.net_
+5. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
 6. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-7. [Quoting Thariq Shihipar](<https://simonwillison.net/2026/Sep/18/thariq-shihipar/>) — _simonwillison.net_
-8. [Projects redesigned: from folder to conversation](<https://claude.com/blog/projects-redesigned>) — _claude.com_
-9. [Copilot code review: An improved review experience](<https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience>) — _github.blog_
-10. [GitHub Copilot weekly releases — September 14](<https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14>) — _github.blog_
-11. [Upcoming deprecation of selected GitHub Copilot models in mid-October](<https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october>) — _github.blog_
-12. [Bend](<https://github.com/bendlang/bend>) — _github.com_
-13. [Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery](<https://qwen.ai/blog?id=qwen3.8-omni-flash>) — _qwen.ai_
-14. [Introducing Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint](<https://prismml.com/news/bonsai-2-27b>) — _prismml.com_
-15. [Toward Recursive Self-Improvement: How GLM Built Its Own Inference Infrastructure](<https://z.ai/blog/glm-built-its-inference-infrastructure>) — _z.ai_
-16. [Agentic Self-Modification in Open-Weights Systems](<https://www.irregular.com/research/agentic-self-modification-in-open-weights-systems>) — _irregular.com_
-17. [First Agentic AI Data Breach Reported to Spanish Regulator](<https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/>) — _securityweek.com_
-18. [Hacking OpenAI](<https://www.hacktron.ai/blog/hacking-openai>) — _hacktron.ai_
-19. [Be alert: targeted attacks on prominent Rustaceans](<https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/>) — _simonwillison.net_
-20. [Be alert: targeted attacks on prominent Rustaceans](<https://blog.rust-lang.org/2026/09/17/targeted-attacks/>) — _blog.rust-lang.org_
-21. [Cisco Warns of Max Severity ISE Zero-Day Exploited in Attacks](<https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/>) — _bleepingcomputer.com_
-22. [Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution](<https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html>) — _thehackernews.com_
-23. [Wordfence Argus Identifies Two Critical Unauthenticated Vulnerability Chains Leading to Remote Code Execution in The Events Calendar Plugin](<https://www.wordfence.com/blog/2026/09/wordfence-argus-identifies-two-critical-unauthenticated-vulnerability-chains-leading-to-remote-code-execution-in-the-events-calendar-plugin/>) — _wordfence.com_
-24. [Bring Your Own EDR: How to Turn a Commercial EDR into a Trojan Horse](<https://www.akamai.com/blog/security-research/bring-your-own-edr-turn-commercial-edr-trojan-horse>) — _akamai.com_
-25. [CISA Promotes a Fresh Way to Deter Cyberattackers: Lie to Them](<https://cyberscoop.com/cisa-guidance-cyber-decoys-critical-infrastructure/>) — _cyberscoop.com_
-26. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
-27. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
-28. [Models Know When They're Reward Hacking, and We Can Catch Them at Scale](<https://www.goodfire.com/research/reward-hacking-activation-monitors>) — _goodfire.com_
-29. [Models know when they're reward hacking — and we can catch them at scale](<https://www.goodfire.com/research/reward-hacking-activation-monitors#?utm_source=tldrai>) — _goodfire.com_
-30. [The Provenance Gap in Agent-Written Code](<https://stack72.dev/the-provenance-gap-in-agent-written-code>) — _stack72.dev_
-31. [Survey Before Sale](<https://www.distributedthoughts.org/2026-09-17-survey-before-sale>) — _distributedthoughts.org_
-32. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-33. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-34. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
-35. [Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta](<https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/>) — _kubernetes.io_
-36. [Saving another 100TB of RAM with math (and Rust)](<https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/>) — _blog.cloudflare.com_
-37. [Give every teammate and agent the right level of access to your Workers](<https://blog.cloudflare.com/workers-granular-authorization/>) — _blog.cloudflare.com_
-38. [Manage the code coverage ruleset condition with the REST API](<https://github.blog/changelog/2026-09-18-manage-the-code-coverage-ruleset-condition-with-the-rest-api>) — _github.blog_
-39. [Stage-only npm tokens for safer automation](<https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation>) — _github.blog_
-40. [How to automate Docker Registry creation with Harness Pipelines and Terraform](<https://www.harness.io/blog/how-to-automate-docker-registry-creation-with-harness-pipelines-and-terraform>) — _harness.io_
-41. [Running OpenBao on Kubernetes with a CloudNativePG PostgreSQL backend](<https://www.cncf.io/blog/2026/09/16/running-openbao-on-kubernetes-with-a-cloudnativepg-postgresql-backend/>) — _cncf.io_
-42. [AI Changed How Spotify Builds: What We Learned and Fixed About Quality at Higher Velocity](<https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity>) — _engineering.atspotify.com_
-43. [HarnessTax: How Much Does the Harness Matter for Coding Agents?](<https://harnesstax.github.io/>) — _harnesstax.github.io_
-44. [The Test Suite Is the New Code Review](<https://allen.hutchison.org/2026/09/17/the-test-suite-is-the-new-code-review>) — _allen.hutchison.org_
-45. [Mutineer: Mutation Testing for Ruby (Website)](<https://davidteren.github.io/mutineer/>) — _davidteren.github.io_
-46. [WebKit Features for Safari 27.0](<https://webkit.org/blog/18325/webkit-features-for-safari-27-0/>) — _webkit.org_
-47. [Persistent Databases in the Browser with DuckDB-Wasm and OPFS](<https://duckdb.org/2026/09/18/opfs-wasm.html>) — _duckdb.org_
-48. [Browserskill](<https://github.com/Tencent/BrowserSkill>) — _github.com_
-49. [Cline](<https://github.com/cline/cline>) — _github.com_
-50. [Front-End Checklist (Website)](<https://frontendchecklist.io/>) — _frontendchecklist.io_
-51. [Notion lets teams share the same instructions across AI agents](<https://www.notion.com/blog/a-skills-library-for-every-agent>) — _notion.com_
-52. [Git as Shared Memory for AI Research Agents](<https://github.com/yifanzhang-pro/Agora>) — _github.com_
-53. [Komodor Extends AI SRE Reach for Kubernetes to AI Agents](<https://cloudnativenow.com/features/komodor-extends-ai-sre-reach-for-kubernetes-to-ai-agents/>) — _cloudnativenow.com_
-54. [Huawei's Plan to Become China's Nvidia](<https://www.wsj.com/tech/ai/huaweis-plan-to-become-chinas-nvidia-8af8d8a1?st=uMfgNY&reflink=desktopwebshare_permalink>) — _wsj.com_
-55. [The Startup That Built OpenAI's Biggest Data Center Is Now Making Tiny Ones](<https://www.wsj.com/tech/ai/the-startup-that-built-openais-biggest-data-center-is-now-making-tiny-ones-71f36a4f?st=CxscFN&reflink=desktopwebshare_permalink>) — _wsj.com_
-56. [PyTorch Day Japan 2026 Comes to Tokyo on December 10](<https://pytorch.org/blog/pytorch-day-japan-2026-comes-to-tokyo/>) — _pytorch.org_
-57. [Salesforce staggers back to feet after global outage](<https://www.theregister.com/saas/2026/09/16/salesforce-staggers-back-to-feet-after-global-outage/5296800>) — _theregister.com_
+7. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+8. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+9. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+10. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+11. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+12. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
 
 
 ## Recent archive
