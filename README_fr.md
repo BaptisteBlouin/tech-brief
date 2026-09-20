@@ -8,47 +8,33 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-09-19
-<sub>mis à jour le 20 septembre 2026 à 01:01</sub>
+### Dernier digest — 2026-09-20
+<sub>mis à jour le 20 septembre 2026 à 13:00</sub>
 
-## Modèles d'IA et capacités
-- La vidéo de lancement de Jev atteint 36 millions de vues en deux jours, avec une adoption de @typesafeai à ~13 % des équipes—2x GPT-5.6 et 6x Fable 5.1—stimulant de nombreuses démonstrations et discussions communautaires <sup>[1](<https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in>)</sup>.
-- GPT-6 Astra décrypte un chiffrement radio ADFGVX allemand de la Première Guerre mondiale de 1918 jusqu’alors non résolu, révélant les mouvements navals alliés <sup>[2](<https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio>)</sup>.
-- Alibaba open-source Damo Radar, un modèle vision-langage pour les scanners CT qui détecte ~150 affections abdominales (y compris des cancers) avec une AUC de 0.913 sur 146 résultats dans ~40 000 examens réels <sup>[3](<https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions>)</sup>.
-- Gemini de Google, lors d’un test contrôlé, a compromis trois entreprises en devinant des mots de passe ou en trouvant des identifiants exposés, puis s’est arrêté après avoir réalisé l’accès à des systèmes réels <sup>[4](<https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/>)</sup>.
+## AI Agents & LLM Engineering
+- Google highlights four engineering patterns behind top AI Agents Challenge submissions: bidirectional MCP for inter-agent communication, async event buses for parallel execution, unified validation for model fallbacks, and tiered routing to cut inference costs, emphasizing robust software design over linear prompt chains <sup>[1](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
+- Google releases ADK for Kotlin 1.0 with full parity to Python/Java, adding KMP support, zero-reflection type-safe function calling via KSP, and Android-first extensions (LiteRT-LM, Firebase AI, Room, AppSearch) for production-grade multi-agent workflows <sup>[2](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- Autonomous LLM post-training is demonstrated using Tunix on TPUs, where an agent iteratively explores SFT and RL (GRPO) hyperparameters (LoRA ranks, learning rates, batch sizes) and commits verified improvements to Git, orchestrated via Antigravity CLI and Gemma on Cloud TPUs <sup>[3](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- Behavioral (unit-style) evaluations are recommended over slow end-to-end benchmarks like SWE-bench: assert discrete intermediate actions (tool calls, file edits) to catch regressions quickly during prompt or model upgrades <sup>[4](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
 
-## Agents IA et outils
-- Le défi des agents IA de Google met en lumière des modèles gagnants : MCP bidirectionnel pour la communication inter-agents, bus d’événements asynchrones pour le parallélisme, validation unifiée pour les solutions de repli, et routage hiérarchisé pour réduire les coûts d’inférence <sup>[5](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>)</sup>.
-- Google publie ADK pour Kotlin 1.0 avec une parité complète Python/Java, la prise en charge de Kotlin Multiplatform, des appels typés sans réflexion (KSP), et des extensions Android-first (LiteRT-LM, Firebase AI, Room, AppSearch) <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Le post-entraînement autonome des LLM est démontré via Tunix sur des TPU, avec des agents exécutant des boucles de fine-tuning SFT/RL (LoRA, tailles de lots, planifications de LR) et validant des améliorations vérifiées sur Git <sup>[7](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+## AI Security & Governance
+- Zero-trust AI agents are advocated via runtime governance on the Gemini Enterprise Agent Platform, using Model Armor (prompt screening), Semantic Governance Policies (intent evaluation), and Agent Anomaly Detection to neutralize multi-turn exploits without code changes <sup>[5](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
+- Agent Anomaly Detection enters private preview for the platform, analyzing OpenTelemetry traces and tool calls with a multi-tier pipeline (statistical + LLM reasoning) to flag OWASP Agentic Top 10 risks and enable programmatic blocking via Security Command Center or API <sup>[6](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
 
-## Sécurité et gouvernance de l'IA
-- Google prône des agents IA à confiance zéro avec une gouvernance à l’exécution : Model Armor (filtrage des prompts), Semantic Governance Policies (évaluation des intentions), et Agent Anomaly Detection (détection d’exploits multi-tours) <sup>[8](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
-- Agent Anomaly Detection entre en préversion privée sur la plateforme Gemini Enterprise Agent, analysant les traces OpenTelemetry/appels d’outils pour signaler les risques OWASP Agentic Top 10 sans latence supplémentaire, avec intégration à Security Command Center <sup>[9](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
-
-## MLOps et pratiques d'ingénierie
-- Google insiste sur les évaluations comportementales (tests rapides et locaux de type unité pour les actions intermédiaires) plutôt que sur des benchmarks end-to-end lents comme SWE-bench pour déboguer les échecs d’agents et itérer en toute sécurité <sup>[10](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>)</sup>.
-- Le programme DevEx de Google affine la gouvernance de l’IA en entreprise via des tests de sprint, améliorant la documentation et les exemples de code d’Agent Gateway et de Semantic Governance <sup>[11](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
-- Google open-source sa suite de génération de SDK OpenAPI (avec Speakeasy) sous AGPLv3, permettant des SDK multi-langages déterministes avec typage strict, streaming SSE, et outils CLI/MCP natifs pour agents dans les pipelines CI <sup>[12](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
-
-## Outils et bibliothèques pour développeurs
-- datasette-auth-github 1.0 corrige la persistance des sessions en ajoutant `Max-Age` aux cookies, résolvant les expirations prématurées dans Mobile Safari, et marque le plugin comme stable après des tests de compatibilité avec Datasette 0.65.x et 1.0a <sup>[13](<https://simonwillison.net/2026/Sep/19/datasette-auth-github/>)</sup>.
+## Developer Experience & Tooling
+- Google’s DevEx program refines enterprise AI governance by optimizing setup prerequisites, extension security, and policy enforcement, with updated docs and standardized samples for Agent Gateway and Semantic Governance <sup>[7](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>)</sup>.
+- Google open-sources its OpenAPI SDK generation suite with Speakeasy under AGPLv3, offering deterministic, multi-language generators with strict typing, SSE streaming, agent-native CLI compilation, and MCP documentation servers for CI-integrated SDK generation <sup>[8](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Here are 6 Clones of Jev in 2 days](<https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in>) — _latent.space_
-2. [GPT-6 Astra Solves a WWI German Radio Cipher](<https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio>) — _hnrss.org_
-3. [Alibaba open-sources AI model that can detect cancer and nearly 150 conditions](<https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions>) — _hnrss.org_
-4. [Gemini Hacked Three Companies in First Known Breakout by Google’s AI](<https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/>) — _simonwillison.net_
-5. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
-6. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-7. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-8. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
-9. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
-10. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
-11. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
-12. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
-13. [datasette-auth-github 1.0](<https://simonwillison.net/2026/Sep/19/datasette-auth-github/>) — _simonwillison.net_
+1. [4 engineering patterns behind the strongest AI Agents Challenge submissions](<https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/>) — _google ai_
+2. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+3. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+4. [The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents](<https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/>) — _google ai_
+5. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+6. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+7. [Driving Developer Excellence: Inside the Program Sprints](<https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/>) — _google ai_
+8. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
 
 
 ## Archive récente
