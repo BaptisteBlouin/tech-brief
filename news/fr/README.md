@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>98 digests quotidiens archivés · du plus récent au plus ancien.</sub>
+<sub>99 digests quotidiens archivés · du plus récent au plus ancien.</sub>
 
 ### Septembre 2026
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-09-21` | Lundi | [Lire →](2026-09-21.md) |
 | `2026-09-20` | 🗓️ Récap hebdo | [Lire →](2026-09-20.md) |
 | `2026-09-19` | Samedi | [Lire →](2026-09-19.md) |
 | `2026-09-18` | Vendredi | [Lire →](2026-09-18.md) |
