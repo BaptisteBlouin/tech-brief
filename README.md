@@ -8,16 +8,18 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-09-21
-<sub>updated 22 September 2026 at 01:01</sub>
+### Latest digest — 2026-09-22
+<sub>updated 23 September 2026 at 01:01</sub>
 
-## Artificial Intelligence & LLM Models
-
-* **Grok 4.7 and GLM-5.3 Benchmarks**: xAI's latest reasoning model, Grok 4.7, is rolling out in GitHub Copilot for agentic coding and complex workflows <sup>[1](<https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot>)</sup>. Meanwhile, Semgrep benchmarks show that Grok 4.6 Exacto matches Claude
+<sup>[1](<https://darkmarc.substack.com/p/hijacking-ai-agents-how-an-agents>)</sup> AI Agent Goal Hijack. (High priority - Security/Agents)
+ * <sup>[2](<https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available>)</sup> GitHub refreshed PR page GA. (Medium - Dev tools)
+ * <sup>[3](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup> Google AI: Autonomous LLM post-training with Tunix on TPUs. (High priority - MLOps)
 
 ## Sources
 
-1. [Grok 4.7 is now available in GitHub Copilot](<https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot>) — _github.blog_
+1. [AI Agent Goal Hijack: How Attackers Turn an Agent's Own Tools Against It](<https://darkmarc.substack.com/p/hijacking-ai-agents-how-an-agents>) — _darkmarc.substack.com_
+2. [Refreshed repository pull requests page generally available](<https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available>) — _github.blog_
+3. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
 
 
 ## Recent archive
@@ -26,6 +28,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-09-22` | Tuesday | [Read →](news/en/2026-09-22.md) |
 | `2026-09-21` | Monday | [Read →](news/en/2026-09-21.md) |
 | `2026-09-20` | 🗓️ Weekly recap | [Read →](news/en/2026-09-20.md) |
 | `2026-09-19` | Saturday | [Read →](news/en/2026-09-19.md) |
@@ -39,9 +42,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-09-11` | Friday | [Read →](news/en/2026-09-11.md) |
 | `2026-09-10` | Thursday | [Read →](news/en/2026-09-10.md) |
 | `2026-09-09` | Wednesday | [Read →](news/en/2026-09-09.md) |
-| `2026-09-08` | Tuesday | [Read →](news/en/2026-09-08.md) |
 
-<sub>[Browse the full archive (99) →](news/en/)</sub>
+<sub>[Browse the full archive (100) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
