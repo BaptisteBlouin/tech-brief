@@ -21,7 +21,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const WORKER_URL = process.env.WORKER_URL || 'https://baptiste-agent.blouin-baptiste94.workers.dev';
+const WORKER_URL = process.env.WORKER_URL || 'https://api.baptisteblouin.fr';
 const SITE_URL = 'https://baptisteblouin.fr';
 const WRITE_ARCHIVE = process.env.WRITE_ARCHIVE === 'true';
 const BACKFILL_DAYS = Math.max(0, parseInt(process.env.BACKFILL_DAYS || '0', 10) || 0);
