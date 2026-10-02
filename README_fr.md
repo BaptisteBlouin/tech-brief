@@ -8,69 +8,42 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-01
-<sub>mis à jour le 2 octobre 2026 à 01:01</sub>
+### Dernier digest — 2026-10-02
+<sub>mis à jour le 2 octobre 2026 à 13:00</sub>
 
-## Modèles d'IA, Infrastructure et Capacités
+## AI Models, Tooling, and Infrastructure
+- **Pi 1.0 & Pi Durable**: The Earendil team released Pi 1.0 featuring native Model Context Protocol (MCP) support, virtual model extensions, deferred tool loading, cache warming for Anthropic models, and mid-conversation system messages <sup>[1](<https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc>)</sup>. Additionally, Pi Durable externalizes stateful components and ports the framework to TypeScript to record every step as a checkpointed task, allowing agents to automatically resume from their exact state after a crash <sup>[1](<https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc>)</sup>.
+- **Blackwell Attention Optimization**: PyTorch introduced Jagged Flash Attention (JFA) for Meta's Generative Ads Model on NVIDIA Blackwell B200, built using Triton Low-level Extensions (TLX) <sup>[2](<https://pytorch.org/blog/optimizing-jagged-flash-attention-with-tlx-the-road-toward-sota-fa4-on-blackwell/>)</sup>. TLX achieves a 3.2K-line implementation that outperforms state-of-the-art FlashAttention-4 kernels by ~13% on forward passes and ~50% on backward passes while remaining in Triton's high-level programming model <sup>[2](<https://pytorch.org/blog/optimizing-jagged-flash-attention-with-tlx-the-road-toward-sota-fa4-on-blackwell/>)</sup>.
+- **Cloudflare Clef Decision Models**: Cloudflare introduced Clef and Clef-flash, fully Jev-API compatible open-source decision models designed to help agents programmatically gather context, make decisions, and take actions <sup>[3](<https://blog.cloudflare.com/clef-decision-models/>)</sup>.
+- **Autonomous Post-Training on TPUs**: Google detailed an autonomous reinforcement learning and supervised fine-tuning pipeline utilizing Tunix and Cloud TPUs, allowing agent loops to iterate over hyperparameters like LoRA ranks and rollout temperatures autonomously <sup>[4](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- **Broadcom and Anthropic Infrastructure**: Broadcom is reportedly amassing $60 billion to fund custom chips and underlying infrastructure for Anthropic and other AI partners <sup>[5](<https://www.bloomberg.com/news/articles/2026-10-02/broadcom-starts-amassing-60-billion-to-fund-chips-for-anthropic?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MDkyMjQzOCwiZXhwIjoxNzkxNTI3MjM4LCJhcnRpY2xlSWQiOiJUTTkwWUVLSzNOWUQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.ou2DaP8DyjOKlNzvvF7qkpSHPum6rWuWYguG_k-KLHo>)</sup>.
 
-- Google DeepMind a annoncé Gemini 4 Argon, un modèle de pointe offrant des performances de premier ordre en matière de programmation, de travail sur les connaissances d'entreprise et de cybersécurité, ainsi qu'une première mondiale avec une fenêtre de continuation de décodage longue de 1 million de jetons <sup>[1](<https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer>), [2](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/>)</sup>.
-- Cloudflare a publié Clef et Clef-flash, des modèles de décision hébergés qui produisent des sorties structurées et limitées rapidement et de manière cohérente pour les flux de travail d'agents, prenant la tête du Jev Decision Index <sup>[3](<https://blog.cloudflare.com/clef-decision-models/>)</sup>.
-- AllenAI a présenté Olmo-core 3, une infrastructure ouverte et évolutive conçue pour entraîner efficacement des modèles de mélange d'experts (MoE) à mille milliards de paramètres <sup>[4](<https://huggingface.co/blog/allenai/olmocore3>)</sup>.
-- Google DeepMind a développé SynthID Bio, une technique de filigrane robuste pour les séquences de protéines conçues par IA, qui résiste aux modifications de base et aux exportations sans altérer la fonction biologique <sup>[5](<https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/>), [6](<https://deepmind.google/blog/introducing-synthid-bio/>)</sup>.
-- Runway a présenté en avant-première Praxis-1, un modèle d'action mondiale à poids ouverts traduisant le pré-entraînement vidéo en contrôle de robots <sup>[7](<https://runway.com/research/introducing-praxis-1>)</sup>.
+## Agents, RAG, and Security
+- **Kotlin Agent Development Kit (ADK) 1.0**: Google released ADK 1.0 for Kotlin with full parity across Python and Java cores, supporting KMP, zero-reflection type-safe function calling via KSP, and Android-first extensions for local LiteRT-LM models and AppSearch semantic memory <sup>[6](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- **Runtime Agent Security Governance**: The Gemini Enterprise Agent Platform introduced managed defenses including Model Armor for prompt screening, Semantic Governance Policies for evaluating tool intent, and Agent Anomaly Detection to catch multi-turn exploits and OpenTelemetry trace anomalies without runtime latency <sup>[7](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>), [8](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
+- **Agent Session Transcripts**: Practitioners emphasize the critical value of retaining and monitoring agent session transcripts as a primary telemetry layer for catching early behavioral warning signs and logic regressions <sup>[9](<https://quesma.com/blog/agent-session-transcripts-are-precious/>)</sup>.
 
-## Outils d'Agents, Cadres et Flux de Travail
-
-- GitHub Copilot CLI et les applications de bureau sur macOS et Windows ont ajouté des capacités d'utilisation de l'ordinateur, permettant aux agents d'interagir avec des applications de bureau patrimoniales et dotées uniquement d'une interface graphique <sup>[8](<https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps>)</sup>.
-- Claude Code a introduit des fonctions TypeScript modulaires appelées mods, permettant aux développeurs de personnaliser le comportement de la CLI et de l'application de bureau, l'interface utilisateur et la gestion des événements <sup>[9](<https://claude.com/blog/claude-code-mods>)</sup>.
-- Google a publié ADK pour Kotlin 1.0, apportant des capacités multi-agents, des appels de fonctions sécurisés par type via KSP et des extensions axées sur Android à l'écosystème Kotlin <sup>[10](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- Cloudflare a lancé Cloudflare OS, offrant aux organisations des espaces de travail d'agents gérés connectés aux données internes, aux systèmes et aux outils de l'entreprise <sup>[11](<https://blog.cloudflare.com/managed-cloudflare-os/>)</sup>.
-- TanStack a publié Intent 0.5, permettant aux développeurs de maintenir, de vérifier les types et de valider les compétences des agents directement dans le code source d'un dépôt <sup>[12](<https://tanstack.com/blog/intent-0.5-skills-you-can-maintain>)</sup>.
-
-## MLOps, Plateformes de Données et Magasins Vectoriels
-
-- Google a introduit autofinetune, appliquant des boucles de recherche autonomes utilisant Tunix, Gemma et des Cloud TPU pour itérer sur le réglage fin supervisé (Supervised Fine-Tuning) et l'apprentissage par renforcement GRPO <sup>[13](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- Turbopuffer v3 a restructuré son moteur de stockage, abandonnant l'index vectoriel ANN traditionnel comme disposition principale pour optimiser de manière indépendante la recherche en texte intégral, les filtres, les agrégations et la récupération de vecteurs <sup>[14](<https://turbopuffer.com/blog/rip-vector-database>)</sup>.
-- Cloudflare a lancé Cloudflare Basin (anciennement Data Platform), une plateforme d'analyse de données sans serveur (serverless) construite sur Apache Iceberg et R2 Object Storage <sup>[15](<https://blog.cloudflare.com/cloudflare-basin/>)</sup>.
-
-## Sécurité, Vulnérabilités et Conformité
-
-- Des chercheurs ont divulgué Branch Target Reuse (BTR), une variante de Spectre-v2 qui réutilise des entrées de prédiction de branche indirecte obsolètes dans les moteurs JIT pour divulguer la mémoire Linux et extraire des mots de passe root <sup>[16](<https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html>)</sup>.
-- ControlPlane a détaillé une chaîne d'exploitation non authentifiée menant à une exécution de code à distance (RCE) dans OpenBao et Vault, combinant un contournement de certificat de fournisseur SPIFFE, une manipulation de chemin ACL et des instantanés Raft malveillants <sup>[17](<https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/>)</sup>.
-- Des chercheurs en sécurité ont mis en lumière PixelLeak, où des agents de codage par IA ont involontairement exposé plus de 13 000 captures d'écran de développeurs internes contenant des tableaux de bord sensibles sur des dépôts GitHub publics <sup>[18](<https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies>)</sup>.
-
-## DevOps, Infrastructure et Outils de Développement
-
-- Netlify a migré ses Edge Functions des isolats V8 vers des micro-machines virtuelles Firecracker, réduisant la latence médiane d'invocation à chaud entre 5 et 6 millisecondes <sup>[19](<https://www.netlify.com/blog/edge-functions-firecracker-microvms/>)</sup>.
-- GitHub a mis en place des limites de taux (rate limits) et des formulaires structurés pour les rapports de vulnérabilité privés afin d'éliminer les soumissions de spam automatisées et de faible qualité <sup>[20](<https://github.blog/changelog/2026-10-01-rate-limits-for-private-vulnerability-reports>), [21](<https://github.blog/changelog/2026-10-01-structured-forms-for-private-vulnerability-reports>)</sup>.
-- Cloudflare a ajouté la prise en charge de Web Crypto pour les algorithmes cryptographiques post-quantiques, notamment ML-KEM et ML-DSA, derrière un drapeau de compatibilité optionnel <sup>[22](<https://blog.cloudflare.com/workers-ml-kem-ml-dsa-support/>)</sup>.
-- GitHub Actions a annoncé le retrait de l'image de l'exécuteur macOS 14 pour le 2 novembre 2026, accompagné de périodes de pannes programmées (brownout) tout au long du mois d'octobre <sup>[23](<https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement>)</sup>.
+## DevOps, Database, and Developer Engineering
+- **DuckDB Dimension Tables**: DuckDB highlighted performance improvements for analytical workloads with repeated strings by utilizing dimension tables to reduce redundant string storage across large Parquet datasets <sup>[10](<https://duckdb.org/2026/10/02/dimension-tables.html>)</sup>.
+- **Aurora PostgreSQL Lakehouse Queries**: Amazon Aurora PostgreSQL added native support for directly querying Apache Iceberg and Parquet data residing in data lakes using standard PostgreSQL applications <sup>[11](<https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/>)</sup>.
+- **Rust 32-bit Windows Target Demotion**: Rust version 1.100.0 demotes i686-pc-windows-msvc to a target without host tools and i686-pc-windows-gnu to a Tier 2 target without host tools, requiring developers to cross-compile 32-bit binaries from 64-bit Windows host toolchains <sup>[12](<https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/>)</sup>.
+- **OpenAPI Code Generation Open-Sourced**: Google partnered with Speakeasy to open-source its OpenAPI code generation suite under AGPLv3, giving teams deterministic multi-language SDK generators and tools for compiling documentation MCP servers <sup>[13](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output](<https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer>) — _latent.space_
-2. [Gemini 4 Argon](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/>) — _blog.google_
+1. [\[AINews\] Pi 1.0, Pi Durable, and AIE NYC](<https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc>) — _latent.space_
+2. [Optimizing Jagged Flash Attention with TLX: The Road Toward SOTA FA4 on Blackwell](<https://pytorch.org/blog/optimizing-jagged-flash-attention-with-tlx-the-road-toward-sota-fa4-on-blackwell/>) — _pytorch.org_
 3. [Introducing Clef: our open-source decision models, and new RL fine-tuning platform](<https://blog.cloudflare.com/clef-decision-models/>) — _blog.cloudflare.com_
-4. [Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs](<https://huggingface.co/blog/allenai/olmocore3>) — _huggingface.co_
-5. [Google figures out how to watermark AI-designed proteins](<https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/>) — _arstechnica.com_
-6. [SynthID Bio: Watermarking methods for synthetic biology](<https://deepmind.google/blog/introducing-synthid-bio/>) — _deepmind.google_
-7. [Praxis-1](<https://runway.com/research/introducing-praxis-1>) — _runway.com_
-8. [GitHub Copilot can now interact with desktop apps with computer use](<https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps>) — _github.blog_
-9. [Customize Claude Code with mods](<https://claude.com/blog/claude-code-mods>) — _claude_
-10. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-11. [Cloudflare OS: your company’s agent workspace, managed for you](<https://blog.cloudflare.com/managed-cloudflare-os/>) — _blog.cloudflare.com_
-12. [Intent 0.5: Skills You Can Maintain](<https://tanstack.com/blog/intent-0.5-skills-you-can-maintain>) — _tanstack.com_
-13. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-14. [RIP, vector database](<https://turbopuffer.com/blog/rip-vector-database>) — _turbopuffer.com_
-15. [Introducing Cloudflare Basin: an open, serverless data platform, now generally available](<https://blog.cloudflare.com/cloudflare-basin/>) — _blog.cloudflare.com_
-16. [New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses](<https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html>) — _thehackernews.com_
-17. [A Realistic Code Execution Exploit Chain in OpenBao and Vault](<https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/>) — _control-plane.io_
-18. [PixelLeak: How AI Agents Exposed Developer Screenshots from Leading Tech Companies](<https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies>) — _glow.io_
-19. [Edge Functions Move to Firecracker MicroVMs](<https://www.netlify.com/blog/edge-functions-firecracker-microvms/>) — _netlify.com_
-20. [Rate limits for private vulnerability reports](<https://github.blog/changelog/2026-10-01-rate-limits-for-private-vulnerability-reports>) — _github.blog_
-21. [Structured forms for private vulnerability reports](<https://github.blog/changelog/2026-10-01-structured-forms-for-private-vulnerability-reports>) — _github.blog_
-22. [Support for modern cryptographic algorithms in Workers](<https://blog.cloudflare.com/workers-ml-kem-ml-dsa-support/>) — _blog.cloudflare.com_
-23. [GitHub Actions: macOS 14 runner image retirement](<https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement>) — _github.blog_
+4. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+5. [Broadcom Starts Amassing $60 Billion to Fund Chips for Anthropic](<https://www.bloomberg.com/news/articles/2026-10-02/broadcom-starts-amassing-60-billion-to-fund-chips-for-anthropic?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MDkyMjQzOCwiZXhwIjoxNzkxNTI3MjM4LCJhcnRpY2xlSWQiOiJUTTkwWUVLSzNOWUQwMCIsImJjb25uZWN0SWQiOiJFQTExNDNDNTM4NEE0RUY5QTg5RjJEN0IxMTg2MzcwOSJ9.ou2DaP8DyjOKlNzvvF7qkpSHPum6rWuWYguG_k-KLHo>) — _bloomberg.com_
+6. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+7. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+8. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+9. [Your agent session transcripts are precious, keep them](<https://quesma.com/blog/agent-session-transcripts-are-precious/>) — _quesma.com_
+10. [Faster String Aggregations with Dimension Tables](<https://duckdb.org/2026/10/02/dimension-tables.html>) — _duckdb.org_
+11. [Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake](<https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/>) — _aws.amazon.com_
+12. [Demoting i686 Windows targets to std-only](<https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/>) — _blog.rust-lang.org_
+13. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
 
 
 ## Archive récente
