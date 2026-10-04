@@ -8,41 +8,42 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-03
-<sub>updated 4 October 2026 at 01:00</sub>
+### Latest digest — 2026-10-04
+<sub>updated 4 October 2026 at 13:00</sub>
 
-## Models and AI Tooling
-- OpenAI introduced the Sol model, priced at $2/$10 per million input/output tokens and positioned as a fast, cost-effective option that outperforms previous iterations on benchmarks like DeepSWE and AutomationBench <sup>[1](<https://www.latent.space/p/ainews-not-much-happened-today-cee>)</sup>.
-- Google released version 1.0 of the Agent Development Kit (ADK) for Kotlin, bringing full feature parity, zero-reflection type-safe function calling, and Android-first extensions utilizing LiteRT-LM and AppSearch <sup>[2](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
-- The Google Antigravity SDK added support for local AI models like Gemma 4 through LiteRT, enabling hybrid orchestration where cloud models handle planning and local models manage code auditing <sup>[3](<https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/>)</sup>.
+## AI Models and Training
+- Google successfully reproduced Ai2's Olmo 3 7B language model from scratch on Cloud TPUs using MaxText and JAX/XLA, achieving up to 57.4% Model Flops Utilization while surviving mid-run cluster resizes <sup>[1](<https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/>)</sup>.
+- The MaxText case study highlighted the critical need for held-out validation after catching a silent data loader memorization bug that artificially depressed training loss during reproduction <sup>[1](<https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/>)</sup>.
+- Developers implemented Sparse VideoGen (SVG) and optimized the Splash Attention kernel on TPUs to achieve a 1.69x speedup for 1440p video generation by routing attention heads to sparse masks and optimizing memory layouts <sup>[2](<https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/>)</sup>.
 
-## Agents and RAG
-- Google introduced agentic post-training automation via `autofinetune`, using autonomous research loops with Tunix, Gemma, and Cloud TPUs to iteratively run fine-tuning and reinforcement learning experiments <sup>[4](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
-- Google Cloud API Gateway now functions as a native remote Model Context Protocol (MCP) server, allowing developers to convert REST APIs into agent tools by adding OpenAPI annotations <sup>[5](<https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/>)</sup>.
-- The Gemini Enterprise Agent Platform rolled out Agent Anomaly Detection in private preview, using out-of-band OpenTelemetry trace analysis to catch behavioral risks and OWASP Agentic Top 10 violations without runtime latency <sup>[6](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
+## LLM Tooling and MLOps
+- Google introduced **autofinetune**, an autonomous research loop for LLM post-training (Supervised Fine-Tuning and GRPO reinforcement learning) using Tunix, Gemma, and TPUs orchestrated with Antigravity CLI <sup>[3](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>)</sup>.
+- Google released version 1.0 of the Agent Development Kit (ADK) for Kotlin, built on Kotlin Multiplatform with KSP for zero-reflection function calling and Android extensions supporting LiteRT-LM and Firebase AI <sup>[4](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>)</sup>.
+- The Google Antigravity SDK added support for local AI models via LiteRT and drop-in compatibility with Ollama and vLLM for privacy-first workflows <sup>[5](<https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/>)</sup>.
+- Google Cloud API Gateway now functions as a native remote Model Context Protocol (MCP) server, allowing developers to convert REST APIs into agent-ready tools via OpenAPI annotations <sup>[6](<https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/>)</sup>.
+- Google partnered with Speakeasy to open-source their OpenAPI code generation suite under the AGPLv3 license for deterministic multi-language client SDK and documentation MCP server generation <sup>[7](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
 
-## Infrastructure, MLOps, and Cloud
-- Google reproduced Ai2's Olmo 3 7B pre-training from scratch in MaxText on Cloud TPUs using JAX/XLA, hitting up to 57.4% Model Flops Utilization (MFU) while surviving cluster resizes and cross-generation TPU shifts <sup>[7](<https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/>)</sup>.
-- Developers optimized Splash Attention for video diffusion on TPUs by routing attention heads to sparse masks and permuting token memory layouts, achieving up to a 1.69x speedup for 1440p video generation <sup>[8](<https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/>)</sup>.
-- Google AI subscriptions now include premium Google Colab benefits, unlocking priority access to faster accelerators, uninterrupted background execution, and higher-tier GPUs <sup>[9](<https://developers.googleblog.com/colab-is-now-part-of-your-google-ai-plan/>)</sup>.
+## RAG, Agents, and Security
+- Industry observers highlighted an urgent requirement for default hard budget caps on pay-by-usage APIs and AI agent services to prevent runaway resource consumption overnight <sup>[8](<https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/>)</sup>.
+- Google introduced platform-level runtime governance features for the Gemini Enterprise Agent Platform, including Model Armor, Semantic Governance Policies, and Agent Anomaly Detection <sup>[9](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>)</sup>.
+- Agent Anomaly Detection leverages OpenTelemetry traces, statistical scanning, and deep reasoning to catch behavioral risks based on the OWASP Agentic Top 10 without adding live request latency <sup>[10](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>)</sup>.
 
-## Software Engineering and DevOps
-- GitHub completed the staged rollout of its stateless GitHub App installation token format (`ghs_APPID_JWT`), making token issuance faster and improving API reliability while setting a deprecation date for the temporary validation header <sup>[10](<https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out>)</sup>.
-- Google partnered with Speakeasy to open-source their OpenAPI code generation suite under AGPLv3, providing deterministic multi-language SDK generators, strict typing, SSE streaming, and documentation MCP servers <sup>[11](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>)</sup>.
+## Developer Tools and Infrastructure
+- Google AI subscribers now receive premium Colab benefits, including priority accelerator access, background execution, and integration with developer tools like Antigravity and AI Studio <sup>[11](<https://developers.googleblog.com/colab-is-now-part-of-your-google-ai-plan/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] not much happened today](<https://www.latent.space/p/ainews-not-much-happened-today-cee>) — _latent.space_
-2. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
-3. [Introducing Support for Local AI Models in the Antigravity SDK](<https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/>) — _google ai_
-4. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
-5. [Turn your REST APIs into MCP tools with Google Cloud API Gateway](<https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/>) — _google ai_
-6. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
-7. [Reproducing Olmo 3 7B Pre-training in MaxText: case study of large scale training on TPUs](<https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/>) — _google ai_
-8. [Accelerating Spatio-Temporal Attention for Video Diffusion on TPUs](<https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/>) — _google ai_
-9. [Colab is now part of your Google AI plan](<https://developers.googleblog.com/colab-is-now-part-of-your-google-ai-plan/>) — _google ai_
-10. [Stateless GitHub App installation tokens rolled out](<https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out>) — _github.blog_
-11. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
+1. [Reproducing Olmo 3 7B Pre-training in MaxText: case study of large scale training on TPUs](<https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/>) — _google ai_
+2. [Accelerating Spatio-Temporal Attention for Video Diffusion on TPUs](<https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/>) — _google ai_
+3. [Autonomous LLM post-training with Tunix on TPUs](<https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/>) — _google ai_
+4. [Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond](<https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/>) — _google ai_
+5. [Introducing Support for Local AI Models in the Antigravity SDK](<https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/>) — _google ai_
+6. [Turn your REST APIs into MCP tools with Google Cloud API Gateway](<https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/>) — _google ai_
+7. [Why client SDK generation belongs in the open](<https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/>) — _google ai_
+8. [We're going to need default hard budget caps on pretty much everything](<https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/>) — _simonwillison.net_
+9. [Build zero-trust AI agents that judge intent, not just syntax](<https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/>) — _google ai_
+10. [Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform](<https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/>) — _google ai_
+11. [Colab is now part of your Google AI plan](<https://developers.googleblog.com/colab-is-now-part-of-your-google-ai-plan/>) — _google ai_
 
 
 ## Recent archive
