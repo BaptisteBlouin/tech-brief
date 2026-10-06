@@ -8,54 +8,41 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-05
-<sub>updated 6 October 2026 at 01:00</sub>
+### Latest digest — 2026-10-06
+<sub>updated 6 October 2026 at 13:00</sub>
 
-## AI Models, Agents, and Tooling
-- **Open-Source Decision Models:** Cloudflare released Clef and Clef-flash, open-source System 1 decision models designed to route support tickets, classify websites, or control agent fallback loops by converting text or images directly into choices and probabilities <sup>[1](<https://blog.cloudflare.com/clef-decision-models/>)</sup>.
-- **Agent Context Engineering:** Industry discussions emphasize that context packages for AI coding agents require the same versioning, linting, and testing rigor as application code to prevent hallucinations and silent architectural degradation <sup>[2](<https://www.infoq.com/presentations/context-as-code-devops-agents/>)</sup>, with developers increasingly relying on structured Markdown workspaces rather than noisy vector-search memory systems <sup>[3](<https://liao.gg/blog/agents-dont-need-memory>)</sup>.
-- **Inference Reliability Gaps and Scaling:** Production model calls reveal that delivered reasoning budgets can vary sharply under the same model name, meaning users often receive far less sequential reasoning than benchmarks suggest <sup>[4](<https://x.com/Lon/status/2101034933284417614>)</sup>, while swarm scaling strategies demonstrate that running multi-agent tasks in parallel reduces wall-clock time despite consuming more total tokens <sup>[5](<https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy/>)</sup>.
-- **Cost-Effective Agent Testing and Security:** The open-source `e2e` framework improves AI testing efficiency for web and mobile apps by caching and replaying previous agent actions to minimize redundant model calls <sup>[6](<https://tester.army/e2e>), [7](<https://github.com/tester-army/e2e>)</sup>. Meanwhile, specialized safety fine-tunes like Apex Flash-1 offer low-cost, self-hosted security worker models for vulnerability scanning <sup>[8](<https://www.cantina.security/apex-flash>)</sup>, while configuration flaws such as DeepSeek-Reasonix CVE-2026-102437 highlight the risk of coding agents executing malicious commands via poisoned Git setups <sup>[9](<https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/>)</sup>.
-- **Enterprise Agent Platforms:** Platforms like Cohere North 2 <sup>[10](<https://cohere.com/blog/introducing-north-2>)</sup>, OpenAI's internal data agent accessing 70,000 datasets <sup>[11](<https://www.youtube.com/watch?v=82zo4WMcjfU>)</sup>, and custom agent builders on the Claude Agent SDK <sup>[12](<https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk>)</sup> underscore that reliable production agents depend heavily on rich structural context, rigorous governance, and continuous evaluation rather than raw model scale alone.
+## AI Models and LLM Tooling
+- Reflection has launched the Reflection Beam (501B-A23B), a new open model trained from scratch in the United States <sup>[1](<https://www.latent.space/p/ainews-reflection-beam-501b-a23b>)</sup>. While leading SOTA models remain ahead, this release provides a functional neolab option for the open-weight ecosystem <sup>[1](<https://www.latent.space/p/ainews-reflection-beam-501b-a23b>)</sup>.
+- The Technology Innovation Institute (TII) has released Falcon-Emirati, an LLM specifically trained to master regional Arabic dialects, cultural nuances, and context <sup>[2](<https://huggingface.co/blog/tiiuae/falcon-emirati>)</sup>.
+- AI inference is positioned to surpass the database market, making it the most critical market segment in modern software <sup>[3](<https://tomtunguz.com/inference-is-the-most-important-market-in-software>)</sup>.
 
-## Data Engineering, Storage, and Analytics
-- **Direct Lakehouse Querying:** Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet tables in Amazon S3 via an embedded DuckDB engine, enabling predicate pushdown and standard PostgreSQL syntax without separate ETL pipelines <sup>[13](<https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/>)</sup>.
-- **Apache Iceberg 1.12.0 Release:** Apache Iceberg 1.12.0 expands production support for v3 features including variant types, row lineage, deletion vectors, and REST catalog operations, while removing deprecated APIs <sup>[14](<https://www.dremio.com/blog/apache-iceberg-1-12-0-whats-new-breaking-changes-and-upgrade-guide>)</sup>.
-- **Distributed Query Engines:** Datadog open-sourced Distributed DataFusion, extending Apache DataFusion to distribute single analytical queries across multiple machines to accelerate heavy workloads while keeping lightweight tasks local <sup>[15](<https://www.datadoghq.com/blog/engineering/distributed-datafusion>)</sup>.
-- **Semantic Interoperability and State Management:** Microsoft and Google backed Apache Ossie, an open JSON/YAML semantic-model interchange specification designed to eliminate metric drift and redundant definitions across diverse BI and data platforms <sup>[16](<https://www.infoworld.com/article/4229785/microsoft-google-back-apache-ossie-to-make-enterprise-data-and-ai-platforms-more-interoperable-2.html>)</sup>. Additionally, dbt State has reached general availability to track upstream changes and prevent redundant model rebuilds <sup>[17](<https://www.getdbt.com/blog/dbt-state-stop-rebuilding>)</sup>.
-- **ClickHouse at LinkedIn:** LinkedIn migrated three separate metric metadata systems into a single ClickHouse index, handling over 150,000 queries per minute with an average latency of 68 milliseconds and drastically reduced memory footprints <sup>[18](<https://clickhouse.com/blog/linkedin-observability-at-scale>)</sup>.
+## Agents and Cloud Architecture
+- Anthropic has updated Cowork to run both model inference and its execution sandbox VM entirely in the cloud <sup>[4](<https://simonwillison.net/2026/Oct/5/felix-rieseberg/>)</sup>. Each session receives an isolated sandbox, removing local resource overhead and allowing desktop apps to handle file access tool calls on demand <sup>[4](<https://simonwillison.net/2026/Oct/5/felix-rieseberg/>)</sup>.
 
-## DevOps, Infrastructure, and Software Engineering
-- **Pipeline Topology Optimization:** A production AWS Bedrock guardrail pipeline reduced agent action latency from nearly 14 seconds to under 2 seconds simply by parallelizing independent safety layers and short-circuiting cheap rejection rules early <sup>[19](<https://techstrong.ai/contributed-content/why-your-ai-agent-pipeline-is-slow-and-how-to-fix-it-without-changing-models/>)</sup>.
-- **Kafka Scalability Overhauls:** LinkedIn addressed extreme-scale limitations in Kafka's partition model by developing Northguard to decouple ordering, replication, and placement, hiding the backend migration from client applications using a compatibility layer <sup>[20](<https://softwaremill.com/linkedin-northguard-xinfra-kafka>)</sup>.
-- **Database Query Optimization:** DuckDB case studies highlight that replacing low-cardinality string columns with small integer surrogate keys via dimension tables significantly reduces memory pressure and grouping costs during large analytical aggregations <sup>[21](<https://duckdb.org/2026/10/02/dimension-tables.html>)</sup>.
-- **Kubernetes Node Density and Security:** Kubernetes v1.34 general availability for node swap backed by NVMe SSDs allows clusters to page out dormant AI agent and browser memory to achieve up to 3× pod density gains <sup>[22](<https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/>)</sup>. Conversely, security researchers warned that public GitHub repositories continue to leak hundreds of thousands of active, unrevoked production credentials <sup>[23](<https://trufflesecurity.com/blog/github-repos-exposed-543699-credentials-nobody-revoked-them>)</sup>.
+## DevOps, Security, and Compliance
+- GitHub security overview coverage views now support tracking AI Scan for pull requests enablement status across organizations and enterprises, including filter flags and CSV export options <sup>[5](<https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview>)</sup>.
+- GitHub secret scanning has expanded its detectors to automatically catch credential types for Lovable Labs, Pydantic Services (Logfire tokens and Pydantic AI gateway keys), and Supabase <sup>[6](<https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more>)</sup>.
+- Apple has patched a high-severity macOS vulnerability (CVE-2026-65400) in its screen sharing mechanism that attackers exploited to gain root access and deploy crypto miners <sup>[7](<https://stratechery.com/2026/apple-and-a-hackers-future/>)</sup>.
+
+## Developer Tools and Software Engineering
+- Google Docs and Drive now natively support rendering, previewing, editing, and collaborating on Markdown (`.md`) files for all Workspace and personal accounts <sup>[8](<https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html>)</sup>.
+- Apple has opened App Store submissions for apps and games optimized for the iPhone Duo, supported by Xcode 27.1 Release Candidate 1 <sup>[9](<https://9to5mac.com/2026/10/05/apple-invites-developers-to-submit-iphone-duo-ready-apps-to-the-app-store/>)</sup>.
+- Ephemeral testing is highlighted as a form of integration testing where a base application layer is tested by building transient software layers on top of it, throwing away the upper layers once verification finishes <sup>[10](<https://lemire.me/blog/2026/10/05/ephemeral-testing/>)</sup>.
+- Plain text continues to be favored as foundational computing plumbing due to its portability, scriptability, searchability, and exceptional resistance to obsolescence <sup>[11](<https://deadparrotbbs.com/why-plain-text-is-still-one-of-the-best-technologies-we-have/>)</sup>.
 
 ## Sources
 
-1. [Introducing Clef: our open-source decision models, and new RL fine-tuning platform](<https://blog.cloudflare.com/clef-decision-models/>) — _blog.cloudflare.com_
-2. [Context Is the New Code (50 minute video)](<https://www.infoq.com/presentations/context-as-code-devops-agents/>) — _infoq.com_
-3. [Agents Don't Need Memory. They Need Documentation.](<https://liao.gg/blog/agents-dont-need-memory>) — _liao.gg_
-4. [The Inference Gap](<https://x.com/Lon/status/2101034933284417614>) — _x.com_
-5. [Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy](<https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy/>) — _jack-clark.net_
-6. [e2e (Website)](<https://tester.army/e2e>) — _tester.army_
-7. [e2e](<https://github.com/tester-army/e2e>) — _github.com_
-8. [Apex Flash-1](<https://www.cantina.security/apex-flash>) — _cantina.security_
-9. [DeepSeek-Reasonix: How a poisoned config can hijack an AI coding agent](<https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/>) — _about.gitlab.com_
-10. [North 2: Enterprise AI without compromises](<https://cohere.com/blog/introducing-north-2>) — _cohere_
-11. [Diving Through Data at OpenAI: How a Data Agent Navigates 70,000 Datasets (27 minute video)](<https://www.youtube.com/watch?v=82zo4WMcjfU>) — _youtube.com_
-12. [How Cresta turned CX expertise into an agent builder on the Claude Agent SDK](<https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk>) — _claude_
-13. [Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake](<https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/>) — _aws.amazon.com_
-14. [Apache Iceberg 1.12.0: What's New, Breaking Changes, and Upgrade Guide](<https://www.dremio.com/blog/apache-iceberg-1-12-0-whats-new-breaking-changes-and-upgrade-guide>) — _dremio.com_
-15. [How we extended Apache DataFusion to execute one query across many machines](<https://www.datadoghq.com/blog/engineering/distributed-datafusion>) — _datadoghq.com_
-16. [Microsoft, Google back Apache Ossie to make enterprise data and AI platforms more interoperable](<https://www.infoworld.com/article/4229785/microsoft-google-back-apache-ossie-to-make-enterprise-data-and-ai-platforms-more-interoperable-2.html>) — _infoworld.com_
-17. [With dbt State, stop rebuilding what didn't change](<https://www.getdbt.com/blog/dbt-state-stop-rebuilding>) — _dbt.com_
-18. [How LinkedIn extended ClickHouse from distributed tracing to metric discovery and analytics](<https://clickhouse.com/blog/linkedin-observability-at-scale>) — _clickhouse.com_
-19. [Why Your AI Agent Pipeline Is Slow (And How to Fix It Without Changing Models)](<https://techstrong.ai/contributed-content/why-your-ai-agent-pipeline-is-slow-and-how-to-fix-it-without-changing-models/>) — _techstrong.ai_
-20. [LinkedIn Built Kafka. What Did It Change When Kafka Was No Longer Enough?](<https://softwaremill.com/linkedin-northguard-xinfra-kafka>) — _softwaremill.com_
-21. [Faster String Aggregations with Dimension Tables](<https://duckdb.org/2026/10/02/dimension-tables.html>) — _duckdb.org_
-22. [Scaling Kubernetes Workloads with Node Swap](<https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/>) — _kubernetes.io_
-23. [GitHub Repos Exposed 543,699 Credentials. Nobody Revoked Them](<https://trufflesecurity.com/blog/github-repos-exposed-543699-credentials-nobody-revoked-them>) — _trufflesecurity.com_
+1. [\[AINews\] Reflection Beam - 501B-A23B American Open Model](<https://www.latent.space/p/ainews-reflection-beam-501b-a23b>) — _latent.space_
+2. [Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance](<https://huggingface.co/blog/tiiuae/falcon-emirati>) — _huggingface.co_
+3. [Inference Is the Most Important Market in Software](<https://tomtunguz.com/inference-is-the-most-important-market-in-software>) — _tomtunguz.com_
+4. [Quoting Felix Rieseberg](<https://simonwillison.net/2026/Oct/5/felix-rieseberg/>) — _simonwillison.net_
+5. [Code scanning AI Scan enablement status in security overview](<https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview>) — _github.blog_
+6. [Secret scanning adds detectors for Lovable, Supabase, and more](<https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more>) — _github.blog_
+7. [Apple and a Hacker's Future](<https://stratechery.com/2026/apple-and-a-hackers-future/>) — _stratechery.com_
+8. [Preview, edit, and collaborate on Markdown (.md) files natively across Drive and Docs](<https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html>) — _workspaceupdates.googleblog.com_
+9. [Apple invites developers to submit iPhone Duo-ready apps to the App Store](<https://9to5mac.com/2026/10/05/apple-invites-developers-to-submit-iphone-duo-ready-apps-to-the-app-store/>) — _9to5mac.com_
+10. [Ephemeral testing](<https://lemire.me/blog/2026/10/05/ephemeral-testing/>) — _lemire.me_
+11. [Why Plain Text Is Still One of the Best Technologies We Have](<https://deadparrotbbs.com/why-plain-text-is-still-one-of-the-best-technologies-we-have/>) — _deadparrotbbs.com_
 
 
 ## Recent archive
