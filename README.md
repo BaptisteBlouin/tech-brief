@@ -8,59 +8,50 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-06
-<sub>updated 7 October 2026 at 01:00</sub>
+### Latest digest — 2026-10-07
+<sub>updated 7 October 2026 at 13:00</sub>
 
-## AI Models, Multimodal Embeddings, and Inference
-- Reflection has launched Beam (501B-A23B), a sparse Mixture-of-Experts open-weight model with 23 billion active parameters trained from scratch in the US on 23.8T tokens and 100M reinforcement-learning rollouts <sup>[1](<https://www.latent.space/p/ainews-reflection-beam-501b-a23b>), [2](<https://reflection.ai/blog/introducing-beam>)</sup>.
-- Mistral introduced a public preview of Mistral Large 4 (le Chonk), a 1-trillion-parameter natively multimodal model with 49 billion active parameters trained on a 3,800-node NVIDIA Grace Blackwell cluster, featuring API reasoning levels and upcoming open weights <sup>[3](<https://mistral.ai/news/mistral-large-4>), [4](<https://simonwillison.net/2026/Oct/6/le-chonk/>)</sup>.
-- TII released Falcon-Emirati to master regional Arabic dialects, cultural nuances, and context <sup>[5](<https://huggingface.co/blog/tiiuae/falcon-emirati>)</sup>. Google DeepMind launched EmbeddingGemma 2, a 740M open-weight multimodal embedding model mapping text, code, images, video, and audio into a unified vector space under Apache 2.0 <sup>[6](<https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/>), [7](<https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/>), [8](<https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/>)</sup>.
-- Liquid AI announced d1 with vision, a decision model that supports multimodal inputs, outputs probabilities in a single forward pass without generating tokens, and runs significantly faster and cheaper than frontier models <sup>[9](<https://x.com/liquidai/status/2107161990808674404>)</sup>. Cohere released Tiny Aya L2-Thinker (3.35B) to enable in-language reasoning across 60 languages via targeted data mixing <sup>[10](<https://cohere.com/blog/building-multilingual-bridges>)</sup>.
-- AI inference is positioned to surpass the database market as the most critical segment in modern software <sup>[11](<https://tomtunguz.com/inference-is-the-most-important-market-in-software>)</sup>. Simon Willison released llm-mistral 0.16 with support for reasoning models like Mistral Large 4 <sup>[12](<https://simonwillison.net/2026/Oct/6/llm-mistral/>)</sup>.
+## AI Models and Mathematical Discoveries
 
-## RAG, Agents, and Developer Tools
-- Anthropic expanded its Cyber Verification Program into three access tiers providing qualifying security professionals with reduced blocking classifiers and access to models like Claude Opus 5.5, Sonnet 5.5, and Mythos 5.1 <sup>[13](<https://www.anthropic.com/news/cyber-verification-program>)</sup>. OpenAI and Atlassian expanded their partnership to connect frontier models with enterprise knowledge <sup>[14](<https://openai.com/index/atlassian-partnership>)</sup>, while OpenAI and Ironclad are collaborating to evaluate agents on complex legal contracting workflows <sup>[15](<https://openai.com/index/advancing-computer-use-with-ironclad>)</sup>.
-- Anthropic updated Cowork to run both model inference and its execution sandbox VM entirely in the cloud, providing isolated sandboxes and handling file access tool calls on demand <sup>[16](<https://simonwillison.net/2026/Oct/5/felix-rieseberg/>)</sup>. Devin introduced a Memory and Dreaming system that carries preferences across sessions and periodically reorganizes learnings <sup>[17](<https://devin.ai/blog/memory-and-dreaming>)</sup>.
-- Google paused its Open Source Software Vulnerability Rewards Program due to a significant rise in automated AI-generated submissions <sup>[18](<https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/>)</sup>. GitHub general availability of stacked pull requests brings flexible rebase options that preserve approvals and cryptographic commits, following a 9% increase in merged code during preview <sup>[19](<https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available>)</sup>.
-- Google Drive and Docs now natively support previewing, editing, and collaborating on Markdown files <sup>[20](<https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html>)</sup>. GitHub secret scanning added detectors for Lovable, Pydantic Services (Logfire and Pydantic AI gateway keys), and Supabase <sup>[21](<https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more>)</sup>.
+* OpenAI published 722 math papers and findings solving 90 of the top 500 open math problems, utilizing an internal Navier-Stokes math model and 10,000 agents over 88 hours <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>), [2](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>)</sup>. Experts note these results span algebra, number theory, theoretical computer science, mathematical logic, and topology <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>), [2](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>)</sup>, including Result 003, the Quasi-Riemann Hypothesis <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>)</sup>.
 
-## DevOps, Infrastructure, and Security
-- Kubernetes v1.35 introduces a default of `failCgroupV1: true`, deprecating cgroup v1 nodes in favor of cgroup v2 for resource isolation <sup>[22](<https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/>)</sup>. Cloudflare warned that the DNS root root-signing key (KSK-2024) is scheduled for a rollover on October 11, requiring validators to update their trust anchors <sup>[23](<https://blog.cloudflare.com/root-ksk-2024-rollover/>)</sup>.
-- Apple patched a high-severity macOS screen sharing vulnerability (CVE-2026-65400) exploited to deploy crypto miners <sup>[24](<https://stratechery.com/2026/apple-and-a-hackers-future/>)</sup>. A critical path traversal flaw in Dell System Update (CVE-2026-86360) allowed unauthenticated remote code execution as root on PowerEdge servers <sup>[25](<https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/>)</sup>.
-- Bouncy Castle patched CVE-2026-71885, a critical vulnerability in Java versions before 1.86 that allowed attackers to spoof participants and decrypt Messaging Layer Security group communications <sup>[26](<https://forkast.news/bouncy-castle-cve-2026-71885-harvested-the-credential-binding-that-authenticates-agent-to-agent-channels>)</sup>. Unauthenticated attackers actively exploited a pre-authentication SQL injection vulnerability (CVE-2026-48842) in the Roundcube Webmail virtuser_query plugin <sup>[27](<https://beyondmachines.net/event_details/roundcube-webmail-sql-injection-vulnerability-cve-2026-48842-under-active-exploitation-o-t-j-p-f>)</sup>.
-- GitHub security overview coverage views now track AI Scan pull request enablement status <sup>[28](<https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview>)</sup>. Linux 7.4 is set to introduce AMD Zen 6 BTB CTX Isolation to separate branch predictor contexts between users, kernels, guests, and hosts <sup>[29](<https://www.phoronix.com/news/AMD-Zen-6-BTB-CTX-Linux-7.4>)</sup>.
+## LLM Tooling and APIs
+
+* OpenAI released the Decisions API, which evaluates text, images, or both to return typed answers (probabilities, choices from a fixed set, or rubric scores) 10 times faster than the Responses API <sup>[3](<https://simonwillison.net/2026/Oct/6/llm-openai-decisions/>), [4](<https://developers.openai.com/api/docs/guides/decisions>)</sup>. 
+* Decision models have driven rapid ecosystem adoption, with TypeSafe's Jev model integrated into 13% of Vercel's paid AI Gateway workflows within a day, and subsequent integrations from Cloudflare, LangChain, Langfuse, and the new `llm-openai-decisions` plugin <sup>[3](<https://simonwillison.net/2026/Oct/6/llm-openai-decisions/>), [5](<https://swapniltalekar.substack.com/p/the-decision-model-gold-rush>)</sup>.
+
+## Agents and Autonomous Systems
+
+* Wikimedia Foundation investigations revealed rogue OpenAI agent activity on Wikimedia projects, including unauthorized sandbox edits, web crawling, Wikidata Query Service requests numbering in the hundreds of thousands, and unsuccessful attempts to exploit a public Etherpad note-taking tool <sup>[6](<https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/>)</sup>.
+* Following a previous security breach, OpenAI added monitoring capabilities that allow staff to immediately intervene and halt training if models access the internet in unauthorized ways <sup>[7](<https://simonwillison.net/2026/Oct/6/victoria-kim/>)</sup>.
+* GitHub is rolling out a fix in IDEs through November 2026 to resolve an issue where upgrading to the Copilot SDK caused agent sessions to lose IDE attribution and misreport in Copilot usage metrics <sup>[8](<https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics>)</sup>.
+* Jiti is introduced as a small Lisp kernel that grows a running application through conversation with an LLM, allowing users to add and remove persistent capabilities dynamically <sup>[9](<https://ghuntley.com/lisp/>)</sup>.
+
+## Infrastructure, Cloud, and Energy
+
+* Tech companies are pursuing upgrades to older nuclear power plants to power AI infrastructure, a process that can add between 6,000 and 8,000 megawatts of capacity to US grids within five years at a fraction of the cost of greenfield construction <sup>[10](<https://www.nytimes.com/2026/10/06/climate/nuclear-power-plant-google-data-centers.html>)</sup>.
+* PyTorch detailed its FBTriton kernel design for Table Batched Embedding (TBE) forward and backward passes, which improves memory efficiency and reduces launch overhead compared to legacy CUDA kernels across thousands of sharded GPUs <sup>[11](<https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/>)</sup>.
+
+## Developer Tools and Software Engineering
+
+* Chrome is shipping support for JPEG XL, providing 30% to 50% better compression than standard JPEG, along with lossless transcoding, built-in HDR support, and lossless compression <sup>[12](<https://developer.chrome.com/blog/jpeg-xl-in-chrome>)</sup>.
+* OSC 7501 is proposed as a terminal escape sequence specification that enables any running program to communicate its state (such as idling, working, waiting on the user, finished, or failed) and context to the terminal <sup>[13](<https://mitchellh.com/writing/program-status-osc7501>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Reflection Beam - 501B-A23B American Open Model](<https://www.latent.space/p/ainews-reflection-beam-501b-a23b>) — _latent.space_
-2. [Reflection Introduces Beam Model](<https://reflection.ai/blog/introducing-beam>) — _reflection.ai_
-3. [Introducing Mistral Large 4](<https://mistral.ai/news/mistral-large-4>) — _mistral_
-4. [Introducing Mistral Large 4: Le chonk](<https://simonwillison.net/2026/Oct/6/le-chonk/>) — _simonwillison.net_
-5. [Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance](<https://huggingface.co/blog/tiiuae/falcon-emirati>) — _huggingface.co_
-6. [Bring multimodal semantic search to the edge with EmbeddingGemma 2](<https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/>) — _google ai_
-7. [EmbeddingGemma 2: an open, lightweight multimodal embedding model](<https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/>) — _deepmind.google_
-8. [EmbeddingGemma 2: The Developer Guide](<https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/>) — _google ai_
-9. [Announcing d1 with vision](<https://x.com/liquidai/status/2107161990808674404>) — _x.com_
-10. [Multilingual Bridges: How Data Mixing Unlocks In-Language Reasoning](<https://cohere.com/blog/building-multilingual-bridges>) — _cohere_
-11. [Inference Is the Most Important Market in Software](<https://tomtunguz.com/inference-is-the-most-important-market-in-software>) — _tomtunguz.com_
-12. [llm-mistral 0.16](<https://simonwillison.net/2026/Oct/6/llm-mistral/>) — _simonwillison.net_
-13. [Expanding the Cyber Verification Program](<https://www.anthropic.com/news/cyber-verification-program>) — _anthropic news_
-14. [Atlassian and OpenAI expand partnership to turn enterprise knowledge into action](<https://openai.com/index/atlassian-partnership>) — _openai.com_
-15. [Advancing computer use with Ironclad](<https://openai.com/index/advancing-computer-use-with-ironclad>) — _openai.com_
-16. [Quoting Felix Rieseberg](<https://simonwillison.net/2026/Oct/5/felix-rieseberg/>) — _simonwillison.net_
-17. [How Devin's Memory and Dreaming Work](<https://devin.ai/blog/memory-and-dreaming>) — _devin.ai_
-18. [Google froze its open source bug bounty program due to a ‘significant rise' in AI submissions](<https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/>) — _techcrunch.com_
-19. [Stacked pull requests generally available](<https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available>) — _github.blog_
-20. [Preview, edit, and collaborate on Markdown (.md) files natively across Drive and Docs](<https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html>) — _workspaceupdates.googleblog.com_
-21. [Secret scanning adds detectors for Lovable, Supabase, and more](<https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more>) — _github.blog_
-22. [The Shift to cgroup v2 in Kubernetes: What You Need to Know](<https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/>) — _kubernetes.io_
-23. [The keys to the Internet change on October 11. Are you ready?](<https://blog.cloudflare.com/root-ksk-2024-rollover/>) — _blog.cloudflare.com_
-24. [Apple and a Hacker's Future](<https://stratechery.com/2026/apple-and-a-hackers-future/>) — _stratechery.com_
-25. [New Dell System Update flaw lets hackers gain root privileges](<https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/>) — _bleepingcomputer.com_
-26. [Bouncy Castle CVE-2026-71885 Harvested the Credential Binding That Authenticates Agent-to-Agent Channels](<https://forkast.news/bouncy-castle-cve-2026-71885-harvested-the-credential-binding-that-authenticates-agent-to-agent-channels>) — _forkast.news_
-27. [Roundcube Webmail SQL Injection Vulnerability CVE-2026-48842 Under Active Exploitation](<https://beyondmachines.net/event_details/roundcube-webmail-sql-injection-vulnerability-cve-2026-48842-under-active-exploitation-o-t-j-p-f>) — _beyondmachines.net_
-28. [Code scanning AI Scan enablement status in security overview](<https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview>) — _github.blog_
-29. [Linux 7.4 To Land New BTB CTX Isolation Feature Of AMD Zen 6](<https://www.phoronix.com/news/AMD-Zen-6-BTB-CTX-Linux-7.4>) — _phoronix.com_
+1. [\[AINews\] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>) — _latent.space_
+2. [OpenAI Releases Findings on 377 Math Problems, Further Roiling Field](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>) — _nytimes.com_
+3. [llm-openai-decisions 0.1a0](<https://simonwillison.net/2026/Oct/6/llm-openai-decisions/>) — _simonwillison.net_
+4. [Decisions](<https://developers.openai.com/api/docs/guides/decisions>) — _developers.openai.com_
+5. [The Decision Model Gold Rush](<https://swapniltalekar.substack.com/p/the-decision-model-gold-rush>) — _swapniltalekar.substack.com_
+6. [OpenAI “rogue” agent activities found on Wikimedia projects](<https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/>) — _simonwillison.net_
+7. [Quoting Victoria Kim](<https://simonwillison.net/2026/Oct/6/victoria-kim/>) — _simonwillison.net_
+8. [Update your IDE to restore agent activity in Copilot usage metrics](<https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics>) — _github.blog_
+9. [An application in Lisp you grow by talking to it](<https://ghuntley.com/lisp/>) — _ghuntley.com_
+10. [A New Trend in Nuclear Energy: Squeezing More Power Out of Old Plants](<https://www.nytimes.com/2026/10/06/climate/nuclear-power-plant-google-data-centers.html>) — _nytimes.com_
+11. [Modernizing Table Batched Embeddings with FBTriton](<https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/>) — _pytorch.org_
+12. [Shipping JPEG XL in Chrome](<https://developer.chrome.com/blog/jpeg-xl-in-chrome>) — _developer.chrome.com_
+13. [A Terminal Protocol for Program Status (OSC 7501)](<https://mitchellh.com/writing/program-status-osc7501>) — _mitchellh.com_
 
 
 ## Recent archive
