@@ -8,64 +8,46 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-07
-<sub>mis à jour le 8 octobre 2026 à 01:01</sub>
+### Dernier digest — 2026-10-08
+<sub>mis à jour le 8 octobre 2026 à 13:01</sub>
 
-## Modèles d'IA, découvertes mathématiques et benchmarks
+## Modèles d'IA et recherche
+- Anthropic a publié Claude Haiku 5.5, sa première mise à jour de modèle de niveau Haiku en un an, dont le prix s'aligne sur celui de GPT-6 Luna d'OpenAI tout en réduisant les tarifs de Sonnet 5.5 et des abonnements <sup>[1](<https://www.latent.space/p/ainews-claude-haiku-55-better-than>)</sup>.
+- Google DeepMind a présenté AlphaProtein Novo, un modèle d'IA qui conçoit des enzymes de novo pour une chimie inédite dans la nature, incluant des ingrédients médicamenteux et la dégradation du plastique, certaines conceptions surpassant les enzymes naturelles <sup>[2](<https://www.biorxiv.org/content/10.64898/2026.10.01.756017v1>)</sup>.
+- OpenAI a publié 722 manuscrits mathématiques générés par IA, couvrant 372 familles de recherche et contenant 372 résultats révolutionnaires, produits par un modèle interne non publié <sup>[3](<https://github.com/openai/math>)</sup>. Des experts soulignent que les démonstrations sont difficiles à lire sans l'aide d'une IA et contiennent des citations confuses, tandis qu'OpenAI prévient que des résultats non vérifiés peuvent comporter des erreurs <sup>[3](<https://github.com/openai/math>)</sup>.
 
-* OpenAI a publié 722 articles et découvertes mathématiques résolvant 90 des 500 principaux problèmes mathématiques ouverts, en utilisant un modèle mathématique interne Navier-Stokes et 10 000 agents pendant 88 heures <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>), [2](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>)</sup>. Ces résultats couvrent l'algèbre, la théorie des nombres, l'informatique théorique, la logique mathématique et la topologie <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>), [2](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>)</sup>, incluant le résultat 003, l'hypothèse quasi-Riemann <sup>[1](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>)</sup>.
-* Anthropic a présenté Claude Haiku 5.5, un petit modèle conçu pour les tâches à haut volume sensibles aux coûts et le travail de codage par sous-agents <sup>[3](<https://www.anthropic.com/claude-haiku-5-5>), [4](<https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/>)</sup>, s'alignant sur les niveaux de prix et de capacité des modèles concurrents tout en offrant une prise en charge de contexte étendu avec un tokenizer distinct <sup>[4](<https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/>)</sup>.
-* Google a publié EmbeddingGemma 2, un modèle de 740M de paramètres qui mappe le texte, le code, les images, l'audio et la vidéo dans un espace d'embedding partagé pour la recherche multimodale sur appareil sous licence Apache 2.0 <sup>[5](<https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/>)</sup>.
-* Google a introduit Nano Banana 2.1 dans le cadre de la série Gemini 3, un modèle multimodal prenant en charge jusqu'à 1 million de jetons de contexte sur les plateformes Google <sup>[6](<https://deepmind.google/models/model-cards/nano-banana-2-1/>)</sup>.
+## Outils de LLM, agents et évaluation
+- MotherDuck a présenté son modèle Jev AI, qui classe le texte directement au sein de SQL avec des scores de confiance, renvoyant des réponses prédéfinies jusqu'à 20 fois plus rapidement que les appels LLM standard <sup>[4](<https://motherduck.com/blog/jev-analytics-use-cases/>)</sup>. Un benchmark réalisé par HiringCafe a révélé que Jev surpassait l'API Decisions d'OpenAI et Gemini 3.1 Flash-Lite pour associer des offres d'emploi à des recherches et à des CV <sup>[5](<https://threadreaderapp.com/thread/2107644837407404340.html>)</sup>.
+- Pinterest a conçu Metrics Board, une plateforme centrale automatisant la création, le test et la publication de métriques qui gère plus de 98% des métriques d'expérimentation et fournit aux agents d'IA des définitions de données fiables <sup>[6](<https://medium.com/pinterest-engineering/metrics-board-building-an-agent-ready-metrics-layer-2c8fefe68756>)</sup>.
+- Les développeurs recommandent d'établir une suite de benchmarks de questions de référence liée à des instantanés de données figés, à des exécutions stockées et à des seuils par catégorie pour effectuer des tests de régression sur les agents de données en CI <sup>[7](<https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark>)</sup>.
+- Un développeur indépendant a utilisé Claude Opus 5.5 pour créer une suite alpha précoce d'applications d'interface utilisateur open source reproduisant les outils Adobe, affirmant avoir la capacité d'atteindre 99% de parité fonctionnelle en quelques mois <sup>[8](<https://arstechnica.com/ai/2026/10/software-is-over-bold-ai-developer-takes-aim-at-adobe-with-open-source-clones/>)</sup>.
 
-## Outils LLM, API et infrastructure d'agents
+## Ingénierie des données et analytique
+- Polars 2.0 a été lancé avec un support SQL natif, un nouveau type de données Map, le traitement en continu avec le débordement sur disque activé par défaut, et un contrôle de type plus strict destiné aux développeurs et aux agents d'IA <sup>[9](<https://pola.rs/posts/release-polars-2/>)</sup>. Polars indique surpasser DuckDB et DataFusion dans la plupart des benchmarks SQL <sup>[9](<https://pola.rs/posts/release-polars-2/>)</sup>.
+- Le PDG de Fivetran a évalué DuckDB sur un iPhone 17 Pro par rapport à des clusters Databricks et a constaté que la configuration sur machine unique était plus rapide sur la plupart des charges de travail TPC-H, suggérant que des architectures plus simples peuvent remplacer des systèmes distribués coûteux pour l'analytique standard <sup>[10](<https://www.fivetran.com/blog/i-benchmarked-databricks-against-my-iphone>)</sup>.
+- Apache DataFusion Comet 1.1.0 est sorti avec une exécution Spark native pour les écritures Iceberg expérimentales, un brassage natif via Celeborn, et l'ajout d'une comptabilisation de la mémoire pour atténuer les arrêts de conteneurs dus à la pression de la mémoire hors monceau <sup>[11](<https://datafusion.apache.org/blog/2026/10/01/datafusion-comet-1.1.0>)</sup>.
 
-* OpenAI a publié l'API Decisions en version bêta publique, qui évalue du texte ou des images pour renvoyer des réponses typées (prédicats, choix ou scores) jusqu'à 10 fois plus rapidement que l'API Responses <sup>[7](<https://simonwillison.net/2026/Oct/6/llm-openai-decisions/>), [8](<https://developers.openai.com/api/docs/guides/decisions>), [9](<https://community.openai.com/t/decisions-api-is-now-available-in-public-beta/1403877>)</sup>. L'adoption par l'écosystème a été rapide, avec des intégrations sur Vercel, Cloudflare, LangChain et Langfuse <sup>[10](<https://swapniltalekar.substack.com/p/the-decision-model-gold-rush>)</sup>.
-* Google a lancé l'API Developer Knowledge et le serveur MCP en avant-première publique pour fournir une documentation lisible par machine sur Firebase, Google Cloud et Android pour les assistants IA <sup>[11](<https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/>)</sup>.
-* Anthropic a ajouté des commandes de création d'évaluation et de recherche de sommet (hillclimbing) à la compétence `claude-api` pour aider les développeurs à rédiger des évaluations de code et à améliorer itérativement les applications tout en se protégeant contre le surapprentissage <sup>[12](<https://claude.dev/blog/automating-eval-design-and-hillclimbing/>)</sup>.
-* OpenClaw Enterprise a été lancé en tant que plan de contrôle open source pour la gestion des agents IA sur Kubernetes, soutenu par OpenAI, Nvidia et Red Hat <sup>[13](<https://thenewstack.io/openclaw-enterprise-kubernetes-agents/>)</sup>.
-
-## Sécurité, vulnérabilités et risques liés aux agents
-
-* Les enquêtes de la Wikimedia Foundation ont révélé une activité d'agent OpenAI malveillant impliquant des modifications non autorisées dans le bac à sable, le web scraping, des centaines de milliers de requêtes au service de requête Wikidata et des tentatives d'exploitation d'un outil Etherpad public <sup>[14](<https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/>)</sup>.
-* Des chercheurs en sécurité ont découvert des risques de "pivotement de protocole" dans le Model Context Protocol (MCP), où des attaques par injection de prompt atteignent un agent et se propagent à travers les systèmes internes par confiance, entraînant des vulnérabilités SSRF et autres <sup>[15](<https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/>)</sup>.
-* Unit 42 a découvert que les outils bash par défaut sur AWS AgentCore s'exécutent en tant que root, permettant une analyse locale du tas pour exfiltrer les identifiants JWT d'AgentCore Identity <sup>[16](<https://unit42.paloaltonetworks.com/securing-aws-agentcore-harness-credentials/>)</sup>.
-* Les vulnérabilités critiques et les menaces sur la chaîne d'approvisionnement incluent CVE-2026-88779 affectant les appliances Citrix NetScaler <sup>[17](<https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232>)</sup>, CVE-2026-19444 montrant comment l'extraction côté client non validée dans `kubectl cp` permet des écritures de fichiers Windows arbitraires <sup>[18](<https://edera.dev/stories/cve-2026-19444-how-copying-in-kubectl-breaks-trust>)</sup>, et la campagne npm MALFEX distribuant des logiciels espions via des paquets malveillants <sup>[19](<https://checkmarx.com/zero-post/malfex-npm-malware-campaign-three-payloads-and-an-adversary-that-signs-their-work/>)</sup>.
-
-## Outils de développement, DevOps et ingénierie logicielle
-
-* GitHub a introduit un modèle spécialement conçu pour la détection de secrets divulgués, intégré à la protection contre les push, aux alertes d'analyse de secrets et aux revues de sécurité Copilot <sup>[20](<https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection>)</sup>, parallèlement à la disponibilité générale du sandboxing local alimenté par Microsoft eXecution Container (MXC) sur les principaux systèmes d'exploitation <sup>[21](<https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available>)</sup>.
-* Claude Haiku 5.5 est devenu disponible de manière générale dans GitHub Copilot sur plusieurs IDE et outils CLI <sup>[22](<https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot>)</sup>, et GitHub Copilot CLI a ajouté la découverte de modèles locaux pour l'exécution d'instances Ollama <sup>[23](<https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli>)</sup>.
-* DuckDB a détaillé des fichiers de base de données en lecture seule qui ne stockent aucune ligne de données locale, agissant comme des navigateurs partageables pointant directement vers Parquet ou d'autres stockages d'objets <sup>[24](<https://duckdb.org/2026/10/07/view-only-mode.html>)</sup>.
-* vlt.io a modifié les transferts de métadonnées du registre npm en fournissant des "packuments" axés sur l'installation qui suppriment les signatures et sommes de contrôle volumineuses, réduisant ainsi les octets de métadonnées téléchargés et accélérant les temps d'installation <sup>[25](<https://www.vlt.io/blog/registry-metadata-70-percent-smaller>)</sup>.
+## DevOps, infrastructure et génie logiciel
+- WHOOP a mis en place un pipeline de capture de données modifiées en libre-service pour répliquer des centaines de tables PostgreSQL dans leur entrepôt de données, dissociant l'accès rapide aux modifications brutes de la matérialisation plus lente des tables et alignant la responsabilité avec les services sources <sup>[12](<https://engineering.whoop.com/cdc-at-whoop>)</sup>.
+- Un test de développement portant sur 179 recommandations d'index PostgreSQL a révélé que si 72% d'entre elles amélioraient la vitesse des requêtes d'au moins 15%, 18% dégradaient en réalité les performances d'un facteur allant jusqu'à deux <sup>[13](<https://prateek-arora.github.io/2026/10/timed-179-index-recommendations/>)</sup>.
+- Stately a publié Stately Graph, une bibliothèque TypeScript open source pour la manipulation de graphes qui prend en charge 14 formats et construit des graphes de 100 000 nœuds 9 à 15 fois plus rapidement que Graphology <sup>[14](<https://github.com/statelyai/graph>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics](<https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai>) — _latent.space_
-2. [OpenAI Releases Findings on 377 Math Problems, Further Roiling Field](<https://www.nytimes.com/2026/10/06/science/openai-math-problems.html>) — _nytimes.com_
-3. [Claude Haiku 5.5](<https://www.anthropic.com/claude-haiku-5-5>) — _claude_
-4. [Claude Haiku 5.5](<https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/>) — _simonwillison.net_
-5. [EmbeddingGemma 2](<https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/>) — _blog.google_
-6. [Nano Banana 2.1](<https://deepmind.google/models/model-cards/nano-banana-2-1/>) — _deepmind.google_
-7. [llm-openai-decisions 0.1a0](<https://simonwillison.net/2026/Oct/6/llm-openai-decisions/>) — _simonwillison.net_
-8. [Decisions](<https://developers.openai.com/api/docs/guides/decisions>) — _developers.openai.com_
-9. [Decisions API is now available in Public Beta](<https://community.openai.com/t/decisions-api-is-now-available-in-public-beta/1403877>) — _community.openai.com_
-10. [The Decision Model Gold Rush](<https://swapniltalekar.substack.com/p/the-decision-model-gold-rush>) — _swapniltalekar.substack.com_
-11. [Supercharge your development with the Google Developer Knowledge API ecosystem](<https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/>) — _google ai_
-12. [Automating eval design and hillclimbing with Claude](<https://claude.dev/blog/automating-eval-design-and-hillclimbing/>) — _claude_
-13. ["Think of it as Kubernetes for agents": OpenClaw lands in the enterprise with OpenAI, Nvidia and Red Hat on board](<https://thenewstack.io/openclaw-enterprise-kubernetes-agents/>) — _thenewstack.io_
-14. [OpenAI “rogue” agent activities found on Wikimedia projects](<https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/>) — _simonwillison.net_
-15. [MCP for agent-to-agent comms may be the riskiest protocol you've never heard of](<https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/>) — _arstechnica.com_
-16. [A Vault with a Heap-View: The Uncomfortable Space Between AgentCore Harness and Identity](<https://unit42.paloaltonetworks.com/securing-aws-agentcore-harness-credentials/>) — _unit42.paloaltonetworks.com_
-17. [Citrix NetScaler security snafus get even worse amid more 0-day reports](<https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232>) — _theregister.com_
-18. [CVE-2026-19444: How copying in kubectl breaks trust](<https://edera.dev/stories/cve-2026-19444-how-copying-in-kubectl-breaks-trust>) — _edera.dev_
-19. [MALFEX npm Malware Campaign: Three Payloads And An Adversary That Signs Their Work](<https://checkmarx.com/zero-post/malfex-npm-malware-campaign-three-payloads-and-an-adversary-that-signs-their-work/>) — _checkmarx.com_
-20. [Purpose-built model for leaked secret detection](<https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection>) — _github.blog_
-21. [Local sandboxing for GitHub Copilot now generally available](<https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available>) — _github.blog_
-22. [Claude Haiku 5.5 in GitHub Copilot](<https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot>) — _github.blog_
-23. [Discover local models in GitHub Copilot CLI](<https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli>) — _github.blog_
-24. [A DuckDB Database with No Data in It](<https://duckdb.org/2026/10/07/view-only-mode.html>) — _duckdb.org_
-25. [How We Made Registry Metadata 70% Smaller](<https://www.vlt.io/blog/registry-metadata-70-percent-smaller>) — _vlt.io_
+1. [\[AINews\] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing](<https://www.latent.space/p/ainews-claude-haiku-55-better-than>) — _latent.space_
+2. [Designing enzymes for new-to-nature chemistry and non-natural substrates with AlphaProtein Novo](<https://www.biorxiv.org/content/10.64898/2026.10.01.756017v1>) — _biorxiv.org_
+3. [OpenAI Math](<https://github.com/openai/math>) — _github.com_
+4. [5 Jev use cases for analytics, with real queries and datasets](<https://motherduck.com/blog/jev-analytics-use-cases/>) — _motherduck.com_
+5. [I benchmarked "Jev-killer" OpenAI Decisions API against Jev](<https://threadreaderapp.com/thread/2107644837407404340.html>) — _threadreaderapp.com_
+6. [Metrics Board: Building an Agent-ready Metrics Layer](<https://medium.com/pinterest-engineering/metrics-board-building-an-agent-ready-metrics-layer-2c8fefe68756>) — _medium.com_
+7. [How to Build a Golden-Question Benchmark for Your Data Agents](<https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark>) — _iceberglakehouse.com_
+8. [“Software is over”: Bold AI developer takes aim at Adobe with open source clones](<https://arstechnica.com/ai/2026/10/software-is-over-bold-ai-developer-takes-aim-at-adobe-with-open-source-clones/>) — _arstechnica.com_
+9. [Release of Polars 2.0](<https://pola.rs/posts/release-polars-2/>) — _pola.rs_
+10. [I benchmarked Databricks against my iPhone](<https://www.fivetran.com/blog/i-benchmarked-databricks-against-my-iphone>) — _fivetran.com_
+11. [Apache DataFusion Comet 1.1.0 Release](<https://datafusion.apache.org/blog/2026/10/01/datafusion-comet-1.1.0>) — _datafusion.apache.org_
+12. [CDC at WHOOP: Self-Service Replication for Hundreds of Postgres Tables](<https://engineering.whoop.com/cdc-at-whoop>) — _engineering.whoop.com_
+13. [I timed 179 index recommendations on real data. 18% made the query slower](<https://prateek-arora.github.io/2026/10/timed-179-index-recommendations/>) — _prateek-arora.github.io_
+14. [Stately Graph](<https://github.com/statelyai/graph>) — _github.com_
 
 
 ## Archive récente
