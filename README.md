@@ -8,70 +8,40 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-08
-<sub>updated 9 October 2026 at 01:00</sub>
+### Latest digest — 2026-10-09
+<sub>updated 9 October 2026 at 13:00</sub>
 
-## AI Models, Research, and Agent Harnesses
-- Anthropic released Claude Haiku 5.5, matching OpenAI's GPT-6 Luna in pricing while cutting costs on Sonnet 5.5 and subscriptions <sup>[1](<https://www.latent.space/p/ainews-claude-haiku-55-better-than>)</sup>, and launched Claude Dashboards and Claude Motion in beta alongside moving Docs, Slides, and Design to all plans <sup>[2](<https://claude.com/resources/articles/dashboards-and-motion>)</sup>.
-- Google DeepMind introduced AlphaProtein Novo, a model that designs de novo enzymes for new-to-nature chemistry and plastic degradation, outperforming natural enzymes in select cases <sup>[3](<https://www.biorxiv.org/content/10.64898/2026.10.01.756017v1>)</sup>.
-- OpenAI published 722 AI-generated mathematical manuscripts featuring 372 breakthrough results from an unreleased internal model, though experts note the proofs are dense and require AI assistance, and OpenAI warns of potential errors <sup>[4](<https://github.com/openai/math>)</sup>. Liquid AI released open-weight decision models d1-3B and d1-OMNI-600M <sup>[5](<https://www.liquid.ai/blog/d1-open>)</sup>, and Microsoft announced MAI-Code-1.1-Flash <sup>[6](<https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/>)</sup>.
-- NVIDIA introduced Dynamo to manage session-aware inference traffic for agents by transforming request-level serving into a program-aware system that unlocks session-aware routing and shared KV cache indexing across vLLM and SGLang <sup>[7](<https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/>)</sup>. Google AI Edge launched ML Drift, a universal GPU compute framework for on-device ML inference across APIs like Metal and WebGPU <sup>[8](<https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/>)</sup>, while IBM integrated Spyre as a native PyTorch device via torch-spyre <sup>[9](<https://pytorch.org/blog/building-spyre-as-a-native-pytorch-device/>)</sup>.
-- Independent developers and enterprises are building internal vibe-coding apps for non-engineers at mid-sized firms <sup>[10](<https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal>)</sup>, while platforms like Docker Agent package AI agents into OCI registries using declarative YAML <sup>[11](<https://github.com/docker/docker-agent>)</sup>.
+## AI and LLMs
+- The State of AI Report 2026 highlights that the frontier AI race is contested primarily among Anthropic, OpenAI, and Google, with Anthropic leading on Artificial Analysis' Intelligence Index and Google leading on Chatbot Arena preferences <sup>[1](<https://nathanbenaich.substack.com/p/state-of-ai-2026>)</sup>.
+- Sophos uses OpenAI's Daybreak to reduce cyber-threat investigation time by 96% and automate 52% of managed detection and response cases while retaining human oversight <sup>[2](<https://openai.com/index/sophos>)</sup>.
+- Claude Code supports mods, which are plugins that let developers redraw the CLI interface, inject panes and commands, step into tool calls and requests, and share data between hooks <sup>[3](<https://www.ivokund.com/first-look-at-claude-code-mods-spoiler-yes-use-one-now/>)</sup>.
+- Simon Willison released version 1.0 of `ttok`, a CLI token-counting tool, which defaults to the GPT-5 and GPT-6 tokenizer family after experiments confirmed across seven GPT models that the tokenizers match the same fixture outputs <sup>[4](<https://simonwillison.net/2026/Oct/9/ttok/>)</sup>. Version 0.4 of `ttok` introduced a `--list-models` command and compatibility with `uvx` <sup>[5](<https://simonwillison.net/2026/Oct/8/ttok/>)</sup>.
 
-## LLM Tooling, RAG, and Evaluation
-- MotherDuck showcased Jev, a text-classification model that runs inside SQL with confidence scores and outperforms standard LLM calls in latency <sup>[12](<https://motherduck.com/blog/jev-analytics-use-cases/>)</sup> and job-matching benchmarks <sup>[13](<https://threadreaderapp.com/thread/2107644837407404340.html>)</sup>, while showing high performance in identity-resolution security tasks <sup>[14](<https://vincenzoiozzo.com/blog/jev-identity-resolution>)</sup>.
-- Developers recommend creating a golden-question benchmark suite tied to frozen data snapshots and stored execution runs to regression-test data agents in CI <sup>[15](<https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark>)</sup>. Google open-sourced AQuA, an ambient quality agent that runs alongside production agents in Google Cloud to diagnose silent quality regressions against conversation transcripts and source snapshots <sup>[16](<https://developers.googleblog.com/the-outer-loop-insights-first-an-ambient-quality-agent-that-diagnoses-your-production-agent/>)</sup>.
-- Weaviate released the Engram plugin for Claude Code to provide long-term memory across repositories and sessions <sup>[17](<https://weaviate.io/blog/engram-for-claude-code>)</sup>, and OpenDocRouter launched as an API routing documents to versioned Markdown-parsing models <sup>[18](<https://www.llamaindex.ai/blog/introducing-opendocrouter>)</sup>.
-- Pinterest deployed Metrics Board, a centralized platform automating metrics lifecycles that powers over 98% of its experimentation metrics and provides AI agents with data definitions <sup>[19](<https://medium.com/pinterest-engineering/metrics-board-building-an-agent-ready-metrics-layer-2c8fefe68756>)</sup>.
+## RAG, Agents and Applications
+- Agents are increasingly applied to valuable work in software development and scientific research, including the generation of genetic blueprints for microscopic viruses using generative models <sup>[6](<https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/>)</sup>.
 
-## Data Engineering and Analytics
-- Polars 2.0 launched with native SQL support, a new Map data type, and streaming with spill-to-disk enabled by default, outperforming DuckDB and DataFusion in most SQL benchmarks <sup>[20](<https://pola.rs/posts/release-polars-2/>)</sup>. Apache DataFusion Comet 1.1.0 released with native Spark execution for experimental Iceberg writes and native shuffle via Celeborn <sup>[21](<https://datafusion.apache.org/blog/2026/10/01/datafusion-comet-1.1.0>)</sup>.
-- Benchmarking a single-machine DuckDB setup against distributed Databricks clusters showed the local architecture to be faster on most TPC-H workloads <sup>[22](<https://www.fivetran.com/blog/i-benchmarked-databricks-against-my-iphone>)</sup>. WHOOP implemented a self-service change data capture pipeline to replicate hundreds of PostgreSQL tables into its data warehouse, decoupling raw change access from table materialization <sup>[23](<https://engineering.whoop.com/cdc-at-whoop>)</sup>.
-- Cortex migrated from a Lucene-based search architecture to PostgreSQL full-text search with CDC-fed indexes, cutting public API p95 latency from 13.3 seconds to 1.54 seconds and reducing memory use by 40% <sup>[24](<https://builders.cortex.io/blog/a-hitchhikers-guide-to-postgres-text-search/>)</sup>.
+## Developer Tools and Software Engineering
+- Bootstrap 6 Alpha is available on npm and jsDelivr, featuring a modernized codebase built on the Sass module system, ESM-only JavaScript plugins, native browser element support, and new CSS standards <sup>[7](<https://blog.getbootstrap.com/2026/10/08/bootstrap-6-alpha/>)</sup>.
+- Quake has been ported to safe Rust and runs directly in the browser with an SRP fetching engine <sup>[8](<https://quake-srp.pages.dev/>)</sup>.
+- `zerobrew` provides a `uv`-style architecture for managing Homebrew packages across macOS and Linux <sup>[9](<https://github.com/zerobrewhq/zerobrew>)</sup>.
 
-## DevOps, Infrastructure, and Security
-- Stately released Stately Graph, a TypeScript graph-manipulation library supporting 14 formats that builds 100,000-node graphs up to 15 times faster than Graphology <sup>[25](<https://github.com/statelyai/graph>)</sup>. An analysis of 179 PostgreSQL index recommendations found that while 72% improved query speed, 18% degraded performance by up to a factor of two <sup>[26](<https://prateek-arora.github.io/2026/10/timed-179-index-recommendations/>)</sup>.
-- A supply-chain attack backdoored `@subql/common` 5.8.3 on npm via a compromised GitHub Actions workflow, injecting a postinstall script that stole cloud credentials and polled a C2 server <sup>[27](<https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/>)</sup>. GitHub updated pull request controls to let users with the triage role archive PRs <sup>[28](<https://github.blog/changelog/2026-10-08-triage-role-users-or-higher-can-now-archive-pull-requests>)</sup> and configured draft pull requests to count toward repository PR limits <sup>[29](<https://github.blog/changelog/2026-10-08-draft-pull-requests-count-toward-pull-request-limits>)</sup>.
-- Anthropic launched the Cyber Mission, including an OSS Scanner for automated vulnerability finding in open-source projects <sup>[30](<https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source>), [31](<https://www.anthropic.com/news/anthropic-cyber-mission>)</sup> and a three-tier Cyber Verification Program absorbing Project Glasswing <sup>[32](<https://siliconangle.com/2026/10/06/anthropic-folds-project-glasswing-into-an-expanded-three-tier-cyber-verification-program/>)</sup>, while updating its Usage Policy to address deceptive AI activities <sup>[33](<https://www.anthropic.com/news/2026-usage-policy-update>)</sup>.
-- Security researchers reported that GitHub Copilot CLI can be tricked into downloading and executing malware via embedded prompt injections that bypass argument validators by utilizing the allowed `env` command <sup>[34](<https://www.promptarmor.com/resources/github-copilot-cli-downloads-and-executes-malware>)</sup>. Go scheduled the release of versions 1.27.2 and 1.26.9 to patch ten private standard-library CVEs <sup>[35](<https://freenode.net/article/go-1-27-2-and-1-26-9-due-thursday-with-10-private-cves>)</sup>.
+## Infrastructure, Cloud and DevOps
+- SpaceX is acquiring US cellular spectrum licenses in the 800-megahertz band from Grain Management for approximately $8 billion in cash to offer terrestrial mobile coverage in areas where satellite links cannot reach <sup>[10](<https://www.wsj.com/business/telecom/spacex-makes-big-play-to-become-a-wireless-carrier-a90b2a1b>)</sup>.
+- Amazon's Project Leo has manufactured its 1,000th satellite, reaching a production rate of several satellites per day ahead of a commercial space broadband rollout planned before the end of the year <sup>[11](<https://arstechnica.com/space/2026/10/amazon-builds-1000th-satellite-is-weeks-away-from-space-internet-rollout/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing](<https://www.latent.space/p/ainews-claude-haiku-55-better-than>) — _latent.space_
-2. [Build live dashboards and animate explainers with Claude](<https://claude.com/resources/articles/dashboards-and-motion>) — _claude_
-3. [Designing enzymes for new-to-nature chemistry and non-natural substrates with AlphaProtein Novo](<https://www.biorxiv.org/content/10.64898/2026.10.01.756017v1>) — _biorxiv.org_
-4. [OpenAI Math](<https://github.com/openai/math>) — _github.com_
-5. [Open d1: Edge decision models for text, vision, and audio](<https://www.liquid.ai/blog/d1-open>) — _liquid.ai_
-6. [MAI-Code-1.1-Flash: Better, faster, at a quarter of the cost](<https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/>) — _microsoft.ai_
-7. [Session-Aware Agentic Inference with NVIDIA Dynamo](<https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/>) — _pytorch.org_
-8. [ML Drift: Next-Gen GPU AI/ML Inference at the Edge](<https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/>) — _google ai_
-9. [Building Spyre as a Native PyTorch Device](<https://pytorch.org/blog/building-spyre-as-a-native-pytorch-device/>) — _pytorch.org_
-10. [The Pulse: new trend of building “internal vibe-coding apps” at tech companies](<https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal>) — _newsletter.pragmaticengineer.com_
-11. [Docker Agent](<https://github.com/docker/docker-agent>) — _github.com_
-12. [5 Jev use cases for analytics, with real queries and datasets](<https://motherduck.com/blog/jev-analytics-use-cases/>) — _motherduck.com_
-13. [I benchmarked "Jev-killer" OpenAI Decisions API against Jev](<https://threadreaderapp.com/thread/2107644837407404340.html>) — _threadreaderapp.com_
-14. [Test-Driving Jev on a Security Task: Identity Resolution](<https://vincenzoiozzo.com/blog/jev-identity-resolution>) — _vincenzoiozzo.com_
-15. [How to Build a Golden-Question Benchmark for Your Data Agents](<https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark>) — _iceberglakehouse.com_
-16. [The Outer Loop, Insights First: An Ambient Quality Agent That Diagnoses Your Production Agent](<https://developers.googleblog.com/the-outer-loop-insights-first-an-ambient-quality-agent-that-diagnoses-your-production-agent/>) — _google ai_
-17. [Persistent memory for Claude Code with Weaviate Engram](<https://weaviate.io/blog/engram-for-claude-code>) — _weaviate_
-18. [Introducing OpenDocRouter: every document model under one API](<https://www.llamaindex.ai/blog/introducing-opendocrouter>) — _llamaindex.ai_
-19. [Metrics Board: Building an Agent-ready Metrics Layer](<https://medium.com/pinterest-engineering/metrics-board-building-an-agent-ready-metrics-layer-2c8fefe68756>) — _medium.com_
-20. [Release of Polars 2.0](<https://pola.rs/posts/release-polars-2/>) — _pola.rs_
-21. [Apache DataFusion Comet 1.1.0 Release](<https://datafusion.apache.org/blog/2026/10/01/datafusion-comet-1.1.0>) — _datafusion.apache.org_
-22. [I benchmarked Databricks against my iPhone](<https://www.fivetran.com/blog/i-benchmarked-databricks-against-my-iphone>) — _fivetran.com_
-23. [CDC at WHOOP: Self-Service Replication for Hundreds of Postgres Tables](<https://engineering.whoop.com/cdc-at-whoop>) — _engineering.whoop.com_
-24. [A Hitchhiker's Guide to Postgres Text Search](<https://builders.cortex.io/blog/a-hitchhikers-guide-to-postgres-text-search/>) — _builders.cortex.io_
-25. [Stately Graph](<https://github.com/statelyai/graph>) — _github.com_
-26. [I timed 179 index recommendations on real data. 18% made the query slower](<https://prateek-arora.github.io/2026/10/timed-179-index-recommendations/>) — _prateek-arora.github.io_
-27. [Software Supply Chain Attack on @subql/common: Overview and Response Guidance](<https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/>) — _flatt.tech_
-28. [Triage role users or higher can now archive pull requests](<https://github.blog/changelog/2026-10-08-triage-role-users-or-higher-can-now-archive-pull-requests>) — _github.blog_
-29. [Draft pull requests count toward pull request limits](<https://github.blog/changelog/2026-10-08-draft-pull-requests-count-toward-pull-request-limits>) — _github.blog_
-30. [Launching an opt-in vulnerability-finding service for open-source software](<https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source>) — _anthropic red_
-31. [Introducing the Anthropic Cyber Mission](<https://www.anthropic.com/news/anthropic-cyber-mission>) — _anthropic news_
-32. [Anthropic folds Project Glasswing into an expanded three-tier Cyber Verification Program](<https://siliconangle.com/2026/10/06/anthropic-folds-project-glasswing-into-an-expanded-three-tier-cyber-verification-program/>) — _siliconangle.com_
-33. [2026 Usage Policy update](<https://www.anthropic.com/news/2026-usage-policy-update>) — _anthropic news_
-34. [GitHub Copilot CLI Downloads and Executes Malware](<https://www.promptarmor.com/resources/github-copilot-cli-downloads-and-executes-malware>) — _promptarmor.com_
-35. [Go 1.27.2 and 1.26.9 due Thursday with 10 private CVEs](<https://freenode.net/article/go-1-27-2-and-1-26-9-due-thursday-with-10-private-cves>) — _freenode.net_
+1. [The State of AI Report 2026](<https://nathanbenaich.substack.com/p/state-of-ai-2026>) — _nathanbenaich.substack.com_
+2. [Sophos cuts threat investigation time by 96% with OpenAI Daybreak](<https://openai.com/index/sophos>) — _openai.com_
+3. [First look at Claude Code mods (spoiler: yes, use one now!)](<https://www.ivokund.com/first-look-at-claude-code-mods-spoiler-yes-use-one-now/>) — _ivokund.com_
+4. [ttok 1.0](<https://simonwillison.net/2026/Oct/9/ttok/>) — _simonwillison.net_
+5. [ttok 0.4](<https://simonwillison.net/2026/Oct/8/ttok/>) — _simonwillison.net_
+6. [Roundtables: A Conversation With the Creator of AI-Designed Viruses](<https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/>) — _technologyreview.com_
+7. [Bootstrap 6 Alpha](<https://blog.getbootstrap.com/2026/10/08/bootstrap-6-alpha/>) — _blog.getbootstrap.com_
+8. [Show HN: Quake ported to safe Rust, playable in browser](<https://quake-srp.pages.dev/>) — _hnrss.org_
+9. [zerobrew](<https://github.com/zerobrewhq/zerobrew>) — _github.com_
+10. [SpaceX Makes Big Play to Become a Wireless Carrier](<https://www.wsj.com/business/telecom/spacex-makes-big-play-to-become-a-wireless-carrier-a90b2a1b>) — _wsj.com_
+11. [Amazon builds 1,000th satellite, will launch space internet service by end of year](<https://arstechnica.com/space/2026/10/amazon-builds-1000th-satellite-is-weeks-away-from-space-internet-rollout/>) — _arstechnica.com_
 
 
 ## Recent archive
