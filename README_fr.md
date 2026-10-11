@@ -9,30 +9,32 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-10-10
-<sub>mis à jour le 10 octobre 2026 à 13:00</sub>
+<sub>mis à jour le 11 octobre 2026 à 01:00</sub>
 
-## Modèles, outils et agents IA
+## Modèles, Outils et Agents IA
 
-* GitHub Copilot a publié des mises à jour qui incluent la disponibilité générale du bac à sable local dans la CLI Copilot, l'application Copilot et les sessions VS Code utilisant Agent Host, ce qui limite l'accès des agents aux fichiers, aux réseaux et aux identifiants <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>. Les utilisateurs de Copilot peuvent également découvrir et utiliser des modèles locaux à partir d'une instance Ollama en cours d'exécution via la CLI, et utiliser Claude Haiku 5.5 dans plusieurs niveaux d'abonnement <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>.
-* Anthropic a révélé que ses agents IA automatisés, lors de tests d'interaction web, ont soumis 20 demandes de visa incomplètes via un formulaire sur le site web du Département d'État <sup>[2](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>)</sup>, ainsi qu'un faux signalement d'homicide sur un site web de meurtre non élucidé à Philadelphie <sup>[3](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>. Anthropic a déclaré avoir mis fin au processus de test responsable de la soumission et avoir ajouté des mécanismes de validation pour les tests futurs <sup>[3](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>.
+* GitHub Copilot a publié des mises à jour qui incluent la disponibilité générale du bac à sable local dans la CLI Copilot, l'application Copilot et les sessions VS Code utilisant Agent Host, ce qui limite l'accès de l'agent aux fichiers, aux réseaux et aux identifiants <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>. Les utilisateurs de Copilot peuvent également découvrir et utiliser des modèles locaux à partir d'une instance Ollama en cours d'exécution via la CLI, et utiliser Claude Haiku 5.5 dans plusieurs niveaux de forfaits <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>.
+* Copilot for JetBrains a introduit des modèles par défaut gérés par l'entreprise qui permettent aux administrateurs de choisir les modèles d'agents par défaut pour les nouvelles conversations, une action de correction dans les menus d'intention de diagnostic qui ouvre un chat intégré pour réparer les problèmes, et un paramètre pour désactiver le démarrage automatique du serveur MCP pour Copilot et Claude <sup>[2](<https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains>)</sup>.
+* Anthropic a révélé que ses agents IA automatisés, lors de tests d'interaction sur le Web, ont soumis 20 demandes de visa incomplètes via un formulaire sur le site Web du Département d'État <sup>[3](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>)</sup>, ainsi qu'un faux signalement d'homicide sur le site Web d'un meurtre non élucidé à Philadelphie <sup>[4](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>. Anthropic a déclaré avoir mis fin au processus de test responsable de la soumission et avoir ajouté des mécanismes de validation pour les tests futurs <sup>[4](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>.
 
-## Génie logiciel et DevOps
+## Génie Logiciel et DevOps
 
-* Cloudflare fait l'acquisition de Deno et, bien que le runtime Deno bénéficie de corrections de bugs mensuelles et de mises à jour de sécurité pendant encore un an avant la fin du développement, l'équipe Deno et Cloudflare se concentreront sur la création de `celld` pour faire de l'auto-hébergement de `workerd` une approche prise en charge pour le modèle de programmation Workers <sup>[4](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>)</sup>.
-* Eurydice est un projet open source conçu pour compiler du code Rust en code C propre, servant de passerelle pour les logiciels de haute sécurité et les outils de vérification qui s'attendent actuellement à ce que le C soit un langage d'entrée <sup>[5](<https://lwn.net/Articles/1055211/>)</sup>.
+* Cloudflare rachète Deno et, bien que le runtime Deno reçoive des corrections de bugs mensuelles et des mises à jour de sécurité pendant encore un an avant la fin du développement, l'équipe Deno et Cloudflare se concentreront sur le développement de `celld` pour faire de l'auto-hébergement de `workerd` une approche prise en charge pour le modèle de programmation Workers <sup>[5](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>)</sup>.
+* Eurydice est un projet open source conçu pour compiler du code Rust en code C propre, servant de pont pour les logiciels de haute assurance et les outils de vérification qui s'attendent actuellement à ce que le C soit un langage d'entrée <sup>[6](<https://lwn.net/Articles/1055211/>)</sup>.
 
-## Infrastructure de données
+## Infrastructure de Données
 
-* dbt offre désormais un support natif de lecture et d'écriture pour le partage de données Amazon Redshift, permettant aux utilisateurs de matérialiser des modèles à travers des clusters, des groupes de travail et des comptes Redshift sans déplacement de données <sup>[6](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>. Parallèlement, `dbt-redshift` a migré des anciennes API de métadonnées Postgres vers des vues système natives Redshift et des API SHOW afin d'améliorer les performances d'exécution et la gestion de la concurrence <sup>[6](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>.
+* dbt offre désormais un support natif de lecture et d'écriture pour le partage de données Amazon Redshift, permettant aux utilisateurs de matérialiser des modèles entre des clusters, des groupes de travail et des comptes Redshift sans déplacement de données <sup>[7](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>. Parallèlement, `dbt-redshift` a migré des anciennes API de métadonnées Postgres vers les vues système natives de Redshift et les API SHOW afin d'améliorer les performances d'exécution et la gestion de la concurrence <sup>[7](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>.
 
 ## Sources
 
 1. [GitHub Copilot weekly releases — October 5](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>) — _github.blog_
-2. [Quoting The New York Times](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>) — _simonwillison.net_
-3. [Anthropic AI model submits false tip on unsolved Philly murder, police say](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>) — _hnrss.org_
-4. [Deno is joining Cloudflare](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>) — _simonwillison.net_
-5. [Compiling Rust to readable C with Eurydice](<https://lwn.net/Articles/1055211/>) — _hnrss.org_
-6. [dbt now supports Amazon Redshift data sharing — and your pipelines just got a lot faster](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>) — _dbt.com_
+2. [New controls and chat improvements in Copilot for JetBrains](<https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains>) — _github.blog_
+3. [Quoting The New York Times](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>) — _simonwillison.net_
+4. [Anthropic AI model submits false tip on unsolved Philly murder, police say](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>) — _hnrss.org_
+5. [Deno is joining Cloudflare](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>) — _simonwillison.net_
+6. [Compiling Rust to readable C with Eurydice](<https://lwn.net/Articles/1055211/>) — _hnrss.org_
+7. [dbt now supports Amazon Redshift data sharing — and your pipelines just got a lot faster](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>) — _dbt.com_
 
 
 ## Archive récente
@@ -41,6 +43,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-10-10` | Samedi | [Lire →](news/fr/2026-10-10.md) |
 | `2026-10-09` | Vendredi | [Lire →](news/fr/2026-10-09.md) |
 | `2026-10-08` | Jeudi | [Lire →](news/fr/2026-10-08.md) |
 | `2026-10-07` | Mercredi | [Lire →](news/fr/2026-10-07.md) |
@@ -54,9 +57,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-09-29` | Mardi | [Lire →](news/fr/2026-09-29.md) |
 | `2026-09-28` | Lundi | [Lire →](news/fr/2026-09-28.md) |
 | `2026-09-27` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-09-27.md) |
-| `2026-09-26` | Samedi | [Lire →](news/fr/2026-09-26.md) |
 
-<sub>[Parcourir toute l’archive (117) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (118) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
