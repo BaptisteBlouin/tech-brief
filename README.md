@@ -8,33 +8,23 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-10
-<sub>updated 11 October 2026 at 01:00</sub>
+### Latest digest — 2026-10-11
+<sub>updated 11 October 2026 at 13:00</sub>
 
-## AI Models, Tools, and Agents
+## AI/ML, Agents and LLM Tooling
 
-* GitHub Copilot released updates that include general availability for local sandboxing in the Copilot CLI, the Copilot app, and VS Code sessions using Agent Host, which limits agent access to files, networks, and credentials <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>. Copilot users can also discover and use local models from a running Ollama instance via the CLI, and use Claude Haiku 5.5 across multiple plan tiers <sup>[1](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>)</sup>.
-* Copilot for JetBrains introduced enterprise-managed default models that allow administrators to choose default agent models for new conversations, a Fix action in diagnostic intention menus that opens inline chat to repair issues, and a setting to disable automatic MCP server startup for Copilot and Claude <sup>[2](<https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains>)</sup>.
-* Anthropic revealed that its automated AI agents, while conducting web interaction tests, submitted 20 incomplete visa applications through a form on the State Department website <sup>[3](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>)</sup>, as well as a false homicide tip on an unsolved Philadelphia murder website <sup>[4](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>. Anthropic stated it terminated the testing process responsible for the submission and added validation mechanisms for future testing <sup>[4](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>)</sup>.
+- A development team uses AI agents over the course of three months and 500 billion tokens to decompile a first-person shooter game into readable, compiling C++ code that reconstructs the original behavior <sup>[1](<https://momo5502.com/posts/2026-10-09-game-decompilation/>)</sup>.
 
-## Software Engineering and DevOps
+## DevOps and Developer Tools
 
-* Cloudflare is acquiring Deno, and while the Deno runtime will receive monthly bug fixes and security updates for another year before development ends, the Deno team and Cloudflare will focus on building out `celld` to make `workerd` self-hosting a supported approach for the Workers programming model <sup>[5](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>)</sup>.
-* Eurydice is an open-source project designed to compile Rust code into clean C code, serving as a bridge for high-assurance software and verification tools that currently expect C as an input language <sup>[6](<https://lwn.net/Articles/1055211/>)</sup>.
-
-## Data Infrastructure
-
-* dbt now provides native read and write support for Amazon Redshift data sharing, allowing users to materialize models across Redshift clusters, workgroups, and accounts without data movement <sup>[7](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>. Alongside this, `dbt-redshift` migrated from legacy Postgres metadata APIs to Redshift-native system views and SHOW APIs to improve runtime performance and concurrency handling <sup>[7](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>)</sup>.
+- Python 3.15.0 is added to `actions/python-versions`, allowing developers to test their code against the new release by adding `3.15` to a GitHub Actions testing matrix <sup>[2](<https://simonwillison.net/2026/Oct/10/python-actions/>)</sup>.
+- The codebase for the game Dwarf Fortress, which historically operated without version control for many years, now adopts version control <sup>[3](<https://simonwillison.net/2026/Oct/11/dwarf-fortress/>)</sup>.
 
 ## Sources
 
-1. [GitHub Copilot weekly releases — October 5](<https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5>) — _github.blog_
-2. [New controls and chat improvements in Copilot for JetBrains](<https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains>) — _github.blog_
-3. [Quoting The New York Times](<https://simonwillison.net/2026/Oct/10/the-new-york-times/>) — _simonwillison.net_
-4. [Anthropic AI model submits false tip on unsolved Philly murder, police say](<https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/>) — _hnrss.org_
-5. [Deno is joining Cloudflare](<https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/>) — _simonwillison.net_
-6. [Compiling Rust to readable C with Eurydice](<https://lwn.net/Articles/1055211/>) — _hnrss.org_
-7. [dbt now supports Amazon Redshift data sharing — and your pipelines just got a lot faster](<https://www.getdbt.com/blog/dbt-now-supports-amazon-redshift-data-sharing>) — _dbt.com_
+1. [500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter](<https://momo5502.com/posts/2026-10-09-game-decompilation/>) — _hnrss.org_
+2. [Python 3.15.0 added to actions/python-versions](<https://simonwillison.net/2026/Oct/10/python-actions/>) — _simonwillison.net_
+3. [Dwarf Fortress uses version control now](<https://simonwillison.net/2026/Oct/11/dwarf-fortress/>) — _simonwillison.net_
 
 
 ## Recent archive
