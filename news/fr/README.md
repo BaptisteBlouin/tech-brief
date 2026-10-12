@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>118 digests quotidiens archivés · du plus récent au plus ancien.</sub>
+<sub>119 digests quotidiens archivés · du plus récent au plus ancien.</sub>
 
 ### Octobre 2026
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-10-11` | 🗓️ Récap hebdo | [Lire →](2026-10-11.md) |
 | `2026-10-10` | Samedi | [Lire →](2026-10-10.md) |
 | `2026-10-09` | Vendredi | [Lire →](2026-10-09.md) |
 | `2026-10-08` | Jeudi | [Lire →](2026-10-08.md) |
