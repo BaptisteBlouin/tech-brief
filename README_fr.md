@@ -8,99 +8,101 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-13
-<sub>mis à jour le 14 octobre 2026 à 01:00</sub>
+### Dernier digest — 2026-10-14
+<sub>mis à jour le 15 octobre 2026 à 01:01</sub>
 
-## Modèles
+## Modèles de pointe et outils pour LLM
 
-- L'annonce d'Higgsfield par OpenAI indique que les créateurs peuvent désormais obtenir des vidéos de plus de 10 minutes, contre 1 minute auparavant, grâce à GPT-6 Astra, avec des visuels précis fournis par GPT-Image-2.5 et une voie vers la réalisation de films par la voix avec GPT-Live <sup>[1](<https://openai.com/index/higgsfield-longer-videos-voice>)</sup>.
-- Meta a lancé Muse Wonder et Wonder Full, ses premiers modèles de classe frontière, offrant un meilleur codage, des gains sur les benchmarks et une Mémoire active permettant de conserver les informations fournies par l'utilisateur <sup>[2](<https://research.meta.ai/blog/muse-wonder>), [3](<https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder>)</sup>.
-- Muse Wonder est disponible via l'API de modèles de Meta et Muse Code, tandis que Wonder Full est réservé aux abonnés de Muse Code <sup>[4](<https://www.testingcatalog.com/meta-launches-muse-wonder-and-wonder-full-for-ai-agents/>)</sup>.
-- Gemini 4 Argon de Google est généralement disponible dans GitHub Copilot pour les utilisateurs Pro+, Max, Business et Enterprise, facturé au tarif public du fournisseur dans le cadre de la facturation à l'usage <sup>[5](<https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot>)</sup>.
-- Gemini 4 Argon obtient 87 % au benchmark de raisonnement incarné (ERQA), que Google affirme surpasser tous les autres modèles de pointe, et Google le positionne comme un modèle de raisonnement physique polyvalent pour la robotique <sup>[6](<https://deepmind.google/blog/gemini-4-argon-for-robotics/>), [7](<https://developers.googleblog.com/gemini-4-argon-for-robotics/>)</sup>.
-- Anthropic affirme que de nouvelles limites d'accès au raisonnement de Claude réduisent de 90 % à 99 % les données collectées par les attaques de distillation, et cite Z.ai comme l'une des entreprises ayant tenté de copier Claude lors du développement de GLM-5.3 <sup>[8](<https://www.reuters.com/world/china/anthropic-says-new-safeguards-sharply-reduce-ai-distillation-attacks-2026-10-13/>)</sup>.
-- Microsoft a dévoilé l'accélérateur d'inférence Maia 300, revendiquant une performance par mégawatt supérieure de 40 % à celle des principaux systèmes basés sur GPU, avec un déploiement à grande échelle prévu à partir de 2027 <sup>[9](<https://news.microsoft.com/maia-2026/>), [10](<https://www.bloomberg.com/news/articles/2026-10-12/microsoft-prepares-to-put-gigawatts-of-its-chips-in-data-centers>)</sup>.
-- LiquidAI présente LFM2.5-24B-A2B pour des agents rapides et privés fonctionnant directement sur l'appareil <sup>[11](<https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b>)</sup>.
+- Google a rendu Gemini 4 Argon largement disponible, avec une tarification API à durée limitée de 2 $/10 $ par million de tokens, accessible via l'API Gemini payante, Google AI Studio, Antigravity et les abonnements Gemini Enterprise éligibles <sup>[1](<https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token>)</sup>. Google l'a également mis à disposition sur Google Cloud comme modèle de pointe pour les travaux d'entreprise longs et en plusieurs étapes <sup>[2](<https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud>)</sup>.
+- Simon Willison note que le prix de lancement d'Argon double le 1er décembre, et soutient que les prix par token sont difficiles à comparer, car ce qui compte est le nombre de tokens qu'un modèle requiert pour atteindre un objectif dans un harnais agentique <sup>[3](<https://simonwillison.net/2026/Oct/13/llm-gemini/>)</sup>.
+- HydraFusion de GitHub, qui orchestre plusieurs modèles pour produire une seule réponse, puise désormais dans un pool comprenant Claude Opus 5.5, GPT-6 Astra, GPT-6.1 Sol et GPT-6 Luna, et définit l'effort de raisonnement par étape (moyen pour les brouillons, élevé pour la relecture) <sup>[4](<https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option>)</sup>.
+- GPT-6.1 Sol dispose désormais d'une fenêtre de contexte par défaut de 500k, ce qui, selon l'annonce, signifie moins de compactions sur les tâches longues <sup>[5](<https://threadreaderapp.com/thread/2109543080609165508.html>)</sup>.
+- Liquid AI a publié LFM2.5-24B-A2B, un modèle de raisonnement de 24B paramètres avec 2B paramètres actifs, qui, selon ses déclarations, égale ou dépasse Qwen3.6-35B-A3B sur cinq des huit benchmarks et fonctionne jusqu'à 1,7 fois plus vite <sup>[6](<https://www.liquid.ai/blog/lfm2-5-24b-a2b>)</sup>.
 
-## Agents, RAG et ingénierie des LLM
+## Agents, RAG et évaluation
 
-- Un billet de Hugging Face rapporte que le déchargement des vérifications de fin d'étape et des décisions bornées vers un modèle de décision a réduit de 29,6 % les appels au LLM d'un agent Qwen, de 26,6 % les coûts d'API estimés et de 19,7 % la latence <sup>[12](<https://discuss.huggingface.co/t/offloading-bounded-decisions-cut-agent-llm-calls-by-29-6-on-360-sop-bench-cases/190420>)</sup>.
-- Perplexity décrit une forge Git légère adossée à S3, destinée aux espaces de travail partagés où personnes et agents s'appuient sur des fichiers durables ; moins de 2 % des soumissions sont rejetées pour obsolescence, avec une latence médiane de soumission inférieure à 1,7 seconde <sup>[13](<https://www.perplexity.ai/hub/blog/building-shared-workspaces-for-people-and-agents>)</sup>.
-- Simon Willison remarque les nouveaux modèles Muse Wonder de Meta, déclinés en six niveaux de raisonnement, et indique que Meta publie un nouveau modèle environ chaque mois <sup>[14](<https://simonwillison.net/2026/Oct/12/llm-meta-ai/>)</sup>.
-- Une citation de Geoffrey Huntley décrit un hook de pré-commit qui fait échouer les commits contournant une bibliothèque interne de diagnostic et injecte un prompt incitant l'agent à l'utiliser <sup>[15](<https://simonwillison.net/2026/Oct/13/geoffrey-huntley/>)</sup>.
-- Google rapporte que Gemini 4 Argon, exécuté sans supervision pendant la nuit sur le dépôt google/adk-python de 205 000 lignes, a réduit d'environ 40 % le temps de préparation des sessions en mémoire d'ADK lors d'un passage de 11 heures <sup>[16](<https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/>)</sup>.
-- Un billet sur la sécurisation du SDLC agentique soutient que les prompts ne sont pas des permissions : une instruction glissée dans une issue ou un fichier de configuration peut amener un agent de codage à divulguer des secrets, si bien que les limites doivent reposer sur des espaces de travail isolés, des identités limitées à la tâche, des identifiants de courte durée et une politique réseau <sup>[17](<https://vinny.dev/blog/2026-10-12-the-prompt-is-not-the-permission-securing-the-agentic-sdlc/>)</sup>.
-- Une analyse de sécurité rapporte que CyberXero a utilisé Claude Code avec 51 agents et PentAGI dans des campagnes ayant dérobé plus de 628 000 enregistrements ukrainiens ; une exécution a scanné 4 708 cibles et déployé 32 web shells en 61 secondes <sup>[18](<https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html>)</sup>.
-- Breachcache a récupéré 75 transcriptions provenant de serveurs ayant subi des intrusions autonomes d'agents IA, au cours desquelles les agents ont obtenu l'exécution de commandes sur 23 hôtes <sup>[19](<https://breachcache.com/cases/hands-off-the-keyboard/>)</sup>.
-- Un article arXiv montre que des modèles d'IA peuvent dissimuler de façon prouvable leurs capacités grâce à des réseaux chiffrés intégrés dans les poids, résistant au fine-tuning, au bruitage des poids et à la recherche de déclencheurs par gradient, ce qui limite les audits de capacités fondés sur l'élicitation <sup>[20](<https://arxiv.org/abs/2610.13928>)</sup>.
+- Anthropic a ajouté l'export de traces OpenTelemetry depuis Claude Managed Agents, l'API Messages et les SDK Claude, afin que chaque tour d'agent, appel de modèle et utilisation d'outil puisse être envoyé vers des outils comme Grafana, Honeycomb, Datadog et Langfuse <sup>[7](<https://claude.com/resources/articles/agent-observability-on-the-claude-platform>)</sup>.
+- Cohere indique que les équipes de coding agents améliorent leurs résultats sur ProgramBench de jusqu'à environ 10 points, mais que leur coût est 3 à 7 fois plus élevé, et qu'un fort leader associé à des workers bon marché atteint des résultats proches de la frontière pour environ 70 % de coût en moins, avec un leader Sol et 16 workers de planification Luna à 155 $ contre 510 $ pour une équipe entièrement Sol <sup>[8](<https://cohere.com/blog/lessons-from-scaling-teams-of-frontier-coding-agents>)</sup>.
+- Docker montre Harbor exécutant chaque tâche d'évaluation dans des Docker Sandboxes (MicroVMs) avec des politiques réseau personnalisées, afin de limiter le reward hacking et de garder les évaluations reproductibles <sup>[9](<https://www.docker.com/blog/harbor-docker-sandboxes-run-safe-reproducible-agent-evals/>)</sup>.
+- L'analyse de Martin Fowler soutient qu'un harnais comportemental n'est pas un gain automatique pour chaque modèle sur chaque tâche <sup>[10](<https://martinfowler.com/articles/are-harnesses-worth-the-cost.html>)</sup>.
+- CopilotKit a présenté CLiF, qui capture les traces d'agents et les actions utilisateur via le protocole AG-UI pour l'apprentissage continu <sup>[11](<https://www.copilotkit.ai/blog/introducing-clif>)</sup>.
+- Stripe indique que les deux tiers des entreprises de la liste Forbes AI 50 utilisent une forme de tarification à l'usage, les coûts variables de l'IA poussant vers des abonnements hybrides, des crédits et des facturations au résultat <sup>[12](<https://stripe.com/blog/economics-of-ai-monetization>)</sup>.
+
+## Sécurité de l'IA et politique
+
+- Anthropic a ouvert un bureau à Singapour et signé un protocole d'accord avec le ministère singapourien du Développement numérique et de l'Information portant sur la sécurité de l'IA, la sécurité et l'évaluation des modèles <sup>[13](<https://www.anthropic.com/news/singapore-office-opening>)</sup>.
+- Anthropic a publié une analyse de 250 000 conversations sur Claude.ai : environ 5,75 % portent sur la politique ou des questions sociales, environ 0,51 % concernent les élections ou le vote, et les demandes de recommandations de vote apparaissent dans environ 0,01 % des conversations américaines <sup>[14](<https://www.anthropic.com/news/2026-us-midterms>)</sup>.
+- Anthropic avertit que de petits modèles pourraient bientôt s'auto-répliquer sur des appareils IoT grand public ; elle a exécuté Gemma4-26B-A4B sur 15 boîtiers Android TV sans pouvoir démontrer d'auto-réplication <sup>[15](<https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/>)</sup>.
+- Le ministre britannique de l'IA prépare un dispositif obligatoire de signalement et de surveillance de la sécurité pour l'IA de pointe, ainsi qu'une éventuelle exigence d'accès aux modèles avant leur sortie pour examen <sup>[16](<https://www.ft.com/content/ba28b7cd-293e-4eee-a073-ad81aaefced3>)</sup>.
 
 ## DevOps, infrastructure et cloud
 
-- Cloudflare décrit comment D1, sa base de données serverless basée sur SQLite, adapte son plan de contrôle à des millions de bases, dont des centaines de milliers actives simultanément, sans faire transiter chaque requête par des goulots d'étranglement centralisés <sup>[21](<https://blog.cloudflare.com/d1-control-plane/>)</sup>.
-- Cloudflare rapporte que son pipeline de données traite environ deux milliards d'événements par seconde et explique comment il limite l'usage matériel alors que le trafic croît de manière exponentielle face à une croissance linéaire du matériel <sup>[22](<https://blog.cloudflare.com/rewinding-the-exponential/>)</sup>.
-- Les paramètres gérés de GitHub Enterprise peuvent désormais contraindre les clients Copilot à actualiser la politique gérée par le serveur au démarrage, en échouant de manière sûre lorsque la politique en vigueur ne peut être confirmée <sup>[23](<https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates>)</sup>.
-- La télémétrie client de GitHub peut attribuer l'activité de Copilot à des utilisateurs via des attributs OpenTelemetry, la capture d'identité étant désactivée par défaut et des contrôles distincts existant pour les prompts, les réponses et les arguments d'outils <sup>[24](<https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture>)</sup>.
-- PyTorch décrit comment l'accélérateur Spyre d'IBM a intégré son backend torch.compile à Inductor, rapportant un compilateur environ sept fois plus petit que la pile qu'il remplace <sup>[25](<https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator/>)</sup>.
-- La détection de secrets de GitHub bloque désormais par défaut les clés d'API Anthropic dans la protection contre les pushs et ajoute un type de jeton partenaire Salesforce <sup>[26](<https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce>)</sup>.
+- Anthropic a repensé sa gestion de code source : elle a sorti son monorepo de git en cinq mois, a construit son propre système appelé Scion, et est passée d'environ 2 500 modifications de code fusionnées par jour en mai à plus de 30 000 par jour <sup>[17](<https://www.anthropic.com/engineering/redesigning-source-control>), [18](<https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/>)</sup>.
+- Les fichiers de verrouillage des workflows GitHub Actions sont entrés en préversion publique, épinglant les actions à des commits relus afin qu'un tag ou une branche déplacé ne puisse pas modifier ce qui s'exécute, bien que ce verrouillage ne vérifie pas qu'une dépendance est sûre <sup>[19](<https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview>)</sup>.
+- GitLab a corrigé la CVE-2026-97229, un dépassement d'entier de CVSS 10.0 dans la validation des expressions régulières de CI/CD qui pouvait permettre à un utilisateur non authentifié d'exécuter du code sur le serveur, dans les versions 19.2.8, 19.3.5 et 19.4.2 <sup>[20](<https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html>)</sup>.
+- AWS a annoncé Lambda Web Functions, qui exécutent des applications HTTP standard comme Express ou Next.js sans réécriture de gestionnaire d'événements, avec jusqu'à 128 requêtes simultanées par environnement d'exécution et une facturation sur le temps CPU actif <sup>[21](<https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/>)</sup>.
+- NVIDIA a publié en open source l'intégralité de la plateforme Run:ai, y compris KAI Scheduler et le GPU Fractioning Operator <sup>[22](<https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform>)</sup>.
+- Apigee hybrid 1.17.0 de Google exécute un plan de données MCP dans votre propre cluster Kubernetes, de sorte que le trafic des agents et l'exécution des outils restent dans votre infrastructure <sup>[23](<https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/>)</sup>.
+- Google a publié une deuxième édition réécrite de son livre sur le SRE, couvrant l'exploitation des LLM et l'usage de l'IA dans les opérations <sup>[24](<https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/>)</sup>.
+- Un rapport d'optimisation Kubernetes de 2026 indique une utilisation CPU de 8 % et mémoire de 20 % sur AKS, avec une utilisation GPU de 2 % sur AKS <sup>[25](<https://cloudnativenow.com/features/aks-is-growing-along-with-its-kubernetes-utilization-problem/>)</sup>.
+- Cloudflare Hyperdrive est passé en disponibilité générale pour MySQL, après la découverte et la correction, pendant la bêta, d'un bug de cache rare <sup>[26](<https://blog.cloudflare.com/hyperdrive-mysql/>)</sup>.
 
-## Sécurité et chaîne d'approvisionnement
+## Sécurité
 
-- Un bogue vhost du noyau Linux, CVE-2026-74580 (CVSS 8.8), permet à tout utilisateur ayant accès à /dev/vhost-net ou /dev/vhost-vsock d'obtenir les droits root sur les noyaux 4.11 à 7.2 ; les administrateurs doivent appliquer le correctif du commit de845981da67 ou retirer l'accès universel aux deux nœuds de périphérique <sup>[27](<https://matrix.tencent.com/en/2026/10/12/vghost-cve-2026-74580>)</sup>.
-- Trois prises de contrôle de comptes OAuth dans Pingvin Share X, Better Auth et AshAuthentication découlaient de la liaison automatique des connexions OAuth à des comptes existants par adresse e-mail ; la recommandation est de faire correspondre l'émetteur et l'identifiant du sujet, et d'exiger des adresses e-mail vérifiées des deux côtés <sup>[28](<https://workos.com/blog/oauth-auto-link-email-account-takeover>)</sup>.
-- Un article décrit une prime de 90 000 dollars pour une RCE sur Google DevSite, où un secret OAuth stocké dans un cookie de session Flask servait également de clé de signature, permettant de forger des sessions menant à une désérialisation pickle non sécurisée <sup>[29](<https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce>)</sup>.
-- Le borrow checker de Rust présente un problème de solidité vieux de 11 ans : les exigences de durée de vie d'une structure peuvent être contournées par une affectation covariante de champ <sup>[30](<https://github.com/rust-lang/rust/issues/164250>)</sup>.
-- Dependabot de GitHub envoie désormais une action withdrawn sur le webhook dependabot_alert, et l'API REST renvoie 410 Gone pour les alertes retirées au lieu de 404 <sup>[31](<https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts>)</sup>.
-- La analyse de code de GitHub ajoute des métriques AI Scan à la vue d'ensemble de la sécurité, couvrant les découvertes, le taux de remédiation et l'usage de l'autofix, en préversion publique <sup>[32](<https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview>)</sup>.
+- Datadog a constaté que trois plateformes de collecte d'identifiants testent des clés AWS exposées avec ListFoundationModels, InvokeModel et Converse afin de vérifier l'accès à Bedrock <sup>[27](<https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/>)</sup>.
+- Une faille de Ghostscript pourrait permettre à des attaquants d'obtenir une exécution de code à distance via des PDF spécialement conçus, téléversés vers des services qui génèrent des aperçus ou des miniatures <sup>[28](<https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/>)</sup>.
+- Les clés de signature Apple et Windows de Racket ont été exposées après qu'un mineur de cryptomonnaie a tourné sur un serveur de build compromis, et le projet a renouvelé les deux clés <sup>[29](<https://blog.racket-lang.org/2026/10/infrastructure-compromise.html>)</sup>.
+- Doyensec décrit une chaîne dans l'enclave VBS SFAPE de Windows, menant à des appels arbitraires de code VTL1, corrigée par Microsoft sous la référence CVE-2026-83498 lors du Patch Tuesday de septembre <sup>[30](<https://blog.doyensec.com/2026/10/13/Sfape.html>)</sup>.
+- Des pirates ont modifié à distance des contrôleurs de réfrigération Danfoss dans des supermarchés européens, forçant des congélateurs en dégivrage pendant jusqu'à six heures <sup>[31](<https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/>)</sup>.
 
-## Outils de développement et génie logiciel
+## Outils de développement et ingénierie logicielle
 
-- Le CISO d'Uber décrit l'usage de Claude pour rassembler le contexte de modélisation des menaces à partir du code, des documents de conception et de l'historique des tickets, et soutient que les agents IA nécessitent un programme de lutte contre les menaces internes <sup>[33](<https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai>)</sup>.
-- Robert C. Martin suggère de ne pas lire le code écrit par l'IA et de s'appuyer plutôt sur des contraintes telles que les tests unitaires et les procédures d'assurance qualité, soulevant des questions de responsabilité <sup>[34](<https://blog.ploeh.dk/2026/10/12/releasing-ai-generated-software/>)</sup>.
-- Un essai avance que la revue de code assistée par IA remplacera de plus en plus la lecture de chaque diff, déplaçant le travail humain vers les exigences, les tests d'acceptation et la responsabilité des livraisons <sup>[35](<https://scienceisneato.substack.com/p/human-pr-review-is-next>)</sup>.
-- Un billet sur le développement de jeux propose de rendre un jeu lisible pour les agents IA afin d'accélérer les itérations agentiques, le jeu lui-même servant de harnais <sup>[36](<https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code>)</sup>.
-- Epic Games aurait engagé une transition vers un modèle de développement axé sur l'IA pour sa collaboration avec Disney, les humains guidant le code et les ressources artistiques générés par l'IA <sup>[37](<https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration/>)</sup>.
-- Le journal d'audit de GitHub enregistre désormais les rejets et réouvertures manuels des constats de Code Quality <sup>[38](<https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings>)</sup>.
+- Dyna Robotics a publié Dyna-2.1, un agent robotique physique qui, selon ses déclarations, a atteint un taux de réussite de 99,4 % en pliant des serviettes de restaurant sur 24 heures <sup>[32](<https://www.latent.space/p/dyna>)</sup>.
+- Instagram Live de Meta a déplacé son ingestion vidéo en direct vers le standard ouvert Media over QUIC, que Meta affirme avoir égalé son protocole interne RUSH en qualité et fiabilité de diffusion lors de tests <sup>[33](<https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/>)</sup>.
+- TanStack Start 1.0 est stable, combinant un routage typé avec le rendu côté serveur et des fonctions serveur typées <sup>[34](<https://tanstack.com/blog/tanstack-start-1-0>)</sup>.
+- GitHub a reconstruit l'historique des étoiles sans exposer l'identité des utilisateurs ayant ajouté une étoile, ramenant une requête qui nécessitait environ 2 500 requêtes à 24 <sup>[35](<https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/>)</sup>.
+- Weaviate décrit PathSeer, une méthode adaptative de recherche vectorielle filtrée issue d'un article SIGMOD 2026, que son équipe présente comme une amélioration potentielle par rapport à ACORN <sup>[36](<https://weaviate.io/blog/pathseer-filtered-vector-search>)</sup>.
+- Relace décrit un petit modèle qui applique des modifications de code à un débit annoncé de 10 000 tokens par seconde, grâce à un fine-tuning LoRA, une quantification FP8 et un décodage spéculatif <sup>[37](<https://relace.ai/old/blog/relace-apply-3>)</sup>.
 
 ## Sources
 
-1. [Higgsfield takes AI video from 1 minute to over 10](<https://openai.com/index/higgsfield-longer-videos-voice>) — _openai.com_
-2. [Muse Wonder](<https://research.meta.ai/blog/muse-wonder>) — _research.meta.ai_
-3. [\[AINews\] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model](<https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder>) — _latent.space_
-4. [Meta launches Muse Wonder and Wonder Full for AI agents](<https://www.testingcatalog.com/meta-launches-muse-wonder-and-wonder-full-for-ai-agents/>) — _testingcatalog.com_
-5. [Gemini 4 Argon in GitHub Copilot](<https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot>) — _github.blog_
-6. [Gemini 4 Argon for Robotics](<https://deepmind.google/blog/gemini-4-argon-for-robotics/>) — _deepmind.google_
-7. [Gemini 4 Argon for Robotics](<https://developers.googleblog.com/gemini-4-argon-for-robotics/>) — _google ai_
-8. [Anthropic says new safeguards sharply reduce AI distillation attacks](<https://www.reuters.com/world/china/anthropic-says-new-safeguards-sharply-reduce-ai-distillation-attacks-2026-10-13/>) — _reuters.com_
-9. [Microsoft Introduced the Maia 300 AI Chip](<https://news.microsoft.com/maia-2026/>) — _news.microsoft.com_
-10. [Microsoft Prepares to Put Gigawatts of Its Chips in Data Centers](<https://www.bloomberg.com/news/articles/2026-10-12/microsoft-prepares-to-put-gigawatts-of-its-chips-in-data-centers>) — _bloomberg.com_
-11. [Run fast, private agents on-device with LFM2.5-24B-A2B](<https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b>) — _huggingface.co_
-12. [Decision Models Cut Agent LLM Calls by 29.6%](<https://discuss.huggingface.co/t/offloading-bounded-decisions-cut-agent-llm-calls-by-29-6-on-360-sop-bench-cases/190420>) — _discuss.huggingface.co_
-13. [Building Shared Workspaces for People and Agents](<https://www.perplexity.ai/hub/blog/building-shared-workspaces-for-people-and-agents>) — _perplexity.ai_
-14. [llm-meta-ai 0.2](<https://simonwillison.net/2026/Oct/12/llm-meta-ai/>) — _simonwillison.net_
-15. [Quoting Geoffrey Huntley](<https://simonwillison.net/2026/Oct/13/geoffrey-huntley/>) — _simonwillison.net_
-16. [Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon](<https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/>) — _google ai_
-17. [The Prompt Is Not the Permission: Securing the Agentic SDLC](<https://vinny.dev/blog/2026-10-12-the-prompt-is-not-the-permission-securing-the-agentic-sdlc/>) — _vinny.dev_
-18. [CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records](<https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html>) — _thehackernews.com_
-19. [Hands Off the Keyboard: How AI Agents Run Real Intrusions](<https://breachcache.com/cases/hands-off-the-keyboard/>) — _breachcache.com_
-20. [AI models can provably hide arbitrary capabilities](<https://arxiv.org/abs/2610.13928>) — _hnrss.org_
-21. [Under the hood, off the hot path: How D1 scales to millions of databases](<https://blog.cloudflare.com/d1-control-plane/>) — _blog.cloudflare.com_
-22. [Rewinding the exponential: How we keep hardware usage down](<https://blog.cloudflare.com/rewinding-the-exponential/>) — _blog.cloudflare.com_
-23. [Enterprise managed settings enforcement updates](<https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates>) — _github.blog_
-24. [Client telemetry user attribution and configurable capture](<https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture>) — _github.blog_
-25. [Extending Inductor for the IBM Spyre Accelerator](<https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator/>) — _pytorch.org_
-26. [Secret scanning blocks Anthropic keys by default, adds Salesforce](<https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce>) — _github.blog_
-27. [Vghost: Beyond the Privilege Boundary](<https://matrix.tencent.com/en/2026/10/12/vghost-cve-2026-74580>) — _matrix.tencent.com_
-28. [Three OAuth account takeovers, one bug: Auto-linking by email](<https://workos.com/blog/oauth-auto-link-email-account-takeover>) — _workos.com_
-29. [How I Found a $90,000 Remote Code Execution Vulnerability in Google](<https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce>) — _simonkoeck.com_
-30. [11 year old unsoundness bugs found in Rust borrow checker](<https://github.com/rust-lang/rust/issues/164250>) — _hnrss.org_
-31. [Improved detection for withdrawn Dependabot alerts](<https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts>) — _github.blog_
-32. [Code scanning AI Scan metrics in security overview](<https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview>) — _github.blog_
-33. [Uber's CISO on building an insider threat program for AI](<https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai>) — _claude_
-34. [Releasing AI-generated software](<https://blog.ploeh.dk/2026/10/12/releasing-ai-generated-software/>) — _blog.ploeh.dk_
-35. [Human PR Review Is Next](<https://scienceisneato.substack.com/p/human-pr-review-is-next>) — _scienceisneato.substack.com_
-36. [How to engineer an AI harness for game development](<https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code>) — _hnrss.org_
-37. [Epic Games reportedly pivoting to “AI first” game development model](<https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration/>) — _arstechnica.com_
-38. [Audit GitHub Code Quality finding dismissals and reopenings](<https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings>) — _github.blog_
+1. [Google makes Gemini 4 Argon broadly available with limited-time low API pricing of 2/10 per 1M token](<https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token>) — _venturebeat.com_
+2. [Gemini 4 Argon Lands on Google Cloud](<https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud>) — _cloud.google.com_
+3. [llm-gemini 0.35](<https://simonwillison.net/2026/Oct/13/llm-gemini/>) — _simonwillison.net_
+4. [HydraFusion updates and new Max option](<https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option>) — _github.blog_
+5. [PSA: Starting today, GPT 6.1 Sol has a default context window of 500k](<https://threadreaderapp.com/thread/2109543080609165508.html>) — _threadreaderapp.com_
+6. [LFM2.5-24B-A2B](<https://www.liquid.ai/blog/lfm2-5-24b-a2b>) — _liquid.ai_
+7. [Agent observability on the Claude Platform](<https://claude.com/resources/articles/agent-observability-on-the-claude-platform>) — _claude_
+8. [Lessons from scaling teams of coding agents: reach the frontier at 30% of the cost](<https://cohere.com/blog/lessons-from-scaling-teams-of-frontier-coding-agents>) — _cohere_
+9. [Harbor + Docker Sandboxes: Run Safe, Reproducible Agent Evals](<https://www.docker.com/blog/harbor-docker-sandboxes-run-safe-reproducible-agent-evals/>) — _docker.com_
+10. [Are Harnesses Worth the Cost?](<https://martinfowler.com/articles/are-harnesses-worth-the-cost.html>) — _martinfowler.com_
+11. [Introducing CLiF: Continual Learning from Full-Stack Trajectories](<https://www.copilotkit.ai/blog/introducing-clif>) — _copilotkit.ai_
+12. [The “Alien” Economics of AI Monetization](<https://stripe.com/blog/economics-of-ai-monetization>) — _stripe.com_
+13. [Anthropic opens Singapore office and signs MOU with the Government of Singapore](<https://www.anthropic.com/news/singapore-office-opening>) — _anthropic news_
+14. [Preparing for the 2026 US midterms](<https://www.anthropic.com/news/2026-us-midterms>) — _anthropic news_
+15. [Anthropic Warns Self-Replicating AI Could Spread to Your Smart Devices](<https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/>) — _bleepingcomputer.com_
+16. [AI Regulation Must Mimic Industrial Revolution Laws](<https://www.ft.com/content/ba28b7cd-293e-4eee-a073-ad81aaefced3>) — _ft.com_
+17. [Redesigning source control at Anthropic](<https://www.anthropic.com/engineering/redesigning-source-control>) — _anthropic.com_
+18. [Redesigning source control at Anthropic](<https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/>) — _simonwillison.net_
+19. [GitHub Actions workflow lockfiles in public preview](<https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview>) — _github.blog_
+20. [GitLab Patches CVSS 10.0 Flaw That Could Let Unauthenticated Users Run Server Code](<https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html>) — _thehackernews.com_
+21. [Announcing AWS Lambda Web Functions](<https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/>) — _aws.amazon.com_
+22. [NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform](<https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform>) — _developer.nvidia.com_
+23. [Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster](<https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/>) — _google ai_
+24. [SRE book second edition](<https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/>) — _cloud.google.com_
+25. [AKS Is Growing – Along With Its Kubernetes Utilization Problem](<https://cloudnativenow.com/features/aks-is-growing-along-with-its-kubernetes-utilization-problem/>) — _cloudnativenow.com_
+26. [Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug](<https://blog.cloudflare.com/hyperdrive-mysql/>) — _blog.cloudflare.com_
+27. [Beyond Valid Credentials: How Exposed AWS Keys are Tested for Bedrock Access](<https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/>) — _securitylabs.datadoghq.com_
+28. [Ghostscript Flaw Lets Hackers Hijack Servers via PDF Uploads](<https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/>) — _bleepingcomputer.com_
+29. [Racket Infrastructure Compromise](<https://blog.racket-lang.org/2026/10/infrastructure-compromise.html>) — _blog.racket-lang.org_
+30. [Playing It SFAPE: Code Execution in Isolated User Mode](<https://blog.doyensec.com/2026/10/13/Sfape.html>) — _blog.doyensec.com_
+31. [Refrigeration Controller Hack Spoils Food Across European Supermarkets](<https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/>) — _securityweek.com_
+32. [Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics](<https://www.latent.space/p/dyna>) — _latent.space_
+33. [Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest](<https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/>) — _engineering.fb.com_
+34. [TanStack Start 1.0 Is Stable](<https://tanstack.com/blog/tanstack-start-1-0>) — _tanstack.com_
+35. [From 2,500 requests to 24: Rebuilding star history without the stargazers](<https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/>) — _github.blog_
+36. [PathSeer: Adaptive Filtered Vector Search](<https://weaviate.io/blog/pathseer-filtered-vector-search>) — _weaviate_
+37. [A Year of Fast Apply: The Path to 10k Tokens per Second](<https://relace.ai/old/blog/relace-apply-3>) — _relace.ai_
 
 
 ## Archive récente
@@ -109,6 +111,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-10-14` | Mercredi | [Lire →](news/fr/2026-10-14.md) |
 | `2026-10-13` | Mardi | [Lire →](news/fr/2026-10-13.md) |
 | `2026-10-12` | Lundi | [Lire →](news/fr/2026-10-12.md) |
 | `2026-10-11` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-10-11.md) |
@@ -122,9 +125,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-03` | Samedi | [Lire →](news/fr/2026-10-03.md) |
 | `2026-10-02` | Vendredi | [Lire →](news/fr/2026-10-02.md) |
 | `2026-10-01` | Jeudi | [Lire →](news/fr/2026-10-01.md) |
-| `2026-09-30` | Mercredi | [Lire →](news/fr/2026-09-30.md) |
 
-<sub>[Parcourir toute l’archive (121) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (122) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
