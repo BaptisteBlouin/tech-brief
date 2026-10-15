@@ -8,101 +8,60 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-14
-<sub>updated 15 October 2026 at 01:01</sub>
+### Latest digest — 2026-10-15
+<sub>updated 15 October 2026 at 13:00</sub>
 
-## Frontier models and LLM tooling
+## AI Infrastructure and Industry
 
-- Google made Gemini 4 Argon broadly available, with limited-time API pricing of $2/$10 per 1M tokens, and it is available through the paid Gemini API, Google AI Studio, Antigravity and eligible Gemini Enterprise subscriptions <sup>[1](<https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token>)</sup>. Google also made it available on Google Cloud as a frontier model for long, multi-step enterprise work <sup>[2](<https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud>)</sup>.
-- Simon Willison notes that Argon's launch price doubles on December 1st, and argues that per-token prices are hard to compare because what matters is how many tokens a model needs to reach a goal inside an agentic harness <sup>[3](<https://simonwillison.net/2026/Oct/13/llm-gemini/>)</sup>.
-- GitHub's HydraFusion, which orchestrates several models into one response, now draws from a pool including Claude Opus 5.5, GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna, and sets reasoning effort per step (medium for drafts, high for review) <sup>[4](<https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option>)</sup>.
-- GPT-6.1 Sol now has a default context window of 500k, which the announcement says means fewer compactions on long-running tasks <sup>[5](<https://threadreaderapp.com/thread/2109543080609165508.html>)</sup>.
-- Liquid AI released LFM2.5-24B-A2B, a 24B-parameter reasoning model with 2B active parameters, which it reports matches or beats Qwen3.6-35B-A3B on five of eight benchmarks and runs up to 1.7x faster <sup>[6](<https://www.liquid.ai/blog/lfm2-5-24b-a2b>)</sup>.
+- Modal says it has crossed $1B in annualized run rate and raised a $16B Series D, with usage and valuation tripling in five months <sup>[1](<https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d>)</sup>.
+- Cohere announced a proposed agreement to acquire AISLE, a company building autonomous systems to find and fix unknown software vulnerabilities, to strengthen its sovereign AI platform and European presence <sup>[2](<https://cohere.com/blog/cohere-and-aisle-sign-letter-of-intent-to-advance-cyber-resilient-sovereign-ai>)</sup>.
+- Anthropic reportedly told investors its third-quarter revenue rose about 45% from the prior quarter to $16.8 billion, ahead of a possible IPO that could value it at $2 trillion <sup>[3](<https://www.nytimes.com/2026/10/14/technology/anthropic-ipo-revenue-profit.html>)</sup>.
+- A Substack analysis says more than half of businesses now pay for AI and growth will increasingly come from deeper adoption rather than new customers <sup>[4](<https://econlab.substack.com/p/ai-index-oct-2026>)</sup>.
 
-## Agents, RAG and evaluation
+## LLM Tooling, RAG and Agents
 
-- Anthropic added OpenTelemetry trace export from Claude Managed Agents, the Messages API and the Claude SDKs, so each agent turn, model call and tool use can be sent to tools like Grafana, Honeycomb, Datadog and Langfuse <sup>[7](<https://claude.com/resources/articles/agent-observability-on-the-claude-platform>)</sup>.
-- Cohere reports that coding-agent teams improve on ProgramBench by up to ~10 points but cost 3–7x more, and that a strong lead with cheap workers reaches near-frontier results at about 70% lower cost, with a Sol lead and 16 Luna planning workers at $155 versus $510 for an all-Sol team <sup>[8](<https://cohere.com/blog/lessons-from-scaling-teams-of-frontier-coding-agents>)</sup>.
-- Docker shows Harbor running each eval task in Docker Sandboxes (MicroVMs) with custom network policies, to limit reward hacking and keep evals reproducible <sup>[9](<https://www.docker.com/blog/harbor-docker-sandboxes-run-safe-reproducible-agent-evals/>)</sup>.
-- Martin Fowler's analysis argues that a behavioral harness is not an automatic win for every model on every task <sup>[10](<https://martinfowler.com/articles/are-harnesses-worth-the-cost.html>)</sup>.
-- CopilotKit introduced CLiF, which captures agent traces and user actions via the AG-UI protocol for continual learning <sup>[11](<https://www.copilotkit.ai/blog/introducing-clif>)</sup>.
-- Stripe reports that two-thirds of Forbes AI 50 companies use some form of usage-based pricing, as variable AI costs push toward hybrid subscriptions, credits and outcome charges <sup>[12](<https://stripe.com/blog/economics-of-ai-monetization>)</sup>.
+- Jev's team reports it picked the right page first 88% of the time across 168 test questions, versus 70% for embedding search, and cut irrelevant results from 33% to 3% by answering "none" when no page fit <sup>[5](<https://sayora.ai/many-hands/jev-vs-embeddings/>)</sup>.
+- Phoenix is an open-source, self-hosted observability platform that captures OpenTelemetry traces and offers retrieval and response evaluations, datasets, experiments and prompt replay for LLM applications <sup>[6](<https://github.com/Arize-ai/phoenix>)</sup>.
+- XERJ is an Apache-2.0, Elasticsearch-compatible local search engine that auto-indexes code, logs, PDFs and CSVs for agent retrieval and RAG, with optional reranking that can send text to an external provider <sup>[7](<https://github.com/xerj-org/xerj>)</sup>.
+- A proof of concept shows row-level security for Claude Dashboards via MCP, with an MCP server authenticating users and querying DuckDB so access rules apply before data reaches Claude <sup>[8](<https://thedatavist.substack.com/p/need-to-know-implementing-row-level>)</sup>.
+- Docker's guide describes agent risks such as prompt injection, tool misuse and excessive autonomy, and argues for containing what an agent can reach and overseeing its actions <sup>[9](<https://www.docker.com/blog/ai-agent-security-risks/>)</sup>.
+- Addy Osmani recommends agentic verification: end-to-end tests as ground truth, property-based testing to hunt for forbidden states, and fast deterministic tests so agents can retry reliably <sup>[10](<https://addyo.substack.com/p/agentic-verification>)</sup>.
 
-## AI safety and policy
+## Model Serving and Inference Infrastructure
 
-- Anthropic opened a Singapore office and signed an MOU with Singapore's Ministry of Digital Development and Information covering AI safety, security and model evaluation <sup>[13](<https://www.anthropic.com/news/singapore-office-opening>)</sup>.
-- Anthropic published an analysis of 250,000 Claude.ai conversations: about 5.75% touch politics or social issues and about 0.51% are about elections or voting, and requests for voting recommendations appear in roughly 0.01% of US conversations <sup>[14](<https://www.anthropic.com/news/2026-us-midterms>)</sup>.
-- Anthropic warns small models could soon self-replicate across consumer IoT devices; it ran Gemma4-26B-A4B on 15 Android TV boxes but could not demonstrate self-replication <sup>[15](<https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/>)</sup>.
-- The UK's AI minister is drafting compulsory safety reporting and monitoring for frontier AI, and a possible requirement for pre-release model access for review <sup>[16](<https://www.ft.com/content/ba28b7cd-293e-4eee-a073-ad81aaefced3>)</sup>.
+- Meta describes using opportunistic idle inference capacity to rank more ads or route requests to stronger models, scaling back quickly when that capacity disappears while protecting normal latency and reliability <sup>[11](<https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/>)</sup>.
 
-## DevOps, infrastructure and cloud
+## Data, Databases and DevOps
 
-- Anthropic redesigned its source control: it moved its monorepo off git in five months, built its own system called Scion, and went from about 2,500 merged code changes per day in May to over 30,000 per day <sup>[17](<https://www.anthropic.com/engineering/redesigning-source-control>), [18](<https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/>)</sup>.
-- GitHub Actions workflow lockfiles entered public preview, pinning actions to reviewed commits so a moved tag or branch cannot change what runs, though locking does not verify that a dependency is safe <sup>[19](<https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview>)</sup>.
-- GitLab fixed CVE-2026-97229, a CVSS 10.0 integer overflow in CI/CD regex validation that could let an unauthenticated user run code on the server, in versions 19.2.8, 19.3.5 and 19.4.2 <sup>[20](<https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html>)</sup>.
-- AWS announced Lambda Web Functions, which run standard HTTP apps such as Express or Next.js without an event-handler rewrite, with up to 128 concurrent requests per execution environment and billing on active CPU time <sup>[21](<https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/>)</sup>.
-- NVIDIA made the full Run:ai platform open source, including KAI Scheduler and the GPU Fractioning Operator <sup>[22](<https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform>)</sup>.
-- Google's Apigee hybrid 1.17.0 runs an MCP data plane inside your own Kubernetes cluster, so agent traffic and tool execution stay in your infrastructure <sup>[23](<https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/>)</sup>.
-- Google released a rewritten second edition of its SRE book, covering running LLMs and using AI in operations <sup>[24](<https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/>)</sup>.
-- A 2026 Kubernetes optimization report says AKS CPU utilization is 8% and memory 20%, with GPU utilization at 2% on AKS <sup>[25](<https://cloudnativenow.com/features/aks-is-growing-along-with-its-kubernetes-utilization-problem/>)</sup>.
-- Cloudflare Hyperdrive reached GA for MySQL, after a rare caching bug was found and fixed during the beta <sup>[26](<https://blog.cloudflare.com/hyperdrive-mysql/>)</sup>.
+- A logical-replication walkthrough reports a PostgreSQL major upgrade with 181 ms of write interruption and 179 ms during rollback, with no data loss, using parallel old and new clusters <sup>[12](<https://tapoueh.org/blog/2026/10/zero-downtime-postgres-upgrades-with-logical-replication>)</sup>.
+- SQLBuild is an open-source SQL and Python framework that checks contracts and lineage before execution and supports safe renames and production diffs across Snowflake, Postgres, BigQuery and Databricks <sup>[13](<https://github.com/chio-labs/sqlbuild>)</sup>.
+- pg_vectorsearch is a PostgreSQL extension for approximate nearest neighbor search <sup>[14](<https://github.com/timescale/pg_vectorsearch>)</sup>.
+- Benchmarks on 1,000 IDs found IN, ANY and VALUES joins performed similarly in PostgreSQL, so teams should verify with EXPLAIN on their own data <sup>[15](<https://explainmeasured.com/posts/arguments-that-came-out-even>)</sup>.
 
-## Security
+## Developer Practices and Tooling
 
-- Datadog found that three credential-harvesting platforms test exposed AWS keys with ListFoundationModels, InvokeModel and Converse to check Bedrock access <sup>[27](<https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/>)</sup>.
-- A Ghostscript flaw could let attackers achieve remote code execution through specially crafted PDFs uploaded to services that generate previews or thumbnails <sup>[28](<https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/>)</sup>.
-- Racket's Apple and Windows signing keys were exposed after a crypto miner ran on a compromised build server, and the project rotated both keys <sup>[29](<https://blog.racket-lang.org/2026/10/infrastructure-compromise.html>)</sup>.
-- Doyensec describes a chain in Windows' SFAPE VBS enclave that led to arbitrary calls to VTL1 code, fixed by Microsoft as CVE-2026-83498 in September's Patch Tuesday <sup>[30](<https://blog.doyensec.com/2026/10/13/Sfape.html>)</sup>.
-- Hackers remotely altered Danfoss refrigeration controllers at European supermarkets, forcing freezers into defrost for up to six hours <sup>[31](<https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/>)</sup>.
-
-## Developer tools and software engineering
-
-- Dyna Robotics released Dyna-2.1, a physical robot agent it reports reached a 99.4% success rate folding restaurant napkins over 24 hours <sup>[32](<https://www.latent.space/p/dyna>)</sup>.
-- Meta's Instagram Live moved its live video ingest to the open Media over QUIC standard, which Meta says matched its in-house RUSH protocol on streaming quality and reliability in testing <sup>[33](<https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/>)</sup>.
-- TanStack Start 1.0 is stable, combining type-safe routing with server rendering and typed server functions <sup>[34](<https://tanstack.com/blog/tanstack-start-1-0>)</sup>.
-- GitHub reconstructed star history without exposing stargazer identities, cutting a query that took about 2,500 requests to 24 <sup>[35](<https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/>)</sup>.
-- Weaviate describes PathSeer, an adaptive filtered vector search method from a SIGMOD 2026 paper, which its team reports as a potential improvement over ACORN <sup>[36](<https://weaviate.io/blog/pathseer-filtered-vector-search>)</sup>.
-- Relace describes a small model that applies code edits at a reported 10,000 tokens per second, using LoRA fine-tuning, FP8 quantization and speculative decoding <sup>[37](<https://relace.ai/old/blog/relace-apply-3>)</sup>.
+- Jared Palmer argues that recognizing clean code remains useful, but knowing the right program shape before writing it is something AI cannot yet do <sup>[16](<https://jaredpalmer.com/blog/code-you-didnt-write>)</sup>.
+- A benchmark processed 7.6 GB of JSON in about 0.12 seconds using fastsimdjson on free-threaded Python across 64 cores, roughly 66 GB/s, by parallelizing and building Python objects only for needed fields <sup>[17](<https://lemire.me/blog/2026/10/12/parsing-json-at-tens-of-gigabytes-per-second-in-python/>)</sup>.
 
 ## Sources
 
-1. [Google makes Gemini 4 Argon broadly available with limited-time low API pricing of 2/10 per 1M token](<https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token>) — _venturebeat.com_
-2. [Gemini 4 Argon Lands on Google Cloud](<https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud>) — _cloud.google.com_
-3. [llm-gemini 0.35](<https://simonwillison.net/2026/Oct/13/llm-gemini/>) — _simonwillison.net_
-4. [HydraFusion updates and new Max option](<https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option>) — _github.blog_
-5. [PSA: Starting today, GPT 6.1 Sol has a default context window of 500k](<https://threadreaderapp.com/thread/2109543080609165508.html>) — _threadreaderapp.com_
-6. [LFM2.5-24B-A2B](<https://www.liquid.ai/blog/lfm2-5-24b-a2b>) — _liquid.ai_
-7. [Agent observability on the Claude Platform](<https://claude.com/resources/articles/agent-observability-on-the-claude-platform>) — _claude_
-8. [Lessons from scaling teams of coding agents: reach the frontier at 30% of the cost](<https://cohere.com/blog/lessons-from-scaling-teams-of-frontier-coding-agents>) — _cohere_
-9. [Harbor + Docker Sandboxes: Run Safe, Reproducible Agent Evals](<https://www.docker.com/blog/harbor-docker-sandboxes-run-safe-reproducible-agent-evals/>) — _docker.com_
-10. [Are Harnesses Worth the Cost?](<https://martinfowler.com/articles/are-harnesses-worth-the-cost.html>) — _martinfowler.com_
-11. [Introducing CLiF: Continual Learning from Full-Stack Trajectories](<https://www.copilotkit.ai/blog/introducing-clif>) — _copilotkit.ai_
-12. [The “Alien” Economics of AI Monetization](<https://stripe.com/blog/economics-of-ai-monetization>) — _stripe.com_
-13. [Anthropic opens Singapore office and signs MOU with the Government of Singapore](<https://www.anthropic.com/news/singapore-office-opening>) — _anthropic news_
-14. [Preparing for the 2026 US midterms](<https://www.anthropic.com/news/2026-us-midterms>) — _anthropic news_
-15. [Anthropic Warns Self-Replicating AI Could Spread to Your Smart Devices](<https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/>) — _bleepingcomputer.com_
-16. [AI Regulation Must Mimic Industrial Revolution Laws](<https://www.ft.com/content/ba28b7cd-293e-4eee-a073-ad81aaefced3>) — _ft.com_
-17. [Redesigning source control at Anthropic](<https://www.anthropic.com/engineering/redesigning-source-control>) — _anthropic.com_
-18. [Redesigning source control at Anthropic](<https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/>) — _simonwillison.net_
-19. [GitHub Actions workflow lockfiles in public preview](<https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview>) — _github.blog_
-20. [GitLab Patches CVSS 10.0 Flaw That Could Let Unauthenticated Users Run Server Code](<https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html>) — _thehackernews.com_
-21. [Announcing AWS Lambda Web Functions](<https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/>) — _aws.amazon.com_
-22. [NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform](<https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform>) — _developer.nvidia.com_
-23. [Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster](<https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/>) — _google ai_
-24. [SRE book second edition](<https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/>) — _cloud.google.com_
-25. [AKS Is Growing – Along With Its Kubernetes Utilization Problem](<https://cloudnativenow.com/features/aks-is-growing-along-with-its-kubernetes-utilization-problem/>) — _cloudnativenow.com_
-26. [Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug](<https://blog.cloudflare.com/hyperdrive-mysql/>) — _blog.cloudflare.com_
-27. [Beyond Valid Credentials: How Exposed AWS Keys are Tested for Bedrock Access](<https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/>) — _securitylabs.datadoghq.com_
-28. [Ghostscript Flaw Lets Hackers Hijack Servers via PDF Uploads](<https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/>) — _bleepingcomputer.com_
-29. [Racket Infrastructure Compromise](<https://blog.racket-lang.org/2026/10/infrastructure-compromise.html>) — _blog.racket-lang.org_
-30. [Playing It SFAPE: Code Execution in Isolated User Mode](<https://blog.doyensec.com/2026/10/13/Sfape.html>) — _blog.doyensec.com_
-31. [Refrigeration Controller Hack Spoils Food Across European Supermarkets](<https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/>) — _securityweek.com_
-32. [Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics](<https://www.latent.space/p/dyna>) — _latent.space_
-33. [Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest](<https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/>) — _engineering.fb.com_
-34. [TanStack Start 1.0 Is Stable](<https://tanstack.com/blog/tanstack-start-1-0>) — _tanstack.com_
-35. [From 2,500 requests to 24: Rebuilding star history without the stargazers](<https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/>) — _github.blog_
-36. [PathSeer: Adaptive Filtered Vector Search](<https://weaviate.io/blog/pathseer-filtered-vector-search>) — _weaviate_
-37. [A Year of Fast Apply: The Path to 10k Tokens per Second](<https://relace.ai/old/blog/relace-apply-3>) — _relace.ai_
+1. [\[AINews\] Modal’s $1B ARR, $16B Series D makes it NYC’s newest AI Infra Decacorn, 3x usage and 3x valuation in 5 months, 15x in 1 yr](<https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d>) — _latent.space_
+2. [Cohere and AISLE sign letter of intent to advance cyber-resilient sovereign AI](<https://cohere.com/blog/cohere-and-aisle-sign-letter-of-intent-to-advance-cyber-resilient-sovereign-ai>) — _cohere_
+3. [Anthropic Says Revenue Jumped 45% to $16.8 Billion in Third Quarter](<https://www.nytimes.com/2026/10/14/technology/anthropic-ipo-revenue-profit.html>) — _nytimes.com_
+4. [Cracks in the AI Thesis Part 3](<https://econlab.substack.com/p/ai-index-oct-2026>) — _econlab.substack.com_
+5. [Jev handed our LLM the wrong page a tenth as often as our embeddings](<https://sayora.ai/many-hands/jev-vs-embeddings/>) — _sayora.ai_
+6. [Phoenix](<https://github.com/Arize-ai/phoenix>) — _github.com_
+7. [XERJ](<https://github.com/xerj-org/xerj>) — _github.com_
+8. [Need to Know: Implementing row-level security for Claude Dashboards via Model Context Protocol](<https://thedatavist.substack.com/p/need-to-know-implementing-row-level>) — _thedatavist.substack.com_
+9. [AI Agent Security Risks: What Can Go Wrong When Agents Act on Their Own](<https://www.docker.com/blog/ai-agent-security-risks/>) — _docker.com_
+10. [Agentic Verification](<https://addyo.substack.com/p/agentic-verification>) — _addyo.substack.com_
+11. [Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations](<https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/>) — _engineering.fb.com_
+12. [Zero-downtime Postgres upgrades with logical replication](<https://tapoueh.org/blog/2026/10/zero-downtime-postgres-upgrades-with-logical-replication>) — _tapoueh.org_
+13. [SQLBuild: safe refactoring for warehouse SQL](<https://github.com/chio-labs/sqlbuild>) — _github.com_
+14. [pg_vectorsearch](<https://github.com/timescale/pg_vectorsearch>) — _github.com_
+15. [Four PostgreSQL arguments that came out even](<https://explainmeasured.com/posts/arguments-that-came-out-even>) — _explainmeasured.com_
+16. [Code you didn't write](<https://jaredpalmer.com/blog/code-you-didnt-write>) — _jaredpalmer.com_
+17. [Parsing JSON at tens of gigabytes per second… in Python](<https://lemire.me/blog/2026/10/12/parsing-json-at-tens-of-gigabytes-per-second-in-python/>) — _lemire.me_
 
 
 ## Recent archive
