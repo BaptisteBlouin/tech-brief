@@ -9,64 +9,124 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-10-16
-<sub>mis à jour le 16 octobre 2026 à 13:01</sub>
+<sub>mis à jour le 17 octobre 2026 à 01:01</sub>
 
 ## Modèles et poids ouverts
 
-- Meta a publié Muse Spark Open, un modèle à mélange d'experts à poids ouverts de 816 milliards de paramètres, qui active 42 milliards de paramètres par jeton et prend en charge jusqu'à 1 million de jetons de contexte <sup>[1](<https://venturebeat.com/technology/meta-unveils-muse-spark-open-the-new-top-u-s-open-weights-model-and-it-runs-on-two-paired-mac-desktops>)</sup>. Les benchmarks de Meta ont été réalisés sur une paire de Mac Studio M5 Ultra, dont la configuration mémoire n'est pas précisée <sup>[1](<https://venturebeat.com/technology/meta-unveils-muse-spark-open-the-new-top-u-s-open-weights-model-and-it-runs-on-two-paired-mac-desktops>)</sup>.
-- Selon la même lettre d'information, une version de Muse Spark Open a été livrée aujourd'hui, mais elle est moins performante que le modèle précédent de Meta, Spark 1.3 <sup>[2](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>)</sup>.
+- Meta a publié Muse Spark Open, un modèle multimodal à poids ouverts de 816 milliards de paramètres, dont 42 milliards actifs, avec une fenêtre de contexte d'un million de tokens, conçu pour le codage et les tâches agentiques de longue haleine ; il peut fonctionner localement sur deux Mac Studio Apple M5 Ultra via MLX <sup>[1](<https://venturebeat.com/technology/meta-unveils-muse-spark-open-the-new-top-u-s-open-weights-model-and-it-runs-on-two-paired-mac-desktops>)</sup> <sup>[2](<https://research.meta.ai/blog/muse-spark-open>)</sup>.
+- Une version de Muse Spark Open a été mise en ligne aujourd'hui, mais elle est moins performante que le modèle précédent de Meta, Spark 1.3 <sup>[3](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>)</sup>.
+- Reflection a publié Beam-1.0-501B-A23B, un modèle ouvert de 501 milliards de paramètres <sup>[4](<https://huggingface.co/blog/reflection-beam>)</sup>. Nvidia a publié Nemotron 3.5 Super VL, un modèle de raisonnement multimodal obtenant 26,5 à l'Intelligence Index d'Artificial Analysis avec moins de tokens de sortie que son prédécesseur, ainsi que le modèle plus petit Nemotron 3.5 Bolt 74B-A9B et des poids NVFP4 quasiment sans perte <sup>[5](<https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/>)</sup>.
+- Black Forest Labs a publié FLUX 3 Image Klein, un modèle à poids ouverts de 5,6 milliards de paramètres pour la génération et l'édition d'images à partir de texte, avec une sortie 4K native et jusqu'à 10 images de référence <sup>[6](<https://bfl.ai/blog/flux-3-image-klein>)</sup>.
+- Microsoft a détaillé MAI-Base-2, un modèle à mélange d'experts de 2,8 billions de paramètres dont 80 milliards actifs, qu'elle affirme avoir dépassé tous les modèles à poids ouverts lors de ses évaluations de pré-entraînement sur jeu de test réservé <sup>[7](<https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/>)</sup>.
+- Les modèles à poids ouverts traitent désormais plus de sept tokens sur dix sur l'AI Gateway de Vercel et représentent près d'un quart des dépenses, leur part ayant plus que quadruplé depuis juin <sup>[8](<https://vercel.com/blog/ai-gateway-production-index-october-2026>)</sup>.
 
 ## Interprétabilité et alignement
 
-- Nick Cammarata, de Goodfire, a publié un essai soutenant que les réseaux de neurones sont déjà « propres », affirmant que de nombreux cas connus de polysémanticité et de superposition se résolvent grâce à une analyse agentique approfondie <sup>[2](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>)</sup>.
+- L'essai de Goodfire « Neural Networks Are Already Clean » soutient que l'explication par la superposition de la polysémanticité était exagérée : une grande partie de l'empaquetage apparemment arbitraire relevait d'une généralisation récursive, de sorte que les réseaux peuvent être étudiés directement, et que les perspectives de l'interprétabilité mécaniste pourraient être meilleures qu'attendu <sup>[3](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>)</sup> <sup>[9](<https://already-clean.goodfire.com/>)</sup>.
+- La Frontier Red Team d'Anthropic a utilisé Claude pour trancher une question vieille de plusieurs décennies : d'où venaient les graines des courbes ECDSA du NIST. Elle conclut qu'il s'agissait d'horodatages, sans aucune action requise de la part des utilisateurs <sup>[10](<https://www.anthropic.com/research/ecdsa-curve-origins>)</sup>.
 
 ## Agents et outils pour développeurs
 
-- GitHub Copilot dans Slack et Microsoft Teams fonctionne désormais sur plusieurs dépôts au sein d'une même conversation, pour des tâches telles que le suivi de pull requests ou l'investigation de problèmes couvrant des dépôts frontend et backend <sup>[3](<https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates>)</sup>.
-- Perplexity a publié en open source SPACE, la plateforme de bac à sable qui sous-tend son produit Computer, présentée comme une base pour des systèmes d'agents plus sûrs <sup>[4](<https://www.perplexity.ai/hub/blog/open-sourcing-space>)</sup>.
-- Des entreprises technologiques développent des applications internes de « vibe coding » destinées aux non-ingénieurs, qui, selon le Pragmatic Engineer, connaissent une adoption plus forte que les produits des éditeurs tout en limitant l'exposition des données internes <sup>[5](<https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/>)</sup>.
-- Des développeurs utilisent Claude pour faire de l'ingénierie inverse sur du matériel : il peut lire de longues captures USB, repérer une séquence répétitive dont un octet change, proposer la signification de cet octet et écrire des tests pour la confirmer, tandis que les humains décident de ce qu'il faut construire et vérifient sur du matériel réel <sup>[6](<https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/>)</sup>.
-- L'article d'Every « How Codex Happened » raconte de l'intérieur l'histoire de Codex, né d'une tentative de créer un ingénieur logiciel IA, et devenu central dans le retour d'OpenAI après l'échec de la première version cloud à trouver son adéquation produit-marché <sup>[7](<https://every.to/p/how-codex-happened>)</sup>.
+- L'équipe de Claude Code décrit comment elle relit le code produit à l'échelle des agents, en optimisant le temps de relecture humaine minimal qui n'augmente ni les annulations ni les incidents ; les pull requests fusionnées ont plus que doublé de juin à septembre, tandis que la part des annulations a baissé de plus de 40 % <sup>[11](<https://claude.dev/blog/solving-code-review-at-anthropic/>)</sup>.
+- Le bilan 2026 de Docker sur l'enquête Stack Overflow soutient que la confiance se déplace des conteneurs vers les bacs à sable pour les agents autonomes <sup>[12](<https://www.docker.com/blog/stack-overflow-survey-2026-ai-agent-trust/>)</sup>.
+- GitHub Copilot dans Slack et Microsoft Teams fonctionne désormais sur plusieurs dépôts dans une même conversation, pour des tâches comme le suivi des pull requests ou l'investigation de problèmes touchant les dépôts frontend et backend <sup>[13](<https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates>)</sup>.
+- Perplexity a publié en open source SPACE, la plateforme de bac à sable derrière son produit Computer, comme base pour des systèmes d'agents plus sûrs <sup>[14](<https://www.perplexity.ai/hub/blog/open-sourcing-space>)</sup>.
+- Des entreprises technologiques développent des applications internes de « vibe coding » destinées aux non-ingénieurs, que le Pragmatic Engineer décrit comme plus adoptées que les produits des éditeurs et plus sûres en matière d'exposition des données internes <sup>[15](<https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/>)</sup>.
+- Des développeurs utilisent Claude pour faire de la rétro-ingénierie matérielle : il peut lire de longues captures USB, repérer une séquence répétée où un octet change, proposer la signification de cet octet et écrire des tests pour la confirmer, tandis que les humains décident encore de ce qu'il faut construire et vérifient sur du matériel réel <sup>[16](<https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/>)</sup>.
+- Le Agent Development Kit de Google couvre désormais Python, Go, TypeScript, Java et Kotlin, avec prise en charge de MCP et A2A dans tous les cas <sup>[17](<https://cloud.google.com/blog/topics/developers-practitioners/one-agent-development-kit-five-languages/>)</sup>.
+- Devin Oncall est généralement disponible pour investiguer et corriger les incidents de production à l'aide de compétences et d'une mémoire propres à l'entreprise, avec un agent de relecture asynchrone qui conteste les diagnostics non étayés <sup>[18](<https://devin.ai/blog/introducing-devin-oncall>)</sup>.
+- Pulumi ESC peut désormais émettre des jetons OIDC pour tout service qui les accepte, avec une expiration en moins d'une heure, ce qui évite de stocker des clés d'API de longue durée <sup>[19](<https://www.pulumi.com/blog/esc-oidc-tokens-for-any-service/>)</sup>.
+- Spacelift s'intègre à Cursor Origin afin que les modifications d'infrastructure pilotées par des agents passent par les mêmes politiques OPA et les mêmes approbations <sup>[20](<https://spacelift.io/blog/spacelift-cursor-origin-integration>)</sup>.
+- Les Managed Agents de DigitalOcean utilisent des microVM Firecracker avec un état sauvegardé par points de contrôle, et annoncent moins de 200 millisecondes au p50 pour reprendre sur le chemin de modèle préchauffé <sup>[21](<https://www.digitalocean.com/blog/microvm-architecture>)</sup>.
+- Mesurer le travail des agents par l'effort humain et les dépenses en agents nécessaires pour aboutir à un résultat accepté, y compris les tentatives échouées et les interventions de secours, est proposé comme une mesure de productivité plus honnête <sup>[22](<https://cutler.sg/blog/2026-10-measure-agent-review-time>)</sup>.
+- Atlassian a bâti un lakehouse de sécurité OCSF sur Databricks, normalisant 44 milliards d'événements de sécurité par jour et passant d'alertes une à une à des signaux regroupés et fondés sur le risque, à travers plus de 500 détections <sup>[23](<https://www.databricks.com/blog/reducing-noise-how-atlassian-built-ocsf-security-lakehouse-databricks>)</sup>.
 
-## IA en entreprise, en pratique
+## L'IA en entreprise, en pratique
 
-- Unzer indique avoir intégré l'IA à trois processus clés, avec des gains d'efficacité de 60 à 90 %, notamment la réduction de l'intégration des commerçants de 47 à 8 jours et du filtrage des médias défavorables de 15 minutes à moins de 3 <sup>[8](<https://ai-first.ai/podcast/wie-unzer-ki-in-3-kernprozesse-mit-60-90-effizienzgewinn-integriert-hat>)</sup>.
-- Lisa Precht, d'IBM, explique comment IBM a économisé 4,5 milliards de dollars grâce à l'IA, en soulignant que faire fonctionner des agents en production est plus difficile que de les prototyper, que la gouvernance doit être intégrée au système, et que de petits modèles spécialisés conviennent mieux à certaines tâches <sup>[9](<https://ai-first.ai/podcast/wie-ibm-mit-ki-4-5-milliarden-dollar-einsparte>)</sup>.
+- Unzer indique avoir intégré l'IA dans trois processus centraux, avec des gains d'efficacité de 60 à 90 %, notamment la réduction de l'intégration des commerçants de 47 à 8 jours et du filtrage de médias défavorables de 15 minutes à moins de 3 <sup>[24](<https://ai-first.ai/podcast/wie-unzer-ki-in-3-kernprozesse-mit-60-90-effizienzgewinn-integriert-hat>)</sup>.
+- Lisa Precht, d'IBM, affirme que l'entreprise a économisé 4,5 milliards de dollars grâce à l'IA, en insistant sur le fait que faire tourner des agents en production est plus difficile que de réaliser un prototype, que la gouvernance doit être intégrée au système et que de petits modèles spécialisés conviennent mieux à certaines tâches <sup>[25](<https://ai-first.ai/podcast/wie-ibm-mit-ki-4-5-milliarden-dollar-einsparte>)</sup>.
+- Un responsable du développement commercial d'Anthropic Japon décrit l'utilisation d'une flotte d'agents Claude Managed Agents pour préparer la qualification des prospects, les e-mails bilingues et les mises à jour du CRM avant le début de sa journée <sup>[26](<https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day>)</sup>.
+
+## Sécurité
+
+- Une faille dans le volet d'aperçu de Claude Code Desktop permettait à du HTML malveillant présent dans un dépôt public de s'exécuter lorsqu'un développeur demandait à Claude de le relire ; en enchaînant plusieurs faiblesses, elle permettait de voler des identifiants cloud, Git et OAuth. Anthropic l'a corrigée après un contournement du premier correctif <sup>[27](<https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat>)</sup>.
+- curl 8.23.0 corrige CVE-2026-92392, une utilisation après libération dans HTTP/2 pouvant mener à une exécution de code à distance, classée sous le niveau CRITICAL par les mainteneurs, car son exploitation nécessite un envoi d'environ 135 Ko et des conditions dépendant de l'allocation <sup>[28](<https://daniel.haxx.se/blog/2026/10/14/a-uaf-turned-rce/>)</sup>.
+- Des chercheurs de Datadog ont montré qu'une « politique contrefaite » injectée dans un champ de profil modifiable par l'utilisateur pouvait faire chuter le rappel de Jev sur l'injection de prompt de 82,90 % à 3,88 %. Les champs contrôlés par l'utilisateur qui atteignent un classifieur doivent donc être traités comme une surface d'attaque, et les contrôles d'autorisation stricts doivent rester en dehors du modèle <sup>[29](<https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/>)</sup>.
+- Citizen Lab rapporte que les éditeurs de logiciels espions Candiru et Bindecy ont utilisé la plateforme publicitaire Controlium de Discover-Tech pour cibler des personnes via des publicités en ligne, infectant au moins 45 ordinateurs Windows d'Al Jazeera en 2024-2025 <sup>[30](<https://techcrunch.com/2026/10/15/citizen-lab-says-governments-are-abusing-online-ads-to-hack-people-with-zero-click-spyware/>)</sup>.
+- La passerelle de messagerie sécurisée de Cisco est affectée par une faille zero-day activement exploitée, CVE-2026-76519, notée CVSS 9.8 <sup>[31](<https://www.theregister.com/security/2026/10/14/cisco-make-me-root-email-bug-exploited-as-a-0-day-by-unknown-crims/5303168>)</sup>.
+- Drupal a corrigé CVE-2026-108097, une faille critique de Field UI pouvant mener à une exécution de code à distance non authentifiée via des modules contribués <sup>[32](<https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html>)</sup>.
 
 ## Données, infrastructure et cloud
 
-- DuckDB a évalué une version de développement v2.0 sur la puce Vera de NVIDIA (88 cœurs Olympus, bande passante mémoire pouvant atteindre 1,2 To/s) face à une référence Intel Xeon 6, en exécutant l'intégralité du benchmark TPC-H à un facteur d'échelle de 1 000 sur deux machines Ubuntu 26.04 dotées de 768 Go de RAM <sup>[10](<https://duckdb.org/2026/10/16/nvidia-vera-benchmark.html>)</sup>.
-- Redis inclut désormais des bitmaps de Roaring compressés, qui stockent des ensembles d'entiers épars en occupant peu d'espace <sup>[11](<https://lemire.me/blog/2026/10/15/redis-now-has-compressed-bitmaps-roaring/>)</sup>.
-- CoreWeave a contracté plus de 51 milliards de dollars de dette et d'engagements pour son infrastructure d'IA, et ses écarts de swaps de défaut de crédit à cinq ans ont fortement augmenté, signe de l'inquiétude des investisseurs face à la dette liée à l'IA <sup>[12](<https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html>)</sup>.
+- DuckDB a comparé une version de développement v2.0 sur la puce Vera de NVIDIA (88 cœurs Olympus, bande passante mémoire allant jusqu'à 1,2 To/s) à une référence Intel Xeon 6, en exécutant le benchmark TPC-H complet à facteur d'échelle 1 000 sur deux machines Ubuntu 26.04 dotées de 768 Go de RAM <sup>[33](<https://duckdb.org/2026/10/16/nvidia-vera-benchmark.html>)</sup>.
+- La fonction read_json de DuckDB peut désormais transformer directement une colonne texte JSON en colonnes typées en SQL, sans passer par un fichier intermédiaire <sup>[34](<https://duckdb.org/2026/10/16/json-to-typed-columns.html>)</sup>.
+- Redis inclut désormais des bitmaps Roaring compressés, qui stockent les ensembles épars d'entiers sur peu d'espace <sup>[35](<https://lemire.me/blog/2026/10/15/redis-now-has-compressed-bitmaps-roaring/>)</sup>.
+- CoreWeave a contracté plus de 51 milliards de dollars de dettes et d'engagements pour son infrastructure d'IA, et les spreads de ses swaps de défaut de crédit à cinq ans ont fortement grimpé, signe d'une inquiétude des investisseurs face à la dette liée à l'IA <sup>[36](<https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html>)</sup>.
+- Amazon S3, y compris S3 Tables et S3 Vectors, peut être provisionné directement depuis la Vercel Marketplace et v0 au tarif standard de S3 <sup>[37](<https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/>)</sup>.
+- L'image de runner Xcode 27 de GitHub est généralement disponible pour compiler et tester les applications Apple sur les runners Apple Silicon <sup>[38](<https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available>)</sup>.
+- La conformité des licences open source de GitHub est généralement disponible pour GitHub Enterprise Cloud, appliquant une politique de licence à l'échelle de l'entreprise via une condition de ruleset sur les pull requests <sup>[39](<https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available>)</sup>.
+- Neki coordonne l'allocation des séquences entre shards dans son routeur, en préservant le nombre d'exécutions des expressions volatiles, afin que les requêtes PostgreSQL distribuées ne produisent pas d'identifiants en double <sup>[40](<https://planetscale.com/blog/neki-volatile-expressions>)</sup>.
 
 ## Robotique et recherche matérielle
 
-- Google Quantum AI a démontré la culture d'états magiques sur son processeur Willow, rapportant une réduction des erreurs d'un facteur 40 pour les états magiques corrigés d'erreurs <sup>[13](<https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/>)</sup>.
-- Construction Physics examine comment les données d'entraînement des robots sont coûteuses à collecter, et comment les chercheurs tentent d'en rassembler suffisamment pour observer les gains d'échelle constatés dans les grands modèles de langage <sup>[14](<https://www.construction-physics.com/p/how-to-train-your-robot>)</sup>.
+- Google Quantum AI a démontré la culture d'états magiques sur son processeur Willow, annonçant une réduction d'erreurs d'un facteur 40 pour les états magiques corrigés <sup>[41](<https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/>)</sup>.
+- Construction Physics examine le coût de la collecte des données d'entraînement pour robots et la manière dont les chercheurs tentent d'en rassembler assez pour observer les gains d'échelle constatés dans les grands modèles de langage <sup>[42](<https://www.construction-physics.com/p/how-to-train-your-robot>)</sup>.
+- Synopsys décrit l'utilisation d'agents de tâches orchestrés pour transformer des spécifications en RTL vérifié, les ingénieurs humains définissant toujours les architectures et approuvant la fabrication <sup>[43](<https://semiengineering.com/how-close-are-we-to-fully-autonomous-chip-design/>)</sup>.
 
 ## Culture d'ingénierie et carrières
 
-- Weli.dev soutient que les candidats à l'emploi subissent une pression sur les coûts, car chaque poste attend un usage de l'IA, or utiliser l'IA a un coût <sup>[15](<https://weli.dev/blog/the-cost-of-getting-a-job-today/>)</sup>.
-- Un message sur les étoiles GitHub avertit que des influenceurs peuvent faire paraître des dépôts largement utilisés alors qu'ils ne le sont pas, ce qui affaiblit le signal que les étoiles fournissaient autrefois <sup>[16](<https://avdi.codes/lies-damn-lies-and-github-stars/>)</sup>.
+- Weli.dev soutient que les candidats à l'emploi subissent une pression sur les coûts, car chaque poste attend un usage de l'IA, alors que l'usage de l'IA coûte de l'argent <sup>[44](<https://weli.dev/blog/the-cost-of-getting-a-job-today/>)</sup>.
+- Un billet sur les étoiles GitHub avertit que des influenceurs peuvent faire paraître des dépôts largement utilisés alors qu'ils ne le sont pas, ce qui mine le signal que les étoiles fournissaient autrefois <sup>[45](<https://avdi.codes/lies-damn-lies-and-github-stars/>)</sup>.
+- Un essai soutient qu'une génération de code moins coûteuse pourrait pousser les agences logicielles à vendre moins des heures de développement et davantage une expertise métier, un discernement produit et une responsabilité sur les résultats <sup>[46](<https://efp.asia/blog/2026/10/15/code-is-a-commodity-now/>)</sup>.
 
 ## Sources
 
 1. [Meta unveils Muse Spark Open, the new top US open weights model — and it runs on two paired Mac desktops](<https://venturebeat.com/technology/meta-unveils-muse-spark-open-the-new-top-u-s-open-weights-model-and-it-runs-on-two-paired-mac-desktops>) — _venturebeat.com_
-2. [\[AINews\] Agents disprove Polysemanticity; greatly improve Interpretability & Alignment](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>) — _latent.space_
-3. [Multi-repo support and other improvements for GitHub Copilot in Slack and Microsoft Teams](<https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates>) — _github.blog_
-4. [Open-sourcing SPACE, the sandbox platform behind Computer](<https://www.perplexity.ai/hub/blog/open-sourcing-space>) — _perplexity.ai_
-5. [New trend of building “internal vibe-coding apps” at tech companies](<https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/>) — _blog.pragmaticengineer.com_
-6. [Using Artificial Intelligence to reverse engineer hardware](<https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/>) — _blogs.gnome.org_
-7. [How Codex Happened](<https://every.to/p/how-codex-happened>) — _every.to_
-8. [Wie Unzer KI in 3 Kernprozesse mit 60-90% Effizienzgewinn integriert hat](<https://ai-first.ai/podcast/wie-unzer-ki-in-3-kernprozesse-mit-60-90-effizienzgewinn-integriert-hat>) — _ai first podcast_
-9. [Wie IBM mit KI 4,5 Milliarden Dollar einsparte](<https://ai-first.ai/podcast/wie-ibm-mit-ki-4-5-milliarden-dollar-einsparte>) — _ai first podcast_
-10. [Benchmarking DuckDB v2.0-dev on NVIDIA Vera](<https://duckdb.org/2026/10/16/nvidia-vera-benchmark.html>) — _duckdb.org_
-11. [Redis now has compressed bitmaps (Roaring)](<https://lemire.me/blog/2026/10/15/redis-now-has-compressed-bitmaps-roaring/>) — _lemire.me_
-12. [CoreWeave credit default swaps hit distress levels as investors sour on AI debt](<https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html>) — _cnbc.com_
-13. [Bringing the magic: Google breaks open a bottleneck in quantum computing](<https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/>) — _blog.google_
-14. [How to Train Your Robot](<https://www.construction-physics.com/p/how-to-train-your-robot>) — _construction-physics.com_
-15. [The Cost of Getting a Job Today](<https://weli.dev/blog/the-cost-of-getting-a-job-today/>) — _weli.dev_
-16. [Lies, Damn Lies, and GitHub Stars](<https://avdi.codes/lies-damn-lies-and-github-stars/>) — _avdi.codes_
+2. [Muse Spark Open](<https://research.meta.ai/blog/muse-spark-open>) — _research.meta.ai_
+3. [\[AINews\] Agents disprove Polysemanticity; greatly improve Interpretability & Alignment](<https://www.latent.space/p/ainews-agents-disprove-polysemanticity>) — _latent.space_
+4. [Welcome Beam: a 501B open model you can own, customize, and scale](<https://huggingface.co/blog/reflection-beam>) — _huggingface.co_
+5. [Nvidia released Nemotron 3.5 Super VL](<https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/>) — _developer.nvidia.com_
+6. [FLUX 3 Image Klein](<https://bfl.ai/blog/flux-3-image-klein>) — _bfl.ai_
+7. [Inside Microsoft's Frontier Pre-Training Stack](<https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/>) — _microsoft.ai_
+8. [Open weight takes 71.5% of tokens and 23% of spend](<https://vercel.com/blog/ai-gateway-production-index-october-2026>) — _vercel.com_
+9. [Neural Networks Are Already Clean](<https://already-clean.goodfire.com/>) — _already-clean.goodfire.com_
+10. [Claude reveals ECDSA curve origins](<https://www.anthropic.com/research/ecdsa-curve-origins>) — _anthropic red_
+11. [How the Claude Code team does code review](<https://claude.dev/blog/solving-code-review-at-anthropic/>) — _claude_
+12. [From Containers to Sandboxes: Developer Trust in the Agentic Era](<https://www.docker.com/blog/stack-overflow-survey-2026-ai-agent-trust/>) — _docker.com_
+13. [Multi-repo support and other improvements for GitHub Copilot in Slack and Microsoft Teams](<https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates>) — _github.blog_
+14. [Open-sourcing SPACE, the sandbox platform behind Computer](<https://www.perplexity.ai/hub/blog/open-sourcing-space>) — _perplexity.ai_
+15. [New trend of building “internal vibe-coding apps” at tech companies](<https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/>) — _blog.pragmaticengineer.com_
+16. [Using Artificial Intelligence to reverse engineer hardware](<https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/>) — _blogs.gnome.org_
+17. [One Agent Development Kit, Five Languages](<https://cloud.google.com/blog/topics/developers-practitioners/one-agent-development-kit-five-languages/>) — _cloud.google.com_
+18. [Introducing Devin Oncall](<https://devin.ai/blog/introducing-devin-oncall>) — _devin.ai_
+19. [Pulumi ESC now issues OIDC tokens for any service](<https://www.pulumi.com/blog/esc-oidc-tokens-for-any-service/>) — _pulumi.com_
+20. [Spacelift Integrates with Cursor Origin](<https://spacelift.io/blog/spacelift-cursor-origin-integration>) — _spacelift.io_
+21. [Building a computer that can pause and resume in milliseconds: Inside the MicroVM architecture behind Managed Agents](<https://www.digitalocean.com/blog/microvm-architecture>) — _digitalocean.com_
+22. [How to Measure the Human Cost of Agent Work](<https://cutler.sg/blog/2026-10-measure-agent-review-time>) — _cutler.sg_
+23. [Reducing the noise: How Atlassian built an OCSF security lakehouse on Databricks](<https://www.databricks.com/blog/reducing-noise-how-atlassian-built-ocsf-security-lakehouse-databricks>) — _databricks.com_
+24. [Wie Unzer KI in 3 Kernprozesse mit 60-90% Effizienzgewinn integriert hat](<https://ai-first.ai/podcast/wie-unzer-ki-in-3-kernprozesse-mit-60-90-effizienzgewinn-integriert-hat>) — _ai first podcast_
+25. [Wie IBM mit KI 4,5 Milliarden Dollar einsparte](<https://ai-first.ai/podcast/wie-ibm-mit-ki-4-5-milliarden-dollar-einsparte>) — _ai first podcast_
+26. [How an Anthropic Japan BDR runs his day with a fleet of Claude agents](<https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day>) — _claude_
+27. [Anthropic 'SneakPeek' Flaw Is a Silent Zero-Click Threat](<https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat>) — _darkreading.com_
+28. [A UAF turned RCE](<https://daniel.haxx.se/blog/2026/10/14/a-uaf-turned-rce/>) — _daniel.haxx.se_
+29. [Jev as a judge: How counterfeit policy steers Jev](<https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/>) — _securitylabs.datadoghq.com_
+30. [Citizen Lab says governments are abusing online ads to hack people with ‘zero-click' spyware](<https://techcrunch.com/2026/10/15/citizen-lab-says-governments-are-abusing-online-ads-to-hack-people-with-zero-click-spyware/>) — _techcrunch.com_
+31. [Cisco make-me-root email bug exploited as a 0-day by unknown crims](<https://www.theregister.com/security/2026/10/14/cisco-make-me-root-email-bug-exploited-as-a-0-day-by-unknown-crims/5303168>) — _theregister.com_
+32. [Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules](<https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html>) — _thehackernews.com_
+33. [Benchmarking DuckDB v2.0-dev on NVIDIA Vera](<https://duckdb.org/2026/10/16/nvidia-vera-benchmark.html>) — _duckdb.org_
+34. [From JSON Strings to Typed Columns](<https://duckdb.org/2026/10/16/json-to-typed-columns.html>) — _duckdb.org_
+35. [Redis now has compressed bitmaps (Roaring)](<https://lemire.me/blog/2026/10/15/redis-now-has-compressed-bitmaps-roaring/>) — _lemire.me_
+36. [CoreWeave credit default swaps hit distress levels as investors sour on AI debt](<https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html>) — _cnbc.com_
+37. [Amazon S3 is now available on the Vercel Marketplace and v0 by Vercel](<https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/>) — _aws.amazon.com_
+38. [Xcode 27 runner image generally available](<https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available>) — _github.blog_
+39. [Open source license compliance generally available](<https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available>) — _github.blog_
+40. [Sequences and Other Volatiles in Neki](<https://planetscale.com/blog/neki-volatile-expressions>) — _planetscale.com_
+41. [Bringing the magic: Google breaks open a bottleneck in quantum computing](<https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/>) — _blog.google_
+42. [How to Train Your Robot](<https://www.construction-physics.com/p/how-to-train-your-robot>) — _construction-physics.com_
+43. [How Close Are We To Fully Autonomous Chip Design?](<https://semiengineering.com/how-close-are-we-to-fully-autonomous-chip-design/>) — _semiengineering.com_
+44. [The Cost of Getting a Job Today](<https://weli.dev/blog/the-cost-of-getting-a-job-today/>) — _weli.dev_
+45. [Lies, Damn Lies, and GitHub Stars](<https://avdi.codes/lies-damn-lies-and-github-stars/>) — _avdi.codes_
+46. [Code Is a Commodity Now](<https://efp.asia/blog/2026/10/15/code-is-a-commodity-now/>) — _efp.asia_
 
 
 ## Archive récente
@@ -75,6 +135,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-10-16` | Vendredi | [Lire →](news/fr/2026-10-16.md) |
 | `2026-10-15` | Jeudi | [Lire →](news/fr/2026-10-15.md) |
 | `2026-10-14` | Mercredi | [Lire →](news/fr/2026-10-14.md) |
 | `2026-10-13` | Mardi | [Lire →](news/fr/2026-10-13.md) |
@@ -88,9 +149,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-05` | Lundi | [Lire →](news/fr/2026-10-05.md) |
 | `2026-10-04` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-10-04.md) |
 | `2026-10-03` | Samedi | [Lire →](news/fr/2026-10-03.md) |
-| `2026-10-02` | Vendredi | [Lire →](news/fr/2026-10-02.md) |
 
-<sub>[Parcourir toute l’archive (123) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (124) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
