@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>124 daily digests archived · newest first.</sub>
+<sub>125 daily digests archived · newest first.</sub>
 
 ### October 2026
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-10-17` | Saturday | [Read →](2026-10-17.md) |
 | `2026-10-16` | Friday | [Read →](2026-10-16.md) |
 | `2026-10-15` | Thursday | [Read →](2026-10-15.md) |
 | `2026-10-14` | Wednesday | [Read →](2026-10-14.md) |
