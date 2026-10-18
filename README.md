@@ -9,20 +9,32 @@
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-10-17
-<sub>updated 18 October 2026 at 01:00</sub>
+<sub>updated 18 October 2026 at 12:34</sub>
 
-## AI models and open weights
+## AI Models and Open Weights
 
-- Meta released Muse Spark Open, an 816B-total, 42B-active MoE with open weights, which Artificial Analysis scores at 39 on its Intelligence Index, the highest for a US open-weights model <sup>[1](<https://blog.bytebytego.com/p/ep229-8-chunking-strategies-for-rag>)</sup>.
+- Meta's Muse Spark is an open-weights mixture-of-experts model with 816B total and 42B active parameters. Artificial Analysis scores it 39 on its Intelligence Index, the highest of any US open-weights model and 13 points above NVIDIA's Nemotron 3.5 Super VL <sup>[1](<https://www.latent.space/p/ainews-high-taste-testers-ep-1>)</sup>.
 
-## Coding agents and code review
+## LLM Tooling and Coding Agents
 
+- The Claude Code team now runs review continuously while code is written, so most changes are reviewed and fixed by Claude before a human is asked to look, which frees reviewer attention for higher-level questions <sup>[2](<https://simonwillison.net/2026/Oct/16/code-review/>)</sup>.
 
-## RAG and retrieval
+## RAG and Agents
+
+- An overview of eight chunking strategies for RAG-based agents covers fixed-size splitting with overlap, recursive splitting that falls back from paragraphs to lines, words and characters, and document-based splitting at the document's own breaks <sup>[3](<https://blog.bytebytego.com/p/ep229-8-chunking-strategies-for-rag>)</sup>.
+
+## Developer Tools and Web Development
+
+- A small inline-script pattern uses `document.currentScript.replaceWith()` to swap a script tag for its output when the page loads, and a shortcut function turns it into a tiny template language, with no framework needed <sup>[4](<https://simonwillison.net/2026/Oct/17/document-currentscript/>)</sup>.
+- Simon Willison released web-edit 0.1a2, a small web app for browsing and editing files in a folder, now with copy-to-clipboard for text and images, built for editing files across machines over Tailscale <sup>[5](<https://simonwillison.net/2026/Oct/17/web-edit/>)</sup>.
 
 ## Sources
 
-1. [EP229: 8 Chunking strategies for RAG-based agents](<https://blog.bytebytego.com/p/ep229-8-chunking-strategies-for-rag>) — _blog.bytebytego.com_
+1. [\[AINews\] High Taste Testers Ep. 1](<https://www.latent.space/p/ainews-high-taste-testers-ep-1>) — _latent.space_
+2. [Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang](<https://simonwillison.net/2026/Oct/16/code-review/>) — _simonwillison.net_
+3. [EP229: 8 Chunking strategies for RAG-based agents](<https://blog.bytebytego.com/p/ep229-8-chunking-strategies-for-rag>) — _blog.bytebytego.com_
+4. [Inline rendering with document.currentScript](<https://simonwillison.net/2026/Oct/17/document-currentscript/>) — _simonwillison.net_
+5. [web-edit 0.1a2](<https://simonwillison.net/2026/Oct/17/web-edit/>) — _simonwillison.net_
 
 
 ## Recent archive
