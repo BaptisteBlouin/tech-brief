@@ -8,77 +8,41 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-20
-<sub>updated 21 October 2026 at 01:01</sub>
+### Latest digest — 2026-10-21
+<sub>updated 21 October 2026 at 13:01</sub>
 
-## AI and ML
+## AI and LLM Models
 
-- OpenAI's recently released proof of the quasi-Riemann hypothesis is described as the most significant AI-for-math achievement so far, since resolving it already yields most of the consequences of the Riemann hypothesis <sup>[1](<https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/>)</sup>.
-- Decision models (TypeSafe's Jev, Perplexity's Decider, Liquid's d1, Cloudflare's Clef, OpenAI's Decisions API) are presented as a low-cost alternative to LLM judges for automated evals, and the post argues that the default 0.50 decision threshold should be checked and tuned before comparing cost and performance <sup>[2](<https://hamel.dev/blog/posts/decision-model-evals/>)</sup>.
-- Cohere's CALIBER trains a reasoning model to estimate its chance of success before it starts and to reassess its answer afterwards; on its math benchmark, the calibrated 7B model cuts calibration error by more than half versus the best single-confidence baseline on that metric <sup>[3](<https://cohere.com/blog/rethinking-confidence-in-reasoning-models>)</sup>.
-- Mercury 3, a diffusion-based language model from Inception Labs, reportedly outperforms GPT-6 Luna and Claude Haiku 5.5 on several benchmarks while generating over 1,000 tokens per second <sup>[4](<https://www.inceptionlabs.ai/blog/introducing-mercury-3>)</sup>.
-- MiniMax M3.1 Flash makes online inference nearly three times faster and cuts usage costs by 70%, with weights promised later <sup>[5](<https://www.minimax.io/blog/minimax-m31f>)</sup>.
-- Jason Wei argues that radiologists will not be fully automated: as predictive power increases, demand for their services may rise, similar to how programming has held up despite major change <sup>[6](<https://www.jasonwei.net/blog/ai-will-not-automate-radiologists-like-you-think>)</sup>.
-- Anthropic has pitched a draft AI safety bill to lawmakers under which the government could block a model's release or use only for a foreseeable, imminent risk above $1B in damages, or for mass casualties via biological weapons, control evasion or cyberattack, with independent evaluators reporting such risks within 72 hours <sup>[7](<https://www.politico.com/news/2026/10/16/anthropic-ai-safety-01124654>)</sup>.
-
-## Engineering and developer tooling
-
-- Python 3.15.0 is out, featuring lazy imports, a built-in frozendict and sentinel, improved color support, a faster JIT, and package startup config files <sup>[8](<https://hugovk.dev/blog/2026/releasing-python-3-15-0/>)</sup>.
-- Dependabot alerts in the REST API now include the dependency version, and Dependabot supports npm 12, pnpm 11 and 12, and Bun 1.4 <sup>[9](<https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions>), [10](<https://github.blog/changelog/2026-10-20-dependabot-now-supports-npm-12-pnpm-11-and-12-and-bun-1-4>)</sup>.
-- GitHub's package firewall, in public preview for Enterprise Cloud, inspects package metadata requests and downloads from CI runners and coding agents, with a configurable cooldown, advisory checks and attestation-downgrade checks <sup>[11](<https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview>)</sup>.
-- Cloudflare and VoidZero are building tsrs, a Rust port of the TypeScript compiler incubated in the Oxc toolchain, in collaboration with the TypeScript team, which keeps control of the language <sup>[12](<https://blog.cloudflare.com/typescript-rust-port/>)</sup>.
-- Automated attack surface reduction uses AI models to map reachable code and remove or restrict what a deployment does not need to expose, lowering the severity of unknown vulnerabilities without finding each one <sup>[13](<https://www.anthropic.com/research/attack-surface-reduction>)</sup>.
-- A widely shared essay on programming argues that coding agents remove the puzzle-solving part of the job that career programmers enjoyed, while leaving those who prize building working systems well served <sup>[14](<https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/>)</sup>.
-
-## Infrastructure and hardware
-
-- TorchTPU, a collaboration between Google and Meta, adds a native PyTorch backend for TPUs, and Hugging Face says Transformers, Diffusers and Kernels run natively on it <sup>[15](<https://pytorch.org/blog/introducing-torchtpu/>), [16](<https://huggingface.co/blog/hf-torchtpu>)</sup>; vLLM and SGLang also gain native TorchTPU backends for serving <sup>[17](<https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/>)</sup>.
-- Google's Coral NPU open RISC-V architecture adds a Matrix Execution Unit delivering up to 1 TOPS at a 10 mW average power target, with a v1.0 open-source IREE/MLIR compiler that takes JAX, PyTorch and TensorFlow models to the hardware <sup>[18](<https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/>)</sup>.
-- Meta describes Prometheus, its gigawatt-scale AI supercluster supporting the Muse model family, with plans to scale toward about one million GPUs and closed-loop liquid cooling <sup>[19](<https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/>)</sup>.
-- Samsung is building a large semiconductor complex in Pyeongtaek, South Korea, with three fabs running around the clock, a fourth coming online, and a fifth whose construction was halted in 2024 and restarted as AI demand for memory chips surged <sup>[20](<https://www.technologyreview.com/2026/10/20/1145916/dispatch-visit-to-samsung-massive-new-semiconductor-hub/>)</sup>.
-- Waymo plans to grow its fleet to 20,000 vehicles by the end of next year, from 4,000 vehicles in 15 US cities, after raising $5 billion from private credit lenders <sup>[21](<https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet>)</sup>.
+- DeepSeek open-sourced DeepInfer, its production inference stack, which is a customization of vLLM crediting SGLang and TensorRT-LLM; the release omits DeepSeek's KV cache, PD disaggregation and load balancing, and the article claims prompt caching of up to 72 hours <sup>[1](<https://www.latent.space/p/ainews-deepseek-deepinfer-open-source>)</sup>.
+- Anthropic's Claude was used to design mini protein binders against scorpion neurotoxins: 17 of 211 designs met Anthropic's criteria, but whether they neutralize venom in cells is not confirmed, so it is not claimed as an antivenom <sup>[2](<https://www.anthropic.com/research/claude-scorpion-toxin-binder-design>)</sup>.
+- Anthropic's draft S-1 reports a net loss above $80 billion in the first half of the year, alongside fast revenue growth and a possible $750 billion compute spend over the next few years <sup>[3](<https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1>)</sup>.
 
 ## Security
 
-- A Symfony ReDoS flaw (CVE-2026-108082) triggers catastrophic regex backtracking on a crafted Cache-Control header, with one request consuming up to 12.7 seconds of CPU; it affects Symfony 4.1 through the October 2026 patches and frameworks built on it <sup>[22](<https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html>)</sup>.
-- Plex vulnerabilities CVE-2026-96652, -96654, -96655 and -96656 are being chained in the wild to gain remote code execution and drop a cryptominer, observed on Plex Media Server 1.43.2 <sup>[23](<https://www.boredhackerblog.info/2026/10/plex-vulnerabilities-being-exploited-in.html>)</sup>.
-- A Linux networking flaw (CVE-2026-99999, "PwnEscape") lets a VM guest alter IPv4 header bytes after host validation, supporting selected 64-byte host-kernel writes in a controlled KVM lab; the upstream fix validates checksum_start <sup>[24](<https://pwn.ai/blog/pwnescape>)</sup>.
+- Eight eMudhra intermediate CA certificates had compromised private keys, and they chain to roots trusted by major browser and OS root programs; an attacker could forge certificates for any domain <sup>[4](<https://blog.cloudflare.com/emudhra-certificate-compromise/>), [5](<https://simonwillison.net/2026/Oct/20/emudhra-certificates/>), [6](<https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/>)</sup>.
+- Cloudflare patched its critical services, has released updates for its WARP and 1.1.1.1 clients, and reports no active exploitation on its services so far <sup>[4](<https://blog.cloudflare.com/emudhra-certificate-compromise/>)</sup>.
+- Python tooling shipped updated certificate lists: uv 0.13.4, pip 26.2.2 and certifi 2026.10.19 <sup>[5](<https://simonwillison.net/2026/Oct/20/emudhra-certificates/>)</sup>.
+- PHP warned of two critical remote code execution flaws (CVE-2026-109618 and CVE-2026-109619) affecting PHP 5 through 8, with emergency patches expected the next day <sup>[7](<https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/>)</sup>.
 
-## Other tech and industry
+## Robotics and Simulation
 
-- Apple will hold an October 28 event to launch its first touch-screen MacBook Pro running M5 Pro and M5 Max chips, along with a low-end MacBook Pro with an M6 chip, a refreshed iMac and a revamped iPad mini <sup>[25](<https://www.bloomberg.com/news/articles/2026-10-19/apple-announces-oct-28-event-for-touch-screen-macbook-pro>)</sup>.
-- The US has banned DeepSeek AI from use by civilian government agencies; agencies within the Department of Defense are excluded from the order <sup>[26](<https://www.bbc.com/news/articles/cjkgeq0k1wevo>)</sup>.
-- Techcrunch reports that people are using AI to strip smart TVs of sponsored ads, speed up app launchers, redesign home screens and disable tracking features <sup>[27](<https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/>)</sup>.
+- NVIDIA published SimReady Central on Hugging Face: over 2,000 free, ungated simulation-ready OpenUSD assets, covering robot arms, grippers, racks and cooling equipment, aimed at robotics and AI factory digital twins <sup>[8](<https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories>)</sup>.
+
+## Engineering Practice
+
+- Tenex's talk on an AI-native SDLC describes paying engineers for delivered output rather than hours, and still uses story points in compensation <sup>[9](<https://www.latent.space/p/tenex>)</sup>.
 
 ## Sources
 
-1. [AI Proved the Quasi-Riemann Hypothesis. What Happens Now?](<https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/>) — _quantamagazine.org_
-2. [How To Use Decision Models for Evals](<https://hamel.dev/blog/posts/decision-model-evals/>) — _hamel.dev_
-3. [Rethinking confidence in reasoning models](<https://cohere.com/blog/rethinking-confidence-in-reasoning-models>) — _cohere_
-4. [Mercury 3](<https://www.inceptionlabs.ai/blog/introducing-mercury-3>) — _inceptionlabs.ai_
-5. [MiniMax M3.1 Flash: Redefining Agent Performance and Cost](<https://www.minimax.io/blog/minimax-m31f>) — _minimax.io_
-6. [AI will not automate radiologists like you think](<https://www.jasonwei.net/blog/ai-will-not-automate-radiologists-like-you-think>) — _jasonwei.net_
-7. [Anthropic Quietly Pitches its Own AI Safety Bill to Lawmakers](<https://www.politico.com/news/2026/10/16/anthropic-ai-safety-01124654>) — _politico.com_
-8. [Releasing Python 3.15.0](<https://hugovk.dev/blog/2026/releasing-python-3-15-0/>) — _hugovk.dev_
-9. [Dependabot alerts REST API now includes dependency versions](<https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions>) — _github.blog_
-10. [Dependabot now supports npm 12, pnpm 11 and 12, and Bun 1.4](<https://github.blog/changelog/2026-10-20-dependabot-now-supports-npm-12-pnpm-11-and-12-and-bun-1-4>) — _github.blog_
-11. [GitHub package firewall in public preview](<https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview>) — _github.blog_
-12. [Introducing tsrs: A port of TypeScript to Rust](<https://blog.cloudflare.com/typescript-rust-port/>) — _blog.cloudflare.com_
-13. [Using Claude to reduce the attack surface of code](<https://www.anthropic.com/research/attack-surface-reduction>) — _anthropic red_
-14. [My obituary for programming](<https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/>) — _simonwillison.net_
-15. [Introducing TorchTPU](<https://pytorch.org/blog/introducing-torchtpu/>) — _pytorch.org_
-16. [Hugging Face ❤ TorchTPU: TPUs, Natively](<https://huggingface.co/blog/hf-torchtpu>) — _huggingface.co_
-17. [Announcing New vLLM and SGLang Inference Engines on TPU](<https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/>) — _google ai_
-18. [Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon](<https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/>) — _google ai_
-19. [Inside Meta's Gigawatt-Scale AI Supercluster](<https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/>) — _engineering.fb.com_
-20. [A visit to Samsung’s massive new semiconductor hub](<https://www.technologyreview.com/2026/10/20/1145916/dispatch-visit-to-samsung-massive-new-semiconductor-hub/>) — _technologyreview.com_
-21. [Waymo plans to quintuple its fleet](<https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet>) — _semafor.com_
-22. [CVE-2026-108082: Symfony ReDoS. One request. Seconds of CPU](<https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html>) — _r3verii.github.io_
-23. [Plex vulnerabilities being exploited in the wild to drop a cryptominer](<https://www.boredhackerblog.info/2026/10/plex-vulnerabilities-being-exploited-in.html>) — _boredhackerblog.info_
-24. [PwnEscape: Guest-to-Host KVM Escape (CVE-2026-99999)](<https://pwn.ai/blog/pwnescape>) — _pwn.ai_
-25. [Apple Announces Oct. 28 Event for Touch-Screen MacBook Pro](<https://www.bloomberg.com/news/articles/2026-10-19/apple-announces-oct-28-event-for-touch-screen-macbook-pro>) — _bloomberg.com_
-26. [US bans DeepSeek AI from government use as tech tension with China continues](<https://www.bbc.com/news/articles/cjkgeq0k1wevo>) — _bbc.com_
-27. [People are using AI to make their smart TVs dumb again](<https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/>) — _techcrunch.com_
+1. [\[AINews\] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback](<https://www.latent.space/p/ainews-deepseek-deepinfer-open-source>) — _latent.space_
+2. [How Claude designed protein binders against scorpion neurotoxins](<https://www.anthropic.com/research/claude-scorpion-toxin-binder-design>) — _anthropic.com_
+3. [Anthropic S-1 Shows Red-Hot Growth, Risks, and Massive Computing Costs](<https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1>) — _wsj.com_
+4. [8 eMudhra certificates are compromised. Here's what you need to know](<https://blog.cloudflare.com/emudhra-certificate-compromise/>) — _blog.cloudflare.com_
+5. [eMudhra Intermediate CA Compromise](<https://simonwillison.net/2026/Oct/20/emudhra-certificates/>) — _simonwillison.net_
+6. [The Internet goes on high alert after discovery of 8 compromised TLS certs](<https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/>) — _arstechnica.com_
+7. [PHP warns admins of two critical flaws, emergency patches coming tomorrow](<https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/>) — _bleepingcomputer.com_
+8. [Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories](<https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories>) — _huggingface.co_
+9. [AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess](<https://www.latent.space/p/tenex>) — _latent.space_
 
 
 ## Recent archive
