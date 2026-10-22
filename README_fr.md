@@ -8,98 +8,62 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-21
-<sub>mis à jour le 22 octobre 2026 à 01:01</sub>
+### Dernier digest — 2026-10-22
+<sub>mis à jour le 22 octobre 2026 à 13:01</sub>
 
-## Modèles d'IA et LLM
+## Modèles d'IA et recherche
 
-- La pile d'inférence de production de DeepSeek, DeepInfer, est open source comme personnalisation de vLLM qui crédite SGLang et TensorRT-LLM ; la publication omet le cache KV, la désagrégation PD et l'équilibrage de charge de DeepSeek, et l'article affirme une mise en cache des prompts pouvant aller jusqu'à 72 heures <sup>[1](<https://www.latent.space/p/ainews-deepseek-deepinfer-open-source>)</sup>.
-- Un article de Zhihu résume DeepInfer comme combinant inférence distribuée, mise en cache, équilibrage de charge et décodage spéculatif, en citant 155 billions de tokens par jour et par cluster et 38 dollars de revenu par heure-GPU <sup>[2](<https://zhuanlan.zhihu.com/p/2095560295930508953>)</sup>.
-- Kumo Relational, un modèle de fondation relationnel pré-entraîné de NVIDIA, prédit des résultats directement sur des bases de données d'entreprise en une seule passe avant, sans entraînement ni ingénierie de features, et surpasse selon les informations l'apprentissage profond relationnel supervisé et les pipelines à arbres boostés sur 41 tâches réparties sur 15 bases de données <sup>[3](<https://huggingface.co/blog/nvidia/kumo-relational>)</sup>.
-- Rerank 5 de Cohere (niveaux Pro et Fast) ajoute Context Focus, qui renvoie les passages les plus pertinents dans chaque document afin de réduire les coûts en tokens des LLM, avec des scores de pertinence calibrés selon les domaines <sup>[4](<https://cohere.com/blog/rerank-5>)</sup>.
-- Un article de Hugging Face sur la spécialisation du vocabulaire rapporte une baisse de 77 % du coût d'inférence mesuré pour un correcteur de dissertations en portugais en production, obtenue en ajustant le tokenizer autour du coût par token, sans modifier le modèle de base <sup>[5](<https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization>)</sup>.
-- Claude d'Anthropic a servi à concevoir des mini-liants de protéines contre les neurotoxines de scorpion : 17 conceptions sur 211 ont satisfait les critères d'Anthropic, mais il n'est pas confirmé qu'elles neutralisent le venin dans les cellules, et elles ne sont donc pas présentées comme un antivenin <sup>[6](<https://www.anthropic.com/research/claude-scorpion-toxin-binder-design>)</sup>.
-- Le projet de S-1 d'Anthropic fait état d'une perte nette supérieure à 80 milliards de dollars au premier semestre, parallèlement à une croissance rapide du chiffre d'affaires et à des dépenses de calcul pouvant atteindre 750 milliards de dollars sur les prochaines années <sup>[7](<https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1>)</sup>.
-- Claude Duet est un aperçu de recherche (liste d'attente, États-Unis, offres Pro et Max) d'un agent Claude proactif qui fait remonter les priorités, travaille en arrière-plan et demande confirmation avant d'agir au nom de l'utilisateur <sup>[8](<https://claude.com/resources/articles/claude-duet>)</sup>.
-
-## Agents et outillage LLM
-
-- Le système d'extensions Agents CLI de Google permet aux équipes d'exécuter des agents LangChain ou LangGraph avec un flux unifié de déploiement et d'évaluation, sans exiger ADK, et permet aux équipes plateforme d'imposer des politiques comme l'analyse SBOM au déploiement <sup>[9](<https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/>)</sup>.
-- Headroom compresse localement les sorties d'outils, les journaux, les fichiers et les fragments RAG avant qu'ils n'atteignent le LLM, avec une réduction annoncée d'environ 20 % de tokens pour les agents de code et de 60 à 95 % pour le JSON <sup>[10](<https://github.com/headroomlabs-ai/headroom>)</sup>.
-- Laminar, le harnais d'agent interne de Ramp, construit en environ six semaines principalement par des agents, couvre l'historique sécurisé, la compaction, les sous-agents et l'observabilité <sup>[11](<https://builders.ramp.com/post/building-laminar>)</sup>.
-- Un harnais durable de Vercel permet à Pi, OpenCode, Codex et Claude Code de survivre aux plantages en plein tour et de reprendre depuis le journal sur une nouvelle fonction, fonctionnant sur Vercel ou sur un Postgres auto-hébergé <sup>[12](<https://vercel.com/blog/making-every-harness-durable>)</sup>.
-- Un article MemCurrent de Databricks présente une architecture de mémoire persistante qui, selon ses auteurs, peut tripler le taux de réussite d'un agent par rapport à l'absence de mémoire tout en le rendant plus rapide et moins coûteux <sup>[13](<https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents>)</sup>.
+- Shopify entraîne et héberge des modèles ouverts spécialisés pour les tâches ciblées de Sidekick, à partir des échecs en production et des retours humains. Son spécialiste GraphQL a légèrement dépassé le modèle de pointe sur l'évaluation de Shopify, tout en répondant 7 fois plus vite et en coûtant environ 90 % de moins à exploiter <sup>[1](<https://shopify.engineering/open-model-task-experts>)</sup>.
+- Un ingénieur seul aurait entraîné un LLM de 3,848 milliards de paramètres depuis zéro pour 998 $, en 43 heures sur huit B200 loués, atteignant 0,384 CORE sur DCLM, soit environ 50 % de plus que le score rapporté pour GPT-2 <sup>[2](<https://blog.gopenai.com/one-engineer-trained-a-3-8b-parameter-llm-from-scratch-for-998-7ef5cd7809b7>)</sup>.
+- La prévision d'ensemble avec les modèles de séries temporelles Granite d'IBM fait l'objet d'un billet de blog Hugging Face, le modèle ibm-granite/granite-timeseries-ensemble-r1 étant répertorié sur le hub <sup>[3](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>)</sup>.
+- Un projet de science ouverte de Cohere Labs a testé la compréhension culturelle des modèles à l'aide d'énigmes hongroises : les modèles donnaient des réponses plausibles mais dépourvues de faits propres à la culture, et dans certains cas hallucinaient <sup>[4](<https://cohere.com/blog/can-ai-understand-culture>)</sup>.
 
 ## Sécurité
 
-- Huit certificats intermédiaires de l'AC eMudhra avaient des clés privées compromises, et ils se rattachent à des racines approuvées par les principaux programmes racines de navigateurs et de systèmes d'exploitation ; un attaquant pouvait forger des certificats pour n'importe quel domaine <sup>[14](<https://blog.cloudflare.com/emudhra-certificate-compromise/>), [15](<https://simonwillison.net/2026/Oct/20/emudhra-certificates/>), [16](<https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/>)</sup>.
-- PHP a signalé deux failles RCE critiques (CVE-2026-109618 et CVE-2026-109619, « php2shell ») touchant les versions 8.x et les branches plus anciennes ; les détails ont fuité avant la date prévue, et Cloudflare a déployé des protections WAF avant la divulgation <sup>[17](<https://simonwillison.net/2026/Oct/21/php-security-release/>), [18](<https://blog.cloudflare.com/php-vulnerabilities-waf-protection/>), [19](<https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/>)</sup>.
-- BeyondTrust Remote Support 26.2.3 et versions antérieures sont touchés par la CVE-2026-102764, un contournement d'authentification sans identifiants avec téléversement de fichiers arbitraires (CVSS 9,3), exploité depuis fin août ; les correctifs ont été publiés en octobre <sup>[20](<https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs>)</sup>.
-- Un pirate a utilisé des agents autonomes sur la plateforme open source Cairn pour compromettre plus de 100 sites en environ 23 heures, et Norforge a découvert plus de 20 panneaux Cairn malveillants exposés <sup>[21](<https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins>), [22](<https://norforge.com/blog/inside_cairn>)</sup>.
-- Les détections WAF sur transaction complète de Cloudflare évaluent chaque requête avec sa réponse et peuvent bloquer les réponses de l'origine avant qu'elles n'atteignent le demandeur <sup>[23](<https://blog.cloudflare.com/full-transaction-waf/>)</sup>.
-- Les Lambda Web Functions sont publiques par défaut, sans authentification, et les identifiants de rôle sont exposés en variables d'environnement ; les permissions lambda:* existantes y accèdent par défaut <sup>[24](<https://act.security/resources/lambda-web-functions-public-by-default>)</sup>.
-- Meta a suspendu le partage de conversations Muse après que des chercheurs ont découvert 6 800 liens de partage dont les sous-domaines exposaient des titres de conversations et des contenus sensibles, professionnels comme personnels <sup>[25](<https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/>)</sup>.
+- Le programme Patch the Planet d'OpenAI, utilisant GPT-5.6 Sol, est l'une des deux parties à avoir découvert indépendamment les vulnérabilités PHP2Shell dans le cœur de PHP, que le billet estime affecter environ 70 % du web ; l'autre partie est Wiz, désormais intégrée à Google Cloud <sup>[5](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>)</sup>.
+- La NSA a conseillé aux organisations utilisant PHP de mettre à jour immédiatement ou de mettre leurs systèmes hors ligne jusqu'à pouvoir le faire <sup>[6](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>)</sup>. La version de sécurité de PHP corrige deux vulnérabilités critiques permettant à des attaquants non authentifiés d'exécuter du code sur les serveurs <sup>[7](<https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/>)</sup>.
+- Node.js a publié une mise à jour corrigeant quatre vulnérabilités de gravité élevée, et LiteLLM a été compromis par l'injection de code malveillant <sup>[6](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>)</sup>.
 
-## Robotique et simulation
+## Agents d'IA et outillage d'entreprise
 
-- NVIDIA a publié SimReady Central sur Hugging Face : plus de 2 000 ressources OpenUSD prêtes pour la simulation, gratuites et sans restriction d'accès, couvrant bras robotiques, pinces, racks et équipements de refroidissement, destinées aux jumeaux numériques de robotique et des usines d'IA <sup>[26](<https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories>)</sup>.
-- Mistral et NVIDIA collaborent sur des flux de travail d'ingénierie natifs de l'IA reliant Mistral Large 4 à la simulation physique sur CUDA-X et Warp, ainsi qu'Omniverse pour la création de ressources SimReady <sup>[27](<https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering>)</sup>.
+- Claude Duet d'Anthropic rejoint la course aux agents. Il se connecte à plus de 6 000 applications externes, montre aux utilisateurs ses actions prévues avant de les exécuter, bloque certaines actions même après approbation, et sa liste d'attente est ouverte aux abonnés Pro et Max <sup>[8](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>)</sup>.
+- Meta affirme que Muse compte plus de 10 millions d'utilisateurs, et que plus d'un quart des utilisateurs engagés achètent via l'agent d'IA, avec un montant d'achat moyen supérieur à 200 $ <sup>[9](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>)</sup>.
+- Un billet sur la topologie des boucles d'agents soutient qu'un agent est un modèle, une boucle agentique et un ensemble d'outils, et que l'endroit où ils s'exécutent influence le coût, les capacités et la sécurité <sup>[10](<https://blog.exe.dev/topology>)</sup>.
+- La gouvernance des agents de Snowflake recommande d'identifier les données sensibles, d'appliquer des politiques d'accès et de masquage, et d'ajouter des autorisations propres aux agents ainsi que des contrôles contre l'injection de prompts <sup>[11](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>)</sup>.
 
-## DevOps, infrastructure et outillage développeur
+## Ingénierie des données et analytique
 
-- La CLI GitHub a ajouté, en option, des jetons OAuth à expiration et renouvellement automatique en préversion publique à partir de la v2.103.0, si bien qu'un jeton d'accès divulgué devient inutilisable en quelques heures <sup>[28](<https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens>)</sup>.
-- Amazon ECS Gateway est une ressource d'entrée gérée qui provisionne des équilibreurs de charge et des certificats et permet à jusqu'à 25 services de partager un même Application Load Balancer, sans frais supplémentaires au-delà des ressources sous-jacentes <sup>[29](<https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/>)</sup>.
-- Anthropic a remplacé Git pour son monorepo par Scion, un système de gestion de sources centralisé, réduisant de 200 fois la consommation CPU et mémoire par rapport à son ancienne infrastructure de miroirs Git <sup>[30](<https://www.anthropic.com/research/redesigning-source-control>)</sup>.
-- DuckDB 2.0.0 LTS « Cinnamon Teal » est une version fonctionnelle avec des changements incompatibles, supportée jusqu'à octobre 2027 au minimum <sup>[31](<https://duckdb.org/2026/10/21/announcing-duckdb-200.html>)</sup>.
-- TorchTitan annonce la prise en charge de nouveaux modèles SOTA, des performances à grande échelle et la prise en charge du RL (TitanRL) <sup>[32](<https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/>)</sup>.
-- Les utilisateurs d'AMD MI350 peuvent accéder aux noyaux FlyDSL via les API d'opérateurs PyTorch existantes, avec une accélération moyenne géométrique annoncée de 1,10x sur le GEMM dense BF16 et de 1,58x et 1,68x sur les GEMM MXFP8 et MXFP4 <sup>[33](<https://pytorch.org/blog/accelerating-pytorch-on-amd-gpus-with-flydsl/>)</sup>.
-- TypeScript 7.1 Beta ajoute les attributs d'import dans les déclarations de modules ambiantes, les imports de phase source, une cible ES2026 et une nouvelle API d'outillage développeur <sup>[34](<https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/>)</sup>.
-- Homebrew 7.0 sépare les phases de récupération et d'installation et ajoute les bacs à sable Landlock et Seatbelt, un modèle pour la sécurité des gestionnaires de paquets <sup>[35](<https://nesbitt.io/2026/09/24/package-manager-sandboxing.html>)</sup>.
+- DuckDB 2.0.0 LTS « Cinnamon Teal » ajoute la prise en charge client-serveur, des lectures de fichiers plus rapides, un mode agent IA et des déclencheurs SQL, pris en charge jusqu'à octobre 2027 au minimum, bien que les fichiers créés en 2.0 ne puissent pas être lus par les anciennes versions <sup>[12](<https://duckdb.org/2026/10/21/announcing-duckdb-200>)</sup>.
+- Mercedes-Benz a publié en open source dbt_iterative_snapshot pour Databricks, qui traite les lots chronologiquement et corrige les enregistrements historiques lorsque des données tardives arrivent <sup>[13](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>)</sup>.
+- PyDebeziumAI intègre le moteur CDC de Debezium dans un processus Python pour maintenir les magasins vectoriels à jour sans Kafka ni Connect, avec la prise en charge de Chroma, PGVector et Milvus <sup>[14](<https://github.com/debezium/debezium-ai-python>)</sup>.
+- Meta a réduit les travaux répétés d'analyse produit à sept modèles de mesure paramétrés, qui alimentent plus de 9 000 pipelines de production <sup>[15](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>)</sup>.
 
-## Pratique d'ingénierie
+## Ingénierie logicielle et infrastructure
 
-- L'intervention de Tenex sur un cycle de développement logiciel natif de l'IA décrit la rémunération des ingénieurs au résultat livré plutôt qu'aux heures, tout en conservant les story points dans la rémunération <sup>[36](<https://www.latent.space/p/tenex>)</sup>.
-- Un article parrainé par la CNCF suggère que les opérateurs Kubernetes conviennent à la réconciliation déterministe tandis que les agents IA conviennent aux objectifs dont le chemin est incertain, en utilisant une boucle observer, diagnostiquer, proposer, approuver, réconcilier et vérifier <sup>[37](<https://thenewstack.io/ai-agents-kubernetes-control/>)</sup>.
+- Les coûts de stockage générés par l'inférence sont souvent négligés dans la planification de l'infrastructure d'IA, car l'inférence fonctionne en continu et chaque requête laisse des données derrière elle <sup>[16](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>)</sup>.
+- Une analyse de l'event sourcing soutient que les Dynamic Consistency Boundaries évitent les faux conflits, mais que les versions basées sur des tags pourraient simplement déplacer les frontières fixes dans des index à forte cardinalité ; elle recommande les transactions multi-flux, sauf si une contention plus étroite est prouvée <sup>[17](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>)</sup>.
+- Apache Arrow vise l'analytique en mémoire avec des tampons typés contigus, réduisant la sérialisation entre moteurs comme Spark, pandas et DuckDB, contrairement à Parquet, centré sur le stockage <sup>[18](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback](<https://www.latent.space/p/ainews-deepseek-deepinfer-open-source>) — _latent.space_
-2. [DeepSeek V4.1 Flash: Large-Scale Inference Deployment](<https://zhuanlan.zhihu.com/p/2095560295930508953>) — _zhuanlan.zhihu.com_
-3. [NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required](<https://huggingface.co/blog/nvidia/kumo-relational>) — _huggingface.co_
-4. [Introducing Rerank 5: precise, efficient enterprise document retrieval](<https://cohere.com/blog/rerank-5>) — _cohere_
-5. [How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications](<https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization>) — _huggingface.co_
-6. [How Claude designed protein binders against scorpion neurotoxins](<https://www.anthropic.com/research/claude-scorpion-toxin-binder-design>) — _anthropic.com_
-7. [Anthropic S-1 Shows Red-Hot Growth, Risks, and Massive Computing Costs](<https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1>) — _wsj.com_
-8. [Introducing Claude Duet](<https://claude.com/resources/articles/claude-duet>) — _claude_
-9. [Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond](<https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/>) — _google ai_
-10. [Headroom](<https://github.com/headroomlabs-ai/headroom>) — _github.com_
-11. [Building Laminar: Ramp's Managed Agents Platform](<https://builders.ramp.com/post/building-laminar>) — _builders.ramp.com_
-12. [Making every harness durable](<https://vercel.com/blog/making-every-harness-durable>) — _vercel.com_
-13. [MemCurrent: Designing Persistent Memory for Production Agents](<https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents>) — _databricks.com_
-14. [8 eMudhra certificates are compromised. Here's what you need to know](<https://blog.cloudflare.com/emudhra-certificate-compromise/>) — _blog.cloudflare.com_
-15. [eMudhra Intermediate CA Compromise](<https://simonwillison.net/2026/Oct/20/emudhra-certificates/>) — _simonwillison.net_
-16. [The Internet goes on high alert after discovery of 8 compromised TLS certs](<https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/>) — _arstechnica.com_
-17. [Today's PHP Security Release, and How We're Strengthening PHP Security](<https://simonwillison.net/2026/Oct/21/php-security-release/>) — _simonwillison.net_
-18. [Cloudflare deploys protections against php2shell vulnerability](<https://blog.cloudflare.com/php-vulnerabilities-waf-protection/>) — _blog.cloudflare.com_
-19. [PHP warns admins of two critical flaws, emergency patches coming tomorrow](<https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/>) — _bleepingcomputer.com_
-20. [BeyondTrust Remote Support 26.2.3 suffers auth bypass CVE-2026-102764](<https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs>) — _darkreading.com_
-21. [A hacker broke into John Deere and SharkNinja with an army of AI agents](<https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins>) — _theverge.com_
-22. [Inside Cairn: Open Windows into massive AI-Driven Cyber Operations](<https://norforge.com/blog/inside_cairn>) — _norforge.com_
-23. [Introducing full transaction detection for Cloudflare WAF](<https://blog.cloudflare.com/full-transaction-waf/>) — _blog.cloudflare.com_
-24. [Lambda Web Functions: Public by Default, and Already in Your lambda:* Grants](<https://act.security/resources/lambda-web-functions-public-by-default>) — _act.security_
-25. [Meta Muse exposes users' personal and business secrets when they share conversations](<https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/>) — _arstechnica.com_
-26. [Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories](<https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories>) — _huggingface.co_
-27. [Mistral Advances AI for Engineering with NVIDIA](<https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering>) — _mistral_
-28. [GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens](<https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens>) — _github.blog_
-29. [Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services](<https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/>) — _aws.amazon.com_
-30. [Redesigning Source Control at Anthropic](<https://www.anthropic.com/research/redesigning-source-control>) — _anthropic.com_
-31. [Announcing DuckDB 2.0.0 LTS “Cinnamon Teal”](<https://duckdb.org/2026/10/21/announcing-duckdb-200.html>) — _duckdb.org_
-32. [TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL](<https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/>) — _pytorch.org_
-33. [Accelerating PyTorch on AMD GPUs with FlyDSL](<https://pytorch.org/blog/accelerating-pytorch-on-amd-gpus-with-flydsl/>) — _pytorch.org_
-34. [Announcing TypeScript 7.1 Beta](<https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/>) — _devblogs.microsoft.com_
-35. [Package Manager Sandboxing](<https://nesbitt.io/2026/09/24/package-manager-sandboxing.html>) — _nesbitt.io_
-36. [AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess](<https://www.latent.space/p/tenex>) — _latent.space_
-37. [AI agents vs. Kubernetes: where each belongs in the control loop](<https://thenewstack.io/ai-agents-kubernetes-control/>) — _thenewstack.io_
+1. [How Shopify turns open models into task experts](<https://shopify.engineering/open-model-task-experts>) — _shopify.engineering_
+2. [One Engineer Trained a 3.8B Parameter LLM from Scratch for $998](<https://blog.gopenai.com/one-engineer-trained-a-3-8b-parameter-llm-from-scratch-for-998-7ef5cd7809b7>) — _blog.gopenai.com_
+3. [Ensemble forecasting with IBM Granite time-series models](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>) — _huggingface.co_
+4. [Can AI understand culture?](<https://cohere.com/blog/can-ai-understand-culture>) — _cohere_
+5. [\[AINews\] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>) — _latent.space_
+6. [The internet is having a very bad cybersecurity day](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>) — _techcrunch.com_
+7. [Today's PHP Security Release, and How We're Strengthening PHP Security](<https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/>) — _thephp.foundation_
+8. [Anthropic Joins the AI Agent Race With Claude Duet](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>) — _nytimes.com_
+9. [Meta says Muse has over 10M users, with shopping a top activity](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>) — _techcrunch.com_
+10. [The Topology of an LLM Agent Loop With Tool Use](<https://blog.exe.dev/topology>) — _blog.exe.dev_
+11. [Governing Data and AI Agents in Snowflake: A Data Engineer's Field Notes](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>) — _medium.com_
+12. [Announcing DuckDB 2.0.0 LTS “Cinnamon Teal”](<https://duckdb.org/2026/10/21/announcing-duckdb-200>) — _duckdb.org_
+13. [dbt Snapshots Can't Handle Late Data. So We Built One That Can](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>) — _blog.dataengineerthings.org_
+14. [PyDebeziumAI](<https://github.com/debezium/debezium-ai-python>) — _github.com_
+15. [Scaling AI-Native Analytics Patterns at Meta](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>) — _medium.com_
+16. [AI’s hidden storage bill: What inference leaves behind](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>) — _technologyreview.com_
+17. [Thoughts on Dynamic Consistency Boundary](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>) — _architecture-weekly.com_
+18. [From Disk Pages to Columnar Memory: Why Apache Arrow?](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>) — _medium.com_
 
 
 ## Archive récente
