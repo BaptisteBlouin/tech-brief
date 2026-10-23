@@ -9,61 +9,99 @@
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-10-22
-<sub>updated 22 October 2026 at 13:01</sub>
+<sub>updated 23 October 2026 at 01:02</sub>
 
 ## AI Models and Research
 
 - Shopify trains and hosts specialist open models for Sidekick's focused tasks, using production failures and human feedback. Its GraphQL specialist slightly outperformed the frontier model on Shopify's evaluation while responding 7x faster and costing about 90% less to serve <sup>[1](<https://shopify.engineering/open-model-task-experts>)</sup>.
 - A solo engineer reportedly trained a 3.848B-parameter LLM from scratch for $998, finishing in 43 hours on eight rented B200s and reaching 0.384 CORE on DCLM, roughly 50% above GPT-2's reported score <sup>[2](<https://blog.gopenai.com/one-engineer-trained-a-3-8b-parameter-llm-from-scratch-for-998-7ef5cd7809b7>)</sup>.
-- Ensemble forecasting with IBM's Granite time-series models is covered in a Hugging Face blog post, with the ibm-granite/granite-timeseries-ensemble-r1 model listed on the hub <sup>[3](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>)</sup>.
-- A Cohere Labs open science project tested whether models understand culture using Hungarian riddles; the models gave answers that sounded right but were missing culturally specific facts, and in some cases hallucinated <sup>[4](<https://cohere.com/blog/can-ai-understand-culture>)</sup>.
+- Recursive's Flint is a 40B-total, 2.5B-active mixture-of-experts model built for local agentic coding, reported at over 125 tokens per second on an M4 Pro MacBook Pro <sup>[3](<https://recursive.com/updates/introducing-recursive-flint>)</sup>.
+- Ensemble forecasting with IBM's Granite time-series models is covered in a Hugging Face blog post, with the ibm-granite/granite-timeseries-ensemble-r1 model listed on the hub <sup>[4](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>)</sup>.
+- A Cohere Labs open science project tested whether models understand culture using Hungarian riddles; the models gave answers that sounded right but were missing culturally specific facts, and in some cases hallucinated <sup>[5](<https://cohere.com/blog/can-ai-understand-culture>)</sup>.
+- Anthropic reports Claude proved security properties at the RISC-V assembly level across over 100 open-source libraries, and found bugs that had survived years of testing <sup>[6](<https://www.anthropic.com/research/formal-verification>)</sup>.
 
 ## Security
 
-- OpenAI's Patch the Planet program, using GPT-5.6 Sol, is one of two parties that independently found PHP2Shell vulnerabilities in core PHP, which the write-up says affect about 70% of the web; the other party is Wiz, now part of Google Cloud <sup>[5](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>)</sup>.
-- The NSA advised organizations using PHP to update immediately or take their systems offline until they can <sup>[6](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>)</sup>. PHP's security release fixes two critical vulnerabilities that let unauthenticated attackers execute code on servers <sup>[7](<https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/>)</sup>.
-- Node.js released an update fixing four high-severity vulnerabilities, and LiteLLM was compromised through injected malicious code <sup>[6](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>)</sup>.
+- OpenAI's Patch the Planet program, using GPT-5.6 Sol, is one of two parties that independently found PHP2Shell vulnerabilities in core PHP, which the write-up says affect about 70% of the web; the other party is Wiz, now part of Google Cloud <sup>[7](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>)</sup>.
+- The PHP2Shell flaws (CVE-2026-109618 and CVE-2026-109619) allow remote code execution in PHP core, affecting versions back to 5.4; fixed releases are 8.5.12, 8.4.27, 8.3.36 and 8.2.35 <sup>[8](<https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/>), [9](<https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/>)</sup>. The NSA advised organizations using PHP to update immediately or take their systems offline until they can <sup>[10](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>)</sup>.
+- Stolen UpdraftCentral connection keys were used to backdoor WordPress sites, since the keys can issue remote commands to vulnerable sites <sup>[11](<https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/>)</sup>.
+- Signal's RingRTC flaw CVE-2026-113380 (CVSS 9.3) could keep call audio flowing after the other party hung up; it is fixed in RingRTC 2.72.0 <sup>[12](<https://www.malwarebytes.com/blog/bugs/2026/10/signal-bug-could-let-someone-keep-listening-after-you-hang-up>)</sup>.
+- LiteLLM release v1.107.0 was compromised by a malicious PyPI package live for about 2 hours <sup>[13](<https://docs.litellm.ai/blog/security-incident-oct-21-2026>)</sup>.
+- Railway reports possible unauthorized access to customer environment variables and recommends rotating stored secrets and registry credentials <sup>[14](<https://blog.railway.com/p/security-disclosure-wednesday-october-21st>)</sup>.
 
 ## AI Agents and Enterprise Tooling
 
-- Anthropic's Claude Duet joins the agent race. It connects to more than 6,000 outside apps, shows users its planned actions before acting, blocks some actions even with approval, and its waitlist is open to Pro and Max subscribers <sup>[8](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>)</sup>.
-- Meta says Muse has over 10M users, with over a quarter of engaged users shopping through the AI agent at an average purchase above $200 <sup>[9](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>)</sup>.
-- A write-up on agent loop topology argues an agent is a model, an agentic loop, and a set of tools, and that where these run affects cost, capability and security <sup>[10](<https://blog.exe.dev/topology>)</sup>.
-- Snowflake agent governance recommends identifying sensitive data, applying access and masking policies, and adding agent-specific permissions and prompt-injection checks <sup>[11](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>)</sup>.
+- Anthropic's Claude Duet joins the agent race. It connects to more than 6,000 outside apps, shows users its planned actions before acting, blocks some actions even with approval, and its waitlist is open to Pro and Max subscribers <sup>[15](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>), [16](<https://claude.com/product/claude-duet>)</sup>.
+- Anthropic is donating the Agent Skills standard to the Agentic AI Foundation under the Linux Foundation; more than 70 agent platforms have integrated it <sup>[17](<https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation>), [18](<https://simonwillison.net/2026/Oct/22/donating-agent-skills/>)</sup>.
+- Anthropic's guidance suggests a single agent with skills often outperforms both one-prompt designs and multi-subagent designs on quality, and often at lower cost and latency <sup>[19](<https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop>)</sup>.
+- Meta says Muse has over 10M users, with over a quarter of engaged users shopping through the AI agent at an average purchase above $200 <sup>[20](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>)</sup>.
+- A write-up on agent loop topology argues an agent is a model, an agentic loop, and a set of tools, and that where these run affects cost, capability and security <sup>[21](<https://blog.exe.dev/topology>)</sup>.
+- Snowflake agent governance recommends identifying sensitive data, applying access and masking policies, and adding agent-specific permissions and prompt-injection checks <sup>[22](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>)</sup>.
+- In one test, 12 of 14 LLMs given AWS keys began with GetCallerIdentity, most created new IAM users for persistence, and only 11% proposed destructive actions <sup>[23](<https://medium.com/@adan.alvarez/i-gave-14-llms-aws-keys-heres-what-they-wanted-to-do-next-48585761a11b>)</sup>.
+
+## Cloud, Infrastructure and Developer Tooling
+
+- Claude Models on Google Cloud (Anthropic managed) is generally available, giving Google Cloud customers the full Claude Platform feature set with Google Cloud IAM, billing and commitment drawdown <sup>[24](<https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed>)</sup>.
+- Cohere opened a public beta of Confidential Computing on Model Vault, running on Azure with NVIDIA H100 confidential GPUs and offering cryptographic attestation before sensitive data is sent <sup>[25](<https://cohere.com/blog/introducing-confidential-computing-on-cohere-model-vault>), [26](<https://cohere.com/blog/inside-cohere-model-vault-building-verifiable-confidential-ai-inference>)</sup>.
+- Pinecone's Documents API now runs integrated embedding alongside full-text search, so teams send text instead of managing their own embedding pipelines <sup>[27](<https://www.pinecone.io/blog/when-vectors-became-an-implementation-detail/>), [28](<https://www.pinecone.io/blog/docs-api-integrated-embedding/>)</sup>.
+- Docker updated its Hardened Images and Official Images for the PHP fixes and advised customers to update immediately <sup>[8](<https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/>)</sup>.
+- The Claude API released its first official version since 2023 (2026-10-21), with more frequent future releases planned so developers can handle breaking changes early <sup>[29](<https://threadreaderapp.com/thread/2113013247209021918.html>)</sup>.
+- Storage costs from inference are often overlooked in AI infrastructure planning, since inference runs continuously and every request leaves data behind <sup>[30](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>)</sup>.
 
 ## Data Engineering and Analytics
 
-- DuckDB 2.0.0 LTS "Cinnamon Teal" adds client-server support, faster file reads, an AI agent mode and SQL triggers, supported until at least October 2027, though files created in 2.0 cannot be read by older versions <sup>[12](<https://duckdb.org/2026/10/21/announcing-duckdb-200>)</sup>.
-- Mercedes-Benz open-sourced dbt_iterative_snapshot for Databricks, which processes batches chronologically and repairs historical records when late data arrives <sup>[13](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>)</sup>.
-- PyDebeziumAI embeds Debezium's CDC engine in a Python process to keep vector stores fresh without Kafka or Connect, supporting Chroma, PGVector and Milvus <sup>[14](<https://github.com/debezium/debezium-ai-python>)</sup>.
-- Meta reduced repeated product-analytics work to seven parameterized measurement patterns, which power more than 9,000 production pipelines <sup>[15](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>)</sup>.
+- DuckDB 2.0.0 LTS "Cinnamon Teal" adds client-server support, faster file reads, an AI agent mode and SQL triggers, supported until at least October 2027, though files created in 2.0 cannot be read by older versions <sup>[31](<https://duckdb.org/2026/10/21/announcing-duckdb-200>)</sup>.
+- ClickHouse-based OpenReplay reports customers ingesting billions of events and roughly 6 TB daily on a single instance with sub-second queries, with TTL rules replacing disruptive retention cleanups <sup>[32](<https://clickhouse.com/blog/openreplay-front-end-observability-at-scale-clickhouse>)</sup>.
+- Mercedes-Benz open-sourced dbt_iterative_snapshot for Databricks, which processes batches chronologically and repairs historical records when late data arrives <sup>[33](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>)</sup>.
+- PyDebeziumAI embeds Debezium's CDC engine in a Python process to keep vector stores fresh without Kafka or Connect, supporting Chroma, PGVector and Milvus <sup>[34](<https://github.com/debezium/debezium-ai-python>)</sup>.
+- Meta reduced repeated product-analytics work to seven parameterized measurement patterns, which power more than 9,000 production pipelines <sup>[35](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>)</sup>.
 
 ## Software Engineering and Infrastructure
 
-- Storage costs from inference are often overlooked in AI infrastructure planning, since inference runs continuously and every request leaves data behind <sup>[16](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>)</sup>.
-- An event-sourcing analysis argues Dynamic Consistency Boundaries avoid false conflicts, but tag-based versions may just move fixed boundaries into high-cardinality indexes; it recommends multi-stream transactions unless narrower contention is proven <sup>[17](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>)</sup>.
-- Apache Arrow targets in-memory analytics with contiguous typed buffers, reducing serialization between engines like Spark, pandas and DuckDB, unlike Parquet's storage focus <sup>[18](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>)</sup>.
+- An event-sourcing analysis argues Dynamic Consistency Boundaries avoid false conflicts, but tag-based versions may just move fixed boundaries into high-cardinality indexes; it recommends multi-stream transactions unless narrower contention is proven <sup>[36](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>)</sup>.
+- Apache Arrow targets in-memory analytics with contiguous typed buffers, reducing serialization between engines like Spark, pandas and DuckDB, unlike Parquet's storage focus <sup>[37](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>)</sup>.
+- Trail of Bits argues package managers have an integrity problem: lock-file hashes are often used for purposes other than cryptographic integrity, and signature verification is inconsistent and often off by default <sup>[38](<https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/>)</sup>.
 
 ## Sources
 
 1. [How Shopify turns open models into task experts](<https://shopify.engineering/open-model-task-experts>) — _shopify.engineering_
 2. [One Engineer Trained a 3.8B Parameter LLM from Scratch for $998](<https://blog.gopenai.com/one-engineer-trained-a-3-8b-parameter-llm-from-scratch-for-998-7ef5cd7809b7>) — _blog.gopenai.com_
-3. [Ensemble forecasting with IBM Granite time-series models](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>) — _huggingface.co_
-4. [Can AI understand culture?](<https://cohere.com/blog/can-ai-understand-culture>) — _cohere_
-5. [\[AINews\] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>) — _latent.space_
-6. [The internet is having a very bad cybersecurity day](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>) — _techcrunch.com_
-7. [Today's PHP Security Release, and How We're Strengthening PHP Security](<https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/>) — _thephp.foundation_
-8. [Anthropic Joins the AI Agent Race With Claude Duet](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>) — _nytimes.com_
-9. [Meta says Muse has over 10M users, with shopping a top activity](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>) — _techcrunch.com_
-10. [The Topology of an LLM Agent Loop With Tool Use](<https://blog.exe.dev/topology>) — _blog.exe.dev_
-11. [Governing Data and AI Agents in Snowflake: A Data Engineer's Field Notes](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>) — _medium.com_
-12. [Announcing DuckDB 2.0.0 LTS “Cinnamon Teal”](<https://duckdb.org/2026/10/21/announcing-duckdb-200>) — _duckdb.org_
-13. [dbt Snapshots Can't Handle Late Data. So We Built One That Can](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>) — _blog.dataengineerthings.org_
-14. [PyDebeziumAI](<https://github.com/debezium/debezium-ai-python>) — _github.com_
-15. [Scaling AI-Native Analytics Patterns at Meta](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>) — _medium.com_
-16. [AI’s hidden storage bill: What inference leaves behind](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>) — _technologyreview.com_
-17. [Thoughts on Dynamic Consistency Boundary](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>) — _architecture-weekly.com_
-18. [From Disk Pages to Columnar Memory: Why Apache Arrow?](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>) — _medium.com_
+3. [Introducing Flint](<https://recursive.com/updates/introducing-recursive-flint>) — _recursive.com_
+4. [Ensemble forecasting with IBM Granite time-series models](<https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1>) — _huggingface.co_
+5. [Can AI understand culture?](<https://cohere.com/blog/can-ai-understand-culture>) — _cohere_
+6. [LLMs are making formal software verification feasible at a much larger scale](<https://www.anthropic.com/research/formal-verification>) — _anthropic red_
+7. [\[AINews\] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months](<https://www.latent.space/p/ainews-openais-patch-the-planet-program>) — _latent.space_
+8. [Security Update on PHP2Shell: Impact for Docker Customers](<https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/>) — _docker.com_
+9. [Widespread PHP Flaw May Cause Many Site Outages Today](<https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/>) — _krebsonsecurity.com_
+10. [The internet is having a very bad cybersecurity day](<https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/>) — _techcrunch.com_
+11. [Stolen UpdraftCentral Keys Used to Backdoor WordPress Sites](<https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/>) — _bleepingcomputer.com_
+12. [Signal bug could let someone keep listening after you hang up](<https://www.malwarebytes.com/blog/bugs/2026/10/signal-bug-could-let-someone-keep-listening-after-you-hang-up>) — _malwarebytes.com_
+13. [Contained: Oct 21, 2026 LiteLLM release v1.107.0 Compromised](<https://docs.litellm.ai/blog/security-incident-oct-21-2026>) — _docs.litellm.ai_
+14. [Railway Security Disclosure](<https://blog.railway.com/p/security-disclosure-wednesday-october-21st>) — _blog.railway.com_
+15. [Anthropic Joins the AI Agent Race With Claude Duet](<https://www.nytimes.com/2026/10/21/technology/anthropic-ai-agent-claude-duet.html>) — _nytimes.com_
+16. [Claude Duet (Website)](<https://claude.com/product/claude-duet>) — _claude.com_
+17. [Donating Agent Skills to the Agentic AI Foundation](<https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation>) — _anthropic news_
+18. [Donating Agent Skills to the Agentic AI Foundation](<https://simonwillison.net/2026/Oct/22/donating-agent-skills/>) — _simonwillison.net_
+19. [Building agents: When to fold subagents into your main agent loop](<https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop>) — _claude_
+20. [Meta says Muse has over 10M users, with shopping a top activity](<https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/>) — _techcrunch.com_
+21. [The Topology of an LLM Agent Loop With Tool Use](<https://blog.exe.dev/topology>) — _blog.exe.dev_
+22. [Governing Data and AI Agents in Snowflake: A Data Engineer's Field Notes](<https://medium.com/snowflake/governing-data-and-ai-agents-in-snowflake-a-data-engineers-field-notes-0662c602b404>) — _medium.com_
+23. [I Gave 14 LLMs AWS Keys. Here's What They Wanted to Do Next](<https://medium.com/@adan.alvarez/i-gave-14-llms-aws-keys-heres-what-they-wanted-to-do-next-48585761a11b>) — _medium.com_
+24. [The full Claude Platform, available on Google Cloud](<https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed>) — _claude_
+25. [Introducing Confidential Computing on Cohere Model Vault](<https://cohere.com/blog/introducing-confidential-computing-on-cohere-model-vault>) — _cohere_
+26. [Inside Cohere Model Vault: Building a verifiable confidential AI inference](<https://cohere.com/blog/inside-cohere-model-vault-building-verifiable-confidential-ai-inference>) — _cohere_
+27. [When vectors became an implementation detail](<https://www.pinecone.io/blog/when-vectors-became-an-implementation-detail/>) — _pinecone_
+28. [Integrated embedding on the Documents API](<https://www.pinecone.io/blog/docs-api-integrated-embedding/>) — _pinecone_
+29. [Claude API version 2026-10-21 is now available](<https://threadreaderapp.com/thread/2113013247209021918.html>) — _threadreaderapp.com_
+30. [AI’s hidden storage bill: What inference leaves behind](<https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/>) — _technologyreview.com_
+31. [Announcing DuckDB 2.0.0 LTS “Cinnamon Teal”](<https://duckdb.org/2026/10/21/announcing-duckdb-200>) — _duckdb.org_
+32. [Front-end Observability at Scale with ClickHouse](<https://clickhouse.com/blog/openreplay-front-end-observability-at-scale-clickhouse>) — _clickhouse.com_
+33. [dbt Snapshots Can't Handle Late Data. So We Built One That Can](<https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e>) — _blog.dataengineerthings.org_
+34. [PyDebeziumAI](<https://github.com/debezium/debezium-ai-python>) — _github.com_
+35. [Scaling AI-Native Analytics Patterns at Meta](<https://medium.com/@AnalyticsAtMeta/scaling-ai-native-analytics-patterns-at-meta-b29162cb46bf>) — _medium.com_
+36. [Thoughts on Dynamic Consistency Boundary](<https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary>) — _architecture-weekly.com_
+37. [From Disk Pages to Columnar Memory: Why Apache Arrow?](<https://medium.com/@rongalinaidu/from-disk-pages-to-columnar-memory-why-apache-arrow-77d9147244cb>) — _medium.com_
+38. [Package Managers Have an Integrity Problem](<https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/>) — _blog.trailofbits.com_
 
 
 ## Recent archive
@@ -72,6 +110,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-10-22` | Thursday | [Read →](news/en/2026-10-22.md) |
 | `2026-10-21` | Wednesday | [Read →](news/en/2026-10-21.md) |
 | `2026-10-20` | Tuesday | [Read →](news/en/2026-10-20.md) |
 | `2026-10-19` | Monday | [Read →](news/en/2026-10-19.md) |
@@ -85,9 +124,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-10-11` | 🗓️ Weekly recap | [Read →](news/en/2026-10-11.md) |
 | `2026-10-10` | Saturday | [Read →](news/en/2026-10-10.md) |
 | `2026-10-09` | Friday | [Read →](news/en/2026-10-09.md) |
-| `2026-10-08` | Thursday | [Read →](news/en/2026-10-08.md) |
 
-<sub>[Browse the full archive (129) →](news/en/)</sub>
+<sub>[Browse the full archive (130) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
