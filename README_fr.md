@@ -8,34 +8,57 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-24
-<sub>mis à jour le 25 octobre 2026 à 01:00</sub>
+### Dernier digest — 2026-10-26
+<sub>mis à jour le 26 octobre 2026 à 12:01</sub>
 
-## Modèles d'IA
+## IA, LLM et agents
 
-- Kimi K3.1 Pro, une version post-entraînée de Kimi K3 avec une puissance de calcul d'entraînement post-entraînement nettement plus importante, est présenté comme un modèle à poids ouverts de 2,8 T de paramètres que Latent Space affirme surpasser Fable 5.1 <sup>[1](<https://latent.space/p/ainews-kimi-31/>)</sup>. La sortie s'accompagne également d'une API Pro Highspeed, que la même lettre d'information dit deux à trois fois plus rapide <sup>[1](<https://latent.space/p/ainews-kimi-31/>)</sup>.
-- Sebastian Raschka a publié un cours gratuit de huit vidéos (environ 11 heures) qui construit des modèles de raisonnement à partir d'un LLM pré-entraîné en PyTorch, couvrant le passage à l'échelle de l'inférence, l'apprentissage par renforcement et la distillation, en complément de son livre Build Reasoning Model (From Scratch) <sup>[2](<https://magazine.sebastianraschka.com/p/building-reasoning-models>)</sup>.
+- Dan Luu soutient que l'IA peut désormais réaliser en un seul essai de nombreux projets, de sorte que presque n'importe qui peut créer un logiciel, mais que les modèles peinent encore sur les tâches plus difficiles, et que les développeurs devraient viser plus haut à mesure que les modèles s'améliorent <sup>[1](<https://danluu.com/ambitious/>)</sup>.
+- L'ingénierie du contexte est décrite comme difficile pour des raisons structurelles : les modèles sont conçus, optimisés et entraînés de manières qui engendrent des modes de défaillance spécifiques, de sorte que ce défi persistera à mesure que les modèles progressent <sup>[2](<https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html>)</sup>.
+- Tiger Data a construit trois systèmes de mémoire pour son agent Slack (une liste de faits, un graphe de connaissances et un arbre) ; les agents ont eu du mal à interpréter les arêtes du graphe, tandis qu'un arbre construit sur l'extension ltree de Postgres a mieux fonctionné et a fait passer le classement d'un résumé de fil de plusieurs dizaines de tours à un seul appel d'outil <sup>[3](<https://www.tigerdata.com/blog/we-built-three-memory-systems-most-expressive-wasnt-most-useful>)</sup>.
+- Un test de RAG agentique portant sur 298 questions et 2 000 articles arXiv a montré que le fait de laisser l'agent relancer la recherche n'apporte que 1,2 point, un écart compris dans la marge de bruit <sup>[4](<https://towardsdatascience.com/does-agentic-rag-actually-retrieve-better-evidence-i-tested-it-on-298-questions/>)</sup>.
+- Sutura est un runtime Rust sous licence Apache-2.0 qui expose aux agents IA des métriques certifiées et des définitions sémantiques via HTTP ou MCP, avec des requêtes fédérées et l'application de politiques, afin que les agents n'improvisent pas face aux tables de l'entrepôt de données <sup>[5](<https://github.com/telekom/sutura>)</sup>.
+- Un podcast dbt rapporte que les agents de données peinent encore sur des tâches analytiques réalistes : le meilleur agent réussit 61 % des requêtes de référence du premier coup, et une couche sémantique améliore nettement la précision ; l'ingénierie de prompts seule ne devrait pas suffire à combler l'écart <sup>[6](<https://roundup.getdbt.com/p/can-data-agents-do-real-analysis>)</sup>.
+- OpenAI et Anthropic ont réduit leurs prix d'LLM de jusqu'à 80 % en quelques mois, ce que l'auteur trouve étrange compte tenu de leurs pertes et de leurs introductions en bourse prévues <sup>[7](<https://minimaxir.com/2026/10/cheap-llms/>)</sup>.
 
-## Outils pour développeurs et agents de codage
+## Ingénierie des données et stockage
 
-- L'API des métriques d'usage de Copilot de GitHub inclut désormais un nouveau tableau `totals_by_client` dans les rapports sur 1 jour et 28 jours, au niveau de l'entreprise, de l'organisation et de chaque utilisateur <sup>[3](<https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode>)</sup>. Chaque entrée indique, par client, le nombre de requêtes, le nombre de sessions et la consommation de tokens, ce qui permet de suivre l'usage d'outils comme OpenCode, Claude Code et Codex <sup>[3](<https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode>)</sup>.
-- Chaque entrée client détaille aussi l'usage par modèle, avec un champ `model_selection_mode` indiquant si le modèle a été choisi directement par l'utilisateur ou sélectionné automatiquement <sup>[3](<https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode>)</sup>.
+- Lance est présenté comme un format de fichier pour les charges de travail IA nécessitant un accès aléatoire rapide aux embeddings et aux données multimodales, cas où la conception de Parquet, orientée lecture séquentielle, montre ses limites ; il affirme être 100 fois plus rapide que Parquet pour ce type d'accès <sup>[8](<https://vutr.substack.com/p/free-a-file-format-claims-to-be-100x>)</sup>.
+- L'extension hf pour DuckDB permet de lire, interroger et écrire des jeux de données, modèles et buckets de stockage Hugging Face en SQL via des URL hf://, avec mise en cache et déduplication <sup>[9](<https://github.com/lhoestq/duckdb-hf-extension>)</sup>.
+- Pinterest présente la gestion des métriques à grande échelle et la construction d'une couche de métriques prête pour les agents, destinée à remplacer des définitions de métriques dispersées <sup>[10](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-293>)</sup>.
+- Le retard de réplication d'Oracle GoldenGate se diagnostique au mieux comme un problème de files d'attente le long du pipeline : on mesure chaque étape avec des horodatages de heartbeat plutôt que d'accuser Replicat par défaut <sup>[11](<https://hackernoon.com/hunting-replication-lag-a-queue-by-queue-method-for-diagnosing-oracle-goldengate>)</sup>.
 
-## Ingénierie IA et RAG
+## Infrastructure, cloud et DevOps
 
-- ByteByteGo explique la différence entre le RAG standard, qui interroge une base de connaissances une seule fois et ajoute les résultats au prompt, et le RAG agentique, où un agent décide comment et quand effectuer la recherche <sup>[4](<https://blog.bytebytego.com/p/ep230-rag-vs-agentic-rag>)</sup>.
+- Netflix ajoute un mode mono-locataire à Titus afin que les charges sensibles puissent obtenir une VM dédiée au sein de sa plateforme de conteneurs, motivé par les pics de latence de queue causés au niveau matériel par les voisins bruyants ; les nœuds dédiés améliorent la stabilité, mais les lancements sont plus lents et la capacité préchauffée demande plus de planification <sup>[12](<https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163>)</sup>.
+- LinkedIn a fait migrer son pipeline de suivi, qui traite des centaines de milliards d'événements par jour, de Java 8 et Play Framework vers gRPC et un runtime Java moderne, en envoyant 10 % des événements dans les deux pipelines pour comparer les sorties avant la bascule ; l'utilisation réseau entrante a chuté d'environ 89 % <sup>[13](<https://www.linkedin.com/blog/engineering/infrastructure/rebuilding-linkedins-tracking-infrastructure-scaling-migrating-and-hardening-a-high-volume-event-pipeline>)</sup>.
+- Un article de recherche de Varonis signale une faille inter-locataires dans GCP Dataflow : des noms prévisibles des buckets de staging par défaut permettraient à un attaquant de détourner les artefacts stockés et d'atteindre une exécution de code à distance sur les workers ; Google a corrigé le problème, et la leçon est de vérifier la propriété et l'intégrité des artefacts plutôt que de faire confiance aux noms par défaut <sup>[14](<https://www.varonis.com/blog/shadow-dependency-in-gcp-dataflow-cross-tenant>)</sup>.
 
-## Projets et expérimentations
+## Outillage développeur et génie logiciel
 
-- Battledrones de Simon Willison a reçu une carte à quatre joueurs « Compass Rose », développée avec Claude Opus 5.5, qui ajoute une symétrie de rotation à quatre voies et la prise en charge du multijoueur WebSocket pour jusqu'à quatre humains, les places libres étant occupées par des IA <sup>[5](<https://simonwillison.net/2026/Oct/24/battledrones/>)</sup>.
+- bbtree est une map ordonnée en Rust dont les benchmarks annoncent des performances jusqu'à 5 fois supérieures à BTreeMap en mono-thread et une consommation mémoire inférieure de 30 %, construite avec du code écrit par un LLM guidé par un expert des bases de données et vérifiée par preuve formelle et tests <sup>[15](<https://bbtree.xiangpeng.systems/post/>)</sup>.
+- Cap 0.6.1 est la première version de Cap sans navigateur web intégré, après sa migration vers GPUI <sup>[16](<https://cap.so/blog/rebuilding-cap-in-gpui>)</sup>.
+- HPTS 2026 a conclu que les systèmes d'IA progressent plus vite que notre capacité à les spécifier, les vérifier et les auditer, faisant des journaux, des vérifications formelles et de la revue humaine le véritable plan de contrôle <sup>[17](<https://muratbuffalo.blogspot.com/2026/10/hpts-2026-day-1.html>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed](<https://latent.space/p/ainews-kimi-31/>) — _latent.space_
-2. [Building Reasoning Models from the Ground Up: A Full Video Course](<https://magazine.sebastianraschka.com/p/building-reasoning-models>) — _magazine.sebastianraschka.com_
-3. [Usage metrics API adds usage from tools like OpenCode](<https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode>) — _github.blog_
-4. [EP230: RAG vs Agentic RAG](<https://blog.bytebytego.com/p/ep230-rag-vs-agentic-rag>) — _blog.bytebytego.com_
-5. [battledrones v14: Compass Rose, a four player map](<https://simonwillison.net/2026/Oct/24/battledrones/>) — _simonwillison.net_
+1. [We should be more ambitious with the software we build](<https://danluu.com/ambitious/>) — _danluu.com_
+2. [The State of Context Engineering](<https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html>) — _dbreunig.com_
+3. [We built three memory systems. The most expressive one wasn't the most useful](<https://www.tigerdata.com/blog/we-built-three-memory-systems-most-expressive-wasnt-most-useful>) — _tigerdata.com_
+4. [Does Agentic RAG Actually Retrieve Better Evidence? I Tested It on 298 Questions](<https://towardsdatascience.com/does-agentic-rag-actually-retrieve-better-evidence-i-tested-it-on-298-questions/>) — _towardsdatascience.com_
+5. [Sutura](<https://github.com/telekom/sutura>) — _github.com_
+6. [Can data agents do real analysis? (51 minute podcast)](<https://roundup.getdbt.com/p/can-data-agents-do-real-analysis>) — _roundup.getdbt.com_
+7. [OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?](<https://minimaxir.com/2026/10/cheap-llms/>) — _minimaxir.com_
+8. [A file format claims to be 100x faster than Parquet](<https://vutr.substack.com/p/free-a-file-format-claims-to-be-100x>) — _vutr.substack.com_
+9. [DuckDB hf extension — read and write Hugging Face assets](<https://github.com/lhoestq/duckdb-hf-extension>) — _github.com_
+10. [Data Engineering Weekly #293](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-293>) — _dataengineeringweekly.com_
+11. [Hunting Replication Lag: A Queue-by-Queue Method for Diagnosing Oracle GoldenGate](<https://hackernoon.com/hunting-replication-lag-a-queue-by-queue-method-for-diagnosing-oracle-goldengate>) — _hackernoon.com_
+12. [Single-tenant Titus: VM-level isolation on a multi-tenant container platform](<https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163>) — _netflixtechblog.com_
+13. [Rebuilding LinkedIn's Tracking Infrastructure](<https://www.linkedin.com/blog/engineering/infrastructure/rebuilding-linkedins-tracking-infrastructure-scaling-migrating-and-hardening-a-high-volume-event-pipeline>) — _linkedin.com_
+14. [Go With the Flow: Taking a Shadow Dependency in GCP Dataflow Cross Tenant](<https://www.varonis.com/blog/shadow-dependency-in-gcp-dataflow-cross-tenant>) — _varonis.com_
+15. [bbtree: fastest ordered map](<https://bbtree.xiangpeng.systems/post/>) — _bbtree.xiangpeng.systems_
+16. [A technical deep dive into Cap's migration to GPUI](<https://cap.so/blog/rebuilding-cap-in-gpui>) — _cap.so_
+17. [HPTS 2026 (Day 1)](<https://muratbuffalo.blogspot.com/2026/10/hpts-2026-day-1.html>) — _muratbuffalo.blogspot.com_
 
 
 ## Archive récente
