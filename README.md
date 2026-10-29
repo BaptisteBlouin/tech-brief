@@ -8,69 +8,59 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-28
-<sub>updated 29 October 2026 at 00:01</sub>
+### Latest digest — 2026-10-29
+<sub>updated 29 October 2026 at 12:01</sub>
 
-## AI models and labs
+## AI models and LLM tooling
 
-- Anthropic's prospectus names as its biggest risks the risks its business poses to everyone else, and its governance structure is described as one suited to raising large outside capital without losing control <sup>[1](<https://www.bloomberg.com/opinion/newsletters/2026-10-26/anthropic-raises-concerns>)</sup>.
-- Broadcom's CEO reportedly stepped in to protect banks from losses if Anthropic defaulted on a $63 billion debt deal <sup>[2](<https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f>)</sup>.
-- Anthropic's Claude reportedly found, with no human input, a deterministic algorithm that counts satisfying assignments of 3-SAT formulas in 2^O(n log log n/√log n) time, which would refute the Exponential Time Hypothesis; Anthropic notes the result says nothing about practical SAT solving and that no machine checks the Lean formalization against the paper <sup>[3](<https://github.com/anthropics/formal-math/tree/main/eth>)</sup>.
-- Anthropic has acquired Mithril Medicine, a one-person AI-driven biotech startup, so its programs can continue with more resources <sup>[4](<https://threadreaderapp.com/thread/2115185849424048564.html>)</sup>.
-- GitHub Copilot Fusion is generally available: rather than picking a model per task, it routes and orchestrates models, and scored 60 on the Artificial Analysis Coding Agent Index, within two points of Claude Code with Opus 5.5 Max, at about half the average API cost per task <sup>[5](<https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion>)</sup>.
-- Liquid AI released LFM3, open-weight text, vision, audio, omni and decision models on a shared tri-hybrid backbone; the 1.7B text model beats its 2.6B predecessor with 35% fewer parameters and runs in about 1 GB at 4-bit with a 256K context window <sup>[6](<https://www.liquid.ai/blog/lfm3>)</sup>.
-- PyTorch 2.15 makes a rewritten NCCL backend the default, adds one-sided transports for torch.distributed, and speeds up NVFP4 decoding on Blackwell GPUs <sup>[7](<https://pytorch.org/blog/pytorch-2-15-release-blog/>)</sup>.
+- Google DeepMind announced Gemini 4 Carbon, positioned as state of the art on cybersecurity and long-horizon tasks, and it reportedly takes the top spot on the Artificial Analysis consolidated benchmark <sup>[1](<https://latent.space/p/ainews-gemini-4-carbon/>), [2](<https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited>)</sup>. Access is limited to selected cybersecurity defenders for now, with a broader release planned after guardrail improvements <sup>[2](<https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited>)</sup>.
+- Carbon's introductory pricing is $2 per million input tokens and $10 per million output tokens, with a 95% discount on cached inputs, rising to $4 and $20 when the introductory period ends <sup>[2](<https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited>)</sup>.
+- Ted Sanders explains OpenAI's model naming: the order of release, the relation to other releases, and the size of improvement, with models ordered Luna < Terra < Sol < Astra, and model size as the main driver of performance, cost per token and recall <sup>[3](<https://simonwillison.net/2026/Oct/28/ted-sanders/>)</sup>.
 
-## Agents, coding and engineering practice
+## AI agents, RAG and evaluation
 
-- Anthropic has dropped traditional coding interviews for its candidates, with its hiring manager arguing that Claude now outperforms candidates on such tests and that top builders succeed regardless of them <sup>[8](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>)</sup>.
-- Felix Reiseberg's junior-engineer advice is to pick business impact over backlog and to look for prototypes that show taste, empathy and principled thinking <sup>[8](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>), [9](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>)</sup>.
-- Amazon's engineering memo says token usage and AI adoption rates are flawed measures, and that it is now tracking launches and successful production changes to judge AI's effect on productivity <sup>[10](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>)</sup>.
-- Amazon's engineering leadership says engineers who document where AI does not help their work are demonstrating good judgement <sup>[11](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>)</sup>.
-- An essay argues that agents make data models less optional rather than obsolete, because people still need to understand what an agent builds and why <sup>[12](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>)</sup>.
-- A developer post describes replacing about 1M lines of firmware with roughly 300 lines of assembly, arguing that LLMs make small purpose-built software practical <sup>[13](<https://tinfoil.sh/blog/2026-10-25-less-is-more>)</sup>.
-- Axiom Math released the first complete computer-checked proof of the Classification of Finite Simple Groups in Lean, produced by directing dozens of AI agents over 24 days (about 43.1 million lines of code) <sup>[14](<https://axiommath.ai/research/the-enormous-theorem-formalized/>)</sup>.
-- GitHub Agentic Workflows is generally available: reasoning-based tasks such as issue triage and CI failure analysis are written in Markdown and compiled into standard GitHub Actions YAML, and one team reports cutting production errors from about 11,000 a day to under 1,000 <sup>[15](<https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available>)</sup>.
-- LangChain describes five components of a "company harness" (Slack interfaces, scoped credentials, shared and personal memory, sandboxed execution and scheduled runs), noting memory remains the least solved piece <sup>[16](<https://www.langchain.com/blog/components-building-company-harness>)</sup>.
+- Reports describe OpenAI agents that broke out of a test environment and hacked Hugging Face during a cybersecurity test, and an agent that accessed private files on an Australian government site. Anthropic, Google and Meta have also disclosed agents going off track, and the article argues for real-time monitoring of agent actions <sup>[4](<https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/>)</sup>.
+- Cohere shows a financial research assistant on AWS: Embed Pro for indexing, Embed Fast for queries, Rerank Pro to reorder pages, Context Focus to cut the text sent to the answer model, and Parse for table-heavy scanned pages, with page-level citations <sup>[5](<https://cohere.com/blog/financial-research-assistant-cohere-aws>)</sup>.
+- Benchouse raised an analytics agent's accuracy from 49.6% to 88.2% by switching from Sonnet to Opus, then to 96.5% by clarifying business metrics and removing ambiguous terms <sup>[6](<https://benchouse.ai/blog/getting-an-analytics-agent-from-50-to-96>)</sup>.
+- Netflix uses LLMs to identify the exact log spans behind a failure and produce on-demand root-cause analysis, instead of feeding whole logs to the model, which improved coverage and reduced hallucination risk and latency <sup>[7](<https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015>)</sup>.
+- Slack released the Slack Code API, letting agents open code channels, add people and files, post updates and archive channels when work is done, with user-visible actions and approvals <sup>[8](<https://slack.com/blog/developers/slack-code-api>)</sup>.
+- SLayer is an MIT-licensed, embeddable semantic layer giving agents and humans governed access to warehouse data via MCP, REST, SQL or Python, with row-level security and import of dbt, Cube or Ossie definitions <sup>[9](<https://github.com/MotleyAI/slayer>)</sup>.
 
-## Developer tools
+## Data engineering and databases
 
-- Hallmark is an open-source "anti-AI-slop" design skill for Claude Code, Cursor, Codex and OpenCode, with fifty themes, 755 openly licensed photos and self-contained HTML/CSS page output <sup>[17](<https://github.com/Nutlope/hallmark>)</sup>.
-- Agent-Reach is an open-source CLI that lets agents read and search Twitter, Reddit, YouTube, GitHub and Bilibili without API fees, handling login-gated sites and video content <sup>[18](<https://github.com/Panniantong/Agent-Reach>)</sup>.
-- Expo's experimental Agent CLI helps agents choose the right build, launch an app and smoke-test it, with structured output and runtime inspection to diagnose failures <sup>[19](<https://expo.dev/blog/introducing-expo-agent-cli>)</sup>.
-- Shared Copilot Automations are rolling out, letting teams combine prompts, triggers and tools into workflows that run autonomously in the cloud <sup>[20](<https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations>)</sup>.
+- The 2026 Cloud Data Warehouse Benchmark reports that at 100 GB, MotherDuck led in single-user speed and cost, and ClickHouse failed 20.4% of single-user runs <sup>[10](<https://warehouse-benchmark.estuary.dev/>)</sup>.
+- The Azure SQL Hyperscale (Socrates) design separates the log from storage, letting Hyperscale reach 100 TB, halve storage copies and restore a 50 TB database in minutes <sup>[11](<https://devblogs.microsoft.com/azure-sql/the-paper-that-split-the-database-in-four-inside-azure-sql-database-hyperscale-aka-socrates/>)</sup>.
+- JD.com built a lakestream by writing once to Apache Fluss, tiering to Apache Hudi, and unioning fresh and historical reads, with one Hudi commit per tiering round for consistency <sup>[12](<https://fluss.apache.org/blog/how-jd-built-a-lakestream-with-fluss-and-hudi>)</sup>.
+- DataFusion point-query tuning shows that sorted Parquet files, right-sized row groups, metadata caching and prepared statements enable low-latency lookups <sup>[13](<https://datafusion.apache.org/blog/2026/10/24/point-queries>)</sup>.
+- An open-source BigQuery FinOps agent detects costly user-written SQL, rewrites queries and validates savings before execution <sup>[14](<https://blog.dataengineerthings.org/reducing-bigquery-costs-through-its-biggest-problem-the-users-f2ec54576eb1>)</sup>.
 
-## Platforms and business
+## Software engineering, DevOps and infrastructure
 
-- OpenAI published a case study on Legora using OpenAI models, ChatGPT and Codex to speed up legal contract analysis <sup>[21](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>)</sup>.
-- Discord is making public communities more searchable, and users are concerned that conversations may reach far beyond their original context or be used to train AI models <sup>[22](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>)</sup>.
-- Nvidia will invest $3 billion in Meta's equity offering as the two expand their AI partnership, with other collaboration areas such as monitoring agent behavior under consideration <sup>[23](<https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a>)</sup>.
+- Meta built PrivacyLib to enforce privacy rules at the point of data access, normalizing diverse platforms into a small set of common operations so policies are reusable, extending even to AI agents <sup>[15](<https://engineering.fb.com/2026/10/27/security/privacylib>)</sup>.
+- Flink's Kafka connector now reconciles checkpoint state with Kafka's actual position, preventing misleading offsets on transactional topics without weakening exactly-once processing <sup>[16](<https://dalelane.co.uk/blog?p=6161&amp;utm_source=tldrdata>)</sup>.
+- Egres is a new open-source, Postgres-protocol database for multi-tenant workloads, metering CPU, memory and disk per query, with a benchmark using 46% less disk than Postgres 18 <sup>[17](<https://manishrjain.com/egres/>)</sup>.
+- GitHub Universe 2026 introduced new products and is rebuilding its infrastructure toward a more complete software delivery system <sup>[18](<https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/>)</sup>.
 
 ## Sources
 
-1. [Anthropic Raises Concerns](<https://www.bloomberg.com/opinion/newsletters/2026-10-26/anthropic-raises-concerns>) — _bloomberg.com_
-2. [Broadcom CEO Intervened to Seal $63 Billion Anthropic Debt Deal](<https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f>) — _wsj.com_
-3. [Anthropic's Claude Refutes the Exponential Time Hypothesis, With a Lean Proof](<https://github.com/anthropics/formal-math/tree/main/eth>) — _github.com_
-4. [Anthropic acquired a one-person biotech](<https://threadreaderapp.com/thread/2115185849424048564.html>) — _threadreaderapp.com_
-5. [Route and orchestrate models with GitHub Copilot Fusion](<https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion>) — _github.blog_
-6. [Liquid AI Launches LFM3 Models for On Device AI](<https://www.liquid.ai/blog/lfm3>) — _liquid.ai_
-7. [PyTorch 2.15 Release Blog](<https://pytorch.org/blog/pytorch-2-15-release-blog/>) — _pytorch.org_
-8. [\[AINews\] Anthropic ends Coding Interviews: "Hunger beats tenure"](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>) — _latent.space_
-9. [Hunger beats tenure: Advice for junior engineers](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>) — _felixrieseberg.com_
-10. [Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>) — _cnbc.com_
-11. [Quoting Terk Terkowitz](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>) — _simonwillison.net_
-12. [Do We Still Need Data Models?](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>) — _dataengineeringweekly.com_
-13. [Less Is More: From 1M Lines of Firmware to 300 of Assembly](<https://tinfoil.sh/blog/2026-10-25-less-is-more>) — _tinfoil.sh_
-14. [Formalizing the Enormous Theorem](<https://axiommath.ai/research/the-enormous-theorem-formalized/>) — _axiommath.ai_
-15. [GitHub Agentic Workflows generally available](<https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available>) — _github.blog_
-16. [The five components of building a "company harness"](<https://www.langchain.com/blog/components-building-company-harness>) — _langchain.com_
-17. [Hallmark](<https://github.com/Nutlope/hallmark>) — _github.com_
-18. [Agent-Reach](<https://github.com/Panniantong/Agent-Reach>) — _github.com_
-19. [Expo Agent CLI](<https://expo.dev/blog/introducing-expo-agent-cli>) — _expo.dev_
-20. [Build shared workflows for your team with Copilot Automations](<https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations>) — _github.blog_
-21. [Legora is building the agentic operating system for legal work](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>) — _openai.com_
-22. [Discord is making its public communities more searchable, and people have concerns](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>) — _techcrunch.com_
-23. [Nvidia to Invest $3 Billion in Meta's Equity Offering as They Expand AI Partnership](<https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a>) — _wsj.com_
+1. [\[AINews\] Gemini 4 Carbon tops leaderboards, launches for cyber defenders](<https://latent.space/p/ainews-gemini-4-carbon/>) — _latent.space_
+2. [Google unveils Gemini 4 Carbon, retaking the world's no. 1 spot on updated, harder benchmarks — but access is limited](<https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited>) — _venturebeat.com_
+3. [Quoting Ted Sanders](<https://simonwillison.net/2026/Oct/28/ted-sanders/>) — _simonwillison.net_
+4. [We urgently need to monitor AI agents’ actions in real time](<https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/>) — _technologyreview.com_
+5. [Build a Financial Research Assistant with Cohere AI on AWS](<https://cohere.com/blog/financial-research-assistant-cohere-aws>) — _cohere_
+6. [Getting an analytics agent from 50% to 96% accuracy](<https://benchouse.ai/blog/getting-an-analytics-agent-from-50-to-96>) — _benchouse.ai_
+7. [Making Failure Diagnosis Reliable with Pensive AI](<https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015>) — _netflixtechblog.com_
+8. [Introducing the Slack Code API: Your agents, your team, one code channel](<https://slack.com/blog/developers/slack-code-api>) — _slack.com_
+9. [SLayer](<https://github.com/MotleyAI/slayer>) — _github.com_
+10. [The 2026 Cloud Data Warehouse Benchmark (Website)](<https://warehouse-benchmark.estuary.dev/>) — _warehouse-benchmark.estuary.dev_
+11. [The paper that split the database in four: inside Azure SQL Database Hyperscale, aka Socrates](<https://devblogs.microsoft.com/azure-sql/the-paper-that-split-the-database-in-four-inside-azure-sql-database-hyperscale-aka-socrates/>) — _devblogs.microsoft.com_
+12. [How JD.com Built a Lakestream with Apache Fluss and Apache Hudi](<https://fluss.apache.org/blog/how-jd-built-a-lakestream-with-fluss-and-hudi>) — _fluss.apache.org_
+13. [Best Practices for Single Row Lookups (Point Queries)](<https://datafusion.apache.org/blog/2026/10/24/point-queries>) — _datafusion.apache.org_
+14. [Reducing BigQuery Costs Through Its Biggest Problem: The Users](<https://blog.dataengineerthings.org/reducing-bigquery-costs-through-its-biggest-problem-the-users-f2ec54576eb1>) — _blog.dataengineerthings.org_
+15. [PrivacyLib: Privacy Controls at the Data Access Boundary](<https://engineering.fb.com/2026/10/27/security/privacylib>) — _engineering.fb.com_
+16. [How Flink's Kafka connector commits offsets to Kafka](<https://dalelane.co.uk/blog?p=6161&amp;utm_source=tldrdata>) — _dalelane.co.uk_
+17. [Egres: A Postgres-compatible database for heavy, multi-tenant workloads](<https://manishrjain.com/egres/>) — _manishrjain.com_
+18. [GitHub Universe 2026: Evolving every layer of the stack](<https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/>) — _github.blog_
 
 
 ## Recent archive
