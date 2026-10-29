@@ -9,45 +9,68 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-10-28
-<sub>mis à jour le 28 octobre 2026 à 12:01</sub>
+<sub>mis à jour le 29 octobre 2026 à 00:01</sub>
 
 ## Modèles et laboratoires d'IA
 
-- Le prospectus d'Anthropic désigne comme ses plus grands risques ceux que son activité fait peser sur tous les autres acteurs, et sa structure de gouvernance est décrite comme adaptée à la levée de capitaux externes importants sans perte de contrôle <sup>[1](<https://www.bloomberg.com/opinion/newsletters/2026-10-26/anthropic-raises-concerns>)</sup>.
+- Le prospectus d'Anthropic désigne comme ses principaux risques ceux que son activité fait peser sur tous les autres, et sa structure de gouvernance est décrite comme adaptée à la levée de capitaux externes importants sans perte de contrôle <sup>[1](<https://www.bloomberg.com/opinion/newsletters/2026-10-26/anthropic-raises-concerns>)</sup>.
 - Le PDG de Broadcom serait intervenu pour protéger les banques de pertes si Anthropic faisait défaut sur un emprunt de 63 milliards de dollars <sup>[2](<https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f>)</sup>.
-- Google Genie, Artificial Analysis et FrontierCode ont publié des mises à jour majeures de leurs offres phares, décrites comme des améliorations incrémentales annuelles pour la plupart <sup>[3](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>)</sup>.
+- Claude d'Anthropic aurait trouvé, sans aucune intervention humaine, un algorithme déterministe qui compte les affectations satisfaisantes de formules 3-SAT en temps 2^O(n log log n/√log n), ce qui réfuterait l'hypothèse du temps exponentiel (ETH). Anthropic précise que ce résultat ne dit rien de la résolution pratique de SAT et qu'aucune machine ne vérifie la formalisation Lean par rapport à l'article <sup>[3](<https://github.com/anthropics/formal-math/tree/main/eth>)</sup>.
+- Anthropic a acquis Mithril Medicine, une startup biotech pilotée par l'IA et composée d'une seule personne, afin que ses programmes puissent se poursuivre avec davantage de ressources <sup>[4](<https://threadreaderapp.com/thread/2115185849424048564.html>)</sup>.
+- GitHub Copilot Fusion est généralement disponible : plutôt que de choisir un modèle par tâche, il route et orchestre plusieurs modèles, obtient 60 points à l'Artificial Analysis Coding Agent Index, à deux points près de Claude Code avec Opus 5.5 Max, pour environ la moitié du coût API moyen par tâche <sup>[5](<https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion>)</sup>.
+- Liquid AI a publié LFM3, des modèles à poids ouverts pour le texte, la vision, l'audio, l'omni et la décision, reposant sur un tronc commun tri-hybride. Le modèle texte de 1,7 B surpasse son prédécesseur de 2,6 B avec 35 % de paramètres en moins, fonctionne en 4 bits avec environ 1 Go et dispose d'une fenêtre de contexte de 256K <sup>[6](<https://www.liquid.ai/blog/lfm3>)</sup>.
+- PyTorch 2.15 rend par défaut un backend NCCL réécrit, ajoute des transports unilatéraux pour torch.distributed et accélère le décodage NVFP4 sur les GPU Blackwell <sup>[7](<https://pytorch.org/blog/pytorch-2-15-release-blog/>)</sup>.
 
-## Agents, codage et pratiques d'ingénierie
+## Agents, programmation et pratiques d'ingénierie
 
-- Anthropic a abandonné les entretiens de programmation traditionnels pour ses candidats, son responsable du recrutement affirmant que Claude surpasse désormais les candidats à ces tests et que les meilleurs développeurs réussissent indépendamment de ceux-ci <sup>[3](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>)</sup>.
-- Felix Reiseberg conseille aux jeunes ingénieurs de privilégier l'impact métier plutôt que le backlog, et de rechercher des prototypes qui démontrent du goût, de l'empathie et une pensée rigoureuse <sup>[3](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>), [4](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>)</sup>.
-- Un mémo de l'ingénierie d'Amazon affirme que l'utilisation de tokens et les taux d'adoption de l'IA sont des mesures imparfaites, et que l'entreprise suit désormais les lancements et les modifications réussies en production pour évaluer l'effet de l'IA sur la productivité <sup>[5](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>)</sup>.
-- La direction de l'ingénierie d'Amazon affirme que les ingénieurs qui documentent les cas où l'IA n'aide pas leur travail font preuve d'un bon jugement <sup>[6](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>)</sup>.
-- Un essai soutient que les agents rendent les modèles de données moins facultatifs plutôt que obsolètes, car il reste nécessaire de comprendre ce qu'un agent construit et pourquoi <sup>[7](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>)</sup>.
-- Un billet de développeur décrit le remplacement d'environ 1 million de lignes de firmware par une trentaine de lignes d'assembleur, arguant que les LLM rendent pratiques les petits logiciels conçus pour un usage précis <sup>[8](<https://tinfoil.sh/blog/2026-10-25-less-is-more>)</sup>.
+- Anthropic a abandonné les entretiens de programmation traditionnels pour ses candidats, son responsable du recrutement faisant valoir que Claude surpasse désormais les candidats à ce type de tests et que les meilleurs créateurs réussissent indépendamment de ceux-ci <sup>[8](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>)</sup>.
+- Felix Reiseberg conseille aux jeunes ingénieurs de privilégier l'impact business plutôt que le backlog et de chercher des prototypes qui démontrent du goût, de l'empathie et une pensée fondée sur des principes <sup>[8](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>), [9](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>)</sup>.
+- Le mémo d'ingénierie d'Amazon affirme que la consommation de tokens et les taux d'adoption de l'IA sont des mesures imparfaites, et que l'entreprise suit désormais les lancements et les modifications réussies en production pour évaluer l'effet de l'IA sur la productivité <sup>[10](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>)</sup>.
+- La direction de l'ingénierie d'Amazon indique que les ingénieurs qui documentent les cas où l'IA n'aide pas leur travail font preuve d'un bon discernement <sup>[11](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>)</sup>.
+- Un essai soutient que les agents rendent les modèles de données moins facultatifs plutôt que obsolètes, car les personnes doivent toujours comprendre ce que construit un agent et pourquoi <sup>[12](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>)</sup>.
+- Un billet de développeur décrit le remplacement d'environ 1 M de lignes de firmware par une trentaine de lignes d'assembleur, en soutenant que les LLM rendent pratiques les petits logiciels conçus pour un usage précis <sup>[13](<https://tinfoil.sh/blog/2026-10-25-less-is-more>)</sup>.
+- Axiom Math a publié la première preuve complète et vérifiée par ordinateur de la classification des groupes finis simples en Lean, produite en dirigeant des dizaines d'agents IA pendant 24 jours (environ 43,1 millions de lignes de code) <sup>[14](<https://axiommath.ai/research/the-enormous-theorem-formalized/>)</sup>.
+- GitHub Agentic Workflows est généralement disponible : les tâches fondées sur le raisonnement, comme le tri des tickets ou l'analyse des échecs de CI, sont écrites en Markdown puis compilées en YAML GitHub Actions standard. Une équipe déclare avoir ramené les erreurs de production d'environ 11 000 par jour à moins de 1 000 <sup>[15](<https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available>)</sup>.
+- LangChain décrit cinq composants d'un « harnais d'entreprise » (interfaces Slack, identifiants à portée limitée, mémoire partagée et personnelle, exécution en bac à sable et exécutions planifiées), en notant que la mémoire reste le point le moins résolu <sup>[16](<https://www.langchain.com/blog/components-building-company-harness>)</sup>.
 
 ## Outils pour développeurs
 
-- Hallmark est une compétence de design open source « anti-AI-slop » pour Claude Code, Cursor, Codex et OpenCode, proposant cinquante thèmes, 755 photos sous licence libre et une sortie HTML/CSS autonome <sup>[9](<https://github.com/Nutlope/hallmark>)</sup>.
+- Hallmark est une compétence de design open source « anti-AI-slop » pour Claude Code, Cursor, Codex et OpenCode, avec cinquante thèmes, 755 photos sous licence libre et une sortie HTML/CSS autonome <sup>[17](<https://github.com/Nutlope/hallmark>)</sup>.
+- Agent-Reach est une CLI open source qui permet aux agents de lire et de rechercher sur Twitter, Reddit, YouTube, GitHub et Bilibili sans frais d'API, en gérant les sites protégés par connexion et le contenu vidéo <sup>[18](<https://github.com/Panniantong/Agent-Reach>)</sup>.
+- L'Agent CLI expérimentale d'Expo aide les agents à choisir le bon build, lancer une application et effectuer un test de fumée, avec une sortie structurée et une inspection à l'exécution pour diagnostiquer les échecs <sup>[19](<https://expo.dev/blog/introducing-expo-agent-cli>)</sup>.
+- Les Automations Copilot partagées se déploient, permettant aux équipes de combiner prompts, déclencheurs et outils en workflows exécutés de manière autonome dans le cloud <sup>[20](<https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations>)</sup>.
 
-## Plateformes et business
+## Plateformes et affaires
 
-- OpenAI a publié une étude de cas sur Legora, qui utilise les modèles d'OpenAI, ChatGPT et Codex pour accélérer l'analyse des contrats juridiques <sup>[10](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>)</sup>.
-- Discord rend les communautés publiques plus faciles à rechercher, et les utilisateurs s'inquiètent que leurs conversations puissent sortir de leur contexte d'origine ou servir à entraîner des modèles d'IA <sup>[11](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>)</sup>.
+- OpenAI a publié une étude de cas sur Legora, qui utilise les modèles d'OpenAI, ChatGPT et Codex pour accélérer l'analyse des contrats juridiques <sup>[21](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>)</sup>.
+- Discord rend les communautés publiques plus faciles à rechercher, et les utilisateurs craignent que leurs conversations dépassent largement leur contexte d'origine ou servent à entraîner des modèles d'IA <sup>[22](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>)</sup>.
+- Nvidia investira 3 milliards de dollars dans l'augmentation de capital de Meta alors que les deux entreprises élargissent leur partenariat en IA, d'autres domaines de collaboration, comme la surveillance du comportement des agents, étant à l'étude <sup>[23](<https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a>)</sup>.
 
 ## Sources
 
 1. [Anthropic Raises Concerns](<https://www.bloomberg.com/opinion/newsletters/2026-10-26/anthropic-raises-concerns>) — _bloomberg.com_
 2. [Broadcom CEO Intervened to Seal $63 Billion Anthropic Debt Deal](<https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f>) — _wsj.com_
-3. [\[AINews\] Anthropic ends Coding Interviews: "Hunger beats tenure"](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>) — _latent.space_
-4. [Hunger beats tenure: Advice for junior engineers](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>) — _felixrieseberg.com_
-5. [Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>) — _cnbc.com_
-6. [Quoting Terk Terkowitz](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>) — _simonwillison.net_
-7. [Do We Still Need Data Models?](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>) — _dataengineeringweekly.com_
-8. [Less Is More: From 1M Lines of Firmware to 300 of Assembly](<https://tinfoil.sh/blog/2026-10-25-less-is-more>) — _tinfoil.sh_
-9. [Hallmark](<https://github.com/Nutlope/hallmark>) — _github.com_
-10. [Legora is building the agentic operating system for legal work](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>) — _openai.com_
-11. [Discord is making its public communities more searchable, and people have concerns](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>) — _techcrunch.com_
+3. [Anthropic's Claude Refutes the Exponential Time Hypothesis, With a Lean Proof](<https://github.com/anthropics/formal-math/tree/main/eth>) — _github.com_
+4. [Anthropic acquired a one-person biotech](<https://threadreaderapp.com/thread/2115185849424048564.html>) — _threadreaderapp.com_
+5. [Route and orchestrate models with GitHub Copilot Fusion](<https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion>) — _github.blog_
+6. [Liquid AI Launches LFM3 Models for On Device AI](<https://www.liquid.ai/blog/lfm3>) — _liquid.ai_
+7. [PyTorch 2.15 Release Blog](<https://pytorch.org/blog/pytorch-2-15-release-blog/>) — _pytorch.org_
+8. [\[AINews\] Anthropic ends Coding Interviews: "Hunger beats tenure"](<https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/>) — _latent.space_
+9. [Hunger beats tenure: Advice for junior engineers](<https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/>) — _felixrieseberg.com_
+10. [Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI](<https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html>) — _cnbc.com_
+11. [Quoting Terk Terkowitz](<https://simonwillison.net/2026/Oct/28/terk-terkowitz/>) — _simonwillison.net_
+12. [Do We Still Need Data Models?](<https://www.dataengineeringweekly.com/p/do-we-still-need-data-models>) — _dataengineeringweekly.com_
+13. [Less Is More: From 1M Lines of Firmware to 300 of Assembly](<https://tinfoil.sh/blog/2026-10-25-less-is-more>) — _tinfoil.sh_
+14. [Formalizing the Enormous Theorem](<https://axiommath.ai/research/the-enormous-theorem-formalized/>) — _axiommath.ai_
+15. [GitHub Agentic Workflows generally available](<https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available>) — _github.blog_
+16. [The five components of building a "company harness"](<https://www.langchain.com/blog/components-building-company-harness>) — _langchain.com_
+17. [Hallmark](<https://github.com/Nutlope/hallmark>) — _github.com_
+18. [Agent-Reach](<https://github.com/Panniantong/Agent-Reach>) — _github.com_
+19. [Expo Agent CLI](<https://expo.dev/blog/introducing-expo-agent-cli>) — _expo.dev_
+20. [Build shared workflows for your team with Copilot Automations](<https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations>) — _github.blog_
+21. [Legora is building the agentic operating system for legal work](<https://openai.com/index/legora-agentic-operating-system-for-legal-work>) — _openai.com_
+22. [Discord is making its public communities more searchable, and people have concerns](<https://techcrunch.com/2026/10/27/discord-is-making-its-public-communities-more-searchable-and-people-have-concerns/>) — _techcrunch.com_
+23. [Nvidia to Invest $3 Billion in Meta's Equity Offering as They Expand AI Partnership](<https://www.wsj.com/tech/ai/nvidia-to-invest-3-billion-in-metas-equity-offering-as-they-expand-ai-partnership-e8d3850a>) — _wsj.com_
 
 
 ## Archive récente
@@ -56,6 +79,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-10-28` | Mercredi | [Lire →](news/fr/2026-10-28.md) |
 | `2026-10-27` | Mardi | [Lire →](news/fr/2026-10-27.md) |
 | `2026-10-26` | Lundi | [Lire →](news/fr/2026-10-26.md) |
 | `2026-10-24` | Samedi | [Lire →](news/fr/2026-10-24.md) |
@@ -69,9 +93,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-16` | Vendredi | [Lire →](news/fr/2026-10-16.md) |
 | `2026-10-15` | Jeudi | [Lire →](news/fr/2026-10-15.md) |
 | `2026-10-14` | Mercredi | [Lire →](news/fr/2026-10-14.md) |
-| `2026-10-13` | Mardi | [Lire →](news/fr/2026-10-13.md) |
 
-<sub>[Parcourir toute l’archive (134) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (135) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
