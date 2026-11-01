@@ -8,28 +8,17 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-10-31
-<sub>mis à jour le 1 novembre 2026 à 00:00</sub>
+### Dernier digest — 2026-11-01
+<sub>mis à jour le 1 novembre 2026 à 12:01</sub>
 
-## Activité commerciale et marché de l'IA
+## Sécurité
 
-- Google a reconnu que le mode IA nuit aux revenus de la recherche, car la forte croissance des requêtes en mode IA s'est accompagnée d'une monétisation plus faible, selon le directeur commercial Philipp Schindler <sup>[1](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>)</sup>.
-- Cet aveu a été suivi d'une forte chute du cours de l'action Alphabet, rapportée comme la pire depuis son introduction en bourse de 2004, tandis que des commentateurs débattent de l'arrivée possible d'un marché baissier de l'IA <sup>[1](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>)</sup>.
-
-## Agents et travaux de longue durée
-
-- Lors de l'AI Engineer New York, Aman Singh, ingénieur IA principal chez Arca, a décrit une société de gestion de patrimoine « native de l'IA » où les agents effectuent l'essentiel du travail en arrière-plan tandis que les conseillers humains prennent les décisions finales, résumé par la formule « les agents incitent davantage les humains à agir que l'inverse » <sup>[2](<https://latent.space/p/arca/>)</sup>.
-- Les tâches confiées aux agents chez Arca peuvent durer jusqu'à dix jours, avec de nombreux points de décision et transferts, ce qui a conduit l'entreprise à développer un système de mémoire interne pour conserver l'état du travail tout au long de ce fonctionnement discontinu <sup>[2](<https://latent.space/p/arca/>)</sup>.
-
-## Concepts et introductions à l'IA
-
-- Un système d'IA agentique est décrit comme un système capable d'interpréter un objectif, d'élaborer un plan, d'appeler des outils et des API, d'évaluer les résultats et de corriger ses erreurs jusqu'à ce que le résultat atteigne l'objectif <sup>[3](<https://blog.bytebytego.com/p/ep231-ai-terms-you-need-to-know>)</sup>.
+- Parameter Labs décrit une chaîne d'exploitation visant les aperçus HTML de ChatGPT (anciennement « Canvas »), la fonctionnalité d'iframes sandboxées permettant d'exécuter des applications HTML personnalisées et interactives <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>. L'attaque a exploité la bibliothèque MathLive et son clavier virtuel, qui peut être déclenché depuis un cadre sandboxé via postMessage() et utilise innerHTML dans la page parente. Ainsi, du code non fiable exécuté dans l'iframe pouvait injecter du HTML dans la page parente et, selon l'article, accéder à des données privées et aux API d'OpenAI <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>.
+- Leçon pour les développeurs : les iframes sandboxées ne sont aussi sûres que chaque gestionnaire de messages qu'elles peuvent atteindre. Tout récepteur postMessage qui écrit du innerHTML à partir de données fournies par le cadre doit donc vérifier l'origine et assainir ces données <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>) — _latent.space_
-2. [Agents Prompt People: Using Agents for Long-Horizon Financial Work](<https://latent.space/p/arca/>) — _latent.space_
-3. [EP231: AI Terms You Need to Know](<https://blog.bytebytego.com/p/ep231-ai-terms-you-need-to-know>) — _blog.bytebytego.com_
+1. [How We Took Over ChatGPT Accounts](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>) — _simonwillison.net_
 
 
 ## Archive récente

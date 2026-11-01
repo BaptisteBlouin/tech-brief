@@ -8,28 +8,17 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-10-31
-<sub>updated 1 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-01
+<sub>updated 1 November 2026 at 12:01</sub>
 
-## AI business and market
+## Security
 
-- Google acknowledged that AI Mode hurts Search revenue, since strong growth in AI Mode queries came with lower monetization, according to Chief Business Officer Philipp Schindler <sup>[1](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>)</sup>.
-- The admission was followed by a steep drop in Alphabet's share price, reportedly the worst since its 2004 IPO, with commentators debating whether an AI bear market is coming <sup>[1](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>)</sup>.
-
-## Agents and long-horizon work
-
-- At AI Engineer New York, Arca's lead AI Engineer Aman Singh described an "AI-native" wealth management firm where agents do most background work while human advisors make final decisions, summed up as "agents prompt people more than people prompt agents" <sup>[2](<https://latent.space/p/arca/>)</sup>.
-- Arca's agent tasks can run up to ten days with many decision points and handoffs, so the firm built an internal memory system to keep state persistent across that stop-start work <sup>[2](<https://latent.space/p/arca/>)</sup>.
-
-## AI concepts and primers
-
-- An agentic AI system is described as one that interprets a goal, creates a plan, calls tools and APIs, evaluates results, and corrects its mistakes until the output meets the goal <sup>[3](<https://blog.bytebytego.com/p/ep231-ai-terms-you-need-to-know>)</sup>.
+- Parameter Labs describe an exploit chain against ChatGPT's HTML previews (formerly "Canvas"), the sandboxed iframe feature for interactive custom HTML apps <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>. The attack abused the MathLive library's virtual keyboard, which can be triggered from a sandboxed frame via postMessage() and uses innerHTML in the parent page, so untrusted iframe code could inject HTML into the parent and, per the write-up, reach private data and OpenAI APIs <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>.
+- Lesson for builders: sandboxed iframes are only as safe as every message handler they can reach, so any postMessage receiver that writes innerHTML from frame-supplied data needs origin checks and sanitization <sup>[1](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?](<https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/>) — _latent.space_
-2. [Agents Prompt People: Using Agents for Long-Horizon Financial Work](<https://latent.space/p/arca/>) — _latent.space_
-3. [EP231: AI Terms You Need to Know](<https://blog.bytebytego.com/p/ep231-ai-terms-you-need-to-know>) — _blog.bytebytego.com_
+1. [How We Took Over ChatGPT Accounts](<https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/>) — _simonwillison.net_
 
 
 ## Recent archive
