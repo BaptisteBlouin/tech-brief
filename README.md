@@ -9,7 +9,7 @@
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-11-03
-<sub>updated 3 November 2026 at 12:01</sub>
+<sub>updated 4 November 2026 at 00:01</sub>
 
 ## Models and LLM tooling
 
@@ -35,6 +35,38 @@
 
 - MIT Technology Review reports that US agencies were directed to rebrand "artificial intelligence" as "Super Intelligence" in a September executive order <sup>[8](<https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/>)</sup>.
 
+## AI models and releases
+
+- OpenAI's GPT-6.2 Astra has started appearing in Codex usage breakdowns, likely through an A/B test or staged rollout, and a public launch could be days away <sup>[9](<https://www.testingcatalog.com/gpt-6-2-astra-appears-codex-usage/>)</sup>.
+- Qwen 3.8 27B running locally can interpret raw model weights, reproducing an example from a paper on weight-space programming that the authors attribute to GPT-6 Astra <sup>[10](<https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/>)</sup>. A separate analysis notes that Astra's gains here reflect strong problem-solving rather than a radically new capability <sup>[11](<https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/>)</sup>.
+- Replicate lays out the three MiniMax H3 video models: H3 Highspeed at $0.60, H3 Lite at $0.40, and H3 at $0.80 for a 10-second 768P clip, with 2K output available on H3 <sup>[12](<https://replicate.com/blog/which-minimax-h3-model>)</sup>.
+- Cohere's Model Vault now hosts leading open models such as DeepSeek V4.1 Flash, Gemma 4, GPT-OSS and Phi on a managed, encrypted inference platform, with zero data retention by default <sup>[13](<https://cohere.com/blog/open-source-model-vault>)</sup>.
+
+## LLMs, agents and developer tooling
+
+- Google describes routing across Gemini models and thinking levels with cheap classifiers, aiming to cut the cost per task of autonomous coding agents <sup>[14](<https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/>)</sup>.
+- Framer's Harness 2 executes agent JavaScript as it streams, reporting up to 33% lower cost and 20% faster execution <sup>[15](<https://framer.com/blog/harness-2/>)</sup>.
+- Microsoft's Copilot Cowork reached global availability in four and a half months and switched its runtime from Python to Rust while live, with clear specs and narrow agents cited as key practices <sup>[16](<https://commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration/>)</sup>.
+- GitHub Copilot is now available inside JetBrains Air, with agent tasks running locally or in the cloud on a Copilot subscription <sup>[17](<https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air>)</sup>.
+- Dependabot version updates now cover Agent Package Manager dependencies, keeping agent skills and prompts up to date (version updates only, not security updates) <sup>[18](<https://github.blog/changelog/2026-11-03-dependabot-version-updates-support-agent-package-manager>)</sup>.
+- A Maple team ported 287,000 lines of React to Foldkit in three days using about 40 Claude agents, but code review still found roughly 180 defects that screenshot comparisons missed <sup>[19](<https://maple.dev/blog/react-to-foldkit/>)</sup>.
+- The Pragmatic Engineer reports that a single week brought several major security failures and argues that AI speeds vulnerability discovery and exploitation <sup>[20](<https://newsletter.pragmaticengineer.com/p/the-pulse-time-to-rethink-software>)</sup>.
+
+## Security
+
+- Langflow has two critical flaws, one allowing authentication bypass and one allowing code execution through MCP tool enumeration, affecting versions 1.0.0 through 1.12.8; version 1.13.0 is the only fix and a public Metasploit module already exists <sup>[21](<https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html>)</sup>.
+- Cloudflare launched Zero Wire, a public vulnerability intelligence feed on Cloudflare Radar for tracking critical disclosures <sup>[22](<https://blog.cloudflare.com/zero-wire/>)</sup>.
+- Google's Cloud VRP now pays up to $250,000 for root-in-cloud exploits <sup>[23](<https://www.securityweek.com/google-introduces-250000-root-in-cloud-bug-bounty-reward/>)</sup>.
+- Chrome added LLM-based scam detection and LLM-based ClickFix attack detection to its Enhanced Protection mode <sup>[24](<https://blog.google/security/our-latest-defenses-against-evolving-web-scams/>)</sup>.
+
+## Infrastructure and engineering practice
+
+- OpenAI rebuilt its Git backend as Pando for its monorepo, cutting median push latency by nearly 5x in production and now delivering nearly a petabyte of Git data per day <sup>[25](<https://openai.com/index/scaling-git-at-openai/>)</sup>.
+- A coreauto post explores training frontier models across multiple smaller compute islands that may mix accelerator generations and vendors, noting integrity risks when one site is faulty or compromised <sup>[26](<https://www.coreauto.com/hitchhikers-guide-to-training-on-compute-islands>)</sup>.
+- Express released security fixes for denial-of-service flaws in body-parser and multer <sup>[27](<https://expressjs.com/en/blog/2026-10-31-security-releases/>)</sup>.
+- Rustup 1.29.3 fixes an illegal-instruction error on certain x86_64 CPUs and a lock error on Solaris <sup>[28](<https://blog.rust-lang.org/2026/11/03/Rustup-1.29.3/>)</sup>.
+- GitHub Desktop now supports short-lived, automatically refreshed authentication tokens, rolling out gradually on github.com <sup>[29](<https://github.blog/changelog/2026-11-02-github-desktop-adds-short-lived-authentication-tokens>)</sup>.
+
 ## Sources
 
 1. [\[AINews\] LLMs can read & write neural network weights: "Weight Space Programming" cuts Autoresearch out of the RSI loop](<https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/>) — _latent.space_
@@ -45,6 +77,27 @@
 6. [Heimstaden is changing residential real estate management with AI](<https://openai.com/index/heimstaden>) — _openai.com_
 7. [I discovered a sound that leaks your exact location (and it's everywhere) - YouTube](<https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/>) — _simonwillison.net_
 8. [Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test](<https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/>) — _technologyreview.com_
+9. [GPT-6.2 Astra appears in Codex usage ahead of possible launch](<https://www.testingcatalog.com/gpt-6-2-astra-appears-codex-usage/>) — _testingcatalog.com_
+10. [Qwen 3.8 27B on my laptop can interpret model weights, too](<https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/>) — _simonwillison.net_
+11. [LLMs are not superhuman at reading and writing neural network weights](<https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/>) — _seangoedecke.com_
+12. [Which MiniMax H3 model should you use?](<https://replicate.com/blog/which-minimax-h3-model>) — _replicate.com_
+13. [The world's leading open models, fully under your control](<https://cohere.com/blog/open-source-model-vault>) — _cohere_
+14. [Cost per task: Using cheap classifiers to route across Gemini models and thinking levels](<https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/>) — _google ai_
+15. [Harness 2: executing agent code as it streams](<https://framer.com/blog/harness-2/>) — _framer.com_
+16. [Lessons from building Copilot Cowork](<https://commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration/>) — _commandline.microsoft.com_
+17. [GitHub Copilot is now available in JetBrains Air](<https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air>) — _github.blog_
+18. [Dependabot version updates support Agent Package Manager](<https://github.blog/changelog/2026-11-03-dependabot-version-updates-support-agent-package-manager>) — _github.blog_
+19. [Porting 287,000 lines of React in 3 days. The hard part was proving nothing changed.](<https://maple.dev/blog/react-to-foldkit/>) — _maple.dev_
+20. [Time to rethink software security because of AI?](<https://newsletter.pragmaticengineer.com/p/the-pulse-time-to-rethink-software>) — _newsletter.pragmaticengineer.com_
+21. [Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers](<https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html>) — _thehackernews.com_
+22. [Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities](<https://blog.cloudflare.com/zero-wire/>) — _blog.cloudflare.com_
+23. [Google Introduces $250,000 Root-in-Cloud Bug Bounty Reward](<https://www.securityweek.com/google-introduces-250000-root-in-cloud-bug-bounty-reward/>) — _securityweek.com_
+24. [Our Latest Defenses Against Evolving Web Scams](<https://blog.google/security/our-latest-defenses-against-evolving-web-scams/>) — _blog.google_
+25. [Scaling Git at OpenAI](<https://openai.com/index/scaling-git-at-openai/>) — _openai.com_
+26. [The Hitchhiker's Guide to Training on Compute Islands](<https://www.coreauto.com/hitchhikers-guide-to-training-on-compute-islands>) — _coreauto.com_
+27. [October 2026 Express security releases](<https://expressjs.com/en/blog/2026-10-31-security-releases/>) — _expressjs.com_
+28. [Announcing rustup 1.29.3](<https://blog.rust-lang.org/2026/11/03/Rustup-1.29.3/>) — _blog.rust-lang.org_
+29. [GitHub Desktop adds short-lived authentication tokens](<https://github.blog/changelog/2026-11-02-github-desktop-adds-short-lived-authentication-tokens>) — _github.blog_
 
 
 ## Recent archive
@@ -53,6 +106,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-11-03` | Tuesday | [Read →](news/en/2026-11-03.md) |
 | `2026-11-02` | Monday | [Read →](news/en/2026-11-02.md) |
 | `2026-11-01` | 🗓️ Weekly recap | [Read →](news/en/2026-11-01.md) |
 | `2026-10-31` | Saturday | [Read →](news/en/2026-10-31.md) |
@@ -66,9 +120,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-10-22` | Thursday | [Read →](news/en/2026-10-22.md) |
 | `2026-10-21` | Wednesday | [Read →](news/en/2026-10-21.md) |
 | `2026-10-20` | Tuesday | [Read →](news/en/2026-10-20.md) |
-| `2026-10-19` | Monday | [Read →](news/en/2026-10-19.md) |
 
-<sub>[Browse the full archive (140) →](news/en/)</sub>
+<sub>[Browse the full archive (141) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
