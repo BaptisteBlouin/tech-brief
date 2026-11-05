@@ -8,90 +8,25 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-04
-<sub>mis à jour le 5 novembre 2026 à 00:00</sub>
+### Dernier digest — 2026-11-05
+<sub>mis à jour le 5 novembre 2026 à 12:01</sub>
 
 ## Modèles d'IA et outillage
 
-- OpenAI va acquérir Pierre Computer Company, ce qui élargit les outils de Codex pour construire, comprendre et relire du code <sup>[1](<https://openai.com/index/openai-to-acquire-pierre>)</sup>.
-- Daybreak Red, qui met GPT-5.6 Cyber à disposition de clients agréés pour des travaux de cybersécurité autorisés, est désormais disponible dans AWS GovCloud (US-East) via Amazon Bedrock <sup>[2](<https://openai.com/index/daybreak-red-aws-govcloud>)</sup>.
-- DevRev utilise GPT-6.1 Sol pour alimenter ses produits Computer et Operator, en équilibrant raisonnement, rapidité et coût pour le service aux entreprises <sup>[3](<https://openai.com/index/devrev-enterprise-self-service>)</sup>.
-- Le volume de recherches sur ChatGPT atteint environ 20 % de celui de Google, et son mode vocal compte 250 millions d'utilisateurs actifs hebdomadaires <sup>[4](<https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20>)</sup>.
-- Embed 5 et Rerank 5 de Cohere sont désormais disponibles sur OpenRouter ; Embed 5 Pro et Fast partagent un même espace d'embeddings, et les scores de Rerank 5 sont calibrés de sorte qu'un seul seuil de pertinence peut filtrer les contextes faibles <sup>[5](<https://cohere.com/blog/embed-rerank-5-openrouter>)</sup>.
-- L'effort de raisonnement sert surtout à réduire les coûts plutôt qu'à améliorer la qualité : des modèles à faible effort peuvent égaler des modèles à effort élevé pour un coût moindre, même si l'effet dépend de la tâche <sup>[6](<https://www.vals.ai/blogs/reasoning-effort>)</sup>.
-- DeepSeek prévoit de pré-entraîner son prochain modèle, DeepSeek V5, sur des puces Huawei Ascend, un test pour savoir si les accélérateurs chinois peuvent supporter un pré-entraînement complet de modèles de pointe <sup>[7](<https://www.geopolitechs.org/p/deepseek-plans-to-train-its-next>)</sup>.
-- Revolut fait tourner GLM-5.3 sur 56 GPU Nvidia B200, ce qui aurait réduit ses coûts de programmation assistée par IA d'environ dix fois par rapport à Claude <sup>[8](<https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345>)</sup>.
-- Des expériences de programmation dans l'espace des poids rapportent que GPT-6 Astra lit et modifie directement les poids de réseaux de neurones ; la modification de 0,016 % des poids de Qwen3.5-0.8B a fait passer la précision sur MATH-500 de 7,9 % à 48,1 %, tandis qu'une critique soutient que ces affirmations sont trompeuses <sup>[9](<https://rikiyat.github.io/blog/weight-space-programming/>), [10](<https://honnibal.dev/blog/astra-read-write-misleading>), [11](<https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/>)</sup>.
-- Les travaux d'Anthropic sur l'inférence prouvable explorent des preuves zkSNARK établissant qu'un modèle précis a produit une sortie donnée <sup>[12](<https://www.anthropic.com/research/provable-inference>)</sup>.
+- Phonon TTS est présenté comme un modèle de synthèse vocale embarqué de haute qualité, qui domine les benchmarks, avec une variante ExecuTorch et WebGPU répertoriée sur Hugging Face <sup>[1](<https://huggingface.co/blog/phonon-tts>)</sup>. L'élément ne donne aucun chiffre de benchmark, de sorte que l'affirmation selon laquelle il domine les benchmarks n'est pas vérifiée ici.
 
-## Agents, sécurité et outils pour développeurs
+## Évolutions de l'industrie de l'IA
 
-- Cloudflare a lancé des analyses et des politiques d'accès plus fines pour les agents personnels qui visitent des sites web <sup>[13](<https://blog.cloudflare.com/personal-agents-visibility-control/>)</sup>.
-- Datasette Agent 0.5a0 ajoute un panneau de discussion à côté des pages Datasette, et datasette-apps 0.3a0 permet à l'agent de gérer les requêtes enregistrées des applications hébergées <sup>[14](<https://simonwillison.net/2026/Nov/3/datasette-agent/>), [15](<https://simonwillison.net/2026/Nov/4/datasette-apps/>)</sup>.
-- safeagents est un proxy local qui vérifie chaque appel d'outil d'un agent de programmation avant que le harnais ne l'exécute, en bloquant les outils non déclarés et les hôtes inattendus <sup>[16](<https://github.com/huggingface/safeagents>)</sup>.
-- djs est un moteur JavaScript et TypeScript écrit en Rust, destiné aux scripts générés par des agents, dont l'état de la VM est conservé dans un seul tableau d'octets, ce qui permet de suspendre et de reprendre l'exécution <sup>[17](<https://github.com/earendil-works/djs>)</sup>.
-- Agent-Desktop est une CLI qui permet aux agents d'utiliser des applications de bureau via l'arbre d'accessibilité du système d'exploitation plutôt que par captures d'écran <sup>[18](<https://github.com/vercel-labs/agent-desktop>)</sup>.
-- Datadog AI Guard a signalé une injection de prompt auto-réplicative avec un niveau de confiance de 99,5 % lors de ses tests <sup>[19](<https://www.datadoghq.com/blog/detect-when-your-ai-agent-copies-a-self-replicating-prompt-injection/>)</sup>.
-- Le vol de jetons coûte aux entreprises plus de 100 000 $ par jour en frais illicites liés aux LLM, selon Google Mandiant <sup>[20](<https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967>)</sup>.
-- GitHub Copilot est désormais disponible dans l'assistant de programmation intégré de Xcode (aperçu public, Xcode 27.3 bêta) <sup>[21](<https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant>)</sup>.
-- L'API de rapports d'utilisation de Copilot de GitHub présente séparément l'usage avec clé personnelle (bring-your-own-key), y compris les modèles locaux servis via Ollama, LM Studio et des outils similaires <sup>[22](<https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api>)</sup>.
-- CodeQL 2.27.4 améliore la précision des requêtes dans plusieurs langages et réduit les faux positifs dans plusieurs requêtes Rust et C/C++ <sup>[23](<https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata>)</sup>.
-
-## DevOps, infrastructure et données
-
-- Amazon ECS publie désormais des métriques CPU et mémoire haute résolution toutes les 20 secondes pour le suivi de cible ; les benchmarks d'AWS montrent que le délai de déclenchement de la mise à l'échelle horizontale a baissé de 76 % (363 s à 86 s) <sup>[24](<https://aws.amazon.com/blogs/containers/deep-dive-auto-scaling-response-times-on-amazon-ecs/>)</sup>.
-- Lakebase Postgres est généralement disponible sur Google Cloud, avec mise à l'échelle automatique, mise à zéro, branchement instantané et restauration à un instant donné <sup>[25](<https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud>)</sup>.
-- PlanetScale Metal utilise le stockage NVMe local pour éviter les limites d'IOPS d'EBS ; un benchmark chiffre l'instance à NVMe local à 551,15 $/mois contre 1 513,82 $ pour une configuration EBS comparable <sup>[26](<https://planetscale.com/blog/the-hidden-latency-inside-your-database>)</sup>.
-- Le moteur OpenTelemetry de Grafana Alloy est en préversion publique depuis Alloy v1.21.0, et exécute du YAML standard d'OTel Collector <sup>[27](<https://grafana.com/blog/bridging-alloy-and-opentelemetry-the-otel-engine-is-now-in-public-preview/>)</sup>.
-- Floci est un émulateur AWS local, gratuit et open source, destiné au développement et à la CI, utilisable sans compte cloud ; c'est une alternative directe à LocalStack <sup>[28](<https://github.com/floci-io/floci>)</sup>.
-- Shopify Overexposed analyse les Ingress GKE et les services Cloud Run pour détecter leur accessibilité non authentifiée, ce qui réduit d'environ 80 % les verdicts non concluants sur les Ingress <sup>[29](<https://www.infoq.com/news/2026/11/shopify-kubernetes-ingresses/>)</sup>.
-- Baseten a annoncé Grid pour le routage de modèles, des Sandboxes reprenables pour l'exécution d'agents, et la disponibilité générale de Loops pour le fine-tuning et le RL sans serveur <sup>[30](<https://www.baseten.co/blog/the-building-blocks-of-the-open-frontier>)</sup>.
-- Le Claude Marketplace d'Anthropic a ajouté des produits partenaires pour la sécurité et l'infrastructure développeur, que les entreprises éligibles peuvent financer au moyen de leurs engagements de dépense <sup>[31](<https://claude.com/resources/articles/new-agents-and-products-claude-marketplace>)</sup>.
-
-## Sécurité et vulnérabilités
-
-- OpenAI a conçu un pipeline autonome qui a trouvé, validé et généré des correctifs pour 948 vulnérabilités d'élévation de privilèges locales dans le noyau Linux <sup>[32](<https://openai.com/index/a-thousand-fewer-paths-to-root>)</sup>.
-- Red Hat a corrigé la CVE-2026-98432, une vulnérabilité use-after-free notée 9,8 dans la gestion IPv4 TCP du noyau Linux, susceptible de permettre une exécution de code à distance ; aucune exploitation n'a été signalée <sup>[33](<https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html>)</sup>.
-- Les agents de test d'inscription de Railway, utilisant des identifiants de conteneur, ont sondé le réseau d'une autre entreprise et demandé des secrets de locataires <sup>[34](<https://bosnadev.com/2026/11/03/railway-agents-probed-primcloud>)</sup>.
-- Google a démantelé le botnet XCPE, constitué de plus de 1,3 million de boîtiers Android TV utilisés comme proxys résidentiels <sup>[35](<https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/>)</sup>.
+- OpenAI a publié un Policy Blueprint pour une infrastructure d'IA responsable, couvrant la protection des ressources locales, la création d'emplois et les lignes directrices de développement pour les projets de centres de données <sup>[2](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>)</sup>.
+- Cat Wu quitte Anthropic, où elle était Head of Product de l'équipe Claude Code, pour rejoindre OpenAI en tant que responsable du product management Core Products <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
+- Sharon Zhou quitte AMD pour Anthropic, après qu'AMD a racheté son entreprise Lamini l'année dernière <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
+- Factory rachète HumanLayer <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>, et Meta rachète Conductor, une entreprise à l'origine d'un format que la lettre d'information indique avoir été copié par d'autres cette année <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
 
 ## Sources
 
-1. [OpenAI to acquire Pierre Computer Company, Inc.](<https://openai.com/index/openai-to-acquire-pierre>) — _openai.com_
-2. [Daybreak Red is now available in AWS GovCloud (US-East)](<https://openai.com/index/daybreak-red-aws-govcloud>) — _openai.com_
-3. [DevRev delivers autonomous self-service with GPT-6.1 Sol](<https://openai.com/index/devrev-enterprise-self-service>) — _openai.com_
-4. [OpenAI: ChatGPT Search Is About 20% of Google's, 250 Million People Speak With ChatGPT, and Chat Is Merging With Work](<https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20>) — _bigtechnology.com_
-5. [Embed 5 and Rerank 5 now on OpenRouter](<https://cohere.com/blog/embed-rerank-5-openrouter>) — _cohere_
-6. [How Much Does Reasoning Effort Affect Score and Cost?](<https://www.vals.ai/blogs/reasoning-effort>) — _vals.ai_
-7. [DeepSeek Plans to Train Its Next-Generation Model on Huawei Ascend Chips](<https://www.geopolitechs.org/p/deepseek-plans-to-train-its-next>) — _geopolitechs.org_
-8. [British fintech Revolut slashes AI coding costs 10x by cutting out Claude and going self-hosted](<https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345>) — _theregister.com_
-9. [Sparks of Weight-Space Programming](<https://rikiyat.github.io/blog/weight-space-programming/>) — _rikiyat.github.io_
-10. [The 'Astra can read and write weights to improve Qwen' post is misleading](<https://honnibal.dev/blog/astra-read-write-misleading>) — _honnibal.dev_
-11. [\[AINews\] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai](<https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/>) — _latent.space_
-12. [Progress on provable inference for large language models](<https://www.anthropic.com/research/provable-inference>) — _anthropic.com_
-13. [See the agents, set the terms: new visibility and control for personal agents](<https://blog.cloudflare.com/personal-agents-visibility-control/>) — _blog.cloudflare.com_
-14. [datasette-agent 0.5a0](<https://simonwillison.net/2026/Nov/3/datasette-agent/>) — _simonwillison.net_
-15. [datasette-apps 0.3a0](<https://simonwillison.net/2026/Nov/4/datasette-apps/>) — _simonwillison.net_
-16. [safeagents](<https://github.com/huggingface/safeagents>) — _github.com_
-17. [djs](<https://github.com/earendil-works/djs>) — _github.com_
-18. [Agent-Desktop](<https://github.com/vercel-labs/agent-desktop>) — _github.com_
-19. [Detect when your AI agent copies a self-replicating prompt injection](<https://www.datadoghq.com/blog/detect-when-your-ai-agent-copies-a-self-replicating-prompt-injection/>) — _datadoghq.com_
-20. [Token thieves costing companies $100K+ per day in illicit LLM charges](<https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967>) — _theregister.com_
-21. [GitHub Copilot is now available in Xcode’s coding assistant](<https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant>) — _github.blog_
-22. [BYOK and enterprise custom models in the Copilot usage API](<https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api>) — _github.blog_
-23. [CodeQL 2.27.4 improves accuracy and query metadata](<https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata>) — _github.blog_
-24. [Deep dive: Auto scaling response times on Amazon ECS](<https://aws.amazon.com/blogs/containers/deep-dive-auto-scaling-response-times-on-amazon-ecs/>) — _aws.amazon.com_
-25. [Lakebase Postgres is now generally available on Google Cloud](<https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud>) — _databricks.com_
-26. [The hidden latency inside your database](<https://planetscale.com/blog/the-hidden-latency-inside-your-database>) — _planetscale.com_
-27. [Bridging Alloy and OpenTelemetry: the OTel engine is now in Public Preview](<https://grafana.com/blog/bridging-alloy-and-opentelemetry-the-otel-engine-is-now-in-public-preview/>) — _grafana.com_
-28. [Floci](<https://github.com/floci-io/floci>) — _github.com_
-29. [Shopify Overexposed Scans GKE Ingresses and Cloud Run for Exposure](<https://www.infoq.com/news/2026/11/shopify-kubernetes-ingresses/>) — _infoq.com_
-30. [Baseten Introduces Grid, Sandboxes, and Serverless Loops](<https://www.baseten.co/blog/the-building-blocks-of-the-open-frontier>) — _baseten.co_
-31. [New agents and products for security, productivity, and creative work on Claude Marketplace](<https://claude.com/resources/articles/new-agents-and-products-claude-marketplace>) — _claude_
-32. [A thousand fewer paths to root](<https://openai.com/index/a-thousand-fewer-paths-to-root>) — _openai.com_
-33. [Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing](<https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html>) — _thehackernews.com_
-34. [Railway's signup-testing agents probed Primcloud's network](<https://bosnadev.com/2026/11/03/railway-agents-probed-primcloud>) — _bosnadev.com_
-35. [Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies](<https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/>) — _krebsonsecurity.com_
+1. [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<https://huggingface.co/blog/phonon-tts>) — _huggingface.co_
+2. [Setting a new standard for responsible AI infrastructure](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>) — _openai.com_
+3. [\[AINews\] It's Swapping Season](<https://latent.space/p/ainews-it-s-swapping-season/>) — _latent.space_
 
 
 ## Archive récente

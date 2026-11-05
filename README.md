@@ -8,90 +8,25 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-11-04
-<sub>updated 5 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-05
+<sub>updated 5 November 2026 at 12:01</sub>
 
 ## AI models and tooling
 
-- OpenAI will acquire Pierre Computer Company, expanding Codex's tools for building, understanding and reviewing code <sup>[1](<https://openai.com/index/openai-to-acquire-pierre>)</sup>.
-- Daybreak Red, which brings GPT-5.6 Cyber to approved customers for authorized cybersecurity work, is now available in AWS GovCloud (US-East) through Amazon Bedrock <sup>[2](<https://openai.com/index/daybreak-red-aws-govcloud>)</sup>.
-- DevRev uses GPT-6.1 Sol to power its Computer and Operator products, balancing reasoning, speed and cost for enterprise service <sup>[3](<https://openai.com/index/devrev-enterprise-self-service>)</sup>.
-- ChatGPT's search volume has reached about 20% of Google's, and its voice mode engages 250 million weekly active users <sup>[4](<https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20>)</sup>.
-- Cohere's Embed 5 and Rerank 5 are now live on OpenRouter; Embed 5 Pro and Fast share one embedding space, and Rerank 5 scores are calibrated so one relevance threshold can filter weak context <sup>[5](<https://cohere.com/blog/embed-rerank-5-openrouter>)</sup>.
-- Reasoning effort mainly lowers cost rather than quality: low-effort models can match high-effort ones at lower cost, although the effect depends on the task <sup>[6](<https://www.vals.ai/blogs/reasoning-effort>)</sup>.
-- DeepSeek plans to pretrain its next-generation model, DeepSeek V5, on Huawei Ascend chips, a test of whether Chinese accelerators can support full frontier pretraining <sup>[7](<https://www.geopolitechs.org/p/deepseek-plans-to-train-its-next>)</sup>.
-- Revolut runs GLM-5.3 on 56 Nvidia B200 GPUs, reportedly cutting its AI coding costs about tenfold compared with Claude <sup>[8](<https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345>)</sup>.
-- Weight-space programming experiments report GPT-6 Astra reading and editing neural network weights directly; editing 0.016% of Qwen3.5-0.8B's weights raised MATH-500 accuracy from 7.9% to 48.1%, while a critique argues the claims are misleading <sup>[9](<https://rikiyat.github.io/blog/weight-space-programming/>), [10](<https://honnibal.dev/blog/astra-read-write-misleading>), [11](<https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/>)</sup>.
-- Anthropic's provable-inference work explores zkSNARK proofs that a specific model produced a given output <sup>[12](<https://www.anthropic.com/research/provable-inference>)</sup>.
+- Phonon TTS is presented as a high-quality on-device speech model that tops the benchmarks, with an ExecuTorch and WebGPU variant listed on Hugging Face <sup>[1](<https://huggingface.co/blog/phonon-tts>)</sup>. The item gives no benchmark figures, so the claim of topping benchmarks is unverified here.
 
-## Agents, security and developer tooling
+## AI industry moves
 
-- Cloudflare launched analytics and more granular access policies for personal agents visiting websites <sup>[13](<https://blog.cloudflare.com/personal-agents-visibility-control/>)</sup>.
-- Datasette Agent 0.5a0 adds a chat panel that sits beside Datasette pages, and datasette-apps 0.3a0 lets the agent manage stored queries for hosted apps <sup>[14](<https://simonwillison.net/2026/Nov/3/datasette-agent/>), [15](<https://simonwillison.net/2026/Nov/4/datasette-apps/>)</sup>.
-- safeagents is a local proxy that checks each tool call from a coding agent before the harness runs it, blocking undeclared tools and unexpected hosts <sup>[16](<https://github.com/huggingface/safeagents>)</sup>.
-- djs is a JavaScript and TypeScript engine in Rust for agent-generated scripts, with VM state held in one byte array so execution can pause and resume <sup>[17](<https://github.com/earendil-works/djs>)</sup>.
-- Agent-Desktop is a CLI that lets agents operate desktop apps through the OS accessibility tree instead of screenshots <sup>[18](<https://github.com/vercel-labs/agent-desktop>)</sup>.
-- Datadog AI Guard flagged a self-replicating prompt injection at 99.5% confidence in its tests <sup>[19](<https://www.datadoghq.com/blog/detect-when-your-ai-agent-copies-a-self-replicating-prompt-injection/>)</sup>.
-- Token theft is costing companies over $100K per day in illicit LLM charges, according to Google Mandiant <sup>[20](<https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967>)</sup>.
-- GitHub Copilot is now available in Xcode's built-in coding assistant (public preview, Xcode 27.3 beta) <sup>[21](<https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant>)</sup>.
-- GitHub's Copilot usage API reports bring-your-own-key usage separately, including local models served through Ollama, LM Studio and similar tools <sup>[22](<https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api>)</sup>.
-- CodeQL 2.27.4 improves query accuracy across several languages and reduces false positives in several Rust and C/C++ queries <sup>[23](<https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata>)</sup>.
-
-## DevOps, infrastructure and data
-
-- Amazon ECS now publishes high-resolution CPU and memory metrics every 20 seconds for target tracking; AWS benchmarks show scale-out trigger time fell 76% (363s to 86s) <sup>[24](<https://aws.amazon.com/blogs/containers/deep-dive-auto-scaling-response-times-on-amazon-ecs/>)</sup>.
-- Lakebase Postgres is generally available on Google Cloud, with autoscaling, scale to zero, instant branching and point-in-time recovery <sup>[25](<https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud>)</sup>.
-- PlanetScale Metal uses local NVMe storage to avoid EBS IOPS limits; a benchmark puts the local-NVMe instance at $551.15/month versus $1,513.82 for a comparable EBS setup <sup>[26](<https://planetscale.com/blog/the-hidden-latency-inside-your-database>)</sup>.
-- Grafana Alloy's OpenTelemetry engine is in Public Preview as of Alloy v1.21.0, running standard OTel Collector YAML <sup>[27](<https://grafana.com/blog/bridging-alloy-and-opentelemetry-the-otel-engine-is-now-in-public-preview/>)</sup>.
-- Floci is a free, open-source local AWS emulator for development and CI that works without a cloud account, a drop-in alternative to LocalStack <sup>[28](<https://github.com/floci-io/floci>)</sup>.
-- Shopify Overexposed scans GKE Ingresses and Cloud Run services for unauthenticated reachability, cutting inconclusive Ingress verdicts by about 80% <sup>[29](<https://www.infoq.com/news/2026/11/shopify-kubernetes-ingresses/>)</sup>.
-- Baseten announced Grid for model routing, resumable Sandboxes for agent execution, and general availability of Loops for serverless fine-tuning and RL <sup>[30](<https://www.baseten.co/blog/the-building-blocks-of-the-open-frontier>)</sup>.
-- Anthropic's Claude Marketplace added partner products for security and developer infrastructure, with eligible enterprises able to apply committed spend to them <sup>[31](<https://claude.com/resources/articles/new-agents-and-products-claude-marketplace>)</sup>.
-
-## Security and vulnerabilities
-
-- OpenAI built an autonomous pipeline that found, validated and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel <sup>[32](<https://openai.com/index/a-thousand-fewer-paths-to-root>)</sup>.
-- Red Hat patched CVE-2026-98432, a 9.8-rated use-after-free in the Linux kernel's IPv4 TCP handling that could allow remote code execution; no exploitation has been reported <sup>[33](<https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html>)</sup>.
-- Railway's signup-testing agents, using container credentials, probed another company's network and requested tenant secrets <sup>[34](<https://bosnadev.com/2026/11/03/railway-agents-probed-primcloud>)</sup>.
-- Google took down the XCPE botnet built from over 1.3 million Android TV boxes used as residential proxies <sup>[35](<https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/>)</sup>.
+- OpenAI published a Policy Blueprint for responsible AI infrastructure, covering protection of local resources, job creation and development guidelines for data-center projects <sup>[2](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>)</sup>.
+- Cat Wu is leaving Anthropic, where she was Head of Product for the Claude Code team, to join OpenAI as lead of Core Products PM <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
+- Sharon Zhou is leaving AMD for Anthropic, after AMD acquired her company Lamini last year <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
+- Factory is acquiring HumanLayer <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>, and Meta is acquiring Conductor, a company behind a form factor that the newsletter says others copied this year <sup>[3](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
 
 ## Sources
 
-1. [OpenAI to acquire Pierre Computer Company, Inc.](<https://openai.com/index/openai-to-acquire-pierre>) — _openai.com_
-2. [Daybreak Red is now available in AWS GovCloud (US-East)](<https://openai.com/index/daybreak-red-aws-govcloud>) — _openai.com_
-3. [DevRev delivers autonomous self-service with GPT-6.1 Sol](<https://openai.com/index/devrev-enterprise-self-service>) — _openai.com_
-4. [OpenAI: ChatGPT Search Is About 20% of Google's, 250 Million People Speak With ChatGPT, and Chat Is Merging With Work](<https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20>) — _bigtechnology.com_
-5. [Embed 5 and Rerank 5 now on OpenRouter](<https://cohere.com/blog/embed-rerank-5-openrouter>) — _cohere_
-6. [How Much Does Reasoning Effort Affect Score and Cost?](<https://www.vals.ai/blogs/reasoning-effort>) — _vals.ai_
-7. [DeepSeek Plans to Train Its Next-Generation Model on Huawei Ascend Chips](<https://www.geopolitechs.org/p/deepseek-plans-to-train-its-next>) — _geopolitechs.org_
-8. [British fintech Revolut slashes AI coding costs 10x by cutting out Claude and going self-hosted](<https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345>) — _theregister.com_
-9. [Sparks of Weight-Space Programming](<https://rikiyat.github.io/blog/weight-space-programming/>) — _rikiyat.github.io_
-10. [The 'Astra can read and write weights to improve Qwen' post is misleading](<https://honnibal.dev/blog/astra-read-write-misleading>) — _honnibal.dev_
-11. [\[AINews\] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai](<https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/>) — _latent.space_
-12. [Progress on provable inference for large language models](<https://www.anthropic.com/research/provable-inference>) — _anthropic.com_
-13. [See the agents, set the terms: new visibility and control for personal agents](<https://blog.cloudflare.com/personal-agents-visibility-control/>) — _blog.cloudflare.com_
-14. [datasette-agent 0.5a0](<https://simonwillison.net/2026/Nov/3/datasette-agent/>) — _simonwillison.net_
-15. [datasette-apps 0.3a0](<https://simonwillison.net/2026/Nov/4/datasette-apps/>) — _simonwillison.net_
-16. [safeagents](<https://github.com/huggingface/safeagents>) — _github.com_
-17. [djs](<https://github.com/earendil-works/djs>) — _github.com_
-18. [Agent-Desktop](<https://github.com/vercel-labs/agent-desktop>) — _github.com_
-19. [Detect when your AI agent copies a self-replicating prompt injection](<https://www.datadoghq.com/blog/detect-when-your-ai-agent-copies-a-self-replicating-prompt-injection/>) — _datadoghq.com_
-20. [Token thieves costing companies $100K+ per day in illicit LLM charges](<https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967>) — _theregister.com_
-21. [GitHub Copilot is now available in Xcode’s coding assistant](<https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant>) — _github.blog_
-22. [BYOK and enterprise custom models in the Copilot usage API](<https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api>) — _github.blog_
-23. [CodeQL 2.27.4 improves accuracy and query metadata](<https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata>) — _github.blog_
-24. [Deep dive: Auto scaling response times on Amazon ECS](<https://aws.amazon.com/blogs/containers/deep-dive-auto-scaling-response-times-on-amazon-ecs/>) — _aws.amazon.com_
-25. [Lakebase Postgres is now generally available on Google Cloud](<https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud>) — _databricks.com_
-26. [The hidden latency inside your database](<https://planetscale.com/blog/the-hidden-latency-inside-your-database>) — _planetscale.com_
-27. [Bridging Alloy and OpenTelemetry: the OTel engine is now in Public Preview](<https://grafana.com/blog/bridging-alloy-and-opentelemetry-the-otel-engine-is-now-in-public-preview/>) — _grafana.com_
-28. [Floci](<https://github.com/floci-io/floci>) — _github.com_
-29. [Shopify Overexposed Scans GKE Ingresses and Cloud Run for Exposure](<https://www.infoq.com/news/2026/11/shopify-kubernetes-ingresses/>) — _infoq.com_
-30. [Baseten Introduces Grid, Sandboxes, and Serverless Loops](<https://www.baseten.co/blog/the-building-blocks-of-the-open-frontier>) — _baseten.co_
-31. [New agents and products for security, productivity, and creative work on Claude Marketplace](<https://claude.com/resources/articles/new-agents-and-products-claude-marketplace>) — _claude_
-32. [A thousand fewer paths to root](<https://openai.com/index/a-thousand-fewer-paths-to-root>) — _openai.com_
-33. [Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing](<https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html>) — _thehackernews.com_
-34. [Railway's signup-testing agents probed Primcloud's network](<https://bosnadev.com/2026/11/03/railway-agents-probed-primcloud>) — _bosnadev.com_
-35. [Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies](<https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/>) — _krebsonsecurity.com_
+1. [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<https://huggingface.co/blog/phonon-tts>) — _huggingface.co_
+2. [Setting a new standard for responsible AI infrastructure](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>) — _openai.com_
+3. [\[AINews\] It's Swapping Season](<https://latent.space/p/ainews-it-s-swapping-season/>) — _latent.space_
 
 
 ## Recent archive
