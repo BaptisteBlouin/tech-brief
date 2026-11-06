@@ -8,78 +8,45 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-11-05
-<sub>updated 6 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-06
+<sub>updated 6 November 2026 at 12:01</sub>
 
-## AI models and tooling
+## Models and AI releases
 
-- Phonon TTS is presented as a high-quality on-device speech model that tops the benchmarks, with an ExecuTorch and WebGPU variant listed on Hugging Face <sup>[1](<https://huggingface.co/blog/phonon-tts>)</sup>. The item gives no benchmark figures, so the benchmark claim is unverified.
-- Gemini Omni 1.2 Flash adds native 15-second video creation, better reference adherence and multi-turn conversational editing, and Google says it cut prices by 30% <sup>[2](<https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/>)</sup>.
-- OpenAI launched Images 2.6 in ChatGPT and Codex, generating images 50% faster and adding GIF creation with speed control and frame editing; GPT-Image-2.6 Flare and Sunburst are available through the API <sup>[3](<https://www.testingcatalog.com/openai-launches-images-2-6-with-gifs-and-image-reference/>), [4](<https://openai.com/index/introducing-images-2-6/>)</sup>.
-- Ripple-65B Preview is an open-weight model that reportedly reaches state-of-the-art on TerminalBench 2.1, with training cost put at $32 million, and is available on Hugging Face, Together AI, GMI Cloud and OpenRouter <sup>[5](<https://www.ricursive.com/ripple>)</sup>.
-- Airbnb fine-tuned a 2-billion-effective-parameter classifier for pricing-policy violations, raising F1 from 0.563 to 0.902, matching frontier APIs at a 35ms median latency versus about 900ms <sup>[6](<https://airbnb.tech/ai-ml/frontier-quality-at-1-of-the-cost-a-production-benchmark-of-llm-classifiers/>)</sup>.
-- Mistral Studio adds managed agents, workflows and enterprise context, deployable in the cloud, a VPC or on-premises, alongside Mistral Large 4 <sup>[7](<https://mistral.ai/news/build-with-studio>)</sup>.
-- Tencent's Hy4 is a visual-understanding LLM, with weights and system cards promised in the coming days <sup>[8](<https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/>)</sup>.
-- Meta's Conductor is a startup that runs multiple AI coding agents in parallel workspaces, and Meta is acquiring it <sup>[9](<https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta>)</sup>.
+- Thinking Machines has released Inkling 2 Small, pretrained from scratch in under 3 days on fewer than 12T tokens in native NVFP4, with a single joint RL run, and it is reported as competitive with, and often beating, same-size Chinese models <sup>[1](<https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/>)</sup>.
 
-## AI industry moves
+## Developer tools and AI coding assistants
 
-- OpenAI published a Policy Blueprint for responsible AI infrastructure, covering protection of local resources, job creation and development guidelines for data-center projects <sup>[10](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>)</sup>.
-- Cat Wu is leaving Anthropic, where she was Head of Product for the Claude Code team, to join OpenAI as lead of Core Products PM <sup>[11](<https://latent.space/p/ainews-it-s-swapping-season/>), [12](<https://x.com/_catwu/status/2118137612577968402>)</sup>.
-- Sharon Zhou is leaving AMD for Anthropic, after AMD acquired her company Lamini last year <sup>[11](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
-- Factory is acquiring HumanLayer <sup>[11](<https://latent.space/p/ainews-it-s-swapping-season/>)</sup>.
-- Sequoia Capital is closing its London office, shutting its Arc accelerator and Scouts program, and merging its early-stage and growth teams <sup>[13](<https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/>)</sup>.
+- GitHub's usage metrics API now reports, per repository, how many Copilot code review comments developers acted on, with a computed addressed rate (addressed comments divided by evaluated comments) and breakdowns by severity, review tier, comment type and customization <sup>[2](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>)</sup>.
+- The same API now flags users whose client telemetry is missing or whose IDE or Copilot extension versions are below the usage metrics minimums, with daily affected-user counts at enterprise and organization level <sup>[3](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>)</sup>.
 
-## Engineering, DevOps and infrastructure
+## Agents and infrastructure for agents
 
-- GitHub's new Git storage architecture reportedly supports 5,000 concurrent agents and 7,200 pushes per second to one repo while keeping reads low-latency <sup>[14](<https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/>)</sup>.
-- GitHub's new pull request Overview page, in opt-in public preview, puts merge status and next actions at the top of the page <sup>[15](<https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview>)</sup>.
-- Halodoc moved its Redshift warehouse from RA3 to Graviton-based RG instances, cutting costs 32%, speeding COPY roughly 6x and heavy reports 2.1x to 5.2x <sup>[16](<https://blogs.halodoc.io/upgrading-redshift-from-ra3-to-rg-and-achieving-faster-queries-at-32-lower-cost/>)</sup>.
-- Meta's F3 Lightning rebuilt its ads ML feature infrastructure, with features reaching production 3.6x faster across more than 20,000 features without extra compute cost <sup>[17](<https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/>)</sup>.
-- Go 1.27 makes encoding/json/v2 and encoding/json/jsontext generally available, rejecting invalid UTF-8 and duplicate object names by default <sup>[18](<https://go.dev/blog/jsonv2>)</sup>.
-- Parcel 3 alpha rewrites the bundler in Rust and reports cold builds up to 100x faster than v2 <sup>[19](<https://v3.parceljs.org/blog/v3-alpha>)</sup>.
-- Apache Hudi-rs 0.6.0 adds native writes from Rust and Python without Spark or a JVM, plus up to 6x faster Python reads <sup>[20](<https://hudi.apache.org/blog/2026/11/03/apache-hudi-rs-0-6-0-release-announcement>)</sup>.
-- PostHog is moving its warehouse off DuckDB to Trino with its own table format, HogLake, after per-instance sizing and slow single-table writes on a roughly 1-trillion-row DuckLake <sup>[21](<https://posthog.com/blog/moving-off-duckdb>)</sup>.
+- Docker Sandboxes are presented as a distinct technology from containers: dedicated microVMs with their own Linux kernel, filesystem, network and Docker Engine, built for autonomous coding agents, whereas containers share the host kernel <sup>[4](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>)</sup>.
+- Pinecone's webinar recap argues that AI agents need more than vector similarity: a semantically relevant result can still give a wrong answer when, for example, a one-day promotion is counted as demand, so the decision logic belongs outside the search step <sup>[5](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>)</sup>.
 
-## Security and supply chain
+## Robotics
 
-- An AI-assisted review of OpenEMR produced 42 security advisories fixed in version 8.5.0, including an impersonation chain that forged an OAuth bearer token and bypassed password and MFA checks <sup>[22](<https://idnsec.com/research/finding-40-vulnerabilities-in-healthcare-software-serving-more-than-100-million-patients/>)</sup>.
-- Era researchers documented the Greeter framework exploiting the Flowise overrideConfig flaw (CVE-2024-58351), harvesting secrets and cloud metadata across honeypots <sup>[23](<https://era.security/blog/greeter-flowise-ai-infrastructure-attack>)</sup>.
-- An AI-assisted effort turned a 2024 PHP crash bug into a critical vulnerability, with exploit development taking two weeks against two months for a patch <sup>[24](<https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability>)</sup>.
-- Docker is extending trusted content to open-source packages through a partnership with ActiveState, and the CNCF Score project adopted Docker's security tooling through the Docker-Sponsored Open Source program <sup>[25](<https://www.docker.com/blog/docker-activestate-trusted-content/>), [26](<https://www.docker.com/blog/cncf-score-project-improved-its-security-posture-by-joining-the-docker-sponsored-open-source-program/>)</sup>.
-- GitHub's secret scanning adds SpaceX as a partner and a new Starlink API secret detector, and upgrades several other detectors with fewer false positives <sup>[27](<https://github.blog/changelog/2026-11-05-secret-scanning-upgrades-detectors-adds-spacex-as-partner>)</sup>.
-- Chainstack reports a production breach through a third-party component on October 26, exposing customer names, emails and password hashes <sup>[28](<https://thehackernews.com/2026/11/chainstack-reports-production-systems.html>)</sup>.
+- Tau Robotics is running a humanoid cleaning service in San Francisco where robots are piloted remotely by humans, and the collected data is meant to train more autonomous cleaning robots later <sup>[6](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>)</sup>.
+
+## Speech and open benchmarks
+
+- The Open ASR Leaderboard has added Egyptian and Nigerian English <sup>[7](<https://huggingface.co/blog/open-asr-leaderboard-liva>)</sup>.
+
+## Engineering practice and AI adoption
+
+- An AI FIRST podcast episode describes that company's internal AI operating system, built around one agent with skills rather than 25 specialists, and argues that skills and context decide whether it works <sup>[8](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>)</sup>.
 
 ## Sources
 
-1. [A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.](<https://huggingface.co/blog/phonon-tts>) — _huggingface.co_
-2. [Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips](<https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/>) — _deepmind.google_
-3. [OpenAI launches Images 2.6 with GIFs and image reference](<https://www.testingcatalog.com/openai-launches-images-2-6-with-gifs-and-image-reference/>) — _testingcatalog.com_
-4. [Introducing Images 2.6](<https://openai.com/index/introducing-images-2-6/>) — _openai.com_
-5. [Ripple-65B Preview](<https://www.ricursive.com/ripple>) — _ricursive.com_
-6. [Frontier quality at 1% of the cost: a production benchmark of LLM classifiers](<https://airbnb.tech/ai-ml/frontier-quality-at-1-of-the-cost-a-production-benchmark-of-llm-classifiers/>) — _airbnb.tech_
-7. [Le Chonk brings the brains. Studio puts it to work.](<https://mistral.ai/news/build-with-studio>) — _mistral_
-8. [Tencent Launches Hy4, Joining the Ranks of the World's Leading Open-Source AI Models](<https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/>) — _tencent.com_
-9. [Meta Acquires AI Coding Startup Conductor](<https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta>) — _conductor.build_
-10. [Setting a new standard for responsible AI infrastructure](<https://openai.com/index/setting-new-standard-responsible-ai-infrastructure>) — _openai.com_
-11. [\[AINews\] It's Swapping Season](<https://latent.space/p/ainews-it-s-swapping-season/>) — _latent.space_
-12. [Cat Wu joins OpenAI](<https://x.com/_catwu/status/2118137612577968402>) — _x.com_
-13. [Sequoia hits rewind, undoing 20 years of expansion](<https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/>) — _techcrunch.com_
-14. [Inside GitHub’s new Git storage architecture](<https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/>) — _github.blog_
-15. [New pull request overview page in public preview](<https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview>) — _github.blog_
-16. [Upgrading Redshift from RA3 to RG and Achieving Faster Queries at 32% Lower Cost](<https://blogs.halodoc.io/upgrading-redshift-from-ra3-to-rg-and-achieving-faster-queries-at-32-lower-cost/>) — _blogs.halodoc.io_
-17. [F3 Lightning: How Meta Accelerates Ads ML Features to Production at Scale](<https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/>) — _engineering.fb.com_
-18. [A new Go API for JSON](<https://go.dev/blog/jsonv2>) — _go.dev_
-19. [Announcing Parcel 3 alpha](<https://v3.parceljs.org/blog/v3-alpha>) — _v3.parceljs.org_
-20. [Apache Hudi-rs 0.6.0: Native Writes from Rust and Python](<https://hudi.apache.org/blog/2026/11/03/apache-hudi-rs-0-6-0-release-announcement>) — _hudi.apache.org_
-21. [Why we're moving our warehouse product off DuckDB](<https://posthog.com/blog/moving-off-duckdb>) — _posthog.com_
-22. [Finding 40+ Vulnerabilities in Healthcare Software Serving More Than 100 Million Patients](<https://idnsec.com/research/finding-40-vulnerabilities-in-healthcare-software-serving-more-than-100-million-patients/>) — _idnsec.com_
-23. [You Had Me at “Hello”: Inside The Greeter, A Chinese‐Language Framework Targeting AI Infrastructure](<https://era.security/blog/greeter-flowise-ai-infrastructure-attack>) — _era.security_
-24. [The PHP2Shell Vulnerability Heralds Cybersecurity Hell](<https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability>) — _spectrum.ieee.org_
-25. [Docker and ActiveState Extending Secure Defaults to the Packages Developers Install](<https://www.docker.com/blog/docker-activestate-trusted-content/>) — _docker.com_
-26. [CNCF Score project improved its security posture by joining the Docker-Sponsored Open Source Program](<https://www.docker.com/blog/cncf-score-project-improved-its-security-posture-by-joining-the-docker-sponsored-open-source-program/>) — _docker.com_
-27. [Secret scanning upgrades detectors, adds SpaceX as partner](<https://github.blog/changelog/2026-11-05-secret-scanning-upgrades-detectors-adds-spacex-as-partner>) — _github.blog_
-28. [Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes](<https://thehackernews.com/2026/11/chainstack-reports-production-systems.html>) — _thehackernews.com_
+1. [\[AINews\] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark](<https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/>) — _latent.space_
+2. [Usage metrics API adds code review details and addressed rate](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>) — _github.blog_
+3. [Usage metrics API flags telemetry and version gaps](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>) — _github.blog_
+4. [Docker Sandboxes vs. Containers: Choosing the Right Isolation for AI Agents](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>) — _docker.com_
+5. [Webinar Recap: From Data to Vectors to Context](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>) — _pinecone_
+6. [I watched a humanoid robot clean my apartment. It felt like a taste of the future.](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>) — _technologyreview.com_
+7. [Egyptian and Nigerian English join the Open ASR Leaderboard](<https://huggingface.co/blog/open-asr-leaderboard-liva>) — _huggingface.co_
+8. [Wie wir bei AI FIRST mit KI arbeiten: Blick hinter die Kulissen, die größten Fehler und unser bestes KI-Setup](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>) — _ai first podcast_
 
 
 ## Recent archive
