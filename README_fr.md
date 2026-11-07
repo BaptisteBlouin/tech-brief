@@ -9,44 +9,89 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-11-06
-<sub>mis à jour le 6 novembre 2026 à 12:01</sub>
+<sub>mis à jour le 7 novembre 2026 à 00:00</sub>
 
-## Modèles et versions d'IA
+## Modèles et sorties d'IA
 
-- Thinking Machines a publié Inkling 2 Small, pré-entraîné depuis zéro en moins de 3 jours sur moins de 12 000 milliards de tokens en NVFP4 natif, avec une seule exécution conjointe d'apprentissage par renforcement ; il est présenté comme compétitif, et souvent supérieur, face aux modèles chinois de même taille <sup>[1](<https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/>)</sup>.
+- Thinking Machines a publié Inkling 2 Small, un modèle Mixture-of-Experts de 594 B de paramètres au total et 17 B actifs, acceptant des entrées image et un effort de raisonnement variable. Il a été pré-entraîné depuis zéro en moins de 3 jours sur moins de 12 T de tokens, en NVFP4 natif, avec une seule campagne d'apprentissage par renforcement conjointe. Selon l'entreprise, il rivalise avec des modèles chinois de même taille et les dépasse souvent <sup>[1](<https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/>)</sup> <sup>[2](<https://thinkingmachines.ai/news/inkling-2-small/>)</sup>. Il est d'abord disponible via Tinker avec des poids fermés, et les poids complets sous licence Apache 2.0 sont promis après des tests de sécurité et du red-teaming externes <sup>[2](<https://thinkingmachines.ai/news/inkling-2-small/>)</sup>.
+- Gemini Omni 1.2 Flash vise la rapidité, la rentabilité et des clips plus longs pour les développeurs <sup>[3](<https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/>)</sup>.
+- NVIDIA a présenté VFlash, un modèle de vision qui génère en parallèle des prédictions géométriques, comme des trajectoires de robots ou des mouvements 3D, plutôt que token par token <sup>[4](<https://research.nvidia.com/labs/lpr/vflash/>)</sup>.
+- Meta a annoncé des conversations vocales et des avatars expressifs pour son application Muse <sup>[5](<https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/>)</sup>.
 
 ## Outils pour développeurs et assistants de codage IA
 
-- L'API de métriques d'utilisation de GitHub indique désormais, par dépôt, le nombre de commentaires de revue de code Copilot auxquels les développeurs ont donné suite, ainsi qu'un taux de prise en compte calculé (commentaires traités divisés par les commentaires évalués), avec une ventilation par gravité, niveau de revue, type de commentaire et personnalisation <sup>[2](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>)</sup>.
-- La même API signale désormais les utilisateurs dont la télémétrie client est manquante ou dont les versions de l'IDE ou de l'extension Copilot sont inférieures aux minimums requis pour les métriques d'utilisation, avec des décomptes quotidiens d'utilisateurs concernés au niveau de l'entreprise et de l'organisation <sup>[3](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>)</sup>.
+- L'API de métriques d'usage de GitHub indique désormais, par dépôt, combien de commentaires de revue de code Copilot ont été suivis par les développeurs, avec un taux de prise en compte (commentaires traités divisés par les commentaires évalués) et une répartition par sévérité, niveau de revue, type de commentaire et personnalisation <sup>[6](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>)</sup>.
+- La même API signale désormais les utilisateurs dont la télémétrie client est absente, ou dont la version de l'IDE ou de l'extension Copilot est inférieure aux minimums requis, avec le nombre quotidien d'utilisateurs concernés au niveau de l'entreprise et de l'organisation <sup>[7](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>)</sup>.
+- Google a analysé plus de 913 000 sessions d'agents de codage : dans 13 % des cas, les agents ont rencontré des commentaires TODO(b/...) en ligne, et dans 6 % de ces rencontres ils y ont donné suite, dans 83 % des cas sans y être invités. Chaque session comporte alors 70 % d'étapes, 77 % de tokens et 105 % de temps d'attente en plus. Les modèles les plus capables se laissent distraire plus souvent <sup>[8](<https://developers.googleblog.com/agent-distraction/>)</sup>.
+- agent-browser est une CLI Rust native qui donne aux agents IA un navigateur piloté par une commande shell à la fois, et lit les pages sous forme d'arbre d'accessibilité compact <sup>[9](<https://github.com/vercel-labs/agent-browser>)</sup>.
 
 ## Agents et infrastructure pour agents
 
-- Docker Sandboxes est présenté comme une technologie distincte des conteneurs : des microVM dédiées, avec leur propre noyau Linux, leur système de fichiers, leur réseau et leur propre Docker Engine, conçues pour les agents de codage autonomes, alors que les conteneurs partagent le noyau de l'hôte <sup>[4](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>)</sup>.
-- Le compte rendu d'un webinaire de Pinecone soutient que les agents IA ont besoin de plus que la similarité vectorielle : un résultat sémantiquement pertinent peut mener à une mauvaise réponse, par exemple lorsqu'une promotion d'un jour est comptée comme de la demande ; la logique de décision doit donc se situer en dehors de l'étape de recherche <sup>[5](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>)</sup>.
+- Google a confié Agent Substrate, gVisor et OpenRL à la CNCF Sandbox et a rendu Agent Substrate généralement disponible sur GKE. Il découple les sessions d'agents avec état du calcul, restaure les sessions inactives en moins de 500 ms, offre une densité de conteneurs 10 fois supérieure à la normale et plus de 500 activations de suspension/reprise par seconde <sup>[10](<https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf/>)</sup>.
+- Docker Sandboxes sont présentés comme une technologie distincte des conteneurs : ce sont des microVM dédiées, avec leur propre noyau Linux, système de fichiers, réseau et Docker Engine, conçues pour les agents de codage autonomes, alors que les conteneurs partagent le noyau de l'hôte <sup>[11](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>)</sup>. Docker insiste aussi sur l'isolation et la gouvernance des agents plutôt que sur les seules améliorations des modèles, en citant l'injection de prompt, l'exposition d'identifiants et l'exfiltration de données <sup>[12](<https://www.infoq.com/news/2026/11/docker-ai-agent-security/>)</sup>.
+- Apache Airflow 3.4.0 ajoute des Task Loops pour les workflows qui se répètent jusqu'à achèvement, permet d'écrire des Dags en TypeScript, Go, Java ou YAML, et propose un provider common.ai qui transforme les appels LLM et les agents en tâches Airflow avec validation humaine <sup>[13](<https://airflow.apache.org/blog/airflow-3.4.0/>)</sup>.
+- Le compte rendu d'un webinaire de Pinecone affirme que les agents IA ont besoin de plus que la similarité vectorielle : un résultat pertinent peut quand même donner une réponse fausse, donc la logique de décision doit se situer hors de l'étape de recherche <sup>[14](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>)</sup>.
+- NVIDIA utilise des agents spécialisés pour corréler les défaillances des clusters GPU entre matériel, réseau, ordonnancement et observabilité. Ils fonctionnent sur site avec des modèles Nemotron locaux et des identifiants Kubernetes en lecture seule <sup>[15](<https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations/>)</sup>.
+- Un épisode du podcast AI FIRST décrit le système d'exploitation IA interne de cette entreprise, construit autour d'un seul agent doté de compétences plutôt que de 25 spécialistes, et affirme que ce sont les compétences et le contexte qui déterminent si cela fonctionne <sup>[16](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>)</sup>.
+
+## Sécurité
+
+- Coinspect a démontré une évasion de bac à sable Firecracker depuis l'espace utilisateur invité (CVE-2026-122192), qui permettait à un invité de modifier la mémoire du VMM en cours d'exécution. Les versions v1.16.2 et v1.17.0 corrigent cette faille <sup>[17](<https://www.coinspect.com/blog/firecracker-escape/>)</sup>.
+- Un contournement de l'authentification par mot de passe d'OpenSSH affecte les versions 3.16 à 3.24 d'Alpine Linux, permettant d'atteindre à distance un compte sans mot de passe défini. Il faut mettre à jour openssh et redémarrer sshd <sup>[18](<https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/>)</sup>. Une faille liée, *sshole, touche OpenSSH sur les systèmes musl sans PAM <sup>[19](<https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/>)</sup> <sup>[20](<https://sshhole.com/>)</sup>.
+- OpenAI indique qu'un pipeline automatisé a reproduit 1 724 vulnérabilités du noyau Linux en 30 heures et généré 948 exploits fonctionnels d'élévation de privilèges locale, à environ 1 279 $ chacun. Elle conseille de considérer que les systèmes non corrigés accessibles avec des privilèges faibles sont joignables par des attaquants bien dotés <sup>[21](<https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html>)</sup>.
+- GhostMap de Bitdefender est une faille Android où une entrée APK malformée fait planter system_server et provoque une boucle de démarrage. Google a refusé de publier un correctif, donc les défenseurs doivent signaler les APK utilisant des méthodes de compression ZIP inhabituelles <sup>[22](<https://www.bitdefender.com/en-us/blog/labs/ghostmap-android>)</sup>.
+- Anthropic a refusé de corriger une faille de Claude Dispatch qui pouvait permettre à une extension de navigateur d'atteindre l'exécution de code à distance dans Claude Desktop <sup>[23](<https://www.theregister.com/research/2026/11/05/anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-attackers-execute-remote-commands-across-corporate-boundaries/5307684>)</sup>.
+
+## Pratiques d'ingénierie et observabilité
+
+- Grafana Cloud a rendu généralement disponible le lien entre traces dans Database Observability, reliant les traces OpenTelemetry aux données de requêtes de base de données, requête par requête <sup>[24](<https://grafana.com/blog/trace-linkage-connect-the-dots-between-your-app-traces-and-database-queries/>)</sup>.
+- Le SDK JavaScript OpenTelemetry 3.0 passe en ESM uniquement et abandonne les anciennes versions de Node.js <sup>[25](<https://opentelemetry.io/blog/2026/otel-js-sdk-3-0/>)</sup>.
+- Une plateforme K3s de plus de 15 microservices fonctionne sans collecte centralisée des journaux : elle s'appuie sur des métriques Prometheus filtrées et sur des journaux détaillés temporaires, avec les compromis notés pour les audits <sup>[26](<https://cloudnativenow.com/contributed-content/running-production-with-zero-stored-logs/>)</sup>.
+- Google a attribué des timeouts intermittents de l'API GKE à la réorganisation de paquets dans Private Service Connect, à des sockets Envoy semi-fermés et à un bug TCP de Linux, corrigé par un patch du noyau <sup>[27](<https://cloud.google.com/blog/products/networking/the-three-layer-gke-network-mystery>)</sup>.
+- AWS Security Hub propose désormais un inventaire SBOM à l'échelle de l'organisation pour EC2, ECR et Lambda, construit à partir d'Amazon Inspector <sup>[28](<https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-sbom-inventory/>)</sup>.
 
 ## Robotique
 
-- Tau Robotics exploite à San Francisco un service de nettoyage par robots humanoïdes pilotés à distance par des humains ; les données collectées doivent servir plus tard à entraîner des robots de nettoyage plus autonomes <sup>[6](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>)</sup>.
+- Tau Robotics exploite à San Francisco un service de nettoyage humanoïde où les robots sont pilotés à distance par des humains. Les données collectées doivent servir à entraîner plus tard des robots de nettoyage plus autonomes <sup>[29](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>)</sup>.
 
 ## Reconnaissance vocale et benchmarks ouverts
 
-- Le Open ASR Leaderboard a ajouté l'anglais égyptien et l'anglais nigérian <sup>[7](<https://huggingface.co/blog/open-asr-leaderboard-liva>)</sup>.
-
-## Pratiques d'ingénierie et adoption de l'IA
-
-- Un épisode du podcast AI FIRST décrit le système d'exploitation IA interne de cette entreprise, construit autour d'un seul agent doté de compétences plutôt que de 25 spécialistes, et soutient que ce sont les compétences et le contexte qui déterminent le succès de l'approche <sup>[8](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>)</sup>.
+- L'Open ASR Leaderboard a ajouté l'anglais égyptien et l'anglais nigérian <sup>[30](<https://huggingface.co/blog/open-asr-leaderboard-liva>)</sup>.
+- OpenAI présente BioBasicsBench, un benchmark de 100 tâches mesurant la capacité des agents IA à interpréter des données brutes de expériences de laboratoire humide <sup>[31](<https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science>)</sup>.
 
 ## Sources
 
 1. [\[AINews\] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark](<https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/>) — _latent.space_
-2. [Usage metrics API adds code review details and addressed rate](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>) — _github.blog_
-3. [Usage metrics API flags telemetry and version gaps](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>) — _github.blog_
-4. [Docker Sandboxes vs. Containers: Choosing the Right Isolation for AI Agents](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>) — _docker.com_
-5. [Webinar Recap: From Data to Vectors to Context](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>) — _pinecone_
-6. [I watched a humanoid robot clean my apartment. It felt like a taste of the future.](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>) — _technologyreview.com_
-7. [Egyptian and Nigerian English join the Open ASR Leaderboard](<https://huggingface.co/blog/open-asr-leaderboard-liva>) — _huggingface.co_
-8. [Wie wir bei AI FIRST mit KI arbeiten: Blick hinter die Kulissen, die größten Fehler und unser bestes KI-Setup](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>) — _ai first podcast_
+2. [Introducing Inkling 2 Small](<https://thinkingmachines.ai/news/inkling-2-small/>) — _thinkingmachines.ai_
+3. [Gemini Omni 1.2 Flash](<https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/>) — _blog.google_
+4. [NVIDIA Introduced VFlash](<https://research.nvidia.com/labs/lpr/vflash/>) — _research.nvidia.com_
+5. [Muse Voice](<https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/>) — _about.fb.com_
+6. [Usage metrics API adds code review details and addressed rate](<https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate>) — _github.blog_
+7. [Usage metrics API flags telemetry and version gaps](<https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps>) — _github.blog_
+8. [Agent Distraction](<https://developers.googleblog.com/agent-distraction/>) — _google ai_
+9. [agent-browser](<https://github.com/vercel-labs/agent-browser>) — _github.com_
+10. [Powering open infrastructure for autonomous agents](<https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf/>) — _cloud.google.com_
+11. [Docker Sandboxes vs. Containers: Choosing the Right Isolation for AI Agents](<https://www.docker.com/blog/docker-sandboxes-vs-containers/>) — _docker.com_
+12. [Docker Urges Isolation and Governance for AI Agent Security](<https://www.infoq.com/news/2026/11/docker-ai-agent-security/>) — _infoq.com_
+13. [Apache Airflow 3.4.0: Task Loops, Dags in Any Language, and AI Agents](<https://airflow.apache.org/blog/airflow-3.4.0/>) — _airflow.apache.org_
+14. [Webinar Recap: From Data to Vectors to Context](<https://www.pinecone.io/blog/webinar-recap-data-to-vectors-to-context/>) — _pinecone_
+15. [How NVIDIA Uses AI Agents to Streamline AI Factory Operations](<https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations/>) — _developer.nvidia.com_
+16. [Wie wir bei AI FIRST mit KI arbeiten: Blick hinter die Kulissen, die größten Fehler und unser bestes KI-Setup](<https://ai-first.ai/podcast/wie-wir-bei-ai-first-mit-ki-arbeiten-blick-hinter-die-kulissen-die-groessten-fehler-und-unser-bestes-ki-setup>) — _ai first podcast_
+17. [Escaping Firecracker from Guest Userspace](<https://www.coinspect.com/blog/firecracker-escape/>) — _coinspect.com_
+18. [Alpine Linux Security Advisory: OpenSSH-server password authentication bypass](<https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/>) — _alpinelinux.org_
+19. [Meet *sshole, the vulnerability that lets hackers SSH into Linux devices](<https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/>) — _arstechnica.com_
+20. [*sshole](<https://sshhole.com/>) — _sshhole.com_
+21. [OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run](<https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html>) — _thehackernews.com_
+22. [GhostMap: The Android flaw that crashes your phone before you open the app](<https://www.bitdefender.com/en-us/blog/labs/ghostmap-android>) — _bitdefender.com_
+23. [Anthropic won't fix a Claude Dispatch flaw that could let attackers execute remote commands across corporate boundaries](<https://www.theregister.com/research/2026/11/05/anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-attackers-execute-remote-commands-across-corporate-boundaries/5307684>) — _theregister.com_
+24. [Trace linkage: connect the dots between your app traces and database queries](<https://grafana.com/blog/trace-linkage-connect-the-dots-between-your-app-traces-and-database-queries/>) — _grafana.com_
+25. [Announcing the OpenTelemetry JavaScript SDK 3.0](<https://opentelemetry.io/blog/2026/otel-js-sdk-3-0/>) — _opentelemetry.io_
+26. [Running Production With Zero Stored Logs](<https://cloudnativenow.com/contributed-content/running-production-with-zero-stored-logs/>) — _cloudnativenow.com_
+27. [When the Kubernetes API went silent: A three-layer networking mystery](<https://cloud.google.com/blog/products/networking/the-three-layer-gke-network-mystery>) — _cloud.google.com_
+28. [AWS Security Hub now provides an SBOM inventory for your compute resources](<https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-sbom-inventory/>) — _aws.amazon.com_
+29. [I watched a humanoid robot clean my apartment. It felt like a taste of the future.](<https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/>) — _technologyreview.com_
+30. [Egyptian and Nigerian English join the Open ASR Leaderboard](<https://huggingface.co/blog/open-asr-leaderboard-liva>) — _huggingface.co_
+31. [Measuring how AI agents handle everyday wet-lab science](<https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science>) — _openai.com_
 
 
 ## Archive récente
@@ -55,6 +100,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-11-06` | Vendredi | [Lire →](news/fr/2026-11-06.md) |
 | `2026-11-05` | Jeudi | [Lire →](news/fr/2026-11-05.md) |
 | `2026-11-04` | Mercredi | [Lire →](news/fr/2026-11-04.md) |
 | `2026-11-03` | Mardi | [Lire →](news/fr/2026-11-03.md) |
@@ -68,9 +114,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-26` | Lundi | [Lire →](news/fr/2026-10-26.md) |
 | `2026-10-24` | Samedi | [Lire →](news/fr/2026-10-24.md) |
 | `2026-10-23` | Vendredi | [Lire →](news/fr/2026-10-23.md) |
-| `2026-10-22` | Jeudi | [Lire →](news/fr/2026-10-22.md) |
 
-<sub>[Parcourir toute l’archive (143) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (144) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
