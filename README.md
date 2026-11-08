@@ -8,26 +8,17 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-11-07
-<sub>updated 8 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-08
+<sub>updated 8 November 2026 at 12:00</sub>
 
-## AI Industry & Market
-- Anthropic targets a $100B annual run rate by year end, currently at $80B, while valuation estimates have dropped to as low as $1T with probability down 18% amid a market correction that has pushed Nasdaq down roughly 10% <sup>[1](<https://latent.space/p/ainews-anthropic-ipo-whither-now/>)</sup>.
+## Web and browser engineering
 
-## Developer Tools & AI Coding Assistants
-- GitHub Copilot code review settings are now manageable via REST and GraphQL APIs from enterprise policy down to individual repositories, with explicit attribution fields to identify Copilot reviews and comments <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- The review overview comment is more compact, and the update includes fixes for billing, automatic reviews, and reliability across Copilot Pro, Pro+, Max, Business, and Enterprise plans <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- API consumers can now see the review effort used, and which skills, MCP servers, and custom instructions Copilot reported as sources for a comment <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- Enterprise administrators can enable or disable code review for all organizations or delegate the choice to organization admins through the API <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-
-## AI Architecture & Orchestration
-- An overview of six frequently used orchestration frameworks in AI systems covers how they manage tasks across agents and handle failures <sup>[3](<https://blog.bytebytego.com/p/ep232-6-frequently-used-orchestration>)</sup>.
+- Simon Willison found that Datasette table pages sent an HTTP `link: rel="next"` header that made Firefox prefetch the next page of rows, which wastes bandwidth and server rendering for the few visitors who actually click "next" <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>. He patched Datasette (issue #3046) to stop serving that header to Firefox on HTML pages <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>.
+- The Firefox behaviour he hit has been an open issue for about 24 years, and he noted that he had forgotten his own 2002 blog post complaining about it <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Anthropic IPO: Whither Now?](<https://latent.space/p/ainews-anthropic-ipo-whither-now/>) — _latent.space_
-2. [Copilot code review: API management and review overview updates](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>) — _github.blog_
-3. [EP232: 6 Frequently Used Orchestration Frameworks in an AI system](<https://blog.bytebytego.com/p/ep232-6-frequently-used-orchestration>) — _blog.bytebytego.com_
+1. [datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages](<https://simonwillison.net/2026/Nov/7/link-rel-next/>) — _simonwillison.net_
 
 
 ## Recent archive

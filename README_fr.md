@@ -8,26 +8,17 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-07
-<sub>mis à jour le 8 novembre 2026 à 00:00</sub>
+### Dernier digest — 2026-11-08
+<sub>mis à jour le 8 novembre 2026 à 12:00</sub>
 
-## Industrie et marché de l'IA
-- Anthropic vise un chiffre d'affaires annualisé de 100 Md$ d'ici la fin de l'année, contre 80 Md$ actuellement, tandis que les estimations de valorisation ont chuté jusqu'à 1 000 Md$, avec une probabilité en baisse de 18 % dans un contexte de correction boursière ayant fait reculer le Nasdaq d'environ 10 % <sup>[1](<https://latent.space/p/ainews-anthropic-ipo-whither-now/>)</sup>.
+## Ingénierie web et navigateur
 
-## Outils pour développeurs et assistants de codage IA
-- Les paramètres de revue de code de GitHub Copilot peuvent désormais être gérés via les API REST et GraphQL, depuis la politique d'entreprise jusqu'aux dépôts individuels, avec des champs d'attribution explicites permettant d'identifier les revues et commentaires produits par Copilot <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- Le commentaire de synthèse de la revue est plus compact, et la mise à jour corrige des problèmes de facturation, de revues automatiques et de fiabilité pour les offres Copilot Pro, Pro+, Max, Business et Enterprise <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- Les utilisateurs des API peuvent désormais voir l'effort de revue utilisé, ainsi que les compétences, serveurs MCP et instructions personnalisées que Copilot a indiqués comme sources d'un commentaire <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-- Les administrateurs d'entreprise peuvent activer ou désactiver la revue de code pour toutes les organisations, ou déléguer ce choix aux administrateurs d'organisation via l'API <sup>[2](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>)</sup>.
-
-## Architecture et orchestration de l'IA
-- Un aperçu de six frameworks d'orchestration fréquemment utilisés dans les systèmes d'IA présente la manière dont ils gèrent les tâches entre agents et traitent les défaillances <sup>[3](<https://blog.bytebytego.com/p/ep232-6-frequently-used-orchestration>)</sup>.
+- Simon Willison a constaté que les pages de tables de Datasette envoyaient un en-tête HTTP `link: rel="next"` qui poussait Firefox à précharger la page suivante de lignes. Cela gaspille de la bande passante et du rendu côté serveur, alors que seule une minorité de visiteurs clique réellement sur « suivant » <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>. Il a corrigé Datasette (ticket #3046) pour cesser de servir cet en-tête à Firefox sur les pages HTML <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>.
+- Ce comportement de Firefox constitue un problème ouvert depuis environ 24 ans, et il a noté qu'il avait oublié son propre billet de blog de 2002 qui se plaignait de ce problème <sup>[1](<https://simonwillison.net/2026/Nov/7/link-rel-next/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Anthropic IPO: Whither Now?](<https://latent.space/p/ainews-anthropic-ipo-whither-now/>) — _latent.space_
-2. [Copilot code review: API management and review overview updates](<https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates>) — _github.blog_
-3. [EP232: 6 Frequently Used Orchestration Frameworks in an AI system](<https://blog.bytebytego.com/p/ep232-6-frequently-used-orchestration>) — _blog.bytebytego.com_
+1. [datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages](<https://simonwillison.net/2026/Nov/7/link-rel-next/>) — _simonwillison.net_
 
 
 ## Archive récente
