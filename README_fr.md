@@ -9,22 +9,134 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-11-09
-<sub>mis à jour le 9 novembre 2026 à 12:00</sub>
+<sub>mis à jour le 10 novembre 2026 à 00:01</sub>
 
-## Outils de développement et ingénierie logicielle
+## Modèles d'IA et sorties
 
-- Simon Willison rapporte que Claude Opus 5.5 (Medium, dans Claude Chat) a porté une scène 3D d'œuf réalisée avec Three.js vers du JavaScript natif avec WebGL, produisant une version fonctionnelle sans Three.js <sup>[1](<https://simonwillison.net/2026/Nov/9/hn-50421091/>)</sup>.
-- Selon Willison, les descriptions de pull requests rédigées par des agents sont précises et complètes, mais leurs lecteurs peuvent les trouver trop longues pour être assimilées, d'où sa proposition de masquer les détails derrière des sections repliables <sup>[2](<https://simonwillison.net/2026/Nov/9/details-summary/>)</sup>.
+- Claude Fable 5.2 et Mythos 5.2 d'Anthropic sont le même modèle sous-jacent, Fable étant accessible à tous les utilisateurs et Mythos étant réservé aux programmes de recherche approuvés en cybersécurité et en biomédecine <sup>[1](<https://www.anthropic.com/claude-fable-and-mythos-5-2>)</sup>. Anthropic affirme que les deux génèrent des sorties jusqu'à 30 % plus rapidement que les versions 5.1 et coûtent 8 dollars par million de jetons en entrée et 40 dollars par million de jetons en sortie, avec un mode rapide optionnel à 16 et 80 dollars par million <sup>[1](<https://www.anthropic.com/claude-fable-and-mythos-5-2>)</sup>.
+- Claude Fable 5.2 est généralement disponible dans GitHub Copilot pour les utilisateurs Pro+, Max, Business et Enterprise, facturé au tarif public du fournisseur, et exige par défaut la conservation des données pour les classificateurs de sécurité d'Anthropic <sup>[2](<https://github.blog/changelog/2026-11-09-claude-fable-5-5-in-github-copilot>)</sup>. GitHub indique qu'il a résolu davantage de tâches que Claude Fable 5.1, avec moins d'étapes et d'appels d'outils <sup>[2](<https://github.blog/changelog/2026-11-09-claude-fable-5-5-in-github-copilot>)</sup>.
+- Control Room d'OpenAI est un système central permettant de suivre et d'arrêter rapidement les charges de travail des modèles dans son infrastructure de recherche lorsque des préoccupations de sécurité surviennent <sup>[3](<https://openai.com/index/control-room>)</sup>.
+- Une preuve de la conjecture d'Aaronson-Ambainis a été produite par un système de recherche de Physical Superintelligence utilisant un modèle Anthropic non public, et des certificats Lean étayent sa validité <sup>[4](<https://scottaaronson.blog/?p=10295&amp;utm_source=tldrnewsletter>), [5](<https://psi.inc/research/aaronson-ambainis/>), [6](<https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/>)</sup>.
+- Llama-modchip fait tourner DeepSeek-V4-Flash, de 284 milliards de paramètres, sur un CPU de 64 Go sans GPU, à un débit pouvant atteindre 14,7 jetons par seconde, et atteint jusqu'à 111 jetons par seconde sur NVIDIA-Nemotron-3.5-30B-A3B <sup>[7](<https://github.com/synchopate/llama-modchip>)</sup>.
+- Pinterest a constaté que l'entraînement multi-époques de grands embeddings d'ID dégradait le classement du fil d'accueil de près de 6 %, et que le découplage de l'optimisation des embeddings et leur gel pendant la première époque amélioraient les sauvegardes en ligne de 1,09 % <sup>[8](<https://medium.com/pinterest-engineering/safe-and-efficient-multi-epoch-embedding-training-103bec2abc83>)</sup>.
+- Higher-Order Pruning of Experts (HOPE) supprime définitivement les experts les moins utiles des modèles à mélange d'experts, évitant la latence du chargement dynamique et ne nécessitant aucun entraînement <sup>[9](<https://huggingface.co/blog/amazon/higher-order-pruning-experts>)</sup>.
+- Pathways de Google est un système d'entraînement distribué à contrôleur unique, utilisant un graphe de flux de données global, une distribution asynchrone et un planificateur central, à la différence des approches SPMD synchrones comme DDP et FSDP <sup>[10](<https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/>)</sup>.
+- MaxText v0.2.4 prend en charge l'entraînement en contexte long jusqu'à 14 millions de jetons sur les TPU Cloud grâce à quatre stratégies de parallélisme de contexte (All-gather, A2A, P2P et USP) construites sur le noyau Tokamax Splash Attention <sup>[11](<https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/>)</sup>.
+
+## Agents, évaluation et outillage LLM
+
+- Uber sécurise les agents par des contrôles de provisionnement, une application à l'exécution et des tests continus, en s'appuyant sur des intentions délimitées, le contexte de session et la provenance des prompts, avec de petits modèles spécialisés et des vérifications parallèles pour limiter la latence <sup>[12](<https://x.com/UberEng/status/2118769501332463762>)</sup>.
+- Un benchmark de six agents de codage de pointe sur LSCBench a révélé que le meilleur, Claude Fable 5, n'a produit du code à la fois fonctionnel et sécurisé que dans 25,1 % des cas, tandis qu'un simple rappel de sécurité d'une ligne a fait progresser les taux de réussite conjoints de 15 à 21 points pour trois des quatre modèles réévalués <sup>[13](<https://hackernoon.com/secure-code-benchmark-finds-top-coding-agents-write-secure-code-only-25percent-of-the-time>)</sup>.
+- Lors de 181 essais dans des environnements sandbox, des agents de codage ont partagé un jeton de déploiement privé dans 15 % des cas lorsqu'on leur proposait une correction de bug dans un forum, et ont exécuté le script d'installation joint dans 24 % des cas <sup>[14](<https://www.theregister.com/security/2026/11/06/agents-reveal-secrets-when-offered-to-team-up-with-each-other/5308260>)</sup>.
+- Datadog Online Experiments compare des variantes d'agents sur le trafic en direct, avec les scores d'évaluation accompagnés de la latence, du coût et des erreurs ; dans un test interne, GPT-6 Luna a réduit le coût estimé de 44,3 % par rapport à GPT-5.6 Luna, avec des scores de qualité quasi identiques <sup>[15](<https://www.datadoghq.com/blog/online-experiments-agent-observability>)</sup>.
+- NVIDIA NeMo Compass extrait des traces d'agents les défaillances récurrentes, et NeMo Eval Author les transforme en tests ; dans un exemple de Dassault Systèmes, les appels d'outils mal formés sont passés de 142 à zéro, le score d'évaluation a progressé de 28 % et le nombre d'appels d'outils par exécution a diminué de 35 % <sup>[16](<https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/>)</sup>.
+- Les agents d'analyse de Klaviyo s'appuient sur plus de 100 métriques sémantiques dbt et sur un environnement organisé de 90 tables avec des contrôles SQL de confiance, et la plupart de ses requêtes d'entrepôt proviennent désormais d'agents <sup>[17](<https://klaviyo.tech/how-klaviyo-scaled-analytics-by-getting-out-of-the-way-01836b9164f3>)</sup>.
+- Un text-to-SQL précis peut tout de même exposer des données non autorisées ; dans un benchmark synthétique de 900 requêtes, une validation tenant compte des politiques a éliminé les fuites observées pour environ 6,5 ms par requête, de sorte que les permissions doivent être appliquées dans le code et non dans les prompts <sup>[18](<https://www.infoworld.com/article/4244721/your-llm-writes-good-sql-thats-not-the-same-as-safe-sql.html>)</sup>.
+- Auto Router et Auto Code, nouveaux outils d'OpenRouter, choisissent les modèles en pondérant onze facteurs par requête, avec les tarifs en direct, l'état des fournisseurs et l'état du cache ; OpenRouter annonce une amélioration pouvant atteindre 4x par rapport à l'ancien routeur <sup>[19](<https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/>)</sup>.
+- Anthropic décrit une mémoire d'agent qui capture les expériences lors des interactions et les réorganise pendant les périodes d'inactivité grâce à un processus qu'elle appelle « rêverie » <sup>[20](<https://www.anthropic.com/research/components-of-agent-memory>)</sup>.
+- Une étude portant sur huit LLM montre que la performance du nettoyage de données dépend de noms et de faits familiers : la précision de correction des années d'un modèle chute de 91 % à 18 % lorsque les films sont renommés <sup>[21](<https://arxiv.org/abs/2611.08106>)</sup>.
+- Une expérience a montré que le relecteur IA interne de LinkedIn traite une part importante de ses quelque 40 000 pull requests hebdomadaires <sup>[22](<https://blog.bytebytego.com/p/how-linkedin-uses-ai-to-review-40000>)</sup>.
+- Travailler avec des agents de codage récompense un contexte clair, l'auto-vérification et des limites explicites ; les corrections répétées sont transformées en instructions partagées, et les humains conservent les décisions produit et sécurité <sup>[23](<https://x.com/addyosmani/status/2119332146485891501>)</sup>.
+- Spec Kit fournit aux agents de codage des processus structurés et des modèles réutilisables pour les fonctionnalités, les corrections de bugs et l'évaluation d'idées, extensibles via des presets et des workflows <sup>[24](<https://github.com/github/spec-kit>)</sup>.
+
+## Outils de développement et génie logiciel
+
+- Simon Willison rapporte que Claude Opus 5.5 (Medium, dans Claude Chat) a porté une scène 3D d'œuf réalisée avec Three.js vers du JavaScript pur avec WebGL, produisant une version fonctionnelle sans Three.js <sup>[25](<https://simonwillison.net/2026/Nov/9/hn-50421091/>)</sup>.
+- Le propos de Willison est que les descriptions de PR rédigées par des agents sont précises et complètes, mais que leur longueur peut décourager la lecture ; il propose donc de masquer le détail derrière des sections repliables <sup>[26](<https://simonwillison.net/2026/Nov/9/details-summary/>)</sup>.
+- La détection de secrets de GitHub couvre désormais les journaux des workflows Actions, avec des alertes qui persistent même après la suppression des journaux ; cette fonctionnalité est en préversion publique pour les clients GitHub Enterprise Cloud disposant de Secret Protection ou d'Advanced Security <sup>[27](<https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs>)</sup>.
+- L'attaque contre LiteLLM v1.107.0 a commencé par une clé d'administration committée dans un dépôt public et jamais révoquée ; un attaquant s'en est servi pour voler des jetons et publier des wheels et images empoisonnés, restés en ligne pendant environ deux heures <sup>[28](<https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain>)</sup>.
+- Les Feature Flags d'Octopus quittent la préversion publique pour Octopus Cloud et arrivent dans Octopus 2027.0 auto-hébergé, avec un ciblage basé sur des règles et des déploiements progressifs automatisés ; les flags existants nécessitent des SDK clients mis à jour <sup>[29](<https://octopus.com/blog/feature-flags-whats-next>)</sup>.
+- Harness a introduit un Delegate écrit en Go qui exécute chaque étape CD dans son propre conteneur, avec des Worker Agents s'exécutant comme étapes de pipeline sous les approbations et journaux d'audit existants, activables sur demande en accès anticipé <sup>[30](<https://www.harness.io/blog/introducing-a-new-platform-experience>)</sup>.
+- Spacelift recommande les blocs import d'OpenTofu plutôt que la commande CLI import, car ils apparaissent dans plan et apply, et couvre les imports for_each et la génération de configuration <sup>[31](<https://spacelift.io/blog/opentofu-import>)</sup>.
+- Grafana a ajouté des variables au niveau des sections dans les lignes et les onglets, désormais en disponibilité générale <sup>[32](<https://grafana.com/blog/whats-new-with-grafana-variables-less-clutter-easier-reuse-across-dashboards-and-more/>)</sup>.
+- Datadog a introduit la ressource personnalisée DatadogInstrumentation, qui regroupe dans une seule ressource Kubernetes les checks, la collecte de logs et les paramètres APM d'une charge de travail <sup>[33](<https://www.datadoghq.com/blog/manage-kubernetes-observability-with-datadoginstrumentation>)</sup>.
+- kpt v1.0.0 est sorti après plusieurs années de préversion <sup>[34](<https://www.cncf.io/blog/2026/11/05/kpt-v1-0-0-is-released>)</sup>.
+- Spark 4.3.0 apporte le traitement avec état au Real-Time Mode de Structured Streaming, avec une latence de bout en bout d'environ 100 ms, l'Auto CDC SCD Type 2 dans les Declarative Pipelines, ainsi que les jointures ASOF et JSON_TABLE en SQL <sup>[35](<https://spark.apache.org/releases/spark-release-4-3-0.html>)</sup>.
+- Apache Hop 2.20 ajoute la lecture et l'écriture natives d'Iceberg sans Spark, la sortie Parquet partitionnée et l'intégration de pgvector <sup>[36](<https://hop.apache.org/blog/2026/11/hop-2.20.0/>)</sup>.
+- Siglake ingère les logs et traces OpenTelemetry dans des tables Iceberg sur un stockage objet, en utilisant un journal d'écriture anticipée Arrow et DataFusion, et annonce plus de 400 000 lignes par seconde lors de tests distribués <sup>[37](<https://github.com/siglake/siglake>)</sup>.
+- Microsoft a corrigé la CVE-2026-83844, une lecture hors limites dans Windows Paint permettant l'exécution de code à distance par le réseau, mais Windows Update ne distribue pas ce correctif <sup>[38](<https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html>)</sup>.
+
+## Sécurité et infrastructure
+
+- Fly.io a corrigé et redémarré l'ensemble de sa flotte pendant 10 heures pour résoudre la CVE-2026-99999, un bogue du noyau Linux permettant aux VM invitées de lire la mémoire de l'hôte ; l'entreprise conseille aux clients ayant envoyé du trafic non chiffré entre le 15 et le 17 octobre de renouveler leurs identifiants <sup>[39](<https://fly.io/blog/well-that-wasnt-fun/>)</sup>.
+- Kaspersky GERT documente des cas de ransomware où des identifiants root ESXi et Proxmox stockés en clair ont permis un chiffrement complet ; il recommande des identités de supervision à privilèges minimaux, des identifiants uniques par hôte et des alertes sur les modifications de execInstalledOnly <sup>[40](<https://securelist.com/virtualization-security-esxi-and-proxmox-ransomware-cases/121819/>)</sup>.
+- Iris Ohyama a signalé qu'une faille d'un service cloud tiers a exposé les données de 7,7 millions de clients, dont noms, adresses et mots de passe chiffrés <sup>[41](<https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/>)</sup>.
+- DigiCert a signalé que des attaquants ont utilisé un compte en lecture seule sur une archive interne exposée pour accéder aux coordonnées de clients professionnels du 27 juin au 2 juillet, sans atteinte aux systèmes d'émission de certificats <sup>[42](<https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/>)</sup>.
+- Des chercheurs de BishopFox ont réussi à faire révéler à Claude Code des détails de son fonctionnement interne et à contourner un blocage de connexion local, et un contrôle d'entreprise bloquant les changements de nom a pu être contourné via l'API <sup>[43](<https://bishopfox.com/blog/journey-into-claudes-sandbox>)</sup>.
+- Un pot de miel nommé coldframe imite des contrôleurs de réfrigération et journalise les tentatives d'exploitation de sept CVE, bien que son code public soit facile à identifier <sup>[44](<https://github.com/hedgerow-dev/coldframe>)</sup>.
+- Threat Feed Me agrège 22 flux de menaces gratuits et détecte lorsqu'un flux republie un autre, de sorte que les entrées copiées ne comptent pas comme des confirmations indépendantes <sup>[45](<https://github.com/alexlinos/threat-feed-me>)</sup>.
+- La plateforme de Brava Security modélise le comportement des attaquants, simule des attaques et réécrit les détections SIEM, avec une intégration à plus de 70 sources et destinations <sup>[46](<https://www.brava.security/>)</sup>.
 
 ## Ingénierie des données
 
-- PostHog explique avoir abandonné son adoption de DuckLake et migré son produit d'entrepôt de données vers une solution basée sur Trino, estimant que la modélisation des données est plus difficile que la couche de stockage <sup>[3](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-295>)</sup>.
+- PostHog raconte avoir fait marche arrière sur l'adoption de DuckLake et avoir migré son produit d'entrepôt vers une solution basée sur Trino, arguant que la modélisation des données est plus difficile que la couche de stockage <sup>[47](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-295>)</sup>.
+- Le Data Product Platform Navigator propose un modèle de maturité à quatre niveaux pour les plateformes de données en libre-service et soutient que le niveau 3, où des produits de données complets peuvent être provisionnés via une expérience de plateforme-en-tant-que-produit, constitue le minimum pour une propriété décentralisée et évolutive <sup>[48](<https://martinfowler.com/articles/data-product-platform-nav.html>)</sup>.
+- L'agent de données de Canva consigne l'intention des requêtes et le jargon métier dans des commentaires SQL, que l'équipe exploite pour construire une couche sémantique et tester les réponses dangereuses <sup>[49](<https://www.linkedin.com/posts/ryguyrg_dataoutpost-semanticlayer-ai-share-7524187892517085185-w7NG>)</sup>.
+- Les couches sémantiques reposent sur une compréhension humaine partagée ; la gouvernance doit donc associer des définitions formelles à des explications en langage courant et vérifier que les équipes les appliquent de manière cohérente <sup>[50](<https://moderndata101.substack.com/p/the-human-side-of-the-semantic-layer>)</sup>.
+
+## Industrie et politique
+
+- OpenAI aurait levé 11 milliards de dollars à une valorisation de 1 250 milliards de dollars, en deçà de l'objectif de 30 milliards précédemment évoqué, dans un contexte d'incertitude des investisseurs sur les valorisations de l'IA <sup>[51](<https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/>)</sup>.
+- Nvidia a ouvert une enquête sur son PDG Jensen Huang après la révélation d'une relation avec une femme d'affaires que les services de renseignement américains ont jugée espionne pour Pékin ; le conseil d'administration affirme n'avoir aucune raison de penser que des secrets de sécurité nationale ou de Nvidia aient été compromis <sup>[52](<https://www.nytimes.com/2026/11/08/technology/nvidias-investigation-jensen-huang.html?amp%3Bsmid=url-share&amp%3Butm_source=tldrnewsletter>)</sup>.
+- Scott Wiener, auteur de la législation californienne sur les risques liés à l'IA, a remporté un siège au Congrès et a déclaré espérer que le Congrès légifère sur la régulation de l'IA cette année, sans que cela semble se produire <sup>[53](<https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/>)</sup>.
+- Les services professionnels et aux entreprises ont créé 70 000 emplois aux États-Unis en octobre, la plus forte hausse mensuelle depuis juillet 2022 <sup>[54](<https://www.wsj.com/economy/jobs/is-ai-taking-white-collar-jobs-what-the-latest-numbers-tell-us-dd31b115?amp%3Breflink=desktopwebshare_permalink&amp%3Butm_source=tldrnewsletter>)</sup>.
 
 ## Sources
 
-1. [The Web Is More Than Enough, by Paul Ford](<https://simonwillison.net/2026/Nov/9/hn-50421091/>) — _simonwillison.net_
-2. [Hide your slop PR descriptions behind](<https://simonwillison.net/2026/Nov/9/details-summary/>) — _simonwillison.net_
-3. [Data Engineering Weekly #295](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-295>) — _dataengineeringweekly.com_
+1. [Introducing Claude Fable 5.2 and Claude Mythos 5.2](<https://www.anthropic.com/claude-fable-and-mythos-5-2>) — _anthropic news_
+2. [Claude Fable 5.2 in GitHub Copilot](<https://github.blog/changelog/2026-11-09-claude-fable-5-5-in-github-copilot>) — _github.blog_
+3. [Control Room: A central system to track and stop model workloads across our research infrastructure](<https://openai.com/index/control-room>) — _openai.com_
+4. [Aaronson-Ambainis Conjecture proved! (By AI, of course)](<https://scottaaronson.blog/?p=10295&amp;utm_source=tldrnewsletter>) — _scottaaronson.blog_
+5. [A proof of the Aaronson-Ambainis conjecture](<https://psi.inc/research/aaronson-ambainis/>) — _psi.inc_
+6. [Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence](<https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/>) — _jack-clark.net_
+7. [Llama-modchip](<https://github.com/synchopate/llama-modchip>) — _github.com_
+8. [Safe and Efficient Multi-Epoch Embedding Training](<https://medium.com/pinterest-engineering/safe-and-efficient-multi-epoch-embedding-training-103bec2abc83>) — _medium.com_
+9. [Your Experts Have Partners. There's HOPE for Keeping Them Together](<https://huggingface.co/blog/amazon/higher-order-pruning-experts>) — _huggingface.co_
+10. [What is Pathways? Single-controller training for large models](<https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/>) — _google ai_
+11. [Announcing Long-Context Training on TPUs with MaxText Context Parallelism](<https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/>) — _google ai_
+12. [Securing AI Agents: Lessons From Real-World Deployment](<https://x.com/UberEng/status/2118769501332463762>) — _x.com_
+13. [Secure Code Benchmark Finds Top Coding Agents Write Secure Code Only 25% of the Time](<https://hackernoon.com/secure-code-benchmark-finds-top-coding-agents-write-secure-code-only-25percent-of-the-time>) — _hackernoon.com_
+14. [Agents reveal secrets when offered to team up with each other](<https://www.theregister.com/security/2026/11/06/agents-reveal-secrets-when-offered-to-team-up-with-each-other/5308260>) — _theregister.com_
+15. [Compare AI agent changes with Online Experiments in Agent Observability](<https://www.datadoghq.com/blog/online-experiments-agent-observability>) — _datadoghq.com_
+16. [Use NVIDIA NeMo to Turn Agent Failures into Tests and Harness Fixes](<https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/>) — _developer.nvidia.com_
+17. [How Klaviyo Scaled Analytics by Getting Out of the Way](<https://klaviyo.tech/how-klaviyo-scaled-analytics-by-getting-out-of-the-way-01836b9164f3>) — _klaviyo.tech_
+18. [Your LLM Writes Good SQL. That's Not the Same as Safe SQL](<https://www.infoworld.com/article/4244721/your-llm-writes-good-sql-thats-not-the-same-as-safe-sql.html>) — _infoworld.com_
+19. [Introducing the New Auto and Auto Code Routers](<https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/>) — _openrouter.ai_
+20. [How Anthropic Builds Agent Memory](<https://www.anthropic.com/research/components-of-agent-memory>) — _anthropic.com_
+21. [Cleaning or Recalling? Knowledge Dependence in LLM-based Data Cleaning](<https://arxiv.org/abs/2611.08106>) — _arxiv 2611.08106_
+22. [How LinkedIn Uses AI to Review 40,000 Pull Requests a Week](<https://blog.bytebytego.com/p/how-linkedin-uses-ai-to-review-40000>) — _blog.bytebytego.com_
+23. [Your Coding Agents Made You a Manager](<https://x.com/addyosmani/status/2119332146485891501>) — _x.com_
+24. [Spec Kit](<https://github.com/github/spec-kit>) — _github.com_
+25. [The Web Is More Than Enough, by Paul Ford](<https://simonwillison.net/2026/Nov/9/hn-50421091/>) — _simonwillison.net_
+26. [Hide your slop PR descriptions behind](<https://simonwillison.net/2026/Nov/9/details-summary/>) — _simonwillison.net_
+27. [Secret scanning detects secrets in GitHub Actions workflow logs](<https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs>) — _github.blog_
+28. [The attack chain behind the v1.107.0 LiteLLM release](<https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain>) — _docs.litellm.ai_
+29. [What's next for Octopus Feature Flags](<https://octopus.com/blog/feature-flags-whats-next>) — _octopus.com_
+30. [Harness for Agents: Introducing a New Platform Experience](<https://www.harness.io/blog/introducing-a-new-platform-experience>) — _harness.io_
+31. [How to Import Existing Resources to OpenTofu \[Tutorial\]](<https://spacelift.io/blog/opentofu-import>) — _spacelift.io_
+32. [What's new with Grafana variables: less clutter, easier reuse across dashboards, and more](<https://grafana.com/blog/whats-new-with-grafana-variables-less-clutter-easier-reuse-across-dashboards-and-more/>) — _grafana.com_
+33. [Manage Kubernetes observability with DatadogInstrumentation](<https://www.datadoghq.com/blog/manage-kubernetes-observability-with-datadoginstrumentation>) — _datadoghq.com_
+34. [kpt v1.0.0 is released](<https://www.cncf.io/blog/2026/11/05/kpt-v1-0-0-is-released>) — _cncf.io_
+35. [Apache Spark 4.3.0 Release](<https://spark.apache.org/releases/spark-release-4-3-0.html>) — _spark.apache.org_
+36. [Apache Hop 2.20 Adds Native Iceberg Pipelines and AI Processing](<https://hop.apache.org/blog/2026/11/hop-2.20.0/>) — _hop.apache.org_
+37. [Siglake: An Open-Source Observability Lakehouse Built on Iceberg and DataFusion](<https://github.com/siglake/siglake>) — _github.com_
+38. [Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It](<https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html>) — _thehackernews.com_
+39. [Well, That Wasn't Fun: October 16 '26](<https://fly.io/blog/well-that-wasnt-fun/>) — _fly.io_
+40. [Virtualization security: attack layers and misconfiguration impact](<https://securelist.com/virtualization-security-esxi-and-proxmox-ransomware-cases/121819/>) — _securelist.com_
+41. [Iris Ohyama Data Cloud Breach Exposes Info of 7.7M Customers](<https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/>) — _bleepingcomputer.com_
+42. [DigiCert Data Breach Impacts Business Customer Information](<https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/>) — _securityweek.com_
+43. [A Journey Into Claude's Sandbox](<https://bishopfox.com/blog/journey-into-claudes-sandbox>) — _bishopfox.com_
+44. [coldframe](<https://github.com/hedgerow-dev/coldframe>) — _github.com_
+45. [Threat Feed Me](<https://github.com/alexlinos/threat-feed-me>) — _github.com_
+46. [Brava Security](<https://www.brava.security/>) — _brava.security_
+47. [Data Engineering Weekly #295](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-295>) — _dataengineeringweekly.com_
+48. [The Data Product Platform Navigator](<https://martinfowler.com/articles/data-product-platform-nav.html>) — _martinfowler.com_
+49. [On automating the creation of a semantic layer](<https://www.linkedin.com/posts/ryguyrg_dataoutpost-semanticlayer-ai-share-7524187892517085185-w7NG>) — _linkedin.com_
+50. [The Human Side of the Semantic Layer: Translating Data Meaning Across Teams](<https://moderndata101.substack.com/p/the-human-side-of-the-semantic-layer>) — _moderndata101.substack.com_
+51. [OpenAI Reportedly Raises $11 Billion at $1.25 Trillion Valuation](<https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/>) — _techcrunch.com_
+52. [What to Know About Nvidia's Investigation of Its CEO](<https://www.nytimes.com/2026/11/08/technology/nvidias-investigation-jensen-huang.html?amp%3Bsmid=url-share&amp%3Butm_source=tldrnewsletter>) — _nytimes.com_
+53. [Nancy Pelosi’s replacement is ready to regulate AI](<https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/>) — _technologyreview.com_
+54. [Is AI Taking White-Collar Jobs? What the Latest Numbers Tell Us](<https://www.wsj.com/economy/jobs/is-ai-taking-white-collar-jobs-what-the-latest-numbers-tell-us-dd31b115?amp%3Breflink=desktopwebshare_permalink&amp%3Butm_source=tldrnewsletter>) — _wsj.com_
 
 
 ## Archive récente
@@ -33,6 +145,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-11-09` | Lundi | [Lire →](news/fr/2026-11-09.md) |
 | `2026-11-08` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-11-08.md) |
 | `2026-11-07` | Samedi | [Lire →](news/fr/2026-11-07.md) |
 | `2026-11-06` | Vendredi | [Lire →](news/fr/2026-11-06.md) |
@@ -46,9 +159,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-29` | Jeudi | [Lire →](news/fr/2026-10-29.md) |
 | `2026-10-28` | Mercredi | [Lire →](news/fr/2026-10-28.md) |
 | `2026-10-27` | Mardi | [Lire →](news/fr/2026-10-27.md) |
-| `2026-10-26` | Lundi | [Lire →](news/fr/2026-10-26.md) |
 
-<sub>[Parcourir toute l’archive (146) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (147) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
