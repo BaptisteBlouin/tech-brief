@@ -9,38 +9,89 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-11-10
-<sub>mis à jour le 10 novembre 2026 à 12:01</sub>
+<sub>mis à jour le 11 novembre 2026 à 00:00</sub>
 
-## Modèles d'IA et sorties
+## Modèles et versions d'IA
 
 - Anthropic a publié Claude Fable 5.2 et Mythos 5.2, et Fable 5.2 est actuellement classé premier sur Artificial Analysis <sup>[1](<https://simonwillison.net/2026/Nov/9/llm-anthropic/>), [2](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>)</sup>.
-- Fable 5.2 est tarifé 8 dollars par million de tokens en entrée et 40 dollars par million de tokens en sortie, contre 10 et 50 dollars pour Fable 5.1 <sup>[2](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>)</sup>.
-- Sur le benchmark de tâches professionnelles GDPx mené par SemiAnalysis, Fable 5.2 se classe premier avec 16,4 %, mais son coût grimpe à 88,15 dollars par tâche contre 67,16 dollars, car il a écrit beaucoup plus de cas de test et lancé des sous-agents pour vérifier son travail <sup>[2](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>)</sup>.
-- Meta a lancé Muse Ember, son modèle le plus petit et le plus efficace, destiné aux appels d'outils, aux sous-tâches de codage, au routage et à l'extraction ; pour les prompts courts, il est tarifé au même prix que GPT-6 Luna et Claude Haiku 5.5, soit 0,10 dollar par million de tokens en entrée et 0,50 dollar par million de tokens en sortie <sup>[3](<https://simonwillison.net/2026/Nov/10/muse-ember/>)</sup>.
-- La documentation d'Anthropic indique que le fait de préciser à Fable 5.2 que la base de code lui appartient le conduit à fusionner du code répété dans environ la moitié des essais, contre moins d'un dixième sans cette précision <sup>[4](<https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/>)</sup>.
+- Fable 5.2 est facturé 8 dollars par million de tokens d'entrée et 40 dollars par million de tokens de sortie, contre 10 et 50 dollars pour Fable 5.1 <sup>[2](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>)</sup>.
+- Sur le benchmark GDPx de tâches professionnelles mené par SemiAnalysis, Fable 5.2 arrive premier avec 16,4 %, mais son coût grimpe à 88,15 dollars par tâche contre 67,16 dollars, car il écrit beaucoup plus de cas de test et lance des sous-agents pour vérifier son travail <sup>[2](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>)</sup>.
+- Meta a lancé Muse Ember, son modèle le plus petit et le plus efficace, destiné aux appels d'outils, aux sous-tâches de codage, au routage et à l'extraction ; pour les prompts courts, il est facturé au même tarif que GPT-6 Luna et Claude Haiku 5.5, soit 0,10 dollar par million de tokens d'entrée et 0,50 dollar par million de tokens de sortie <sup>[3](<https://simonwillison.net/2026/Nov/10/muse-ember/>)</sup>. Meta affirme qu'il égale le score de raisonnement le plus élevé de Claude Haiku 5.5 pour environ un tiers du coût, et qu'il surpasse GPT-6 Luna dans tous les réglages de raisonnement <sup>[4](<https://research.meta.ai/blog/muse-ember>)</sup>.
+- Google a rendu Gemini 4 Carbon généralement disponible, facturé 2 dollars par million de tokens d'entrée et 10 dollars par million de tokens de sortie au lancement, avec un doublement prévu à 4 et 20 dollars le 1er décembre ; il est également disponible dans GitHub Copilot pour les utilisateurs Pro+, Max, Business et Enterprise <sup>[5](<https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot>), [6](<https://simonwillison.net/2026/Nov/10/llm-gemini/>), [7](<https://deepmind.google/blog/gemini-4-carbon-is-now-available/>)</sup>.
+- La documentation d'Anthropic indique que le fait de dire à Fable 5.2 que la base de code lui appartient le conduit à fusionner du code répété dans environ la moitié des essais, contre moins d'un dixième sans cette précision <sup>[8](<https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/>)</sup>.
+- Anthropic rapporte qu'une équipe de 1 000 agents Fable 5.2 a reproduit une preuve formelle du dernier théorème de Fermat en 28,7 heures, en utilisant des bacs à sable séparés, un Git partagé et une base SQL pour la coordination, avec un tiers des tokens de sortie de la formalisation précédente <sup>[9](<https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/>)</sup>.
+- Anthropic a testé Fable 5.2 sur la conception électronique : il a produit un haut-parleur de téléphone, un hub d'assistant vocal et un animal de compagnie virtuel, des ingénieurs humains ayant construit des prototypes fonctionnels, mais les appareils n'ont pas fait l'objet de validation électrique, de réglage d'antenne, de tests thermiques ni de certification <sup>[10](<https://www.anthropic.com/research/claude-electronics-design>)</sup>.
 
-## Outils LLM et workflows de développement
+## Agents, RAG et outillage
 
-- La version 0.31 de llm-anthropic ajoute la prise en charge de Fable 5.2, mais le réglage de raisonnement maximal n'a pas permis de renvoyer une image : les tokens se sont épuisés après 128 000 tokens de réflexion <sup>[1](<https://simonwillison.net/2026/Nov/9/llm-anthropic/>)</sup>.
-- Un développeur a créé Beep Locator avec Claude Code, un système multi-appareils qui localise par triangulation la source d'un bip à partir de téléphones et de tablettes utilisés comme écouteurs <sup>[5](<https://simonwillison.net/2026/Nov/9/mysterious-beeps/>)</sup>.
+- La version 0.31 de llm-anthropic ajoute la prise en charge de Fable 5.2, mais le réglage de raisonnement maximal n'a pas renvoyé d'image, à court de tokens après 128 000 tokens de réflexion <sup>[1](<https://simonwillison.net/2026/Nov/9/llm-anthropic/>)</sup>.
+- Claude Whiteboards, Sheets et Data d'Anthropic sont en bêta ou généralement disponibles sur les formules payantes, avec des connecteurs interactifs permettant d'ouvrir des applications partenaires dans Claude pour que celui-ci y apporte directement des modifications <sup>[11](<https://claude.com/resources/articles/sheets-whiteboards-data>), [12](<https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors>), [13](<https://claude.com/resources/articles/interactive-connectors-full-tool>)</sup>.
+- Storybook 11 en bêta ajoute des skills officielles et des outils CLI sans interface pour que les agents itèrent de manière autonome sur les composants <sup>[14](<https://storybook.js.org/blog/storybook-11-beta/>)</sup>.
+- Le serveur de langage C++ de GitHub pour Copilot CLI embarque désormais son extracteur de commandes de compilation MSBuild, de sorte que les agents n'ont plus besoin d'une étape de configuration séparée <sup>[15](<https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds>)</sup>.
+- L'embedding intégré de Pinecone prend désormais en charge text-embedding-3-small et -large d'OpenAI, permettant aux équipes d'envoyer du texte brut sans gérer de pipeline d'embedding <sup>[16](<https://www.pinecone.io/blog/integrated-embedding-openai/>)</sup>.
+- Hugging Face a présenté des modèles de décision qui renvoient des sorties typées accompagnées de probabilités pour des questions précises, avant d'appeler un LLM <sup>[17](<https://huggingface.co/blog/decision>)</sup> ; PostHog indique que son filtre de données personnelles, basé sur cette approche, évite 98,7 % des appels à un LLM <sup>[18](<https://newsletter.posthog.com/p/decision-models>)</sup>.
+- Reticle donne aux agents de codage une visibilité à l'exécution sur une application grâce à un SDK et à des outils MCP couvrant les interactions, le trafic réseau, l'état et l'activité de la console <sup>[19](<https://github.com/reticlehq/reticle>)</sup>.
+
+## Outillage LLM et workflows de développement
+
+- Un développeur a construit Beep Locator avec Claude Code, un système multi-appareils qui triangule la source d'un bip à partir de téléphones et de tablettes servant d'écouteurs <sup>[20](<https://simonwillison.net/2026/Nov/9/mysterious-beeps/>)</sup>.
+- GitHub a utilisé l'application Copilot pour porter près de 800 000 lignes de code du moteur Copilot de TypeScript vers Rust, la conception existante consommant trop de ressources <sup>[21](<https://blog.bytebytego.com/p/how-github-used-ai-to-port-copilot>)</sup>.
+- Dropbox a utilisé des tâches d'agents IA délimitées pour livrer 22 améliorations d'accessibilité et vider en une semaine un arriéré de 53 tâches de nettoyage de tests, les ingénieurs relisant les résultats <sup>[22](<https://dropbox.tech/machine-learning/how-aiassisted-development-helped-us-build-the-new-dropbox-experience>)</sup>.
+- Le nouveau backend WebGPU d'ExecuTorch exécute le même fichier .pte issu de torch.export sur le GPU dans n'importe quel navigateur compatible WebGPU, 4 à 7 fois plus vite que son chemin CPU pour le préremplissage et 2 à 10 fois plus vite pour le décodage <sup>[23](<https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/>)</sup>.
 
 ## Ingénierie des données
 
-- Le stockage en colonnes de DuckDB signifie qu'une requête portant sur trois colonnes parmi cinquante ne lit que ces trois colonnes ; les valeurs sont traitées par vecteurs de 2 048 et se compressent bien, car chaque colonne ne contient qu'un seul type <sup>[6](<https://duckdb.org/2026/11/10/ducks-in-a-column.html>)</sup>.
+- Le stockage en colonnes de DuckDB signifie qu'une requête portant sur trois colonnes sur cinquante ne lit que ces trois-là ; les valeurs sont traitées par vecteurs de 2 048 et se compressent bien, car chaque colonne ne contient qu'un seul type <sup>[24](<https://duckdb.org/2026/11/10/ducks-in-a-column.html>)</sup>.
+
+## Infrastructure, cloud et sécurité
+
+- Google a présenté le TPU 8i Max pour les charges à long contexte et le TPU 8tx pour l'inférence sécurisée et confidentielle <sup>[25](<https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/>), [26](<https://www.bloomberg.com/news/articles/2026-11-09/google-escalates-nvidia-rivalry-with-new-versions-of-its-tpu-systems?amp%3Butm_source=tldrnewsletter>)</sup>.
+- Le Hub Hugging Face peut désormais être payé via un compte Google Cloud Marketplace lié, de sorte que l'usage apparaît sur la facture Google Cloud existante <sup>[27](<https://huggingface.co/blog/hub-gcp-marketplace>)</sup>.
+- Wiz signale qu'un attaquant a abusé des rôles inter-comptes AWS de Qubole du 14 au 26 octobre ; les clients doivent vérifier CloudTrail, supprimer les rôles fournisseurs inutilisés et figer les politiques de confiance avec une condition aws:SourceIp <sup>[28](<https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild>)</sup>.
+- QNAP alerte que quatre vulnérabilités Plex2Shell sont activement exploitées sur des NAS exécutant un serveur Plex public ; il conseille de considérer les appareils exposés comme compromis <sup>[29](<https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/>)</sup>.
+- SonicWall a divulgué un contournement de MFA sur son SSL-VPN que la CISA a ajouté au catalogue KEV, et a corrigé six autres vulnérabilités <sup>[30](<https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/>)</sup>.
+- Les alertes Dependabot seront suspendues sur les dépôts sans activité depuis un an à partir du 8 décembre, les alertes archivées pouvant être restaurées à tout moment <sup>[31](<https://github.blog/changelog/2026-11-10-dependabot-alerts-will-pause-on-inactive-repositories>)</sup>.
 
 ## Finance et infrastructure
 
-- Le rendement obligataire de CoreWeave a dépassé 16 % alors que les tensions sur le crédit lié à l'IA s'accentuent, rendant le financement de la puissance de calcul pour l'IA plus coûteux <sup>[7](<https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html>)</sup>.
+- Le rendement obligataire de CoreWeave a dépassé 16 % alors que les tensions sur le crédit lié à l'IA augmentent, rendant plus coûteux le financement de la puissance de calcul pour l'IA <sup>[32](<https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html>)</sup>.
+- Anthropic aurait acheté 1,7 GW de groupes électrogènes à gaz Caterpillar pour 3,4 milliards de dollars afin d'atténuer les contraintes énergétiques pesant sur l'extension de ses data centers <sup>[33](<https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/>)</sup>.
 
 ## Sources
 
 1. [llm-anthropic 0.31](<https://simonwillison.net/2026/Nov/9/llm-anthropic/>) — _simonwillison.net_
 2. [\[AINews\] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins](<https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/>) — _latent.space_
 3. [Introducing Our Smallest, Most Efficient Model: Muse Ember](<https://simonwillison.net/2026/Nov/10/muse-ember/>) — _simonwillison.net_
-4. [Quoting Prompting Claude Fable 5.2](<https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/>) — _simonwillison.net_
-5. [Locating the source of a mysterious beep with Claude](<https://simonwillison.net/2026/Nov/9/mysterious-beeps/>) — _simonwillison.net_
-6. [Ducks in a Column](<https://duckdb.org/2026/11/10/ducks-in-a-column.html>) — _duckdb.org_
-7. [CoreWeave bond yield tops 16% as AI credit stress rises](<https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html>) — _hnrss.org_
+4. [Introducing Meta Ember](<https://research.meta.ai/blog/muse-ember>) — _research.meta.ai_
+5. [Gemini 4 Carbon in GitHub Copilot](<https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot>) — _github.blog_
+6. [llm-gemini 0.36](<https://simonwillison.net/2026/Nov/10/llm-gemini/>) — _simonwillison.net_
+7. [Gemini 4 Carbon is now available](<https://deepmind.google/blog/gemini-4-carbon-is-now-available/>) — _deepmind.google_
+8. [Quoting Prompting Claude Fable 5.2](<https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/>) — _simonwillison.net_
+9. [Safely scaling multi-agent teams with Claude Fable 5.2](<https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/>) — _claude.dev_
+10. [Testing Claude on real-world electronics design](<https://www.anthropic.com/research/claude-electronics-design>) — _anthropic.com_
+11. [Introducing Claude Whiteboards, Claude Sheets, and Claude Data](<https://claude.com/resources/articles/sheets-whiteboards-data>) — _claude_
+12. [More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors](<https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors>) — _claude_
+13. [Your apps can now open in Claude, and Claude can work in them](<https://claude.com/resources/articles/interactive-connectors-full-tool>) — _claude_
+14. [Storybook 11 beta](<https://storybook.js.org/blog/storybook-11-beta/>) — _storybook.js.org_
+15. [C++ language server now auto-configures MSBuild builds](<https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds>) — _github.blog_
+16. [Pinecone integrated embedding now supports OpenAI's text-embedding-3 models](<https://www.pinecone.io/blog/integrated-embedding-openai/>) — _pinecone_
+17. [Decision Models in Hugging Face](<https://huggingface.co/blog/decision>) — _huggingface.co_
+18. [Not everything needs an LLM](<https://newsletter.posthog.com/p/decision-models>) — _newsletter.posthog.com_
+19. [Reticle](<https://github.com/reticlehq/reticle>) — _github.com_
+20. [Locating the source of a mysterious beep with Claude](<https://simonwillison.net/2026/Nov/9/mysterious-beeps/>) — _simonwillison.net_
+21. [How GitHub Used AI to Port Copilot From TypeScript to Rust in Record Time](<https://blog.bytebytego.com/p/how-github-used-ai-to-port-copilot>) — _blog.bytebytego.com_
+22. [How AI-assisted development helped us build the new Dropbox experience](<https://dropbox.tech/machine-learning/how-aiassisted-development-helped-us-build-the-new-dropbox-experience>) — _dropbox.tech_
+23. [ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser](<https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/>) — _pytorch.org_
+24. [Ducks in a Column](<https://duckdb.org/2026/11/10/ducks-in-a-column.html>) — _duckdb.org_
+25. [Google's New TPU Lineup](<https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/>) — _blog.google_
+26. [Google Escalates Nvidia Rivalry With Specialized Versions of AI Chips](<https://www.bloomberg.com/news/articles/2026-11-09/google-escalates-nvidia-rivalry-with-new-versions-of-its-tpu-systems?amp%3Butm_source=tldrnewsletter>) — _bloomberg.com_
+27. [Pay for Hugging Face Hub with your Google Cloud Account](<https://huggingface.co/blog/hub-gcp-marketplace>) — _huggingface.co_
+28. [Trusted by Default: Qubole Cross-Account Access Abused in the Wild](<https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild>) — _wiz.io_
+29. [QNAP Says Hackers are Breaching NAS Devices in Plex2Shell Attacks](<https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/>) — _bleepingcomputer.com_
+30. [SonicWall Warns of New SSL-VPN MFA Bypass Flaw Exploited in Attacks](<https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/>) — _bleepingcomputer.com_
+31. [Dependabot alerts will pause on inactive repositories](<https://github.blog/changelog/2026-11-10-dependabot-alerts-will-pause-on-inactive-repositories>) — _github.blog_
+32. [CoreWeave bond yield tops 16% as AI credit stress rises](<https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html>) — _hnrss.org_
+33. [Anthropic Buys $3.4 Billion in Gas Generators](<https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/>) — _techcrunch.com_
 
 
 ## Archive récente
@@ -49,6 +100,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-11-10` | Mardi | [Lire →](news/fr/2026-11-10.md) |
 | `2026-11-09` | Lundi | [Lire →](news/fr/2026-11-09.md) |
 | `2026-11-08` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-11-08.md) |
 | `2026-11-07` | Samedi | [Lire →](news/fr/2026-11-07.md) |
@@ -62,9 +114,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-10-30` | Vendredi | [Lire →](news/fr/2026-10-30.md) |
 | `2026-10-29` | Jeudi | [Lire →](news/fr/2026-10-29.md) |
 | `2026-10-28` | Mercredi | [Lire →](news/fr/2026-10-28.md) |
-| `2026-10-27` | Mardi | [Lire →](news/fr/2026-10-27.md) |
 
-<sub>[Parcourir toute l’archive (147) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (148) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
