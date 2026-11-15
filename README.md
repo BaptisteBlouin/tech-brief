@@ -8,34 +8,18 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-11-14
-<sub>updated 15 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-15
+<sub>updated 15 November 2026 at 12:00</sub>
 
-## AI Models and Tooling
+## AI tooling
 
-- Anthropic has redesigned Claude Code Projects into a conversation-based model: Claude scopes a goal, delegates it to parallel threads, reviews the outputs and assembles the result, with the work continuing after the user steps away. The feature is in beta for select Claude Pro and Max subscribers with cloud sessions and no existing projects, with broader access planned over the coming week <sup>[1](<https://claude.com/resources/articles/projects-redesigned>)</sup>.
-- The No AI Slop manifesto, introduced in the closing keynote of AIE CODE and co-signed by many of the conference speakers, is now public as a discussion tool for teams <sup>[2](<https://latent.space/p/ainews-the-no-ai-slop-manifesto/>)</sup>.
-- llama.cpp and ggml reached 1.0, declaring stability and removing 35 deprecated functions from llama.cpp's public header, and SGLang also announced 1.0 at its recent summit <sup>[2](<https://latent.space/p/ainews-the-no-ai-slop-manifesto/>)</sup>.
-
-## Industry and Infrastructure
-
-- A Wall Street Journal report, as relayed by TechPowerUp, alleges that NVIDIA inflated the GPU and memory shortage by investing in AI startups that then bought its GPUs and built data centers, partly to offload oversupply from TSMC. The report cites an internal disagreement over scaling back NVIDIA's $250 billion deal with OpenAI <sup>[3](<https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus>)</sup>.
-
-## DevOps and Observability
-
-- A workshop on tracing Claude agents with OpenTelemetry and Sentry shows how failed tool calls, retries and the final success can be followed in one trace, helping teams tell whether a token-cost problem belongs to the prompt, the tool or the backing service, such as a slow API or database <sup>[4](<https://blog.bytebytego.com/p/ep233-kubernetes-explained-for-busy>)</sup>.
-
-## Developer Tools
-
-- datasette-cluster-map 0.19 now works with Datasette 1.0a42 and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header <sup>[5](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>)</sup>.
+- Datasette's plugin datasette-llm 0.1a11 now supports OpenAI-compatible endpoints, so Datasette can use any model served behind that protocol <sup>[1](<https://simonwillison.net/2026/Nov/14/datasette-llm/>)</sup>.
+- Local model runners such as LM Studio, Ollama and llama.cpp can be plugged in this way; llama.cpp has just reached v1.0.0 <sup>[1](<https://simonwillison.net/2026/Nov/14/datasette-llm/>)</sup>.
+- A concrete setup is given: running Datasette via uvx with a local Qwen model at a localhost API base yields a local Datasette Agent instance <sup>[1](<https://simonwillison.net/2026/Nov/14/datasette-llm/>)</sup>.
 
 ## Sources
 
-1. [Anthropic upgrades Claude Code Projects to run parallel AI workers](<https://claude.com/resources/articles/projects-redesigned>) — _hnrss.org_
-2. [\[AINews\] The No AI Slop Manifesto](<https://latent.space/p/ainews-the-no-ai-slop-manifesto/>) — _latent.space_
-3. [Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs](<https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus>) — _hnrss.org_
-4. [EP233: Kubernetes Explained for Busy Engineers](<https://blog.bytebytego.com/p/ep233-kubernetes-explained-for-busy>) — _blog.bytebytego.com_
-5. [datasette-cluster-map 0.19](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>) — _simonwillison.net_
+1. [datasette-llm 0.1a11](<https://simonwillison.net/2026/Nov/14/datasette-llm/>) — _simonwillison.net_
 
 
 ## Recent archive
