@@ -9,7 +9,7 @@
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-11-14
-<sub>updated 14 November 2026 at 12:01</sub>
+<sub>updated 15 November 2026 at 00:00</sub>
 
 ## AI Models and Tooling
 
@@ -21,16 +21,21 @@
 
 - A Wall Street Journal report, as relayed by TechPowerUp, alleges that NVIDIA inflated the GPU and memory shortage by investing in AI startups that then bought its GPUs and built data centers, partly to offload oversupply from TSMC. The report cites an internal disagreement over scaling back NVIDIA's $250 billion deal with OpenAI <sup>[3](<https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus>)</sup>.
 
+## DevOps and Observability
+
+- A workshop on tracing Claude agents with OpenTelemetry and Sentry shows how failed tool calls, retries and the final success can be followed in one trace, helping teams tell whether a token-cost problem belongs to the prompt, the tool or the backing service, such as a slow API or database <sup>[4](<https://blog.bytebytego.com/p/ep233-kubernetes-explained-for-busy>)</sup>.
+
 ## Developer Tools
 
-- datasette-cluster-map 0.19 now works with Datasette 1.0a42 and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header <sup>[4](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>)</sup>.
+- datasette-cluster-map 0.19 now works with Datasette 1.0a42 and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header <sup>[5](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>)</sup>.
 
 ## Sources
 
 1. [Anthropic upgrades Claude Code Projects to run parallel AI workers](<https://claude.com/resources/articles/projects-redesigned>) — _hnrss.org_
 2. [\[AINews\] The No AI Slop Manifesto](<https://latent.space/p/ainews-the-no-ai-slop-manifesto/>) — _latent.space_
 3. [Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs](<https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus>) — _hnrss.org_
-4. [datasette-cluster-map 0.19](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>) — _simonwillison.net_
+4. [EP233: Kubernetes Explained for Busy Engineers](<https://blog.bytebytego.com/p/ep233-kubernetes-explained-for-busy>) — _blog.bytebytego.com_
+5. [datasette-cluster-map 0.19](<https://simonwillison.net/2026/Nov/13/datasette-cluster-map/>) — _simonwillison.net_
 
 
 ## Recent archive
@@ -39,6 +44,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-11-14` | Saturday | [Read →](news/en/2026-11-14.md) |
 | `2026-11-13` | Friday | [Read →](news/en/2026-11-13.md) |
 | `2026-11-12` | Thursday | [Read →](news/en/2026-11-12.md) |
 | `2026-11-11` | Wednesday | [Read →](news/en/2026-11-11.md) |
@@ -52,9 +58,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-11-03` | Tuesday | [Read →](news/en/2026-11-03.md) |
 | `2026-11-02` | Monday | [Read →](news/en/2026-11-02.md) |
 | `2026-11-01` | 🗓️ Weekly recap | [Read →](news/en/2026-11-01.md) |
-| `2026-10-31` | Saturday | [Read →](news/en/2026-10-31.md) |
 
-<sub>[Browse the full archive (151) →](news/en/)</sub>
+<sub>[Browse the full archive (152) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
