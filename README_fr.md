@@ -8,105 +8,35 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-17
-<sub>mis à jour le 18 novembre 2026 à 00:00</sub>
+### Dernier digest — 2026-11-18
+<sub>mis à jour le 18 novembre 2026 à 12:01</sub>
 
-## Modèles d'IA et industrie
+## Modèles d'IA et outils LLM
 
-- OpenAI a publié GPT-6.2 Astra et GPT-6.2 Sol, avec de meilleures sorties professionnelles, un meilleur codage, une meilleure utilisation de l'ordinateur et une meilleure efficacité à moindre coût dans ChatGPT Work, Codex et l'API <sup>[1](<https://openai.com/index/introducing-gpt-6-2-astra-sol>)</sup>. GitHub Copilot a rendu les deux modèles généralement disponibles, facturés au tarif public du fournisseur dans le cadre de la facturation à l'usage <sup>[2](<https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available>)</sup>. Simon Willison indique qu'Astra coûte 8 $/MTok en entrée et 40 $/MTok en sortie, soit 80 % du prix de GPT-6 Astra, et que Sol coûte 2 $/10 $ <sup>[3](<https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/>)</sup>.
-- Perplexity a atteint un chiffre d'affaires annualisé de 1 milliard de dollars, a déclaré son PDG Aravind Srinivas, la croissance récente étant attribuée en partie à son produit Computer <sup>[4](<https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/>)</sup>. Le même rapport indique que l'entreprise dispose désormais d'un laboratoire de recherche dédié, avec accès à plus de 10 000 GPU <sup>[4](<https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/>)</sup>. Perplexity Frontier Research, une initiative ouverte visant à construire des algorithmes, des modèles et des évaluations en vue d'un scientifique automatisé, s'appuie sur ces 10 000 GPU et publiera des articles, des poids de modèles et des dépôts de code ; les candidatures sont ouvertes jusqu'au 5 décembre <sup>[5](<https://research.perplexity.ai/>)</sup>.
-- Tencent a publié Hy4 flash, un modèle rapide et peu coûteux dont les scores de satisfaction en test à l'aveugle sont proches de ceux de Claude Haiku 5.5 <sup>[6](<https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/>)</sup>.
-- Gemini 4 Hydrogen de Google est un modèle rapide et efficace pour la robotique, doté d'un raisonnement spatial et incarné <sup>[7](<https://developers.googleblog.com/gemini-hydrogen-for-robotics/>)</sup>.
-- Les modèles d1.2 et d1.2-ultra de Liquid AI sont des modèles de décision acceptant l'entrée audio ; d1.2-ultra se classe premier parmi les modèles de décision selon l'Artificial Analysis Decision Index v2.1, au prix de 0,02 $ et 0,042 $ par million de tokens en entrée <sup>[8](<https://www.liquid.ai/blog/d1-2>)</sup>.
+- OpenAI a lancé GPT-6.2 Astra et Sol, qu'Artificial Analysis note à 62 sur son Intelligence Index, juste derrière Fable 5.2 à 65, et Sol égale Astra avec environ 15 % du coût par tâche <sup>[1](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>)</sup>. Les avis sont partagés, avec certaines critiques concernant les artefacts de RL <sup>[1](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>)</sup>.
 
-## Sécurité de l'IA et défense cyber
+## Recherche, édition et réponses de l'IA
 
-- OpenAI travaille avec l'OTAN et les agences cyber alliées pour aider les défenseurs de confiance à trouver des vulnérabilités, tester des correctifs et protéger les systèmes essentiels <sup>[9](<https://openai.com/index/strengthening-nato-allied-cyber-defences-ai>)</sup>.
-- Elastic a analysé cinq frameworks offensifs agentiques (ARTEX, CyberStrikeAI, Cairn, PentAGI, HexStrike) qui permettent à un LLM de piloter scanners et shells ; aucun n'applique l'autorisation dans le code, et quatre ont été observés dans de réelles intrusions <sup>[10](<https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex>)</sup>.
-- Le procureur général de Californie a poursuivi OpenAI à la suite d'incidents liés à des agents incontrôlés, centrés sur un incident impliquant Hugging Face <sup>[11](<https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/>)</sup>.
-- Le département du Commerce américain ferme une faille permettant à des rivaux étrangers de louer l'accès à des puces d'IA avancées dans des centres de données à l'étranger ; la règle entre en vigueur 90 jours après sa publication au Federal Register <sup>[12](<https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/>)</sup>.
+- Les AI Overviews de Google apparaissent sur plus de la moitié des mots-clés américains suivis par DataForSEO, contre 6 % il y a deux ans <sup>[2](<https://revscope.co/blog/search-seo-geo-2026/>)</sup>.
+- Dans une expérience randomisée, un AI Overview a réduit d'environ 40 % les clics vers les sites externes <sup>[2](<https://revscope.co/blog/search-seo-geo-2026/>)</sup>.
+- Les assistants IA n'ont envoyé aux sites web que 0,3 % de leur trafic en mars <sup>[2](<https://revscope.co/blog/search-seo-geo-2026/>)</sup>.
+- Un éditeur berlinois de voyage déclare avoir perdu 70 % à 75 % de son trafic au profit des AI Overviews de Google <sup>[3](<https://nicolasbouliane.com/blog/death-by-ai>)</sup>.
 
-## Données et pipelines d'IA
+## IA appliquée et domaines émergents
 
-- Un atelier DuckDB a construit un pipeline sur 2,1 millions d'avis sur des appareils électroménagers Amazon : DuckDB filtre les données, un LLM résume les plaintes, et le résultat est déployé sous forme d'un Space Hugging Face appelable comme API <sup>[13](<https://duckdb.org/2026/11/17/duckdb-user-group-workshop-ai-powered-review-analysis.html>)</sup>.
-- Les participants ont prototypé en local sur un échantillon de 22 Mo, puis exécuté les mêmes deux fichiers Parquet sur l'ensemble complet des données sur Hugging Face <sup>[13](<https://duckdb.org/2026/11/17/duckdb-user-group-workshop-ai-powered-review-analysis.html>)</sup>.
-- Pinecone a ajouté la conversion d'un index vectoriel en index de documents : un nouvel index de documents est construit à partir d'un index vectoriel existant sans réencodage ; lors d'un test interne, 100 millions d'enregistrements ont été convertis en moins de 20 minutes <sup>[14](<https://www.pinecone.io/blog/index-conversion/>)</sup>.
-- Turso Sync conserve les écritures en local et réplique les modifications logiques de lignes via des appels distincts de push et de pull <sup>[15](<https://turso.tech/blog/turso-sync-local-first-sqlite-with-push-and-pull>)</sup>.
+- Osmo, une startup d'IA, affirme que son modèle de fondation pour l'odorat, entraîné sur des annotations humaines d'experts en olfaction croisées avec des analyses chimiques, a atteint une « intelligence olfactive de niveau humain » <sup>[4](<https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/>)</sup>.
 
-## Outils LLM
+## Industrie et partenariats
 
-- La version corrective llm 0.37.3 répare une rupture causée par SQLite 3.54.1, qui a modifié le comportement de json_object pour les sous-requêtes renvoyant des résultats json_array <sup>[16](<https://simonwillison.net/2026/Nov/16/llm/>)</sup>.
-- La correction de SQLite est voulue : une sous-requête utilisant json_array renvoie du texte SQL, donc le contournement consiste à l'envelopper dans json() <sup>[16](<https://simonwillison.net/2026/Nov/16/llm/>)</sup>.
-- Simon Willison a publié llm 0.38 avec la prise en charge des modèles GPT-6.2 <sup>[3](<https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/>)</sup>.
-
-## Agents et outils de codage
-
-- Le Agent Host Protocol (AHP) de GitHub est un standard ouvert pour des sessions d'agents qui se poursuivent d'un appareil à l'autre ; il a d'abord été construit dans VS Code et adopté dans l'ensemble de GitHub <sup>[17](<https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/>)</sup>.
-- GitHub Copilot Fusion figure désormais dans les classements publics Terminal-Bench 4.1, où Fusion Max atteint un taux de résolution de 71,2 %, soit 5,4 points devant les principaux modèles de pointe, à moindre coût <sup>[18](<https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models>)</sup>.
-- GitHub Copilot Evals est entré en préversion publique : tests reproductibles pour les skills, les agents et les outils MCP, relançables pour détecter les régressions après des modifications <sup>[19](<https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview>)</sup>.
-- La revue de code Copilot ajoute un effort adaptatif, qui choisit pour chaque pull request une profondeur de revue Lite, Balanced ou Max, ainsi qu'un contexte inter-dépôts et la détection de secrets, en préversion publique <sup>[20](<https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more>)</sup>.
-- GitHub Copilot CLI ajoute la connexion Microsoft Entra en préversion publique, permettant une authentification SSO silencieuse vers les comptes Enterprise Managed User et les licences Microsoft 365 Copilot <sup>[21](<https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview>)</sup>.
-- Bashkit est un bac à sable Rust qui exécute bash en processus pour les agents LLM, sans fork/exec ni accès réseau sauf activation explicite, et une API analyze() qui liste les commandes et les écritures de fichiers avant exécution <sup>[22](<https://github.com/everruns/bashkit>)</sup>.
-- Le modèle de bac à sable externe exécute le code généré par l'agent dans un bac à sable dédié, l'agent restant à l'extérieur ; Simon Willison a publié trois implémentations de serveurs de bac à sable <sup>[23](<https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/>)</sup>.
-- Pragmatic Engineer traite de l'ingénierie d'inférence pour passer des API de modèles de pointe aux modèles ouverts, en citant les réductions de coût par token de 50 % chez Uber et de 90 % chez Pinterest <sup>[24](<https://newsletter.pragmaticengineer.com/p/inference-engineering-for-software-engineers>)</sup>.
-
-## DevOps et outils pour développeurs
-
-- Les demandes de rejet délégué d'alertes Dependabot restent désormais ouvertes pendant un an au lieu d'une semaine, ce qui laisse aux relecteurs plus de temps avant une nouvelle soumission ; le changement est livré sur github.com et dans GitHub Enterprise Server 3.24 <sup>[25](<https://github.blog/changelog/2026-11-16-dependabot-alert-dismissal-requests-now-last-one-year>)</sup>.
-- dbt v2, le moteur de nouvelle génération, est généralement disponible, avec des tests unitaires locaux et des tests par lots en alpha, ainsi qu'une offre gratuite pour dbt State <sup>[26](<https://www.getdbt.com/blog/whats-new-in-dbt-november-2026>)</sup>.
-- Google AI Studio peut désormais créer et livrer des applications Android Kotlin full-stack avec provisionnement du backend Firebase et appels à l'API Gemini, publiables sur le Play Store <sup>[27](<https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/>)</sup>.
-- Another Build File Service (ABFS) de Google utilise l'adressage par contenu à travers un module de système de fichiers du noyau Linux et une infrastructure serveur pour charger à la demande des arbres de sources à l'échelle d'Android, pour une configuration et des compilations plus rapides <sup>[28](<https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/>)</sup>.
-- Surveillez l'activité de GitHub Copilot via Microsoft Agent 365 : les flux d'audit d'entreprise couvrent les prompts, les réponses et les appels d'outils sur tous les clients Copilot, pour les clients GitHub Enterprise Cloud disposant d'Enterprise Managed Users <sup>[29](<https://github.blog/changelog/2026-11-17-monitor-github-copilot-activity-through-microsoft-agent-365>)</sup>.
-
-## Avis de sécurité et infrastructure
-
-- httpx 1.9.0 (CVE-2026-129784, CVSS 8.5) analysait le JSON avec Oj en mode objet lorsque multi_json était absent, permettant l'exécution de code à distance ; mettez à niveau vers httpx 1.9.1, ou passez mode: :strict à response.json <sup>[30](<https://research.jfrog.com/vulnerabilities/httpx-is-vulnerable-to-remote-code-execution-via-oj-object-mode-deserialization-cve-2026-129784/>)</sup>.
-- Une déréférence de pointeur NULL dans TCP du noyau Linux, présente depuis 11 ans, permet à des attaquants non authentifiés de faire planter des serveurs Nginx, Apache et SSH dans leurs configurations par défaut <sup>[31](<https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/>)</sup>.
-- Microsoft Defender pour macOS présentait des bogues d'élévation de privilèges locale (CVE-2026-50657, CVE-2026-50658) permettant l'exécution de code en root, corrigés lors du Patch Tuesday de juillet 2026 <sup>[32](<https://spaceraccoon.dev/race-against-the-machine-defender-macos-lpe/>)</sup>.
-- Valkey 9.2 remplace l'index en liste à sauts des grands ensembles triés par un arbre B+, réduisant de 36 % à 43 % la surcharge d'index par membre dans un test de cinq millions de membres ; la version est encore en phase de test candidat <sup>[33](<https://valkey.io/blog/from-skiplist-to-b+tree/>)</sup>.
-
-## Pratique de l'ingénierie logicielle
-
-- Les Go Proverbs conseillent que « un peu de copie vaut mieux qu'une petite dépendance », citation que Simon Willison a mise en avant <sup>[34](<https://simonwillison.net/2026/Nov/17/go-proverbs/>)</sup>.
-- Anthropic a publié la facturation liée pour la Claude Platform en bêta, permettant aux plateformes de facturer leurs clients finaux sans partager les clés API <sup>[35](<https://claude.com/resources/articles/linked-billing-on-claude-platform>)</sup>.
+- OpenAI et Le Groupe Figaro ont conclu un partenariat pour intégrer les articles du Figaro dans ChatGPT, sous forme de résumés et d'extraits renvoyant vers les articles originaux <sup>[5](<https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership>)</sup>.
 
 ## Sources
 
-1. [Introducing GPT-6.2 Astra and Sol](<https://openai.com/index/introducing-gpt-6-2-astra-sol>) — _openai.com_
-2. [OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available](<https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available>) — _github.blog_
-3. [GPT‐6.2 Astra and GPT‐6.2 Sol](<https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/>) — _simonwillison.net_
-4. [\[AINews\] Perplexity hits a $1B revenue run rate, up 4x in 2026](<https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/>) — _latent.space_
-5. [The frontier is still open](<https://research.perplexity.ai/>) — _research.perplexity.ai_
-6. [Tencent Launches Hy4 flash](<https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/>) — _tencent.com_
-7. [Gemini 4 Hydrogen: a faster model for general purpose robotics](<https://developers.googleblog.com/gemini-hydrogen-for-robotics/>) — _google ai_
-8. [d1.2: State-of-the-Art Omnimodal Decision Models](<https://www.liquid.ai/blog/d1-2>) — _liquid.ai_
-9. [Strengthening NATO and allied cyber defenses with AI](<https://openai.com/index/strengthening-nato-allied-cyber-defences-ai>) — _openai.com_
-10. [Inside the Loop: Five AI Attack Frameworks that Never Ask Permission](<https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex>) — _elastic.co_
-11. [California state AG sues OpenAI over rogue agent incidents](<https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/>) — _techcrunch.com_
-12. [US moves to cut China's remote access to AI chips](<https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/>) — _arstechnica.com_
-13. [DuckDB User Group Workshop on AI-Powered Review Analysis with Hugging Face](<https://duckdb.org/2026/11/17/duckdb-user-group-workshop-ai-powered-review-analysis.html>) — _duckdb.org_
-14. [Vector-to-document index conversion is now available](<https://www.pinecone.io/blog/index-conversion/>) — _pinecone_
-15. [Turso Sync: Local-First SQLite with Push and Pull](<https://turso.tech/blog/turso-sync-local-first-sqlite-with-push-and-pull>) — _turso.tech_
-16. [llm 0.37.3](<https://simonwillison.net/2026/Nov/16/llm/>) — _simonwillison.net_
-17. [Building the Agent Host Protocol for sessions that continue across devices](<https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/>) — _github.blog_
-18. [GitHub Copilot Fusion updates: more availability, benchmarks, and models](<https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models>) — _github.blog_
-19. [GitHub Copilot Evals is now in public preview](<https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview>) — _github.blog_
-20. [Copilot code review: Adaptive effort, secret detection, and more](<https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more>) — _github.blog_
-21. [GitHub Copilot CLI adds Microsoft Entra sign-in as a preview](<https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview>) — _github.blog_
-22. [Bashkit](<https://github.com/everruns/bashkit>) — _github.com_
-23. [External sandboxes for coding agents](<https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/>) — _simonwillison.net_
-24. [Inference engineering for software engineers](<https://newsletter.pragmaticengineer.com/p/inference-engineering-for-software-engineers>) — _newsletter.pragmaticengineer.com_
-25. [Dependabot alert dismissal requests now last one year](<https://github.blog/changelog/2026-11-16-dependabot-alert-dismissal-requests-now-last-one-year>) — _github.blog_
-26. [What's new in dbt: November 2026](<https://www.getdbt.com/blog/whats-new-in-dbt-november-2026>) — _dbt.com_
-27. [Build full-stack Android apps with Gemini in Google AI Studio](<https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/>) — _google ai_
-28. [Accelerating development for massive Git repositories](<https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/>) — _google ai_
-29. [Monitor GitHub Copilot activity through Microsoft Agent 365](<https://github.blog/changelog/2026-11-17-monitor-github-copilot-activity-through-microsoft-agent-365>) — _github.blog_
-30. [httpx is Vulnerable to Remote Code Execution via Oj Object-Mode JSON Deserialization](<https://research.jfrog.com/vulnerabilities/httpx-is-vulnerable-to-remote-code-execution-via-oj-object-mode-deserialization-cve-2026-129784/>) — _research.jfrog.com_
-31. [New NoisyTCP Vulnerabilities Lets Attackers Crash Linux Servers](<https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/>) — _bleepingcomputer.com_
-32. [Race Against the (Mac)hine: Local Privilege Escalation in Microsoft Defender for macOS](<https://spaceraccoon.dev/race-against-the-machine-defender-macos-lpe/>) — _spaceraccoon.dev_
-33. [From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient](<https://valkey.io/blog/from-skiplist-to-b+tree/>) — _valkey.io_
-34. [Quoting Go Proverbs](<https://simonwillison.net/2026/Nov/17/go-proverbs/>) — _simonwillison.net_
-35. [Linked billing on the Claude Platform](<https://claude.com/resources/articles/linked-billing-on-claude-platform>) — _claude_
+1. [\[AINews\] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>) — _latent.space_
+2. [Google's AI answers reducing search traffic by 40%](<https://revscope.co/blog/search-seo-geo-2026/>) — _hnrss.org_
+3. [AI is killing All About Berlin](<https://nicolasbouliane.com/blog/death-by-ai>) — _hnrss.org_
+4. [This smell startup says its AI nose is as good as a human’s](<https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/>) — _technologyreview.com_
+5. [Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT](<https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership>) — _openai.com_
 
 
 ## Archive récente
