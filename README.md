@@ -8,25 +8,17 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### Latest digest — 2026-11-21
-<sub>updated 22 November 2026 at 00:00</sub>
+### Latest digest — 2026-11-22
+<sub>updated 22 November 2026 at 12:01</sub>
 
-## Mathematics and AI
+## Python serving and deployment
 
-- Two mathematicians reportedly claimed independent proofs of the Riemann Hypothesis within a few hours of each other, a problem described as the most famous open problem in mathematics <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>. One proof was produced with Claude by Levent Alpöge of Anthropic, released as a note with Lean code of about 1.3GB rather than a full paper <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-- Elliot Glazer reportedly confirmed that the formalized statement is the Generalized Riemann Hypothesis and put the chance of a Lean bug well under 1% <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>. The item notes that if the Lean code compiles with no extra axioms it is probably correct, though no human will read all of it <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-- Alessandro Masullo released a 940-page, work-in-progress proof he says was written entirely by hand over the last 12 years, after reportedly undergoing manual review and revision <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-
-## DevOps and Infrastructure
-
-- ByteByteGo's system design refresher explains Docker as a tool for packaging an application, with its code, libraries, runtimes and configurations, into a portable container image, and contrasts it with Kubernetes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
-- The same refresher covers open-weights versus closed models, how Claude's text watermark works, Redis internals and nine distributed systems patterns <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
-- A Datadog eBook, sponsored in the same newsletter, proposes a framework for monitoring dynamic cloud-native infrastructure: separating work metrics (throughput, success, errors, latency) from resource metrics, and paging on symptoms rather than causes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
+- Dumpleton, the author of mod_wsgi, is building Muru, a new AI-assisted Rust server for running ASGI and WSGI Python apps in both development and production, and is documenting the project in detail as he goes <sup>[1](<https://simonwillison.net/2026/Nov/21/muru/>)</sup>.
+- His write-up series covers worker design, process forking after a single import, HTTPS in development, serving WSGI and ASGI together, and canary releases without a service mesh <sup>[1](<https://simonwillison.net/2026/Nov/21/muru/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Riemann Hypothesis proved...twice independently](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>) — _latent.space_
-2. [EP234: Docker vs Kubernetes](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>) — _blog.bytebytego.com_
+1. [Muru](<https://simonwillison.net/2026/Nov/21/muru/>) — _simonwillison.net_
 
 
 ## Recent archive

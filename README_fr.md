@@ -8,25 +8,17 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-21
-<sub>mis à jour le 22 novembre 2026 à 00:00</sub>
+### Dernier digest — 2026-11-22
+<sub>mis à jour le 22 novembre 2026 à 12:01</sub>
 
-## Mathématiques et IA
+## Déploiement et service de Python
 
-- Deux mathématiciens auraient revendiqué des preuves indépendantes de l'hypothèse de Riemann à quelques heures d'intervalle, un problème décrit comme le problème ouvert le plus célèbre des mathématiques <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>. L'une des preuves a été produite avec Claude par Levent Alpöge, d'Anthropic, et publiée sous forme de note accompagnée d'un code Lean d'environ 1,3 Go plutôt que d'un article complet <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-- Elliot Glazer aurait confirmé que l'énoncé formalisé est l'hypothèse de Riemann généralisée et estimé la probabilité d'un bogue dans le code Lean nettement en dessous de 1 % <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>. L'article note que si le code Lean compile sans axiomes supplémentaires, il est probablement correct, bien qu'aucun humain ne puisse en lire l'intégralité <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-- Alessandro Masullo a publié une preuve de 940 pages, encore en cours de travail, qu'il affirme avoir entièrement rédigée à la main au cours des 12 dernières années, après une relecture et une révision manuelles selon ce qui est rapporté <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
-
-## DevOps et infrastructure
-
-- La fiche de révision en conception de systèmes de ByteByteGo explique que Docker sert à empaqueter une application, avec son code, ses bibliothèques, ses environnements d'exécution et ses configurations, dans une image de conteneur portable, et le compare à Kubernetes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
-- Cette même fiche traite des modèles à poids ouverts par opposition aux modèles fermés, du fonctionnement du filigrane textuel de Claude, des mécanismes internes de Redis et de neuf schémas de systèmes distribués <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
-- Un ebook de Datadog, sponsorisé dans la même lettre d'information, propose un cadre pour la supervision d'une infrastructure cloud-native dynamique : séparer les métriques de travail (débit, succès, erreurs, latence) des métriques de ressources, et déclencher les alertes sur les symptômes plutôt que sur les causes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
+- Dumpleton, l'auteur de mod_wsgi, développe Muru, un nouveau serveur en Rust assisté par IA pour exécuter des applications Python ASGI et WSGI, en développement comme en production, et documente le projet en détail au fil de son avancement <sup>[1](<https://simonwillison.net/2026/Nov/21/muru/>)</sup>.
+- Sa série d'articles traite de la conception des workers, du fork des processus après un import unique, du HTTPS en développement, du service conjoint de WSGI et d'ASGI, et des déploiements canary sans service mesh <sup>[1](<https://simonwillison.net/2026/Nov/21/muru/>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] Riemann Hypothesis proved...twice independently](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>) — _latent.space_
-2. [EP234: Docker vs Kubernetes](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>) — _blog.bytebytego.com_
+1. [Muru](<https://simonwillison.net/2026/Nov/21/muru/>) — _simonwillison.net_
 
 
 ## Archive récente
