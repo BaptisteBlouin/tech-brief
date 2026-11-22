@@ -9,7 +9,7 @@
 > 🇫🇷 [Version française](README_fr.md)
 
 ### Latest digest — 2026-11-21
-<sub>updated 21 November 2026 at 12:01</sub>
+<sub>updated 22 November 2026 at 00:00</sub>
 
 ## Mathematics and AI
 
@@ -17,9 +17,16 @@
 - Elliot Glazer reportedly confirmed that the formalized statement is the Generalized Riemann Hypothesis and put the chance of a Lean bug well under 1% <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>. The item notes that if the Lean code compiles with no extra axioms it is probably correct, though no human will read all of it <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
 - Alessandro Masullo released a 940-page, work-in-progress proof he says was written entirely by hand over the last 12 years, after reportedly undergoing manual review and revision <sup>[1](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>)</sup>.
 
+## DevOps and Infrastructure
+
+- ByteByteGo's system design refresher explains Docker as a tool for packaging an application, with its code, libraries, runtimes and configurations, into a portable container image, and contrasts it with Kubernetes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
+- The same refresher covers open-weights versus closed models, how Claude's text watermark works, Redis internals and nine distributed systems patterns <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
+- A Datadog eBook, sponsored in the same newsletter, proposes a framework for monitoring dynamic cloud-native infrastructure: separating work metrics (throughput, success, errors, latency) from resource metrics, and paging on symptoms rather than causes <sup>[2](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>)</sup>.
+
 ## Sources
 
 1. [\[AINews\] Riemann Hypothesis proved...twice independently](<https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/>) — _latent.space_
+2. [EP234: Docker vs Kubernetes](<https://blog.bytebytego.com/p/ep234-docker-vs-kubernetes>) — _blog.bytebytego.com_
 
 
 ## Recent archive
@@ -28,6 +35,7 @@ _One file per day — the latest 14 are shown below._
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-11-21` | Saturday | [Read →](news/en/2026-11-21.md) |
 | `2026-11-20` | Friday | [Read →](news/en/2026-11-20.md) |
 | `2026-11-19` | Thursday | [Read →](news/en/2026-11-19.md) |
 | `2026-11-18` | Wednesday | [Read →](news/en/2026-11-18.md) |
@@ -41,9 +49,8 @@ _One file per day — the latest 14 are shown below._
 | `2026-11-10` | Tuesday | [Read →](news/en/2026-11-10.md) |
 | `2026-11-09` | Monday | [Read →](news/en/2026-11-09.md) |
 | `2026-11-08` | 🗓️ Weekly recap | [Read →](news/en/2026-11-08.md) |
-| `2026-11-07` | Saturday | [Read →](news/en/2026-11-07.md) |
 
-<sub>[Browse the full archive (158) →](news/en/)</sub>
+<sub>[Browse the full archive (159) →](news/en/)</sub>
 
 ---
 <sub>Auto‑generated twice a day · source: [live tech‑watch](https://baptisteblouin.fr/veille.en.html)</sub>
