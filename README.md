@@ -8,159 +8,22 @@
 > _Updated twice a day · full archive kept in the repo._
 > 🇫🇷 [Version française](README_fr.md)
 
-### 🗓️ Weekly recap (2026-11-16 → 2026-11-22)
-<sub>updated 23 November 2026 at 00:01</sub>
+### Latest digest — 2026-11-23
+<sub>updated 23 November 2026 at 12:00</sub>
 
-## AI models and LLM tooling
+## Data Engineering
 
-- OpenAI launched GPT-6.2 Astra and Sol on ChatGPT and the API, aimed at professional work, with Astra for the hardest projects and Sol for everyday tasks <sup>[1](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>), [2](<https://www.testingcatalog.com/openai-launches-gpt-6-2-astra-and-sol-on-chatgpt-and-apis/>)</sup>. Both use fewer output tokens than previous releases <sup>[2](<https://www.testingcatalog.com/openai-launches-gpt-6-2-astra-and-sol-on-chatgpt-and-apis/>)</sup>. Artificial Analysis scores Astra at 62 on its Intelligence Index, just behind Fable 5.2 at 65, and Sol ties Astra at about 15% of the cost per task <sup>[1](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>)</sup>. GitHub Copilot made both generally available <sup>[3](<https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available>)</sup>. Reviews are mixed, with some criticism of RL artefacts <sup>[1](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>)</sup>.
-- Google DeepMind released Gemini 4 Neon, a fast frontier-level model for coding, knowledge work and science, scoring 61 on the Artificial Analysis Intelligence Index <sup>[4](<https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/>), [5](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/>), [6](<https://deepmind.google/blog/introducing-gemini-4-neon/>)</sup>. It costs $3 per million input tokens and $15 per million output tokens, with cached input at $0.15 and a 1 million token context window <sup>[4](<https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/>)</sup>. It is generally available in GitHub Copilot, where Google reports quality close to Gemini 4 Carbon at a lower token cost per task <sup>[7](<https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot>)</sup>. A third-party projection places it near Opus 5.5, but it is a speed-based estimate with a wide uncertainty interval, not a measured leaderboard result <sup>[8](<https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model/>)</sup>. In a private benchmark, Carbon took about seven times as many steps as GPT-6 Astra on bug fixes, half of them unnecessary <sup>[9](<https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/>)</sup>.
-- Gemini 4 Genie 4, the interactive world model, opened to eligible Google AI Ultra subscribers in Project Genie <sup>[10](<https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/>)</sup>.
-- Microsoft's MAI Code 2 coding model, now in GitHub Copilot, reaches 98% of GPT-6.1 Sol's coding quality at about 40% of the price <sup>[11](<https://microsoft.ai/news/microsoft-ignite-2026/>)</sup>.
-- Cloudflare released updated open-weight Clairic and the 9B Clairic-flash for document extraction, hosted on Workers AI <sup>[12](<https://blog.cloudflare.com/open-clairic/>)</sup>.
-- Prime Intellect's Model Factory unifies RL, supervised fine-tuning, pre-training and inference in one control plane, with recovery from the latest checkpoint for long runs <sup>[13](<https://www.primeintellect.ai/blog/introducing-model-factory>)</sup>.
-- A QLoRA backdoor planted in Qwen3-8B fired only inside the pi agent harness; weight diffs catch it for open models but not for hosted APIs, so agents should be sandboxed and shell and network calls approved <sup>[14](<https://pgaleone.eu/ai/2026/11/14/backdooring-llms-and-trust/>)</sup>.
-- Simon Willison shipped llm 0.38 with support for the GPT-6.2 models <sup>[15](<https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/>)</sup>.
-- Hugging Face introduced harness adapters to tune a model for a given harness, improving performance and cost <sup>[16](<https://huggingface.co/blog/harness-adapters-at-scale>)</sup>.
+- Flock migrated its lakehouse, with nearly 480 dbt models, from AWS Glue to in-process DuckDB, cutting core builds by 74% and daily compute spend by 91% <sup>[1](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>. The migration relies on open Iceberg storage, which lets teams swap distributed Spark for a single-node engine sized to the actual workload <sup>[1](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
+- Flock used AI agents through an MCP server and a reusable Claude skill to verify table parity during the move and to upgrade to DuckDB 2.0 <sup>[1](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
 
-## Agents, evaluation and research
+## Developer Tools and Hiring Practices
 
-- Vercel released eve 1.0, an open-source framework for production AI agents that manages the model and tool loop, memory, approvals and monitoring <sup>[17](<https://vercel.com/blog/eve-is-now-generally-available>)</sup>. Replit launched Missions to coordinate agent swarms within budgets <sup>[18](<https://replit.com/blog/introducing-replit-missions>)</sup>.
-- Horizon, an agent built on Opus 5.5, autonomously created 38 models over more than 600 GPU hours, now housed in over 100 repositories <sup>[19](<https://horizon-labs.ai/>)</sup>.
-- Stripe evaluated 14 coding agent setups on payments integrations: agents met 78.1% of required criteria on average, but only 29.4% of runs met every criterion <sup>[20](<https://stripe.dev/blog/stripe-integration-evals-methodology?amp%3Butm_medium=community>)</sup>.
-- Chrome's testing found coding agents passed 52% of its web development checks alone and 91% with Modern Web Guidance installed <sup>[21](<https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev>)</sup>.
-- Replit's benchmark found 32 Opus agents reached an 18.9x NumPy workload speedup versus 3.7x for one agent within two hours <sup>[22](<https://frontier.replit.com/throwing-headcount-at-the-problem/>)</sup>.
-- Together AI's Together Compiler uses agents to rewrite and fuse GPU kernels, beating its hand-written megakernels by about 28% on B200 <sup>[23](<https://www.together.ai/blog/road-to-together-compiler>)</sup>.
-- Linear's agents now create more than half its work, up from 3% a year ago <sup>[24](<https://latent.space/p/linear-scaling/>)</sup>.
-- Google's Agent Anomaly Detection monitors agents on other clouds by analyzing OpenTelemetry traces and logs <sup>[25](<https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/>)</sup>.
-- Spotify explores when offline AI evaluations can support a launch decision without an A/B test <sup>[26](<https://engineering.atspotify.com/2026/11/when-can-you-ship-on-offline-evals-alone>)</sup>.
-- METR's updated time-horizon plot finds some capabilities still improving exponentially while models lag on judgment-heavy tasks <sup>[27](<https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/>)</sup>.
-
-## Agent tooling and coding practice
-
-- GitHub made eight more services available to Copilot through MCP connectors in public preview, including Supabase, Buildkite and Box <sup>[28](<https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot>)</sup>. Team-level plugin defaults are generally available <sup>[29](<https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team>)</sup>.
-- GitHub Copilot Evals entered public preview: repeatable tests for skills, agents and MCP tools <sup>[30](<https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview>)</sup>. Copilot code review adds adaptive effort per pull request <sup>[31](<https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more>)</sup>.
-- Daniel Stenberg reports that agents converted about 185,000 lines of C into 340,000 lines of Rust in curl <sup>[32](<https://simonwillison.net/2026/Nov/18/daniel-stenberg/>), [33](<https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/>)</sup>.
-- Replit's Missions and Uber's Secure AI Framework show agent governance in practice, with Uber judging each proposed agent action against user request, permissions and context <sup>[18](<https://replit.com/blog/introducing-replit-missions>), [34](<https://www.infoq.com/news/2026/11/uber-secure-ai-framework/>)</sup>.
-- Hosted agent APIs make harnesses easier to swap, but with the same instructions and tools, models behave differently, so teams should retest after a model swap <sup>[35](<https://davenporter.com/writings/agent-harnesses-cheap-to-swap-behavior-isnt>)</sup>.
-
-## Security
-
-- Calif disclosed Java4Shell (CVE-2026-114938), a CVSS 9.2 memory-corruption flaw in OpenJDK's Base64 decoder that can enable remote code execution; patched Oracle builds shipped in the November 2026 CPU <sup>[36](<https://blog.cloudflare.com/java4shell-waf-protection/>), [37](<https://calif.io/java4shell/>), [38](<https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk>)</sup>.
-- A WPPConnect compromise shipped a malicious "diagnostics" module through the project's own trusted-publishing pipeline, leaking environment variables and WhatsApp session tokens; the payload runs on import, so --ignore-scripts does not stop it <sup>[39](<https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions>)</sup>.
-- A malicious ONNX model abused a parser flaw in ONNX Runtime to leak host files; defenders should upgrade to onnxruntime v1.27.0 or later <sup>[40](<https://phrack.org/issues/73/backdoor-attacks-against-machine-learning-irl>)</sup>.
-- Versions 1.26.1 and 1.26.2 of Microsoft's agent-framework PyPI package were pushed from the official publisher account and contain a credential stealer; treat any install as full credential compromise and rotate secrets <sup>[41](<https://opensourcemalware.com/blog/agent-framework-pypi-compromised>)</sup>.
-- F5 and nginx.org disclosed ten nginx vulnerabilities on November 18, 2026; five are memory corruption flaws that an unauthenticated attacker can use to crash an nginx worker or potentially run commands on the server <sup>[42](<https://blog.cloudflare.com/nginx2root/>), [43](<https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities>)</sup>.
-- Ruby's ruby2shell (CVE-2026-132825), a critical heap buffer overflow, was fixed in Ruby 3.3.14, 3.4.13 and 4.0.10; Cloudflare's WAF blocks it for all customers <sup>[44](<https://blog.cloudflare.com/ruby2shell-waf-protection/>), [45](<https://verialabs.com/ruby2shell/>)</sup>.
-- PHP fixed phpAfterShell (CVE-2026-126714, CVSS 9.2), a deserialization flaw in the default file-based session handler <sup>[46](<https://blog.cloudflare.com/phpaftershell-waf-protection/>), [47](<https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html>)</sup>.
-- Apache Roller versions 4.0.0 through 6.1.4 have an actively exploited unauthenticated deserialization flaw in the XML-RPC endpoint; upgrade to 6.1.6 <sup>[48](<https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html>)</sup>.
-- A critical Puppet deserialization flaw (CVE-2026-115731, CVSS 9.4) is being exploited, and CISA added it to its Known Exploited Vulnerabilities catalog <sup>[49](<https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html>)</sup>.
-- Gitea's public-only token scope bypass let restricted tokens act as full admins through the admin API, now tracked as CVE-2026-117635 <sup>[50](<https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/>)</sup>.
-- Anthropic shortens its coordinated vulnerability disclosure window from 90 to 30 days for high- and critical-severity issues <sup>[51](<https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines>)</sup>. OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities <sup>[52](<https://openai.com/index/strengthening-nato-allied-cyber-defences-ai>)</sup>.
-- Elastic analyzed five agentic offensive frameworks that let an LLM drive scanners and shells; none enforce authorization in code, and four have been seen in real intrusions <sup>[53](<https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex>)</sup>.
-
-## DevOps, infrastructure and data
-
-- Kubernetes plans to remove the kube-proxy IPVS backend in 2026 to simplify the codebase <sup>[54](<https://kubernetes.io/blog/2026/11/16/ipvs-removal/>)</sup>.
-- Salesforce combined vertical and horizontal autoscaling on EKS, reporting over $5 million in cumulative savings <sup>[55](<https://aws.amazon.com/blogs/containers/how-salesforce-efficiently-right-sizes-kubernetes-workloads-at-scale-on-amazon-eks/>)</sup>.
-- Pinecone's pg_pinecone Postgres extension is about 15 times smaller than a pgvector HNSW index on 1 million vectors at the same recall <sup>[56](<https://www.pinecone.io/blog/pg-pinecone-railway/>)</sup>.
-- An OpenTelemetry guide covers memory-limiter placement, sampling trade-offs and trace-aware routing for tail sampling <sup>[57](<https://www.cncf.io/blog/2026/11/17/is-your-opentelemetry-pipeline-becoming-a-performance-bottleneck/>)</sup>.
-- PostHog gates expensive LLM calls with decision models, letting 98.7% of session summaries skip a rewriting call <sup>[58](<https://newsletter.posthog.com/p/decision-models>)</sup>.
-- GitHub CLI v2.105.0 adds `gh event listen`, which waits for pull request events, replacing polling loops in scripts and agents <sup>[59](<https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli>)</sup>.
-- Enterprise Live Migrations from Azure DevOps to GitHub Enterprise Cloud with data residency is now generally available <sup>[60](<https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available>)</sup>.
-- AWS released ExtendDB 1.0, an open-source Apache 2.0 DynamoDB-compatible adapter that runs on PostgreSQL, SQLite, Cassandra and MongoDB <sup>[61](<https://aws.amazon.com/about-aws/whats-new/2026/11/aws-extenddb-1-0/>)</sup>.
-- PostgreSQL 19 adds read-your-writes consistency on standbys through the new WAIT FOR LSN command <sup>[62](<https://simonwillison.net/2026/Nov/19/postgresql-19/>)</sup>, plus `REPACK (CONCURRENTLY)` for table optimization without downtime <sup>[63](<https://www.postgresql.org/about/news/postgresql-19-released-3449/>)</sup>.
-- Data contracts apply API design to datasets, so quality rules become assertions that tooling can pass or fail <sup>[64](<https://martinfowler.com/articles/data-contracts.html>)</sup>.
-- Airbnb packaged the open-source Presidio as an in-process pipeline step to de-identify text before AI training <sup>[65](<https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0>)</sup>.
-- LinkedIn rebuilt its data lineage platform to capture dependencies from running jobs, covering about 6 million datasets <sup>[66](<https://www.linkedin.com/blog/engineering/infrastructure/rebuilding-data-lineage-at-linkedin-from-storage-to-compute>)</sup>.
-- OpenSRE is an open-source CLI agent that investigates failed CI/CD runs and pushes fixes for review <sup>[67](<https://github.com/Tracer-Cloud/opensre>)</sup>.
-
-## AI industry and search
-
-- Anthropic closed its IPO at $83 per share, for gross proceeds of about $93.5 billion <sup>[68](<https://www.anthropic.com/news/ipo-close>), [69](<https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/>), [70](<https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html>)</sup>.
-- OpenAI published a piece on combatting adversarial distillation <sup>[71](<https://openai.com/index/combatting-adversarial-distillation>)</sup> and introduced MedChemBench, a benchmark for AI on molecular structures and compound selection <sup>[72](<https://openai.com/index/introducing-medchembench>)</sup>.
-- Google's AI Overviews appear on more than half the US keywords tracked by DataForSEO, up from 6% two years ago <sup>[73](<https://revscope.co/blog/search-seo-geo-2026/>)</sup>. In a randomized experiment, an AI Overview cut clicks to outside websites by about 40% <sup>[73](<https://revscope.co/blog/search-seo-geo-2026/>)</sup>.
-- OpenAI and Le Groupe Figaro partnered to bring Le Figaro journalism into ChatGPT through summaries and excerpts linking to original stories <sup>[74](<https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership>)</sup>.
-- The California attorney general sued OpenAI over rogue agent incidents <sup>[75](<https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/>)</sup>. The US Commerce Department is closing a loophole that let foreign rivals rent access to advanced AI chips in data centers abroad <sup>[76](<https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/>)</sup>.
+- A newsletter editorial argues that coding interviews are shifting from code generation toward "fix-and-explain" formats, where candidates review and debug existing code <sup>[1](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
+- LeetCode.ai introduced a "code review" feature that tests a candidate's understanding of code and ability to fix bugs, aimed at preparing data engineers for review-style rounds <sup>[1](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
 
 ## Sources
 
-1. [\[AINews\] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse](<https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/>) — _latent.space_
-2. [OpenAI launches GPT-6.2 Astra and Sol on ChatGPT and APIs](<https://www.testingcatalog.com/openai-launches-gpt-6-2-astra-and-sol-on-chatgpt-and-apis/>) — _testingcatalog.com_
-3. [OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available](<https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available>) — _github.blog_
-4. [\[AINews\] Gemini 4 Neon: GDM's Opus/Sol Contender](<https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/>) — _latent.space_
-5. [Gemini 4 Neon](<https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/>) — _blog.google_
-6. [Introducing Gemini 4 Neon](<https://deepmind.google/blog/introducing-gemini-4-neon/>) — _deepmind.google_
-7. [Gemini 4 Neon in GitHub Copilot](<https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot>) — _github.blog_
-8. [Gemini 4 Neon Looks Like an Opus 5.5 Competitor](<https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model/>) — _micjm.com_
-9. [Why is Gemini 4 Carbon taking so long?](<https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/>) — _kernel.dev_
-10. [Genie 4](<https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/>) — _blog.google_
-11. [Microsoft's Seven New Models](<https://microsoft.ai/news/microsoft-ignite-2026/>) — _microsoft.ai_
-12. [An updated Clairic and Clairic-flash are now open-weight, from the new Workers AI Superintelligence team](<https://blog.cloudflare.com/open-clairic/>) — _blog.cloudflare.com_
-13. [Introducing Model Factory](<https://www.primeintellect.ai/blog/introducing-model-factory>) — _primeintellect.ai_
-14. [Backdooring LLMs - Do You Trust Your AI Provider?](<https://pgaleone.eu/ai/2026/11/14/backdooring-llms-and-trust/>) — _pgaleone.eu_
-15. [GPT‐6.2 Astra and GPT‐6.2 Sol](<https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/>) — _simonwillison.net_
-16. [Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost](<https://huggingface.co/blog/harness-adapters-at-scale>) — _huggingface.co_
-17. [Vercel's eve 1.0](<https://vercel.com/blog/eve-is-now-generally-available>) — _vercel.com_
-18. [Introducing Replit Missions](<https://replit.com/blog/introducing-replit-missions>) — _replit.com_
-19. [Horizon Labs](<https://horizon-labs.ai/>) — _horizon-labs.ai_
-20. [Stripe Evals for Real-World Coding Agent Performance](<https://stripe.dev/blog/stripe-integration-evals-methodology?amp%3Butm_medium=community>) — _stripe.dev_
-21. [Top 10 Things AI Gets Wrong in Web Development](<https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev>) — _developer.chrome.com_
-22. [When Agent Swarms Outperform Solo Coders](<https://frontier.replit.com/throwing-headcount-at-the-problem/>) — _frontier.replit.com_
-23. [Last year we built megakernels. This year we deleted them: The road to Together Compiler](<https://www.together.ai/blog/road-to-together-compiler>) — _together.ai_
-24. [Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO](<https://latent.space/p/linear-scaling/>) — _latent.space_
-25. [Agent Anomaly Detection: Safeguarding agents across other clouds](<https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/>) — _google ai_
-26. [When Can You Ship on Offline Evals Alone?](<https://engineering.atspotify.com/2026/11/when-can-you-ship-on-offline-evals-alone>) — _engineering.atspotify.com_
-27. [The most misunderstood graph in AI just got a major update](<https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/>) — _technologyreview.com_
-28. [Connect Supabase, Box, Calendly, and more to Copilot](<https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot>) — _github.blog_
-29. [Customize GitHub Copilot for your team](<https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team>) — _github.blog_
-30. [GitHub Copilot Evals is now in public preview](<https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview>) — _github.blog_
-31. [Copilot code review: Adaptive effort, secret detection, and more](<https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more>) — _github.blog_
-32. [Quoting Daniel Stenberg](<https://simonwillison.net/2026/Nov/18/daniel-stenberg/>) — _simonwillison.net_
-33. [Actual curl rewrites in rust](<https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/>) — _daniel.haxx.se_
-34. [Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle](<https://www.infoq.com/news/2026/11/uber-secure-ai-framework/>) — _infoq.com_
-35. [Coding Harnesses Are Cheap to Swap Now. Model Behavior Isn't.](<https://davenporter.com/writings/agent-harnesses-cheap-to-swap-behavior-isnt>) — _davenporter.com_
-36. [How Cloudflare WAF helps protect against Java4Shell (CVE-2026-114938)](<https://blog.cloudflare.com/java4shell-waf-protection/>) — _blog.cloudflare.com_
-37. [Java4Shell](<https://calif.io/java4shell/>) — _calif.io_
-38. [CVE-2026-114938 OpenJDK RCE (Java4Shell): Everything You Need to Know](<https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk>) — _wiz.io_
-39. [WPPConnect Compromised: Malicious Releases Steal Secrets and WhatsApp Sessions Through the Project's Own Pipeline](<https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions>) — _stepsecurity.io_
-40. [Backdoor Attacks Against Machine Learning IRL](<https://phrack.org/issues/73/backdoor-attacks-against-machine-learning-irl>) — _phrack.org_
-41. [Official Microsoft agent-framework PyPI Package Compromised](<https://opensourcemalware.com/blog/agent-framework-pypi-compromised>) — _opensourcemalware.com_
-42. [nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them](<https://blog.cloudflare.com/nginx2root/>) — _blog.cloudflare.com_
-43. [Unauthenticated Remote Code Execution in NGINX](<https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities>) — _wiz.io_
-44. [How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)](<https://blog.cloudflare.com/ruby2shell-waf-protection/>) — _blog.cloudflare.com_
-45. [Ruby2ßhell](<https://verialabs.com/ruby2shell/>) — _verialabs.com_
-46. [How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws](<https://blog.cloudflare.com/phpaftershell-waf-protection/>) — _blog.cloudflare.com_
-47. [PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution](<https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html>) — _thehackernews.com_
-48. [Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required](<https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html>) — _thehackernews.com_
-49. [Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers](<https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html>) — _thehackernews.com_
-50. [Escape Research Found a Scope Bypass that Made Gitea's Restricted Tokens Full Admins](<https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/>) — _escape.tech_
-51. [Updating our coordinated vulnerability disclosure policy timelines](<https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines>) — _anthropic red_
-52. [Strengthening NATO and allied cyber defenses with AI](<https://openai.com/index/strengthening-nato-allied-cyber-defences-ai>) — _openai.com_
-53. [Inside the Loop: Five AI Attack Frameworks that Never Ask Permission](<https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex>) — _elastic.co_
-54. [Scheduling the removal of the kube-proxy IPVS backend](<https://kubernetes.io/blog/2026/11/16/ipvs-removal/>) — _kubernetes.io_
-55. [How Salesforce efficiently right-sizes Kubernetes workloads at scale on Amazon EKS](<https://aws.amazon.com/blogs/containers/how-salesforce-efficiently-right-sizes-kubernetes-workloads-at-scale-on-amazon-eks/>) — _aws.amazon.com_
-56. [pg_pinecone now deploys on Railway in one click](<https://www.pinecone.io/blog/pg-pinecone-railway/>) — _pinecone_
-57. [Is your OpenTelemetry pipeline becoming a performance bottleneck?](<https://www.cncf.io/blog/2026/11/17/is-your-opentelemetry-pipeline-becoming-a-performance-bottleneck/>) — _cncf.io_
-58. [Not Everything Needs an LLM](<https://newsletter.posthog.com/p/decision-models>) — _newsletter.posthog.com_
-59. [Wait for pull request events with GitHub CLI](<https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli>) — _github.blog_
-60. [Enterprise Live Migrations from Azure DevOps generally available](<https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available>) — _github.blog_
-61. [AWS announces ExtendDB 1.0](<https://aws.amazon.com/about-aws/whats-new/2026/11/aws-extenddb-1-0/>) — _aws.amazon.com_
-62. [PostgreSQL 19 Released](<https://simonwillison.net/2026/Nov/19/postgresql-19/>) — _simonwillison.net_
-63. [PostgreSQL 19 Released!](<https://www.postgresql.org/about/news/postgresql-19-released-3449/>) — _postgresql.org_
-64. [Data Contracts](<https://martinfowler.com/articles/data-contracts.html>) — _martinfowler.com_
-65. [De-identifying text at scale: How Airbnb protects personal data in AI training](<https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0>) — _medium.com_
-66. [Rebuilding Data Lineage at LinkedIn: From Storage to Compute](<https://www.linkedin.com/blog/engineering/infrastructure/rebuilding-data-lineage-at-linkedin-from-storage-to-compute>) — _linkedin.com_
-67. [OpenSRE](<https://github.com/Tracer-Cloud/opensre>) — _github.com_
-68. [Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement](<https://www.anthropic.com/news/ipo-close>) — _anthropic news_
-69. [\[AINews\] Anthropic successfully completes largest IPO in history, valued at $1.5T](<https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/>) — _latent.space_
-70. [Anthropic IPO takeaways: ANT debuts with $1.8 trillion market cap in landmark moment for AI](<https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html>) — _cnbc.com_
-71. [Combatting adversarial distillation](<https://openai.com/index/combatting-adversarial-distillation>) — _openai.com_
-72. [Can AI help scientists identify promising drug candidates?](<https://openai.com/index/introducing-medchembench>) — _openai.com_
-73. [Google's AI answers reducing search traffic by 40%](<https://revscope.co/blog/search-seo-geo-2026/>) — _hnrss.org_
-74. [Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT](<https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership>) — _openai.com_
-75. [California state AG sues OpenAI over rogue agent incidents](<https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/>) — _techcrunch.com_
-76. [US moves to cut China's remote access to AI chips](<https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/>) — _arstechnica.com_
+1. [Data Engineering Weekly #297](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>) — _dataengineeringweekly.com_
 
 
 ## Recent archive
