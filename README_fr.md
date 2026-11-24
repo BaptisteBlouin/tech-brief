@@ -8,94 +8,29 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-23
-<sub>mis à jour le 24 novembre 2026 à 00:01</sub>
+### Dernier digest — 2026-11-24
+<sub>mis à jour le 24 novembre 2026 à 12:00</sub>
 
-## Modèles d'IA et capacités
+## Modèles
 
-- Thinking Machines a publié Inkling 2 Mini, un modèle à poids ouverts de 26,4 milliards de paramètres qui consacre un calcul interne supplémentaire au raisonnement avant de répondre, et devance les modèles à poids ouverts de moins de 100 milliards de paramètres sur le benchmark de programmation DeepSWE <sup>[1](<https://thinkingmachines.ai/news/inkling-2-mini/>)</sup>.
-- Tencent a publié Hy4, un modèle à poids ouverts capable de comprendre le texte, les images et la vidéo, doté d'un backbone de 770 milliards de paramètres qui active 49 milliards de paramètres par token, d'un contexte d'un million de tokens et d'un drafter de décodage spéculatif <sup>[2](<https://huggingface.co/tencent/Hy4>)</sup>.
-- NVIDIA a publié Nemotron-Labs-Sigma, 14 points de contrôle ouverts en 3 et 8 milliards de paramètres qui génèrent du texte en débruitant des embeddings de tokens ; le modèle de 8 milliards atteint une accélération moyenne du débit de 3,46x par rapport au décodage autorégressif sur un GB200 <sup>[3](<https://research.nvidia.com/labs/genair/sigma/>)</sup>.
-- METR indique que les modèles de pointe égalent ou dépassent souvent des humains qualifiés sur des tâches de programmation et d'optimisation bien définies, et que la durée des tâches qu'ils réussissent double environ tous les 3,6 mois <sup>[4](<https://metr.org/blog/2026-11-20-q4-2026-capability-update/>)</sup>.
-- Une preuve de l'hypothèse de Riemann assistée par IA a été publiée sous la forme d'une bibliothèque Lean de 17 millions de lignes de code ; les communautés Lean et Mathlib affirment que la preuve compile et établit l'énoncé correct <sup>[5](<https://www.wsj.com/tech/ai/anthropic-mathematician-says-claude-has-solved-the-most-famous-problem-in-math-9361920b>), [6](<https://leanprover-community.github.io/blog/posts/riemann-hypothesis/>)</sup>.
+- Z.ai a publié GLM-5.4, présenté comme son premier modèle reposant sur une architecture transformer en boucle, où un groupe de couches à poids partagés est exécuté plusieurs fois pour approfondir le réseau sans ajouter de paramètres <sup>[1](<https://simonwillison.net/2026/Nov/23/glm-54/>)</sup>. Le modèle n'est pas encore disponible en poids ouverts <sup>[1](<https://simonwillison.net/2026/Nov/23/glm-54/>)</sup>.
+- L'approche transformer en boucle apparaît aussi dans Inkling 2 Mini de Thinking Machines Lab, qui exécute les couches intermédiaires trois fois par token afin d'améliorer le raisonnement sur les tâches de codage agentique <sup>[1](<https://simonwillison.net/2026/Nov/23/glm-54/>)</sup>.
 
-## Agents, RAG et ingénierie des LLM
+## Industrie et direction
 
-- Google décrit des politiques de gouvernance sémantique qui valident chaque appel d'outil proposé par rapport à l'intention de l'utilisateur avant son exécution ; sur AgentDojo, avec un agent Gemini 2.5 Flash, le taux de réussite des attaques est passé de 48,7 % à 0,9 % tandis que l'utilité des tâches reste élevée, et la fonctionnalité est en préversion via Agent Gateway <sup>[7](<https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/>)</sup>.
-- Anthropic a introduit Claude Ship en bêta : Claude examine les pull requests, les corrige et approuve celles qui sont autorisées par la politique d'une équipe, construit à partir de Code Review et des agents PR Steward et Claude Approvals <sup>[8](<https://claude.com/resources/articles/introducing-claude-ship>)</sup>.
-- Simon Willison rapporte que Ladybird a publié sa première version alpha pour macOS et Linux, avec ses propres implémentations de HTML, CSS, mise en page, JavaScript et WebAssembly <sup>[9](<https://simonwillison.net/2026/Nov/23/ladybird/>)</sup>.
-- Streaming des réponses LLM : donner au relais des événements explicites de fin et d'erreur, interrompre la génération en amont lorsque le client se déconnecte, et ne effectuer le rendu qu'au plus une fois par image d'animation <sup>[10](<https://danholloran.me/posts/streaming-llm-responses-tokens-arrive-faster-than-you-should-render-them>)</sup>.
-- Des auteurs d'AWS proposent un cadre d'observabilité pour les applications agentiques couvrant quatre couches et trois préoccupations (fiabilité, coût, sécurité), en recommandant les conventions OpenTelemetry GenAI et des portes d'évaluation <sup>[11](<https://aws.amazon.com/blogs/mt/an-ai-observability-framework-for-your-agentic-applications/>)</sup>.
-- La mémoire persistante d'un agent peut réinjecter des faits obsolètes lorsque les circonstances changent ; des passes en arrière-plan qui réécrivent les souvenirs stockés sont une façon de gérer les corrections et l'oubli <sup>[12](<https://newsletter.chainofthought.show/p/the-state-of-agent-memory-how-it>)</sup>.
-- Les agents de programmation construisent et exécutent désormais des pipelines de données avec peu d'intervention humaine : dltHub indique que Claude Code a lancé 92 % des pipelines exécutés par des agents en octobre, et qu'environ 28 000 sources de données personnalisées distinctes sont en usage <sup>[13](<https://dlthub.com/blog/data-engineering-autonomy-moment>)</sup>.
+- Nvidia a annoncé le retour de Jensen Huang en tant que PDG, président et membre du conseil d'administration, onze jours après l'annonce de sa démission ; le vote du conseil a été unanime et a suivi les avis de hauts responsables américains, et un comité du conseil dédié à la sécurité nationale et au contrôle des exportations a été créé <sup>[2](<https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/>)</sup>.
 
-## Sécurité
+## Outils pour développeurs
 
-- Analyse de sécurité : OpenRouter a retiré trois fournisseurs d'inférence après que Dragos a découvert pendant des mois un vol de prompts en plaçant des identifiants canari dans environ deux millions de prompts, et il a retiré 125 endpoints de l'éligibilité à la rétention zéro donnée <sup>[14](<https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html>)</sup>. Together AI a signalé une fuite où un agent de programmation IA a commis un identifiant Hugging Face dans un dépôt public, et a fait de la rétention zéro donnée le paramètre par défaut pour les nouveaux comptes <sup>[15](<https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026>)</sup>.
-- AWS rapporte que les agents IA Cairn d'un acteur ont trouvé une faille zero-day de traversée de chemin dans une application open source d'imagerie médicale et l'ont transformée en reverse shell root en environ 11 minutes ; les défenseurs doivent s'appuyer sur des détections à haute confiance qui déclenchent une réponse automatisée <sup>[16](<https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/>)</sup>.
-- OpenAI et Cisco ont présenté Shirudo, un runtime open source dans lequel un bouclier généré par Codex a bloqué une tentative d'exploitation Java4Shell contre un service Elasticsearch en cours d'exécution, sans redémarrage <sup>[17](<https://openai.com/index/introducing-shirudo>)</sup>.
-- Microsoft indique qu'une faille dans l'API Entra Connect Health donnait un accès en lecture seule aux métadonnées du tenant ; un correctif côté serveur a été déployé le 19 novembre et aucun correctif client n'est nécessaire, mais les adresses de contact des administrateurs peuvent être ciblées par du phishing <sup>[18](<https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/>)</sup>.
-- Signal bloque désormais les captures d'écran sur iOS 27 et active Screen Security sur Android lorsqu'il détecte un assistant IA lisant l'écran, tout en admettant que les agents peuvent encore accéder aux données via le système de fichiers <sup>[19](<https://signal.org/blog/protecting-your-privacy/>)</sup>.
-- Le gestionnaire de sessions par fichiers par défaut de PHP (CVE-2026-126714) peut permettre qu'une écriture interrompue laisse des données sérialisées contrôlées par un attaquant, qu'une requête ultérieure désérialise en objet <sup>[20](<https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html>)</sup>.
-
-## DevOps, cloud et infrastructure
-
-- L'aperçu de Kubernetes v1.38 liste les dépréciations et suppressions, notamment la suppression des variables d'environnement de désactivation WebSocket de kubectl, définies dans les versions v1.30 et v1.31 <sup>[21](<https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/>)</sup>.
-- Karpenter v1.15 ajoute la prise en charge de Dynamic Resource Allocation afin que le provisionnement tienne compte de la topologie et de la mise en réseau des GPU, classe la réparation de nœuds comme perturbation volontaire respectant les Pod Disruption Budgets, et ajoute un contrôleur de coût de suppression des pods <sup>[22](<https://aws.amazon.com/blogs/containers/karpenter-v1-15-gpu-aware-provisioning-smarter-node-repair-and-more/>)</sup>.
-- Google a donné Agent Substrate et gVisor à la CNCF ; Agent Substrate sépare l'état des agents du calcul dans des pools Kubernetes préchauffés, ce qui permet aux agents de reprendre en moins de 500 millisecondes <sup>[23](<https://www.infoq.com/news/2026/11/google-substrate-gvisor-cncf/>)</sup>.
-- La migration sur place de GKE Dataplane V2 est entrée en préversion pour les clusters VPC natifs sur GKE 1.35 ou ultérieur, permettant un passage depuis Dataplane V1 sans cluster parallèle et un retour en arrière avant la finalisation <sup>[24](<https://cloud.google.com/blog/products/networking/gke-dataplane-v2-in-place-migration/>)</sup>.
-- Datadog a déplacé l'état d'agrégation des métriques dans RocksDB réaffecté dynamiquement et adossé à un stockage blob, en sortant l'état historique du chemin de reprise du streaming afin que les workers reprennent au niveau du direct <sup>[25](<https://www.datadoghq.com/blog/engineering/how-we-scaled-metrics-aggregation/>)</sup>.
-- Les équipes plateforme devraient envisager un OS immuable géré par API comme Talos Linux pour les nœuds de cluster, en échange de l'abandon de l'accès shell interactif contre une configuration déclarative et des mises à jour atomiques <sup>[26](<https://platformengineering.org/blog/the-layer-of-your-platform-nobody-owns>)</sup>.
-
-## Ingénierie des données
-
-- Flock a migré son lakehouse, comptant près de 480 modèles dbt, d'AWS Glue vers DuckDB en processus, réduisant de 74 % la durée des builds principaux et de 91 % les dépenses de calcul quotidiennes <sup>[27](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>. La migration repose sur un stockage Iceberg ouvert, qui permet de remplacer Spark distribué par un moteur mono-nœud dimensionné sur la charge réelle <sup>[27](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
-- Flock a utilisé des agents IA via un serveur MCP et une compétence Claude réutilisable pour vérifier la parité des tables pendant la migration et pour passer à DuckDB 2.0 <sup>[27](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
-- Près de 500 employés de Mews ont utilisé des agents IA pour répondre eux-mêmes à leurs questions de données lors du premier mois, en s'appuyant sur des définitions de métriques partagées dans Claude, Hex et Slack, et en signalant les réponses qui reposent sur des données non certifiées <sup>[28](<https://elliotip04.substack.com/p/self-service-agentic-analytics-part>)</sup>.
-- OpenMetadata 2.1 importe les définitions de métriques depuis les entrepôts et les outils BI, ajoute des hiérarchies et une lignée plus fine, et expose un graphe de connaissances RDF via MCP <sup>[29](<https://blog.open-metadata.org/announcing-openmetadata-2-1-your-business-definitions-in-the-context-graph-54c65a6c6749>)</sup>.
-
-## Outils de développement et pratiques d'ingénierie
-
-- Les statuts d'issues et les tableaux de dépôt sont en préversion publique sur GitHub, avec des automatisations qui font passer les issues à « In progress » ou « In review » lorsque les pull requests liées changent d'état <sup>[30](<https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview>)</sup>.
-- L'action de téléversement de couverture de code échoue désormais lorsqu'un rapport n'est pas au format Cobertura XML, alors que les téléversements précédents semblaient réussir sans que la couverture n'apparaisse sur les pull requests <sup>[31](<https://github.blog/changelog/2026-11-23-code-coverage-uploads-now-flag-invalid-report-formats>)</sup>.
-- Un éditorial de newsletter soutient que les entretiens de programmation évoluent de la génération de code vers des formats « fix-and-explain », où les candidats relisent et déboguent du code existant <sup>[27](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
-- LeetCode.ai a introduit une fonctionnalité « code review » qui évalue la compréhension du code par un candidat et sa capacité à corriger des bogues, destinée à préparer les data engineers aux entretiens de type revue de code <sup>[27](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>)</sup>.
-- Expédier plus de 100 PR en production en une semaine illustre la façon dont les fondamentaux du développement logiciel ont changé avec le code écrit par des agents <sup>[32](<https://lethain.com/passing-100-prs-in-a-week/>)</sup>.
+- datasette-agent 0.7a1 permet aux sessions de chat d'ouvrir un panneau latéral en iframe capable de naviguer entre les pages, avec une navigation améliorée grâce aux fragments d'URL (hash) pour une meilleure intégration avec d'autres plugins <sup>[3](<https://simonwillison.net/2026/Nov/24/datasette-agent/>)</sup>.
+- datasette-charts 0.2a0 s'intègre à Datasette Agent : un utilisateur peut demander un graphique dans le chat et en obtenir un généré avec les mêmes outils de suggestion et de génération, puis l'ouvrir dans un panneau de création de graphiques <sup>[4](<https://simonwillison.net/2026/Nov/24/datasette-charts/>)</sup>.
 
 ## Sources
 
-1. [Inkling 2 Mini](<https://thinkingmachines.ai/news/inkling-2-mini/>) — _thinkingmachines.ai_
-2. [Tencent Releases Hy4 With Multimodal Input and Million-Token Context](<https://huggingface.co/tencent/Hy4>) — _huggingface.co_
-3. [NVIDIA Releases Nemotron-Labs-Sigma Continuous Diffusion Language Models](<https://research.nvidia.com/labs/genair/sigma/>) — _research.nvidia.com_
-4. [AI R&D-Relevant Model Capabilities Are Improving Rapidly](<https://metr.org/blog/2026-11-20-q4-2026-capability-update/>) — _metr.org_
-5. [Anthropic Mathematician Says AI Has Solved the Most Famous Problem in Math](<https://www.wsj.com/tech/ai/anthropic-mathematician-says-claude-has-solved-the-most-famous-problem-in-math-9361920b>) — _wsj.com_
-6. [Lean verification of the Riemann Hypothesis](<https://leanprover-community.github.io/blog/posts/riemann-hypothesis/>) — _leanprover-community.github.io_
-7. [Did the user ask for this? Securing AI agents against intent hijacking with Semantic governance policies](<https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/>) — _google ai_
-8. [Introducing Claude Ship](<https://claude.com/resources/articles/introducing-claude-ship>) — _claude_
-9. [Ladybird's first alpha release](<https://simonwillison.net/2026/Nov/23/ladybird/>) — _simonwillison.net_
-10. [Streaming LLM Responses Without Rendering Every Token](<https://danholloran.me/posts/streaming-llm-responses-tokens-arrive-faster-than-you-should-render-them>) — _danholloran.me_
-11. [An AI Observability Framework for Your Agentic Applications](<https://aws.amazon.com/blogs/mt/an-ai-observability-framework-for-your-agentic-applications/>) — _aws.amazon.com_
-12. [Your AI Agent Remembers Everything. That's the Problem](<https://newsletter.chainofthought.show/p/the-state-of-agent-memory-how-it>) — _newsletter.chainofthought.show_
-13. [The data engineering autonomy moment: agents now build and run dlt pipelines, and ingestion becomes a 40x bigger market](<https://dlthub.com/blog/data-engineering-autonomy-moment>) — _dlthub.com_
-14. [OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms](<https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html>) — _thehackernews.com_
-15. [Security event: Prompt leakage for requests in June and July of 2026](<https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026>) — _together.ai_
-16. [Chinese-nexus actor's Cairn AI agents found a zero-day on their own](<https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/>) — _aws.amazon.com_
-17. [OpenAI and Cisco introduce Shirudo](<https://openai.com/index/introducing-shirudo>) — _openai.com_
-18. [Microsoft Entra Connect Health flaw exploited to steal tenant data](<https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/>) — _bleepingcomputer.com_
-19. [Signal is Serious About Protecting Your Privacy](<https://signal.org/blog/protecting-your-privacy/>) — _signal.org_
-20. [phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution](<https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html>) — _thehackernews.com_
-21. [Kubernetes v1.38 Sneak Peek](<https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/>) — _kubernetes.io_
-22. [Karpenter v1.15: GPU-aware provisioning, smarter node repair, and more](<https://aws.amazon.com/blogs/containers/karpenter-v1-15-gpu-aware-provisioning-smarter-node-repair-and-more/>) — _aws.amazon.com_
-23. [Google Donates Agent Substrate and gVisor to the CNCF to Secure AI Agents at Scale](<https://www.infoq.com/news/2026/11/google-substrate-gvisor-cncf/>) — _infoq.com_
-24. [Introducing in-place migration to GKE Dataplane V2](<https://cloud.google.com/blog/products/networking/gke-dataplane-v2-in-place-migration/>) — _cloud.google.com_
-25. [How we scaled metrics aggregation by moving durable state into storage](<https://www.datadoghq.com/blog/engineering/how-we-scaled-metrics-aggregation/>) — _datadoghq.com_
-26. [The layer of your platform nobody owns](<https://platformengineering.org/blog/the-layer-of-your-platform-nobody-owns>) — _platformengineering.org_
-27. [Data Engineering Weekly #297](<https://www.dataengineeringweekly.com/p/data-engineering-weekly-297>) — _dataengineeringweekly.com_
-28. [Self-service agentic analytics at Mews, Part I: data foundations](<https://elliotip04.substack.com/p/self-service-agentic-analytics-part>) — _elliotip04.substack.com_
-29. [OpenMetadata 2.1 Makes Semantic Context an Open-Source Platform Concern](<https://blog.open-metadata.org/announcing-openmetadata-2-1-your-business-definitions-in-the-context-graph-54c65a6c6749>) — _blog.open-metadata.org_
-30. [Issue statuses and repository boards are in public preview](<https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview>) — _github.blog_
-31. [Code coverage uploads now flag invalid report formats](<https://github.blog/changelog/2026-11-23-code-coverage-uploads-now-flag-invalid-report-formats>) — _github.blog_
-32. [Shipping 100+ PRs to production in a week](<https://lethain.com/passing-100-prs-in-a-week/>) — _lethain.com_
+1. [GLM-5.4: Toward Generalized Coding with Our First Loop Transformer](<https://simonwillison.net/2026/Nov/23/glm-54/>) — _simonwillison.net_
+2. [\[AINews\] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft](<https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/>) — _latent.space_
+3. [datasette-agent 0.7a1](<https://simonwillison.net/2026/Nov/24/datasette-agent/>) — _simonwillison.net_
+4. [datasette-charts 0.2a0](<https://simonwillison.net/2026/Nov/24/datasette-charts/>) — _simonwillison.net_
 
 
 ## Archive récente
