@@ -8,96 +8,28 @@
 > _Mis à jour 2×/jour · archive complète conservée dans le dépôt._
 > 🇬🇧 [English version](README.md)
 
-### Dernier digest — 2026-11-24
-<sub>mis à jour le 25 novembre 2026 à 00:01</sub>
+### Dernier digest — 2026-11-25
+<sub>mis à jour le 25 novembre 2026 à 12:00</sub>
 
-## Modèles
+## Modèles d'IA et outils LLM
 
-- Z.ai a publié GLM-5.4, son premier modèle phare construit sur un Loop Transformer, qui réutilise un bloc partagé de couches pour raisonner plus en profondeur sans ajouter de paramètres ; Z.ai affirme qu'il atteint une intelligence comparable à des modèles de 2T à 3T paramètres, et il est disponible dès maintenant dans le GLM Coding Plan <sup>[1](<https://simonwillison.net/2026/Nov/23/glm-54/>), [2](<https://z.ai/blog/glm-5.4>)</sup>.
-- L'approche du transformer en boucle apparaît aussi dans Inkling 2 Mini de Thinking Machines Lab, qui exécute les couches intermédiaires trois fois par token pour améliorer le raisonnement sur les tâches de programmation agentique <sup>[1](<https://simonwillison.net/2026/Nov/23/glm-54/>)</sup>.
-- OpenAI indique que ses modèles GPT-6 peuvent concevoir de nouvelles formes et séquences de protéines en n'utilisant que le raisonnement et le code, et qu'un modèle de recherche interne égale ou dépasse les modèles spécialisés sur de nombreuses tâches de conception de protéines ; lors de tests en laboratoire avec Onava, des protéines basées sur les conceptions de GPT-6.2 ont montré des signes de liaison à cinq cibles <sup>[3](<https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities>)</sup>.
-- DeepCrossAttention (DCA) de Google permet à chaque couche de transformer de sélectionner et de router dynamiquement les caractéristiques des couches précédentes, réduisant la dilution de l'information et le nombre de paramètres de 30 à 40 %, avec une convergence plus rapide et une meilleure perplexité que les modèles standards sur C4 et LM1B <sup>[4](<https://research.google/blog/supercharging-transformer-residual-connections/>)</sup>.
-- Rocket de Microsoft AI est son framework interne d'apprentissage par renforcement, utilisé pour le post-entraînement de MAI Base 2, un modèle de trois billions de paramètres, sans distillation de modèles tiers <sup>[5](<https://microsoft.ai/news/rl-infrastructure-at-microsoft-ai/>)</sup>.
+- Google DeepMind est de retour dans la course à la frontière, le modèle Gemini 4 Neon faisant désormais parler de lui et son adoption affichant une progression particulièrement forte <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>. Gemini 4 Argon, Carbon et Hydrogen ont également été présentés dans ce même panorama <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>.
+- Simon Willison identifie trois points d'inflexion pour les LLM au cours des douze derniers mois, ancrés sur la sortie de Claude Opus 4.5 il y a un an ; Anthropic affirmait que ce modèle gère l'ambiguïté et les bogues impliquant plusieurs systèmes sans nécessiter de guidage pas à pas <sup>[2](<https://simonwillison.net/2026/Nov/24/llm-inflection-points/>)</sup>.
 
-## Agents et outils de programmation
+## Agents et voix
 
-- Les Skills d'Anthropic via MCP sont désormais en bêta publique dans Claude, permettant aux serveurs MCP d'expédier des skills avec leurs outils ; Tasks et Elicitation sont généralement disponibles et File Uploads arrive prochainement <sup>[6](<https://claude.com/resources/articles/skills-over-mcp-tasks-and-more>)</sup>.
-- Les artifacts de Claude peuvent désormais être installés en tant qu'applications Mac et Windows en bêta, chacune avec sa propre icône et sa fenêtre, un accès à l'ordinateur soumis à autorisation et des mises à jour automatiques lorsque l'artifact sous-jacent est modifié <sup>[7](<https://claude.com/resources/articles/install-as-app>)</sup>.
-- Claude Ship d'Anthropic est un ensemble d'agents qui aident à préparer les pull requests GitHub à la fusion : Code Review signale les problèmes, PR Steward pousse les corrections et Claude Approvals vérifie les modifications selon la politique d'approbation d'une équipe <sup>[8](<https://code.claude.com/docs/en/claude-ship>)</sup>.
-- OpenAI indique qu'iFood utilise sa plateforme Remote Agents sur plus de 15 000 dépôts, avec plus de 25 000 exécutions, un coût moyen d'inférence de 0,04 US$ par exécution, et plus du double de vulnérabilités corrigées grâce à sa plateforme de sécurité interne <sup>[9](<https://openai.com/business/customer-stories/ifood>)</sup>.
-- Une expérience a traduit 600 000 lignes de code source IBM i en plus d'un million de lignes de Java à l'aide de 49 sessions Claude Code ; les programmes traduits indépendamment ont dérivé en style et dupliqué des fonctions auxiliaires, avec 20 implémentations d'un même helper de conversion de date, et la première génération a coûté environ 1 100 $ aux tarifs de l'API <sup>[10](<https://tomassetti.me/legacy-modernization-llms-large-translation-consistency>)</sup>.
-- Un développeur a constaté que ses agents Claude Code ne fonctionnaient qu'environ 26 % du temps, et a reconstruit un orchestrateur nocturne pour gérer dans le code l'état, les nouvelles tentatives et la revue indépendante, aboutissant à 137 commits vérifiés en environ 24 heures <sup>[11](<https://jurajb.dev/coding-agents-mostly-waiting/>)</sup>.
-- Kudelski Security a testé nono, Docker Sandboxes, Microsandbox et NVIDIA OpenShell pour isoler les agents de programmation ; tous ont obtenu entre 4 et 4,5 sur 5. Docker Sandboxes et Microsandbox utilisent des microVM, nono utilise des contrôles au niveau du système d'exploitation et démarre le plus vite, et aucun ne peut refuser l'accès à un fichier situé dans un répertoire autorisé <sup>[12](<https://kudelskisecurity.com/research/sandboxing-coding-agents>)</sup>.
-- Engseclabs indique que les agents de programmation abusent des politiques Deny et des limites de permissions dans AWS IAM, et ajoutent inutilement des instructions Allow sts:GetCallerIdentity <sup>[13](<https://engseclabs.com/blog/things-llms-get-wrong-about-aws-iam/>)</sup>.
-- Les skills Stitch de Google offrent aux agents de programmation des workflows réutilisables pour le serveur MCP Stitch <sup>[14](<https://github.com/google-labs-code/stitch-skills>)</sup>.
+- IBM Research décrit un agent vocal pour les langues indiennes construit sur CUGA, un agent généraliste configurable qui occupe la première place du benchmark AppWorld <sup>[3](<https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga>)</sup>.
 
-## Outils et frameworks pour développeurs
+## Société et données publiques
 
-- Nuxt 4.7 propose, en option et à titre expérimental, Nitro v3 sur les applications Nuxt 4 existantes en prévision de Nuxt 5, ajoute la validation par schéma de la configuration runtime, affiche les diagnostics de types et de lint dans l'overlay de développement, et prévisualise la prise en charge de WebMCP pour exposer les actions de l'application aux agents de navigateur <sup>[15](<https://nuxt.com/blog/v4-7>)</sup>.
-- GPUI de Zed, son framework d'interface Rust accéléré par GPU, dispose désormais de son propre dépôt et combine des techniques en mode immédiat et en mode conservé <sup>[16](<https://github.com/zed-industries/gpui>)</sup>.
-- datasette-agent 0.7a1 permet aux sessions de chat d'ouvrir un panneau latéral en iframe capable de naviguer entre les pages, avec une navigation améliorée par hachages de fragments <sup>[17](<https://simonwillison.net/2026/Nov/24/datasette-agent/>)</sup>.
-- datasette-charts 0.2a0 s'intègre à Datasette Agent : un utilisateur peut demander un graphique dans le chat et l'ouvrir dans un panneau de création de graphiques <sup>[18](<https://simonwillison.net/2026/Nov/24/datasette-charts/>)</sup>.
-- Le navigateur Ladybird, doté de son propre moteur web indépendant, est arrivé en alpha après quatre ans de développement pour macOS et Linux ; son utilisation reste limitée et certains sites plantent encore <sup>[19](<https://www.phoronix.com/news/Ladybird-Browser-Alpha>)</sup>.
-- Torch-TensorRT 2.15 et ExecuTorch 1.6 permettent de compiler un modèle PyTorch avec TensorRT, de l'enregistrer comme programme ExecuTorch et de l'exécuter depuis C++ ou Python sans charger torch ; sur un Jetson Orin Nano, il se situe à 4 % près de la configuration TensorRT la plus rapide mesurée, et une politique de 3,6 milliards de paramètres tient sur la carte de 8 Go alors que PyTorch eager manque de mémoire <sup>[20](<https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed/>)</sup>.
-
-## Infrastructure, performance et pratiques d'ingénierie
-
-- DuckDB indique que SproutMe a réduit de 92,9 % la durée de ses tests d'intégration <sup>[21](<https://duckdb.org/2026/11/24/sproutme-faster-pipeline-testing.html>)</sup>.
-- Datadog a lancé Mitigeddon, un site gratuit présentant l'exploitation réelle et la prévalence des CVE ; il indique que seulement 0,6 à 0,8 % des CVE sont exploitées dans la nature et que le délai médian entre divulgation et exploitation est passé à 33 jours en 2026, contre 163 en 2024 <sup>[22](<https://securitylabs.datadoghq.com/articles/introducing-mitigeddon/>)</sup>.
-- Un article sur small-change chez Imprint utilise une vérification CI pour orienter les pull requests éligibles vers une revue allégée, en fonction de la taille du diff, de l'historique de l'auteur dans les services concernés et des résultats de la revue automatisée <sup>[23](<https://lethain.com/small-changes/>)</sup>.
-- Un test mobile bridé a montré que le prérendu d'une version réduite de la carte principale de la page d'accueil ramenait le Largest Contentful Paint d'environ 2,5 secondes à 1,3 seconde <sup>[24](<https://shannadige.com/blog/performance-is-design/>)</sup>.
-- GitHub migre les notifications sur GitHub.com à partir du 1er décembre 2026 : les activités courantes comme les commentaires et les revues ne vous réabonneront plus après un désabonnement manuel, alors que les mentions, assignations et demandes de revue le feront toujours <sup>[25](<https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com>)</sup>.
-
-## Sécurité
-
-- Une faille critique dans un parseur binaire (CVE-2026-134814, CVSS 9,2 et 8,1) touche les versions antérieures à 2.3.1 : un attaquant qui contrôle les définitions du parseur peut injecter du JavaScript via des options de chaîne non validées ; il faut mettre à jour vers 2.3.1 ou une version ultérieure <sup>[26](<https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html>)</sup>.
-- Des attaquants exploitent la CVE-2026-76466 sur les passerelles Cisco Expressway-C et Expressway-E en cluster, qui utilisent des identifiants codés en dur et une validation de certificat faible pour permettre l'exécution de commandes root sans authentification ; la CISA a ajouté cette faille au score CVSS 9,8 à son catalogue KEV avec une échéance de correctif fédérale fixée à lundi <sup>[27](<https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722>)</sup>.
-- Une compromission de la chaîne d'approvisionnement a placé une porte dérobée dans six extensions WP Connect, dont Air WP Sync et WP Sync for Notion, via le compte WordPress.org du développeur ; la nouvelle période de latence des publications de WordPress.org a stoppé les mises à jour avant qu'elles n'atteignent les sites, mais les administrateurs doivent vérifier la CVE-2026-135202 et rechercher des webshells <sup>[28](<https://www.wordfence.com/blog/2026/11/supply-chain-compromise-backdoors-six-wp-connect-plugins-blocked-by-wordpress-orgs-release-hold/>)</sup>.
-- James Forshaw de Project Zero a utilisé un seul bit de l'en-tête PE pour charger du code non fiable dans des processus VirtualBox durcis (CVE-2026-87268), contourner UMCI sur Windows 11 Mode S (CVE-2026-108398) et atteindre une exécution de code PPL ; Microsoft a corrigé la vérification WLDP en octobre, mais les défenseurs utilisant WDAC doivent activer Dynamic Code Security <sup>[29](<https://projectzero.google/2026/11/virtualbox-process-hardening.html>)</sup>.
-- Un acteur lié à la Chine a utilisé des agents Cairn contre des universités d'Asie de l'Est, obtenant les droits root en 11 minutes en enchaînant un serveur Redis exposé, la devinette d'identifiants SSH et une faille de traversée de chemin dans une application open source d'imagerie médicale <sup>[30](<https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes>)</sup>.
-- CrowdStrike a accepté de racheter Zscaler dans un accord intégralement en actions valorisant la société à environ 43,9 milliards de dollars, intégrant le SASE Zero Trust à la plateforme Falcon ; les entreprises prévoient une clôture de l'opération au second semestre de l'exercice fiscal 2028 de CrowdStrike, sous réserve des approbations <sup>[31](<https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-zscaler-bringing-network-security-and-zero-trust-to-the-falcon-platform/>)</sup>.
-
-## Industrie et direction
-
-- Le conseil d'administration de Nvidia a réintégré Jensen Huang en tant que président, directeur général et administrateur après un vote unanime et une confirmation du gouvernement américain qu'il ne présente aucun risque pour la sécurité nationale ; l'entreprise crée un comité de sécurité nationale et de contrôle des exportations et nommera un directeur de la conformité <sup>[32](<https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/>), [33](<https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director>)</sup>.
-- Amazon a acquis la technologie de l'Optimization Stack de Decart, ainsi que son équipe fondatrice, pour 7,5 milliards de dollars, alors qu'il prépare la vente de puces Trainium <sup>[34](<https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/>)</sup>.
+- Aux États-Unis, les requêtes liées à l'IA mettent sous pression les systèmes de documents publics des petites villes : une greffière d'une commune du Vermont signale que les demandes d'accès aux données d'achats publics sont passées d'annuelles à mensuelles, souvent émanant d'entreprises menant des recherches ciblées <sup>[4](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>)</sup>.
 
 ## Sources
 
-1. [GLM-5.4: Toward Generalized Coding with Our First Loop Transformer](<https://simonwillison.net/2026/Nov/23/glm-54/>) — _simonwillison.net_
-2. [GLM-5.4](<https://z.ai/blog/glm-5.4>) — _z.ai_
-3. [GPT-6 models demonstrate intrinsic protein-design capabilities](<https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities>) — _openai.com_
-4. [Supercharging transformer residual connections](<https://research.google/blog/supercharging-transformer-residual-connections/>) — _research.google_
-5. [RL infrastructure at Microsoft AI](<https://microsoft.ai/news/rl-infrastructure-at-microsoft-ai/>) — _microsoft.ai_
-6. [MCP servers can now ship skills, run tasks, and more with Claude](<https://claude.com/resources/articles/skills-over-mcp-tasks-and-more>) — _claude_
-7. [Turn artifacts into Mac and Windows apps](<https://claude.com/resources/articles/install-as-app>) — _claude_
-8. [Claude Ship](<https://code.claude.com/docs/en/claude-ship>) — _code.claude.com_
-9. [How iFood scales coding agents across 15,000 repositories](<https://openai.com/business/customer-stories/ifood>) — _openai.com_
-10. [Legacy Modernization with LLMs: Is a Large Translation Consistent with Itself?](<https://tomassetti.me/legacy-modernization-llms-large-translation-consistency>) — _tomassetti.me_
-11. [My AI coding agents spend most of their time waiting](<https://jurajb.dev/coding-agents-mostly-waiting/>) — _jurajb.dev_
-12. [Sandboxing AI Coding Agents: nono vs Docker Sandboxes vs Microsandbox vs OpenShell](<https://kudelskisecurity.com/research/sandboxing-coding-agents>) — _kudelskisecurity.com_
-13. [Things LLMs Get Wrong About AWS IAM](<https://engseclabs.com/blog/things-llms-get-wrong-about-aws-iam/>) — _engseclabs.com_
-14. [Stitch Skills](<https://github.com/google-labs-code/stitch-skills>) — _github.com_
-15. [Nuxt 4.7](<https://nuxt.com/blog/v4-7>) — _nuxt.com_
-16. [GPUI](<https://github.com/zed-industries/gpui>) — _github.com_
-17. [datasette-agent 0.7a1](<https://simonwillison.net/2026/Nov/24/datasette-agent/>) — _simonwillison.net_
-18. [datasette-charts 0.2a0](<https://simonwillison.net/2026/Nov/24/datasette-charts/>) — _simonwillison.net_
-19. [Ladybird Web Browser/Engine Reaches Alpha](<https://www.phoronix.com/news/Ladybird-Browser-Alpha>) — _phoronix.com_
-20. [ExecuTorch-TensorRT: PyTorch Robot Policies at NVIDIA TensorRT Speed](<https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed/>) — _pytorch.org_
-21. [How SproutMe Cut Integration Test Time by 92.9% with DuckDB](<https://duckdb.org/2026/11/24/sproutme-faster-pipeline-testing.html>) — _duckdb.org_
-22. [Introducing Mitigeddon: Real-world exploitation and prevalence data for impactful CVEs](<https://securitylabs.datadoghq.com/articles/introducing-mitigeddon/>) — _securitylabs.datadoghq.com_
-23. [Speeding Up Code Review with small-change](<https://lethain.com/small-changes/>) — _lethain.com_
-24. [Fast Is a Design Decision](<https://shannadige.com/blog/performance-is-design/>) — _shannadige.com_
-25. [More predictable notifications on GitHub.com](<https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com>) — _github.blog_
-26. [Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions](<https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html>) — _thehackernews.com_
-27. [Critical Cisco remote code execution bug under attack](<https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722>) — _theregister.com_
-28. [Supply Chain Compromise Backdoors Six WP Connect Plugins, Blocked by WordPress.org's Release Hold](<https://www.wordfence.com/blog/2026/11/supply-chain-compromise-backdoors-six-wp-connect-plugins-blocked-by-wordpress-orgs-release-hold/>) — _wordfence.com_
-29. [VirtualBox Process Hardening on Windows 2026 Edition: What's a Single Bit Between Friends?](<https://projectzero.google/2026/11/virtualbox-process-hardening.html>) — _projectzero.google_
-30. [AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes](<https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes>) — _darkreading.com_
-31. [CrowdStrike to Acquire Zscaler, Bringing Network Security and Zero Trust to the Falcon Platform](<https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-zscaler-bringing-network-security-and-zero-trust-to-the-falcon-platform/>) — _crowdstrike.com_
-32. [\[AINews\] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft](<https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/>) — _latent.space_
-33. [NVIDIA Board Reinstates Jensen Huang as President, CEO, and Board Director](<https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director>) — _nvidianews.nvidia.com_
-34. [Amazon snaps up Decart's AI optimization tech for $7.5B as it prepares to sell Trainium chips](<https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/>) — _techcrunch.com_
+1. [\[AINews\] Gemini 4 Neon marks GDM's full return as a Frontier Lab](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>) — _latent.space_
+2. [Three LLM inflection points in twelve months](<https://simonwillison.net/2026/Nov/24/llm-inflection-points/>) — _simonwillison.net_
+3. [An Indic Voice Agent with CUGA](<https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga>) — _huggingface.co_
+4. [AI is straining America’s open records systems](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>) — _technologyreview.com_
 
 
 ## Archive récente
