@@ -9,27 +9,79 @@
 > 🇬🇧 [English version](README.md)
 
 ### Dernier digest — 2026-11-25
-<sub>mis à jour le 25 novembre 2026 à 12:00</sub>
+<sub>mis à jour le 26 novembre 2026 à 00:00</sub>
 
-## Modèles d'IA et outils LLM
+## Modèles d'IA et outillage LLM
 
-- Google DeepMind est de retour dans la course à la frontière, le modèle Gemini 4 Neon faisant désormais parler de lui et son adoption affichant une progression particulièrement forte <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>. Gemini 4 Argon, Carbon et Hydrogen ont également été présentés dans ce même panorama <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>.
-- Simon Willison identifie trois points d'inflexion pour les LLM au cours des douze derniers mois, ancrés sur la sortie de Claude Opus 4.5 il y a un an ; Anthropic affirmait que ce modèle gère l'ambiguïté et les bogues impliquant plusieurs systèmes sans nécessiter de guidage pas à pas <sup>[2](<https://simonwillison.net/2026/Nov/24/llm-inflection-points/>)</sup>.
+- Google DeepMind est de retour dans la course aux modèles de pointe : le modèle Gemini 4 Neon fait beaucoup parler de lui et son adoption connaît une progression particulièrement forte <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>. Gemini 4 Argon, Carbon et Hydrogen étaient également présentés dans ce même panorama <sup>[1](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>)</sup>.
+- Simon Willison identifie trois points d'inflexion des LLM au cours des douze derniers mois, en s'appuyant sur la sortie de Claude Opus 4.5 il y a un an ; Anthropic indique que ce modèle gère l'ambiguïté et les bugs impliquant plusieurs systèmes sans nécessiter d'accompagnement <sup>[2](<https://simonwillison.net/2026/Nov/24/llm-inflection-points/>)</sup>.
+- Cognition a publié SWE-2.1, un modèle dédié au code et aux agents, entraîné par apprentissage par renforcement à partir de Kimi K3 ; il permet presque de doubler le score de SWE-2 sur Terminal-Bench 4.1, à 50,0, et renforce les compétences en sécurité <sup>[3](<https://cognition.com/blog/swe-2-1>)</sup>.
+- Inkling 2 Mini est un modèle Mixture-of-Experts à boucle d'environ 26 milliards de paramètres au total (3 milliards actifs), acceptant des entrées multimodales et offrant une fenêtre de contexte de 1 million de tokens ; un billet Hugging Face optimise son inférence sur une seule RTX PRO 6000, tandis que les recettes vLLM et SGLang publiées ciblent les B200 et GB300 plutôt que les cartes sm120 <sup>[4](<https://huggingface.co/blog/inkling-2-mini-inference-hillclimb>)</sup>.
+- Ternary Bonsai 2.5 27B progresse nettement, par rapport à son prédécesseur, en programmation agentique et en utilisation d'outils sur plusieurs tours, tout en conservant une empreinte de 5,9 Go <sup>[5](<https://prismml.com/news/bonsai-2-5-27b>)</sup>.
+- Antigravity de Google affiche désormais des listes de tâches en direct pour les longs travaux et permet de choisir séparément le modèle de planification et celui d'exécution <sup>[6](<https://www.testingcatalog.com/google-adds-task-checklists-to-antigravity-and-carbon-for-pro/>)</sup>.
+- Les mathématiques avancent vite : un préprint d'OpenAI affirme que l'exposant de la multiplication matricielle vaut exactement 9/4, et un autre article rapporte des bornes équivalentes pour la transformée de Fourier finie <sup>[7](<https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/>), [8](<https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf>)</sup>. Une affirmation sur l'hypothèse de Riemann, élaborée avec l'aide de l'IA, a jusqu'ici passé deux vérifications indépendantes, mais elle reste soumise à examen <sup>[9](<https://www.wsj.com/tech/ai/riemann-hypothesis-anthropic-math-levent-alpoge-75351bcb?amp%3Breflink=desktopwebshare_permalink&amp%3Butm_source=tldrnewsletter>)</sup>.
 
-## Agents et voix
+## Agents, outillage et sécurité
 
-- IBM Research décrit un agent vocal pour les langues indiennes construit sur CUGA, un agent généraliste configurable qui occupe la première place du benchmark AppWorld <sup>[3](<https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga>)</sup>.
+- Search for Agents de Cloudflare est une option du tableau de bord qui crée une instance AI Search, indexe le contenu d'une zone et rend la recherche accessible aux agents sur le domaine <sup>[10](<https://blog.cloudflare.com/search-for-agents/>)</sup>.
+- AWS WAF peut désormais découvrir les points d'accès LLM, MCP et A2A derrière API Gateway, ALB et CloudFront, et les protéger par un groupe de règles géré utilisant Bedrock Guardrails ; l'inspection du contenu est toutefois facturée en supplément <sup>[11](<https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/>)</sup>.
+- Docker montre comment imposer des garde-fous aux agents avec Claude Code en sandbox et des serveurs MCP, en bloquant les requêtes sortantes non approuvées à la frontière réseau <sup>[12](<https://www.docker.com/blog/prove-your-ai-agent-guardrails-work/>)</sup>.
+- Amazon indique que des agents exécutant le framework open source de pentest Cairn ont trouvé et exploité une faille zero-day avec peu d'intervention humaine ; Palo Alto Networks a suivi une campagne Cairn ayant compromis au moins 10 organisations <sup>[13](<https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/>)</sup>.
+- Des travaux sur les essaims montrent qu'à budget de tokens égal, les configurations multi-agents sont plus rapides mais moins efficaces que les agents uniques, qui les surpassent une fois le contexte rafraîchi <sup>[14](<https://www.paradigm3.org/research/swarms>)</sup>.
+- Une analyse du harnais soutient que l'environnement entourant un modèle (contexte, outils, permissions) détermine ce qu'un agent peut faire en toute sécurité <sup>[15](<https://www.infoq.com/news/2026/11/harness-new-operating-system/>)</sup>.
+- Une analyse par rétro-ingénierie d'assistants toujours actifs compare l'usage des outils, la mémoire et les tâches planifiées ou déclenchées par événements <sup>[16](<https://x.com/sarahfim/status/2125402373149557079>)</sup>.
+- Fly.io indique que les agents réalisent désormais au moins 55 % de ses déploiements ; la plateforme prend en charge auth.md pour l'inscription et un Machine Payments Protocol pour les recharges par les agents <sup>[17](<https://fly.io/blog/holding-the-door-for-agents/>)</sup>.
+- WebMCP est une API de navigateur en cours de rédaction qui permet aux sites d'exposer leurs actions comme des outils que les agents peuvent appeler, avec un exemple concret de réservation de restaurant <sup>[18](<https://polypane.app/blog/getting-started-with-webmcp-building-and-testing-tools>)</sup>.
+
+## DevOps, infrastructure et pratiques d'ingénierie
+
+- Le sharding au niveau applicatif entraîne des contraintes opérationnelles, comme un re-sharding difficile et des requêtes inter-shards, ainsi que l'ont constaté Intercom, Etsy et Slack <sup>[19](<https://planetscale.com/blog/why-you-shouldnt-do-app-level-sharding>)</sup>.
+- Frank Rousseau partage un processus de développement agentique sur un projet open source, couvrant le prompting, le contexte, les revues et les grands chantiers de QA ou de migration <sup>[20](<https://blog.frankrousseau.fr/agentic-coding-on-an-open-source-project/>)</sup>.
+- Antithesis détaille les pannes disque qu'un injecteur de fautes doit simuler (coupure de courant, écritures partielles, erreurs d'E/S, latence) pour révéler des bugs <sup>[21](<https://antithesis.com/blog/2026/nightmare-mode/>)</sup>.
+- Sofka est une interface terminal Rust pour Kubernetes, intégrant des actions Flux CD et Argo CD ainsi que des garde-fous en lecture seule <sup>[22](<https://github.com/nklmilojevic/sofka>)</sup>.
+- Harness soutient que les outils de codage par IA augmentent le volume de pull requests au point de saturer les files de build Jenkins <sup>[23](<https://www.harness.io/blog/is-your-jenkins-pipeline-ready-for-what-cursor-just-handed-you>)</sup>.
+
+## Incidents de sécurité et chaîne d'approvisionnement
+
+- Une faille critique de désérialisation dans la bibliothèque ASP.NET abandonnée Idunno.AntiCsrf (CVE-2026-131914, CVSS 9,3) est exploitée pour une exécution de code à distance non authentifiée, sans correctif disponible ; les défenseurs doivent la remplacer par les API anti-forgery intégrées <sup>[24](<https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html>)</sup>.
+- Une analyse de Databricks portant sur environ 5 400 paquets npm malveillants montre que des paquets légitimes compromis représentent plus de 99 % des téléchargements, et que les attaquants se tournent vers les pipelines CI et la publication de confiance OIDC <sup>[25](<https://www.databricks.com/blog/what-5400-malicious-npm-packages-reveal-about-software-supply-chain-risk-2026>)</sup>.
+- Les contrôleurs de freins de remorque Elecbrakes acceptaient des commandes Bluetooth non authentifiées capables d'actionner les freins ; les modèles EB2 et VM1 ont été corrigés, tandis que l'ELBC 2000 reste sans correctif <sup>[26](<https://elementdigital.com.au/blog/brake-check-trailer-brakes-over-bluetooth/>)</sup>.
+- Turnitin a signalé une activité non autorisée sur ses systèmes accessibles aux clients, sans précisions pour l'instant sur le point d'entrée ni sur les données dérobées <sup>[27](<https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/>)</sup>.
 
 ## Société et données publiques
 
-- Aux États-Unis, les requêtes liées à l'IA mettent sous pression les systèmes de documents publics des petites villes : une greffière d'une commune du Vermont signale que les demandes d'accès aux données d'achats publics sont passées d'annuelles à mensuelles, souvent émanant d'entreprises menant des recherches ciblées <sup>[4](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>)</sup>.
+- Les demandes liées à l'IA mettent sous pression les systèmes d'archives publiques des petites villes américaines : une secrétaire de mairie du Vermont constate que les demandes d'accès aux données d'achats sont passées d'une fréquence annuelle à mensuelle, souvent émanant d'entreprises menant des recherches ciblées <sup>[28](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>)</sup>.
 
 ## Sources
 
 1. [\[AINews\] Gemini 4 Neon marks GDM's full return as a Frontier Lab](<https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/>) — _latent.space_
 2. [Three LLM inflection points in twelve months](<https://simonwillison.net/2026/Nov/24/llm-inflection-points/>) — _simonwillison.net_
-3. [An Indic Voice Agent with CUGA](<https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga>) — _huggingface.co_
-4. [AI is straining America’s open records systems](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>) — _technologyreview.com_
+3. [Cognition's SWE-2.1](<https://cognition.com/blog/swe-2-1>) — _cognition.com_
+4. [Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000](<https://huggingface.co/blog/inkling-2-mini-inference-hillclimb>) — _huggingface.co_
+5. [Introducing Ternary Bonsai 2.5 27B: Powering Agentic Coding and Private Knowledge Work](<https://prismml.com/news/bonsai-2-5-27b>) — _prismml.com_
+6. [Google Adds Task Checklists to Antigravity](<https://www.testingcatalog.com/google-adds-task-checklists-to-antigravity-and-carbon-for-pro/>) — _testingcatalog.com_
+7. [\[AINews\] Math Proofs Are Landing Faster Than We Can Read Them](<https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/>) — _latent.space_
+8. [The matrix multiplication exponent is nine fourths (6 hour read)](<https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf>) — _github.com_
+9. [The Most Famous Problem in Math Was Just Solved by AI—and This Human](<https://www.wsj.com/tech/ai/riemann-hypothesis-anthropic-math-levent-alpoge-75351bcb?amp%3Breflink=desktopwebshare_permalink&amp%3Butm_source=tldrnewsletter>) — _wsj.com_
+10. [Introducing Search for Agents](<https://blog.cloudflare.com/search-for-agents/>) — _blog.cloudflare.com_
+11. [AWS WAF announces automated discovery and protection for LLM, MCP, and A2A endpoints using Amazon Bedrock Guardrails](<https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/>) — _aws.amazon.com_
+12. [Prove your AI agent guardrails work](<https://www.docker.com/blog/prove-your-ai-agent-guardrails-work/>) — _docker.com_
+13. [Amazon says hackers' AI agents found and exploited 0-day with little human input](<https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/>) — _arstechnica.com_
+14. [Swarms do not yet raise the roof](<https://www.paradigm3.org/research/swarms>) — _paradigm3.org_
+15. [QCon San Francisco 2026: The Harness Is the New Operating System](<https://www.infoq.com/news/2026/11/harness-new-operating-system/>) — _infoq.com_
+16. [I reverse-engineered Grok Bot, Muse, and Instinct](<https://x.com/sarahfim/status/2125402373149557079>) — _x.com_
+17. [Holding the Door for Agents](<https://fly.io/blog/holding-the-door-for-agents/>) — _fly.io_
+18. [Getting started with WebMCP](<https://polypane.app/blog/getting-started-with-webmcp-building-and-testing-tools>) — _polypane.app_
+19. [Why you shouldn't do application-level sharding](<https://planetscale.com/blog/why-you-shouldnt-do-app-level-sharding>) — _planetscale.com_
+20. [Agentic coding on an open-source project](<https://blog.frankrousseau.fr/agentic-coding-on-an-open-source-project/>) — _blog.frankrousseau.fr_
+21. [Nightmare mode: simulating disk failures](<https://antithesis.com/blog/2026/nightmare-mode/>) — _antithesis.com_
+22. [sofka](<https://github.com/nklmilojevic/sofka>) — _github.com_
+23. [Jenkins CI Bottlenecks: How Harness Helps Teams Scale CI](<https://www.harness.io/blog/is-your-jenkins-pipeline-ready-for-what-cursor-just-handed-you>) — _harness.io_
+24. [Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE](<https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html>) — _thehackernews.com_
+25. [What 5,400 Malicious npm Packages Reveal about Software Supply Chain Risk in 2026](<https://www.databricks.com/blog/what-5400-malicious-npm-packages-reveal-about-software-supply-chain-risk-2026>) — _databricks.com_
+26. [Brake Check: Hijacking Trailer Brakes Over Bluetooth](<https://elementdigital.com.au/blog/brake-check-trailer-brakes-over-bluetooth/>) — _elementdigital.com.au_
+27. [Turnitin discloses cyberattack affecting customer-facing systems](<https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/>) — _bleepingcomputer.com_
+28. [AI is straining America’s open records systems](<https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/>) — _technologyreview.com_
 
 
 ## Archive récente
@@ -38,6 +90,7 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 
 | Date | Jour | |
 |:--|:--|--:|
+| `2026-11-25` | Mercredi | [Lire →](news/fr/2026-11-25.md) |
 | `2026-11-24` | Mardi | [Lire →](news/fr/2026-11-24.md) |
 | `2026-11-23` | Lundi | [Lire →](news/fr/2026-11-23.md) |
 | `2026-11-22` | 🗓️ Récap hebdo | [Lire →](news/fr/2026-11-22.md) |
@@ -51,9 +104,8 @@ _Un fichier par jour — les 14 derniers sont affichés ci‑dessous._
 | `2026-11-14` | Samedi | [Lire →](news/fr/2026-11-14.md) |
 | `2026-11-13` | Vendredi | [Lire →](news/fr/2026-11-13.md) |
 | `2026-11-12` | Jeudi | [Lire →](news/fr/2026-11-12.md) |
-| `2026-11-11` | Mercredi | [Lire →](news/fr/2026-11-11.md) |
 
-<sub>[Parcourir toute l’archive (162) →](news/fr/)</sub>
+<sub>[Parcourir toute l’archive (163) →](news/fr/)</sub>
 
 ---
 <sub>Généré automatiquement 2×/jour · source : [veille en direct](https://baptisteblouin.fr/veille.html)</sub>
