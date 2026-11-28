@@ -1,11 +1,12 @@
 # Tech Brief — Archive
 
-<sub>164 daily digests archived · newest first.</sub>
+<sub>165 daily digests archived · newest first.</sub>
 
 ### November 2026
 
 | Date | Day | |
 |:--|:--|--:|
+| `2026-11-27` | Friday | [Read →](2026-11-27.md) |
 | `2026-11-26` | Thursday | [Read →](2026-11-26.md) |
 | `2026-11-25` | Wednesday | [Read →](2026-11-25.md) |
 | `2026-11-24` | Tuesday | [Read →](2026-11-24.md) |
